@@ -2,16 +2,24 @@ var dropdownPoliticalPartyIDs = cloneObject(defaultDropdownPoliticalPartyIDs)
 const addButtonPartyID = "ADDPARTY"
 const customPartyIDPrefix = "CUSTOM"
 
+const morePartiesToDisplay = 12
+const thirdRowParties = 8
 const maxPartiesToDisplay = 6
 const largeMaxPartiesToDisplay = 4
-
+// More parties were required to be added due to the 7 in the November election (6 excl independent). But i felt why not add a few more cuz i like chaos.
+// Now you can have 12 parties max
 const minDropdownWidth = 140
 
 const largePartyButtonWidth = 40
 const smallPartyButtonWidth = largePartyButtonWidth*2/3
+const smallerPartyButtonWidth = largePartyButtonWidth*0.55
+const normalPartyButtonHeight = 55
+const thirdRowPartyButtonHeight = 40
+
 
 const largePartyButtonVerticalPadding = 7
 const smallPartyButtonVerticalPadding = 1
+const smallerPartyButtonVerticalPadding = 1
 
 const shouldReversePartyDropdownsIfNeeded = true
 const shouldAlignPartyDropdownsToLeadingTrailing = true
@@ -31,8 +39,12 @@ function createPartyDropdowns()
     toggleMarginHexColorEditing()
   }
   
-  const shouldUseSmallButtons = dropdownPoliticalPartyIDs.length > largeMaxPartiesToDisplay
-  const partyButtonWidth = shouldUseSmallButtons ? smallPartyButtonWidth : largePartyButtonWidth
+  const shouldUseSmallerButtons = dropdownPoliticalPartyIDs.length > maxPartiesToDisplay
+  const shouldUseSmallButtons = dropdownPoliticalPartyIDs.length > largeMaxPartiesToDisplay && shouldUseSmallerButtons == false
+  const partyButtonWidth = shouldUseSmallerButtons ? smallerPartyButtonWidth : shouldUseSmallButtons ? smallPartyButtonWidth : largePartyButtonWidth
+  const partyButtonHeight = dropdownPoliticalPartyIDs.length > thirdRowParties ? thirdRowPartyButtonHeight : normalPartyButtonHeight
+  console.log(shouldUseSmallButtons);
+  // const partyButtonWidth = shouldUseSmallButtons ? smallPartyButtonWidth : largePartyButtonWidth
   const shouldStackText = shouldUseSmallButtons
 
   $("#partyDropdownsContainer").html("")
@@ -50,7 +62,7 @@ function createPartyDropdowns()
     var currentPoliticalParty = politicalParties[dropdownPoliticalPartyIDs[partyIDNum]]
     var marginColors = currentPoliticalParty.getMarginColors()
 
-    dropdownDiv += '<div id="' + currentPoliticalParty.getID() + 'Dropdown" class="dropdown" style="width: ' + partyButtonWidth + '%; height: 35%;" onmouseenter="deselectDropdownButton()">'
+    dropdownDiv += '<div id="' + currentPoliticalParty.getID() + 'Dropdown" class="dropdown" style="width: ' + partyButtonWidth + '%; height: ' + partyButtonHeight + 'px;" onmouseenter="deselectDropdownButton()">'
     dropdownDiv += '<a id="' + currentPoliticalParty.getID() + '" class="partyDropdownButton active" onclick="selectParty(this)" style="width: 100%; display: flex; align-items: center; justify-content: ' + (shouldStackText ? 'center' : 'center') + '; flex-direction: ' + (shouldStackText ? 'column' : 'row') + '; gap: ' + (shouldStackText ? '0' : '10rem') + '; margin: 0; padding: 0; background-color: ' + marginColors.safe + ';"><span id="' + currentPoliticalParty.getID() + '-name" class="party-name" style="' + (shouldUseSmallButtons ? "max-width: 100%; " : "") + '">' + currentPoliticalParty.getID() + '</span><span id="' + currentPoliticalParty.getID() + '-votes" class="party-votes" style="' + (shouldUseSmallButtons ? "height: 50%;" : "") + '">0</span></a>'
 
     var shouldReverseOrder = shouldReversePartyDropdownsIfNeeded && (
@@ -426,7 +438,7 @@ async function toggleCandidateNameEditing(partyID, div, skipReload)
 function createPartyDropdownsBoxHoverHandler()
 {
   $("#partyDropdownsContainer").hover(function() {
-    if (!(currentMapSource.isCustom() && currentMapType.getCustomMapEnabled()) || currentEditingState == EditingState.editing || dropdownPoliticalPartyIDs.includes(addButtonPartyID) || dropdownPoliticalPartyIDs.length >= maxPartiesToDisplay) { return }
+    if (!(currentMapSource.isCustom() && currentMapType.getCustomMapEnabled()) || currentEditingState == EditingState.editing || dropdownPoliticalPartyIDs.includes(addButtonPartyID) || dropdownPoliticalPartyIDs.length >= morePartiesToDisplay) { return }
 
     dropdownPoliticalPartyIDs.push(addButtonPartyID)
     $("#partyDropdownsContainer").addClass("showingAddPartyButton")
@@ -506,7 +518,7 @@ function displayPartyTotals(overrideCreateDropdowns)
   {
     var partyIDs = Object.keys(partyTotals).filter((partyID) => partyTotals[partyID] > 0 && partyID != TossupParty.getID())
 
-    var topPartyIDs = partyIDs.sort((party1, party2) => partyTotals[party2]-partyTotals[party1]).slice(0, maxPartiesToDisplay)
+    var topPartyIDs = partyIDs.sort((party1, party2) => partyTotals[party2]-partyTotals[party1]).slice(0, morePartiesToDisplay)
 
     if (topPartyIDs.length == 0)
     {
@@ -529,13 +541,13 @@ function displayPartyTotals(overrideCreateDropdowns)
     {
       dropdownPoliticalPartyIDs.push(addButtonPartyID)
     }
-    dropdownPoliticalPartyIDs = dropdownPoliticalPartyIDs.slice(0, maxPartiesToDisplay)
+    dropdownPoliticalPartyIDs = dropdownPoliticalPartyIDs.slice(0, morePartiesToDisplay)
 
     var sortedDropdownPartyIDs = cloneObject(dropdownPoliticalPartyIDs).sort((party1, party2) => {
       if (party1 == addButtonPartyID) { return 1 }
       if (party2 == addButtonPartyID) { return -1 }
       return partyTotals[party2]-partyTotals[party1]
-    }).slice(0, maxPartiesToDisplay)
+    }).slice(0, morePartiesToDisplay)
     if (JSON.stringify(sortedDropdownPartyIDs) != JSON.stringify(dropdownPoliticalPartyIDs) || overrideCreateDropdowns)
     {
       dropdownPoliticalPartyIDs = cloneObject(sortedDropdownPartyIDs)
