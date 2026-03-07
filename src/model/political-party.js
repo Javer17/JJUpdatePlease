@@ -67,17 +67,19 @@ class PoliticalParty
 const defaultMarginNames = {current: "Current", safe: "Safe", likely: "Likely", lean: "Lean", tilt: "Tilt"}
 
 const PoliticalPartyColors = {
-  blue: {current: "#10234E", safe: "#1c408c", likely: "#587ccc", lean: "#8aafff", tilt: "#949bb3"},
   red: {current: "#600E15", safe: "#be1c29", likely: "#ff5864", lean: "#ff8b98", tilt: "#cf8980"},
-  green: {current: "#32811C", safe: "#499A21", likely: "#7DBF5C", lean: "#ACD896", tilt: "#A8BF9C"},
-  orange: {current: "#A36323", safe: "#E57C13", likely: "#E69D54", lean: "#E5BD95", tilt: "#BFAD9C"},
-  purple: {current: "#461C81", safe: "#8A38FF", likely: "#B47BFF", lean: "#D3B2FF", tilt: "#B09CBF"},
   scarlet: {current: "#A82D00", safe: "#DE3B00", likely: "#FF6B36", lean: "#FFAE85", tilt: "#C39A74"},
-  cyan: {current: "#1A595D", safe: "#1F767A", likely: "#31A7AF", lean: "#6CD2D9", tilt: "#84B2B5"},
+  orange: {current: "#A36323", safe: "#ff8000", likely: "#e28c35", lean: "#f8b97a", tilt: "#eec49d"},
   yellow: {current: "#B86E00", safe: "#FE9800", likely: "#e8a43e", lean: "#eab86e", tilt: "#C7A659"},
-  magenta: {current: "#700036", safe: "#AB0354", likely: "#E8026E", lean: "#FE62AD", tilt: "#B87F9C"},
   lime: {current: "#60801B", safe: "#89B30E", likely: "#A1BF47", lean: "#ADBF7C", tilt: "#ACB392"},
-  gray: {current: "#2A2822", safe: "#474339", likely: "#77705F", lean: "#B9B4A7", tilt: "#D8D6CF"}
+  green: {current: "#32811C", safe: "#499A21", likely: "#7DBF5C", lean: "#ACD896", tilt: "#A8BF9C"},
+  cyan: {current: "#1A595D", safe: "#1F767A", likely: "#31A7AF", lean: "#6CD2D9", tilt: "#84B2B5"},
+  aqua: {current: "#06364d", safe: "#096a97", likely: "#2ba0d6", lean: "#55cfff", tilt: "#73adeb"},
+  blue: {current: "#10234E", safe: "#1c408c", likely: "#587ccc", lean: "#8aafff", tilt: "#949bb3"},
+  purple: {current: "#461C81", safe: "#8A38FF", likely: "#B47BFF", lean: "#D3B2FF", tilt: "#B09CBF"},
+  magenta: {current: "#700036", safe: "#AB0354", likely: "#E8026E", lean: "#FE62AD", tilt: "#B87F9C"},  
+  gray: {current: "#2A2822", safe: "#474339", likely: "#77705F", lean: "#B9B4A7", tilt: "#D8D6CF"},
+  brown: {current: "#2E1500", safe: "#542E11", likely: "#A86234", lean: "#D88856", tilt: "#F7C2A6"},
 }
 
 // Main Parties
@@ -567,11 +569,13 @@ var IndependentGWParty = new PoliticalParty(
   defaultMarginNames
 )
 
-var JJULabourParty = new PoliticalParty(
-  "JJULAB",
-  ["Labour"],
-  "Lab",
-  "Labour",
+// FROM HERE JJU PARTIES START`
+// Guide for myself:
+var JJULabourParty = new PoliticalParty( //ID
+  "JJULAB", //Code
+  ["Labour"],//Reader in csv
+  "Lab",//Short name in dropdowns
+  "Labour",//Default candidate name
   cloneObject(PoliticalPartyColors.red),
   defaultMarginNames
 )
@@ -586,7 +590,7 @@ var JJULiberalParty = new PoliticalParty(
 )
 
 var JJUAllianceParty = new PoliticalParty(
-  "JJUALL",
+  "JJUALTEST",
   ["Alliance", "Conservative"],
   "All",
   "Alliance",
@@ -596,7 +600,7 @@ var JJUAllianceParty = new PoliticalParty(
 
 var JJUProgressiveParty = new PoliticalParty(
   "JJUPRO",
-  ["Progressive"],
+  ["Progressive", "Prog"],
   "Pro",
   "Progressive",
   cloneObject(PoliticalPartyColors.green),
@@ -614,12 +618,50 @@ var JJUWildroseParty = new PoliticalParty(
 
 var JJUReformParty = new PoliticalParty(
   "JJUREF",
-  ["Renewal", "Reform"],
+  ["Renewal"],
   "Ren",
   "Renewal",
   cloneObject(PoliticalPartyColors.scarlet),
   defaultMarginNames
 )
+
+var JJUPWPParty = new PoliticalParty(
+  "JJUPWP",
+  ["PWP"],
+  "PWP",
+  "PWP",
+  cloneObject(PoliticalPartyColors.purple),
+  defaultMarginNames
+)
+
+var JJUNationalParty = new PoliticalParty(
+  "JJUNAT",
+  ["National", "Coalition", "national coalition", "jacksonian national party", "jnp"],
+  "Nat",
+  "National",
+  cloneObject(PoliticalPartyColors.brown),
+  defaultMarginNames
+)
+
+var JJUSolidarityParty = new PoliticalParty(
+  "JJUSOL",
+  ["Solidarity"],
+  "Sol",
+  "Solidarity",
+  cloneObject(PoliticalPartyColors.orange),
+  defaultMarginNames
+)
+
+var JJUProgressiveLabourParty = new PoliticalParty(
+  "JJUPLU",
+  ["ProgLab"],
+  "PLU",
+  "ProgLab",
+  {current: "#54081F", safe: "#A81039", likely: "#FF2667", lean: "#D35084", tilt: "#FFB2C9"},
+  defaultMarginNames
+)
+
+// Coalition
 
 var JJULabLibPartyBloc = new PoliticalParty(
   "JJULAL",
@@ -699,6 +741,24 @@ var JJUBurgerPartyBloc = new PoliticalParty(
   "Bur",
   "Burger",
   cloneObject(PoliticalPartyColors.orange),
+  defaultMarginNames
+)
+
+var JJUUnitedLeftBloc = new PoliticalParty(
+  "JJUUNL",
+  ["United Left"],
+  "UNL",
+  "United Left",
+  cloneObject(PoliticalPartyColors.magenta),
+  defaultMarginNames
+)
+
+var JJUAllianceMajBloc = new PoliticalParty(
+  "JJUALL",
+  ["Alliance", "Alliance Majority"],
+  "ALL",
+  "Alliance Majority",
+  cloneObject(PoliticalPartyColors.blue),
   defaultMarginNames
 )
 
