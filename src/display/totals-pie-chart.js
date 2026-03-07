@@ -8,11 +8,6 @@ const PieChartDirection = {
 }
 
 var partyOrdering = [
-  {partyID: JJUProgressiveParty.getID(), direction: PieChartDirection.clockwise},
-  {partyID: JJUCitrusPartyBloc.getID(), direction: PieChartDirection.clockwise},
-  {partyID: JJULabourParty.getID(), direction: PieChartDirection.clockwise},
-  {partyID: JJULabLibPartyBloc.getID(), direction: PieChartDirection.clockwise},
-  {partyID: JJUPeacockPartyBloc.getID(), direction: PieChartDirection.clockwise},
   {partyID: FederalistParty.getID(), direction: PieChartDirection.clockwise},
   {partyID: Independent1860JohnBreckenridgeParty.getID(), direction: PieChartDirection.clockwise},
   {partyID: DemocraticParty.getID(), direction: PieChartDirection.clockwise},
@@ -66,13 +61,26 @@ var partyOrdering = [
   {partyID: WhigParty.getID(), direction: PieChartDirection.counterclockwise},
   {partyID: NationalRepublicanParty.getID(), direction: PieChartDirection.counterclockwise},
   {partyID: DemocraticRepublicanParty.getID(), direction: PieChartDirection.counterclockwise},
-  {partyID: JJUUnityPartyBloc.getID(), direction: PieChartDirection.counterclockwise},
-  {partyID: JJUReformParty.getID(), direction: PieChartDirection.counterclockwise},
+  //JJU Parties
+  {partyID: JJUNationalParty.getID(), direction: PieChartDirection.counterclockwise},
+  {partyID: JJUAllianceParty.getID(), direction: PieChartDirection.counterclockwise},
   {partyID: JJULiberalParty.getID(), direction: PieChartDirection.counterclockwise},
+  {partyID: JJUReformParty.getID(), direction: PieChartDirection.counterclockwise},
+  {partyID: JJUSolidarityParty.getID(), direction: PieChartDirection.counterclockwise},
+  {partyID: JJULabourParty.getID(), direction: PieChartDirection.counterclockwise},
+  {partyID: JJUProgressiveLabourParty.getID(), direction: PieChartDirection.counterclockwise},
+  {partyID: JJUProgressiveParty.getID(), direction: PieChartDirection.counterclockwise},
+  {partyID: JJUPWPParty.getID(), direction: PieChartDirection.counterclockwise},
+  //JJU Coalitions
+  {partyID: JJUBurgerPartyBloc.getID(), direction: PieChartDirection.counterclockwise},
+  {partyID: JJUUnitedLeftBloc.getID(), direction: PieChartDirection.counterclockwise},
+  {partyID: JJUAllianceMajBloc.getID(), direction: PieChartDirection.counterclockwise},
+  {partyID: JJUCitrusPartyBloc.getID(), direction: PieChartDirection.clockwise},
+  {partyID: JJULabLibPartyBloc.getID(), direction: PieChartDirection.clockwise},
+  {partyID: JJUPeacockPartyBloc.getID(), direction: PieChartDirection.clockwise},
+  {partyID: JJUUnityPartyBloc.getID(), direction: PieChartDirection.counterclockwise},
   {partyID: JJULibConPartyBloc.getID(), direction: PieChartDirection.counterclockwise},
   {partyID: JJULabourConPartyBloc.getID(), direction: PieChartDirection.counterclockwise},
-  {partyID: JJUAllianceParty.getID(), direction: PieChartDirection.counterclockwise},
-  {partyID: JJUWildroseParty.getID(), direction: PieChartDirection.counterclockwise}
 ]
 
 const totalsPieChartCutoutPercent = 55
