@@ -206,7 +206,8 @@ function setMapCountries()
   JJUMapCountry.setMapTypes({
     [JJUHouseMapType.getID()]: JJUHouseMapType,
     [JJUPresidentMapType.getID()]: JJUPresidentMapType,
-    [JJUGovernorMapType.getID()]: JJUGovernorMapType
+    [JJUGovernorMapType.getID()]: JJUGovernorMapType,
+    // [JJUSenateMapType.getID()]: JJUSenateMapType
   })
   
   JJUMapCountry.setPoliticalPartyData(
@@ -227,13 +228,20 @@ function setMapCountries()
       [JJUPeacockPartyBloc.getID()]: JJUPeacockPartyBloc,
       [JJUBurgerPartyBloc.getID()]: JJUBurgerPartyBloc,
       [JJUUnityPartyBloc.getID()]: JJUUnityPartyBloc,
-      [IndependentGenericParty.getID()]: IndependentGenericParty
+      [IndependentGenericParty.getID()]: IndependentGenericParty,
+      [JJUProgressiveLabourParty.getID()]: JJUProgressiveLabourParty,
+      [JJUPWPParty.getID()]: JJUPWPParty,
+      [JJUSolidarityParty.getID()]: JJUSolidarityParty,
+      [JJUNationalParty.getID()]: JJUNationalParty,
+      [JJUUnitedLeftBloc.getID()]: JJUUnitedLeftBloc
     },
     [
-      JJULabourParty.getID(),
+      JJUNationalParty.getID(),
       JJUAllianceParty.getID(),
-      JJUProgressiveParty.getID(),
-      JJUReformParty.getID()
+      JJUSolidarityParty.getID(),
+      JJUProgressiveLabourParty.getID(),
+      JJUPWPParty.getID(),
+      IndependentGenericParty.getID()
     ],
     [
       TossupParty.getID(),
@@ -243,6 +251,10 @@ function setMapCountries()
       JJUProgressiveParty.getID(),
       JJUWildroseParty.getID(),
       JJUReformParty.getID(),
+      JJUProgressiveLabourParty.getID(),
+      JJUNationalParty.getID(),
+      JJUPWPParty.getID(),
+      JJUSolidarityParty.getID(),
       JJULabLibPartyBloc.getID(),
       JJULibConPartyBloc.getID(),
       JJULabourConPartyBloc.getID(),
@@ -251,6 +263,7 @@ function setMapCountries()
       JJUTrafficLightPartyBloc.getID(),
       JJUPeacockPartyBloc.getID(),
       JJUBurgerPartyBloc.getID(),
+      JJUUnitedLeftBloc.getID(),
       JJUUnityPartyBloc.getID(),
       IndependentGenericParty.getID()
     ],
@@ -258,10 +271,10 @@ function setMapCountries()
   )
   
   JJUMapCountry.setCountdownTimes({
-    "June 2025 General Election": {time: 1750032000000, url: null},
-    "July 2025 Midterm Elections": {time: 1753056000000, url: null},
-    "August 2025 Snap Elections": {time: 1754265600000, url: null},
-    "September 2025 General Election": {time: 1757289600000, url: null}
+    "October 2025 Midterm Elections": {time: 1760137200000, url: null},
+    "November 2025 General Election": {time: 1763251200000, url: null},
+    "December 2025 Midterm Elections": {time: 1765670400000, url: null},
+    "January 2026 General Elections": {time: 1769385600000, url: null}
   })
   
   mapCountries[USAMapCountry.getID()] = USAMapCountry
