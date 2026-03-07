@@ -590,7 +590,7 @@ var JJULiberalParty = new PoliticalParty(
 )
 
 var JJUAllianceParty = new PoliticalParty(
-  "JJUALTEST",
+  "JJUALL",
   ["Alliance", "Conservative"],
   "All",
   "Alliance",
@@ -754,8 +754,8 @@ var JJUUnitedLeftBloc = new PoliticalParty(
 )
 
 var JJUAllianceMajBloc = new PoliticalParty(
-  "JJUALL",
-  ["Alliance", "Alliance Majority"],
+  "JJUALLMAJ",
+  ["Alliance Majority"],
   "ALL",
   "Alliance Majority",
   cloneObject(PoliticalPartyColors.blue),
