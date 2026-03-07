@@ -45,7 +45,8 @@ function createPartyDropdowns()
   const partyButtonHeight = dropdownPoliticalPartyIDs.length > thirdRowParties ? thirdRowPartyButtonHeight : normalPartyButtonHeight
   console.log(shouldUseSmallButtons);
   // const partyButtonWidth = shouldUseSmallButtons ? smallPartyButtonWidth : largePartyButtonWidth
-  const shouldStackText = shouldUseSmallButtons
+  // const shouldStackText = shouldUseSmallButtons
+    const shouldStackText = dropdownPoliticalPartyIDs.length <= thirdRowParties && dropdownPoliticalPartyIDs.length > largeMaxPartiesToDisplay
 
   $("#partyDropdownsContainer").html("")
   for (let partyIDNum in dropdownPoliticalPartyIDs)
@@ -557,7 +558,8 @@ function displayPartyTotals(overrideCreateDropdowns)
   }
   
   const possibleFontSizes = ["18px", "17px", "16px", "15px", "14px", "13px", "12px", "11px", "10px", "9px", "8px"]
-  const shouldUseSmallButtons = dropdownPoliticalPartyIDs.length > largeMaxPartiesToDisplay
+  const shouldUseSmallerButtons = dropdownPoliticalPartyIDs.length > thirdRowParties
+  const shouldUseSmallButtons = dropdownPoliticalPartyIDs.length > largeMaxPartiesToDisplay && shouldUseSmallerButtons == false
   
   for (var partyID of dropdownPoliticalPartyIDs)
   {
@@ -573,7 +575,7 @@ function displayPartyTotals(overrideCreateDropdowns)
   }
   
   const buttonHeight = $("#partyDropdownsContainer").height()*0.35
-  const buttonHeightFactor = shouldUseSmallButtons ? 0.35 : 0.60
+  const buttonHeightFactor = shouldUseSmallerButtons ? 0.3 :shouldUseSmallButtons ? 0.35 : 0.60
   
   for (var partyID of dropdownPoliticalPartyIDs)
   {
