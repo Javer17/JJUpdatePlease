@@ -43,7 +43,6 @@ function createPartyDropdowns()
   const shouldUseSmallButtons = dropdownPoliticalPartyIDs.length > largeMaxPartiesToDisplay && shouldUseSmallerButtons == false
   const partyButtonWidth = shouldUseSmallerButtons ? smallerPartyButtonWidth : shouldUseSmallButtons ? smallPartyButtonWidth : largePartyButtonWidth
   const partyButtonHeight = dropdownPoliticalPartyIDs.length > thirdRowParties ? thirdRowPartyButtonHeight : normalPartyButtonHeight
-  console.log(shouldUseSmallButtons);
   // const partyButtonWidth = shouldUseSmallButtons ? smallPartyButtonWidth : largePartyButtonWidth
   // const shouldStackText = shouldUseSmallButtons
     const shouldStackText = dropdownPoliticalPartyIDs.length <= thirdRowParties && dropdownPoliticalPartyIDs.length > largeMaxPartiesToDisplay
