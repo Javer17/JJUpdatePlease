@@ -15,11 +15,11 @@ var JJUPresidentMapType = new MapType(
   true,
   false,
   true,
-  {"BI": "Brunix Islands", "EX": "Emix", "DM": "Dalminica", "TR": "Trunoe", "AV": "Alvana", "QU": "Quintin", "DT": "Dentone", "GV": "Garvor"},
+  {"BI": "Brunix Islands", "EX": "Emix", "DM": "Dalminica", "TR": "Trunoe", "AV": "Alvana", "QU": "Quintin", "DT": "Dentone", "GV": "Garvor", "KI": "Kilden", "NM": "Newmasi"},
   [/.+-S/],
   [],
   () => {
-    const regionNameToID = {"Brunix Islands": "BI", "Emix": "EX", "Dalminica": "DM", "Trunoe": "TR", "Alvana": "AV", "Quintin": "QU", "Dentone": "DT", "Garvor": "GV", "National Popular Vote": nationalPopularVoteID}
+    const regionNameToID = {"Brunix Islands": "BI", "Emix": "EX", "Dalminica": "DM", "Trunoe": "TR", "Alvana": "AV", "Quintin": "QU", "Dentone": "DT", "Garvor": "GV", "National Popular Vote": nationalPopularVoteID, "NM": "Newmasi", "KI": "Kilden"}
   
     let doubleLineVoteshareFilterFunction = function(rawMapData, mapDates, columnMap, _, __, regionNameToID, heldRegionMap, ____, isCustomMap, voteshareCutoffMargin)
     {
@@ -392,7 +392,7 @@ var JJUPresidentMapType = new MapType(
       null, // shouldSetDisabledWorthToZero
       null, // shouldUseOriginalMapDataForTotalsPieChart
       true, // shouldForcePopularVoteDisplay
-      {safe: 30, likely: 20, lean: 10, tilt: Number.MIN_VALUE}, // customDefaultMargins
+      {safe: 20, likely: 10, lean: 5, tilt: Number.MIN_VALUE}, // customDefaultMargins
     )
   
     var idsToPartyNames = {}
