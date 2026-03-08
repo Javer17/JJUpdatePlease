@@ -207,7 +207,8 @@ function setMapCountries()
     [JJUHouseMapType.getID()]: JJUHouseMapType,
     [JJUPresidentMapType.getID()]: JJUPresidentMapType,
     [JJUGovernorMapType.getID()]: JJUGovernorMapType,
-    // [JJUSenateMapType.getID()]: JJUSenateMapType
+    [JJUSenateMapType.getID()]: JJUSenateMapType,
+    [JJUListMapType.getID()]: JJUListMapType
   })
   
   JJUMapCountry.setPoliticalPartyData(
