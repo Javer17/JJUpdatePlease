@@ -661,6 +661,15 @@ var JJUProgressiveLabourParty = new PoliticalParty(
   defaultMarginNames
 )
 
+var JJUGreenParty = new PoliticalParty(
+  "JJUGRE",
+  ["Greens", "Green"],
+  "GRE",
+  "Green",
+  cloneObject(PoliticalPartyColors.lime),
+  defaultMarginNames
+)
+
 // Coalition
 
 var JJULabLibPartyBloc = new PoliticalParty(
