@@ -72,7 +72,7 @@ const PoliticalPartyColors = {
   orange: {current: "#A36323", safe: "#ff8000", likely: "#e28c35", lean: "#f8b97a", tilt: "#eec49d"},
   yellow: {current: "#B86E00", safe: "#FE9800", likely: "#e8a43e", lean: "#eab86e", tilt: "#C7A659"},
   lime: {current: "#60801B", safe: "#89B30E", likely: "#A1BF47", lean: "#ADBF7C", tilt: "#ACB392"},
-  green: {current: "#32811C", safe: "#499A21", likely: "#7DBF5C", lean: "#ACD896", tilt: "#A8BF9C"},
+  green: {current: "#1f4e11", safe: "#499A21", likely: "#7DBF5C", lean: "#ACD896", tilt: "#A8BF9C"},
   cyan: {current: "#1A595D", safe: "#1F767A", likely: "#31A7AF", lean: "#6CD2D9", tilt: "#84B2B5"},
   aqua: {current: "#06364d", safe: "#096a97", likely: "#2ba0d6", lean: "#55cfff", tilt: "#73adeb"},
   blue: {current: "#10234E", safe: "#1c408c", likely: "#587ccc", lean: "#8aafff", tilt: "#949bb3"},
