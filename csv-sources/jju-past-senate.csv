@@ -1,0 +1,11 @@
+date,region,candidate,party,offyear,runoff,voteshare
+01/01/2020,North,A,proglab,FALSE,FALSE,100
+01/01/2020,North Sitting,B,alliance,FALSE,FALSE,100
+01/01/2020,East,C,national,FALSE,FALSE,100
+01/01/2020,East Sitting,D,pwp,FALSE,FALSE,100
+01/01/2020,South,E,progressive,FALSE,FALSE,100
+01/01/2020,South Sitting,F,labour,FALSE,FALSE,100
+01/01/2020,West,G,renewal,FALSE,FALSE,100
+01/01/2020,West Sitting,H,solidarity,FALSE,FALSE,100
+01/01/2020,Center,I,wildrose,FALSE,FALSE,100
+01/01/2020,Center Sitting,J,independent,FALSE,FALSE,100
