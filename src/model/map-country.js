@@ -235,7 +235,8 @@ function setMapCountries()
       [JJUSolidarityParty.getID()]: JJUSolidarityParty,
       [JJUNationalParty.getID()]: JJUNationalParty,
       [JJUUnitedLeftBloc.getID()]: JJUUnitedLeftBloc,
-      [JJUSDPParty.getID()]: JJUSDPParty
+      [JJUSDPParty.getID()]: JJUSDPParty,
+      [JJUGreenParty.getID()]: JJUGreenParty
     },
     [
       JJUNationalParty.getID(),
