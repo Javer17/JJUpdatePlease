@@ -670,6 +670,15 @@ var JJUGreenParty = new PoliticalParty(
   defaultMarginNames
 )
 
+var JJUSDPParty = new PoliticalParty(
+  "JJUSDP",
+  ["SDP"],
+  "SDP",
+  "SDP",
+  cloneObject(PoliticalPartyColors.red),
+  defaultMarginNames
+)
+
 // Coalition
 
 var JJULabLibPartyBloc = new PoliticalParty(
