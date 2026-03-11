@@ -924,7 +924,7 @@ var JJUHouseMapType = new MapType(
       null, // shouldSetDisabledWorthToZero
       null, // shouldUseOriginalMapDataForTotalsPieChart
       null, // shouldForcePopularVoteDisplay
-      {safe: 20, likely: 10, lean: 5, tilt: Number.MIN_VALUE}, // customDefaultMargins
+      {safe: 15, likely: 5, lean: 2, tilt: Number.MIN_VALUE}, // customDefaultMargins
 	  )
   
 	  var todayDate = new Date()
