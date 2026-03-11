@@ -1,11 +1,134 @@
 date,region,candidate,party,offyear,runoff,voteshare
-01/01/2026,North,A,proglab,FALSE,FALSE,100
-01/01/2026,North Sitting,B,alliance,FALSE,FALSE,100
-01/01/2026,East,C,national,FALSE,FALSE,100
-01/01/2026,East Sitting,D,pwp,FALSE,FALSE,100
-01/01/2026,South,E,progressive,FALSE,FALSE,100
-01/01/2026,South Sitting,F,labour,FALSE,FALSE,100
-01/01/2026,West,G,renewal,FALSE,FALSE,100
-01/01/2026,West Sitting,H,solidarity,FALSE,FALSE,100
-01/01/2026,Center,I,wildrose,FALSE,FALSE,100
-01/01/2026,Center Sitting,J,independent,FALSE,FALSE,100
+11/16/2025,North Sitting,BFDIfan,pwp,FALSE,FALSE,100
+11/16/2025,East Sitting,Flame,pwp,FALSE,FALSE,100
+11/16/2025,South Sitting,Joris,progressive,FALSE,FALSE,100
+11/16/2025,West Sitting,TMK,labour,FALSE,FALSE,100
+11/16/2025,Center Sitting,Historical Ronan,renewal,FALSE,FALSE,100
+11/16/2025,North,Purrium,labour,FALSE,FALSE,62.52
+11/16/2025,North,Cob,independent,FALSE,FALSE,37.48
+11/16/2025,East,Potato,labour,FALSE,FALSE,46.53
+11/16/2025,East,Flame,pwp,FALSE,FALSE,26.2
+11/16/2025,East,JoJo,alliance,FALSE,FALSE,19.27
+11/16/2025,East,Heatland,renewal,FALSE,FALSE,8
+11/16/2025,East,Potato,labour,FALSE,TRUE,50.48
+11/16/2025,East,Flame,pwp,FALSE,TRUE,27.07
+11/16/2025,East,JoJo,alliance,FALSE,TRUE,22.45
+11/16/2025,South,Timothy Pickering,alliance,FALSE,FALSE,42.1
+11/16/2025,South,Danylo,labour,FALSE,FALSE,32.52
+11/16/2025,South,Joris,progressive,FALSE,FALSE,25.37
+11/16/2025,South,Timothy Pickering,alliance,FALSE,TRUE,50.71
+11/16/2025,South,Danylo,labour,FALSE,TRUE,49.29
+11/16/2025,West,Alex k,alliance,FALSE,FALSE,40.31
+11/16/2025,West,Bernie Sanders,progressive,FALSE,FALSE,39.63
+11/16/2025,West,TMK,labour,FALSE,FALSE,20.06
+11/16/2025,West,Alex k,alliance,FALSE,TRUE,51.48
+11/16/2025,West,Bernie Sanders,progressive,FALSE,TRUE,48.52
+11/16/2025,Center,Flor Belgier,labour,FALSE,FALSE,40.33
+11/16/2025,Center,Kingsley Bruh,alliance,FALSE,FALSE,30.15
+11/16/2025,Center,GMV,progressive,FALSE,FALSE,29.52
+11/16/2025,Center,Flor Belgier,labour,FALSE,TRUE,58.5
+11/16/2025,Center,Kingsley Bruh,alliance,FALSE,TRUE,41.5
+11/16/2025,National Popular Vote,Labour,labour,FALSE,FALSE,40.4
+11/16/2025,National Popular Vote,Alliance,alliance,FALSE,FALSE,26.37
+11/16/2025,National Popular Vote,Progressive,progressive,FALSE,FALSE,18.9
+11/16/2025,National Popular Vote,PWP,pwp,FALSE,FALSE,5.24
+11/16/2025,National Popular Vote,Renewal,renewal,FALSE,FALSE,0
+11/16/2025,National Popular Vote,Independent,independent,FALSE,FALSE,9.1
+12/13/2025,North Sitting,Purrium,labour,FALSE,FALSE,100
+12/13/2025,East Sitting,Potato,labour,FALSE,FALSE,100
+12/13/2025,South Sitting,Timothy Pickering,alliance,FALSE,FALSE,100
+12/13/2025,West Sitting,Alex k,alliance,FALSE,FALSE,100
+12/13/2025,Center Sitting,Flor Belgier,labour,FALSE,FALSE,100
+12/13/2025,North,BFDIfan,pwp,FALSE,FALSE,100
+12/13/2025,East,Eden,alliance,FALSE,FALSE,35
+12/13/2025,East,Flame,pwp,FALSE,FALSE,44.71
+12/13/2025,East,Meiscool,jnp,FALSE,FALSE,14.26
+12/13/2025,East,Forsh,independent,FALSE,FALSE,6.03
+12/13/2025,East,Eden,alliance,FALSE,TRUE,51.52
+12/13/2025,East,Flame,pwp,FALSE,TRUE,48.48
+12/13/2025,South,Danylo,labour,FALSE,FALSE,100
+12/13/2025,West,Strxya,progressive,FALSE,FALSE,68.96
+12/13/2025,West,Athabasca,renewal,FALSE,FALSE,31.04
+12/13/2025,Center,GMV,progressive,FALSE,FALSE,52.06
+12/13/2025,Center,Cruzer,alliance,FALSE,FALSE,37.3
+12/13/2025,Center,Historical Ronan,renewal,FALSE,FALSE,10.64
+12/13/2025,National Popular Vote,JNP,jnp,FALSE,FALSE,2.43
+12/13/2025,National Popular Vote,Alliance,alliance,FALSE,FALSE,14.63
+12/13/2025,National Popular Vote,Renewal,renewal,FALSE,FALSE,8.34
+12/13/2025,National Popular Vote,Independent,independent,FALSE,FALSE,1.24
+12/13/2025,National Popular Vote,Labour,labour,FALSE,FALSE,20
+12/13/2025,National Popular Vote,Progressive,progressive,FALSE,FALSE,24.2
+12/13/2025,National Popular Vote,PWP,pwp,FALSE,FALSE,29.16
+01/05/2026,North Sitting,Javer,labour,TRUE,FALSE,100
+1/26/2026,North Sitting,BFDIfan,pwp,FALSE,FALSE,100
+1/26/2026,East Sitting,Eden,alliance,FALSE,FALSE,100
+1/26/2026,South Sitting,Danylo,labour,FALSE,FALSE,100
+1/26/2026,West Sitting,Strxya,progressive,FALSE,FALSE,100
+1/26/2026,Center Sitting,GMV,alliance,FALSE,FALSE,100
+1/26/2026,North,Paradise,alliance,FALSE,FALSE,62.33
+1/26/2026,North,ItzTinonTime,labour,FALSE,FALSE,37.67
+1/26/2026,East,Meiscool,coalition,FALSE,FALSE,48.52
+1/26/2026,East,Growmper,progressive,FALSE,FALSE,24.63
+1/26/2026,East,Tommy,pwp,FALSE,FALSE,18.16
+1/26/2026,East,Potato,solidarity,FALSE,FALSE,8.69
+1/26/2026,East,Meiscool,coalition,FALSE,TRUE,50.46
+1/26/2026,East,Growmper,progressive,FALSE,TRUE,30.37
+1/26/2026,East,Tommy,pwp,FALSE,TRUE,19.17
+1/26/2026,South,Timothy Pickering,alliance,FALSE,FALSE,59.03
+1/26/2026,South,Seth,progressive,FALSE,FALSE,30.11
+1/26/2026,South,Benjamina Netanyahu,coalition,FALSE,FALSE,10.86
+1/26/2026,South,ThatRandomGuy,independent,FALSE,FALSE,0
+1/26/2026,West,Viterkol,alliance,FALSE,FALSE,53.73
+1/26/2026,West,Eevee,coalition,FALSE,FALSE,24.14
+1/26/2026,West,Bart de Wever,labour,FALSE,FALSE,22.13
+1/26/2026,Center,Marin Kitagawa,coalition,FALSE,FALSE,49.28
+1/26/2026,Center,Flor Belgier,labour,FALSE,FALSE,43.73
+1/26/2026,Center,Eric Davidson,independent,FALSE,FALSE,6.99
+1/26/2026,Center,Marin Kitagawa,coalition,FALSE,TRUE,54.49
+1/26/2026,Center,Flor Belgier,labour,FALSE,TRUE,45.51
+1/26/2026,National Popular Vote,Coalition,coalition,FALSE,FALSE,26.11
+1/26/2026,National Popular Vote,Alliance,alliance,FALSE,FALSE,35.14
+1/26/2026,National Popular Vote,Solidarity,solidarity,FALSE,FALSE,3.71
+1/26/2026,National Popular Vote,Independent,independent,FALSE,FALSE,1.35
+1/26/2026,National Popular Vote,Labour,labour,FALSE,FALSE,20.13
+1/26/2026,National Popular Vote,Progressive,progressive,FALSE,FALSE,11.39
+1/26/2026,National Popular Vote,PWP,pwp,FALSE,FALSE,1.78
+03/01/2026,North Sitting,Paradise,alliance,FALSE,FALSE,100
+03/01/2026,East Sitting,Meiscool,coalition,FALSE,FALSE,100
+03/01/2026,South Sitting,Timothy Pickering,alliance,FALSE,FALSE,100
+03/01/2026,West Sitting,Viterkol,independent,FALSE,FALSE,100
+03/01/2026,Center Sitting,Marin Kitagawa,proglab,FALSE,FALSE,100
+03/01/2026,North,BFDIfan,proglab,FALSE,FALSE,52.71
+03/01/2026,North,Cob,pwp,FALSE,FALSE,45.49
+03/01/2026,North,Earthseeker,independent,FALSE,FALSE,1.8
+03/01/2026,East,NebularSpace,alliance,FALSE,FALSE,47.94
+03/01/2026,East,Forsh,proglab,FALSE,FALSE,22.67
+03/01/2026,East,Potato,solidarity,FALSE,FALSE,14.72
+03/01/2026,East,Flame,pwp,FALSE,FALSE,14.68
+03/01/2026,East,NebularSpace,alliance,FALSE,TRUE,50.6
+03/01/2026,East,Forsh,proglab,FALSE,TRUE,31.91
+03/01/2026,East,Potato,solidarity,FALSE,TRUE,18.21
+03/01/2026,South,ThatRandomGuy,jnp,FALSE,FALSE,48.17
+03/01/2026,South,Danylo,proglab,FALSE,FALSE,42.96
+03/01/2026,South,Joris,independent,FALSE,FALSE,8.87
+03/01/2026,South,ThatRandomGuy,jnp,FALSE,TRUE,50.15
+03/01/2026,South,Danylo,proglab,FALSE,TRUE,49.85
+03/01/2026,West,Dirty Yield,alliance,FALSE,FALSE,42.73
+03/01/2026,West,Bart de Wever,proglab,FALSE,FALSE,30.29
+03/01/2026,West,Jack Thatch,jnp,FALSE,FALSE,15.27
+03/01/2026,West,Burley,pwp,FALSE,FALSE,11.7
+03/01/2026,West,Dirty Yield,alliance,FALSE,TRUE,60.71
+03/01/2026,West,Bart de Wever,proglab,FALSE,TRUE,39.29
+03/01/2026,Center,GMV,alliance,FALSE,FALSE,49.2
+03/01/2026,Center,Jabed Borgerman,independent,FALSE,FALSE,28.73
+03/01/2026,Center,Mokaeo,solidarity,FALSE,FALSE,16.22
+03/01/2026,Center,Howard Davidson,independent,FALSE,FALSE,5.85
+03/01/2026,Center,GMV,alliance,FALSE,TRUE,50.39
+03/01/2026,Center,Jabed Borgerman,independent,FALSE,TRUE,29.2
+03/01/2026,Center,Mokaeo,solidarity,FALSE,TRUE,20.41
+03/01/2026,National Popular Vote,Nationals,jnp,FALSE,FALSE,13.33
+03/01/2026,National Popular Vote,Alliance,alliance,FALSE,FALSE,27.74
+03/01/2026,National Popular Vote,Solidarity,solidarity,FALSE,FALSE,6.08
+03/01/2026,National Popular Vote,Independent,independent,FALSE,FALSE,8.85
+03/01/2026,National Popular Vote,ProgLab,proglab,FALSE,FALSE,29.11
+03/01/2026,National Popular Vote,UCP,pwp,FALSE,FALSE,14.88
