@@ -855,3 +855,4 @@ var JJUSenateMapType = new MapType(
 	  return {mapSources: senateMapSources, mapSourceIDs: senateMapSourceIDs, mapCycles: [], defaultCompareSourceIDs: defaultsenateCompareSourceIDs, customSourceID: CustomMapSource.getID()}
   }
 )
+
