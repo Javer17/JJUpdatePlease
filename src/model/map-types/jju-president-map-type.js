@@ -446,7 +446,7 @@ var JJUPresidentMapType = new MapType(
       null, // shouldSetDisabledWorthToZero
       null, // shouldUseOriginalMapDataForTotalsPieChart
       true, // shouldForcePopularVoteDisplay
-      {safe: 30, likely: 20, lean: 10, tilt: Number.MIN_VALUE}, // customDefaultMargins
+      {safe: 15, likely: 5, lean: 2, tilt: Number.MIN_VALUE}, // customDefaultMargins
     )
   
     var todayDate = new Date()
