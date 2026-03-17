@@ -849,69 +849,69 @@ date,region,candidate,party,offyear,runoff,voteshare
 02/18/2026,Dalminica,Izemoji,coalition,TRUE,FALSE,25.01
 02/18/2026,Dalminica,Flor Belgier,proglab,TRUE,TRUE,52.05
 02/18/2026,Dalminica,British Guy,alliance,TRUE,TRUE,47.95
-03/17/2026,Alvana,Poopman69,alliance,FALSE,FALSE,53.4
-03/17/2026,Alvana,Dannyunown0,proglab,FALSE,FALSE,23.6
-03/17/2026,Alvana,Tommy,pwp,FALSE,FALSE,22.99
-03/17/2026,Brunix Islands,Jack Ciattarelli,alliance,FALSE,FALSE,69.66
-03/17/2026,Brunix Islands,Capy,proglab,FALSE,FALSE,23.05
-03/17/2026,Brunix Islands,Usgball,independent,FALSE,FALSE,7.29
-03/17/2026,Dalminica,Flor Belgier,proglab,FALSE,FALSE,46.2
-03/17/2026,Dalminica,Copperhead,alliance,FALSE,FALSE,38.66
-03/17/2026,Dalminica,British Guy,solidarity,FALSE,FALSE,15.14
-03/17/2026,Dalminica,Flor Belgier,proglab,FALSE,TRUE,51.68
-03/17/2026,Dalminica,Copperhead,alliance,FALSE,TRUE,48.32
-03/17/2026,Dentone,How Do I Type,alliance,FALSE,FALSE,71.35
-03/17/2026,Dentone,Benjamina Netanyahu,proglab,FALSE,FALSE,19.97
-03/17/2026,Dentone,Joris,independent,FALSE,FALSE,8.68
-03/17/2026,Emix,Jerry,alliance,FALSE,FALSE,39.68
-03/17/2026,Emix,Javer,proglab,FALSE,FALSE,40.25
-03/17/2026,Emix,Newsom,solidarity,FALSE,FALSE,20.07
-03/17/2026,Emix,Jerry,alliance,FALSE,TRUE,50.39
-03/17/2026,Emix,Javer,proglab,FALSE,TRUE,49.61
-03/17/2026,Garvor,Alex K,alliance,FALSE,FALSE,49.37
-03/17/2026,Garvor,TMK,proglab,FALSE,FALSE,27.11
-03/17/2026,Garvor,Felix,jnp,FALSE,FALSE,13.08
-03/17/2026,Garvor,Burley,pwp,FALSE,FALSE,10.44
-03/17/2026,Garvor,Alex K,alliance,FALSE,TRUE,51.39
-03/17/2026,Garvor,TMK,proglab,FALSE,TRUE,30.01
-03/17/2026,Garvor,Felix,jnp,FALSE,TRUE,18.6
-03/17/2026,Kilden,Sam McMahon,proglab,FALSE,FALSE,45.79
-03/17/2026,Kilden,Lee,solidarity,FALSE,FALSE,30.82
-03/17/2026,Kilden,Cob,pwp,FALSE,FALSE,23.38
-03/17/2026,Kilden,Sam McMahon,proglab,FALSE,TRUE,59.14
-03/17/2026,Kilden,Lee,solidarity,FALSE,TRUE,40.86
-03/17/2026,Newmasi,Craig,alliance,FALSE,FALSE,46.45
-03/17/2026,Newmasi,JAMden,proglab,FALSE,FALSE,32.66
-03/17/2026,Newmasi,Out of names,solidarity,FALSE,FALSE,16.83
-03/17/2026,Newmasi,Jabed,independent,FALSE,FALSE,4.06
-03/17/2026,Newmasi,Craig,alliance,FALSE,TRUE,54.22
-03/17/2026,Newmasi,JAMden,proglab,FALSE,TRUE,45.78
-03/17/2026,Quintin,Rahul Gandhi,proglab,FALSE,FALSE,50.53
-03/17/2026,Quintin,Run,alliance,FALSE,FALSE,49.47
-03/17/2026,Trunoe,Growmper,solidarity,FALSE,FALSE,50.13
-03/17/2026,Trunoe,Dutch van der Linde,proglab,FALSE,FALSE,49.87
-03/17/2026,National Popular Vote,Nationals,jnp,FALSE,FALSE,9.11
-03/17/2026,National Popular Vote,Alliance,alliance,FALSE,FALSE,43.55
-03/17/2026,National Popular Vote,Solidarity,solidarity,FALSE,FALSE,11.25
-03/17/2026,National Popular Vote,ProgLab,proglab,FALSE,FALSE,27.07
-03/17/2026,National Popular Vote,UCP,pwp,FALSE,FALSE,9.03
-03/17/2026,List Seat 1,Felix,jnp,FALSE,FALSE,100
-03/17/2026,List Seat 2,Obi Dervan,jnp,FALSE,FALSE,100
-03/17/2026,List Seat 3,Athabasca,jnp,FALSE,FALSE,100
-03/17/2026,List Seat 4,Run,alliance,FALSE,FALSE,100
-03/17/2026,List Seat 5,CaptainNF,alliance,FALSE,FALSE,100
-03/17/2026,List Seat 6,Eden,alliance,FALSE,FALSE,100
-03/17/2026,List Seat 7,Usgball,alliance,FALSE,FALSE,100
-03/17/2026,List Seat 8,Spakian,alliance,FALSE,FALSE,100
-03/17/2026,List Seat 9,Sean,alliance,FALSE,FALSE,100
-03/17/2026,List Seat 10,Griffith Hyde,alliance,FALSE,FALSE,100
-03/17/2026,List Seat 11,Caughtquick,alliance,FALSE,FALSE,100
-03/17/2026,List Seat 12,Potato,solidarity,FALSE,FALSE,100
-03/17/2026,List Seat 13,Mokaeo,solidarity,FALSE,FALSE,100
-03/17/2026,List Seat 14,Javer,proglab,FALSE,FALSE,100
-03/17/2026,List Seat 15,JAMden,proglab,FALSE,FALSE,100
-03/17/2026,List Seat 16,Niven,proglab,FALSE,FALSE,100
-03/17/2026,List Seat 17,Beary,proglab,FALSE,FALSE,100
-03/17/2026,List Seat 18,Van der plan,proglab,FALSE,FALSE,100
-03/17/2026,List Seat 19,Cob,pwp,FALSE,FALSE,100
-03/17/2026,List Seat 20,Tommy,pwp,FALSE,FALSE,100
+03/01/2026,Alvana,Poopman69,alliance,FALSE,FALSE,53.4
+03/01/2026,Alvana,Dannyunown0,proglab,FALSE,FALSE,23.6
+03/01/2026,Alvana,Tommy,pwp,FALSE,FALSE,22.99
+03/01/2026,Brunix Islands,Jack Ciattarelli,alliance,FALSE,FALSE,69.66
+03/01/2026,Brunix Islands,Capy,proglab,FALSE,FALSE,23.05
+03/01/2026,Brunix Islands,Usgball,independent,FALSE,FALSE,7.29
+03/01/2026,Dalminica,Flor Belgier,proglab,FALSE,FALSE,46.2
+03/01/2026,Dalminica,Copperhead,alliance,FALSE,FALSE,38.66
+03/01/2026,Dalminica,British Guy,solidarity,FALSE,FALSE,15.14
+03/01/2026,Dalminica,Flor Belgier,proglab,FALSE,TRUE,51.68
+03/01/2026,Dalminica,Copperhead,alliance,FALSE,TRUE,48.32
+03/01/2026,Dentone,How Do I Type,alliance,FALSE,FALSE,71.35
+03/01/2026,Dentone,Benjamina Netanyahu,proglab,FALSE,FALSE,19.97
+03/01/2026,Dentone,Joris,independent,FALSE,FALSE,8.68
+03/01/2026,Emix,Jerry,alliance,FALSE,FALSE,39.68
+03/01/2026,Emix,Javer,proglab,FALSE,FALSE,40.25
+03/01/2026,Emix,Newsom,solidarity,FALSE,FALSE,20.07
+03/01/2026,Emix,Jerry,alliance,FALSE,TRUE,50.39
+03/01/2026,Emix,Javer,proglab,FALSE,TRUE,49.61
+03/01/2026,Garvor,Alex K,alliance,FALSE,FALSE,49.37
+03/01/2026,Garvor,TMK,proglab,FALSE,FALSE,27.11
+03/01/2026,Garvor,Felix,jnp,FALSE,FALSE,13.08
+03/01/2026,Garvor,Burley,pwp,FALSE,FALSE,10.44
+03/01/2026,Garvor,Alex K,alliance,FALSE,TRUE,51.39
+03/01/2026,Garvor,TMK,proglab,FALSE,TRUE,30.01
+03/01/2026,Garvor,Felix,jnp,FALSE,TRUE,18.6
+03/01/2026,Kilden,Sam McMahon,proglab,FALSE,FALSE,45.79
+03/01/2026,Kilden,Lee,solidarity,FALSE,FALSE,30.82
+03/01/2026,Kilden,Cob,pwp,FALSE,FALSE,23.38
+03/01/2026,Kilden,Sam McMahon,proglab,FALSE,TRUE,59.14
+03/01/2026,Kilden,Lee,solidarity,FALSE,TRUE,40.86
+03/01/2026,Newmasi,Craig,alliance,FALSE,FALSE,46.45
+03/01/2026,Newmasi,JAMden,proglab,FALSE,FALSE,32.66
+03/01/2026,Newmasi,Out of names,solidarity,FALSE,FALSE,16.83
+03/01/2026,Newmasi,Jabed,independent,FALSE,FALSE,4.06
+03/01/2026,Newmasi,Craig,alliance,FALSE,TRUE,54.22
+03/01/2026,Newmasi,JAMden,proglab,FALSE,TRUE,45.78
+03/01/2026,Quintin,Rahul Gandhi,proglab,FALSE,FALSE,50.53
+03/01/2026,Quintin,Run,alliance,FALSE,FALSE,49.47
+03/01/2026,Trunoe,Growmper,solidarity,FALSE,FALSE,50.13
+03/01/2026,Trunoe,Dutch van der Linde,proglab,FALSE,FALSE,49.87
+03/01/2026,National Popular Vote,Nationals,jnp,FALSE,FALSE,9.11
+03/01/2026,National Popular Vote,Alliance,alliance,FALSE,FALSE,43.55
+03/01/2026,National Popular Vote,Solidarity,solidarity,FALSE,FALSE,11.25
+03/01/2026,National Popular Vote,ProgLab,proglab,FALSE,FALSE,27.07
+03/01/2026,National Popular Vote,UCP,pwp,FALSE,FALSE,9.03
+03/01/2026,List Seat 1,Felix,jnp,FALSE,FALSE,100
+03/01/2026,List Seat 2,Obi Dervan,jnp,FALSE,FALSE,100
+03/01/2026,List Seat 3,Athabasca,jnp,FALSE,FALSE,100
+03/01/2026,List Seat 4,Run,alliance,FALSE,FALSE,100
+03/01/2026,List Seat 5,CaptainNF,alliance,FALSE,FALSE,100
+03/01/2026,List Seat 6,Eden,alliance,FALSE,FALSE,100
+03/01/2026,List Seat 7,Usgball,alliance,FALSE,FALSE,100
+03/01/2026,List Seat 8,Spakian,alliance,FALSE,FALSE,100
+03/01/2026,List Seat 9,Sean,alliance,FALSE,FALSE,100
+03/01/2026,List Seat 10,Griffith Hyde,alliance,FALSE,FALSE,100
+03/01/2026,List Seat 11,Caughtquick,alliance,FALSE,FALSE,100
+03/01/2026,List Seat 12,Potato,solidarity,FALSE,FALSE,100
+03/01/2026,List Seat 13,Mokaeo,solidarity,FALSE,FALSE,100
+03/01/2026,List Seat 14,Javer,proglab,FALSE,FALSE,100
+03/01/2026,List Seat 15,JAMden,proglab,FALSE,FALSE,100
+03/01/2026,List Seat 16,Niven,proglab,FALSE,FALSE,100
+03/01/2026,List Seat 17,Beary,proglab,FALSE,FALSE,100
+03/01/2026,List Seat 18,Van der plan,proglab,FALSE,FALSE,100
+03/01/2026,List Seat 19,Cob,pwp,FALSE,FALSE,100
+03/01/2026,List Seat 20,Tommy,pwp,FALSE,FALSE,100
