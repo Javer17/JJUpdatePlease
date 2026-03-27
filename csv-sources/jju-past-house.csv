@@ -849,6 +849,9 @@ date,region,candidate,party,offyear,runoff,voteshare
 02/18/2026,Dalminica,Izemoji,coalition,TRUE,FALSE,25.01
 02/18/2026,Dalminica,Flor Belgier,proglab,TRUE,TRUE,52.05
 02/18/2026,Dalminica,British Guy,alliance,TRUE,TRUE,47.95
+03/01/2026,Coalition,jnp,BOB,FALSE,FALSE,0
+03/01/2026,Coalition,alliance,BOB,FALSE,FALSE,0
+03/01/2026,Coalition,solidarity,BOB,FALSE,FALSE,0
 03/01/2026,Alvana,Poopman69,alliance,FALSE,FALSE,53.4
 03/01/2026,Alvana,Dannyunown0,proglab,FALSE,FALSE,23.6
 03/01/2026,Alvana,Tommy,pwp,FALSE,FALSE,22.99
@@ -915,3 +918,9 @@ date,region,candidate,party,offyear,runoff,voteshare
 03/01/2026,List Seat 18,Van der plan,proglab,FALSE,FALSE,100
 03/01/2026,List Seat 19,Cob,pwp,FALSE,FALSE,100
 03/01/2026,List Seat 20,Tommy,pwp,FALSE,FALSE,100
+03/27/2026,Trunoe,Van der plan,green,TRUE,FALSE,60.79
+03/27/2026,Trunoe,Northpoletyrant,sdp,TRUE,FALSE,24.19
+03/27/2026,Trunoe,Medikit,ucp,TRUE,FALSE,14.44
+03/27/2026,Trunoe,Heatland,sdp,TRUE,FALSE,0.58
+03/27/2026,Trunoe,Van der plan,green,TRUE,TRUE,66.77
+03/27/2026,Trunoe,Northpoletyrant,sdp,TRUE,TRUE,33.23
