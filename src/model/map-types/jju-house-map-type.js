@@ -861,7 +861,7 @@ var JJUHouseMapType = new MapType(
 	    null, // isCustomMap
 	    null, // shouldClearDisabled
 	    true, // shouldShowVoteshare
-	    1.0, // voteshareCutoffMargin
+	    0, // voteshareCutoffMargin
       getHouseSVGByDate, // overrideSVGPath
       null, // shouldSetDisabledWorthToZero
       null, // shouldUseOriginalMapDataForTotalsPieChart
