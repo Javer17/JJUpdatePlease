@@ -63,6 +63,7 @@ var partyOrdering = [
   {partyID: DemocraticRepublicanParty.getID(), direction: PieChartDirection.counterclockwise},
   //JJU Parties - Top = Leftest
   {partyID: JJUPWPParty.getID(), direction: PieChartDirection.counterclockwise},
+  {partyID: JJUUCPParty.getID(), direction: PieChartDirection.counterclockwise},
   {partyID: JJUProgressiveParty.getID(), direction: PieChartDirection.counterclockwise},
   {partyID: JJUSDPParty.getID(), direction: PieChartDirection.counterclockwise},
   {partyID: JJUGreenParty.getID(), direction: PieChartDirection.counterclockwise},
