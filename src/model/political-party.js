@@ -634,6 +634,15 @@ var JJUPWPParty = new PoliticalParty(
   defaultMarginNames
 )
 
+var JJUUCPParty = new PoliticalParty(
+  "JJUUCP",
+  ["UCP"],
+  "UCP",
+  "UCP",
+  cloneObject(PoliticalPartyColors.purple),
+  defaultMarginNames
+)
+
 var JJUNationalParty = new PoliticalParty(
   "JJUNAT",
   ["National", "Coalition", "national coalition", "jacksonian national party", "jnp"],
@@ -665,7 +674,7 @@ var JJUGreenParty = new PoliticalParty(
   "JJUGRE",
   ["Greens", "Green"],
   "GRE",
-  "Green",
+  "Greens",
   cloneObject(PoliticalPartyColors.lime),
   defaultMarginNames
 )
