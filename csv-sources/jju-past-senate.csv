@@ -132,3 +132,40 @@ date,region,candidate,party,offyear,runoff,voteshare
 03/01/2026,National Popular Vote,Independent,independent,FALSE,FALSE,8.85
 03/01/2026,National Popular Vote,ProgLab,proglab,FALSE,FALSE,29.11
 03/01/2026,National Popular Vote,UCP,pwp,FALSE,FALSE,14.88
+04/18/2026,North Sitting,BFDIfan,green,FALSE,FALSE,100
+04/18/2026,East Sitting,NebularSpace,alliance,FALSE,FALSE,100
+04/18/2026,South Sitting,ThatRandomGuy,jnp,FALSE,FALSE,100
+04/18/2026,West Sitting,Dirty Yield,alliance,FALSE,FALSE,100
+04/18/2026,Center Sitting,GMV,alliance,FALSE,FALSE,100
+04/18/2026,North,ItzTinonTime,sdp,FALSE,FALSE,36.04
+04/18/2026,North,Lee,solidarity,FALSE,FALSE,32.58
+04/18/2026,North,Cob,ucp,FALSE,FALSE,31.39
+04/18/2026,North,ItzTinonTime,sdp,FALSE,TRUE,64.42
+04/18/2026,North,Lee,solidarity,FALSE,TRUE,35.58
+04/18/2026,West,Felix Argyle,jnp,FALSE,FALSE,39.71
+04/18/2026,West,Niven,green,FALSE,FALSE,24.2
+04/18/2026,West,Bart de Wever,sdp,FALSE,FALSE,21.74
+04/18/2026,West,Viterkol,solidarity,FALSE,FALSE,14.35
+04/18/2026,West,Niven,green,FALSE,TRUE,50.56
+04/18/2026,West,Felix Argyle,jnp,FALSE,TRUE,49.44
+04/18/2026,East,Potato,solidarity,FALSE,FALSE,41.27
+04/18/2026,East,Forsh the V of Trunoe,green,FALSE,FALSE,24.38
+04/18/2026,East,Bruhton,sdp,FALSE,FALSE,21.98
+04/18/2026,East,Robert M. LaFollette,ucp,FALSE,FALSE,12.37
+04/18/2026,East,Potato,solidarity,FALSE,TRUE,52.14
+04/18/2026,East,Forsh the V of Trunoe,green,FALSE,TRUE,47.86
+04/18/2026,South,Beach,alliance,FALSE,FALSE,50.41
+04/18/2026,South,Seth,sdp,FALSE,FALSE,35.61
+04/18/2026,South,Danylo Isaacson-Lebid',ucp,FALSE,FALSE,13.98
+04/18/2026,Center,Odin,solidarity,FALSE,FALSE,48.41
+04/18/2026,Center,Flor Belgier,sdp,FALSE,FALSE,34.34
+04/18/2026,Center,Izemoji,green,FALSE,FALSE,17.25
+04/18/2026,Center,Odin,solidarity,FALSE,TRUE,53.23
+04/18/2026,Center,Flor Belgier,sdp,FALSE,TRUE,46.77
+04/18/2026,National Popular Vote,Nationals,jnp,FALSE,FALSE,1
+04/18/2026,National Popular Vote,Alliance,alliance,FALSE,FALSE,1
+04/18/2026,National Popular Vote,Solidarity,solidarity,FALSE,FALSE,1
+04/18/2026,National Popular Vote,Independent,independent,FALSE,FALSE,1
+04/18/2026,National Popular Vote,SDP,sdp,FALSE,FALSE,1
+04/18/2026,National Popular Vote,Greens,green,FALSE,FALSE,1
+04/18/2026,National Popular Vote,UCP,pwp,FALSE,FALSE,1
