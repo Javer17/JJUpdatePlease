@@ -918,9 +918,83 @@ date,region,candidate,party,offyear,runoff,voteshare
 03/01/2026,List Seat 18,Van der plan,proglab,FALSE,FALSE,100
 03/01/2026,List Seat 19,Cob,pwp,FALSE,FALSE,100
 03/01/2026,List Seat 20,Tommy,pwp,FALSE,FALSE,100
-03/27/2026,Trunoe,Van der plan,green,TRUE,FALSE,60.79
+03/27/2026,Trunoe,Van der plan,green,FALSE,FALSE,60.79
 03/27/2026,Trunoe,Northpoletyrant,sdp,TRUE,FALSE,24.19
 03/27/2026,Trunoe,Medikit,pwp,TRUE,FALSE,14.44
 03/27/2026,Trunoe,Heatland,sdp,TRUE,FALSE,0.58
 03/27/2026,Trunoe,Van der plan,green,TRUE,TRUE,66.77
 03/27/2026,Trunoe,Northpoletyrant,sdp,TRUE,TRUE,33.23
+04/18/2026,Emix,Jerry,alliance,FALSE,FALSE,33.83
+04/18/2026,Emix,Trey,green,FALSE,FALSE,32.17
+04/18/2026,Emix,Javer,sdp,FALSE,FALSE,23.61
+04/18/2026,Emix,Newsom,solidarity,FALSE,FALSE,10.39
+04/18/2026,Emix,Jerry,alliance,FALSE,TRUE,44.29
+04/18/2026,Emix,Trey,green,FALSE,TRUE,55.71
+04/18/2026,Kilden,Cob,ucp,FALSE,FALSE,62.92
+04/18/2026,Kilden,Newsom,solidarity,FALSE,FALSE,37.08
+04/18/2026,Brunix Islands,Jack Ciattarelli,alliance,FALSE,FALSE,69.04
+04/18/2026,Brunix Islands,JP,ucp,FALSE,FALSE,13.51
+04/18/2026,Brunix Islands,Capy,green,FALSE,FALSE,12.91
+04/18/2026,Brunix Islands,Usgball,independent,FALSE,FALSE,4.54
+04/18/2026,Garvor,Alex,alliance,FALSE,FALSE,31.93
+04/18/2026,Garvor,Strxya,green,FALSE,FALSE,23.88
+04/18/2026,Garvor,TMK,sdp,FALSE,FALSE,19.51
+04/18/2026,Garvor,Athabasca,jnp,FALSE,FALSE,11.47
+04/18/2026,Garvor,Viterkol,solidarity,FALSE,FALSE,9.6
+04/18/2026,Garvor,StarStar,independent,FALSE,FALSE,1.3
+04/18/2026,Garvor,Jkuma,independent,FALSE,FALSE,1.17
+04/18/2026,Garvor,Johnny Sins,independent,FALSE,FALSE,1.14
+04/18/2026,Garvor,Alex,alliance,FALSE,TRUE,50.24
+04/18/2026,Garvor,Strxya,green,FALSE,TRUE,49.76
+04/18/2026,Dalminica,Flor Belgier,sdp,FALSE,FALSE,51.9
+04/18/2026,Dalminica,Vincent F. Rocher,alliance,FALSE,FALSE,35.4
+04/18/2026,Dalminica,Izemoji,green,FALSE,FALSE,12.7
+04/18/2026,Newmasi,Griffith Hyde,alliance,FALSE,FALSE,37.11
+04/18/2026,Newmasi,JAMden,sdp,FALSE,FALSE,22.52
+04/18/2026,Newmasi,Meerkat SJV Habitat,green,FALSE,FALSE,17.5
+04/18/2026,Newmasi,Mokaeo,solidarity,FALSE,FALSE,16.59
+04/18/2026,Newmasi,Obi Dervan,jnp,FALSE,FALSE,6.28
+04/18/2026,Newmasi,Griffith Hyde,alliance,FALSE,TRUE,58.15
+04/18/2026,Newmasi,JAMden,sdp,FALSE,TRUE,41.85
+04/18/2026,Trunoe,Dutch van der Linde,green,FALSE,FALSE,70.76
+04/18/2026,Trunoe,Heatland,sdp,FALSE,FALSE,15.76
+04/18/2026,Trunoe,Medikit,ucp,FALSE,FALSE,13.48
+04/18/2026,Alvana,Poopman69,alliance,FALSE,FALSE,44.67
+04/18/2026,Alvana,Dannyunown0,sdp,FALSE,FALSE,23.9
+04/18/2026,Alvana,Tommy,ucp,FALSE,FALSE,17.74
+04/18/2026,Alvana,Aki Corentin,green,FALSE,FALSE,13.69
+04/18/2026,Alvana,Poopman69,alliance,FALSE,TRUE,55.56
+04/18/2026,Alvana,Tommy,ucp,FALSE,TRUE,44.44
+04/18/2026,Dentone,How Do I Type,alliance,FALSE,FALSE,68.01
+04/18/2026,Dentone,Tw1light,green,FALSE,FALSE,16.58
+04/18/2026,Dentone,Danylo Isaacson-Lebid',ucp,FALSE,FALSE,15.41
+04/18/2026,Dentone,Halogram,independent,FALSE,FALSE,0
+04/18/2026,Quintin,Rahul Gandhi,sdp,FALSE,FALSE,56.94
+04/18/2026,Quintin,Run,alliance,FALSE,FALSE,28.73
+04/18/2026,Quintin,Beary,green,FALSE,FALSE,14.33
+04/18/2026,National Popular Vote,Nationals,jnp,FALSE,FALSE,2.6
+04/18/2026,National Popular Vote,Alliance,alliance,FALSE,FALSE,45.09
+04/18/2026,National Popular Vote,Solidarity,solidarity,FALSE,FALSE,8.19
+04/18/2026,National Popular Vote,SDP,sdp,FALSE,FALSE,12.83
+04/18/2026,National Popular Vote,Greens,green,FALSE,FALSE,18.44
+04/18/2026,National Popular Vote,UCP,pwp,FALSE,FALSE,12.85
+04/18/2026,List Seat 1,Sean,alliance,FALSE,FALSE,100
+04/18/2026,List Seat 2,Run,alliance,FALSE,FALSE,100
+04/18/2026,List Seat 3,JKuma12,alliance,FALSE,FALSE,100
+04/18/2026,List Seat 4,Jerry,alliance,FALSE,FALSE,100
+04/18/2026,List Seat 5,Spakian,alliance,FALSE,FALSE,100
+04/18/2026,List Seat 6,Timothy Pickering,alliance,FALSE,FALSE,100
+04/18/2026,List Seat 7,USGball,alliance,FALSE,FALSE,100
+04/18/2026,List Seat 8,Caughtquick,alliance,FALSE,FALSE,100
+04/18/2026,List Seat 9,Eden,alliance,FALSE,FALSE,100
+04/18/2026,List Seat 10,Mokaeo,solidarity,FALSE,FALSE,100
+04/18/2026,List Seat 11,Viterkol,solidarity,FALSE,FALSE,100
+04/18/2026,List Seat 12,JAMden,sdp,FALSE,FALSE,100
+04/18/2026,List Seat 13,Dannyunown0,sdp,FALSE,FALSE,100
+04/18/2026,List Seat 14,Strxya,green,FALSE,FALSE,100
+04/18/2026,List Seat 15,Beary,green,FALSE,FALSE,100
+04/18/2026,List Seat 16,Forsh,green,FALSE,FALSE,100
+04/18/2026,List Seat 17,Gobbi,green,FALSE,FALSE,100
+04/18/2026,List Seat 18,Tommy,ucp,FALSE,FALSE,100
+04/18/2026,List Seat 19,Danylo Isaacson-Lebid',ucp,FALSE,FALSE,100
+04/18/2026,List Seat 20,Robert M. LaFollette Sr.,ucp,FALSE,FALSE,100
