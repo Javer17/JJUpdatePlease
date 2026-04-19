@@ -675,7 +675,7 @@ var JJUGreenParty = new PoliticalParty(
   ["Greens", "Green"],
   "GRE",
   "Greens",
-  cloneObject(PoliticalPartyColors.lime),
+  cloneObject(PoliticalPartyColors.green),
   defaultMarginNames
 )
 
