@@ -897,7 +897,7 @@ date,region,candidate,party,offyear,runoff,voteshare
 03/01/2026,National Popular Vote,Alliance,alliance,FALSE,FALSE,43.55
 03/01/2026,National Popular Vote,Solidarity,solidarity,FALSE,FALSE,11.25
 03/01/2026,National Popular Vote,ProgLab,proglab,FALSE,FALSE,27.07
-03/01/2026,National Popular Vote,UCP,pwp,FALSE,FALSE,9.03
+03/01/2026,National Popular Vote,pwp,pwp,FALSE,FALSE,9.03
 03/01/2026,List Seat 1,Felix,jnp,FALSE,FALSE,100
 03/01/2026,List Seat 2,Obi Dervan,jnp,FALSE,FALSE,100
 03/01/2026,List Seat 3,Athabasca,jnp,FALSE,FALSE,100
@@ -930,10 +930,10 @@ date,region,candidate,party,offyear,runoff,voteshare
 04/18/2026,Emix,Newsom,solidarity,FALSE,FALSE,10.39
 04/18/2026,Emix,Jerry,alliance,FALSE,TRUE,44.29
 04/18/2026,Emix,Trey,green,FALSE,TRUE,55.71
-04/18/2026,Kilden,Cob,ucp,FALSE,FALSE,62.92
+04/18/2026,Kilden,Cob,pwp,FALSE,FALSE,62.92
 04/18/2026,Kilden,Newsom,solidarity,FALSE,FALSE,37.08
 04/18/2026,Brunix Islands,Jack Ciattarelli,alliance,FALSE,FALSE,69.04
-04/18/2026,Brunix Islands,JP,ucp,FALSE,FALSE,13.51
+04/18/2026,Brunix Islands,JP,pwp,FALSE,FALSE,13.51
 04/18/2026,Brunix Islands,Capy,green,FALSE,FALSE,12.91
 04/18/2026,Brunix Islands,Usgball,independent,FALSE,FALSE,4.54
 04/18/2026,Garvor,Alex,alliance,FALSE,FALSE,31.93
@@ -958,16 +958,16 @@ date,region,candidate,party,offyear,runoff,voteshare
 04/18/2026,Newmasi,JAMden,sdp,FALSE,TRUE,41.85
 04/18/2026,Trunoe,Dutch van der Linde,green,FALSE,FALSE,70.76
 04/18/2026,Trunoe,Heatland,sdp,FALSE,FALSE,15.76
-04/18/2026,Trunoe,Medikit,ucp,FALSE,FALSE,13.48
+04/18/2026,Trunoe,Medikit,pwp,FALSE,FALSE,13.48
 04/18/2026,Alvana,Poopman69,alliance,FALSE,FALSE,44.67
 04/18/2026,Alvana,Dannyunown0,sdp,FALSE,FALSE,23.9
-04/18/2026,Alvana,Tommy,ucp,FALSE,FALSE,17.74
+04/18/2026,Alvana,Tommy,pwp,FALSE,FALSE,17.74
 04/18/2026,Alvana,Aki Corentin,green,FALSE,FALSE,13.69
 04/18/2026,Alvana,Poopman69,alliance,FALSE,TRUE,55.56
-04/18/2026,Alvana,Tommy,ucp,FALSE,TRUE,44.44
+04/18/2026,Alvana,Tommy,pwp,FALSE,TRUE,44.44
 04/18/2026,Dentone,How Do I Type,alliance,FALSE,FALSE,68.01
 04/18/2026,Dentone,Tw1light,green,FALSE,FALSE,16.58
-04/18/2026,Dentone,Danylo Isaacson-Lebid',ucp,FALSE,FALSE,15.41
+04/18/2026,Dentone,Danylo Isaacson-Lebid',pwp,FALSE,FALSE,15.41
 04/18/2026,Dentone,Halogram,independent,FALSE,FALSE,0
 04/18/2026,Quintin,Rahul Gandhi,sdp,FALSE,FALSE,56.94
 04/18/2026,Quintin,Run,alliance,FALSE,FALSE,28.73
@@ -977,7 +977,7 @@ date,region,candidate,party,offyear,runoff,voteshare
 04/18/2026,National Popular Vote,Solidarity,solidarity,FALSE,FALSE,8.19
 04/18/2026,National Popular Vote,SDP,sdp,FALSE,FALSE,12.83
 04/18/2026,National Popular Vote,Greens,green,FALSE,FALSE,18.44
-04/18/2026,National Popular Vote,UCP,pwp,FALSE,FALSE,12.85
+04/18/2026,National Popular Vote,pwp,pwp,FALSE,FALSE,12.85
 04/18/2026,List Seat 1,Sean,alliance,FALSE,FALSE,100
 04/18/2026,List Seat 2,Run,alliance,FALSE,FALSE,100
 04/18/2026,List Seat 3,JKuma12,alliance,FALSE,FALSE,100
@@ -995,6 +995,6 @@ date,region,candidate,party,offyear,runoff,voteshare
 04/18/2026,List Seat 15,Beary,green,FALSE,FALSE,100
 04/18/2026,List Seat 16,Forsh,green,FALSE,FALSE,100
 04/18/2026,List Seat 17,Gobbi,green,FALSE,FALSE,100
-04/18/2026,List Seat 18,Tommy,ucp,FALSE,FALSE,100
-04/18/2026,List Seat 19,Danylo Isaacson-Lebid',ucp,FALSE,FALSE,100
-04/18/2026,List Seat 20,Robert M. LaFollette Sr.,ucp,FALSE,FALSE,100
+04/18/2026,List Seat 18,Tommy,pwp,FALSE,FALSE,100
+04/18/2026,List Seat 19,Danylo Isaacson-Lebid',pwp,FALSE,FALSE,100
+04/18/2026,List Seat 20,Robert M. LaFollette Sr.,pwp,FALSE,FALSE,100
