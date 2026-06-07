@@ -80,17 +80,20 @@ class PoliticalParty
 const defaultMarginNames = {current: "Current", safe: "Safe", likely: "Likely", lean: "Lean", tilt: "Tilt"}
 
 const PoliticalPartyColors = {
-  blue: {current: "#10234E", safe: "#1c408c", likely: "#587ccc", lean: "#8aafff", tilt: "#949bb3"},
   red: {current: "#600E15", safe: "#be1c29", likely: "#ff5864", lean: "#ff8b98", tilt: "#cf8980"},
-  green: {current: "#32811C", safe: "#499A21", likely: "#7DBF5C", lean: "#ACD896", tilt: "#A8BF9C"},
-  orange: {current: "#A36323", safe: "#E57C13", likely: "#E69D54", lean: "#E5BD95", tilt: "#c8ad93"},
-  purple: {current: "#461C81", safe: "#8A38FF", likely: "#B47BFF", lean: "#D3B2FF", tilt: "#B09CBF"},
   scarlet: {current: "#A82D00", safe: "#DE3B00", likely: "#FF6B36", lean: "#FFAE85", tilt: "#C39A74"},
-  cyan: {current: "#1A595D", safe: "#1F767A", likely: "#31A7AF", lean: "#6CD2D9", tilt: "#84B2B5"},
-  yellow: {current: "#B86E00", safe: "#FE9800", likely: "#e8a43e", lean: "#eab86e", tilt: "#C7A659"},
-  magenta: {current: "#700036", safe: "#AB0354", likely: "#E8026E", lean: "#FE62AD", tilt: "#B87F9C"},
+  orange: {current: "#A36323", safe: "#ff8000", likely: "#e28c35", lean: "#f8b97a", tilt: "#eec49d"},
+  yellow: {current: "#B86E00", safe: "#FE9800", likely: "#e8a43e", lean: "#eab86e", tilt: "#cbb78a"},
   lime: {current: "#60801B", safe: "#89B30E", likely: "#A1BF47", lean: "#ADBF7C", tilt: "#ACB392"},
-  brown: {current: "#2E1500", safe: "#542E11", likely: "#A86234", lean: "#D88856", tilt: "#F7C2A6"},
+  green: {current: "#1f4e11", safe: "#499A21", likely: "#7DBF5C", lean: "#ACD896", tilt: "#A8BF9C"},
+  teal: {current: "#0b3c35", safe: "#0e7f59", likely: "#31af70", lean: "#6cd99f", tilt: "#84b5a3"},
+  cyan: {current: "#0e2d30", safe: "#1F767A", likely: "#31A7AF", lean: "#6CD2D9", tilt: "#84B2B5"},
+  aqua: {current: "#06364d", safe: "#096a97", likely: "#2ba0d6", lean: "#55cfff", tilt: "#73adeb"},
+  blue: {current: "#10234E", safe: "#1c408c", likely: "#587ccc", lean: "#8aafff", tilt: "#949bb3"},
+  purple: {current: "#461C81", safe: "#8A38FF", likely: "#B47BFF", lean: "#D3B2FF", tilt: "#B09CBF"},
+  magenta: {current: "#700036", safe: "#AB0354", likely: "#E8026E", lean: "#fe62b5", tilt: "#B87F9C"},
+  pink: {current: "#9b0077", safe: "#ff3e82", likely: "#ff62a9", lean: "#ff9ce5", tilt: "#ffbded"},
+  brown: {current: "#2E1500", safe: "#542E11", likely: "#A86234", lean: "#D88856", tilt: "#F7C2A6"},  
   gray: {current: "#2A2822", safe: "#474339", likely: "#77705F", lean: "#B9B4A7", tilt: "#D8D6CF"}
 }
 
