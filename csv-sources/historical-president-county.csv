@@ -96432,16 +96432,11 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/7/1916,IA,Muscatine,Benson,independent,573,7242
 11/7/1916,IA,Muscatine,No Candidate,independent,34,7242
 11/7/1916,IA,Muscatine,Other,other,12,7242
-11/7/1916,IA,O_Brien,Wilson,democrat,2694,7242
-11/7/1916,IA,O_Brien,Hughes,republican,3929,7242
-11/7/1916,IA,O_Brien,Benson,independent,573,7242
-11/7/1916,IA,O_Brien,No Candidate,independent,0,7242
-11/7/1916,IA,O_Brien,Other,other,46,7242
-11/7/1916,IA,O'Brien,Wilson,democrat,1787,3847
-11/7/1916,IA,O'Brien,Hughes,republican,2021,3847
-11/7/1916,IA,O'Brien,Benson,independent,29,3847
-11/7/1916,IA,O'Brien,No Candidate,independent,0,3847
-11/7/1916,IA,O'Brien,Other,other,10,3847
+11/7/1916,IA,O_Brien,Wilson,democrat,1787,3847
+11/7/1916,IA,O_Brien,Hughes,republican,2021,3847
+11/7/1916,IA,O_Brien,Benson,independent,29,3847
+11/7/1916,IA,O_Brien,No Candidate,independent,0,3847
+11/7/1916,IA,O_Brien,Other,other,10,3847
 11/7/1916,IA,Osceola,Wilson,democrat,874,2167
 11/7/1916,IA,Osceola,Hughes,republican,1258,2167
 11/7/1916,IA,Osceola,Benson,independent,28,2167
@@ -99372,21 +99367,21 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/7/1916,MD,Prince_George_s,Benson,independent,83,6734
 11/7/1916,MD,Prince_George_s,No Candidate,independent,0,6734
 11/7/1916,MD,Prince_George_s,Other,other,100,6734
-11/7/1916,MD,Queen_Anne's,Wilson,democrat,2206,3499
-11/7/1916,MD,Queen_Anne's,Hughes,republican,1242,3499
-11/7/1916,MD,Queen_Anne's,Benson,independent,3,3499
-11/7/1916,MD,Queen_Anne's,No Candidate,independent,0,3499
-11/7/1916,MD,Queen_Anne's,Other,other,48,3499
+11/7/1916,MD,Queen_Anne_s,Wilson,democrat,2206,3499
+11/7/1916,MD,Queen_Anne_s,Hughes,republican,1242,3499
+11/7/1916,MD,Queen_Anne_s,Benson,independent,3,3499
+11/7/1916,MD,Queen_Anne_s,No Candidate,independent,0,3499
+11/7/1916,MD,Queen_Anne_s,Other,other,48,3499
 11/7/1916,MD,Somerset,Wilson,democrat,1885,4403
 11/7/1916,MD,Somerset,Hughes,republican,2364,4403
 11/7/1916,MD,Somerset,Benson,independent,38,4403
 11/7/1916,MD,Somerset,No Candidate,independent,0,4403
 11/7/1916,MD,Somerset,Other,other,116,4403
-11/7/1916,MD,St_Mary's,Wilson,democrat,1443,2611
-11/7/1916,MD,St_Mary's,Hughes,republican,1064,2611
-11/7/1916,MD,St_Mary's,Benson,independent,33,2611
-11/7/1916,MD,St_Mary's,No Candidate,independent,0,2611
-11/7/1916,MD,St_Mary's,Other,other,71,2611
+11/7/1916,MD,St_Mary_s,Wilson,democrat,1443,2611
+11/7/1916,MD,St_Mary_s,Hughes,republican,1064,2611
+11/7/1916,MD,St_Mary_s,Benson,independent,33,2611
+11/7/1916,MD,St_Mary_s,No Candidate,independent,0,2611
+11/7/1916,MD,St_Mary_s,Other,other,71,2611
 11/7/1916,MD,Talbot,Wilson,democrat,2180,4091
 11/7/1916,MD,Talbot,Hughes,republican,1753,4091
 11/7/1916,MD,Talbot,Benson,independent,19,4091
@@ -99402,11 +99397,11 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/7/1916,MD,Wicomico,Benson,independent,5,5922
 11/7/1916,MD,Wicomico,No Candidate,independent,0,5922
 11/7/1916,MD,Wicomico,Other,other,93,5922
-11/7/1916,ME,Worcester,Wilson,democrat,2138,3827
-11/7/1916,ME,Worcester,Hughes,republican,1520,3827
-11/7/1916,ME,Worcester,Benson,independent,31,3827
-11/7/1916,ME,Worcester,No Candidate,independent,0,3827
-11/7/1916,ME,Worcester,Other,other,138,3827
+11/7/1916,MD,Worcester,Wilson,democrat,2138,3827
+11/7/1916,MD,Worcester,Hughes,republican,1520,3827
+11/7/1916,MD,Worcester,Benson,independent,31,3827
+11/7/1916,MD,Worcester,No Candidate,independent,0,3827
+11/7/1916,MD,Worcester,Other,other,138,3827
 11/7/1916,ME,Androscoggin,Wilson,democrat,5464,10286
 11/7/1916,ME,Androscoggin,Hughes,republican,4496,10286
 11/7/1916,ME,Androscoggin,Benson,independent,279,10286
