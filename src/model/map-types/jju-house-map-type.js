@@ -3,7 +3,7 @@ var JJUHouseMapType = new MapType(
   "House",
   "H",
   "assets/usa-house.png",
-  "svg-sources/jju-districts-10-list-20-map.svg",
+  "svg-sources/jju-districts-10-list-12-map.svg",
   30,
   function()
   {
@@ -873,12 +873,7 @@ var JJUHouseMapType = new MapType(
       null, // shouldSetDisabledWorthToZero
       null, // shouldUseOriginalMapDataForTotalsPieChart
       null, // shouldForcePopularVoteDisplay
-      () => {
-        const isSimulated = currentSliderDate > new Date(2025, 12-1, 1)
-        return isSimulated || showingCompareMap
-          ? {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}
-          : {safe: 30, likely: 20, lean: 10, tilt: Number.MIN_VALUE}
-      }, // customDefaultMargins
+      {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE} // customDefaultMargins
 	  )
     
     var PastListElectionResultMapSource = new MapSource(
@@ -943,12 +938,7 @@ var JJUHouseMapType = new MapType(
       null, // shouldSetDisabledWorthToZero
       null, // shouldUseOriginalMapDataForTotalsPieChart
       null, // shouldForcePopularVoteDisplay
-      () => {
-        const isSimulated = currentSliderDate > new Date(2025, 12-1, 1)
-        return isSimulated || showingCompareMap
-          ? {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}
-          : {safe: 30, likely: 20, lean: 10, tilt: Number.MIN_VALUE}
-      }, // customDefaultMargins
+      {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}// customDefaultMargins
     )
   
 	  var idsToPartyNames = {}
