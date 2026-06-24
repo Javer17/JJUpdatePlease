@@ -770,12 +770,12 @@ var JJUSenateMapType = new MapType(
 	    null, // isCustomMap
 	    null, // shouldClearDisabled
 	    true, // shouldShowVoteshare
-	    1.0, // voteshareCutoffMargin
+	    0, // voteshareCutoffMargin
       getSenateSVGByDate, // overrideSVGPath
       null, // shouldSetDisabledWorthToZero
       null, // shouldUseOriginalMapDataForTotalsPieChart
       null, // shouldForcePopularVoteDisplay
-      {safe: 20, likely: 10, lean: 5, tilt: Number.MIN_VALUE}, // customDefaultMargins
+      {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}, // customDefaultMargins
     )
 
   
@@ -833,7 +833,7 @@ var JJUSenateMapType = new MapType(
       null, // shouldSetDisabledWorthToZero
       null, // shouldUseOriginalMapDataForTotalsPieChart
       null, // shouldForcePopularVoteDisplay
-      {safe: 20, likely: 10, lean: 5, tilt: Number.MIN_VALUE}, // customDefaultMargins
+      {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}, // customDefaultMargins
 	  )
   
 	  var todayDate = new Date()

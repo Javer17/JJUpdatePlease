@@ -3,7 +3,7 @@ var JJUHouseMapType = new MapType(
   "House",
   "H",
   "assets/usa-house.png",
-  "svg-sources/jju-districts-10-list-20-map.svg",
+  "svg-sources/jju-districts-10-list-12-map.svg",
   30,
   function()
   {
@@ -59,10 +59,9 @@ var JJUHouseMapType = new MapType(
       const getListRegions = (count) => Array.from({length: count}, (_, i) => `L${i+1}`)
       const getNSEWRegions = () => ['N', 'S', 'E', 'W']
       const getDistricts8 = () => ['BI', 'EX', 'DM', 'TR', 'AV', 'QU', 'DT', 'GV']
-      const getDistricts10 = () => ['BI', 'EX', 'DM', 'TR', 'AV', 'QU', 'DT', 'GV', 'KI', 'NM']
+      const getDistricts10 = () => [...getDistricts8(), 'NM', 'KI']
       
       // probably should just load past election results for this
-      // WHAT DOES THIS MEAAAN -Javer
       const regionDateRanges = [
         {
           start: new Date(2024, 8-1, 1).getTime(),
@@ -122,7 +121,7 @@ var JJUHouseMapType = new MapType(
           ]
         },
         {
-          start: new Date(2026, 1-1, 25-1).getTime(),
+          start: new Date(2026, 1-1, 26-1).getTime(),
           regions: [
             ...getDistricts10(),
             ...getListRegions(20)
@@ -202,17 +201,11 @@ var JJUHouseMapType = new MapType(
           voteshareSortedCandidateData = voteshareSortedCandidateData.filter(candData => candData.voteshare >= voteshareCutoffMargin)
         }
         
-        if (voteshareSortedCandidateData.length == 0)
-        {
-          console.log("No candidate data!", currentMapDate.getFullYear().toString(), regionID)
-          return
-        }
-        
         let greatestMarginPartyID
         let greatestMarginCandidateName
         let topTwoMargin
         
-        if (voteshareSortedCandidateData[0].voteshare != 0)
+        if (voteshareSortedCandidateData.length > 0 && voteshareSortedCandidateData[0].voteshare != 0)
         {
           let topCandidateData = voteshareSortedCandidateData.filter(candidateData => candidateData.order == 0 || candidateData.order == 1).sort((cand1, cand2) => cand2.voteshare - cand1.voteshare)
           if (topCandidateData.length == 0)
@@ -254,8 +247,8 @@ var JJUHouseMapType = new MapType(
           partyIDToCandidateNames[candidateData[partyCandidateName].partyID] = partyCandidateName
         }
         
-        let mostRecentParty = heldRegionMap ? heldRegionMap[regionID] : mostRecentWinner(filteredMapData, currentMapDate.getTime(), regionID).partyID
-        return {region: regionID, offYear: isOffyear, runoff: isRunoffElection, isSpecial: isSpecialElection, disabled: mapDataRows[0][columnMap.isDisabled] == "TRUE", margin: topTwoMargin, partyID: greatestMarginPartyID, candidateName: greatestMarginCandidateName, candidateMap: partyIDToCandidateNames, partyVotesharePercentages: voteshareSortedCandidateData, flip: mapDataRows[0][columnMap.flip] == "TRUE" || (mostRecentParty != greatestMarginPartyID && mostRecentParty != TossupParty.getID())}
+        const mostRecentPartyID = heldRegionMap ? heldRegionMap[regionID] : mostRecentWinner(filteredMapData, currentMapDate.getTime(), regionID).partyID
+        return {region: regionID, offYear: isOffyear, runoff: isRunoffElection, isSpecial: isSpecialElection, disabled: mapDataRows[0][columnMap.isDisabled] == "TRUE", margin: topTwoMargin, partyID: greatestMarginPartyID, candidateName: greatestMarginCandidateName, candidateMap: partyIDToCandidateNames, partyVotesharePercentages: voteshareSortedCandidateData, flipOverride: mapDataRows[0][columnMap.flip] == "TRUE", previousPartyID: mostRecentPartyID}
       }
   
 	    for (let mapDateTime of mapDates)
@@ -354,6 +347,7 @@ var JJUHouseMapType = new MapType(
       
       const listSeatRegex = /L\d+/
       const partyListSeatCounts = {}
+      const getPartyListSeatCount = (date, party) => partyListSeatCounts[date][party] ?? 0
       previousMapDate = null
       for (const mapDate in fullFilteredMapData)
       {
@@ -384,9 +378,10 @@ var JJUHouseMapType = new MapType(
               partyIDOn = regionData.partyID
               partyListSeatOn = 1
             }
-            const seatDifference = (partyListSeatCounts[mapDate][regionData.partyID] ?? 0)-(partyListSeatCounts[previousMapDate][regionData.partyID] ?? 0)
-            
-            regionData.flip = partyListSeatOn > (partyListSeatCounts[mapDate][regionData.partyID] ?? 0)-seatDifference
+            const currentDateSeats = getPartyListSeatCount(mapDate, regionData.partyID)
+            const previousDateSeats = getPartyListSeatCount(previousMapDate, regionData.partyID)
+            const seatDifference = currentDateSeats-(previousDateSeats + politicalParties[regionData.partyID].getAncestors().reduce((sum, p) => sum + getPartyListSeatCount(previousMapDate, p.getID()), 0));
+            regionData.flip = partyListSeatOn > currentDateSeats-seatDifference
             
             partyListSeatOn += 1
           }
@@ -515,6 +510,20 @@ var JJUHouseMapType = new MapType(
       }
     }
     
+    function getDistrictSVGByDate(dateTime)
+    {
+      let mapDate = new Date(dateTime)
+      
+      if (mapDate < new Date(2025, 10-1, 1))
+      {
+        return "svg-sources/jju-districts-map.svg"
+      }
+      else
+      {
+        return "svg-sources/jju-districts-10-map.svg"
+      }
+    }
+    
     function getFormattedRegionName(regionName, regionData)
     {
       if (!regionData) return regionName
@@ -528,7 +537,6 @@ var JJUHouseMapType = new MapType(
       return regionName
     }
     
-    //To Do Replace this with wiki links because those are better than these nightmarishly bad spreadsheet links that dont even work please god help me - Javer
     var electionDateToSpreadsheetData = {
       1724223600000: {
         id: "1fFJ8Y_KS2iy6qOupil1F-qC8wrKDjpJECRHIVjWHUzY",
@@ -804,7 +812,6 @@ var JJUHouseMapType = new MapType(
         }
       }
     }
-    // Todo: add the shit from the previous elections - Wiki - not the original shit - im not gonna do that not my job - Javer
   
 	  var PastElectionResultMapSource = new MapSource(
 	    "JJU-Past-House-Elections", // id
@@ -866,9 +873,83 @@ var JJUHouseMapType = new MapType(
       null, // shouldSetDisabledWorthToZero
       null, // shouldUseOriginalMapDataForTotalsPieChart
       null, // shouldForcePopularVoteDisplay
-      {safe: 20, likely: 10, lean: 5, tilt: Number.MIN_VALUE}, // customDefaultMargins
+      () => {
+        const isSimulated = currentSliderDate > new Date(2025, 12-1, 1)
+        return isSimulated || showingCompareMap
+          ? {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}
+          : {safe: 30, likely: 20, lean: 10, tilt: Number.MIN_VALUE}
+      }, // customDefaultMargins
+	  )
+    
+    var PastListElectionResultMapSource = new MapSource(
+      "JJU-Past-List-House-Elections", // id
+      "Past List Elections", // name
+      "./csv-sources/jju-past-list.csv", // dataURL
+      "https://docs.google.com/spreadsheets/d", // homepageURL
+      {regular: "./assets/wikipedia-large.png", mini: "./assets/wikipedia-large.png", getOverlayText: () => {
+        let currentYear = currentSliderDate.getFullYear()
+        return currentYear
+      }}, // iconURL
+      {
+        date: "date",
+        region: "region",
+        isSpecial: "special",
+        isRunoff: "runoff",
+        isOffyear: "offyear",
+        candidateName: "candidate",
+        partyID: "party",
+        voteshare: "voteshare",
+        candidateVotes: "candidatevotes",
+        totalVotes: "totalvotes"
+      }, // columnMap
+      null, // cycleYear
+      null, // candidateNameToPartyIDMap
+      null, // shortCandidateNameOverride
+      regionNameToID, // regionNameToIDMap
+      null, // regionIDToLinkMap
+      null, // heldRegionMap
+      false, // shouldFilterOutDuplicateRows
+      true, // addDecimalPadding
+      doubleLineVoteshareFilterFunction, // organizeMapDataFunction
+      null, // viewingDataFunction
+      null, // zoomingDataFunction
+      null, // splitVoteDataFunction
+      null, // splitVoteDisplayOptions
+      getFormattedRegionName, // getFormattedRegionName
+      function(homepageURL, regionID, _, mapDate, __, mapData)
+      {
+        console.log(mapData, mapDate)
+        
+        const regionData = mapData[mapDate.getTime()][regionID]
+        if (regionData && regionData.isHold && regionData.electionDate)
+        {
+          mapDate = new Date(regionData.electionDate)
+        }
+        
+        let spreadsheetLinkData = electionDateToSpreadsheetData[mapDate.getTime()]
+        if (!spreadsheetLinkData) return null
+        
+        let linkToOpen = `${homepageURL}/${spreadsheetLinkData.id}/edit?gid=${spreadsheetLinkData.regions[regionID] ?? 0}`
+      
+        return linkToOpen
+      }, // customOpenRegionLinkFunction
+      null, // updateCustomMapFunction
+      null, // convertMapDataRowToCSVFunction
+      null, // isCustomMap
+      null, // shouldClearDisabled
+      true, // shouldShowVoteshare
+      1.0, // voteshareCutoffMargin
+      getDistrictSVGByDate, // overrideSVGPath
+      null, // shouldSetDisabledWorthToZero
+      null, // shouldUseOriginalMapDataForTotalsPieChart
+      null, // shouldForcePopularVoteDisplay
+      () => {
+        const isSimulated = currentSliderDate > new Date(2025, 12-1, 1)
+        return isSimulated || showingCompareMap
+          ? {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}
+          : {safe: 30, likely: 20, lean: 10, tilt: Number.MIN_VALUE}
+      }, // customDefaultMargins
     )
-
   
 	  var idsToPartyNames = {}
 	  var partyNamesToIDs = {}
@@ -924,7 +1005,7 @@ var JJUHouseMapType = new MapType(
       null, // shouldSetDisabledWorthToZero
       null, // shouldUseOriginalMapDataForTotalsPieChart
       null, // shouldForcePopularVoteDisplay
-      {safe: 20, likely: 10, lean: 5, tilt: Number.MIN_VALUE}, // customDefaultMargins
+      {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}, // customDefaultMargins
 	  )
   
 	  var todayDate = new Date()
@@ -932,16 +1013,19 @@ var JJUHouseMapType = new MapType(
   
 	  var houseMapSources = {}
 	  houseMapSources[PastElectionResultMapSource.getID()] = PastElectionResultMapSource
+    houseMapSources[PastListElectionResultMapSource.getID()] = PastListElectionResultMapSource
 	  houseMapSources[CustomMapSource.getID()] = CustomMapSource
   
 	  const houseMapSourceIDs = {
-	    [allYearsCycle]: [PastElectionResultMapSource.getID(), CustomMapSource.getID()]
+	    [allYearsCycle]: [PastElectionResultMapSource.getID(), PastListElectionResultMapSource.getID(), CustomMapSource.getID()]
 	  }
 	  
 	  const kPastElectionsVsPastElections = 1
+    const kPastListElectionsVsPastListElections = 2
   
 	  var defaultHouseCompareSourceIDs = {}
 	  defaultHouseCompareSourceIDs[kPastElectionsVsPastElections] = [PastElectionResultMapSource.getID(), PastElectionResultMapSource.getID()]
+    defaultHouseCompareSourceIDs[kPastListElectionsVsPastListElections] = [PastListElectionResultMapSource.getID(), PastListElectionResultMapSource.getID()]
   
 	  return {mapSources: houseMapSources, mapSourceIDs: houseMapSourceIDs, mapCycles: [], defaultCompareSourceIDs: defaultHouseCompareSourceIDs, customSourceID: CustomMapSource.getID()}
   }

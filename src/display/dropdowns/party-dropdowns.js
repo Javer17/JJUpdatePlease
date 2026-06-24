@@ -6,16 +6,28 @@ const morePartiesToDisplay = 12
 const thirdRowParties = 8
 const maxPartiesToDisplay = 6
 const largeMaxPartiesToDisplay = 4
-// More parties were required to be added due to the 7 in the November election (6 excl independent). But i felt why not add a few more cuz i like chaos.
+// More parties were required to be added due to the 7 in the November election (6 Parties and 1 Independent). But i felt why not add a few more cuz i like chaos.
 // Now you can have 12 parties max
 const minDropdownWidth = 140
 
 const largePartyButtonWidth = 40
 const smallPartyButtonWidth = largePartyButtonWidth*2/3
 const smallerPartyButtonWidth = largePartyButtonWidth*0.55
-const normalPartyButtonHeight = 55
-const thirdRowPartyButtonHeight = 40
 
+function getPartyButtonContainerHeight()
+{
+  const container = $("#partyDropdownsContainer")
+  return container.length ? container.height() : $(window).height()
+}
+
+function getPartyButtonHeights()
+{
+  const containerHeight = getPartyButtonContainerHeight()
+  return {
+    normal: 410 * (containerHeight / 1080),
+    thirdRow: 300 * (containerHeight / 1080)
+  }
+}
 
 const largePartyButtonVerticalPadding = 7
 const smallPartyButtonVerticalPadding = 1
@@ -42,6 +54,7 @@ function createPartyDropdowns()
   const shouldUseSmallerButtons = dropdownPoliticalPartyIDs.length > maxPartiesToDisplay
   const shouldUseSmallButtons = dropdownPoliticalPartyIDs.length > largeMaxPartiesToDisplay && shouldUseSmallerButtons == false
   const partyButtonWidth = shouldUseSmallerButtons ? smallerPartyButtonWidth : shouldUseSmallButtons ? smallPartyButtonWidth : largePartyButtonWidth
+  const { normal: normalPartyButtonHeight, thirdRow: thirdRowPartyButtonHeight } = getPartyButtonHeights()
   const partyButtonHeight = dropdownPoliticalPartyIDs.length > thirdRowParties ? thirdRowPartyButtonHeight : normalPartyButtonHeight
   // const partyButtonWidth = shouldUseSmallButtons ? smallPartyButtonWidth : largePartyButtonWidth
   // const shouldStackText = shouldUseSmallButtons
@@ -573,6 +586,10 @@ function displayPartyTotals(overrideCreateDropdowns)
     $("#" + partyID + "-votes").css('font-size', votesFontSize)
   }
   
+  const { normal: normalPartyButtonHeight, thirdRow: thirdRowPartyButtonHeight } = getPartyButtonHeights()
+  const partyButtonHeight = dropdownPoliticalPartyIDs.length > thirdRowParties ? thirdRowPartyButtonHeight : normalPartyButtonHeight
+  $("#partyDropdownsContainer .dropdown").css('height', partyButtonHeight + "px")
+
   const buttonHeight = $("#partyDropdownsContainer").height()*0.35
   const buttonHeightFactor = shouldUseSmallerButtons ? 0.3 :shouldUseSmallButtons ? 0.35 : 0.60
   

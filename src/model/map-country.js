@@ -208,7 +208,6 @@ function setMapCountries()
     [JJUPresidentMapType.getID()]: JJUPresidentMapType,
     [JJUGovernorMapType.getID()]: JJUGovernorMapType,
     [JJUSenateMapType.getID()]: JJUSenateMapType,
-    [JJUListMapType.getID()]: JJUListMapType
   })
   
   JJUMapCountry.setPoliticalPartyData(
@@ -232,16 +231,20 @@ function setMapCountries()
       [IndependentGenericParty.getID()]: IndependentGenericParty,
       [JJUProgressiveLabourParty.getID()]: JJUProgressiveLabourParty,
       [JJUPWPParty.getID()]: JJUPWPParty,
+      [JJUFDPParty.getID()]: JJUFDPParty,
       [JJUSolidarityParty.getID()]: JJUSolidarityParty,
       [JJUNationalParty.getID()]: JJUNationalParty,
-      [JJUUnitedLeftBloc.getID()]: JJUUnitedLeftBloc
+      [JJUUnitedLeftBloc.getID()]: JJUUnitedLeftBloc,
+      [JJUSDPParty.getID()]: JJUSDPParty,
+      [JJUGreenParty.getID()]: JJUGreenParty,
+      [JJUUCPParty.getID()]: JJUUCPParty,
     },
     [
-      JJUNationalParty.getID(),
       JJUAllianceParty.getID(),
-      JJUSolidarityParty.getID(),
-      JJUProgressiveLabourParty.getID(),
-      JJUPWPParty.getID(),
+      JJUFDPParty.getID(),
+      JJUSDPParty.getID(),
+      JJUGreenParty.getID(),
+      JJUUCPParty.getID(),
       IndependentGenericParty.getID()
     ],
     [
@@ -251,8 +254,12 @@ function setMapCountries()
       JJUAllianceParty.getID(),
       JJUProgressiveParty.getID(),
       JJUWildroseParty.getID(),
+      JJUFDPParty.getID(),
       JJUReformParty.getID(),
       JJUProgressiveLabourParty.getID(),
+      JJUGreenParty.getID(),
+      JJUSDPParty.getID(),
+      JJUUCPParty.getID(),
       JJUNationalParty.getID(),
       JJUPWPParty.getID(),
       JJUSolidarityParty.getID(),
@@ -272,10 +279,10 @@ function setMapCountries()
   )
   
   JJUMapCountry.setCountdownTimes({
-    "October 2025 Midterm Elections": {time: 1760137200000, url: null},
-    "November 2025 General Election": {time: 1763251200000, url: null},
-    "December 2025 Midterm Elections": {time: 1765670400000, url: null},
-    "January 2026 General Elections": {time: 1769385600000, url: null}
+    "January 2026 General Elections": {time: 1769385600000, url: null},
+    "February 2026 Midterm Elections": {time: 1772326800000, url: null},
+    "April 2026 General Elections": {time: 1776474000000, url: null},
+    "May 2026 Midterm Elections": {time: 1780182000000, url: null}
   })
   
   mapCountries[USAMapCountry.getID()] = USAMapCountry
