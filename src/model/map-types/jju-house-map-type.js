@@ -873,12 +873,7 @@ var JJUHouseMapType = new MapType(
       null, // shouldSetDisabledWorthToZero
       null, // shouldUseOriginalMapDataForTotalsPieChart
       null, // shouldForcePopularVoteDisplay
-      () => {
-        const isSimulated = currentSliderDate > new Date(2025, 12-1, 1)
-        return isSimulated || showingCompareMap
-          ? {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}
-          : {safe: 30, likely: 20, lean: 10, tilt: Number.MIN_VALUE}
-      }, // customDefaultMargins
+      {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE} // customDefaultMargins
 	  )
     
     var PastListElectionResultMapSource = new MapSource(
@@ -943,12 +938,7 @@ var JJUHouseMapType = new MapType(
       null, // shouldSetDisabledWorthToZero
       null, // shouldUseOriginalMapDataForTotalsPieChart
       null, // shouldForcePopularVoteDisplay
-      () => {
-        const isSimulated = currentSliderDate > new Date(2025, 12-1, 1)
-        return isSimulated || showingCompareMap
-          ? {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}
-          : {safe: 30, likely: 20, lean: 10, tilt: Number.MIN_VALUE}
-      }, // customDefaultMargins
+      {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}// customDefaultMargins
     )
   
 	  var idsToPartyNames = {}
