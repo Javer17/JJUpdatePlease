@@ -4,7 +4,7 @@ var JJUHouseMapType = new MapType(
   "H",
   "assets/usa-house.png",
   "svg-sources/jju-districts-10-list-12-map.svg",
-  22,
+  30,
   function()
   {
     return 1
