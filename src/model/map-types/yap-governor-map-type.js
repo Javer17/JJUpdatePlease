@@ -1,10 +1,10 @@
-var JJUGovernorMapType = new MapType(
-  "JJU-Governor",
+var YAPGovernorMapType = new MapType(
+  "YAP-Governor",
   "Governor",
   "G",
   "assets/usa-governor.png",
-  "svg-sources/jju-regions-5-map.svg",
-  5,
+  "svg-sources/yap-states.svg",
+  17,
   function()
   {
     return 1
@@ -15,7 +15,23 @@ var JJUGovernorMapType = new MapType(
   true,
   false,
   true,
-  {"N": "North", "S": "South", "E": "East", "W": "West", "C": "Center"},
+    {"CM": "Cambria", 
+    "CA": "Calleoria", 
+    "KO": "Kostos", 
+    "CE": "Cerbska", 
+    "AC": "Acalliana",
+    "AR": "Armallos", 
+    "ST": "Stettigan",
+    "BL": "Blesna", 
+    "LA": "Larimer", 
+    "ES": "Estellia", 
+    "TL": "Taclima", 
+    "MA": "Matatheste", 
+    "OP": "Opplica", 
+    "RO": "Rorcia",
+    "NQ": "New Queria",
+    "PR": "Porcerle",
+    "DF": "Yapburgh D.F."},
   [],
   [
 	  {id: "offYear", title: "🔄 Off Cycle Elections", type: MapSettingType.optionCycle, options:
@@ -38,8 +54,27 @@ var JJUGovernorMapType = new MapType(
     defaultValue: "hide", reloadType: MapSettingReloadType.display}
   ],
   () => {
-	  const regionNameToID = {"North": "N", "South": "S", "East": "E", "West": "W", "Center": "C", "National Popular Vote": nationalPopularVoteID}
-  
+	        const regionNameToID = {
+  "Cambria": "CM",
+  "Calleoria": "CA",
+  "Kostos": "KO",
+  "Cerbska": "CE",
+  "Armallos": "AR",
+  "Stettigan": "ST",
+  "Acalliana": "AC",
+  "Blesna": "BL",
+  "Larimer": "LA",
+  "Estellia": "ES",
+  "Taclima": "TL",
+  "Matatheste": "MA",
+  "Opplica": "OP",
+  "Rorcia": "RO",
+  "New Queria": "NQ",
+  "Porcerle": "PR",
+  "Yapburgh": "DF",
+  "National Popular Vote": nationalPopularVoteID
+}
+
 	  let doubleLineVoteshareFilterFunction = function(rawMapData, mapDates, columnMap, _, candidateNameToPartyIDMap, regionNameToID, heldRegionMap, ____, isCustomMap, voteshareCutoffMargin)
 	  {
 	    let filteredMapData = {}
@@ -331,11 +366,11 @@ var JJUGovernorMapType = new MapType(
       
       if (mapDate < new Date(2025, 10-1, 1))
       {
-        return "svg-sources/jju-regions-map.svg"
+        return "svg-sources/yap-states.svg"
       }
       else
       {
-        return "svg-sources/jju-regions-5-map.svg"
+        return "svg-sources/yap-states.svg"
       }
     }
     
@@ -353,60 +388,15 @@ var JJUGovernorMapType = new MapType(
     }
     
     var electionDateToSpreadsheetData = {
-      1741507200000: {
-        id: "1NrI9tRg4GtJxBy1hng0fMC3wdtby5LCsqMBXQUvffZ4",
-        regions: {
-          "N": "554482009",
-          "S": "554482009",
-          "E": "554482009",
-          "W": "554482009"
-        }
-      },
-      1746946800000: {
-        id: "1OR3INfqexRBxjpFRJpMCICZNZDaXbnkvDM23rgYAwOs",
-        regions: {
-          "N": "554482009",
-          "S": "554482009",
-          "E": "554482009",
-          "W": "554482009"
-        }
-      },
-      1752994800000: {
-        id: "1ILe_QCqSePlhiQcd0lTEFEFBhZaIj8j20GB-vE4mSSE",
-        regions: {
-          "N": "554482009",
-          "S": "554482009",
-          "E": "554482009",
-          "W": "554482009"
-        }
-      },
-      1757142000000: {
-        id: "14G13c38FwtqjLNZ7WmoCA-0tvEPfZeOmk8MSMx5FPpE",
-        regions: {
-          "N": "603625947",
-          "S": "603625947",
-          "E": "603625947",
-          "W": "603625947"
-        }
-      },
-      1760166000000: {
-        id: "1-_zuGIXOIIFszj4vLfryyQVlkKYkJiZuJfZnUw5ibKQ",
-        regions: {
-          "N": "603625947",
-          "S": "603625947",
-          "E": "603625947",
-          "W": "603625947",
-          "C": "603625947"
-        }
-      }
+      // empty :)
     }
   
 	  var PastElectionResultMapSource = new MapSource(
-	    "JJU-Past-Governor-Elections", // id
+	    "YAP-Past-Governor-Elections", // id
 	    "Past Elections", // name
-	    "./csv-sources/jju-past-governor.csv", // dataURL
+	    "./csv-sources/yap-past-governor.csv", // dataURL
 	    "https://docs.google.com/spreadsheets/d", // homepageURL
-	    {regular: "./assets/jju-flag-10.png", mini: "./assets/wikipedia-large.png", getOverlayText: () => {
+	    {regular: "./assets/yapmeria-flag.png", mini: "./assets/wikipedia-large.png", getOverlayText: () => {
 		  let currentYear = currentSliderDate.getFullYear()
 		  return currentYear
 	    }}, // iconURL
@@ -420,7 +410,8 @@ var JJUGovernorMapType = new MapType(
 		    partyID: "party",
 		    voteshare: "voteshare",
 		    candidateVotes: "candidatevotes",
-		    totalVotes: "totalvotes"
+		    totalVotes: "totalvotes",
+        isDisabled: "disabled"
 	    }, // columnMap
 	    null, // cycleYear
 	    null, // candidateNameToPartyIDMap
@@ -456,9 +447,9 @@ var JJUGovernorMapType = new MapType(
 	    null, // isCustomMap
 	    null, // shouldClearDisabled
 	    true, // shouldShowVoteshare
-	    1.0, // voteshareCutoffMargin
+	    0, // voteshareCutoffMargin
       getGovernorSVGByDate, // overrideSVGPath
-      null, // shouldSetDisabledWorthToZero
+      true, // shouldSetDisabledWorthToZero
       null, // shouldUseOriginalMapDataForTotalsPieChart
       null, // shouldForcePopularVoteDisplay
       {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}// customDefaultMargins, // customDefaultMargins
@@ -475,7 +466,7 @@ var JJUGovernorMapType = new MapType(
 	  }
   
 	  var CustomMapSource = new MapSource(
-	    "JJU-Custom-Governor", // id
+	    "YAP-Custom-Governor", // id
 	    "Custom", // name
 	    null, // dataURL
 	    null, // homepageURL
@@ -515,7 +506,7 @@ var JJUGovernorMapType = new MapType(
 	    null, // shouldShowVoteshare
       null, // voteshareCutoffMargin
       getGovernorSVGByDate, // overrideSVGPath
-      null, // shouldSetDisabledWorthToZero
+      true, // shouldSetDisabledWorthToZero
       null, // shouldUseOriginalMapDataForTotalsPieChart
       null, // shouldForcePopularVoteDisplay
       {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}, // customDefaultMargins

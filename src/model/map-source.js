@@ -34,7 +34,7 @@ class MapSource
     this.shouldShowVoteshare = shouldShowVoteshare == null ? false : shouldShowVoteshare
     this.voteshareCutoffMargin = voteshareCutoffMargin
     this.overrideSVGPath = overrideSVGPath
-    this.shouldSetDisabledWorthToZero = shouldSetDisabledWorthToZero == null ? false : true
+    this.shouldSetDisabledWorthToZero = shouldSetDisabledWorthToZero == null ? false : shouldSetDisabledWorthToZero
     this.shouldUseOriginalMapDataForTotalsPieChart = shouldUseOriginalMapDataForTotalsPieChart == null ? false : shouldUseOriginalMapDataForTotalsPieChart
     this.shouldForcePopularVoteDisplay = shouldForcePopularVoteDisplay == null ? false : shouldForcePopularVoteDisplay
     this.customDefaultMargins = customDefaultMargins

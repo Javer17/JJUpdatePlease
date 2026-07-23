@@ -1,10 +1,10 @@
-var JJUPresidentMapType = new MapType(
-  "JJU-President",
+var YAPPresidentMapType = new MapType(
+  "YAP-President",
   "President",
   "P",
   "assets/usa-pres.png",
-  "svg-sources/jju-districts-10-map.svg",
-  10,
+  "svg-sources/yap-states.svg",
+  17,
   function()
   {
     return 1
@@ -15,12 +15,47 @@ var JJUPresidentMapType = new MapType(
   true,
   false,
   true,
-  {"BI": "Brunix Islands", "EX": "Emix", "DM": "Dalminica", "TR": "Trunoe", "AV": "Alvana", "QU": "Quintin", "DT": "Dentone", "GV": "Garvor", "KI": "Kilden", "NM": "Newmasi"},
-  [/.+-S/],
+  {"CM": "Cambria", 
+    "CA": "Calleoria", 
+    "KO": "Kostos", 
+    "CE": "Cerbska", 
+    "AC": "Acalliana",
+    "AR": "Armallos", 
+    "ST": "Stettigan",
+    "BL": "Blesna", 
+    "LA": "Larimer", 
+    "ES": "Estellia", 
+    "TL": "Taclima", 
+    "MA": "Matatheste", 
+    "OP": "Opplica", 
+    "RO": "Rorcia",
+    "NQ": "New Queria",
+    "PR": "Porcerle",
+    "DF": "Yapburgh D.F."}
+    ,[/.+-S/],
   [],
   () => {
-    const regionNameToID = {"Brunix Islands": "BI", "Emix": "EX", "Dalminica": "DM", "Trunoe": "TR", "Alvana": "AV", "Quintin": "QU", "Dentone": "DT", "Garvor": "GV", "Kilden": "KI", "Newmasi": "NM", "National Popular Vote": nationalPopularVoteID}
-  
+      const regionNameToID = {
+  "Cambria": "CM",
+  "Calleoria": "CA",
+  "Kostos": "KO",
+  "Cerbska": "CE",
+  "Armallos": "AR",
+  "Stettigan": "ST",
+  "Acalliana": "AC",
+  "Blesna": "BL",
+  "Larimer": "LA",
+  "Estellia": "ES",
+  "Taclima": "TL",
+  "Matatheste": "MA",
+  "Opplica": "OP",
+  "Rorcia": "RO",
+  "New Queria": "NQ",
+  "Porcerle": "PR",
+  "Yapburgh": "DF",
+  "National Popular Vote": nationalPopularVoteID
+}
+
     let doubleLineVoteshareFilterFunction = function(rawMapData, mapDates, columnMap, _, __, regionNameToID, heldRegionMap, ____, isCustomMap, voteshareCutoffMargin)
     {
   	    let filteredMapData = {}
@@ -28,20 +63,20 @@ var JJUPresidentMapType = new MapType(
   
 	    let regionNames = Object.keys(regionNameToID)
       
-      const getDistricts8 = () => ['BI', 'EX', 'DM', 'TR', 'AV', 'QU', 'DT', 'GV']
-      const getDistricts10 = () => ['BI', 'EX', 'DM', 'TR', 'AV', 'QU', 'DT', 'GV', 'KI', 'NM']
+      const getStates = () => ["CM", "CA", "KO", "CE", "AR", "ST", "AC", "BL", "LA", "ES", "TL", "MA", "OP", "RO", "NQ", "PR", "DF"]
       
+      // probably should just load past election results for this
       const regionDateRanges = [
         {
-          start: new Date(2024, 8-1, 1).getTime(),
+          start: new Date(2024, 10-1, 11-1).getTime(),
           regions: [
-            ...getDistricts8(),
+            ...getStates(),
           ]
         },
         {
-          start: new Date(2025, 10-1, 11-1).getTime(),
+          start: new Date(2025, 1-1, 26-1).getTime(),
           regions: [
-            ...getDistricts10(),
+            ...getStates(),
           ]
         }
       ]
@@ -271,7 +306,7 @@ var JJUPresidentMapType = new MapType(
       return {margin: 0, partyID: TossupParty.getID()}
     }
   
-    function customMapConvertMapDataToCSVFunction(columnKey, mapDateString, regionID, regionNameToID, candidateName, partyID, regionData, shouldUseVoteshare)
+    function customMapConvertMapDataToCSVFunction(columnKey, mapDateString, regionID, regionNameToID, candidateName, partyID, regionData, shouldUseVoteshare, isDisabled)
     {
       let voteshareData
       switch (columnKey)
@@ -305,6 +340,9 @@ var JJUPresidentMapType = new MapType(
         
         case "flip":
         return (regionData.flip ?? false).toString().toUpperCase()
+
+        case "isDisabled":
+		    return (regionData.disabled ?? false).toString().toUpperCase()
       }
     }
 
@@ -313,11 +351,11 @@ var JJUPresidentMapType = new MapType(
 
       if (mapDate < new Date(2025, 10-1, 11-1))
       {
-        return "svg-sources/jju-districts-map.svg"
+        return "svg-sources/yap-states.svg"
       }
       else
       {
-        return "svg-sources/jju-districts-10-map.svg"
+        return "svg-sources/yap-states.svg"
       }
     }
 
@@ -335,60 +373,15 @@ var JJUPresidentMapType = new MapType(
     }
     
     var electionDateToSpreadsheetData = {
-      1724223600000: {
-        id: "1fFJ8Y_KS2iy6qOupil1F-qC8wrKDjpJECRHIVjWHUzY",
-        regions: {
-          "BI": "1501672328",
-          "EX": "1501672328",
-          "QU": "370122789",
-          "AV": "370122789",
-          "DM": "1011441980",
-          "TR": "1011441980",
-          "DT": "402739737",
-          "GV": "402739737"
-        }
-      },
-      1729407600000: {
-        id: "18T8S_JLndBFFlCOoUxoqDFIxlEczNq4YFK2BNXpGRVc",
-        regions: {
-          "BI": "1501672328",
-          "EX": "1501672328",
-          "QU": "370122789",
-          "AV": "370122789",
-          "DM": "1011441980",
-          "TR": "1011441980",
-          "DT": "402739737",
-          "GV": "402739737"
-        }
-      },
-      1734249600000: {
-        id: "1Us3ATy8e5FpsO7tjNTLTasGqiKPcHJg-hh2h0S9a80I",
-        gid: "160285118"
-      },
-      1739088000000: {
-        id: "1WNpCjaDoAUzKZ0dESvw8rL3wIMSiXYmEphFwwxV2R8U",
-        gid: "129029341"
-      },
-      1743922800000: {
-        id: "1YI8gO_ajh3b9Et7wAH5A6kBLdPHM8LAz5XYhUpe9DRc",
-        gid: "129029341"
-      },
-      1749970800000: {
-        id: "1nI_EfYD42esRP0z-gS5GwMlDdY6RLelvBSFkKewM7pE",
-        gid: "129029341"
-      },
-      1757142000000: {
-        id: "14G13c38FwtqjLNZ7WmoCA-0tvEPfZeOmk8MSMx5FPpE",
-        gid: "129029341"
-      }
+      // empty :)
     }
   
     var PastElectionResultMapSource = new MapSource(
-      "JJU-Past-Presidential-Elections", // id
+      "YAP-Past-Presidential-Elections", // id
       "Past Elections", // name
-      "./csv-sources/jju-past-president.csv", // dataURL
+      "./csv-sources/yap-past-president.csv", // dataURL
       "https://docs.google.com/spreadsheets/d", // homepageURL
-      {regular: "./assets/jju-flag-10.png", mini: "./assets/wikipedia-large.png", getOverlayText: () => {
+      {regular: "./assets/yapmeria-flag.png", mini: "./assets/wikipedia-large.png", getOverlayText: () => {
       let currentYear = currentSliderDate.getFullYear()
       return currentYear
       }}, // iconURL
@@ -401,7 +394,9 @@ var JJUPresidentMapType = new MapType(
         partyID: "party",
         voteshare: "voteshare",
         candidateVotes: "candidatevotes",
-        totalVotes: "totalvotes"
+        totalVotes: "totalvotes",
+        electoralVotes: "ev",
+        isDisabled: "disabled",
 	    }, // columnMap
 	    null, // cycleYear
 	    null, // candidateNameToPartyIDMap
@@ -429,11 +424,11 @@ var JJUPresidentMapType = new MapType(
 	    null, // updateCustomMapFunction
 	    null, // convertMapDataRowToCSVFunction
 	    null, // isCustomMap
-	    null, // shouldClearDisabled
+	    false, // shouldClearDisabled
 	    true, // shouldShowVoteshare
-	    1.0, // voteshareCutoffMargin
+	    0, // voteshareCutoffMargin
       getHouseSVGByDate, // overrideSVGPath
-      null, // shouldSetDisabledWorthToZero
+      true, // shouldSetDisabledWorthToZero
       null, // shouldUseOriginalMapDataForTotalsPieChart
       null, // shouldForcePopularVoteDisplay
       {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE} // customDefaultMargins
@@ -450,7 +445,7 @@ var JJUPresidentMapType = new MapType(
     }
   
     var CustomMapSource = new MapSource(
-      "JJU-Custom-President", // id
+      "YAP-Custom-President", // id
       "Custom", // name
       null, // dataURL
       null, // homepageURL
@@ -463,7 +458,8 @@ var JJUPresidentMapType = new MapType(
         partyID: "party",
         voteshare: "voteshare",
         order: "order",
-        flip: "flip"
+        flip: "flip",
+        electoralVotes: "ev"
       }, // columnMap
       null, // cycleYear
       partyNamesToIDs, // candidateNameToPartyIDMap
@@ -487,7 +483,7 @@ var JJUPresidentMapType = new MapType(
       null, // shouldShowVoteshare
       null, // voteshareCutoffMargin
       getHouseSVGByDate, // overrideSVGPath,
-      null, // shouldSetDisabledWorthToZero
+      true, // shouldSetDisabledWorthToZero
       null, // shouldUseOriginalMapDataForTotalsPieChart
       true, // shouldForcePopularVoteDisplay
       {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}// customDefaultMargins

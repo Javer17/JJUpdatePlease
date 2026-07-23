@@ -202,6 +202,83 @@ function setMapCountries()
     "2025 Inauguration Day": {time: 1737392400000, url: null},
     "2026 Midterm Elections": {time: 1793746800000, url: "https://en.wikipedia.org/wiki/2026_United_States_elections"},
   })
+
+  UKMapCountry.setMapTypes({
+    [UKHouseMapType.getID()]: UKHouseMapType
+  })
+
+
+  UKMapCountry.setPoliticalPartyData(
+    { //Parties
+      [TossupParty.getID()]: TossupParty,
+      [IndependentGenericParty.getID()]: IndependentGenericParty,
+      [OtherParty.getID()]: OtherParty,
+      [UKSpeaker.getID()]:UKSpeaker,
+      [UKLabourParty.getID()]: UKLabourParty,
+      [UKConservativeParty.getID()]: UKConservativeParty,
+      [UKLiberalDemocratsParty.getID()]: UKLiberalDemocratsParty,
+      [UKGreenParty.getID()]: UKGreenParty,
+      [UKReformUKParty.getID()]: UKReformUKParty,
+      [UKPlaidCymruParty.getID()]: UKPlaidCymruParty,
+      [UKScottishNationalParty.getID()]: UKScottishNationalParty,
+      [UKAlbaParty.getID()]: UKAlbaParty,
+      [UKSinnFeinParty.getID()]: UKSinnFeinParty,
+      [UKDemocraticUnionistParty.getID()]: UKDemocraticUnionistParty,
+      [UKAllianceParty.getID()]: UKAllianceParty,
+      [UKSocDemLabParty.getID()]: UKSocDemLabParty,
+      [UKRestoreBritainParty.getID()]: UKRestoreBritainParty,
+      [UKUlsterUnionistParty.getID()]: UKUlsterUnionistParty,
+      [UKWorkersPartyOfBritainParty.getID()]: UKWorkersPartyOfBritainParty,
+      [UKUKIPParty.getID()]: UKUKIPParty,
+      [UKTUVParty.getID()]: UKTUVParty,
+    },
+    [ //Default
+      IndependentGenericParty.getID(),
+      UKSpeaker.getID(),
+      UKLabourParty.getID(),
+      UKConservativeParty.getID(),
+      UKLiberalDemocratsParty.getID(),
+      UKGreenParty.getID(),
+      UKReformUKParty.getID(),
+      UKPlaidCymruParty.getID(),
+      UKScottishNationalParty.getID(),
+      UKRestoreBritainParty.getID(),
+      UKSinnFeinParty.getID(),
+      UKDemocraticUnionistParty.getID(),
+    ],
+    [ //Party IDs
+      TossupParty.getID(),
+      IndependentGenericParty.getID(),
+      OtherParty.getID(),
+      UKSpeaker.getID(),
+      UKLabourParty.getID(),
+      UKConservativeParty.getID(),
+      UKLiberalDemocratsParty.getID(),
+      UKGreenParty.getID(),
+      UKReformUKParty.getID(),
+      UKPlaidCymruParty.getID(),
+      UKScottishNationalParty.getID(),
+      UKAlbaParty.getID(),
+      UKSinnFeinParty.getID(),
+      UKDemocraticUnionistParty.getID(),
+      UKAllianceParty.getID(),
+      UKSocDemLabParty.getID(),
+      UKRestoreBritainParty.getID(),
+      UKUlsterUnionistParty.getID(),
+      UKWorkersPartyOfBritainParty.getID(),
+      UKUKIPParty.getID(),
+      UKTUVParty.getID(),
+      // UKpartythingy
+    ],
+    []
+  )
+
+  UKMapCountry.setCountdownTimes({
+    "January 2026 General Elections": {time: 1769385600000, url: null},
+    "February 2026 Midterm Elections": {time: 1772326800000, url: null},
+    "April 2026 General Elections": {time: 1776474000000, url: null},
+    "May 2026 Midterm Elections": {time: 1780182000000, url: null}
+  })
   
   JJUMapCountry.setMapTypes({
     [JJUHouseMapType.getID()]: JJUHouseMapType,
@@ -216,6 +293,7 @@ function setMapCountries()
       [JJULabourParty.getID()]: JJULabourParty,
       [JJULiberalParty.getID()]: JJULiberalParty,
       [JJUAllianceParty.getID()]: JJUAllianceParty,
+      [JJUConservativeParty.getID()]: JJUConservativeParty,
       [JJUProgressiveParty.getID()]: JJUProgressiveParty,
       [JJUWildroseParty.getID()]: JJUWildroseParty,
       [JJUReformParty.getID()]: JJUReformParty,
@@ -228,6 +306,8 @@ function setMapCountries()
       [JJUPeacockPartyBloc.getID()]: JJUPeacockPartyBloc,
       [JJUBurgerPartyBloc.getID()]: JJUBurgerPartyBloc,
       [JJUUnityPartyBloc.getID()]: JJUUnityPartyBloc,
+      [JJUBOBBloc.getID()]: JJUBOBBloc,
+      [JJUSunsetBloc.getID()]: JJUSunsetBloc,
       [IndependentGenericParty.getID()]: IndependentGenericParty,
       [JJUProgressiveLabourParty.getID()]: JJUProgressiveLabourParty,
       [JJUPWPParty.getID()]: JJUPWPParty,
@@ -238,12 +318,16 @@ function setMapCountries()
       [JJUSDPParty.getID()]: JJUSDPParty,
       [JJUGreenParty.getID()]: JJUGreenParty,
       [JJUUCPParty.getID()]: JJUUCPParty,
+      [JJUDRParty.getID()]: JJUDRParty,
+      [JJUSPJUParty.getID()]: JJUSPJUParty,
     },
     [
+      JJUDRParty.getID(),
       JJUAllianceParty.getID(),
       JJUFDPParty.getID(),
       JJUSDPParty.getID(),
       JJUGreenParty.getID(),
+      JJUSPJUParty.getID(),
       JJUUCPParty.getID(),
       IndependentGenericParty.getID()
     ],
@@ -252,6 +336,7 @@ function setMapCountries()
       JJULabourParty.getID(),
       JJULiberalParty.getID(),
       JJUAllianceParty.getID(),
+      JJUConservativeParty.getID(),
       JJUProgressiveParty.getID(),
       JJUWildroseParty.getID(),
       JJUFDPParty.getID(),
@@ -262,7 +347,9 @@ function setMapCountries()
       JJUUCPParty.getID(),
       JJUNationalParty.getID(),
       JJUPWPParty.getID(),
+      JJUSPJUParty.getID(),
       JJUSolidarityParty.getID(),
+      JJUDRParty.getID(),
       JJULabLibPartyBloc.getID(),
       JJULibConPartyBloc.getID(),
       JJULabourConPartyBloc.getID(),
@@ -273,7 +360,51 @@ function setMapCountries()
       JJUBurgerPartyBloc.getID(),
       JJUUnitedLeftBloc.getID(),
       JJUUnityPartyBloc.getID(),
+      JJUBOBBloc.getID(),
+      JJUSunsetBloc.getID(),
       IndependentGenericParty.getID()
+    ],
+    []
+  )
+
+    YAPMapCountry.setMapTypes({
+    [YAPPresidentMapType.getID()]: YAPPresidentMapType,
+    [YAPGovernorMapType.getID()]: YAPGovernorMapType,
+    [YAPSenateMapType.getID()]: YAPSenateMapType
+  })
+
+
+  YAPMapCountry.setPoliticalPartyData(
+    { //Parties
+      [TossupParty.getID()]: TossupParty,
+      [IndependentGenericParty.getID()]: IndependentGenericParty,
+      [YAPSolidaireParty.getID()]: YAPSolidaireParty,
+      [YAPDreamerParty.getID()]: YAPDreamerParty,
+      [YAPSocialRadicalParty.getID()]: YAPSocialRadicalParty,
+      [YAPProgressiveParty.getID()]: YAPProgressiveParty,
+      [YAPAuroraParty.getID()]: YAPAuroraParty,
+      [YAPCenterAllianceParty.getID()]: YAPCenterAllianceParty,
+      [YAPPikeParty.getID()]: YAPPikeParty,
+      [YAPProgressiveConservativeParty.getID()]: YAPProgressiveConservativeParty,
+      [YAPForwardAllianceParty.getID()]: YAPForwardAllianceParty
+    },
+    [ //Default
+      IndependentGenericParty.getID(),
+      YAPSolidaireParty.getID(),
+      YAPDreamerParty.getID(),
+    ],
+    [ //Party IDs
+      TossupParty.getID(),
+      YAPSolidaireParty.getID(),
+      YAPDreamerParty.getID(),
+      IndependentGenericParty.getID(),
+      YAPSocialRadicalParty.getID(),
+      YAPProgressiveParty.getID(),
+      YAPAuroraParty.getID(),
+      YAPCenterAllianceParty.getID(),
+      YAPPikeParty.getID(),
+      YAPProgressiveConservativeParty.getID(),
+      YAPForwardAllianceParty.getID()
     ],
     []
   )
@@ -284,11 +415,20 @@ function setMapCountries()
     "April 2026 General Elections": {time: 1776474000000, url: null},
     "May 2026 Midterm Elections": {time: 1780182000000, url: null}
   })
+
+    YAPMapCountry.setCountdownTimes({
+    "January 2026 General Elections": {time: 1769385600000, url: null},
+    "February 2026 Midterm Elections": {time: 1772326800000, url: null},
+    "April 2026 General Elections": {time: 1776474000000, url: null},
+    "May 2026 Midterm Elections": {time: 1780182000000, url: null}
+  })
   
   mapCountries[USAMapCountry.getID()] = USAMapCountry
   mapCountries[JJUMapCountry.getID()] = JJUMapCountry
+  mapCountries[YAPMapCountry.getID()] = YAPMapCountry
+  mapCountries[UKMapCountry.getID()] = UKMapCountry
 
-  mapCountryIDs = [USAMapCountry.getID(), JJUMapCountry.getID()]
+  mapCountryIDs = [USAMapCountry.getID(), JJUMapCountry.getID(), YAPMapCountry.getID(), UKMapCountry.getID()]
 }
 
 let USAMapCountry = new MapCountry(
@@ -298,9 +438,23 @@ let USAMapCountry = new MapCountry(
   "assets/usa-flag.png"
 )
 
+let UKMapCountry = new MapCountry(
+  "UK",
+  "United Kingdom",
+  "UK",
+  "assets/uk-flag.png"
+)
+
 let JJUMapCountry = new MapCountry(
   "JJU",
   "Jacksonia",
   "JJU",
   "assets/jju-flag-10.png"
+)
+
+let YAPMapCountry = new MapCountry(
+  "YAP",
+  "Yapmeria",
+  "YAP",
+  "assets/yapmeria-flag.png"
 )

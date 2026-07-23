@@ -1034,11 +1034,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/8/1892,CO,Boulder,Weaver,independent,2219,3674
 11/8/1892,CO,Boulder,Bidwell,independent,117,3674
 11/8/1892,CO,Boulder,Other,other,0,3674
-11/8/1892,CO,Broomfield,Cleveland,democrat,0,3674
-11/8/1892,CO,Broomfield,Harrison,republican,1338,3674
-11/8/1892,CO,Broomfield,Weaver,independent,2219,3674
-11/8/1892,CO,Broomfield,Bidwell,independent,117,3674
-11/8/1892,CO,Broomfield,Other,other,0,3674
 11/8/1892,CO,Chaffee,Cleveland,democrat,0,1690
 11/8/1892,CO,Chaffee,Harrison,republican,678,1690
 11/8/1892,CO,Chaffee,Weaver,independent,997,1690
@@ -11240,11 +11235,11 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/8/1892,SD,Moody,Weaver,independent,548,1379
 11/8/1892,SD,Moody,Bidwell,independent,0,1379
 11/8/1892,SD,Moody,Other,other,0,1379
-11/8/1892,SD,Oglala_Lakota,Cleveland,democrat
-11/8/1892,SD,Oglala_Lakota,Harrison,republican
-11/8/1892,SD,Oglala_Lakota,Weaver,independent
-11/8/1892,SD,Oglala_Lakota,Bidwell,independent
-11/8/1892,SD,Oglala_Lakota,Other,other
+11/8/1892,SD,Shannon,Cleveland,democrat
+11/8/1892,SD,Shannon,Harrison,republican
+11/8/1892,SD,Shannon,Weaver,independent
+11/8/1892,SD,Shannon,Bidwell,independent
+11/8/1892,SD,Shannon,Other,other
 11/8/1892,SD,Pennington,Cleveland,democrat,147,1893
 11/8/1892,SD,Pennington,Harrison,republican,959,1893
 11/8/1892,SD,Pennington,Weaver,independent,787,1893
@@ -15367,9 +15362,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/3/1896,CO,Boulder,Bryan,democrat,6046,7209
 11/3/1896,CO,Boulder,McKinley,republican,1033,7209
 11/3/1896,CO,Boulder,Other,other,130,7209
-11/3/1896,CO,Broomfield,Bryan,democrat,6046,7209
-11/3/1896,CO,Broomfield,McKinley,republican,1033,7209
-11/3/1896,CO,Broomfield,Other,other,130,7209
 11/3/1896,CO,Chaffee,Bryan,democrat,2606,2762
 11/3/1896,CO,Chaffee,McKinley,republican,141,2762
 11/3/1896,CO,Chaffee,Other,other,15,2762
@@ -21502,9 +21494,9 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/3/1896,SD,Moody,Bryan,democrat,1012,1799
 11/3/1896,SD,Moody,McKinley,republican,780,1799
 11/3/1896,SD,Moody,Other,other,7,1799
-11/3/1896,SD,Oglala_Lakota,Bryan,democrat
-11/3/1896,SD,Oglala_Lakota,McKinley,republican
-11/3/1896,SD,Oglala_Lakota,Other,other
+11/3/1896,SD,Shannon,Bryan,democrat
+11/3/1896,SD,Shannon,McKinley,republican
+11/3/1896,SD,Shannon,Other,other
 11/3/1896,SD,Pennington,Bryan,democrat,1056,1835
 11/3/1896,SD,Pennington,McKinley,republican,753,1835
 11/3/1896,SD,Pennington,Other,other,26,1835
@@ -24728,11 +24720,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/6/1900,CO,Boulder,Swallow,independent,264,9168
 11/6/1900,CO,Boulder,Debs,independent,52,9168
 11/6/1900,CO,Boulder,Other,other,16,9168
-11/6/1900,CO,Broomfield,Bryan,democrat,5117,9168
-11/6/1900,CO,Broomfield,McKinley,republican,3719,9168
-11/6/1900,CO,Broomfield,Swallow,independent,264,9168
-11/6/1900,CO,Broomfield,Debs,independent,52,9168
-11/6/1900,CO,Broomfield,Other,other,16,9168
 11/6/1900,CO,Chaffee,Bryan,democrat,1890,3002
 11/6/1900,CO,Chaffee,McKinley,republican,1033,3002
 11/6/1900,CO,Chaffee,Swallow,independent,56,3002
@@ -34953,11 +34940,11 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/6/1900,SD,Moody,Swallow,independent,15,2091
 11/6/1900,SD,Moody,Debs,independent,3,2091
 11/6/1900,SD,Moody,Other,other,8,2091
-11/6/1900,SD,Oglala_Lakota,Bryan,democrat
-11/6/1900,SD,Oglala_Lakota,McKinley,republican
-11/6/1900,SD,Oglala_Lakota,Swallow,independent
-11/6/1900,SD,Oglala_Lakota,Debs,independent
-11/6/1900,SD,Oglala_Lakota,Other,other
+11/6/1900,SD,Shannon,Bryan,democrat
+11/6/1900,SD,Shannon,McKinley,republican
+11/6/1900,SD,Shannon,Swallow,independent
+11/6/1900,SD,Shannon,Debs,independent
+11/6/1900,SD,Shannon,Other,other
 11/6/1900,SD,Pennington,Bryan,democrat,784,1697
 11/6/1900,SD,Pennington,McKinley,republican,898,1697
 11/6/1900,SD,Pennington,Swallow,independent,5,1697
@@ -39845,12 +39832,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/8/1904,CO,Boulder,Swallow,independent,489,10172
 11/8/1904,CO,Boulder,Watson,independent,22,10172
 11/8/1904,CO,Boulder,Other,other,13,10172
-11/8/1904,CO,Broomfield,Parker,democrat,4030,10172
-11/8/1904,CO,Broomfield,Roosevelt,republican,5483,10172
-11/8/1904,CO,Broomfield,Debs,independent,135,10172
-11/8/1904,CO,Broomfield,Swallow,independent,489,10172
-11/8/1904,CO,Broomfield,Watson,independent,22,10172
-11/8/1904,CO,Broomfield,Other,other,13,10172
 11/8/1904,CO,Chaffee,Parker,democrat,1601,3435
 11/8/1904,CO,Chaffee,Roosevelt,republican,1611,3435
 11/8/1904,CO,Chaffee,Debs,independent,167,3435
@@ -52115,12 +52096,12 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/8/1904,SD,Moody,Swallow,independent,66,1958
 11/8/1904,SD,Moody,Watson,independent,87,1958
 11/8/1904,SD,Moody,Other,other,0,1958
-11/8/1904,SD,Oglala_Lakota,Parker,democrat
-11/8/1904,SD,Oglala_Lakota,Roosevelt,republican
-11/8/1904,SD,Oglala_Lakota,Debs,independent
-11/8/1904,SD,Oglala_Lakota,Swallow,independent
-11/8/1904,SD,Oglala_Lakota,Watson,independent
-11/8/1904,SD,Oglala_Lakota,Other,other
+11/8/1904,SD,Shannon,Parker,democrat
+11/8/1904,SD,Shannon,Roosevelt,republican
+11/8/1904,SD,Shannon,Debs,independent
+11/8/1904,SD,Shannon,Swallow,independent
+11/8/1904,SD,Shannon,Watson,independent
+11/8/1904,SD,Shannon,Other,other
 11/8/1904,SD,Pennington,Parker,democrat,392,1632
 11/8/1904,SD,Pennington,Roosevelt,republican,1126,1632
 11/8/1904,SD,Pennington,Debs,independent,75,1632
@@ -57746,12 +57727,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/3/1908,CO,Boulder,Chafin,independent,498,11629
 11/3/1908,CO,Boulder,Watson,independent,0,11629
 11/3/1908,CO,Boulder,Other,other,0,11629
-11/3/1908,CO,Broomfield,Bryan,democrat,5772,11629
-11/3/1908,CO,Broomfield,Taft,republican,4856,11629
-11/3/1908,CO,Broomfield,Debs,independent,503,11629
-11/3/1908,CO,Broomfield,Chafin,independent,498,11629
-11/3/1908,CO,Broomfield,Watson,independent,0,11629
-11/3/1908,CO,Broomfield,Other,other,0,11629
 11/3/1908,CO,Chaffee,Bryan,democrat,1679,3225
 11/3/1908,CO,Chaffee,Taft,republican,1233,3225
 11/3/1908,CO,Chaffee,Debs,independent,266,3225
@@ -70478,12 +70453,12 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/3/1908,SD,Moody,Chafin,independent,80,2008
 11/3/1908,SD,Moody,Watson,independent,0,2008
 11/3/1908,SD,Moody,Other,other,0,2008
-11/3/1908,SD,Oglala_Lakota,Bryan,democrat
-11/3/1908,SD,Oglala_Lakota,Taft,republican
-11/3/1908,SD,Oglala_Lakota,Debs,independent
-11/3/1908,SD,Oglala_Lakota,Chafin,independent
-11/3/1908,SD,Oglala_Lakota,Watson,independent
-11/3/1908,SD,Oglala_Lakota,Other,other
+11/3/1908,SD,Shannon,Bryan,democrat
+11/3/1908,SD,Shannon,Taft,republican
+11/3/1908,SD,Shannon,Debs,independent
+11/3/1908,SD,Shannon,Chafin,independent
+11/3/1908,SD,Shannon,Watson,independent
+11/3/1908,SD,Shannon,Other,other
 11/3/1908,SD,Pennington,Bryan,democrat,1160,2966
 11/3/1908,SD,Pennington,Taft,republican,1702,2966
 11/3/1908,SD,Pennington,Debs,independent,78,2966
@@ -76191,12 +76166,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/5/1912,CO,Boulder,Debs,independent,918,10620
 11/5/1912,CO,Boulder,Chafin,independent,453,10620
 11/5/1912,CO,Boulder,Other,other,5,10620
-11/5/1912,CO,Broomfield,Wilson,democrat,4330,10620
-11/5/1912,CO,Broomfield,Taft,republican,2445,10620
-11/5/1912,CO,Broomfield,Roosevelt,independent,2469,10620
-11/5/1912,CO,Broomfield,Debs,independent,918,10620
-11/5/1912,CO,Broomfield,Chafin,independent,453,10620
-11/5/1912,CO,Broomfield,Other,other,5,10620
 11/5/1912,CO,Chaffee,Wilson,democrat,1641,3395
 11/5/1912,CO,Chaffee,Taft,republican,723,3395
 11/5/1912,CO,Chaffee,Roosevelt,independent,693,3395
@@ -89121,12 +89090,12 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/5/1912,SD,Moody,Debs,independent,119,1789
 11/5/1912,SD,Moody,Chafin,independent,101,1789
 11/5/1912,SD,Moody,Other,other,0,1789
-11/5/1912,SD,Oglala_Lakota,Wilson,democrat
-11/5/1912,SD,Oglala_Lakota,Taft,republican,0
-11/5/1912,SD,Oglala_Lakota,Roosevelt,independent
-11/5/1912,SD,Oglala_Lakota,Debs,independent
-11/5/1912,SD,Oglala_Lakota,Chafin,independent
-11/5/1912,SD,Oglala_Lakota,Other,other
+11/5/1912,SD,Shannon,Wilson,democrat
+11/5/1912,SD,Shannon,Taft,republican,0
+11/5/1912,SD,Shannon,Roosevelt,independent
+11/5/1912,SD,Shannon,Debs,independent
+11/5/1912,SD,Shannon,Chafin,independent
+11/5/1912,SD,Shannon,Other,other
 11/5/1912,SD,Pennington,Wilson,democrat,1135,2357
 11/5/1912,SD,Pennington,Taft,republican,0,2357
 11/5/1912,SD,Pennington,Roosevelt,independent,1073,2357
@@ -94612,11 +94581,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/7/1916,CO,Boulder,Benson,independent,482,12071
 11/7/1916,CO,Boulder,No Candidate,independent,21,12071
 11/7/1916,CO,Boulder,Other,other,163,12071
-11/7/1916,CO,Broomfield,Wilson,democrat,7419,12071
-11/7/1916,CO,Broomfield,Hughes,republican,3986,12071
-11/7/1916,CO,Broomfield,Benson,independent,482,12071
-11/7/1916,CO,Broomfield,No Candidate,independent,21,12071
-11/7/1916,CO,Broomfield,Other,other,163,12071
 11/7/1916,CO,Chaffee,Wilson,democrat,2546,3513
 11/7/1916,CO,Chaffee,Hughes,republican,864,3513
 11/7/1916,CO,Chaffee,Benson,independent,78,3513
@@ -110138,11 +110102,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/2/1920,CO,Boulder,Debs,independent,294,11148
 11/2/1920,CO,Boulder,Ferguson,independent,0,11148
 11/2/1920,CO,Boulder,Other,other,198,11148
-11/2/1920,CO,Broomfield,Cox,democrat,4200,11148
-11/2/1920,CO,Broomfield,Eisenhower,republican,6456,11148
-11/2/1920,CO,Broomfield,Debs,independent,294,11148
-11/2/1920,CO,Broomfield,Ferguson,independent,0,11148
-11/2/1920,CO,Broomfield,Other,other,198,11148
 11/2/1920,CO,Chaffee,Cox,democrat,1233,2837
 11/2/1920,CO,Chaffee,Eisenhower,republican,1501,2837
 11/2/1920,CO,Chaffee,Debs,independent,71,2837
@@ -125437,10 +125396,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/4/1924,CO,Boulder,Coolidge,republican,7595,12927
 11/4/1924,CO,Boulder,La Follette,independent,2007,12927
 11/4/1924,CO,Boulder,Other,other,52,12927
-11/4/1924,CO,Broomfield,Davis,democrat,3273,12927
-11/4/1924,CO,Broomfield,Coolidge,republican,7595,12927
-11/4/1924,CO,Broomfield,La Follette,independent,2007,12927
-11/4/1924,CO,Broomfield,Other,other,52,12927
 11/4/1924,CO,Chaffee,Davis,democrat,612,3078
 11/4/1924,CO,Chaffee,Coolidge,republican,1336,3078
 11/4/1924,CO,Chaffee,La Follette,independent,1116,3078
@@ -134057,10 +134012,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/4/1924,SD,Moody,Coolidge,republican,1181,2833
 11/4/1924,SD,Moody,La Follette,independent,1418,2833
 11/4/1924,SD,Moody,Other,other,0,2833
-11/4/1924,SD,Oglala_Lakota,Davis,democrat,107,1432
-11/4/1924,SD,Oglala_Lakota,Coolidge,republican,1269,1432
-11/4/1924,SD,Oglala_Lakota,La Follette,independent,56,1432
-11/4/1924,SD,Oglala_Lakota,Other,other,0,1432
+11/4/1924,SD,Shannon,Davis,democrat,107,1432
+11/4/1924,SD,Shannon,Coolidge,republican,1269,1432
+11/4/1924,SD,Shannon,La Follette,independent,56,1432
+11/4/1924,SD,Shannon,Other,other,0,1432
 11/4/1924,SD,Pennington,Davis,democrat,854,5035
 11/4/1924,SD,Pennington,Coolidge,republican,3201,5035
 11/4/1924,SD,Pennington,La Follette,independent,980,5035
@@ -137643,9 +137598,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/6/1928,CO,Boulder,Smith,democrat,4363,14015
 11/6/1928,CO,Boulder,Hoover,republican,9457,14015
 11/6/1928,CO,Boulder,Other,other,195,14015
-11/6/1928,CO,Broomfield,Smith,democrat,4363,14015
-11/6/1928,CO,Broomfield,Hoover,republican,9457,14015
-11/6/1928,CO,Broomfield,Other,other,195,14015
 11/6/1928,CO,Chaffee,Smith,democrat,1230,3160
 11/6/1928,CO,Chaffee,Hoover,republican,1880,3160
 11/6/1928,CO,Chaffee,Other,other,50,3160
@@ -144108,9 +144060,9 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/6/1928,SD,Moody,Smith,democrat,1416,3535
 11/6/1928,SD,Moody,Hoover,republican,2108,3535
 11/6/1928,SD,Moody,Other,other,11,3535
-11/6/1928,SD,Oglala_Lakota,Smith,democrat,829,1508
-11/6/1928,SD,Oglala_Lakota,Hoover,republican,674,1508
-11/6/1928,SD,Oglala_Lakota,Other,other,5,1508
+11/6/1928,SD,Shannon,Smith,democrat,829,1508
+11/6/1928,SD,Shannon,Hoover,republican,674,1508
+11/6/1928,SD,Shannon,Other,other,5,1508
 11/6/1928,SD,Pennington,Smith,democrat,2266,6936
 11/6/1928,SD,Pennington,Hoover,republican,4645,6936
 11/6/1928,SD,Pennington,Other,other,25,6936
@@ -147187,10 +147139,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/8/1932,CO,Boulder,Hoover,republican,7487,16707
 11/8/1932,CO,Boulder,Thomas,independent,720,16707
 11/8/1932,CO,Boulder,Other,other,88,16707
-11/8/1932,CO,Broomfield,Roosevelt,democrat,8412,16707
-11/8/1932,CO,Broomfield,Hoover,republican,7487,16707
-11/8/1932,CO,Broomfield,Thomas,independent,720,16707
-11/8/1932,CO,Broomfield,Other,other,88,16707
 11/8/1932,CO,Chaffee,Roosevelt,democrat,2393,3628
 11/8/1932,CO,Chaffee,Hoover,republican,1061,3628
 11/8/1932,CO,Chaffee,Thomas,independent,150,3628
@@ -155808,10 +155756,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/8/1932,SD,Moody,Hoover,republican,1289,3906
 11/8/1932,SD,Moody,Thomas,independent,34,3906
 11/8/1932,SD,Moody,Other,other,36,3906
-11/8/1932,SD,Oglala_Lakota,Roosevelt,democrat,1140,1765
-11/8/1932,SD,Oglala_Lakota,Hoover,republican,620,1765
-11/8/1932,SD,Oglala_Lakota,Thomas,independent,1,1765
-11/8/1932,SD,Oglala_Lakota,Other,other,4,1765
+11/8/1932,SD,Shannon,Roosevelt,democrat,1140,1765
+11/8/1932,SD,Shannon,Hoover,republican,620,1765
+11/8/1932,SD,Shannon,Thomas,independent,1,1765
+11/8/1932,SD,Shannon,Other,other,4,1765
 11/8/1932,SD,Pennington,Roosevelt,democrat,5178,8875
 11/8/1932,SD,Pennington,Hoover,republican,3638,8875
 11/8/1932,SD,Pennington,Thomas,independent,16,8875
@@ -159617,10 +159565,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/3/1936,CO,Boulder,Landon,republican,7244,17501
 11/3/1936,CO,Boulder,Lemke,independent,354,17501
 11/3/1936,CO,Boulder,Other,other,115,17501
-11/3/1936,CO,Broomfield,Roosevelt,democrat,9788,17501
-11/3/1936,CO,Broomfield,Landon,republican,7244,17501
-11/3/1936,CO,Broomfield,Lemke,independent,354,17501
-11/3/1936,CO,Broomfield,Other,other,115,17501
 11/3/1936,CO,Chaffee,Roosevelt,democrat,2447,3664
 11/3/1936,CO,Chaffee,Landon,republican,1069,3664
 11/3/1936,CO,Chaffee,Lemke,independent,124,3664
@@ -168237,10 +168181,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/3/1936,SD,Moody,Landon,republican,1992,4560
 11/3/1936,SD,Moody,Lemke,independent,202,4560
 11/3/1936,SD,Moody,Other,other,0,4560
-11/3/1936,SD,Oglala_Lakota,Roosevelt,democrat,868,1728
-11/3/1936,SD,Oglala_Lakota,Landon,republican,825,1728
-11/3/1936,SD,Oglala_Lakota,Lemke,independent,35,1728
-11/3/1936,SD,Oglala_Lakota,Other,other,0,1728
+11/3/1936,SD,Shannon,Roosevelt,democrat,868,1728
+11/3/1936,SD,Shannon,Landon,republican,825,1728
+11/3/1936,SD,Shannon,Lemke,independent,35,1728
+11/3/1936,SD,Shannon,Other,other,0,1728
 11/3/1936,SD,Pennington,Roosevelt,democrat,5557,10428
 11/3/1936,SD,Pennington,Landon,republican,4442,10428
 11/3/1936,SD,Pennington,Lemke,independent,429,10428
@@ -171823,9 +171767,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/5/1940,CO,Boulder,Roosevelt,democrat,9039,19776
 11/5/1940,CO,Boulder,Willkie,republican,10525,19776
 11/5/1940,CO,Boulder,Other,other,212,19776
-11/5/1940,CO,Broomfield,Roosevelt,democrat,9039,19776
-11/5/1940,CO,Broomfield,Willkie,republican,10525,19776
-11/5/1940,CO,Broomfield,Other,other,212,19776
 11/5/1940,CO,Chaffee,Roosevelt,democrat,2153,4121
 11/5/1940,CO,Chaffee,Willkie,republican,1933,4121
 11/5/1940,CO,Chaffee,Other,other,35,4121
@@ -178288,9 +178229,9 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/5/1940,SD,Moody,Roosevelt,democrat,1820,4569
 11/5/1940,SD,Moody,Willkie,republican,2749,4569
 11/5/1940,SD,Moody,Other,other,0,4569
-11/5/1940,SD,Oglala_Lakota,Roosevelt,democrat,1093,2522
-11/5/1940,SD,Oglala_Lakota,Willkie,republican,1429,2522
-11/5/1940,SD,Oglala_Lakota,Other,other,0,2522
+11/5/1940,SD,Shannon,Roosevelt,democrat,1093,2522
+11/5/1940,SD,Shannon,Willkie,republican,1429,2522
+11/5/1940,SD,Shannon,Other,other,0,2522
 11/5/1940,SD,Pennington,Roosevelt,democrat,4878,11481
 11/5/1940,SD,Pennington,Willkie,republican,6603,11481
 11/5/1940,SD,Pennington,Other,other,0,11481
@@ -181367,10 +181308,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/7/1944,CO,Boulder,Dewey,republican,10054,17610
 11/7/1944,CO,Boulder,Texas Regulars,southern democrat,0,17610
 11/7/1944,CO,Boulder,Other,other,114,17610
-11/7/1944,CO,Broomfield,Roosevelt,democrat,7442,17610
-11/7/1944,CO,Broomfield,Dewey,republican,10054,17610
-11/7/1944,CO,Broomfield,Texas Regulars,southern democrat,0,17610
-11/7/1944,CO,Broomfield,Other,other,114,17610
 11/7/1944,CO,Chaffee,Roosevelt,democrat,1731,3430
 11/7/1944,CO,Chaffee,Dewey,republican,1675,3430
 11/7/1944,CO,Chaffee,Texas Regulars,southern democrat,0,3430
@@ -189987,10 +189924,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/7/1944,SD,Moody,Dewey,republican,2080,3500
 11/7/1944,SD,Moody,Texas Regulars,southern democrat,0,3500
 11/7/1944,SD,Moody,Other,other,0,3500
-11/7/1944,SD,Oglala_Lakota,Roosevelt,democrat,480,1042
-11/7/1944,SD,Oglala_Lakota,Dewey,republican,562,1042
-11/7/1944,SD,Oglala_Lakota,Texas Regulars,southern democrat,0,1042
-11/7/1944,SD,Oglala_Lakota,Other,other,0,1042
+11/7/1944,SD,Shannon,Roosevelt,democrat,480,1042
+11/7/1944,SD,Shannon,Dewey,republican,562,1042
+11/7/1944,SD,Shannon,Texas Regulars,southern democrat,0,1042
+11/7/1944,SD,Shannon,Other,other,0,1042
 11/7/1944,SD,Pennington,Roosevelt,democrat,3517,8763
 11/7/1944,SD,Pennington,Dewey,republican,5246,8763
 11/7/1944,SD,Pennington,Texas Regulars,southern democrat,0,8763
@@ -194018,11 +193955,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/2/1948,CO,Boulder,Thurmond,southern democrat,0,19839
 11/2/1948,CO,Boulder,Wallace,independent,488,19839
 11/2/1948,CO,Boulder,Other,other,224,19839
-11/2/1948,CO,Broomfield,Truman,democrat,8792,19839
-11/2/1948,CO,Broomfield,Dewey,republican,10335,19839
-11/2/1948,CO,Broomfield,Thurmond,southern democrat,0,19839
-11/2/1948,CO,Broomfield,Wallace,independent,488,19839
-11/2/1948,CO,Broomfield,Other,other,224,19839
 11/2/1948,CO,Chaffee,Truman,democrat,2065,3580
 11/2/1948,CO,Chaffee,Dewey,republican,1476,3580
 11/2/1948,CO,Chaffee,Thurmond,southern democrat,0,3580
@@ -204793,11 +204725,11 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/2/1948,SD,Moody,Thurmond,southern democrat,0,3369
 11/2/1948,SD,Moody,Wallace,independent,48,3369
 11/2/1948,SD,Moody,Other,other,0,3369
-11/2/1948,SD,Oglala_Lakota,Truman,democrat,803,1454
-11/2/1948,SD,Oglala_Lakota,Dewey,republican,641,1454
-11/2/1948,SD,Oglala_Lakota,Thurmond,southern democrat,0,1454
-11/2/1948,SD,Oglala_Lakota,Wallace,independent,10,1454
-11/2/1948,SD,Oglala_Lakota,Other,other,0,1454
+11/2/1948,SD,Shannon,Truman,democrat,803,1454
+11/2/1948,SD,Shannon,Dewey,republican,641,1454
+11/2/1948,SD,Shannon,Thurmond,southern democrat,0,1454
+11/2/1948,SD,Shannon,Wallace,independent,10,1454
+11/2/1948,SD,Shannon,Other,other,0,1454
 11/2/1948,SD,Pennington,Truman,democrat,4929,11413
 11/2/1948,SD,Pennington,Dewey,republican,6392,11413
 11/2/1948,SD,Pennington,Thurmond,southern democrat,0,11413
@@ -209110,9 +209042,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/4/1952,CO,Boulder,Stevenson,democrat,7767,23079
 11/4/1952,CO,Boulder,Eisenhower,republican,15069,23079
 11/4/1952,CO,Boulder,Other,other,243,23079
-11/4/1952,CO,Broomfield,Stevenson,democrat,7767,23079
-11/4/1952,CO,Broomfield,Eisenhower,republican,15069,23079
-11/4/1952,CO,Broomfield,Other,other,243,23079
 11/4/1952,CO,Chaffee,Stevenson,democrat,1643,3829
 11/4/1952,CO,Chaffee,Eisenhower,republican,2171,3829
 11/4/1952,CO,Chaffee,Other,other,15,3829
@@ -215575,9 +215504,9 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/4/1952,SD,Moody,Stevenson,democrat,1089,3817
 11/4/1952,SD,Moody,Eisenhower,republican,2728,3817
 11/4/1952,SD,Moody,Other,other,0,3817
-11/4/1952,SD,Oglala_Lakota,Stevenson,democrat,774,1731
-11/4/1952,SD,Oglala_Lakota,Eisenhower,republican,957,1731
-11/4/1952,SD,Oglala_Lakota,Other,other,0,1731
+11/4/1952,SD,Shannon,Stevenson,democrat,774,1731
+11/4/1952,SD,Shannon,Eisenhower,republican,957,1731
+11/4/1952,SD,Shannon,Other,other,0,1731
 11/4/1952,SD,Pennington,Stevenson,democrat,4470,15499
 11/4/1952,SD,Pennington,Eisenhower,republican,11029,15499
 11/4/1952,SD,Pennington,Other,other,0,15499
@@ -218654,10 +218583,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/6/1956,CO,Boulder,Eisenhower,republican,16748,25039
 11/6/1956,CO,Boulder,Andrews,southern democrat,21,25039
 11/6/1956,CO,Boulder,Other,other,121,25039
-11/6/1956,CO,Broomfield,Stevenson,democrat,8149,25039
-11/6/1956,CO,Broomfield,Eisenhower,republican,16748,25039
-11/6/1956,CO,Broomfield,Andrews,southern democrat,21,25039
-11/6/1956,CO,Broomfield,Other,other,121,25039
 11/6/1956,CO,Chaffee,Stevenson,democrat,1303,3587
 11/6/1956,CO,Chaffee,Eisenhower,republican,2284,3587
 11/6/1956,CO,Chaffee,Andrews,southern democrat,0,3587
@@ -227274,10 +227199,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/6/1956,SD,Moody,Eisenhower,republican,2133,3973
 11/6/1956,SD,Moody,Andrews,southern democrat,0,3973
 11/6/1956,SD,Moody,Other,other,0,3973
-11/6/1956,SD,Oglala_Lakota,Stevenson,democrat,949,1731
-11/6/1956,SD,Oglala_Lakota,Eisenhower,republican,782,1731
-11/6/1956,SD,Oglala_Lakota,Andrews,southern democrat,0,1731
-11/6/1956,SD,Oglala_Lakota,Other,other,0,1731
+11/6/1956,SD,Shannon,Stevenson,democrat,949,1731
+11/6/1956,SD,Shannon,Eisenhower,republican,782,1731
+11/6/1956,SD,Shannon,Andrews,southern democrat,0,1731
+11/6/1956,SD,Shannon,Other,other,0,1731
 11/6/1956,SD,Pennington,Stevenson,democrat,5332,16287
 11/6/1956,SD,Pennington,Eisenhower,republican,10955,16287
 11/6/1956,SD,Pennington,Andrews,southern democrat,0,16287

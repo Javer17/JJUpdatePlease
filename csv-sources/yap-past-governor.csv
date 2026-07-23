@@ -1,0 +1,21 @@
+date,region,candidate,party,offyear,runoff,voteshare,disabled
+01/01/2002,Acalliana,null,null,FALSE,FALSE,0,TRUE
+01/01/2002,Armallos,null,null,FALSE,FALSE,0,TRUE
+01/01/2002,Blesna,null,null,FALSE,FALSE,0,TRUE
+01/01/2002,Calleoria,null,null,FALSE,FALSE,0,TRUE
+01/01/2002,Cambria,null,null,FALSE,FALSE,0,TRUE
+01/01/2002,Cerbska,null,null,FALSE,FALSE,0,TRUE
+01/01/2002,Estellia,null,null,FALSE,FALSE,0,TRUE
+01/01/2002,Kostos,null,null,FALSE,FALSE,0,TRUE
+01/01/2002,Larimer,null,null,FALSE,FALSE,0,TRUE
+01/01/2002,Matatheste,null,null,FALSE,FALSE,0,TRUE
+01/01/2002,Opplica,null,null,FALSE,FALSE,0,TRUE
+01/01/2002,Rorcia,null,null,FALSE,FALSE,0,TRUE
+01/01/2002,Stettigan,null,null,FALSE,FALSE,0,TRUE
+01/01/2002,Taclima,null,null,FALSE,FALSE,0,TRUE
+01/01/2002,Yapburgh,null,null,FALSE,FALSE,0,TRUE
+01/01/2002,New Queria,DaZapow,socrad,FALSE,FALSE,75,
+01/01/2002,New Queria,Strong,progcon,FALSE,FALSE,25,
+01/01/2002,Porcerle,Ghost,socrad,FALSE,FALSE,33.331,
+01/01/2002,Porcerle,Capybara,independent,FALSE,FALSE,33.33,
+01/01/2002,Porcerle,Twerking Duck,independent,FALSE,FALSE,33.33,

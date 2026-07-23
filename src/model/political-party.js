@@ -77,25 +77,27 @@ class PoliticalParty
   }
 }
 
-const defaultMarginNames = {current: "Current", safe: "Safe", likely: "Likely", lean: "Lean", tilt: "Tilt"}
+const defaultMarginNames = {current: "Current", solid: "Solid", safe: "Safe", likely: "Likely", lean: "Lean", tilt: "Tilt"}
 
 const PoliticalPartyColors = {
-  red: {current: "#600E15", safe: "#be1c29", likely: "#ff5864", lean: "#ff8b98", tilt: "#cf8980"},
-  scarlet: {current: "#A82D00", safe: "#DE3B00", likely: "#FF6B36", lean: "#FFAE85", tilt: "#C39A74"},
-  orange: {current: "#7C3E00", safe: "#FF7000", likely: "#FF9758", lean: "#FFB28B", tilt: "#CFAD80"},
-  yellow: {current: "#B86E00", safe: "#FE9800", likely: "#e8a43e", lean: "#eab86e", tilt: "#cbb78a"},
-  lime: {current: "#60801B", safe: "#89B30E", likely: "#A1BF47", lean: "#ADBF7C", tilt: "#ACB392"},
-  green: {current: "#1f4e11", safe: "#499A21", likely: "#7DBF5C", lean: "#ACD896", tilt: "#A8BF9C"},
-  teal: {current: "#0b3c35", safe: "#0e7f59", likely: "#31af70", lean: "#6cd99f", tilt: "#84b5a3"},
-  cyan: {current: "#0e2d30", safe: "#1F767A", likely: "#31A7AF", lean: "#6CD2D9", tilt: "#84B2B5"},
-  aqua: {current: "#06364d", safe: "#096a97", likely: "#2ba0d6", lean: "#55cfff", tilt: "#a9caef"},
-  blue: {current: "#10234E", safe: "#1c408c", likely: "#587ccc", lean: "#8aafff", tilt: "#949bb3"},
-  violet: {current: "#461C81", safe: "#8A38FF", likely: "#B47BFF", lean: "#D3B2FF", tilt: "#B09CBF"},
-  purple: {current: "#3D114F", safe: "#7F23A3", likely: "#cf3fff", lean: "#DD7FFF", tilt: "#BB9CBF"},
-  magenta: {current: "#700036", safe: "#AB0354", likely: "#E8026E", lean: "#fe62b5", tilt: "#B87F9C"},
-  pink: {current: "#9b0077", safe: "#ff3e82", likely: "#ff62a9", lean: "#ff9ce5", tilt: "#ffbded"},
-  brown: {current: "#2E1500", safe: "#542E11", likely: "#A86234", lean: "#D88856", tilt: "#F7C2A6"},  
-  gray: {current: "#2A2822", safe: "#474339", likely: "#77705F", lean: "#B9B4A7", tilt: "#D8D6CF"}
+  red: {current: "#5E0E16", solid: "#890000", safe: "#be1c29", likely: "#ff5864", lean: "#ff8b98", tilt: "#cf8980"},
+  scarlet: {current: "#6D1900", solid: "#A02500", safe: "#DE3B00", likely: "#FF6B36", lean: "#FFAE85", tilt: "#C39A74"}, //Extended
+  orange: {current: "#7A3300", solid: "#c64500", safe: "#ff6200", likely: "#FF9758", lean: "#FFB28B", tilt: "#CFAD80"},
+  yellow: {current: "#7F4C00", solid: "#B76800", safe: "#FE9800", likely: "#e8a43e", lean: "#eab86e", tilt: "#cbb78a"},
+  lime: {current: "#3D5111", solid: "#5A750A", safe: "#789c0d", likely: "#98bf21", lean: "#b9d669", tilt: "#afbb83"},
+  green: {current: "#0B5307", solid: "#19770A", safe: "#24A30E", likely: "#5CC449", lean: "#91D785", tilt: "#96BA8F"}, //Extended
+  teal: {current: "#0A3831", solid: "#0A5437", safe: "#0e7f59", likely: "#31af70", lean: "#6cd99f", tilt: "#84b5a3"}, //Extended
+  cyan: {current: "#083232", solid: "#0c4c56", safe: "#107281", likely: "#1DB8B3", lean: "#57DECB", tilt: "#76B3B3"}, 
+  aqua: {current: "#04293A", solid: "#0F3D4C", safe: "#07587d", likely: "#2ba0d6", lean: "#55cfff", tilt: "#a9caef"}, //Extended
+  blue: {current: "#10234E", solid: "#191F68", safe: "#1c408c", likely: "#587ccc", lean: "#8aafff", tilt: "#949bb3"},
+  blurple: {current: "#1D1D3D", solid: "#252559", safe: "#3A387C", likely: "#5B5B8C", lean: "#7B7AAD", tilt: "#757481"},//Extended
+  violet: {current: "#1A0B33", solid: "#2D1659", safe: "#5423A3", likely: "#8432FF", lean: "#B27FFF", tilt: "#AF9CBF"},
+  purple: {current: "#300E3F", solid: "#4F1966", safe: "#7F23A3", likely: "#c928ff", lean: "#DD7FFF", tilt: "#BB9CBF"},
+  magenta: {current: "#4C0024", solid: "#75043C", safe: "#AB0354", likely: "#E8026E", lean: "#fe62b5", tilt: "#B87F9C"}, //Extended
+  pink: {current: "#721C3D", solid: "#A82A58", safe: "#ff3e82", likely: "#ff78b5", lean: "#ff9ce5", tilt: "#dfabd1"}, 
+  brown: {current: "#351800", solid: "#4C2812", safe: "#663514", likely: "#A86234", lean: "#D88856", tilt: "#F7C2A6"},
+  maroon: {current: "#2D0A0A", solid: "#421518", safe: "#661E1F", likely: "#A04241", lean: "#AC6467", tilt: "#BA8C86"}, //Extended
+  gray: {current: "#211F1A", solid: "#302D28", safe: "#474339", likely: "#77705F", lean: "#B9B4A7", tilt: "#D8D6CF"}
 }
 
 // Main Parties
@@ -532,6 +534,168 @@ var IndependentGWParty = new PoliticalParty(
   PoliticalPartyColors.orange
 )
 
+
+
+    ///////////////////////
+    //  BRITISH PARTIES  //
+    ///////////////////////
+
+var UKLabourParty = new PoliticalParty(
+  "UKLAB",
+  ["Labour"],
+  "Lab",
+  "Labour",
+  PoliticalPartyColors.red
+)
+
+var UKConservativeParty = new PoliticalParty(
+  "UKCON",
+  ["Con", "Conservative"],
+  "Con",
+  "Conservative",
+  PoliticalPartyColors.blue
+)
+
+var UKSpeaker = new PoliticalParty(
+  "UKSPK",
+  ["Speaker", "Spk"],
+  "Speaker",
+  "Speaker",
+  {current: "#1b1922", solid: "#262231", safe: "#353045", likely: "#5a5273", lean: "#a098bb", tilt: "#bfb7db"}
+)
+
+var OtherParty = new PoliticalParty(
+  "OTHER",
+  ["Other"],
+  "Other",
+  "Other",
+  {current: "#00000f", solid: "#00000f", safe: "#00000f", likely: "#00000f", lean: "#00000f", tilt: "#00000f"}
+)
+
+var UKReformUKParty = new PoliticalParty(
+  "UKREF",
+  ["ReformUK"],
+  "Ref",
+  "Reform UK",
+  PoliticalPartyColors.cyan
+)
+
+var UKGreenParty = new PoliticalParty(
+  "UKGRN",
+  ["Green"],
+  "Grn",
+  "Green",
+  PoliticalPartyColors.green
+)
+
+var UKLiberalDemocratsParty = new PoliticalParty(
+  "UKLIB",
+  ["Lib Dem", "LD", "Liberal Democrats", "Libdems"],
+  "LD",
+  "Liberal Democrats",
+  PoliticalPartyColors.orange
+)
+
+var UKPlaidCymruParty = new PoliticalParty(
+  "UKPLC",
+  ["Plaid Cymru", "Plaid", "PC", "PlaidCymru"],
+  "Plaid Cymru",
+  "Plaid Cymru",
+  PoliticalPartyColors.lime
+)
+
+var UKScottishNationalParty = new PoliticalParty(
+  "UKSNP",
+  ["SNP"],
+  "SNP",
+  "SNP",
+  PoliticalPartyColors.yellow
+)
+
+var UKAlbaParty = new PoliticalParty(
+  "UKALB",
+  ["Alba"],
+  "Alba Party",
+  "Alba",
+  PoliticalPartyColors.aqua
+)
+
+var UKSinnFeinParty = new PoliticalParty(
+  "UKSFN",
+  ["Sinn Féin", "SF", "SinnFein", "Sinn Fein"],
+  "SF",
+  "Sinn Féin",
+  PoliticalPartyColors.teal
+)
+
+var UKDemocraticUnionistParty = new PoliticalParty(
+  "UKDUP",
+  ["DUP"],
+  "DUP",
+  "Dem Unionist Party",
+  PoliticalPartyColors.maroon
+)
+
+var UKAllianceParty = new PoliticalParty(
+  "UKAPNI",
+  ["APNI"],
+  "Alliance Party",
+  "Alliance Party",
+  PoliticalPartyColors.yellow
+)
+
+var UKSocDemLabParty = new PoliticalParty(
+  "UKSDLP",
+  ["SDLP"],
+  "SDLP",
+  "Social Democratic Labour Party",
+  PoliticalPartyColors.magenta
+)
+
+var UKRestoreBritainParty = new PoliticalParty(
+  "UKRES",
+  ["Restore", "RES"],
+  "Restore",
+  "Restore Britain",
+  PoliticalPartyColors.blurple
+)
+
+var UKUlsterUnionistParty = new PoliticalParty(
+  "UKUUP",
+  ["Ulster Unionist", "UU", "Ulster", "UUP"],
+  "Ulster Unionist",
+  "Ulster Unionist",
+  PoliticalPartyColors.aqua
+)
+
+var UKWorkersPartyOfBritainParty = new PoliticalParty(
+  "UKWPB",
+  ["WPB"],
+  "Workers Party of Britain",
+  "Workers Party of Britain",
+  PoliticalPartyColors.aqua
+)
+
+var UKUKIPParty = new PoliticalParty(
+  "UKUKIP",
+  ["UKIP"],
+  "UKIP",
+  "UKIP",
+  PoliticalPartyColors.purple
+)
+
+var UKTUVParty = new PoliticalParty(
+  "UKTUV",
+  ["TUV"],
+  "TUV",
+  "TUV",
+  PoliticalPartyColors.blurple
+)
+
+    ////////////////////////
+    // JACKSONIAN PARTIES //
+    ////////////////////////
+
 var JJULabourParty = new PoliticalParty(
   "JJULAB",
   ["Labour"],
@@ -548,12 +712,21 @@ var JJULiberalParty = new PoliticalParty(
   PoliticalPartyColors.yellow
 )
 
+var JJUConservativeParty = new PoliticalParty(
+  "JJUCON",
+  ["Conservative"],
+  "Con",
+  "Conservative",
+  PoliticalPartyColors.blue
+)
+
 var JJUAllianceParty = new PoliticalParty(
   "JJUALL",
-  ["Alliance", "Conservative"],
+  ["Alliance"],
   "All",
   "Alliance",
-  PoliticalPartyColors.blue
+  PoliticalPartyColors.blue,
+  [JJUConservativeParty]
 )
 
 var JJUProgressiveParty = new PoliticalParty(
@@ -627,14 +800,14 @@ var JJUProgressiveLabourParty = new PoliticalParty(
   ["ProgLab"],
   "PLU",
   "ProgLab",
-  {current: "#54081F", safe: "#A81039", likely: "#FF2667", lean: "#D35084", tilt: "#FFB2C9"},
+  {current: "#600923", solid: "#660A24", safe: "#A81039", likely: "#ff3571", lean: "#f3679f", tilt: "#FFB2C9"},
   [JJULabourParty, JJUProgressiveParty]
 )
 
 var JJUGreenParty = new PoliticalParty(
   "JJUGRE",
   ["Greens", "Green"],
-  "GRE",
+  "Grn",
   "Greens",
   PoliticalPartyColors.green
 )
@@ -647,6 +820,26 @@ var JJUSDPParty = new PoliticalParty(
   PoliticalPartyColors.red,
   [JJUProgressiveLabourParty]
 )
+
+var JJUDRParty = new PoliticalParty(
+  "JJUDR",
+  ["Democratic Rally", "Dem Rally", "DR", "DemRal"],
+  "DR",
+  "Dem. Rally",
+  PoliticalPartyColors.brown
+) 
+
+var JJUSPJUParty = new PoliticalParty(
+  "JJUSPJU",
+  ["SPJU", "Union", "Socialists", "Socialist"],
+  "Socialist",
+  "Socialist",
+  PoliticalPartyColors.magenta
+) 
+
+    ///////////////////////////
+    // JACKSONIAN COALITIONS //
+    ///////////////////////////
 
 var JJULabLibPartyBloc = new PoliticalParty(
   "JJULAL",
@@ -701,7 +894,7 @@ var JJUUnityPartyBloc = new PoliticalParty(
   ["Unity"],
   "UTY",
   "Unity",
-  PoliticalPartyColors.lime
+  PoliticalPartyColors.aqua
 )
 
 var JJUPeacockPartyBloc = new PoliticalParty(
@@ -730,34 +923,104 @@ var JJUUnitedLeftBloc = new PoliticalParty(
 
 var JJUBOBBloc = new PoliticalParty(
   "JJUBOB",
-  ["BOB"],
+  ["BOB", "bob" ],
   "BOB",
   "BOB",
-  PoliticalPartyColors.brown
-)
-
-var JJUSunMoonBloc = new PoliticalParty(
-  "JJUSunMoon",
-  ["Sun & Moon", "SunMoon"],
-  "Sun & Moon",
-  "Sun & Moon",
   PoliticalPartyColors.brown
 )
 
 var JJUSunsetBloc = new PoliticalParty(
   "JJUSunset",
-  ["Sunset"],
+  ["Sunset", "sunset"],
   "Sunset",
   "Sunset",
-  PoliticalPartyColors.orange
+  PoliticalPartyColors.aqua
 )
 
 var IndependentGenericParty = new PoliticalParty(
   "INDGEN",
-  ["Independent"],
+  ["Independent", "Ind", "Indy"],
   "Ind",
   "Independent",
   PoliticalPartyColors.gray
+)
+
+    ///////////////////////
+    // YAPMERIAN PARTIES //
+    ///////////////////////
+
+var YAPSolidaireParty = new PoliticalParty(
+  "YAPSPD",
+  ["Solidaire", "SPD"],
+  "SPD",
+  "Solidaire",
+  PoliticalPartyColors.pink
+)
+
+var YAPDreamerParty = new PoliticalParty(
+  "YAPDRM",
+  ["Dreamer"],
+  "Drm",
+  "Dreamer",
+  PoliticalPartyColors.lime
+)
+
+var YAPSocialRadicalParty = new PoliticalParty(
+  "YAPSRD",
+  ["Social Radical", "SR", "SocRad"],
+  "SocRad",
+  "Social Radical",
+  PoliticalPartyColors.teal
+)
+
+var YAPAuroraParty = new PoliticalParty(
+  "YAPAUR",
+  ["Aurora"],
+  "Aur",
+  "Aurora",
+  PoliticalPartyColors.pink
+)
+
+var YAPProgressiveParty = new PoliticalParty(
+  "YAPPRG",
+  ["Progressive", "Prog"],
+  "Prog",
+  "Progressive",
+  PoliticalPartyColors.purple,
+  [YAPAuroraParty]
+)
+
+var YAPCenterAllianceParty = new PoliticalParty(
+  "YAPCTR",
+  ["Center All", "CA"],
+  "CA",
+  "Center Alliance",
+  PoliticalPartyColors.lime
+)
+
+var YAPPikeParty = new PoliticalParty(
+  "YAPPIK",
+  ["Pike"],
+  "Pik",
+  "Pike",
+  PoliticalPartyColors.yellow
+)
+
+var YAPProgressiveConservativeParty = new PoliticalParty(
+  "YAPPRC",
+  ["ProgCon", "ProgCons", "PC"],
+  "PC",
+  "Progressive Conservative",
+  PoliticalPartyColors.blue
+)
+
+var YAPForwardAllianceParty = new PoliticalParty(
+  "YAPFOR",
+  ["Forward All.","Forward Alliance", "FA"],
+  "FA",
+  "Forward Alliance",
+  PoliticalPartyColors.green,
+  [YAPCenterAllianceParty]
 )
 
 var politicalParties = {}

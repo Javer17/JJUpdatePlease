@@ -1,475 +1,503 @@
-date,round,region,candidate,party,voteshare
-8/21/2024,1,Alvana,BlockyBeach,alliance,50.00
-8/21/2024,1,Alvana,Nath,liberal,25.00
-8/21/2024,1,Alvana,Sonia Gandhi,labour,25.00
-8/21/2024,1,Brunix Islands,BlockyBeach,alliance,33.33
-8/21/2024,1,Brunix Islands,Nath,liberal,66.67
-8/21/2024,1,Brunix Islands,Sonia Gandhi,labour,0.00
-8/21/2024,1,Dalminica,BlockyBeach,alliance,49.99
-8/21/2024,1,Dalminica,Nath,liberal,0.00
-8/21/2024,1,Dalminica,Sonia Gandhi,labour,50.01
-8/21/2024,1,Dentone,BlockyBeach,alliance,39.99
-8/21/2024,1,Dentone,Nath,liberal,20.00
-8/21/2024,1,Dentone,Sonia Gandhi,labour,40.01
-8/21/2024,1,Emix,BlockyBeach,alliance,0.00
-8/21/2024,1,Emix,Nath,liberal,75.00
-8/21/2024,1,Emix,Sonia Gandhi,labour,25.00
-8/21/2024,1,Garvor,BlockyBeach,alliance,16.67
-8/21/2024,1,Garvor,Nath,liberal,66.67
-8/21/2024,1,Garvor,Sonia Gandhi,labour,16.67
-8/21/2024,1,Quintin,BlockyBeach,alliance,20.00
-8/21/2024,1,Quintin,Nath,liberal,0.00
-8/21/2024,1,Quintin,Sonia Gandhi,labour,80.00
-8/21/2024,1,Trunoe,BlockyBeach,alliance,25.00
-8/21/2024,1,Trunoe,Nath,liberal,0.00
-8/21/2024,1,Trunoe,Sonia Gandhi,labour,75.00
-8/21/2024,1,National Popular Vote,BlockyBeach,alliance,28.57
-8/21/2024,1,National Popular Vote,Nath,liberal,31.43
-8/21/2024,1,National Popular Vote,Sonia Gandhi,labour,40.00
-8/21/2024,2,Alvana,Nath,liberal,25.00
-8/21/2024,2,Alvana,Sonia Gandhi,labour,75.00
-8/21/2024,2,Brunix Islands,Nath,liberal,66.67
-8/21/2024,2,Brunix Islands,Sonia Gandhi,labour,33.33
-8/21/2024,2,Dalminica,Nath,liberal,49.99
-8/21/2024,2,Dalminica,Sonia Gandhi,labour,50.01
-8/21/2024,2,Dentone,Nath,liberal,49.99
-8/21/2024,2,Dentone,Sonia Gandhi,labour,50.01
-8/21/2024,2,Emix,Nath,liberal,75.00
-8/21/2024,2,Emix,Sonia Gandhi,labour,25.00
-8/21/2024,2,Garvor,Nath,liberal,66.67
-8/21/2024,2,Garvor,Sonia Gandhi,labour,33.33
-8/21/2024,2,Quintin,Nath,liberal,0.00
-8/21/2024,2,Quintin,Sonia Gandhi,labour,100.00
-8/21/2024,2,Trunoe,Nath,liberal,0.00
-8/21/2024,2,Trunoe,Sonia Gandhi,labour,100.00
-8/21/2024,2,National Popular Vote,Nath,liberal,42.42
-8/21/2024,2,National Popular Vote,Sonia Gandhi,labour,57.58
-10/20/2024,1,Alvana,John McCain Fan,liberal,33.35
-10/20/2024,1,Alvana,Sonia Gandhi,labour,33.32
-10/20/2024,1,Alvana,How Do I Type,alliance,33.32
-10/20/2024,1,Alvana,Cob,independent,0.00
-10/20/2024,1,Brunix Islands,John McCain Fan,liberal,66.67
-10/20/2024,1,Brunix Islands,Sonia Gandhi,labour,16.67
-10/20/2024,1,Brunix Islands,How Do I Type,alliance,16.67
-10/20/2024,1,Brunix Islands,Cob,independent,0.00
-10/20/2024,1,Dalminica,John McCain Fan,liberal,100.00
-10/20/2024,1,Dalminica,Sonia Gandhi,labour,0.00
-10/20/2024,1,Dalminica,How Do I Type,alliance,0.00
-10/20/2024,1,Dalminica,Cob,independent,0.00
-10/20/2024,1,Dentone,John McCain Fan,liberal,40.01
-10/20/2024,1,Dentone,Sonia Gandhi,labour,20.00
-10/20/2024,1,Dentone,How Do I Type,alliance,39.99
-10/20/2024,1,Dentone,Cob,independent,0.00
-10/20/2024,1,Emix,John McCain Fan,liberal,50.01
-10/20/2024,1,Emix,Sonia Gandhi,labour,0.00
-10/20/2024,1,Emix,How Do I Type,alliance,0.00
-10/20/2024,1,Emix,Cob,independent,49.99
-10/20/2024,1,Garvor,John McCain Fan,liberal,50.00
-10/20/2024,1,Garvor,Sonia Gandhi,labour,33.33
-10/20/2024,1,Garvor,How Do I Type,alliance,0.00
-10/20/2024,1,Garvor,Cob,independent,16.67
-10/20/2024,1,Quintin,John McCain Fan,liberal,0.00
-10/20/2024,1,Quintin,Sonia Gandhi,labour,80.00
-10/20/2024,1,Quintin,How Do I Type,alliance,20.00
-10/20/2024,1,Quintin,Cob,independent,0.00
-10/20/2024,1,Trunoe,John McCain Fan,liberal,0.00
-10/20/2024,1,Trunoe,Sonia Gandhi,labour,66.67
-10/20/2024,1,Trunoe,How Do I Type,alliance,0.00
-10/20/2024,1,Trunoe,Cob,independent,33.33
-10/20/2024,1,National Popular Vote,John McCain Fan,liberal,41.18
-10/20/2024,1,National Popular Vote,Sonia Gandhi,labour,32.35
-10/20/2024,1,National Popular Vote,How Do I Type,alliance,14.71
-10/20/2024,1,National Popular Vote,Cob,independent,11.76
-10/20/2024,2,Alvana,John McCain Fan,liberal,33.35
-10/20/2024,2,Alvana,Sonia Gandhi,labour,33.32
-10/20/2024,2,Alvana,How Do I Type,alliance,33.32
-10/20/2024,2,Brunix Islands,John McCain Fan,liberal,66.67
-10/20/2024,2,Brunix Islands,Sonia Gandhi,labour,16.67
-10/20/2024,2,Brunix Islands,How Do I Type,alliance,16.67
-10/20/2024,2,Dalminica,John McCain Fan,liberal,100.00
-10/20/2024,2,Dalminica,Sonia Gandhi,labour,0.00
-10/20/2024,2,Dalminica,How Do I Type,alliance,0.00
-10/20/2024,2,Dentone,John McCain Fan,liberal,40.01
-10/20/2024,2,Dentone,Sonia Gandhi,labour,20.00
-10/20/2024,2,Dentone,How Do I Type,alliance,39.99
-10/20/2024,2,Emix,John McCain Fan,liberal,75.00
-10/20/2024,2,Emix,Sonia Gandhi,labour,25.00
-10/20/2024,2,Emix,How Do I Type,alliance,0.00
-10/20/2024,2,Garvor,John McCain Fan,liberal,66.67
-10/20/2024,2,Garvor,Sonia Gandhi,labour,33.33
-10/20/2024,2,Garvor,How Do I Type,alliance,0.00
-10/20/2024,2,Quintin,John McCain Fan,liberal,0.00
-10/20/2024,2,Quintin,Sonia Gandhi,labour,80.00
-10/20/2024,2,Quintin,How Do I Type,alliance,20.00
-10/20/2024,2,Trunoe,John McCain Fan,liberal,0.00
-10/20/2024,2,Trunoe,Sonia Gandhi,labour,66.67
-10/20/2024,2,Trunoe,How Do I Type,alliance,33.33
-10/20/2024,2,National Popular Vote,John McCain Fan,liberal,47.06
-10/20/2024,2,National Popular Vote,Sonia Gandhi,labour,35.29
-10/20/2024,2,National Popular Vote,How Do I Type,alliance,17.65
-10/20/2024,3,Alvana,John McCain Fan,liberal,33.33
-10/20/2024,3,Alvana,Sonia Gandhi,labour,66.67
-10/20/2024,3,Brunix Islands,John McCain Fan,liberal,66.67
-10/20/2024,3,Brunix Islands,Sonia Gandhi,labour,33.33
-10/20/2024,3,Dalminica,John McCain Fan,liberal,100.00
-10/20/2024,3,Dalminica,Sonia Gandhi,labour,0.00
-10/20/2024,3,Dentone,John McCain Fan,liberal,60.00
-10/20/2024,3,Dentone,Sonia Gandhi,labour,40.00
-10/20/2024,3,Emix,John McCain Fan,liberal,75.00
-10/20/2024,3,Emix,Sonia Gandhi,labour,25.00
-10/20/2024,3,Garvor,John McCain Fan,liberal,66.67
-10/20/2024,3,Garvor,Sonia Gandhi,labour,33.33
-10/20/2024,3,Quintin,John McCain Fan,liberal,0.00
-10/20/2024,3,Quintin,Sonia Gandhi,labour,100.00
-10/20/2024,3,Trunoe,John McCain Fan,liberal,33.33
-10/20/2024,3,Trunoe,Sonia Gandhi,labour,66.67
-10/20/2024,3,National Popular Vote,John McCain Fan,liberal,52.94
-10/20/2024,3,National Popular Vote,Sonia Gandhi,labour,47.06
-12/15/2024,1,Alvana,Deet,alliance,83.33
-12/15/2024,1,Alvana,Virt,liberal,16.67
-12/15/2024,1,Alvana,Allric,independent,0.00
-12/15/2024,1,Brunix Islands,Deet,alliance,50.00
-12/15/2024,1,Brunix Islands,Virt,liberal,37.50
-12/15/2024,1,Brunix Islands,Allric,independent,12.50
-12/15/2024,1,Dalminica,Deet,alliance,33.33
-12/15/2024,1,Dalminica,Virt,liberal,66.67
-12/15/2024,1,Dalminica,Allric,independent,0.00
-12/15/2024,1,Dentone,Deet,alliance,66.67
-12/15/2024,1,Dentone,Virt,liberal,33.33
-12/15/2024,1,Dentone,Allric,independent,0.00
-12/15/2024,1,Emix,Deet,alliance,40.00
-12/15/2024,1,Emix,Virt,liberal,60.00
-12/15/2024,1,Emix,Allric,independent,0.00
-12/15/2024,1,Garvor,Deet,alliance,28.57
-12/15/2024,1,Garvor,Virt,liberal,71.43
-12/15/2024,1,Garvor,Allric,independent,0.00
-12/15/2024,1,Quintin,Deet,alliance,100.00
-12/15/2024,1,Quintin,Virt,liberal,0.00
-12/15/2024,1,Quintin,Allric,independent,0.00
-12/15/2024,1,Trunoe,Deet,alliance,75.00
-12/15/2024,1,Trunoe,Virt,liberal,0.00
-12/15/2024,1,Trunoe,Allric,independent,25.00
-12/15/2024,1,National Popular Vote,Deet,alliance,57.45
-12/15/2024,1,National Popular Vote,Virt,liberal,38.30
-12/15/2024,1,National Popular Vote,Allric,independent,4.26
-2/9/2025,1,Alvana,Geodore,alliance,28.57
-2/9/2025,1,Alvana,Sonia Gandhi,labour,42.86
-2/9/2025,1,Alvana,Suom,liberal,28.57
-2/9/2025,1,Alvana,Borgor,independent,0.00
-2/9/2025,1,Brunix Islands,Geodore,alliance,50.00
-2/9/2025,1,Brunix Islands,Sonia Gandhi,labour,8.33
-2/9/2025,1,Brunix Islands,Suom,liberal,33.33
-2/9/2025,1,Brunix Islands,Borgor,independent,8.33
-2/9/2025,1,Dalminica,Geodore,alliance,42.86
-2/9/2025,1,Dalminica,Sonia Gandhi,labour,28.57
-2/9/2025,1,Dalminica,Suom,liberal,28.57
-2/9/2025,1,Dalminica,Borgor,independent,0.00
-2/9/2025,1,Dentone,Geodore,alliance,50.00
-2/9/2025,1,Dentone,Sonia Gandhi,labour,37.50
-2/9/2025,1,Dentone,Suom,liberal,12.50
-2/9/2025,1,Dentone,Borgor,independent,0.00
-2/9/2025,1,Emix,Geodore,alliance,16.67
-2/9/2025,1,Emix,Sonia Gandhi,labour,33.33
-2/9/2025,1,Emix,Suom,liberal,50.00
-2/9/2025,1,Emix,Borgor,independent,0.00
-2/9/2025,1,Garvor,Geodore,alliance,27.27
-2/9/2025,1,Garvor,Sonia Gandhi,labour,18.18
-2/9/2025,1,Garvor,Suom,liberal,54.55
-2/9/2025,1,Garvor,Borgor,independent,0.00
-2/9/2025,1,Quintin,Geodore,alliance,28.57
-2/9/2025,1,Quintin,Sonia Gandhi,labour,71.43
-2/9/2025,1,Quintin,Suom,liberal,0.00
-2/9/2025,1,Quintin,Borgor,independent,0.00
-2/9/2025,1,Trunoe,Geodore,alliance,0.00
-2/9/2025,1,Trunoe,Sonia Gandhi,labour,80.00
-2/9/2025,1,Trunoe,Suom,liberal,0.00
-2/9/2025,1,Trunoe,Borgor,independent,20.00
-2/9/2025,1,National Popular Vote,Geodore,alliance,31.58
-2/9/2025,1,National Popular Vote,Sonia Gandhi,labour,35.53
-2/9/2025,1,National Popular Vote,Suom,liberal,30.26
-2/9/2025,1,National Popular Vote,Borgor,independent,2.63
-2/9/2025,2,Alvana,Geodore,alliance,28.57
-2/9/2025,2,Alvana,Sonia Gandhi,labour,42.86
-2/9/2025,2,Alvana,Suom,liberal,28.57
-2/9/2025,2,Brunix Islands,Geodore,alliance,50.00
-2/9/2025,2,Brunix Islands,Sonia Gandhi,labour,8.33
-2/9/2025,2,Brunix Islands,Suom,liberal,41.67
-2/9/2025,2,Dalminica,Geodore,alliance,42.86
-2/9/2025,2,Dalminica,Sonia Gandhi,labour,28.57
-2/9/2025,2,Dalminica,Suom,liberal,28.57
-2/9/2025,2,Dentone,Geodore,alliance,50.00
-2/9/2025,2,Dentone,Sonia Gandhi,labour,37.50
-2/9/2025,2,Dentone,Suom,liberal,12.50
-2/9/2025,2,Emix,Geodore,alliance,16.67
-2/9/2025,2,Emix,Sonia Gandhi,labour,33.33
-2/9/2025,2,Emix,Suom,liberal,50.00
-2/9/2025,2,Garvor,Geodore,alliance,27.27
-2/9/2025,2,Garvor,Sonia Gandhi,labour,18.18
-2/9/2025,2,Garvor,Suom,liberal,54.55
-2/9/2025,2,Quintin,Geodore,alliance,28.57
-2/9/2025,2,Quintin,Sonia Gandhi,labour,71.43
-2/9/2025,2,Quintin,Suom,liberal,0.00
-2/9/2025,2,Trunoe,Geodore,alliance,20.00
-2/9/2025,2,Trunoe,Sonia Gandhi,labour,80.00
-2/9/2025,2,Trunoe,Suom,liberal,0.00
-2/9/2025,2,National Popular Vote,Geodore,alliance,32.89
-2/9/2025,2,National Popular Vote,Sonia Gandhi,labour,35.53
-2/9/2025,2,National Popular Vote,Suom,liberal,31.58
-2/9/2025,3,Alvana,Geodore,alliance,50.01
-2/9/2025,3,Alvana,Sonia Gandhi,labour,49.99
-2/9/2025,3,Brunix Islands,Geodore,alliance,81.82
-2/9/2025,3,Brunix Islands,Sonia Gandhi,labour,18.18
-2/9/2025,3,Dalminica,Geodore,alliance,57.14
-2/9/2025,3,Dalminica,Sonia Gandhi,labour,42.86
-2/9/2025,3,Dentone,Geodore,alliance,62.50
-2/9/2025,3,Dentone,Sonia Gandhi,labour,37.50
-2/9/2025,3,Emix,Geodore,alliance,50.01
-2/9/2025,3,Emix,Sonia Gandhi,labour,49.99
-2/9/2025,3,Garvor,Geodore,alliance,70.00
-2/9/2025,3,Garvor,Sonia Gandhi,labour,30.00
-2/9/2025,3,Quintin,Geodore,alliance,28.57
-2/9/2025,3,Quintin,Sonia Gandhi,labour,71.43
-2/9/2025,3,Trunoe,Geodore,alliance,20.00
-2/9/2025,3,Trunoe,Sonia Gandhi,labour,80.00
-2/9/2025,3,National Popular Vote,Geodore,alliance,55.56
-2/9/2025,3,National Popular Vote,Sonia Gandhi,labour,44.44
-4/6/2025,1,Alvana,Virt,liberal,30.02
-4/6/2025,1,Alvana,Plxto,independent,29.99
-4/6/2025,1,Alvana,bfdifann,labour,29.99
-4/6/2025,1,Alvana,Copperhead,alliance,10.00
-4/6/2025,1,Brunix Islands,Virt,liberal,40.01
-4/6/2025,1,Brunix Islands,Plxto,independent,39.99
-4/6/2025,1,Brunix Islands,bfdifann,labour,10.00
-4/6/2025,1,Brunix Islands,Copperhead,alliance,10.00
-4/6/2025,1,Dalminica,Virt,liberal,40.01
-4/6/2025,1,Dalminica,Plxto,independent,10.00
-4/6/2025,1,Dalminica,bfdifann,labour,10.00
-4/6/2025,1,Dalminica,Copperhead,alliance,39.99
-4/6/2025,1,Dentone,Virt,liberal,44.44
-4/6/2025,1,Dentone,Plxto,independent,22.22
-4/6/2025,1,Dentone,bfdifann,labour,11.11
-4/6/2025,1,Dentone,Copperhead,alliance,22.22
-4/6/2025,1,Emix,Virt,liberal,50.00
-4/6/2025,1,Emix,Plxto,independent,0.00
-4/6/2025,1,Emix,bfdifann,labour,33.33
-4/6/2025,1,Emix,Copperhead,alliance,16.67
-4/6/2025,1,Garvor,Virt,liberal,66.67
-4/6/2025,1,Garvor,Plxto,independent,13.33
-4/6/2025,1,Garvor,bfdifann,labour,20.00
-4/6/2025,1,Garvor,Copperhead,alliance,0.00
-4/6/2025,1,Quintin,Virt,liberal,33.33
-4/6/2025,1,Quintin,Plxto,independent,25.00
-4/6/2025,1,Quintin,bfdifann,labour,0.00
-4/6/2025,1,Quintin,Copperhead,alliance,41.67
-4/6/2025,1,Trunoe,Virt,liberal,54.55
-4/6/2025,1,Trunoe,Plxto,independent,0.00
-4/6/2025,1,Trunoe,bfdifann,labour,45.45
-4/6/2025,1,Trunoe,Copperhead,alliance,0.00
-4/6/2025,1,National Popular Vote,Virt,liberal,46.07
-4/6/2025,1,National Popular Vote,Plxto,independent,16.85
-4/6/2025,1,National Popular Vote,bfdifann,labour,20.22
-4/6/2025,1,National Popular Vote,Copperhead,alliance,16.85
-4/6/2025,2,Alvana,Virt,liberal,30.00
-4/6/2025,2,Alvana,Plxto,independent,40.00
-4/6/2025,2,Alvana,bfdifann,labour,30.00
-4/6/2025,2,Brunix Islands,Virt,liberal,44.45
-4/6/2025,2,Brunix Islands,Plxto,independent,44.43
-4/6/2025,2,Brunix Islands,bfdifann,labour,11.11
-4/6/2025,2,Dalminica,Virt,liberal,40.01
-4/6/2025,2,Dalminica,Plxto,independent,20.00
-4/6/2025,2,Dalminica,bfdifann,labour,39.99
-4/6/2025,2,Dentone,Virt,liberal,62.50
-4/6/2025,2,Dentone,Plxto,independent,25.00
-4/6/2025,2,Dentone,bfdifann,labour,12.50
-4/6/2025,2,Emix,Virt,liberal,58.33
-4/6/2025,2,Emix,Plxto,independent,8.33
-4/6/2025,2,Emix,bfdifann,labour,33.33
-4/6/2025,2,Garvor,Virt,liberal,66.67
-4/6/2025,2,Garvor,Plxto,independent,13.33
-4/6/2025,2,Garvor,bfdifann,labour,20.00
-4/6/2025,2,Quintin,Virt,liberal,50.00
-4/6/2025,2,Quintin,Plxto,independent,41.67
-4/6/2025,2,Quintin,bfdifann,labour,8.33
-4/6/2025,2,Trunoe,Virt,liberal,54.55
-4/6/2025,2,Trunoe,Plxto,independent,0.00
-4/6/2025,2,Trunoe,bfdifann,labour,45.45
-4/6/2025,2,National Popular Vote,Virt,liberal,51.72
-4/6/2025,2,National Popular Vote,Plxto,independent,22.99
-4/6/2025,2,National Popular Vote,bfdifann,labour,25.29
-6/15/2025,1,Alvana,Virtecek,liberal,33.33
-6/15/2025,1,Alvana,Javer,labour,41.67
-6/15/2025,1,Alvana,Goop,alliance,16.67
-6/15/2025,1,Alvana,KiwiFox,independent,8.33
-6/15/2025,1,Brunix Islands,Virtecek,liberal,35.72
-6/15/2025,1,Brunix Islands,Javer,labour,21.43
-6/15/2025,1,Brunix Islands,Goop,alliance,35.70
-6/15/2025,1,Brunix Islands,KiwiFox,independent,7.14
-6/15/2025,1,Dalminica,Virtecek,liberal,33.34
-6/15/2025,1,Dalminica,Javer,labour,8.33
-6/15/2025,1,Dalminica,Goop,alliance,25
-6/15/2025,1,Dalminica,KiwiFox,independent,33.32
-6/15/2025,1,Dentone,Virtecek,liberal,42.87
-6/15/2025,1,Dentone,Javer,labour,14.29
-6/15/2025,1,Dentone,Goop,alliance,42.85
-6/15/2025,1,Emix,Virtecek,liberal,35.72
-6/15/2025,1,Emix,Javer,labour,35.70
-6/15/2025,1,Emix,Goop,alliance,21.43
-6/15/2025,1,Emix,KiwiFox,independent,7.14
-6/15/2025,1,Garvor,Virtecek,liberal,71.43
-6/15/2025,1,Garvor,Javer,labour,21.43
-6/15/2025,1,Garvor,KiwiFox,independent,7.14
-6/15/2025,1,Quintin,Virtecek,liberal,42.86
-6/15/2025,1,Quintin,Javer,labour,35.71
-6/15/2025,1,Quintin,Goop,alliance,21.43
-6/15/2025,1,Trunoe,Virtecek,liberal,12.5
-6/15/2025,1,Trunoe,Javer,labour,37.5
-6/15/2025,1,Trunoe,Goop,alliance,25
-6/15/2025,1,Trunoe,KiwiFox,independent,25
-6/15/2025,1,National Popular Vote,Virtecek,liberal,40
-6/15/2025,1,National Popular Vote,Javer,labour,27.37
-6/15/2025,1,National Popular Vote,Goop,alliance,22.11
-6/15/2025,1,National Popular Vote,KiwiFox,independent,10.53
-6/15/2025,2,Alvana,Virtecek,liberal,41.68
-6/15/2025,2,Alvana,Javer,labour,41.66
-6/15/2025,2,Alvana,Goop,alliance,16.67
-6/15/2025,2,Brunix Islands,Virtecek,liberal,42.86
-6/15/2025,2,Brunix Islands,Javer,labour,21.43
-6/15/2025,2,Brunix Islands,Goop,alliance,35.71
-6/15/2025,2,Dalminica,Virtecek,liberal,50
-6/15/2025,2,Dalminica,Javer,labour,25
-6/15/2025,2,Dalminica,Goop,alliance,25
-6/15/2025,2,Dentone,Virtecek,liberal,42.87
-6/15/2025,2,Dentone,Javer,labour,14.29
-6/15/2025,2,Dentone,Goop,alliance,42.85
-6/15/2025,2,Emix,Virtecek,liberal,35.71
-6/15/2025,2,Emix,Javer,labour,42.86
-6/15/2025,2,Emix,Goop,alliance,21.43
-6/15/2025,2,Garvor,Virtecek,liberal,78.57
-6/15/2025,2,Garvor,Javer,labour,21.43
-6/15/2025,2,Quintin,Virtecek,liberal,42.86
-6/15/2025,2,Quintin,Javer,labour,35.71
-6/15/2025,2,Quintin,Goop,alliance,21.43
-6/15/2025,2,Trunoe,Virtecek,liberal,37.51
-6/15/2025,2,Trunoe,Javer,labour,37.49
-6/15/2025,2,Trunoe,Goop,alliance,25
-6/15/2025,2,National Popular Vote,Virtecek,liberal,47.37
-6/15/2025,2,National Popular Vote,Javer,labour,30.53
-6/15/2025,2,National Popular Vote,Goop,alliance,22.11
-6/15/2025,3,Alvana,Virtecek,liberal,50.01
-6/15/2025,3,Alvana,Javer,labour,49.99
-6/15/2025,3,Brunix Islands,Virtecek,liberal,64.29
-6/15/2025,3,Brunix Islands,Javer,labour,35.71
-6/15/2025,3,Dalminica,Virtecek,liberal,66.67
-6/15/2025,3,Dalminica,Javer,labour,33.33
-6/15/2025,3,Dentone,Virtecek,liberal,50.01
-6/15/2025,3,Dentone,Javer,labour,49.99
-6/15/2025,3,Emix,Virtecek,liberal,50.01
-6/15/2025,3,Emix,Javer,labour,49.99
-6/15/2025,3,Garvor,Virtecek,liberal,78.57
-6/15/2025,3,Garvor,Javer,labour,21.43
-6/15/2025,3,Quintin,Virtecek,liberal,58.33
-6/15/2025,3,Quintin,Javer,labour,41.67
-6/15/2025,3,Trunoe,Virtecek,liberal,50.01
-6/15/2025,3,Trunoe,Javer,labour,49.99
-6/15/2025,3,National Popular Vote,Virtecek,liberal,59.78
-6/15/2025,3,National Popular Vote,Javer,labour,40.22
-9/6/2025,1,Alvana,Poopman69,alliance,25
-9/6/2025,1,Alvana,Javer,labour,50
-9/6/2025,1,Alvana,Joris,progressive,20
-9/6/2025,1,Alvana,BORGRGGRR,independent,5
-9/6/2025,1,Brunix Islands,Poopman69,alliance,50
-9/6/2025,1,Brunix Islands,Javer,labour,21.43
-9/6/2025,1,Brunix Islands,Joris,progressive,14.29
-9/6/2025,1,Brunix Islands,Goop,independent,14.29
-9/6/2025,1,Dalminica,Poopman69,alliance,37.5
-9/6/2025,1,Dalminica,Javer,labour,25
-9/6/2025,1,Dalminica,Joris,progressive,31.25
-9/6/2025,1,Dalminica,BORGRGGRR,independent,6.25
-9/6/2025,1,Dentone,Poopman69,alliance,38.46
-9/6/2025,1,Dentone,Javer,labour,30.77
-9/6/2025,1,Dentone,Joris,progressive,15.38
-9/6/2025,1,Dentone,BORGRGGRR,independent,15.38
-9/6/2025,1,Emix,Poopman69,alliance,14.29
-9/6/2025,1,Emix,Javer,labour,33.33
-9/6/2025,1,Emix,Joris,progressive,38.1
-9/6/2025,1,Emix,BORGRGGRR,independent,9.52
-9/6/2025,1,Emix,Goop,independent,4.76
-9/6/2025,1,Garvor,Poopman69,alliance,25
-9/6/2025,1,Garvor,Javer,labour,50
-9/6/2025,1,Garvor,Joris,progressive,25
-9/6/2025,1,Quintin,Poopman69,alliance,28
-9/6/2025,1,Quintin,Javer,labour,28
-9/6/2025,1,Quintin,Joris,progressive,40
-9/6/2025,1,Quintin,BORGRGGRR,independent,4
-9/6/2025,1,Trunoe,Poopman69,alliance,27.27
-9/6/2025,1,Trunoe,Javer,labour,40.91
-9/6/2025,1,Trunoe,Joris,progressive,27.27
-9/6/2025,1,Trunoe,BORGRGGRR,independent,4.55
-9/6/2025,1,National Popular Vote,Poopman69,alliance,29.14
-9/6/2025,1,National Popular Vote,Javer,labour,35.76
-9/6/2025,1,National Popular Vote,Joris,progressive,27.81
-9/6/2025,1,National Popular Vote,BORGRGGRR,independent,5.3
-9/6/2025,1,National Popular Vote,Goop,independent,1.99
-9/6/2025,2,Alvana,Poopman69,alliance,25
-9/6/2025,2,Alvana,Javer,labour,55
-9/6/2025,2,Alvana,Joris,progressive,20
-9/6/2025,2,Brunix Islands,Poopman69,alliance,64.29
-9/6/2025,2,Brunix Islands,Javer,labour,21.43
-9/6/2025,2,Brunix Islands,Joris,progressive,14.29
-9/6/2025,2,Dalminica,Poopman69,alliance,37.5
-9/6/2025,2,Dalminica,Javer,labour,31.25
-9/6/2025,2,Dalminica,Joris,progressive,31.25
-9/6/2025,2,Dentone,Poopman69,alliance,50
-9/6/2025,2,Dentone,Javer,labour,33.33
-9/6/2025,2,Dentone,Joris,progressive,16.67
-9/6/2025,2,Emix,Poopman69,alliance,19.05
-9/6/2025,2,Emix,Javer,labour,33.33
-9/6/2025,2,Emix,Joris,progressive,47.62
-9/6/2025,2,Garvor,Poopman69,alliance,25
-9/6/2025,2,Garvor,Javer,labour,50
-9/6/2025,2,Garvor,Joris,progressive,25
-9/6/2025,2,Quintin,Poopman69,alliance,28
-9/6/2025,2,Quintin,Javer,labour,32
-9/6/2025,2,Quintin,Joris,progressive,40
-9/6/2025,2,Trunoe,Poopman69,alliance,27.27
-9/6/2025,2,Trunoe,Javer,labour,45.45
-9/6/2025,2,Trunoe,Joris,progressive,27.27
-9/6/2025,2,National Popular Vote,Poopman69,alliance,32
-9/6/2025,2,National Popular Vote,Javer,labour,38.67
-9/6/2025,2,National Popular Vote,Joris,progressive,29.33
-9/6/2025,3,Alvana,Poopman69,alliance,45
-9/6/2025,3,Alvana,Javer,labour,55
-9/6/2025,3,Brunix Islands,Poopman69,alliance,71.43
-9/6/2025,3,Brunix Islands,Javer,labour,28.57
-9/6/2025,3,Dalminica,Poopman69,alliance,62.5
-9/6/2025,3,Dalminica,Javer,labour,37.5
-9/6/2025,3,Dentone,Poopman69,alliance,66.67
-9/6/2025,3,Dentone,Javer,labour,33.33
-9/6/2025,3,Emix,Poopman69,alliance,38.89
-9/6/2025,3,Emix,Javer,labour,61.11
-9/6/2025,3,Garvor,Poopman69,alliance,45
-9/6/2025,3,Garvor,Javer,labour,55
-9/6/2025,3,Quintin,Poopman69,alliance,50.01
-9/6/2025,3,Quintin,Javer,labour,49.99
-9/6/2025,3,Trunoe,Poopman69,alliance,36.36
-9/6/2025,3,Trunoe,Javer,labour,63.64
-9/6/2025,3,National Popular Vote,Poopman69,alliance,50
-9/6/2025,3,National Popular Vote,Javer,labour,50
-9/6/2025,4,Alvana,Poopman69,alliance,60
-9/6/2025,4,Alvana,Javer,labour,40
-9/6/2025,4,Brunix Islands,Poopman69,alliance,71.43
-9/6/2025,4,Brunix Islands,Javer,labour,28.57
-9/6/2025,4,Dalminica,Poopman69,alliance,85.71
-9/6/2025,4,Dalminica,Javer,labour,14.29
-9/6/2025,4,Dentone,Poopman69,alliance,58.33
-9/6/2025,4,Dentone,Javer,labour,41.67
-9/6/2025,4,Emix,Poopman69,alliance,40
-9/6/2025,4,Emix,Javer,labour,60
-9/6/2025,4,Garvor,Poopman69,alliance,47.06
-9/6/2025,4,Garvor,Javer,labour,52.94
-9/6/2025,4,Quintin,Poopman69,alliance,58.82
-9/6/2025,4,Quintin,Javer,labour,41.18
-9/6/2025,4,Trunoe,Poopman69,alliance,58.82
-9/6/2025,4,Trunoe,Javer,labour,41.18
-9/6/2025,4,National Popular Vote,Poopman69,alliance,59.5
-9/6/2025,4,National Popular Vote,Javer,labour,40.5
+date,round,region,candidate,party,voteshare,candidatevotes,totalvotes
+8/21/2024,1,Alvana,BlockyBeach,alliance,50,,
+8/21/2024,1,Alvana,Nath,liberal,25,,
+8/21/2024,1,Alvana,Sonia Gandhi,labour,25,,
+8/21/2024,1,Brunix Islands,BlockyBeach,alliance,33.33,,
+8/21/2024,1,Brunix Islands,Nath,liberal,66.67,,
+8/21/2024,1,Brunix Islands,Sonia Gandhi,labour,0,,
+8/21/2024,1,Dalminica,BlockyBeach,alliance,49.99,,
+8/21/2024,1,Dalminica,Nath,liberal,0,,
+8/21/2024,1,Dalminica,Sonia Gandhi,labour,50.01,,
+8/21/2024,1,Dentone,BlockyBeach,alliance,39.99,,
+8/21/2024,1,Dentone,Nath,liberal,20,,
+8/21/2024,1,Dentone,Sonia Gandhi,labour,40.01,,
+8/21/2024,1,Emix,BlockyBeach,alliance,0,,
+8/21/2024,1,Emix,Nath,liberal,75,,
+8/21/2024,1,Emix,Sonia Gandhi,labour,25,,
+8/21/2024,1,Garvor,BlockyBeach,alliance,16.67,,
+8/21/2024,1,Garvor,Nath,liberal,66.67,,
+8/21/2024,1,Garvor,Sonia Gandhi,labour,16.67,,
+8/21/2024,1,Quintin,BlockyBeach,alliance,20,,
+8/21/2024,1,Quintin,Nath,liberal,0,,
+8/21/2024,1,Quintin,Sonia Gandhi,labour,80,,
+8/21/2024,1,Trunoe,BlockyBeach,alliance,25,,
+8/21/2024,1,Trunoe,Nath,liberal,0,,
+8/21/2024,1,Trunoe,Sonia Gandhi,labour,75,,
+8/21/2024,1,National Popular Vote,BlockyBeach,alliance,28.57,,
+8/21/2024,1,National Popular Vote,Nath,liberal,31.43,,
+8/21/2024,1,National Popular Vote,Sonia Gandhi,labour,40,,
+8/21/2024,2,Alvana,Nath,liberal,25,,
+8/21/2024,2,Alvana,Sonia Gandhi,labour,75,,
+8/21/2024,2,Brunix Islands,Nath,liberal,66.67,,
+8/21/2024,2,Brunix Islands,Sonia Gandhi,labour,33.33,,
+8/21/2024,2,Dalminica,Nath,liberal,49.99,,
+8/21/2024,2,Dalminica,Sonia Gandhi,labour,50.01,,
+8/21/2024,2,Dentone,Nath,liberal,49.99,,
+8/21/2024,2,Dentone,Sonia Gandhi,labour,50.01,,
+8/21/2024,2,Emix,Nath,liberal,75,,
+8/21/2024,2,Emix,Sonia Gandhi,labour,25,,
+8/21/2024,2,Garvor,Nath,liberal,66.67,,
+8/21/2024,2,Garvor,Sonia Gandhi,labour,33.33,,
+8/21/2024,2,Quintin,Nath,liberal,0,,
+8/21/2024,2,Quintin,Sonia Gandhi,labour,100,,
+8/21/2024,2,Trunoe,Nath,liberal,0,,
+8/21/2024,2,Trunoe,Sonia Gandhi,labour,100,,
+8/21/2024,2,National Popular Vote,Nath,liberal,42.42,,
+8/21/2024,2,National Popular Vote,Sonia Gandhi,labour,57.58,,
+10/20/2024,1,Alvana,John McCain Fan,liberal,33.35,,
+10/20/2024,1,Alvana,Sonia Gandhi,labour,33.32,,
+10/20/2024,1,Alvana,How Do I Type,alliance,33.32,,
+10/20/2024,1,Alvana,Cob,independent,0,,
+10/20/2024,1,Brunix Islands,John McCain Fan,liberal,66.67,,
+10/20/2024,1,Brunix Islands,Sonia Gandhi,labour,16.67,,
+10/20/2024,1,Brunix Islands,How Do I Type,alliance,16.67,,
+10/20/2024,1,Brunix Islands,Cob,independent,0,,
+10/20/2024,1,Dalminica,John McCain Fan,liberal,100,,
+10/20/2024,1,Dalminica,Sonia Gandhi,labour,0,,
+10/20/2024,1,Dalminica,How Do I Type,alliance,0,,
+10/20/2024,1,Dalminica,Cob,independent,0,,
+10/20/2024,1,Dentone,John McCain Fan,liberal,40.01,,
+10/20/2024,1,Dentone,Sonia Gandhi,labour,20,,
+10/20/2024,1,Dentone,How Do I Type,alliance,39.99,,
+10/20/2024,1,Dentone,Cob,independent,0,,
+10/20/2024,1,Emix,John McCain Fan,liberal,50.01,,
+10/20/2024,1,Emix,Sonia Gandhi,labour,0,,
+10/20/2024,1,Emix,How Do I Type,alliance,0,,
+10/20/2024,1,Emix,Cob,independent,49.99,,
+10/20/2024,1,Garvor,John McCain Fan,liberal,50,,
+10/20/2024,1,Garvor,Sonia Gandhi,labour,33.33,,
+10/20/2024,1,Garvor,How Do I Type,alliance,0,,
+10/20/2024,1,Garvor,Cob,independent,16.67,,
+10/20/2024,1,Quintin,John McCain Fan,liberal,0,,
+10/20/2024,1,Quintin,Sonia Gandhi,labour,80,,
+10/20/2024,1,Quintin,How Do I Type,alliance,20,,
+10/20/2024,1,Quintin,Cob,independent,0,,
+10/20/2024,1,Trunoe,John McCain Fan,liberal,0,,
+10/20/2024,1,Trunoe,Sonia Gandhi,labour,66.67,,
+10/20/2024,1,Trunoe,How Do I Type,alliance,0,,
+10/20/2024,1,Trunoe,Cob,independent,33.33,,
+10/20/2024,1,National Popular Vote,John McCain Fan,liberal,41.18,,
+10/20/2024,1,National Popular Vote,Sonia Gandhi,labour,32.35,,
+10/20/2024,1,National Popular Vote,How Do I Type,alliance,14.71,,
+10/20/2024,1,National Popular Vote,Cob,independent,11.76,,
+10/20/2024,2,Alvana,John McCain Fan,liberal,33.35,,
+10/20/2024,2,Alvana,Sonia Gandhi,labour,33.32,,
+10/20/2024,2,Alvana,How Do I Type,alliance,33.32,,
+10/20/2024,2,Brunix Islands,John McCain Fan,liberal,66.67,,
+10/20/2024,2,Brunix Islands,Sonia Gandhi,labour,16.67,,
+10/20/2024,2,Brunix Islands,How Do I Type,alliance,16.67,,
+10/20/2024,2,Dalminica,John McCain Fan,liberal,100,,
+10/20/2024,2,Dalminica,Sonia Gandhi,labour,0,,
+10/20/2024,2,Dalminica,How Do I Type,alliance,0,,
+10/20/2024,2,Dentone,John McCain Fan,liberal,40.01,,
+10/20/2024,2,Dentone,Sonia Gandhi,labour,20,,
+10/20/2024,2,Dentone,How Do I Type,alliance,39.99,,
+10/20/2024,2,Emix,John McCain Fan,liberal,75,,
+10/20/2024,2,Emix,Sonia Gandhi,labour,25,,
+10/20/2024,2,Emix,How Do I Type,alliance,0,,
+10/20/2024,2,Garvor,John McCain Fan,liberal,66.67,,
+10/20/2024,2,Garvor,Sonia Gandhi,labour,33.33,,
+10/20/2024,2,Garvor,How Do I Type,alliance,0,,
+10/20/2024,2,Quintin,John McCain Fan,liberal,0,,
+10/20/2024,2,Quintin,Sonia Gandhi,labour,80,,
+10/20/2024,2,Quintin,How Do I Type,alliance,20,,
+10/20/2024,2,Trunoe,John McCain Fan,liberal,0,,
+10/20/2024,2,Trunoe,Sonia Gandhi,labour,66.67,,
+10/20/2024,2,Trunoe,How Do I Type,alliance,33.33,,
+10/20/2024,2,National Popular Vote,John McCain Fan,liberal,47.06,,
+10/20/2024,2,National Popular Vote,Sonia Gandhi,labour,35.29,,
+10/20/2024,2,National Popular Vote,How Do I Type,alliance,17.65,,
+10/20/2024,3,Alvana,John McCain Fan,liberal,33.33,,
+10/20/2024,3,Alvana,Sonia Gandhi,labour,66.67,,
+10/20/2024,3,Brunix Islands,John McCain Fan,liberal,66.67,,
+10/20/2024,3,Brunix Islands,Sonia Gandhi,labour,33.33,,
+10/20/2024,3,Dalminica,John McCain Fan,liberal,100,,
+10/20/2024,3,Dalminica,Sonia Gandhi,labour,0,,
+10/20/2024,3,Dentone,John McCain Fan,liberal,60,,
+10/20/2024,3,Dentone,Sonia Gandhi,labour,40,,
+10/20/2024,3,Emix,John McCain Fan,liberal,75,,
+10/20/2024,3,Emix,Sonia Gandhi,labour,25,,
+10/20/2024,3,Garvor,John McCain Fan,liberal,66.67,,
+10/20/2024,3,Garvor,Sonia Gandhi,labour,33.33,,
+10/20/2024,3,Quintin,John McCain Fan,liberal,0,,
+10/20/2024,3,Quintin,Sonia Gandhi,labour,100,,
+10/20/2024,3,Trunoe,John McCain Fan,liberal,33.33,,
+10/20/2024,3,Trunoe,Sonia Gandhi,labour,66.67,,
+10/20/2024,3,National Popular Vote,John McCain Fan,liberal,52.94,,
+10/20/2024,3,National Popular Vote,Sonia Gandhi,labour,47.06,,
+12/15/2024,1,Alvana,Deet,alliance,83.33,,
+12/15/2024,1,Alvana,Virt,liberal,16.67,,
+12/15/2024,1,Alvana,Allric,independent,0,,
+12/15/2024,1,Brunix Islands,Deet,alliance,50,,
+12/15/2024,1,Brunix Islands,Virt,liberal,37.5,,
+12/15/2024,1,Brunix Islands,Allric,independent,12.5,,
+12/15/2024,1,Dalminica,Deet,alliance,33.33,,
+12/15/2024,1,Dalminica,Virt,liberal,66.67,,
+12/15/2024,1,Dalminica,Allric,independent,0,,
+12/15/2024,1,Dentone,Deet,alliance,66.67,,
+12/15/2024,1,Dentone,Virt,liberal,33.33,,
+12/15/2024,1,Dentone,Allric,independent,0,,
+12/15/2024,1,Emix,Deet,alliance,40,,
+12/15/2024,1,Emix,Virt,liberal,60,,
+12/15/2024,1,Emix,Allric,independent,0,,
+12/15/2024,1,Garvor,Deet,alliance,28.57,,
+12/15/2024,1,Garvor,Virt,liberal,71.43,,
+12/15/2024,1,Garvor,Allric,independent,0,,
+12/15/2024,1,Quintin,Deet,alliance,100,,
+12/15/2024,1,Quintin,Virt,liberal,0,,
+12/15/2024,1,Quintin,Allric,independent,0,,
+12/15/2024,1,Trunoe,Deet,alliance,75,,
+12/15/2024,1,Trunoe,Virt,liberal,0,,
+12/15/2024,1,Trunoe,Allric,independent,25,,
+12/15/2024,1,National Popular Vote,Deet,alliance,57.45,,
+12/15/2024,1,National Popular Vote,Virt,liberal,38.3,,
+12/15/2024,1,National Popular Vote,Allric,independent,4.26,,
+02/09/2025,1,Alvana,Geodore,alliance,28.57,,
+02/09/2025,1,Alvana,Sonia Gandhi,labour,42.86,,
+02/09/2025,1,Alvana,Suom,liberal,28.57,,
+02/09/2025,1,Alvana,Borgor,independent,0,,
+02/09/2025,1,Brunix Islands,Geodore,alliance,50,,
+02/09/2025,1,Brunix Islands,Sonia Gandhi,labour,8.33,,
+02/09/2025,1,Brunix Islands,Suom,liberal,33.33,,
+02/09/2025,1,Brunix Islands,Borgor,independent,8.33,,
+02/09/2025,1,Dalminica,Geodore,alliance,42.86,,
+02/09/2025,1,Dalminica,Sonia Gandhi,labour,28.57,,
+02/09/2025,1,Dalminica,Suom,liberal,28.57,,
+02/09/2025,1,Dalminica,Borgor,independent,0,,
+02/09/2025,1,Dentone,Geodore,alliance,50,,
+02/09/2025,1,Dentone,Sonia Gandhi,labour,37.5,,
+02/09/2025,1,Dentone,Suom,liberal,12.5,,
+02/09/2025,1,Dentone,Borgor,independent,0,,
+02/09/2025,1,Emix,Geodore,alliance,16.67,,
+02/09/2025,1,Emix,Sonia Gandhi,labour,33.33,,
+02/09/2025,1,Emix,Suom,liberal,50,,
+02/09/2025,1,Emix,Borgor,independent,0,,
+02/09/2025,1,Garvor,Geodore,alliance,27.27,,
+02/09/2025,1,Garvor,Sonia Gandhi,labour,18.18,,
+02/09/2025,1,Garvor,Suom,liberal,54.55,,
+02/09/2025,1,Garvor,Borgor,independent,0,,
+02/09/2025,1,Quintin,Geodore,alliance,28.57,,
+02/09/2025,1,Quintin,Sonia Gandhi,labour,71.43,,
+02/09/2025,1,Quintin,Suom,liberal,0,,
+02/09/2025,1,Quintin,Borgor,independent,0,,
+02/09/2025,1,Trunoe,Geodore,alliance,0,,
+02/09/2025,1,Trunoe,Sonia Gandhi,labour,80,,
+02/09/2025,1,Trunoe,Suom,liberal,0,,
+02/09/2025,1,Trunoe,Borgor,independent,20,,
+02/09/2025,1,National Popular Vote,Geodore,alliance,31.58,,
+02/09/2025,1,National Popular Vote,Sonia Gandhi,labour,35.53,,
+02/09/2025,1,National Popular Vote,Suom,liberal,30.26,,
+02/09/2025,1,National Popular Vote,Borgor,independent,2.63,,
+02/09/2025,2,Alvana,Geodore,alliance,28.57,,
+02/09/2025,2,Alvana,Sonia Gandhi,labour,42.86,,
+02/09/2025,2,Alvana,Suom,liberal,28.57,,
+02/09/2025,2,Brunix Islands,Geodore,alliance,50,,
+02/09/2025,2,Brunix Islands,Sonia Gandhi,labour,8.33,,
+02/09/2025,2,Brunix Islands,Suom,liberal,41.67,,
+02/09/2025,2,Dalminica,Geodore,alliance,42.86,,
+02/09/2025,2,Dalminica,Sonia Gandhi,labour,28.57,,
+02/09/2025,2,Dalminica,Suom,liberal,28.57,,
+02/09/2025,2,Dentone,Geodore,alliance,50,,
+02/09/2025,2,Dentone,Sonia Gandhi,labour,37.5,,
+02/09/2025,2,Dentone,Suom,liberal,12.5,,
+02/09/2025,2,Emix,Geodore,alliance,16.67,,
+02/09/2025,2,Emix,Sonia Gandhi,labour,33.33,,
+02/09/2025,2,Emix,Suom,liberal,50,,
+02/09/2025,2,Garvor,Geodore,alliance,27.27,,
+02/09/2025,2,Garvor,Sonia Gandhi,labour,18.18,,
+02/09/2025,2,Garvor,Suom,liberal,54.55,,
+02/09/2025,2,Quintin,Geodore,alliance,28.57,,
+02/09/2025,2,Quintin,Sonia Gandhi,labour,71.43,,
+02/09/2025,2,Quintin,Suom,liberal,0,,
+02/09/2025,2,Trunoe,Geodore,alliance,20,,
+02/09/2025,2,Trunoe,Sonia Gandhi,labour,80,,
+02/09/2025,2,Trunoe,Suom,liberal,0,,
+02/09/2025,2,National Popular Vote,Geodore,alliance,32.89,,
+02/09/2025,2,National Popular Vote,Sonia Gandhi,labour,35.53,,
+02/09/2025,2,National Popular Vote,Suom,liberal,31.58,,
+02/09/2025,3,Alvana,Geodore,alliance,50.01,,
+02/09/2025,3,Alvana,Sonia Gandhi,labour,49.99,,
+02/09/2025,3,Brunix Islands,Geodore,alliance,81.82,,
+02/09/2025,3,Brunix Islands,Sonia Gandhi,labour,18.18,,
+02/09/2025,3,Dalminica,Geodore,alliance,57.14,,
+02/09/2025,3,Dalminica,Sonia Gandhi,labour,42.86,,
+02/09/2025,3,Dentone,Geodore,alliance,62.5,,
+02/09/2025,3,Dentone,Sonia Gandhi,labour,37.5,,
+02/09/2025,3,Emix,Geodore,alliance,50.01,,
+02/09/2025,3,Emix,Sonia Gandhi,labour,49.99,,
+02/09/2025,3,Garvor,Geodore,alliance,70,,
+02/09/2025,3,Garvor,Sonia Gandhi,labour,30,,
+02/09/2025,3,Quintin,Geodore,alliance,28.57,,
+02/09/2025,3,Quintin,Sonia Gandhi,labour,71.43,,
+02/09/2025,3,Trunoe,Geodore,alliance,20,,
+02/09/2025,3,Trunoe,Sonia Gandhi,labour,80,,
+02/09/2025,3,National Popular Vote,Geodore,alliance,55.56,,
+02/09/2025,3,National Popular Vote,Sonia Gandhi,labour,44.44,,
+04/06/2025,1,Alvana,Virt,liberal,30.02,,
+04/06/2025,1,Alvana,Plxto,independent,29.99,,
+04/06/2025,1,Alvana,bfdifann,labour,29.99,,
+04/06/2025,1,Alvana,Copperhead,alliance,10,,
+04/06/2025,1,Brunix Islands,Virt,liberal,40.01,,
+04/06/2025,1,Brunix Islands,Plxto,independent,39.99,,
+04/06/2025,1,Brunix Islands,bfdifann,labour,10,,
+04/06/2025,1,Brunix Islands,Copperhead,alliance,10,,
+04/06/2025,1,Dalminica,Virt,liberal,40.01,,
+04/06/2025,1,Dalminica,Plxto,independent,10,,
+04/06/2025,1,Dalminica,bfdifann,labour,10,,
+04/06/2025,1,Dalminica,Copperhead,alliance,39.99,,
+04/06/2025,1,Dentone,Virt,liberal,44.44,,
+04/06/2025,1,Dentone,Plxto,independent,22.22,,
+04/06/2025,1,Dentone,bfdifann,labour,11.11,,
+04/06/2025,1,Dentone,Copperhead,alliance,22.22,,
+04/06/2025,1,Emix,Virt,liberal,50,,
+04/06/2025,1,Emix,Plxto,independent,0,,
+04/06/2025,1,Emix,bfdifann,labour,33.33,,
+04/06/2025,1,Emix,Copperhead,alliance,16.67,,
+04/06/2025,1,Garvor,Virt,liberal,66.67,,
+04/06/2025,1,Garvor,Plxto,independent,13.33,,
+04/06/2025,1,Garvor,bfdifann,labour,20,,
+04/06/2025,1,Garvor,Copperhead,alliance,0,,
+04/06/2025,1,Quintin,Virt,liberal,33.33,,
+04/06/2025,1,Quintin,Plxto,independent,25,,
+04/06/2025,1,Quintin,bfdifann,labour,0,,
+04/06/2025,1,Quintin,Copperhead,alliance,41.67,,
+04/06/2025,1,Trunoe,Virt,liberal,54.55,,
+04/06/2025,1,Trunoe,Plxto,independent,0,,
+04/06/2025,1,Trunoe,bfdifann,labour,45.45,,
+04/06/2025,1,Trunoe,Copperhead,alliance,0,,
+04/06/2025,1,National Popular Vote,Virt,liberal,46.07,,
+04/06/2025,1,National Popular Vote,Plxto,independent,16.85,,
+04/06/2025,1,National Popular Vote,bfdifann,labour,20.22,,
+04/06/2025,1,National Popular Vote,Copperhead,alliance,16.85,,
+04/06/2025,2,Alvana,Virt,liberal,30,,
+04/06/2025,2,Alvana,Plxto,independent,40,,
+04/06/2025,2,Alvana,bfdifann,labour,30,,
+04/06/2025,2,Brunix Islands,Virt,liberal,44.45,,
+04/06/2025,2,Brunix Islands,Plxto,independent,44.43,,
+04/06/2025,2,Brunix Islands,bfdifann,labour,11.11,,
+04/06/2025,2,Dalminica,Virt,liberal,40.01,,
+04/06/2025,2,Dalminica,Plxto,independent,20,,
+04/06/2025,2,Dalminica,bfdifann,labour,39.99,,
+04/06/2025,2,Dentone,Virt,liberal,62.5,,
+04/06/2025,2,Dentone,Plxto,independent,25,,
+04/06/2025,2,Dentone,bfdifann,labour,12.5,,
+04/06/2025,2,Emix,Virt,liberal,58.33,,
+04/06/2025,2,Emix,Plxto,independent,8.33,,
+04/06/2025,2,Emix,bfdifann,labour,33.33,,
+04/06/2025,2,Garvor,Virt,liberal,66.67,,
+04/06/2025,2,Garvor,Plxto,independent,13.33,,
+04/06/2025,2,Garvor,bfdifann,labour,20,,
+04/06/2025,2,Quintin,Virt,liberal,50,,
+04/06/2025,2,Quintin,Plxto,independent,41.67,,
+04/06/2025,2,Quintin,bfdifann,labour,8.33,,
+04/06/2025,2,Trunoe,Virt,liberal,54.55,,
+04/06/2025,2,Trunoe,Plxto,independent,0,,
+04/06/2025,2,Trunoe,bfdifann,labour,45.45,,
+04/06/2025,2,National Popular Vote,Virt,liberal,51.72,,
+04/06/2025,2,National Popular Vote,Plxto,independent,22.99,,
+04/06/2025,2,National Popular Vote,bfdifann,labour,25.29,,
+6/15/2025,1,Alvana,Virtecek,liberal,33.33,,
+6/15/2025,1,Alvana,Javer,labour,41.67,,
+6/15/2025,1,Alvana,Goop,alliance,16.67,,
+6/15/2025,1,Alvana,KiwiFox,independent,8.33,,
+6/15/2025,1,Brunix Islands,Virtecek,liberal,35.72,,
+6/15/2025,1,Brunix Islands,Javer,labour,21.43,,
+6/15/2025,1,Brunix Islands,Goop,alliance,35.7,,
+6/15/2025,1,Brunix Islands,KiwiFox,independent,7.14,,
+6/15/2025,1,Dalminica,Virtecek,liberal,33.34,,
+6/15/2025,1,Dalminica,Javer,labour,8.33,,
+6/15/2025,1,Dalminica,Goop,alliance,25,,
+6/15/2025,1,Dalminica,KiwiFox,independent,33.32,,
+6/15/2025,1,Dentone,Virtecek,liberal,42.87,,
+6/15/2025,1,Dentone,Javer,labour,14.29,,
+6/15/2025,1,Dentone,Goop,alliance,42.85,,
+6/15/2025,1,Emix,Virtecek,liberal,35.72,,
+6/15/2025,1,Emix,Javer,labour,35.7,,
+6/15/2025,1,Emix,Goop,alliance,21.43,,
+6/15/2025,1,Emix,KiwiFox,independent,7.14,,
+6/15/2025,1,Garvor,Virtecek,liberal,71.43,,
+6/15/2025,1,Garvor,Javer,labour,21.43,,
+6/15/2025,1,Garvor,KiwiFox,independent,7.14,,
+6/15/2025,1,Quintin,Virtecek,liberal,42.86,,
+6/15/2025,1,Quintin,Javer,labour,35.71,,
+6/15/2025,1,Quintin,Goop,alliance,21.43,,
+6/15/2025,1,Trunoe,Virtecek,liberal,12.5,,
+6/15/2025,1,Trunoe,Javer,labour,37.5,,
+6/15/2025,1,Trunoe,Goop,alliance,25,,
+6/15/2025,1,Trunoe,KiwiFox,independent,25,,
+6/15/2025,1,National Popular Vote,Virtecek,liberal,40,,
+6/15/2025,1,National Popular Vote,Javer,labour,27.37,,
+6/15/2025,1,National Popular Vote,Goop,alliance,22.11,,
+6/15/2025,1,National Popular Vote,KiwiFox,independent,10.53,,
+6/15/2025,2,Alvana,Virtecek,liberal,41.68,,
+6/15/2025,2,Alvana,Javer,labour,41.66,,
+6/15/2025,2,Alvana,Goop,alliance,16.67,,
+6/15/2025,2,Brunix Islands,Virtecek,liberal,42.86,,
+6/15/2025,2,Brunix Islands,Javer,labour,21.43,,
+6/15/2025,2,Brunix Islands,Goop,alliance,35.71,,
+6/15/2025,2,Dalminica,Virtecek,liberal,50,,
+6/15/2025,2,Dalminica,Javer,labour,25,,
+6/15/2025,2,Dalminica,Goop,alliance,25,,
+6/15/2025,2,Dentone,Virtecek,liberal,42.87,,
+6/15/2025,2,Dentone,Javer,labour,14.29,,
+6/15/2025,2,Dentone,Goop,alliance,42.85,,
+6/15/2025,2,Emix,Virtecek,liberal,35.71,,
+6/15/2025,2,Emix,Javer,labour,42.86,,
+6/15/2025,2,Emix,Goop,alliance,21.43,,
+6/15/2025,2,Garvor,Virtecek,liberal,78.57,,
+6/15/2025,2,Garvor,Javer,labour,21.43,,
+6/15/2025,2,Quintin,Virtecek,liberal,42.86,,
+6/15/2025,2,Quintin,Javer,labour,35.71,,
+6/15/2025,2,Quintin,Goop,alliance,21.43,,
+6/15/2025,2,Trunoe,Virtecek,liberal,37.51,,
+6/15/2025,2,Trunoe,Javer,labour,37.49,,
+6/15/2025,2,Trunoe,Goop,alliance,25,,
+6/15/2025,2,National Popular Vote,Virtecek,liberal,47.37,,
+6/15/2025,2,National Popular Vote,Javer,labour,30.53,,
+6/15/2025,2,National Popular Vote,Goop,alliance,22.11,,
+6/15/2025,3,Alvana,Virtecek,liberal,50.01,,
+6/15/2025,3,Alvana,Javer,labour,49.99,,
+6/15/2025,3,Brunix Islands,Virtecek,liberal,64.29,,
+6/15/2025,3,Brunix Islands,Javer,labour,35.71,,
+6/15/2025,3,Dalminica,Virtecek,liberal,66.67,,
+6/15/2025,3,Dalminica,Javer,labour,33.33,,
+6/15/2025,3,Dentone,Virtecek,liberal,50.01,,
+6/15/2025,3,Dentone,Javer,labour,49.99,,
+6/15/2025,3,Emix,Virtecek,liberal,50.01,,
+6/15/2025,3,Emix,Javer,labour,49.99,,
+6/15/2025,3,Garvor,Virtecek,liberal,78.57,,
+6/15/2025,3,Garvor,Javer,labour,21.43,,
+6/15/2025,3,Quintin,Virtecek,liberal,58.33,,
+6/15/2025,3,Quintin,Javer,labour,41.67,,
+6/15/2025,3,Trunoe,Virtecek,liberal,50.01,,
+6/15/2025,3,Trunoe,Javer,labour,49.99,,
+6/15/2025,3,National Popular Vote,Virtecek,liberal,59.78,,
+6/15/2025,3,National Popular Vote,Javer,labour,40.22,,
+09/06/2025,1,Alvana,Poopman69,alliance,25,,
+09/06/2025,1,Alvana,Javer,labour,50,,
+09/06/2025,1,Alvana,Joris,progressive,20,,
+09/06/2025,1,Alvana,BORGRGGRR,independent,5,,
+09/06/2025,1,Brunix Islands,Poopman69,alliance,50,,
+09/06/2025,1,Brunix Islands,Javer,labour,21.43,,
+09/06/2025,1,Brunix Islands,Joris,progressive,14.29,,
+09/06/2025,1,Brunix Islands,Goop,independent,14.29,,
+09/06/2025,1,Dalminica,Poopman69,alliance,37.5,,
+09/06/2025,1,Dalminica,Javer,labour,25,,
+09/06/2025,1,Dalminica,Joris,progressive,31.25,,
+09/06/2025,1,Dalminica,BORGRGGRR,independent,6.25,,
+09/06/2025,1,Dentone,Poopman69,alliance,38.46,,
+09/06/2025,1,Dentone,Javer,labour,30.77,,
+09/06/2025,1,Dentone,Joris,progressive,15.38,,
+09/06/2025,1,Dentone,BORGRGGRR,independent,15.38,,
+09/06/2025,1,Emix,Poopman69,alliance,14.29,,
+09/06/2025,1,Emix,Javer,labour,33.33,,
+09/06/2025,1,Emix,Joris,progressive,38.1,,
+09/06/2025,1,Emix,BORGRGGRR,independent,9.52,,
+09/06/2025,1,Emix,Goop,independent,4.76,,
+09/06/2025,1,Garvor,Poopman69,alliance,25,,
+09/06/2025,1,Garvor,Javer,labour,50,,
+09/06/2025,1,Garvor,Joris,progressive,25,,
+09/06/2025,1,Quintin,Poopman69,alliance,28,,
+09/06/2025,1,Quintin,Javer,labour,28,,
+09/06/2025,1,Quintin,Joris,progressive,40,,
+09/06/2025,1,Quintin,BORGRGGRR,independent,4,,
+09/06/2025,1,Trunoe,Poopman69,alliance,27.27,,
+09/06/2025,1,Trunoe,Javer,labour,40.91,,
+09/06/2025,1,Trunoe,Joris,progressive,27.27,,
+09/06/2025,1,Trunoe,BORGRGGRR,independent,4.55,,
+09/06/2025,1,National Popular Vote,Poopman69,alliance,29.14,,
+09/06/2025,1,National Popular Vote,Javer,labour,35.76,,
+09/06/2025,1,National Popular Vote,Joris,progressive,27.81,,
+09/06/2025,1,National Popular Vote,BORGRGGRR,independent,5.3,,
+09/06/2025,1,National Popular Vote,Goop,independent,1.99,,
+09/06/2025,2,Alvana,Poopman69,alliance,25,,
+09/06/2025,2,Alvana,Javer,labour,55,,
+09/06/2025,2,Alvana,Joris,progressive,20,,
+09/06/2025,2,Brunix Islands,Poopman69,alliance,64.29,,
+09/06/2025,2,Brunix Islands,Javer,labour,21.43,,
+09/06/2025,2,Brunix Islands,Joris,progressive,14.29,,
+09/06/2025,2,Dalminica,Poopman69,alliance,37.5,,
+09/06/2025,2,Dalminica,Javer,labour,31.25,,
+09/06/2025,2,Dalminica,Joris,progressive,31.25,,
+09/06/2025,2,Dentone,Poopman69,alliance,50,,
+09/06/2025,2,Dentone,Javer,labour,33.33,,
+09/06/2025,2,Dentone,Joris,progressive,16.67,,
+09/06/2025,2,Emix,Poopman69,alliance,19.05,,
+09/06/2025,2,Emix,Javer,labour,33.33,,
+09/06/2025,2,Emix,Joris,progressive,47.62,,
+09/06/2025,2,Garvor,Poopman69,alliance,25,,
+09/06/2025,2,Garvor,Javer,labour,50,,
+09/06/2025,2,Garvor,Joris,progressive,25,,
+09/06/2025,2,Quintin,Poopman69,alliance,28,,
+09/06/2025,2,Quintin,Javer,labour,32,,
+09/06/2025,2,Quintin,Joris,progressive,40,,
+09/06/2025,2,Trunoe,Poopman69,alliance,27.27,,
+09/06/2025,2,Trunoe,Javer,labour,45.45,,
+09/06/2025,2,Trunoe,Joris,progressive,27.27,,
+09/06/2025,2,National Popular Vote,Poopman69,alliance,32,,
+09/06/2025,2,National Popular Vote,Javer,labour,38.67,,
+09/06/2025,2,National Popular Vote,Joris,progressive,29.33,,
+09/06/2025,3,Alvana,Poopman69,alliance,45,,
+09/06/2025,3,Alvana,Javer,labour,55,,
+09/06/2025,3,Brunix Islands,Poopman69,alliance,71.43,,
+09/06/2025,3,Brunix Islands,Javer,labour,28.57,,
+09/06/2025,3,Dalminica,Poopman69,alliance,62.5,,
+09/06/2025,3,Dalminica,Javer,labour,37.5,,
+09/06/2025,3,Dentone,Poopman69,alliance,66.67,,
+09/06/2025,3,Dentone,Javer,labour,33.33,,
+09/06/2025,3,Emix,Poopman69,alliance,38.89,,
+09/06/2025,3,Emix,Javer,labour,61.11,,
+09/06/2025,3,Garvor,Poopman69,alliance,45,,
+09/06/2025,3,Garvor,Javer,labour,55,,
+09/06/2025,3,Quintin,Poopman69,alliance,50.01,,
+09/06/2025,3,Quintin,Javer,labour,49.99,,
+09/06/2025,3,Trunoe,Poopman69,alliance,36.36,,
+09/06/2025,3,Trunoe,Javer,labour,63.64,,
+09/06/2025,3,National Popular Vote,Poopman69,alliance,50,,
+09/06/2025,3,National Popular Vote,Javer,labour,50,,
+09/06/2025,4,Alvana,Poopman69,alliance,60,,
+09/06/2025,4,Alvana,Javer,labour,40,,
+09/06/2025,4,Brunix Islands,Poopman69,alliance,71.43,,
+09/06/2025,4,Brunix Islands,Javer,labour,28.57,,
+09/06/2025,4,Dalminica,Poopman69,alliance,85.71,,
+09/06/2025,4,Dalminica,Javer,labour,14.29,,
+09/06/2025,4,Dentone,Poopman69,alliance,58.33,,
+09/06/2025,4,Dentone,Javer,labour,41.67,,
+09/06/2025,4,Emix,Poopman69,alliance,40,,
+09/06/2025,4,Emix,Javer,labour,60,,
+09/06/2025,4,Garvor,Poopman69,alliance,47.06,,
+09/06/2025,4,Garvor,Javer,labour,52.94,,
+09/06/2025,4,Quintin,Poopman69,alliance,58.82,,
+09/06/2025,4,Quintin,Javer,labour,41.18,,
+09/06/2025,4,Trunoe,Poopman69,alliance,58.82,,
+09/06/2025,4,Trunoe,Javer,labour,41.18,,
+09/06/2025,4,National Popular Vote,Poopman69,alliance,59.5,,
+09/06/2025,4,National Popular Vote,Javer,labour,40.5,,
+11/15/2025,1,Garvor,Van der Plan,labour,31.51,113244,359410
+11/15/2025,1,Garvor,Strxya,progressive,30.96,111274,359410
+11/15/2025,1,Garvor,Nath,alliance,26.63,95718,359410
+11/15/2025,1,Garvor,Tommy,independent,3.75,13470,359410
+11/15/2025,1,Garvor,Forsh,independent,2.74,9837,359410
+11/15/2025,1,Garvor,Goop,independent,2.27,8175,359410
+11/15/2025,1,Garvor,Donald Jehovaha Trump,independent,2.14,7692,359410
+11/15/2025,1,Kilden,Van der Plan,labour,25.56,91860,359410
+11/15/2025,1,Kilden,Strxya,progressive,17.87,64243,359410
+11/15/2025,1,Kilden,Nath,alliance,30.66,110195,359410
+11/15/2025,1,Kilden,Tommy,independent,12.33,44309,359410
+11/15/2025,1,Kilden,Forsh,independent,9.16,32916,359410
+11/15/2025,1,Kilden,Goop,independent,4.42,15868,359410
+11/15/2025,1,Kilden,Donald Jehovaha Trump,independent,0.01,19,359410
+11/15/2025,1,Brunix Islands,Van der Plan,labour,17.5,62905,359382
+11/15/2025,1,Brunix Islands,Strxya,progressive,28.46,102295,359382
+11/15/2025,1,Brunix Islands,Nath,alliance,33.07,118851,359382
+11/15/2025,1,Brunix Islands,Tommy,independent,13.66,49075,359382
+11/15/2025,1,Brunix Islands,Forsh,independent,0.61,2207,359382
+11/15/2025,1,Brunix Islands,Goop,independent,6.69,24026,359382
+11/15/2025,1,Brunix Islands,Donald Jehovaha Trump,independent,0.01,23,359382
+11/15/2025,1,Emix,Van der Plan,labour,37.01,133020,359412
+11/15/2025,1,Emix,Strxya,progressive,25.32,90987,359412
+11/15/2025,1,Emix,Nath,alliance,17.58,63175,359412
+11/15/2025,1,Emix,Tommy,independent,13.16,47308,359412
+11/15/2025,1,Emix,Forsh,independent,3.7,13302,359412
+11/15/2025,1,Emix,Goop,independent,3.23,11604,359412
+11/15/2025,1,Emix,Donald Jehovaha Trump,independent,0.01,16,359412

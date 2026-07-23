@@ -714,8 +714,8 @@ var USAHouseMapType = new MapType(
         })
 
         $("#outlines").append(outlineGroupHTML)
-        var svgDataHTML = $("#svgdata").html()
-        $("#svgdata").html(svgDataHTML)
+        var svgElement = document.getElementById("svgdata");
+        svgElement.innerHTML = svgElement.innerHTML;
       }]
     }
 

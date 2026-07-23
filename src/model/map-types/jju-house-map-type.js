@@ -3,7 +3,7 @@ var JJUHouseMapType = new MapType(
   "House",
   "H",
   "assets/usa-house.png",
-  "svg-sources/jju-districts-10-list-12-map.svg",
+  "svg-sources/jju-districts-10-list-20-map.svg",
   30,
   function()
   {
@@ -818,7 +818,7 @@ var JJUHouseMapType = new MapType(
 	    "Past Elections", // name
 	    "./csv-sources/jju-past-house.csv", // dataURL
 	    "https://docs.google.com/spreadsheets/d", // homepageURL
-	    {regular: "./assets/wikipedia-large.png", mini: "./assets/wikipedia-large.png", getOverlayText: () => {
+	    {regular: "./assets/jju-flag-10.png", mini: "./assets/wikipedia-large.png", getOverlayText: () => {
 		  let currentYear = currentSliderDate.getFullYear()
 		  return currentYear
 	    }}, // iconURL
@@ -832,7 +832,8 @@ var JJUHouseMapType = new MapType(
 		    partyID: "party",
 		    voteshare: "voteshare",
 		    candidateVotes: "candidatevotes",
-		    totalVotes: "totalvotes"
+		    totalVotes: "totalvotes",
+        isDisabled: "disabled"
 	    }, // columnMap
 	    null, // cycleYear
 	    null, // candidateNameToPartyIDMap
@@ -868,7 +869,7 @@ var JJUHouseMapType = new MapType(
 	    null, // isCustomMap
 	    null, // shouldClearDisabled
 	    true, // shouldShowVoteshare
-	    1.0, // voteshareCutoffMargin
+	    0, // voteshareCutoffMargin
       getHouseSVGByDate, // overrideSVGPath
       null, // shouldSetDisabledWorthToZero
       null, // shouldUseOriginalMapDataForTotalsPieChart
@@ -881,7 +882,7 @@ var JJUHouseMapType = new MapType(
       "Past List Elections", // name
       "./csv-sources/jju-past-list.csv", // dataURL
       "https://docs.google.com/spreadsheets/d", // homepageURL
-      {regular: "./assets/wikipedia-large.png", mini: "./assets/wikipedia-large.png", getOverlayText: () => {
+      {regular: "./assets/jju-flag-10.png", mini: "./assets/wikipedia-large.png", getOverlayText: () => {
         let currentYear = currentSliderDate.getFullYear()
         return currentYear
       }}, // iconURL
@@ -933,14 +934,78 @@ var JJUHouseMapType = new MapType(
       null, // isCustomMap
       null, // shouldClearDisabled
       true, // shouldShowVoteshare
-      1.0, // voteshareCutoffMargin
+      0, // voteshareCutoffMargin
       getDistrictSVGByDate, // overrideSVGPath
       null, // shouldSetDisabledWorthToZero
       null, // shouldUseOriginalMapDataForTotalsPieChart
       null, // shouldForcePopularVoteDisplay
       {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}// customDefaultMargins
     )
-  
+/*
+    var TylenolTimesHouseMapSource = new MapSource(
+	    "TT-Prediction-House-Elections", // id
+	    "Tylenol Times Prediction", // name
+	    "./csv-sources/tt-prediction-house.csv", // dataURL
+	    "https://docs.google.com/spreadsheets/d", // homepageURL
+	    {regular: "./assets/tylenol-times.png", mini: "./assets/tylenol-times.png", getOverlayText: () => {
+		  let currentYear = currentSliderDate.getFullYear()
+		  return currentYear
+	    }}, // iconURL
+	    {
+		    date: "date",
+		    region: "region",
+		    isSpecial: "special",
+		    isRunoff: "runoff",
+		    isOffyear: "offyear",
+		    candidateName: "candidate",
+		    partyID: "party",
+		    voteshare: "voteshare",
+		    candidateVotes: "candidatevotes",
+		    totalVotes: "totalvotes",
+        isDisabled: "disabled"
+	    }, // columnMap
+	    null, // cycleYear
+	    null, // candidateNameToPartyIDMap
+	    null, // shortCandidateNameOverride
+	    regionNameToID, // regionNameToIDMap
+	    null, // regionIDToLinkMap
+	    null, // heldRegionMap
+	    false, // shouldFilterOutDuplicateRows
+	    true, // addDecimalPadding
+	    doubleLineVoteshareFilterFunction, // organizeMapDataFunction
+	    false, // viewingDataFunction
+	    null, // zoomingDataFunction
+	    null, // splitVoteDataFunction
+	    null, // splitVoteDisplayOptions
+	    getFormattedRegionName, // getFormattedRegionName
+	    function(homepageURL, regionID, _, mapDate, __, mapData)
+      {
+        const regionData = mapData[mapDate.getTime()][regionID]
+        if (regionData && regionData.isHold && regionData.electionDate)
+        {
+          mapDate = new Date(regionData.electionDate)
+        }
+        
+        let spreadsheetLinkData = electionDateToSpreadsheetData[mapDate.getTime()]
+        if (!spreadsheetLinkData) return null
+        
+        let linkToOpen = `${homepageURL}/${spreadsheetLinkData.id}/edit?gid=${spreadsheetLinkData.regions[regionID] ?? 0}`
+      
+        return linkToOpen
+      }, // customOpenRegionLinkFunction
+	    null, // updateCustomMapFunction
+	    null, // convertMapDataRowToCSVFunction
+	    null, // isCustomMap
+	    null, // shouldClearDisabled
+	    false, // shouldShowVoteshare
+	    0, // voteshareCutoffMargin
+      getHouseSVGByDate, // overrideSVGPath
+      null, // shouldSetDisabledWorthToZero
+      null, // shouldUseOriginalMapDataForTotalsPieChart
+      null, // shouldForcePopularVoteDisplay
+      {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE} // customDefaultMargins
+	  )
+  */
 	  var idsToPartyNames = {}
 	  var partyNamesToIDs = {}
 	  for (var partyNum in mainPoliticalPartyIDs)
@@ -1004,18 +1069,24 @@ var JJUHouseMapType = new MapType(
 	  var houseMapSources = {}
 	  houseMapSources[PastElectionResultMapSource.getID()] = PastElectionResultMapSource
     houseMapSources[PastListElectionResultMapSource.getID()] = PastListElectionResultMapSource
+    // houseMapSources[TylenolTimesHouseMapSource.getID()] = TylenolTimesHouseMapSource
 	  houseMapSources[CustomMapSource.getID()] = CustomMapSource
   
 	  const houseMapSourceIDs = {
-	    [allYearsCycle]: [PastElectionResultMapSource.getID(), PastListElectionResultMapSource.getID(), CustomMapSource.getID()]
+	    [allYearsCycle]: [PastElectionResultMapSource.getID(),
+        PastListElectionResultMapSource.getID(),
+        // TylenolTimesHouseMapSource.getID(), 
+        CustomMapSource.getID()]
 	  }
 	  
 	  const kPastElectionsVsPastElections = 1
     const kPastListElectionsVsPastListElections = 2
+    // const kTylenolTimesVsTylenolTimes = 3
   
 	  var defaultHouseCompareSourceIDs = {}
 	  defaultHouseCompareSourceIDs[kPastElectionsVsPastElections] = [PastElectionResultMapSource.getID(), PastElectionResultMapSource.getID()]
     defaultHouseCompareSourceIDs[kPastListElectionsVsPastListElections] = [PastListElectionResultMapSource.getID(), PastListElectionResultMapSource.getID()]
+    // defaultHouseCompareSourceIDs[kTylenolTimesVsTylenolTimes] = [TylenolTimesHouseMapSource.getID(), TylenolTimesHouseMapSource.getID()]
   
 	  return {mapSources: houseMapSources, mapSourceIDs: houseMapSourceIDs, mapCycles: [], defaultCompareSourceIDs: defaultHouseCompareSourceIDs, customSourceID: CustomMapSource.getID()}
   }

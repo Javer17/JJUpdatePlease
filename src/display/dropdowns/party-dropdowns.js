@@ -73,6 +73,7 @@ function createPartyDropdowns()
     }
 
     var currentPoliticalParty = politicalParties[dropdownPoliticalPartyIDs[partyIDNum]]
+    if (currentPoliticalParty == null) { continue }
     var marginColors = currentPoliticalParty.getMarginColors()
 
     dropdownDiv += '<div id="' + currentPoliticalParty.getID() + 'Dropdown" class="dropdown" style="width: ' + partyButtonWidth + '%; height: ' + partyButtonHeight + 'px;" onmouseenter="deselectDropdownButton()">'

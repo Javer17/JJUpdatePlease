@@ -194,8 +194,21 @@ var JJUSenateMapType = new MapType(
           partyIDToCandidateNames[candidateData[partyCandidateName].partyID] = partyCandidateName
         }
         
-        let mostRecentParty = heldRegionMap ? heldRegionMap[regionID] : mostRecentWinner(filteredMapData, currentMapDate.getTime(), regionID).partyID
-        return {region: regionID, offYear: isOffyear, runoff: isRunoffElection, isSpecial: isSpecialElection, disabled: mapDataRows[0][columnMap.isDisabled] == "TRUE", margin: topTwoMargin, partyID: greatestMarginPartyID, candidateName: greatestMarginCandidateName, candidateMap: partyIDToCandidateNames, partyVotesharePercentages: voteshareSortedCandidateData, flip: mapDataRows[0][columnMap.flip] == "TRUE" || (mostRecentParty != greatestMarginPartyID && mostRecentParty != TossupParty.getID())}
+        const regionNameForFlipCheck = Object.entries(regionNameToID).find(([_, id]) => id === regionID)?.[0] ?? regionID
+        const containsSitting = typeof regionNameForFlipCheck === "string" && regionNameForFlipCheck.toLowerCase().includes("sitting")
+        let shouldAutoFlip = false
+        if (!containsSitting)
+        {
+          const sittingRegionName = `${regionNameForFlipCheck} Sitting`
+          const sittingRegionID = regionNameToID[sittingRegionName]
+          if (sittingRegionID)
+          {
+            const sittingMostRecentParty = heldRegionMap ? heldRegionMap[sittingRegionID] : mostRecentWinner(filteredMapData, currentMapDate.getTime(), sittingRegionID).partyID
+            shouldAutoFlip = sittingMostRecentParty != greatestMarginPartyID && sittingMostRecentParty != TossupParty.getID()
+          }
+        }
+
+        return {region: regionID, offYear: isOffyear, runoff: isRunoffElection, isSpecial: isSpecialElection, disabled: mapDataRows[0][columnMap.isDisabled] == "TRUE", margin: topTwoMargin, partyID: greatestMarginPartyID, candidateName: greatestMarginCandidateName, candidateMap: partyIDToCandidateNames, partyVotesharePercentages: voteshareSortedCandidateData, flip: mapDataRows[0][columnMap.flip] == "TRUE" || shouldAutoFlip}
       }
   
 	    for (let mapDateTime of mapDates)
@@ -734,7 +747,8 @@ var JJUSenateMapType = new MapType(
 		    partyID: "party",
 		    voteshare: "voteshare",
 		    candidateVotes: "candidatevotes",
-		    totalVotes: "totalvotes"
+		    totalVotes: "totalvotes",
+        isDisabled: "disabled",
 	    }, // columnMap
 	    null, // cycleYear
 	    null, // candidateNameToPartyIDMap
@@ -772,10 +786,10 @@ var JJUSenateMapType = new MapType(
 	    true, // shouldShowVoteshare
 	    0, // voteshareCutoffMargin
       getSenateSVGByDate, // overrideSVGPath
-      null, // shouldSetDisabledWorthToZero
+      false, // shouldSetDisabledWorthToZero
       null, // shouldUseOriginalMapDataForTotalsPieChart
       null, // shouldForcePopularVoteDisplay
-      {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}, // customDefaultMargins
+      function() { return solidMarginEnabled ? { solid: 20, safe: 10, likely: 5, lean: 1, tilt: Number.MIN_VALUE } : { safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE } }, // customDefaultMargins
     )
 
   
@@ -833,7 +847,7 @@ var JJUSenateMapType = new MapType(
       null, // shouldSetDisabledWorthToZero
       null, // shouldUseOriginalMapDataForTotalsPieChart
       null, // shouldForcePopularVoteDisplay
-      {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}, // customDefaultMargins
+      function() { return solidMarginEnabled ? { solid: 20, safe: 10, likely: 5, lean: 1, tilt: Number.MIN_VALUE } : { safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE } }, // customDefaultMargins
 	  )
   
 	  var todayDate = new Date()

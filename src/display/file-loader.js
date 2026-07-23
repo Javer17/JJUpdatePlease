@@ -58,9 +58,17 @@ function jsonFileLoaded(e)
   var jsonMapData = JSON.parse(e.target.result)
   if (!jsonMapData || !jsonMapData.mapData) { return }
 
-  if (jsonMapData.marginValues && Object.keys(jsonMapData.marginValues).toString() == Object.keys(marginValues).toString())
+  if (jsonMapData.marginValues && jsonMapData.marginValues.safe != null && jsonMapData.marginValues.likely != null && jsonMapData.marginValues.lean != null && jsonMapData.marginValues.tilt != null)
   {
-    marginValues = jsonMapData.marginValues
+    // If solid mode is enabled and the uploaded map didn't include `solid`, prefer the solid defaults
+    if (solidMarginEnabled && jsonMapData.marginValues.solid == null)
+    {
+      marginValues = cloneObject(solidMarginValues)
+    }
+    else
+    {
+      marginValues = cloneObject(fillMissingSolidMarginValues(jsonMapData.marginValues))
+    }
   }
   else
   {

@@ -54,11 +54,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/8/1960,AK,Haines,Byrd,southern democrat,0,277
 11/8/1960,AK,Haines,Faubus,independent,0,277
 11/8/1960,AK,Haines,Other,other,0,277
-11/8/1960,AK,Hoonah_Angoon,Kennedy,democrat,346,647
-11/8/1960,AK,Hoonah_Angoon,Nixon,republican,301,647
-11/8/1960,AK,Hoonah_Angoon,Byrd,southern democrat,0,647
-11/8/1960,AK,Hoonah_Angoon,Faubus,independent,0,647
-11/8/1960,AK,Hoonah_Angoon,Other,other,0,647
 11/8/1960,AK,Juneau,Kennedy,democrat,2105,4435
 11/8/1960,AK,Juneau,Nixon,republican,2330,4435
 11/8/1960,AK,Juneau,Byrd,southern democrat,0,4435
@@ -79,11 +74,11 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/8/1960,AK,Kodiak_Island,Byrd,southern democrat,0,1498
 11/8/1960,AK,Kodiak_Island,Faubus,independent,0,1498
 11/8/1960,AK,Kodiak_Island,Other,other,0,1498
-11/8/1960,AK,Kusilvak,Kennedy,democrat,291,442
-11/8/1960,AK,Kusilvak,Nixon,republican,151,442
-11/8/1960,AK,Kusilvak,Byrd,southern democrat,0,442
-11/8/1960,AK,Kusilvak,Faubus,independent,0,442
-11/8/1960,AK,Kusilvak,Other,other,0,442
+11/8/1960,AK,Wade_Hampton,Kennedy,democrat,291,442
+11/8/1960,AK,Wade_Hampton,Nixon,republican,151,442
+11/8/1960,AK,Wade_Hampton,Byrd,southern democrat,0,442
+11/8/1960,AK,Wade_Hampton,Faubus,independent,0,442
+11/8/1960,AK,Wade_Hampton,Other,other,0,442
 11/8/1960,AK,Lake_and_Peninsula,Kennedy,democrat,211,332
 11/8/1960,AK,Lake_and_Peninsula,Nixon,republican,121,332
 11/8/1960,AK,Lake_and_Peninsula,Byrd,southern democrat,0,332
@@ -109,36 +104,31 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/8/1960,AK,Northwest_Arctic,Byrd,southern democrat,0,802
 11/8/1960,AK,Northwest_Arctic,Faubus,independent,0,802
 11/8/1960,AK,Northwest_Arctic,Other,other,0,802
-11/8/1960,AK,Petersburg,Kennedy,democrat,355,746
-11/8/1960,AK,Petersburg,Nixon,republican,391,746
-11/8/1960,AK,Petersburg,Byrd,southern democrat,0,746
-11/8/1960,AK,Petersburg,Faubus,independent,0,746
-11/8/1960,AK,Petersburg,Other,other,0,746
-11/8/1960,AK,Prince_of_Wales-Hyder,Kennedy,democrat,566,1039
-11/8/1960,AK,Prince_of_Wales-Hyder,Nixon,republican,473,1039
-11/8/1960,AK,Prince_of_Wales-Hyder,Byrd,southern democrat,0,1039
-11/8/1960,AK,Prince_of_Wales-Hyder,Faubus,independent,0,1039
-11/8/1960,AK,Prince_of_Wales-Hyder,Other,other,0,1039
+11/8/1960,AK,Prince_of_Wales-Outer_Ketchikan,Kennedy,democrat,566,1039
+11/8/1960,AK,Prince_of_Wales-Outer_Ketchikan,Nixon,republican,473,1039
+11/8/1960,AK,Prince_of_Wales-Outer_Ketchikan,Byrd,southern democrat,0,1039
+11/8/1960,AK,Prince_of_Wales-Outer_Ketchikan,Faubus,independent,0,1039
+11/8/1960,AK,Prince_of_Wales-Outer_Ketchikan,Other,other,0,1039
 11/8/1960,AK,Sitka,Kennedy,democrat,1139,2122
 11/8/1960,AK,Sitka,Nixon,republican,983,2122
 11/8/1960,AK,Sitka,Byrd,southern democrat,0,2122
 11/8/1960,AK,Sitka,Faubus,independent,0,2122
 11/8/1960,AK,Sitka,Other,other,0,2122
-11/8/1960,AK,Skagway,Kennedy,democrat,220,319
-11/8/1960,AK,Skagway,Nixon,republican,99,319
-11/8/1960,AK,Skagway,Byrd,southern democrat,0,319
-11/8/1960,AK,Skagway,Faubus,independent,0,319
-11/8/1960,AK,Skagway,Other,other,0,319
+11/8/1960,AK,Skagway-Hoonah-Angoon,Kennedy,democrat,566,966
+11/8/1960,AK,Skagway-Hoonah-Angoon,Nixon,republican,400,966
+11/8/1960,AK,Skagway-Hoonah-Angoon,Byrd,southern democrat,0,966
+11/8/1960,AK,Skagway-Hoonah-Angoon,Faubus,independent,0,966
+11/8/1960,AK,Skagway-Hoonah-Angoon,Other,other,0,966
 11/8/1960,AK,Southeast_Fairbanks,Kennedy,democrat,297,662
 11/8/1960,AK,Southeast_Fairbanks,Nixon,republican,365,662
 11/8/1960,AK,Southeast_Fairbanks,Byrd,southern democrat,0,662
 11/8/1960,AK,Southeast_Fairbanks,Faubus,independent,0,662
 11/8/1960,AK,Southeast_Fairbanks,Other,other,0,662
-11/8/1960,AK,Wrangell,Kennedy,democrat,285,645
-11/8/1960,AK,Wrangell,Nixon,republican,360,645
-11/8/1960,AK,Wrangell,Byrd,southern democrat,0,645
-11/8/1960,AK,Wrangell,Faubus,independent,0,645
-11/8/1960,AK,Wrangell,Other,other,0,645
+11/8/1960,AK,Wrangell-Petersburg,Kennedy,democrat,640,1391
+11/8/1960,AK,Wrangell-Petersburg,Nixon,republican,751,1391
+11/8/1960,AK,Wrangell-Petersburg,Byrd,southern democrat,0,1391
+11/8/1960,AK,Wrangell-Petersburg,Faubus,independent,0,1391
+11/8/1960,AK,Wrangell-Petersburg,Other,other,0,1391
 11/8/1960,AK,Yakutat,Kennedy,democrat,73,132
 11/8/1960,AK,Yakutat,Nixon,republican,59,132
 11/8/1960,AK,Yakutat,Byrd,southern democrat,0,132
@@ -1259,11 +1249,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/8/1960,CO,Boulder,Byrd,southern democrat,0,32197
 11/8/1960,CO,Boulder,Faubus,independent,0,32197
 11/8/1960,CO,Boulder,Other,other,130,32197
-11/8/1960,CO,Broomfield,Kennedy,democrat,12276,32197
-11/8/1960,CO,Broomfield,Nixon,republican,19791,32197
-11/8/1960,CO,Broomfield,Byrd,southern democrat,0,32197
-11/8/1960,CO,Broomfield,Faubus,independent,0,32197
-11/8/1960,CO,Broomfield,Other,other,130,32197
 11/8/1960,CO,Chaffee,Kennedy,democrat,1918,4016
 11/8/1960,CO,Chaffee,Nixon,republican,2094,4016
 11/8/1960,CO,Chaffee,Byrd,southern democrat,0,4016
@@ -2744,11 +2729,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/8/1960,HI,Honolulu,Byrd,southern democrat,0,134456
 11/8/1960,HI,Honolulu,Faubus,independent,0,134456
 11/8/1960,HI,Honolulu,Other,other,0,134456
-11/8/1960,HI,Kalawao,Kennedy,democrat,7302,16150
-11/8/1960,HI,Kalawao,Nixon,republican,8848,16150
-11/8/1960,HI,Kalawao,Byrd,southern democrat,0,16150
-11/8/1960,HI,Kalawao,Faubus,independent,0,16150
-11/8/1960,HI,Kalawao,Other,other,0,16150
 11/8/1960,HI,Kauai,Kennedy,democrat,4636,10291
 11/8/1960,HI,Kauai,Nixon,republican,5655,10291
 11/8/1960,HI,Kauai,Byrd,southern democrat,0,10291
@@ -12064,11 +12044,11 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/8/1960,SD,Moody,Byrd,southern democrat,0,4037
 11/8/1960,SD,Moody,Faubus,independent,0,4037
 11/8/1960,SD,Moody,Other,other,0,4037
-11/8/1960,SD,Oglala_Lakota,Kennedy,democrat,1135,1790
-11/8/1960,SD,Oglala_Lakota,Nixon,republican,655,1790
-11/8/1960,SD,Oglala_Lakota,Byrd,southern democrat,0,1790
-11/8/1960,SD,Oglala_Lakota,Faubus,independent,0,1790
-11/8/1960,SD,Oglala_Lakota,Other,other,0,1790
+11/8/1960,SD,Shannon,Kennedy,democrat,1135,1790
+11/8/1960,SD,Shannon,Nixon,republican,655,1790
+11/8/1960,SD,Shannon,Byrd,southern democrat,0,1790
+11/8/1960,SD,Shannon,Faubus,independent,0,1790
+11/8/1960,SD,Shannon,Other,other,0,1790
 11/8/1960,SD,Pennington,Kennedy,democrat,7478,18842
 11/8/1960,SD,Pennington,Nixon,republican,11364,18842
 11/8/1960,SD,Pennington,Byrd,southern democrat,0,18842
@@ -14049,11 +14029,11 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/8/1960,VA,Alexandria,Byrd,southern democrat,0,18551
 11/8/1960,VA,Alexandria,Faubus,independent,0,18551
 11/8/1960,VA,Alexandria,Other,other,63,18551
-11/8/1960,VA,Alleghany,Kennedy,democrat,2036,4151
-11/8/1960,VA,Alleghany,Nixon,republican,2099,4151
-11/8/1960,VA,Alleghany,Byrd,southern democrat,0,4151
-11/8/1960,VA,Alleghany,Faubus,independent,0,4151
-11/8/1960,VA,Alleghany,Other,other,16,4151
+11/8/1960,VA,Alleghany,Kennedy,democrat,1265,2488
+11/8/1960,VA,Alleghany,Nixon,republican,1214,2488
+11/8/1960,VA,Alleghany,Byrd,southern democrat,0,2488
+11/8/1960,VA,Alleghany,Faubus,independent,0,2488
+11/8/1960,VA,Alleghany,Other,other,9,2488
 11/8/1960,VA,Amelia,Kennedy,democrat,708,1524
 11/8/1960,VA,Amelia,Nixon,republican,784,1524
 11/8/1960,VA,Amelia,Byrd,southern democrat,0,1524
@@ -14169,6 +14149,11 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/8/1960,VA,Clarke,Byrd,southern democrat,0,1736
 11/8/1960,VA,Clarke,Faubus,independent,0,1736
 11/8/1960,VA,Clarke,Other,other,9,1736
+11/8/1960,VA,Clifton_Forge,Kennedy,democrat,771,1663
+11/8/1960,VA,Clifton_Forge,Nixon,republican,885,1663
+11/8/1960,VA,Clifton_Forge,Byrd,southern democrat,0,1663
+11/8/1960,VA,Clifton_Forge,Faubus,independent,0,1663
+11/8/1960,VA,Clifton_Forge,Other,other,7,1663
 11/8/1960,VA,Colonial_Heights,Kennedy,democrat,1198,2581
 11/8/1960,VA,Colonial_Heights,Nixon,republican,1372,2581
 11/8/1960,VA,Colonial_Heights,Byrd,southern democrat,0,2581
@@ -15759,10 +15744,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/3/1964,AK,Haines,Goldwater,republican,75,320
 11/3/1964,AK,Haines,Unpledged Electors,independent,0,320
 11/3/1964,AK,Haines,Other,other,0,320
-11/3/1964,AK,Hoonah_Angoon,Johnson,democrat,605,693
-11/3/1964,AK,Hoonah_Angoon,Goldwater,republican,88,693
-11/3/1964,AK,Hoonah_Angoon,Unpledged Electors,independent,0,693
-11/3/1964,AK,Hoonah_Angoon,Other,other,0,693
 11/3/1964,AK,Juneau,Johnson,democrat,3762,5307
 11/3/1964,AK,Juneau,Goldwater,republican,1545,5307
 11/3/1964,AK,Juneau,Unpledged Electors,independent,0,5307
@@ -15779,10 +15760,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/3/1964,AK,Kodiak_Island,Goldwater,republican,399,1582
 11/3/1964,AK,Kodiak_Island,Unpledged Electors,independent,0,1582
 11/3/1964,AK,Kodiak_Island,Other,other,0,1582
-11/3/1964,AK,Kusilvak,Johnson,democrat,635,712
-11/3/1964,AK,Kusilvak,Goldwater,republican,77,712
-11/3/1964,AK,Kusilvak,Unpledged Electors,independent,0,712
-11/3/1964,AK,Kusilvak,Other,other,0,712
+11/3/1964,AK,Wade_Hampton,Johnson,democrat,635,712
+11/3/1964,AK,Wade_Hampton,Goldwater,republican,77,712
+11/3/1964,AK,Wade_Hampton,Unpledged Electors,independent,0,712
+11/3/1964,AK,Wade_Hampton,Other,other,0,712
 11/3/1964,AK,Lake_and_Peninsula,Johnson,democrat,356,439
 11/3/1964,AK,Lake_and_Peninsula,Goldwater,republican,83,439
 11/3/1964,AK,Lake_and_Peninsula,Unpledged Electors,independent,0,439
@@ -15803,30 +15784,26 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/3/1964,AK,Northwest_Arctic,Goldwater,republican,157,787
 11/3/1964,AK,Northwest_Arctic,Unpledged Electors,independent,0,787
 11/3/1964,AK,Northwest_Arctic,Other,other,0,787
-11/3/1964,AK,Petersburg,Johnson,democrat,727,946
-11/3/1964,AK,Petersburg,Goldwater,republican,219,946
-11/3/1964,AK,Petersburg,Unpledged Electors,independent,0,946
-11/3/1964,AK,Petersburg,Other,other,0,946
-11/3/1964,AK,Prince_of_Wales-Hyder,Johnson,democrat,923,1144
-11/3/1964,AK,Prince_of_Wales-Hyder,Goldwater,republican,221,1144
-11/3/1964,AK,Prince_of_Wales-Hyder,Unpledged Electors,independent,0,1144
-11/3/1964,AK,Prince_of_Wales-Hyder,Other,other,0,1144
+11/3/1964,AK,Prince_of_Wales-Outer_Ketchikan,Johnson,democrat,923,1144
+11/3/1964,AK,Prince_of_Wales-Outer_Ketchikan,Goldwater,republican,221,1144
+11/3/1964,AK,Prince_of_Wales-Outer_Ketchikan,Unpledged Electors,independent,0,1144
+11/3/1964,AK,Prince_of_Wales-Outer_Ketchikan,Other,other,0,1144
 11/3/1964,AK,Sitka,Johnson,democrat,1569,2199
 11/3/1964,AK,Sitka,Goldwater,republican,630,2199
 11/3/1964,AK,Sitka,Unpledged Electors,independent,0,2199
 11/3/1964,AK,Sitka,Other,other,0,2199
-11/3/1964,AK,Skagway,Johnson,democrat,262,337
-11/3/1964,AK,Skagway,Goldwater,republican,75,337
-11/3/1964,AK,Skagway,Unpledged Electors,independent,0,337
-11/3/1964,AK,Skagway,Other,other,0,337
+11/3/1964,AK,Skagway-Hoonah-Angoon,Johnson,democrat,867,1030
+11/3/1964,AK,Skagway-Hoonah-Angoon,Goldwater,republican,163,1030
+11/3/1964,AK,Skagway-Hoonah-Angoon,Unpledged Electors,independent,0,1030
+11/3/1964,AK,Skagway-Hoonah-Angoon,Other,other,0,1030
 11/3/1964,AK,Southeast_Fairbanks,Johnson,democrat,532,790
 11/3/1964,AK,Southeast_Fairbanks,Goldwater,republican,258,790
 11/3/1964,AK,Southeast_Fairbanks,Unpledged Electors,independent,0,790
 11/3/1964,AK,Southeast_Fairbanks,Other,other,0,790
-11/3/1964,AK,Wrangell,Johnson,democrat,494,706
-11/3/1964,AK,Wrangell,Goldwater,republican,212,706
-11/3/1964,AK,Wrangell,Unpledged Electors,independent,0,706
-11/3/1964,AK,Wrangell,Other,other,0,706
+11/3/1964,AK,Wrangell-Petersburg,Johnson,democrat,1221,1652
+11/3/1964,AK,Wrangell-Petersburg,Goldwater,republican,431,1652
+11/3/1964,AK,Wrangell-Petersburg,Unpledged Electors,independent,0,1652
+11/3/1964,AK,Wrangell-Petersburg,Other,other,0,1652
 11/3/1964,AK,Yakutat,Johnson,democrat,119,151
 11/3/1964,AK,Yakutat,Goldwater,republican,32,151
 11/3/1964,AK,Yakutat,Unpledged Electors,independent,0,151
@@ -16723,10 +16700,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/3/1964,CO,Boulder,Goldwater,republican,17373,40330
 11/3/1964,CO,Boulder,Unpledged Electors,independent,0,40330
 11/3/1964,CO,Boulder,Other,other,220,40330
-11/3/1964,CO,Broomfield,Johnson,democrat,22737,40330
-11/3/1964,CO,Broomfield,Goldwater,republican,17373,40330
-11/3/1964,CO,Broomfield,Unpledged Electors,independent,0,40330
-11/3/1964,CO,Broomfield,Other,other,220,40330
 11/3/1964,CO,Chaffee,Johnson,democrat,2463,3951
 11/3/1964,CO,Chaffee,Goldwater,republican,1476,3951
 11/3/1964,CO,Chaffee,Unpledged Electors,independent,0,3951
@@ -17911,10 +17884,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/3/1964,HI,Honolulu,Goldwater,republican,33536,155395
 11/3/1964,HI,Honolulu,Unpledged Electors,independent,0,155395
 11/3/1964,HI,Honolulu,Other,other,0,155395
-11/3/1964,HI,Kalawao,Johnson,democrat,12666,16219
-11/3/1964,HI,Kalawao,Goldwater,republican,3553,16219
-11/3/1964,HI,Kalawao,Unpledged Electors,independent,0,16219
-11/3/1964,HI,Kalawao,Other,other,0,16219
 11/3/1964,HI,Kauai,Johnson,democrat,8713,10684
 11/3/1964,HI,Kauai,Goldwater,republican,1971,10684
 11/3/1964,HI,Kauai,Unpledged Electors,independent,0,10684
@@ -25367,10 +25336,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/3/1964,SD,Moody,Goldwater,republican,1461,3762
 11/3/1964,SD,Moody,Unpledged Electors,independent,0,3762
 11/3/1964,SD,Moody,Other,other,0,3762
-11/3/1964,SD,Oglala_Lakota,Johnson,democrat,1748,2305
-11/3/1964,SD,Oglala_Lakota,Goldwater,republican,557,2305
-11/3/1964,SD,Oglala_Lakota,Unpledged Electors,independent,0,2305
-11/3/1964,SD,Oglala_Lakota,Other,other,0,2305
+11/3/1964,SD,Shannon,Johnson,democrat,1748,2305
+11/3/1964,SD,Shannon,Goldwater,republican,557,2305
+11/3/1964,SD,Shannon,Unpledged Electors,independent,0,2305
+11/3/1964,SD,Shannon,Other,other,0,2305
 11/3/1964,SD,Pennington,Johnson,democrat,9881,18807
 11/3/1964,SD,Pennington,Goldwater,republican,8926,18807
 11/3/1964,SD,Pennington,Unpledged Electors,independent,0,18807
@@ -26955,10 +26924,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/3/1964,VA,Alexandria,Goldwater,republican,8825,25683
 11/3/1964,VA,Alexandria,Unpledged Electors,independent,0,25683
 11/3/1964,VA,Alexandria,Other,other,30,25683
-11/3/1964,VA,Alleghany,Johnson,democrat,2832,4787
-11/3/1964,VA,Alleghany,Goldwater,republican,1954,4787
-11/3/1964,VA,Alleghany,Unpledged Electors,independent,0,4787
-11/3/1964,VA,Alleghany,Other,other,1,4787
+11/3/1964,VA,Alleghany,Johnson,democrat,1580,2685
+11/3/1964,VA,Alleghany,Goldwater,republican,1104,2685
+11/3/1964,VA,Alleghany,Unpledged Electors,independent,0,2685
+11/3/1964,VA,Alleghany,Other,other,1,2685
 11/3/1964,VA,Amelia,Johnson,democrat,884,2239
 11/3/1964,VA,Amelia,Goldwater,republican,1348,2239
 11/3/1964,VA,Amelia,Unpledged Electors,independent,0,2239
@@ -27051,6 +27020,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/3/1964,VA,Clarke,Goldwater,republican,1068,2206
 11/3/1964,VA,Clarke,Unpledged Electors,independent,0,2206
 11/3/1964,VA,Clarke,Other,other,2,2206
+11/3/1964,VA,Clifton_Forge,Johnson,democrat,1252,2102
+11/3/1964,VA,Clifton_Forge,Goldwater,republican,850,2102
+11/3/1964,VA,Clifton_Forge,Unpledged Electors,independent,0,2102
+11/3/1964,VA,Clifton_Forge,Other,other,0,2102
 11/3/1964,VA,Colonial_Heights,Johnson,democrat,1198,3620
 11/3/1964,VA,Colonial_Heights,Goldwater,republican,2420,3620
 11/3/1964,VA,Colonial_Heights,Unpledged Electors,independent,0,3620
@@ -28332,10 +28305,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/5/1968,AK,Haines,Nixon,republican,238,476
 11/5/1968,AK,Haines,Wallace,independent,78,476
 11/5/1968,AK,Haines,Other,other,0,476
-11/5/1968,AK,Hoonah_Angoon,Humphrey,democrat,326,639
-11/5/1968,AK,Hoonah_Angoon,Nixon,republican,280,639
-11/5/1968,AK,Hoonah_Angoon,Wallace,independent,33,639
-11/5/1968,AK,Hoonah_Angoon,Other,other,0,639
 11/5/1968,AK,Juneau,Humphrey,democrat,2811,5789
 11/5/1968,AK,Juneau,Nixon,republican,2601,5789
 11/5/1968,AK,Juneau,Wallace,independent,377,5789
@@ -28352,10 +28321,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/5/1968,AK,Kodiak_Island,Nixon,republican,1013,2144
 11/5/1968,AK,Kodiak_Island,Wallace,independent,255,2144
 11/5/1968,AK,Kodiak_Island,Other,other,0,2144
-11/5/1968,AK,Kusilvak,Humphrey,democrat,568,916
-11/5/1968,AK,Kusilvak,Nixon,republican,282,916
-11/5/1968,AK,Kusilvak,Wallace,independent,66,916
-11/5/1968,AK,Kusilvak,Other,other,0,916
+11/5/1968,AK,Wade_Hampton,Humphrey,democrat,568,916
+11/5/1968,AK,Wade_Hampton,Nixon,republican,282,916
+11/5/1968,AK,Wade_Hampton,Wallace,independent,66,916
+11/5/1968,AK,Wade_Hampton,Other,other,0,916
 11/5/1968,AK,Lake_and_Peninsula,Humphrey,democrat,192,447
 11/5/1968,AK,Lake_and_Peninsula,Nixon,republican,200,447
 11/5/1968,AK,Lake_and_Peninsula,Wallace,independent,55,447
@@ -28376,30 +28345,26 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/5/1968,AK,Northwest_Arctic,Nixon,republican,515,1036
 11/5/1968,AK,Northwest_Arctic,Wallace,independent,47,1036
 11/5/1968,AK,Northwest_Arctic,Other,other,0,1036
-11/5/1968,AK,Petersburg,Humphrey,democrat,453,957
-11/5/1968,AK,Petersburg,Nixon,republican,449,957
-11/5/1968,AK,Petersburg,Wallace,independent,55,957
-11/5/1968,AK,Petersburg,Other,other,0,957
-11/5/1968,AK,Prince_of_Wales-Hyder,Humphrey,democrat,613,1230
-11/5/1968,AK,Prince_of_Wales-Hyder,Nixon,republican,539,1230
-11/5/1968,AK,Prince_of_Wales-Hyder,Wallace,independent,78,1230
-11/5/1968,AK,Prince_of_Wales-Hyder,Other,other,0,1230
+11/5/1968,AK,Prince_of_Wales-Outer_Ketchikan,Humphrey,democrat,613,1230
+11/5/1968,AK,Prince_of_Wales-Outer_Ketchikan,Nixon,republican,539,1230
+11/5/1968,AK,Prince_of_Wales-Outer_Ketchikan,Wallace,independent,78,1230
+11/5/1968,AK,Prince_of_Wales-Outer_Ketchikan,Other,other,0,1230
 11/5/1968,AK,Sitka,Humphrey,democrat,1166,2360
 11/5/1968,AK,Sitka,Nixon,republican,1051,2360
 11/5/1968,AK,Sitka,Wallace,independent,143,2360
 11/5/1968,AK,Sitka,Other,other,0,2360
-11/5/1968,AK,Skagway,Humphrey,democrat,157,276
-11/5/1968,AK,Skagway,Nixon,republican,98,276
-11/5/1968,AK,Skagway,Wallace,independent,21,276
-11/5/1968,AK,Skagway,Other,other,0,276
+11/5/1968,AK,Skagway-Hoonah-Angoon,Humphrey,democrat,483,915
+11/5/1968,AK,Skagway-Hoonah-Angoon,Nixon,republican,378,915
+11/5/1968,AK,Skagway-Hoonah-Angoon,Wallace,independent,54,915
+11/5/1968,AK,Skagway-Hoonah-Angoon,Other,other,0,915
 11/5/1968,AK,Southeast_Fairbanks,Humphrey,democrat,297,979
 11/5/1968,AK,Southeast_Fairbanks,Nixon,republican,482,979
 11/5/1968,AK,Southeast_Fairbanks,Wallace,independent,200,979
 11/5/1968,AK,Southeast_Fairbanks,Other,other,0,979
-11/5/1968,AK,Wrangell,Humphrey,democrat,310,734
-11/5/1968,AK,Wrangell,Nixon,republican,375,734
-11/5/1968,AK,Wrangell,Wallace,independent,49,734
-11/5/1968,AK,Wrangell,Other,other,0,734
+11/5/1968,AK,Wrangell-Petersburg,Humphrey,democrat,763,1691
+11/5/1968,AK,Wrangell-Petersburg,Nixon,republican,824,1691
+11/5/1968,AK,Wrangell-Petersburg,Wallace,independent,104,1691
+11/5/1968,AK,Wrangell-Petersburg,Other,other,0,1691
 11/5/1968,AK,Yakutat,Humphrey,democrat,104,205
 11/5/1968,AK,Yakutat,Nixon,republican,80,205
 11/5/1968,AK,Yakutat,Wallace,independent,21,205
@@ -29296,10 +29261,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/5/1968,CO,Boulder,Nixon,republican,27671,47988
 11/5/1968,CO,Boulder,Wallace,independent,2497,47988
 11/5/1968,CO,Boulder,Other,other,398,47988
-11/5/1968,CO,Broomfield,Humphrey,democrat,17422,47988
-11/5/1968,CO,Broomfield,Nixon,republican,27671,47988
-11/5/1968,CO,Broomfield,Wallace,independent,2497,47988
-11/5/1968,CO,Broomfield,Other,other,398,47988
 11/5/1968,CO,Chaffee,Humphrey,democrat,1667,4153
 11/5/1968,CO,Chaffee,Nixon,republican,2121,4153
 11/5/1968,CO,Chaffee,Wallace,independent,358,4153
@@ -30484,10 +30445,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/5/1968,HI,Honolulu,Nixon,republican,71259,182194
 11/5/1968,HI,Honolulu,Wallace,independent,2794,182194
 11/5/1968,HI,Honolulu,Other,other,0,182194
-11/5/1968,HI,Kalawao,Humphrey,democrat,10313,16951
-11/5/1968,HI,Kalawao,Nixon,republican,6401,16951
-11/5/1968,HI,Kalawao,Wallace,independent,237,16951
-11/5/1968,HI,Kalawao,Other,other,0,16951
 11/5/1968,HI,Kauai,Humphrey,democrat,7051,11346
 11/5/1968,HI,Kauai,Nixon,republican,4140,11346
 11/5/1968,HI,Kauai,Wallace,independent,155,11346
@@ -37940,10 +37897,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/5/1968,SD,Moody,Nixon,republican,1689,3456
 11/5/1968,SD,Moody,Wallace,independent,153,3456
 11/5/1968,SD,Moody,Other,other,0,3456
-11/5/1968,SD,Oglala_Lakota,Humphrey,democrat,1202,1796
-11/5/1968,SD,Oglala_Lakota,Nixon,republican,533,1796
-11/5/1968,SD,Oglala_Lakota,Wallace,independent,61,1796
-11/5/1968,SD,Oglala_Lakota,Other,other,0,1796
+11/5/1968,SD,Shannon,Humphrey,democrat,1202,1796
+11/5/1968,SD,Shannon,Nixon,republican,533,1796
+11/5/1968,SD,Shannon,Wallace,independent,61,1796
+11/5/1968,SD,Shannon,Other,other,0,1796
 11/5/1968,SD,Pennington,Humphrey,democrat,7303,18148
 11/5/1968,SD,Pennington,Nixon,republican,9671,18148
 11/5/1968,SD,Pennington,Wallace,independent,1174,18148
@@ -39528,10 +39485,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/5/1968,VA,Alexandria,Nixon,republican,13265,31816
 11/5/1968,VA,Alexandria,Wallace,independent,4131,31816
 11/5/1968,VA,Alexandria,Other,other,69,31816
-11/5/1968,VA,Alleghany,Humphrey,democrat,1722,5915
-11/5/1968,VA,Alleghany,Nixon,republican,2574,5915
-11/5/1968,VA,Alleghany,Wallace,independent,1615,5915
-11/5/1968,VA,Alleghany,Other,other,4,5915
+11/5/1968,VA,Alleghany,Humphrey,democrat,988,3793
+11/5/1968,VA,Alleghany,Nixon,republican,1649,3793
+11/5/1968,VA,Alleghany,Wallace,independent,1153,3793
+11/5/1968,VA,Alleghany,Other,other,3,3793
 11/5/1968,VA,Amelia,Humphrey,democrat,830,2528
 11/5/1968,VA,Amelia,Nixon,republican,857,2528
 11/5/1968,VA,Amelia,Wallace,independent,832,2528
@@ -39556,10 +39513,14 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/5/1968,VA,Bath,Nixon,republican,872,1897
 11/5/1968,VA,Bath,Wallace,independent,529,1897
 11/5/1968,VA,Bath,Other,other,2,1897
-11/5/1968,VA,Bedford,Humphrey,democrat,2143,10220
-11/5/1968,VA,Bedford,Nixon,republican,3854,10220
-11/5/1968,VA,Bedford,Wallace,independent,3995,10220
-11/5/1968,VA,Bedford,Other,other,228,10220
+11/5/1968,VA,Bedford,Humphrey,democrat,1574,10220
+11/5/1968,VA,Bedford,Nixon,republican,2807,10220
+11/5/1968,VA,Bedford,Wallace,independent,3316,10220
+11/5/1968,VA,Bedford,Other,other,143,10220
+11/5/1968,VA,Bedford_City,Humphrey,democrat,569,10220
+11/5/1968,VA,Bedford_City,Nixon,republican,1047,10220
+11/5/1968,VA,Bedford_City,Wallace,independent,679,10220
+11/5/1968,VA,Bedford_City,Other,other,85,10220
 11/5/1968,VA,Bland,Humphrey,democrat,560,1862
 11/5/1968,VA,Bland,Nixon,republican,938,1862
 11/5/1968,VA,Bland,Wallace,independent,361,1862
@@ -39624,6 +39585,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/5/1968,VA,Clarke,Nixon,republican,1127,2644
 11/5/1968,VA,Clarke,Wallace,independent,742,2644
 11/5/1968,VA,Clarke,Other,other,7,2644
+11/5/1968,VA,Clifton_Forge,Humphrey,democrat,734,2122
+11/5/1968,VA,Clifton_Forge,Nixon,republican,925,2122
+11/5/1968,VA,Clifton_Forge,Wallace,independent,462,2122
+11/5/1968,VA,Clifton_Forge,Other,other,1,2122
 11/5/1968,VA,Colonial_Heights,Humphrey,democrat,650,5413
 11/5/1968,VA,Colonial_Heights,Nixon,republican,2650,5413
 11/5/1968,VA,Colonial_Heights,Wallace,independent,2106,5413
@@ -40905,10 +40870,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/7/1972,AK,Haines,Nixon,republican,334,478
 11/7/1972,AK,Haines,Schmitz,independent,23,478
 11/7/1972,AK,Haines,Other,other,0,478
-11/7/1972,AK,Hoonah_Angoon,McGovern,democrat,346,663
-11/7/1972,AK,Hoonah_Angoon,Nixon,republican,299,663
-11/7/1972,AK,Hoonah_Angoon,Schmitz,independent,18,663
-11/7/1972,AK,Hoonah_Angoon,Other,other,0,663
 11/7/1972,AK,Juneau,McGovern,democrat,2725,6570
 11/7/1972,AK,Juneau,Nixon,republican,3681,6570
 11/7/1972,AK,Juneau,Schmitz,independent,164,6570
@@ -40925,10 +40886,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/7/1972,AK,Kodiak_Island,Nixon,republican,1172,2088
 11/7/1972,AK,Kodiak_Island,Schmitz,independent,59,2088
 11/7/1972,AK,Kodiak_Island,Other,other,0,2088
-11/7/1972,AK,Kusilvak,McGovern,democrat,524,995
-11/7/1972,AK,Kusilvak,Nixon,republican,428,995
-11/7/1972,AK,Kusilvak,Schmitz,independent,43,995
-11/7/1972,AK,Kusilvak,Other,other,0,995
+11/7/1972,AK,Wade_Hampton,McGovern,democrat,524,995
+11/7/1972,AK,Wade_Hampton,Nixon,republican,428,995
+11/7/1972,AK,Wade_Hampton,Schmitz,independent,43,995
+11/7/1972,AK,Wade_Hampton,Other,other,0,995
 11/7/1972,AK,Lake_and_Peninsula,McGovern,democrat,171,371
 11/7/1972,AK,Lake_and_Peninsula,Nixon,republican,181,371
 11/7/1972,AK,Lake_and_Peninsula,Schmitz,independent,19,371
@@ -40949,30 +40910,26 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/7/1972,AK,Northwest_Arctic,Nixon,republican,743,1315
 11/7/1972,AK,Northwest_Arctic,Schmitz,independent,23,1315
 11/7/1972,AK,Northwest_Arctic,Other,other,0,1315
-11/7/1972,AK,Petersburg,McGovern,democrat,254,802
-11/7/1972,AK,Petersburg,Nixon,republican,506,802
-11/7/1972,AK,Petersburg,Schmitz,independent,42,802
-11/7/1972,AK,Petersburg,Other,other,0,802
-11/7/1972,AK,Prince_of_Wales-Hyder,McGovern,democrat,563,1258
-11/7/1972,AK,Prince_of_Wales-Hyder,Nixon,republican,632,1258
-11/7/1972,AK,Prince_of_Wales-Hyder,Schmitz,independent,63,1258
-11/7/1972,AK,Prince_of_Wales-Hyder,Other,other,0,1258
+11/7/1972,AK,Prince_of_Wales-Outer_Ketchikan,McGovern,democrat,563,1258
+11/7/1972,AK,Prince_of_Wales-Outer_Ketchikan,Nixon,republican,632,1258
+11/7/1972,AK,Prince_of_Wales-Outer_Ketchikan,Schmitz,independent,63,1258
+11/7/1972,AK,Prince_of_Wales-Outer_Ketchikan,Other,other,0,1258
 11/7/1972,AK,Sitka,McGovern,democrat,1081,2434
 11/7/1972,AK,Sitka,Nixon,republican,1280,2434
 11/7/1972,AK,Sitka,Schmitz,independent,73,2434
 11/7/1972,AK,Sitka,Other,other,0,2434
-11/7/1972,AK,Skagway,McGovern,democrat,89,346
-11/7/1972,AK,Skagway,Nixon,republican,236,346
-11/7/1972,AK,Skagway,Schmitz,independent,21,346
-11/7/1972,AK,Skagway,Other,other,0,346
+11/7/1972,AK,Skagway-Hoonah-Angoon,McGovern,democrat,435,1009
+11/7/1972,AK,Skagway-Hoonah-Angoon,Nixon,republican,535,1009
+11/7/1972,AK,Skagway-Hoonah-Angoon,Schmitz,independent,39,1009
+11/7/1972,AK,Skagway-Hoonah-Angoon,Other,other,0,1009
 11/7/1972,AK,Southeast_Fairbanks,McGovern,democrat,279,963
 11/7/1972,AK,Southeast_Fairbanks,Nixon,republican,573,963
 11/7/1972,AK,Southeast_Fairbanks,Schmitz,independent,111,963
 11/7/1972,AK,Southeast_Fairbanks,Other,other,0,963
-11/7/1972,AK,Wrangell,McGovern,democrat,255,716
-11/7/1972,AK,Wrangell,Nixon,republican,422,716
-11/7/1972,AK,Wrangell,Schmitz,independent,39,716
-11/7/1972,AK,Wrangell,Other,other,0,716
+11/7/1972,AK,Wrangell-Petersburg,McGovern,democrat,509,1518
+11/7/1972,AK,Wrangell-Petersburg,Nixon,republican,928,1518
+11/7/1972,AK,Wrangell-Petersburg,Schmitz,independent,81,1518
+11/7/1972,AK,Wrangell-Petersburg,Other,other,0,1518
 11/7/1972,AK,Yakutat,McGovern,democrat,58,152
 11/7/1972,AK,Yakutat,Nixon,republican,88,152
 11/7/1972,AK,Yakutat,Schmitz,independent,6,152
@@ -41869,10 +41826,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/7/1972,CO,Boulder,Nixon,republican,40766,71770
 11/7/1972,CO,Boulder,Schmitz,independent,837,71770
 11/7/1972,CO,Boulder,Other,other,683,71770
-11/7/1972,CO,Broomfield,McGovern,democrat,29484,71770
-11/7/1972,CO,Broomfield,Nixon,republican,40766,71770
-11/7/1972,CO,Broomfield,Schmitz,independent,837,71770
-11/7/1972,CO,Broomfield,Other,other,683,71770
 11/7/1972,CO,Chaffee,McGovern,democrat,1354,4291
 11/7/1972,CO,Chaffee,Nixon,republican,2859,4291
 11/7/1972,CO,Chaffee,Schmitz,independent,45,4291
@@ -43057,10 +43010,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/7/1972,HI,Honolulu,Nixon,republican,132844,209801
 11/7/1972,HI,Honolulu,Schmitz,independent,0,209801
 11/7/1972,HI,Honolulu,Other,other,0,209801
-11/7/1972,HI,Kalawao,McGovern,democrat,7399,19017
-11/7/1972,HI,Kalawao,Nixon,republican,11618,19017
-11/7/1972,HI,Kalawao,Schmitz,independent,0,19017
-11/7/1972,HI,Kalawao,Other,other,0,19017
 11/7/1972,HI,Kauai,McGovern,democrat,5401,12972
 11/7/1972,HI,Kauai,Nixon,republican,7571,12972
 11/7/1972,HI,Kauai,Schmitz,independent,0,12972
@@ -50513,10 +50462,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/7/1972,SD,Moody,Nixon,republican,1648,3554
 11/7/1972,SD,Moody,Schmitz,independent,0,3554
 11/7/1972,SD,Moody,Other,other,11,3554
-11/7/1972,SD,Oglala_Lakota,McGovern,democrat,1246,1611
-11/7/1972,SD,Oglala_Lakota,Nixon,republican,356,1611
-11/7/1972,SD,Oglala_Lakota,Schmitz,independent,0,1611
-11/7/1972,SD,Oglala_Lakota,Other,other,9,1611
+11/7/1972,SD,Shannon,McGovern,democrat,1246,1611
+11/7/1972,SD,Shannon,Nixon,republican,356,1611
+11/7/1972,SD,Shannon,Schmitz,independent,0,1611
+11/7/1972,SD,Shannon,Other,other,9,1611
 11/7/1972,SD,Pennington,McGovern,democrat,8592,22326
 11/7/1972,SD,Pennington,Nixon,republican,13654,22326
 11/7/1972,SD,Pennington,Schmitz,independent,0,22326
@@ -52101,10 +52050,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/7/1972,VA,Alexandria,Nixon,republican,20235,36169
 11/7/1972,VA,Alexandria,Schmitz,independent,348,36169
 11/7/1972,VA,Alexandria,Other,other,177,36169
-11/7/1972,VA,Alleghany,McGovern,democrat,1644,5614
-11/7/1972,VA,Alleghany,Nixon,republican,3711,5614
-11/7/1972,VA,Alleghany,Schmitz,independent,238,5614
-11/7/1972,VA,Alleghany,Other,other,21,5614
+11/7/1972,VA,Alleghany,McGovern,democrat,1069,3830
+11/7/1972,VA,Alleghany,Nixon,republican,2584,3830
+11/7/1972,VA,Alleghany,Schmitz,independent,170,3830
+11/7/1972,VA,Alleghany,Other,other,7,3830
 11/7/1972,VA,Amelia,McGovern,democrat,778,2471
 11/7/1972,VA,Amelia,Nixon,republican,1606,2471
 11/7/1972,VA,Amelia,Schmitz,independent,58,2471
@@ -52129,10 +52078,14 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/7/1972,VA,Bath,Nixon,republican,1127,1636
 11/7/1972,VA,Bath,Schmitz,independent,43,1636
 11/7/1972,VA,Bath,Other,other,4,1636
-11/7/1972,VA,Bedford,McGovern,democrat,2030,9262
-11/7/1972,VA,Bedford,Nixon,republican,6693,9262
-11/7/1972,VA,Bedford,Schmitz,independent,447,9262
-11/7/1972,VA,Bedford,Other,other,92,9262
+11/7/1972,VA,Bedford,McGovern,democrat,1501,7199
+11/7/1972,VA,Bedford,Nixon,republican,5286,7199
+11/7/1972,VA,Bedford,Schmitz,independent,358,7199
+11/7/1972,VA,Bedford,Other,other,54,7199
+11/7/1972,VA,Bedford_City,McGovern,democrat,529,2063
+11/7/1972,VA,Bedford_City,Nixon,republican,1407,2063
+11/7/1972,VA,Bedford_City,Schmitz,independent,89,2063
+11/7/1972,VA,Bedford_City,Other,other,38,2063
 11/7/1972,VA,Bland,McGovern,democrat,527,1914
 11/7/1972,VA,Bland,Nixon,republican,1352,1914
 11/7/1972,VA,Bland,Schmitz,independent,31,1914
@@ -52197,6 +52150,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/7/1972,VA,Clarke,Nixon,republican,1816,2627
 11/7/1972,VA,Clarke,Schmitz,independent,67,2627
 11/7/1972,VA,Clarke,Other,other,29,2627
+11/7/1972,VA,Clifton_Forge,McGovern,democrat,575,1784
+11/7/1972,VA,Clifton_Forge,Nixon,republican,1127,1784
+11/7/1972,VA,Clifton_Forge,Schmitz,independent,67,1784
+11/7/1972,VA,Clifton_Forge,Other,other,14,1784
 11/7/1972,VA,Colonial_Heights,McGovern,democrat,541,6028
 11/7/1972,VA,Colonial_Heights,Nixon,republican,5304,6028
 11/7/1972,VA,Colonial_Heights,Schmitz,independent,87,6028
@@ -53478,10 +53435,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/2/1976,AK,Haines,Ford,republican,338,550
 11/2/1976,AK,Haines,McCarthy,independent,0,550
 11/2/1976,AK,Haines,MacBride,libertarian,30,550
-11/2/1976,AK,Hoonah_Angoon,Carter,democrat,363,722
-11/2/1976,AK,Hoonah_Angoon,Ford,republican,304,722
-11/2/1976,AK,Hoonah_Angoon,McCarthy,independent,0,722
-11/2/1976,AK,Hoonah_Angoon,MacBride,libertarian,53,722
 11/2/1976,AK,Juneau,Carter,democrat,2890,7955
 11/2/1976,AK,Juneau,Ford,republican,4674,7955
 11/2/1976,AK,Juneau,McCarthy,independent,0,7955
@@ -53498,10 +53451,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/2/1976,AK,Kodiak_Island,Ford,republican,1490,2663
 11/2/1976,AK,Kodiak_Island,McCarthy,independent,0,2663
 11/2/1976,AK,Kodiak_Island,MacBride,libertarian,129,2663
-11/2/1976,AK,Kusilvak,Carter,democrat,497,1040
-11/2/1976,AK,Kusilvak,Ford,republican,511,1040
-11/2/1976,AK,Kusilvak,McCarthy,independent,0,1040
-11/2/1976,AK,Kusilvak,MacBride,libertarian,25,1040
+11/2/1976,AK,Wade_Hampton,Carter,democrat,497,1040
+11/2/1976,AK,Wade_Hampton,Ford,republican,511,1040
+11/2/1976,AK,Wade_Hampton,McCarthy,independent,0,1040
+11/2/1976,AK,Wade_Hampton,MacBride,libertarian,25,1040
 11/2/1976,AK,Lake_and_Peninsula,Carter,democrat,133,368
 11/2/1976,AK,Lake_and_Peninsula,Ford,republican,213,368
 11/2/1976,AK,Lake_and_Peninsula,McCarthy,independent,0,368
@@ -53522,30 +53475,26 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/2/1976,AK,Northwest_Arctic,Ford,republican,476,1225
 11/2/1976,AK,Northwest_Arctic,McCarthy,independent,0,1225
 11/2/1976,AK,Northwest_Arctic,MacBride,libertarian,35,1225
-11/2/1976,AK,Petersburg,Carter,democrat,334,1003
-11/2/1976,AK,Petersburg,Ford,republican,616,1003
-11/2/1976,AK,Petersburg,McCarthy,independent,0,1003
-11/2/1976,AK,Petersburg,MacBride,libertarian,53,1003
-11/2/1976,AK,Prince_of_Wales-Hyder,Carter,democrat,661,1439
-11/2/1976,AK,Prince_of_Wales-Hyder,Ford,republican,683,1439
-11/2/1976,AK,Prince_of_Wales-Hyder,McCarthy,independent,0,1439
-11/2/1976,AK,Prince_of_Wales-Hyder,MacBride,libertarian,93,1439
+11/2/1976,AK,Prince_of_Wales-Outer_Ketchikan,Carter,democrat,661,1439
+11/2/1976,AK,Prince_of_Wales-Outer_Ketchikan,Ford,republican,683,1439
+11/2/1976,AK,Prince_of_Wales-Outer_Ketchikan,McCarthy,independent,0,1439
+11/2/1976,AK,Prince_of_Wales-Outer_Ketchikan,MacBride,libertarian,93,1439
 11/2/1976,AK,Sitka,Carter,democrat,1005,2669
 11/2/1976,AK,Sitka,Ford,republican,1558,2669
 11/2/1976,AK,Sitka,McCarthy,independent,0,2669
 11/2/1976,AK,Sitka,MacBride,libertarian,97,2669
-11/2/1976,AK,Skagway,Carter,democrat,98,339
-11/2/1976,AK,Skagway,Ford,republican,230,339
-11/2/1976,AK,Skagway,McCarthy,independent,0,339
-11/2/1976,AK,Skagway,MacBride,libertarian,11,339
+11/2/1976,AK,Skagway-Hoonah-Angoon,Carter,democrat,461,1061
+11/2/1976,AK,Skagway-Hoonah-Angoon,Ford,republican,534,1061
+11/2/1976,AK,Skagway-Hoonah-Angoon,McCarthy,independent,0,1061
+11/2/1976,AK,Skagway-Hoonah-Angoon,MacBride,libertarian,64,1061
 11/2/1976,AK,Southeast_Fairbanks,Carter,democrat,561,1513
 11/2/1976,AK,Southeast_Fairbanks,Ford,republican,815,1513
 11/2/1976,AK,Southeast_Fairbanks,McCarthy,independent,0,1513
 11/2/1976,AK,Southeast_Fairbanks,MacBride,libertarian,137,1513
-11/2/1976,AK,Wrangell,Carter,democrat,327,848
-11/2/1976,AK,Wrangell,Ford,republican,461,848
-11/2/1976,AK,Wrangell,McCarthy,independent,0,848
-11/2/1976,AK,Wrangell,MacBride,libertarian,60,848
+11/2/1976,AK,Wrangell-Petersburg,Carter,democrat,661,1851
+11/2/1976,AK,Wrangell-Petersburg,Ford,republican,1077,1851
+11/2/1976,AK,Wrangell-Petersburg,McCarthy,independent,0,1851
+11/2/1976,AK,Wrangell-Petersburg,MacBride,libertarian,113,1851
 11/2/1976,AK,Yakutat,Carter,democrat,89,175
 11/2/1976,AK,Yakutat,Ford,republican,79,175
 11/2/1976,AK,Yakutat,McCarthy,independent,0,175
@@ -54443,10 +54392,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/2/1976,CO,Boulder,Ford,republican,42830,81253
 11/2/1976,CO,Boulder,McCarthy,independent,4252,81253
 11/2/1976,CO,Boulder,MacBride,libertarian,558,81253
-11/2/1976,CO,Broomfield,Carter,democrat,33284,81253
-11/2/1976,CO,Broomfield,Ford,republican,42830,81253
-11/2/1976,CO,Broomfield,McCarthy,independent,4252,81253
-11/2/1976,CO,Broomfield,MacBride,libertarian,558,81253
 11/2/1976,CO,Chaffee,Carter,democrat,2064,5162
 11/2/1976,CO,Chaffee,Ford,republican,2925,5162
 11/2/1976,CO,Chaffee,McCarthy,independent,118,5162
@@ -55631,10 +55576,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/2/1976,HI,Honolulu,Ford,republican,108041,222476
 11/2/1976,HI,Honolulu,McCarthy,independent,0,222476
 11/2/1976,HI,Honolulu,MacBride,libertarian,3046,222476
-11/2/1976,HI,Kalawao,Carter,democrat,11921,22538
-11/2/1976,HI,Kalawao,Ford,republican,10318,22538
-11/2/1976,HI,Kalawao,McCarthy,independent,0,22538
-11/2/1976,HI,Kalawao,MacBride,libertarian,299,22538
 11/2/1976,HI,Kauai,Carter,democrat,8105,14522
 11/2/1976,HI,Kauai,Ford,republican,6278,14522
 11/2/1976,HI,Kauai,McCarthy,independent,0,14522
@@ -63100,10 +63041,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/2/1976,SD,Moody,Ford,republican,1475,3428
 11/2/1976,SD,Moody,McCarthy,independent,0,3428
 11/2/1976,SD,Moody,MacBride,libertarian,8,3428
-11/2/1976,SD,Oglala_Lakota,Carter,democrat,756,1081
-11/2/1976,SD,Oglala_Lakota,Ford,republican,301,1081
-11/2/1976,SD,Oglala_Lakota,McCarthy,independent,0,1081
-11/2/1976,SD,Oglala_Lakota,MacBride,libertarian,17,1081
+11/2/1976,SD,Shannon,Carter,democrat,756,1081
+11/2/1976,SD,Shannon,Ford,republican,301,1081
+11/2/1976,SD,Shannon,McCarthy,independent,0,1081
+11/2/1976,SD,Shannon,MacBride,libertarian,17,1081
 11/2/1976,SD,Pennington,Carter,democrat,10058,23699
 11/2/1976,SD,Pennington,Ford,republican,13352,23699
 11/2/1976,SD,Pennington,McCarthy,independent,0,23699
@@ -64704,10 +64645,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/2/1976,VA,Alexandria,Ford,republican,16880,37910
 11/2/1976,VA,Alexandria,Other,other,1172,37910
 11/2/1976,VA,Alexandria,MacBride,libertarian,0,37910
-11/2/1976,VA,Alleghany,Carter,democrat,3455,6158
-11/2/1976,VA,Alleghany,Ford,republican,2526,6158
-11/2/1976,VA,Alleghany,McCarthy,independent,0,6158
-11/2/1976,VA,Alleghany,MacBride,libertarian,0,6158
+11/2/1976,VA,Alleghany,Carter,democrat,2462,4265
+11/2/1976,VA,Alleghany,Ford,republican,1756,4265
+11/2/1976,VA,Alleghany,McCarthy,independent,0,4265
+11/2/1976,VA,Alleghany,MacBride,libertarian,5,4265
 11/2/1976,VA,Amelia,Carter,democrat,1715,3458
 11/2/1976,VA,Amelia,Ford,republican,1634,3458
 11/2/1976,VA,Amelia,Other,other,109,3458
@@ -64732,10 +64673,14 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/2/1976,VA,Bath,Ford,republican,888,1932
 11/2/1976,VA,Bath,McCarthy,independent,0,1932
 11/2/1976,VA,Bath,MacBride,libertarian,0,1932
-11/2/1976,VA,Bedford,Carter,democrat,5888,11540
-11/2/1976,VA,Bedford,Ford,republican,5232,11540
-11/2/1976,VA,Bedford,Other,other,420,11540
-11/2/1976,VA,Bedford,MacBride,libertarian,0,11540
+11/2/1976,VA,Bedford,Carter,democrat,4766,9246
+11/2/1976,VA,Bedford,Ford,republican,4189,9246
+11/2/1976,VA,Bedford,Other,other,280,9246
+11/2/1976,VA,Bedford,MacBride,libertarian,11,9246
+11/2/1976,VA,Bedford_City,Carter,democrat,1122,2294
+11/2/1976,VA,Bedford_City,Ford,republican,1043,2294
+11/2/1976,VA,Bedford_City,Other,other,124,2294
+11/2/1976,VA,Bedford_City,MacBride,libertarian,5,2294
 11/2/1976,VA,Bland,Carter,democrat,961,2017
 11/2/1976,VA,Bland,Ford,republican,1047,2017
 11/2/1976,VA,Bland,McCarthy,independent,0,2017
@@ -64800,6 +64745,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/2/1976,VA,Clarke,Ford,republican,1440,2794
 11/2/1976,VA,Clarke,McCarthy,independent,0,2794
 11/2/1976,VA,Clarke,MacBride,libertarian,0,2794
+11/2/1976,VA,Clifton_Forge,Carter,democrat,993,1893
+11/2/1976,VA,Clifton_Forge,Ford,republican,770,1893
+11/2/1976,VA,Clifton_Forge,McCarthy,independent,0,1893
+11/2/1976,VA,Clifton_Forge,MacBride,libertarian,3,1893
 11/2/1976,VA,Colonial_Heights,Carter,democrat,2409,6934
 11/2/1976,VA,Colonial_Heights,Ford,republican,4291,6934
 11/2/1976,VA,Colonial_Heights,Other,other,234,6934
@@ -66081,10 +66030,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/4/1980,AK,Haines,Reagan,republican,472,708
 11/4/1980,AK,Haines,Anderson,independent,47,708
 11/4/1980,AK,Haines,Clark,libertarian,34,708
-11/4/1980,AK,Hoonah_Angoon,Carter,democrat,511,947
-11/4/1980,AK,Hoonah_Angoon,Reagan,republican,284,947
-11/4/1980,AK,Hoonah_Angoon,Anderson,independent,88,947
-11/4/1980,AK,Hoonah_Angoon,Clark,libertarian,54,947
 11/4/1980,AK,Juneau,Carter,democrat,3600,10278
 11/4/1980,AK,Juneau,Reagan,republican,4607,10278
 11/4/1980,AK,Juneau,Anderson,independent,1190,10278
@@ -66101,10 +66046,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/4/1980,AK,Kodiak_Island,Reagan,republican,1589,3339
 11/4/1980,AK,Kodiak_Island,Anderson,independent,281,3339
 11/4/1980,AK,Kodiak_Island,Clark,libertarian,426,3339
-11/4/1980,AK,Kusilvak,Carter,democrat,861,1374
-11/4/1980,AK,Kusilvak,Reagan,republican,361,1374
-11/4/1980,AK,Kusilvak,Anderson,independent,100,1374
-11/4/1980,AK,Kusilvak,Clark,libertarian,50,1374
+11/4/1980,AK,Wade_Hampton,Carter,democrat,861,1374
+11/4/1980,AK,Wade_Hampton,Reagan,republican,361,1374
+11/4/1980,AK,Wade_Hampton,Anderson,independent,100,1374
+11/4/1980,AK,Wade_Hampton,Clark,libertarian,50,1374
 11/4/1980,AK,Lake_and_Peninsula,Carter,democrat,134,425
 11/4/1980,AK,Lake_and_Peninsula,Reagan,republican,227,425
 11/4/1980,AK,Lake_and_Peninsula,Anderson,independent,34,425
@@ -66125,30 +66070,26 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/4/1980,AK,Northwest_Arctic,Reagan,republican,588,1480
 11/4/1980,AK,Northwest_Arctic,Anderson,independent,101,1480
 11/4/1980,AK,Northwest_Arctic,Clark,libertarian,60,1480
-11/4/1980,AK,Petersburg,Carter,democrat,399,1366
-11/4/1980,AK,Petersburg,Reagan,republican,728,1366
-11/4/1980,AK,Petersburg,Anderson,independent,166,1366
-11/4/1980,AK,Petersburg,Clark,libertarian,72,1366
-11/4/1980,AK,Prince_of_Wales-Hyder,Carter,democrat,597,1581
-11/4/1980,AK,Prince_of_Wales-Hyder,Reagan,republican,741,1581
-11/4/1980,AK,Prince_of_Wales-Hyder,Anderson,independent,145,1581
-11/4/1980,AK,Prince_of_Wales-Hyder,Clark,libertarian,81,1581
+11/4/1980,AK,Prince_of_Wales-Outer_Ketchikan,Carter,democrat,597,1581
+11/4/1980,AK,Prince_of_Wales-Outer_Ketchikan,Reagan,republican,741,1581
+11/4/1980,AK,Prince_of_Wales-Outer_Ketchikan,Anderson,independent,145,1581
+11/4/1980,AK,Prince_of_Wales-Outer_Ketchikan,Clark,libertarian,81,1581
 11/4/1980,AK,Sitka,Carter,democrat,1210,3506
 11/4/1980,AK,Sitka,Reagan,republican,1862,3506
 11/4/1980,AK,Sitka,Anderson,independent,289,3506
 11/4/1980,AK,Sitka,Clark,libertarian,136,3506
-11/4/1980,AK,Skagway,Carter,democrat,128,384
-11/4/1980,AK,Skagway,Reagan,republican,185,384
-11/4/1980,AK,Skagway,Anderson,independent,42,384
-11/4/1980,AK,Skagway,Clark,libertarian,29,384
+11/4/1980,AK,Skagway-Hoonah-Angoon,Carter,democrat,639,1331
+11/4/1980,AK,Skagway-Hoonah-Angoon,Reagan,republican,469,1331
+11/4/1980,AK,Skagway-Hoonah-Angoon,Anderson,independent,130,1331
+11/4/1980,AK,Skagway-Hoonah-Angoon,Clark,libertarian,83,1331
 11/4/1980,AK,Southeast_Fairbanks,Carter,democrat,380,1992
 11/4/1980,AK,Southeast_Fairbanks,Reagan,republican,1177,1992
 11/4/1980,AK,Southeast_Fairbanks,Anderson,independent,108,1992
 11/4/1980,AK,Southeast_Fairbanks,Clark,libertarian,327,1992
-11/4/1980,AK,Wrangell,Carter,democrat,296,1059
-11/4/1980,AK,Wrangell,Reagan,republican,629,1059
-11/4/1980,AK,Wrangell,Anderson,independent,72,1059
-11/4/1980,AK,Wrangell,Clark,libertarian,58,1059
+11/4/1980,AK,Wrangell-Petersburg,Carter,democrat,695,2425
+11/4/1980,AK,Wrangell-Petersburg,Reagan,republican,1357,2425
+11/4/1980,AK,Wrangell-Petersburg,Anderson,independent,238,2425
+11/4/1980,AK,Wrangell-Petersburg,Clark,libertarian,130,2425
 11/4/1980,AK,Yakutat,Carter,democrat,76,233
 11/4/1980,AK,Yakutat,Reagan,republican,116,233
 11/4/1980,AK,Yakutat,Anderson,independent,26,233
@@ -67053,10 +66994,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/4/1980,CO,Boulder,Reagan,republican,40698,87069
 11/4/1980,CO,Boulder,Anderson,independent,13712,87069
 11/4/1980,CO,Boulder,Clark,libertarian,2630,87069
-11/4/1980,CO,Broomfield,Carter,democrat,28422,87069
-11/4/1980,CO,Broomfield,Reagan,republican,40698,87069
-11/4/1980,CO,Broomfield,Anderson,independent,13712,87069
-11/4/1980,CO,Broomfield,Clark,libertarian,2630,87069
 11/4/1980,CO,Chaffee,Carter,democrat,1583,5478
 11/4/1980,CO,Chaffee,Reagan,republican,3327,5478
 11/4/1980,CO,Chaffee,Anderson,independent,432,5478
@@ -68241,10 +68178,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/4/1980,HI,Honolulu,Reagan,republican,99623,225054
 11/4/1980,HI,Honolulu,Anderson,independent,25341,225054
 11/4/1980,HI,Honolulu,Clark,libertarian,2259,225054
-11/4/1980,HI,Kalawao,Carter,democrat,12674,25751
-11/4/1980,HI,Kalawao,Reagan,republican,10359,25751
-11/4/1980,HI,Kalawao,Anderson,independent,2237,25751
-11/4/1980,HI,Kalawao,Clark,libertarian,338,25751
 11/4/1980,HI,Kauai,Carter,democrat,9081,16621
 11/4/1980,HI,Kauai,Reagan,republican,5883,16621
 11/4/1980,HI,Kauai,Anderson,independent,1352,16621
@@ -75699,10 +75632,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/4/1980,SD,Moody,Reagan,republican,1807,3480
 11/4/1980,SD,Moody,Anderson,independent,279,3480
 11/4/1980,SD,Moody,Clark,libertarian,29,3480
-11/4/1980,SD,Oglala_Lakota,Carter,democrat,1132,1687
-11/4/1980,SD,Oglala_Lakota,Reagan,republican,438,1687
-11/4/1980,SD,Oglala_Lakota,Anderson,independent,91,1687
-11/4/1980,SD,Oglala_Lakota,Clark,libertarian,20,1687
+11/4/1980,SD,Shannon,Carter,democrat,1132,1687
+11/4/1980,SD,Shannon,Reagan,republican,438,1687
+11/4/1980,SD,Shannon,Anderson,independent,91,1687
+11/4/1980,SD,Shannon,Clark,libertarian,20,1687
 11/4/1980,SD,Pennington,Carter,democrat,7121,28204
 11/4/1980,SD,Pennington,Reagan,republican,18991,28204
 11/4/1980,SD,Pennington,Anderson,independent,1650,28204
@@ -77288,10 +77221,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/4/1980,VA,Alexandria,Reagan,republican,17865,40388
 11/4/1980,VA,Alexandria,Anderson,independent,4546,40388
 11/4/1980,VA,Alexandria,Clark,libertarian,326,40388
-11/4/1980,VA,Alleghany,Carter,democrat,3423,6581
-11/4/1980,VA,Alleghany,Reagan,republican,2901,6581
-11/4/1980,VA,Alleghany,Anderson,independent,184,6581
-11/4/1980,VA,Alleghany,Clark,libertarian,32,6581
+11/4/1980,VA,Alleghany,Carter,democrat,2411,4756
+11/4/1980,VA,Alleghany,Reagan,republican,2185,4756
+11/4/1980,VA,Alleghany,Anderson,independent,116,4756
+11/4/1980,VA,Alleghany,Clark,libertarian,26,4756
 11/4/1980,VA,Amelia,Carter,democrat,1643,3701
 11/4/1980,VA,Amelia,Reagan,republican,1969,3701
 11/4/1980,VA,Amelia,Anderson,independent,52,3701
@@ -77316,10 +77249,14 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/4/1980,VA,Bath,Reagan,republican,921,2007
 11/4/1980,VA,Bath,Anderson,independent,70,2007
 11/4/1980,VA,Bath,Clark,libertarian,16,2007
-11/4/1980,VA,Bedford,Carter,democrat,5870,14263
-11/4/1980,VA,Bedford,Reagan,republican,7753,14263
-11/4/1980,VA,Bedford,Anderson,independent,411,14263
-11/4/1980,VA,Bedford,Clark,libertarian,86,14263
+11/4/1980,VA,Bedford,Carter,democrat,4721,11840
+11/4/1980,VA,Bedford,Reagan,republican,6608,11840
+11/4/1980,VA,Bedford,Anderson,independent,336,11840
+11/4/1980,VA,Bedford,Clark,libertarian,66,11840
+11/4/1980,VA,Bedford_City,Carter,democrat,1149,2423
+11/4/1980,VA,Bedford_City,Reagan,republican,1145,2423
+11/4/1980,VA,Bedford_City,Anderson,independent,75,2423
+11/4/1980,VA,Bedford_City,Clark,libertarian,20,2423
 11/4/1980,VA,Bland,Carter,democrat,1002,2345
 11/4/1980,VA,Bland,Reagan,republican,1278,2345
 11/4/1980,VA,Bland,Anderson,independent,35,2345
@@ -77384,6 +77321,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/4/1980,VA,Clarke,Reagan,republican,1876,3266
 11/4/1980,VA,Clarke,Anderson,independent,177,3266
 11/4/1980,VA,Clarke,Clark,libertarian,40,3266
+11/4/1980,VA,Clifton_Forge,Carter,democrat,1012,1825
+11/4/1980,VA,Clifton_Forge,Reagan,republican,716,1825
+11/4/1980,VA,Clifton_Forge,Anderson,independent,68,1825
+11/4/1980,VA,Clifton_Forge,Clark,libertarian,6,1825
 11/4/1980,VA,Colonial_Heights,Carter,democrat,1692,7063
 11/4/1980,VA,Colonial_Heights,Reagan,republican,5012,7063
 11/4/1980,VA,Colonial_Heights,Anderson,independent,219,7063
@@ -78665,10 +78606,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/6/1984,AK,Haines,Reagan,republican,711,1057
 11/6/1984,AK,Haines,Bergland,libertarian,34,1057
 11/6/1984,AK,Haines,Other,other,10,1057
-11/6/1984,AK,Hoonah_Angoon,Mondale,democrat,549,1107
-11/6/1984,AK,Hoonah_Angoon,Reagan,republican,519,1107
-11/6/1984,AK,Hoonah_Angoon,Bergland,libertarian,37,1107
-11/6/1984,AK,Hoonah_Angoon,Other,other,2,1107
 11/6/1984,AK,Juneau,Mondale,democrat,5293,12939
 11/6/1984,AK,Juneau,Reagan,republican,7322,12939
 11/6/1984,AK,Juneau,Bergland,libertarian,275,12939
@@ -78685,10 +78622,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/6/1984,AK,Kodiak_Island,Reagan,republican,3210,4615
 11/6/1984,AK,Kodiak_Island,Bergland,libertarian,157,4615
 11/6/1984,AK,Kodiak_Island,Other,other,9,4615
-11/6/1984,AK,Kusilvak,Mondale,democrat,851,1773
-11/6/1984,AK,Kusilvak,Reagan,republican,847,1773
-11/6/1984,AK,Kusilvak,Bergland,libertarian,70,1773
-11/6/1984,AK,Kusilvak,Other,other,5,1773
+11/6/1984,AK,Wade_Hampton,Mondale,democrat,851,1773
+11/6/1984,AK,Wade_Hampton,Reagan,republican,847,1773
+11/6/1984,AK,Wade_Hampton,Bergland,libertarian,70,1773
+11/6/1984,AK,Wade_Hampton,Other,other,5,1773
 11/6/1984,AK,Lake_and_Peninsula,Mondale,democrat,105,564
 11/6/1984,AK,Lake_and_Peninsula,Reagan,republican,446,564
 11/6/1984,AK,Lake_and_Peninsula,Bergland,libertarian,13,564
@@ -78709,30 +78646,26 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/6/1984,AK,Northwest_Arctic,Reagan,republican,1146,1947
 11/6/1984,AK,Northwest_Arctic,Bergland,libertarian,47,1947
 11/6/1984,AK,Northwest_Arctic,Other,other,10,1947
-11/6/1984,AK,Petersburg,Mondale,democrat,574,1506
-11/6/1984,AK,Petersburg,Reagan,republican,898,1506
-11/6/1984,AK,Petersburg,Bergland,libertarian,34,1506
-11/6/1984,AK,Petersburg,Other,other,0,1506
-11/6/1984,AK,Prince_of_Wales-Hyder,Mondale,democrat,954,2285
-11/6/1984,AK,Prince_of_Wales-Hyder,Reagan,republican,1253,2285
-11/6/1984,AK,Prince_of_Wales-Hyder,Bergland,libertarian,72,2285
-11/6/1984,AK,Prince_of_Wales-Hyder,Other,other,6,2285
+11/6/1984,AK,Prince_of_Wales-Outer_Ketchikan,Mondale,democrat,954,2285
+11/6/1984,AK,Prince_of_Wales-Outer_Ketchikan,Reagan,republican,1253,2285
+11/6/1984,AK,Prince_of_Wales-Outer_Ketchikan,Bergland,libertarian,72,2285
+11/6/1984,AK,Prince_of_Wales-Outer_Ketchikan,Other,other,6,2285
 11/6/1984,AK,Sitka,Mondale,democrat,1404,3896
 11/6/1984,AK,Sitka,Reagan,republican,2382,3896
 11/6/1984,AK,Sitka,Bergland,libertarian,84,3896
 11/6/1984,AK,Sitka,Other,other,26,3896
-11/6/1984,AK,Skagway,Mondale,democrat,133,363
-11/6/1984,AK,Skagway,Reagan,republican,215,363
-11/6/1984,AK,Skagway,Bergland,libertarian,13,363
-11/6/1984,AK,Skagway,Other,other,2,363
+11/6/1984,AK,Skagway-Hoonah-Angoon,Mondale,democrat,682,1470
+11/6/1984,AK,Skagway-Hoonah-Angoon,Reagan,republican,734,1470
+11/6/1984,AK,Skagway-Hoonah-Angoon,Bergland,libertarian,50,1470
+11/6/1984,AK,Skagway-Hoonah-Angoon,Other,other,4,1470
 11/6/1984,AK,Southeast_Fairbanks,Mondale,democrat,460,2435
 11/6/1984,AK,Southeast_Fairbanks,Reagan,republican,1880,2435
 11/6/1984,AK,Southeast_Fairbanks,Bergland,libertarian,77,2435
 11/6/1984,AK,Southeast_Fairbanks,Other,other,18,2435
-11/6/1984,AK,Wrangell,Mondale,democrat,307,1126
-11/6/1984,AK,Wrangell,Reagan,republican,795,1126
-11/6/1984,AK,Wrangell,Bergland,libertarian,23,1126
-11/6/1984,AK,Wrangell,Other,other,1,1126
+11/6/1984,AK,Wrangell-Petersburg,Mondale,democrat,881,2632
+11/6/1984,AK,Wrangell-Petersburg,Reagan,republican,1693,2632
+11/6/1984,AK,Wrangell-Petersburg,Bergland,libertarian,57,2632
+11/6/1984,AK,Wrangell-Petersburg,Other,other,1,2632
 11/6/1984,AK,Yakutat,Mondale,democrat,96,270
 11/6/1984,AK,Yakutat,Reagan,republican,160,270
 11/6/1984,AK,Yakutat,Bergland,libertarian,13,270
@@ -79629,10 +79562,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/6/1984,CO,Boulder,Reagan,republican,53535,97238
 11/6/1984,CO,Boulder,Bergland,libertarian,960,97238
 11/6/1984,CO,Boulder,Other,other,548,97238
-11/6/1984,CO,Broomfield,Mondale,democrat,42195,97238
-11/6/1984,CO,Broomfield,Reagan,republican,53535,97238
-11/6/1984,CO,Broomfield,Bergland,libertarian,960,97238
-11/6/1984,CO,Broomfield,Other,other,548,97238
 11/6/1984,CO,Chaffee,Mondale,democrat,1779,5550
 11/6/1984,CO,Chaffee,Reagan,republican,3680,5550
 11/6/1984,CO,Chaffee,Bergland,libertarian,56,5550
@@ -80817,10 +80746,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/6/1984,HI,Honolulu,Reagan,republican,140374,250304
 11/6/1984,HI,Honolulu,Bergland,libertarian,1466,250304
 11/6/1984,HI,Honolulu,Other,other,1004,250304
-11/6/1984,HI,Kalawao,Mondale,democrat,12966,28067
-11/6/1984,HI,Kalawao,Reagan,republican,14720,28067
-11/6/1984,HI,Kalawao,Bergland,libertarian,223,28067
-11/6/1984,HI,Kalawao,Other,other,158,28067
 11/6/1984,HI,Kauai,Mondale,democrat,8862,18332
 11/6/1984,HI,Kauai,Reagan,republican,9249,18332
 11/6/1984,HI,Kauai,Bergland,libertarian,112,18332
@@ -88273,10 +88198,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/6/1984,SD,Moody,Reagan,republican,1633,3228
 11/6/1984,SD,Moody,Bergland,libertarian,0,3228
 11/6/1984,SD,Moody,Other,other,9,3228
-11/6/1984,SD,Oglala_Lakota,Mondale,democrat,1489,1829
-11/6/1984,SD,Oglala_Lakota,Reagan,republican,324,1829
-11/6/1984,SD,Oglala_Lakota,Bergland,libertarian,0,1829
-11/6/1984,SD,Oglala_Lakota,Other,other,16,1829
+11/6/1984,SD,Shannon,Mondale,democrat,1489,1829
+11/6/1984,SD,Shannon,Reagan,republican,324,1829
+11/6/1984,SD,Shannon,Bergland,libertarian,0,1829
+11/6/1984,SD,Shannon,Other,other,16,1829
 11/6/1984,SD,Pennington,Mondale,democrat,8224,30389
 11/6/1984,SD,Pennington,Reagan,republican,21947,30389
 11/6/1984,SD,Pennington,Bergland,libertarian,0,30389
@@ -89861,10 +89786,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/6/1984,VA,Alexandria,Reagan,republican,21166,45253
 11/6/1984,VA,Alexandria,Bergland,libertarian,0,45253
 11/6/1984,VA,Alexandria,Other,other,535,45253
-11/6/1984,VA,Alleghany,Mondale,democrat,2828,6913
-11/6/1984,VA,Alleghany,Reagan,republican,4032,6913
-11/6/1984,VA,Alleghany,Bergland,libertarian,0,6913
-11/6/1984,VA,Alleghany,Other,other,53,6913
+11/6/1984,VA,Alleghany,Mondale,democrat,1932,5037
+11/6/1984,VA,Alleghany,Reagan,republican,3067,5037
+11/6/1984,VA,Alleghany,Bergland,libertarian,0,5037
+11/6/1984,VA,Alleghany,Other,other,38,5037
 11/6/1984,VA,Amelia,Mondale,democrat,1432,3804
 11/6/1984,VA,Amelia,Reagan,republican,2336,3804
 11/6/1984,VA,Amelia,Bergland,libertarian,0,3804
@@ -89889,10 +89814,14 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/6/1984,VA,Bath,Reagan,republican,1434,2175
 11/6/1984,VA,Bath,Bergland,libertarian,0,2175
 11/6/1984,VA,Bath,Other,other,14,2175
-11/6/1984,VA,Bedford,Mondale,democrat,5751,17790
-11/6/1984,VA,Bedford,Reagan,republican,11924,17790
-11/6/1984,VA,Bedford,Bergland,libertarian,0,17790
-11/6/1984,VA,Bedford,Other,other,115,17790
+11/6/1984,VA,Bedford,Mondale,democrat,4754,15217
+11/6/1984,VA,Bedford,Reagan,republican,10371,15217
+11/6/1984,VA,Bedford,Bergland,libertarian,0,15217
+11/6/1984,VA,Bedford,Other,other,92,15217
+11/6/1984,VA,Bedford_City,Mondale,democrat,997,2573
+11/6/1984,VA,Bedford_City,Reagan,republican,1553,2573
+11/6/1984,VA,Bedford_City,Bergland,libertarian,0,2573
+11/6/1984,VA,Bedford_City,Other,other,23,2573
 11/6/1984,VA,Bland,Mondale,democrat,867,2693
 11/6/1984,VA,Bland,Reagan,republican,1812,2693
 11/6/1984,VA,Bland,Bergland,libertarian,0,2693
@@ -89957,6 +89886,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/6/1984,VA,Clarke,Reagan,republican,2529,3763
 11/6/1984,VA,Clarke,Bergland,libertarian,0,3763
 11/6/1984,VA,Clarke,Other,other,19,3763
+11/6/1984,VA,Clifton_Forge,Mondale,democrat,896,1876
+11/6/1984,VA,Clifton_Forge,Reagan,republican,965,1876
+11/6/1984,VA,Clifton_Forge,Bergland,libertarian,0,1876
+11/6/1984,VA,Clifton_Forge,Other,other,15,1876
 11/6/1984,VA,Colonial_Heights,Mondale,democrat,1218,7630
 11/6/1984,VA,Colonial_Heights,Reagan,republican,6387,7630
 11/6/1984,VA,Colonial_Heights,Bergland,libertarian,0,7630
@@ -91221,9 +91154,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/8/1988,AK,Haines,Dukakis,democrat,344,910
 11/8/1988,AK,Haines,Bush,republican,563,910
 11/8/1988,AK,Haines,Paul,libertarian,18,910
-11/8/1988,AK,Hoonah_Angoon,Dukakis,democrat,528,1020
-11/8/1988,AK,Hoonah_Angoon,Bush,republican,428,1020
-11/8/1988,AK,Hoonah_Angoon,Paul,libertarian,32,1020
 11/8/1988,AK,Juneau,Dukakis,democrat,6538,12385
 11/8/1988,AK,Juneau,Bush,republican,5945,12385
 11/8/1988,AK,Juneau,Paul,libertarian,216,12385
@@ -91251,30 +91181,27 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/8/1988,AK,Northwest_Arctic,Dukakis,democrat,563,1673
 11/8/1988,AK,Northwest_Arctic,Bush,republican,943,1673
 11/8/1988,AK,Northwest_Arctic,Paul,libertarian,25,1673
-11/8/1988,AK,Petersburg,Dukakis,democrat,557,1316
-11/8/1988,AK,Petersburg,Bush,republican,678,1316
-11/8/1988,AK,Petersburg,Paul,libertarian,30,1316
-11/8/1988,AK,Prince_of_Wales-Hyder,Dukakis,democrat,919,2156
-11/8/1988,AK,Prince_of_Wales-Hyder,Bush,republican,1112,2156
-11/8/1988,AK,Prince_of_Wales-Hyder,Paul,libertarian,71,2156
+11/8/1988,AK,Prince_of_Wales-Outer_Ketchikan,Dukakis,democrat,919,2156
+11/8/1988,AK,Prince_of_Wales-Outer_Ketchikan,Bush,republican,1112,2156
+11/8/1988,AK,Prince_of_Wales-Outer_Ketchikan,Paul,libertarian,71,2156
 11/8/1988,AK,Sitka,Dukakis,democrat,1752,4066
 11/8/1988,AK,Sitka,Bush,republican,1992,4066
 11/8/1988,AK,Sitka,Paul,libertarian,77,4066
-11/8/1988,AK,Skagway,Dukakis,democrat,159,372
-11/8/1988,AK,Skagway,Bush,republican,205,372
-11/8/1988,AK,Skagway,Paul,libertarian,6,372
+11/8/1988,AK,Skagway-Hoonah-Angoon,Dukakis,democrat,687,1392
+11/8/1988,AK,Skagway-Hoonah-Angoon,Bush,republican,633,1392
+11/8/1988,AK,Skagway-Hoonah-Angoon,Paul,libertarian,38,1392
 11/8/1988,AK,Southeast_Fairbanks,Dukakis,democrat,595,2252
 11/8/1988,AK,Southeast_Fairbanks,Bush,republican,1525,2252
 11/8/1988,AK,Southeast_Fairbanks,Paul,libertarian,99,2252
 11/8/1988,AK,Valdez-Cordova,Dukakis,democrat,1164,3553
 11/8/1988,AK,Valdez-Cordova,Bush,republican,2245,3553
 11/8/1988,AK,Valdez-Cordova,Paul,libertarian,92,3553
-11/8/1988,AK,Kusilvak,Dukakis,democrat,673,1562
-11/8/1988,AK,Kusilvak,Bush,republican,822,1562
-11/8/1988,AK,Kusilvak,Paul,libertarian,16,1562
-11/8/1988,AK,Wrangell,Dukakis,democrat,378,1212
-11/8/1988,AK,Wrangell,Bush,republican,812,1212
-11/8/1988,AK,Wrangell,Paul,libertarian,18,1212
+11/8/1988,AK,Wade_Hampton,Dukakis,democrat,673,1562
+11/8/1988,AK,Wade_Hampton,Bush,republican,822,1562
+11/8/1988,AK,Wade_Hampton,Paul,libertarian,16,1562
+11/8/1988,AK,Wrangell-Petersburg,Dukakis,democrat,935,2528
+11/8/1988,AK,Wrangell-Petersburg,Bush,republican,1490,2528
+11/8/1988,AK,Wrangell-Petersburg,Paul,libertarian,48,2528
 11/8/1988,AK,Yakutat,Dukakis,democrat,80,252
 11/8/1988,AK,Yakutat,Bush,republican,159,252
 11/8/1988,AK,Yakutat,Paul,libertarian,8,252
@@ -97434,9 +97361,9 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/8/1988,SD,Moody,Bush,republican,1161,2889
 11/8/1988,SD,Moody,Dukakis,democrat,1715,2889
 11/8/1988,SD,Moody,Other,other,13,2889
-11/8/1988,SD,Oglala_Lakota,Bush,republican,256,1479
-11/8/1988,SD,Oglala_Lakota,Dukakis,democrat,1206,1479
-11/8/1988,SD,Oglala_Lakota,Other,other,17,1479
+11/8/1988,SD,Shannon,Bush,republican,256,1479
+11/8/1988,SD,Shannon,Dukakis,democrat,1206,1479
+11/8/1988,SD,Shannon,Other,other,17,1479
 11/8/1988,SD,Pennington,Bush,republican,19510,31757
 11/8/1988,SD,Pennington,Dukakis,democrat,12068,31757
 11/8/1988,SD,Pennington,Other,other,179,31757
@@ -100896,9 +100823,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/3/1992,AK,Haines,Clinton,democrat,523,1408
 11/3/1992,AK,Haines,Bush,republican,463,1408
 11/3/1992,AK,Haines,Perot,reform,402,1408
-11/3/1992,AK,Hoonah_Angoon,Clinton,democrat,404,910
-11/3/1992,AK,Hoonah_Angoon,Bush,republican,260,910
-11/3/1992,AK,Hoonah_Angoon,Perot,reform,232,910
 11/3/1992,AK,Juneau,Clinton,democrat,6752,15232
 11/3/1992,AK,Juneau,Bush,republican,5341,15232
 11/3/1992,AK,Juneau,Perot,reform,2985,15232
@@ -100911,9 +100835,9 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/3/1992,AK,Kodiak_Island,Clinton,democrat,1475,5543
 11/3/1992,AK,Kodiak_Island,Bush,republican,2293,5543
 11/3/1992,AK,Kodiak_Island,Perot,reform,1721,5543
-11/3/1992,AK,Kusilvak,Clinton,democrat,701,1763
-11/3/1992,AK,Kusilvak,Bush,republican,759,1763
-11/3/1992,AK,Kusilvak,Perot,reform,275,1763
+11/3/1992,AK,Wade_Hampton,Clinton,democrat,701,1763
+11/3/1992,AK,Wade_Hampton,Bush,republican,759,1763
+11/3/1992,AK,Wade_Hampton,Perot,reform,275,1763
 11/3/1992,AK,Lake_and_Peninsula,Clinton,democrat,154,611
 11/3/1992,AK,Lake_and_Peninsula,Bush,republican,291,611
 11/3/1992,AK,Lake_and_Peninsula,Perot,reform,160,611
@@ -100929,27 +100853,24 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/3/1992,AK,Northwest_Arctic,Clinton,democrat,828,2163
 11/3/1992,AK,Northwest_Arctic,Bush,republican,869,2163
 11/3/1992,AK,Northwest_Arctic,Perot,reform,417,2163
-11/3/1992,AK,Petersburg,Clinton,democrat,579,1752
-11/3/1992,AK,Petersburg,Bush,republican,585,1752
-11/3/1992,AK,Petersburg,Perot,reform,575,1752
-11/3/1992,AK,Prince_of_Wales-Hyder,Clinton,democrat,910,2653
-11/3/1992,AK,Prince_of_Wales-Hyder,Bush,republican,839,2653
-11/3/1992,AK,Prince_of_Wales-Hyder,Perot,reform,848,2653
+11/3/1992,AK,Prince_of_Wales-Outer_Ketchikan,Clinton,democrat,910,2653
+11/3/1992,AK,Prince_of_Wales-Outer_Ketchikan,Bush,republican,839,2653
+11/3/1992,AK,Prince_of_Wales-Outer_Ketchikan,Perot,reform,848,2653
 11/3/1992,AK,Sitka,Clinton,democrat,1698,4585
 11/3/1992,AK,Sitka,Bush,republican,1741,4585
 11/3/1992,AK,Sitka,Perot,reform,1093,4585
-11/3/1992,AK,Skagway,Clinton,democrat,155,476
-11/3/1992,AK,Skagway,Bush,republican,178,476
-11/3/1992,AK,Skagway,Perot,reform,139,476
+11/3/1992,AK,Skagway-Hoonah-Angoon,Clinton,democrat,559,1386
+11/3/1992,AK,Skagway-Hoonah-Angoon,Bush,republican,438,1386
+11/3/1992,AK,Skagway-Hoonah-Angoon,Perot,reform,371,1386
 11/3/1992,AK,Southeast_Fairbanks,Clinton,democrat,527,2637
 11/3/1992,AK,Southeast_Fairbanks,Bush,republican,1157,2637
 11/3/1992,AK,Southeast_Fairbanks,Perot,reform,884,2637
 11/3/1992,AK,Valdez-Cordova,Bush,republican,1998,4945
 11/3/1992,AK,Valdez-Cordova,Perot,reform,1579,4945
 11/3/1992,AK,Valdez-Cordova,Clinton,democrat,1366,4945
-11/3/1992,AK,Wrangell,Clinton,democrat,289,1364
-11/3/1992,AK,Wrangell,Bush,republican,590,1364
-11/3/1992,AK,Wrangell,Perot,reform,469,1364
+11/3/1992,AK,Wrangell-Petersburg,Clinton,democrat,868,3116
+11/3/1992,AK,Wrangell-Petersburg,Bush,republican,1175,3116
+11/3/1992,AK,Wrangell-Petersburg,Perot,reform,1044,3116
 11/3/1992,AK,Yakutat,Clinton,democrat,108,322
 11/3/1992,AK,Yakutat,Bush,republican,130,322
 11/3/1992,AK,Yakutat,Perot,reform,81,322
@@ -108511,9 +108432,9 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/3/1992,SD,Sanborn,Bush,republican,595,1610
 11/3/1992,SD,Sanborn,Clinton,democrat,632,1610
 11/3/1992,SD,Sanborn,Perot,reform,376,1610
-11/3/1992,SD,Oglala_Lakota,Bush,republican,225,1651
-11/3/1992,SD,Oglala_Lakota,Clinton,democrat,1267,1651
-11/3/1992,SD,Oglala_Lakota,Perot,reform,137,1651
+11/3/1992,SD,Shannon,Bush,republican,225,1651
+11/3/1992,SD,Shannon,Clinton,democrat,1267,1651
+11/3/1992,SD,Shannon,Perot,reform,137,1651
 11/3/1992,SD,Spink,Bush,republican,1527,4112
 11/3/1992,SD,Spink,Clinton,democrat,1732,4112
 11/3/1992,SD,Spink,Perot,reform,839,4112
@@ -109962,9 +109883,12 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/3/1992,VA,Bath,Bush,republican,1075,2330
 11/3/1992,VA,Bath,Clinton,democrat,855,2330
 11/3/1992,VA,Bath,Perot,reform,354,2330
-11/3/1992,VA,Bedford,Bush,republican,11587,23165
-11/3/1992,VA,Bedford,Clinton,democrat,7755,23165
-11/3/1992,VA,Bedford,Perot,reform,3564,23165
+11/3/1992,VA,Bedford,Bush,republican,10496,20756
+11/3/1992,VA,Bedford,Clinton,democrat,6792,20756
+11/3/1992,VA,Bedford,Perot,reform,3251,20756
+11/3/1992,VA,Bedford_City,Bush,republican,1091,2409
+11/3/1992,VA,Bedford_City,Clinton,democrat,963,2409
+11/3/1992,VA,Bedford_City,Perot,reform,313,2409
 11/3/1992,VA,Bland,Bush,republican,1368,2832
 11/3/1992,VA,Bland,Clinton,democrat,1001,2832
 11/3/1992,VA,Bland,Perot,reform,408,2832
@@ -110013,6 +109937,9 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/3/1992,VA,Clarke,Bush,republican,1994,4648
 11/3/1992,VA,Clarke,Clinton,democrat,1811,4648
 11/3/1992,VA,Clarke,Perot,reform,802,4648
+11/3/1992,VA,Clifton_Forge,Bush,republican,632,1873
+11/3/1992,VA,Clifton_Forge,Clinton,democrat,958,1873
+11/3/1992,VA,Clifton_Forge,Perot,reform,251,1873
 11/3/1992,VA,Colonial_Heights,Bush,republican,5298,8400
 11/3/1992,VA,Colonial_Heights,Clinton,democrat,1721,8400
 11/3/1992,VA,Colonial_Heights,Perot,reform,1312,8400
@@ -111106,11 +111033,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/5/1996,AK,Haines,Perot,reform,167,1507
 11/5/1996,AK,Haines,Nader,green,121,1507
 11/5/1996,AK,Haines,Others,other,27,1507
-11/5/1996,AK,Hoonah_Angoon,Clinton,democrat,431,935
-11/5/1996,AK,Hoonah_Angoon,Dole,republican,290,935
-11/5/1996,AK,Hoonah_Angoon,Perot,reform,127,935
-11/5/1996,AK,Hoonah_Angoon,Nader,green,68,935
-11/5/1996,AK,Hoonah_Angoon,Others,other,19,935
 11/5/1996,AK,Juneau,Clinton,democrat,6761,15278
 11/5/1996,AK,Juneau,Dole,republican,6007,15278
 11/5/1996,AK,Juneau,Perot,reform,1348,15278
@@ -111131,11 +111053,11 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/5/1996,AK,Kodiak_Island,Perot,reform,557,5100
 11/5/1996,AK,Kodiak_Island,Nader,green,142,5100
 11/5/1996,AK,Kodiak_Island,Others,other,118,5100
-11/5/1996,AK,Kusilvak,Clinton,democrat,998,1818
-11/5/1996,AK,Kusilvak,Dole,republican,575,1818
-11/5/1996,AK,Kusilvak,Perot,reform,153,1818
-11/5/1996,AK,Kusilvak,Nader,green,31,1818
-11/5/1996,AK,Kusilvak,Others,other,61,1818
+11/5/1996,AK,Wade_Hampton,Clinton,democrat,998,1818
+11/5/1996,AK,Wade_Hampton,Dole,republican,575,1818
+11/5/1996,AK,Wade_Hampton,Perot,reform,153,1818
+11/5/1996,AK,Wade_Hampton,Nader,green,31,1818
+11/5/1996,AK,Wade_Hampton,Others,other,61,1818
 11/5/1996,AK,Lake_and_Peninsula,Clinton,democrat,239,538
 11/5/1996,AK,Lake_and_Peninsula,Dole,republican,235,538
 11/5/1996,AK,Lake_and_Peninsula,Perot,reform,52,538
@@ -111161,26 +111083,21 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/5/1996,AK,Northwest_Arctic,Perot,reform,196,2077
 11/5/1996,AK,Northwest_Arctic,Nader,green,26,2077
 11/5/1996,AK,Northwest_Arctic,Others,other,40,2077
-11/5/1996,AK,Petersburg,Clinton,democrat,584,1624
-11/5/1996,AK,Petersburg,Dole,republican,727,1624
-11/5/1996,AK,Petersburg,Perot,reform,196,1624
-11/5/1996,AK,Petersburg,Nader,green,94,1624
-11/5/1996,AK,Petersburg,Others,other,23,1624
-11/5/1996,AK,Prince_of_Wales-Hyder,Clinton,democrat,892,2773
-11/5/1996,AK,Prince_of_Wales-Hyder,Dole,republican,1335,2773
-11/5/1996,AK,Prince_of_Wales-Hyder,Perot,reform,434,2773
-11/5/1996,AK,Prince_of_Wales-Hyder,Nader,green,73,2773
-11/5/1996,AK,Prince_of_Wales-Hyder,Others,other,39,2773
+11/5/1996,AK,Prince_of_Wales-Outer_Ketchikan,Clinton,democrat,892,2773
+11/5/1996,AK,Prince_of_Wales-Outer_Ketchikan,Dole,republican,1335,2773
+11/5/1996,AK,Prince_of_Wales-Outer_Ketchikan,Perot,reform,434,2773
+11/5/1996,AK,Prince_of_Wales-Outer_Ketchikan,Nader,green,73,2773
+11/5/1996,AK,Prince_of_Wales-Outer_Ketchikan,Others,other,39,2773
 11/5/1996,AK,Sitka,Clinton,democrat,1730,4331
 11/5/1996,AK,Sitka,Dole,republican,1822,4331
 11/5/1996,AK,Sitka,Perot,reform,499,4331
 11/5/1996,AK,Sitka,Nader,green,192,4331
 11/5/1996,AK,Sitka,Others,other,88,4331
-11/5/1996,AK,Skagway,Clinton,democrat,178,447
-11/5/1996,AK,Skagway,Dole,republican,162,447
-11/5/1996,AK,Skagway,Perot,reform,69,447
-11/5/1996,AK,Skagway,Nader,green,22,447
-11/5/1996,AK,Skagway,Others,other,16,447
+11/5/1996,AK,Skagway-Hoonah-Angoon,Clinton,democrat,609,1382
+11/5/1996,AK,Skagway-Hoonah-Angoon,Dole,republican,452,1382
+11/5/1996,AK,Skagway-Hoonah-Angoon,Perot,reform,196,1382
+11/5/1996,AK,Skagway-Hoonah-Angoon,Nader,green,90,1382
+11/5/1996,AK,Skagway-Hoonah-Angoon,Others,other,
 11/5/1996,AK,Southeast_Fairbanks,Clinton,democrat,571,2513
 11/5/1996,AK,Southeast_Fairbanks,Dole,republican,1545,2513
 11/5/1996,AK,Southeast_Fairbanks,Perot,reform,278,2513
@@ -111189,11 +111106,11 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/5/1996,AK,Valdez-Cordova,Dole,republican,2498,4943
 11/5/1996,AK,Valdez-Cordova,Perot,reform,581,4943
 11/5/1996,AK,Valdez-Cordova,Clinton,democrat,1864,4943
-11/5/1996,AK,Wrangell,Clinton,democrat,249,1220
-11/5/1996,AK,Wrangell,Dole,republican,698,1220
-11/5/1996,AK,Wrangell,Perot,reform,217,1220
-11/5/1996,AK,Wrangell,Nader,green,36,1220
-11/5/1996,AK,Wrangell,Others,other,20,1220
+11/5/1996,AK,Wrangell-Petersburg,Clinton,democrat,833,2844
+11/5/1996,AK,Wrangell-Petersburg,Dole,republican,1425,2844
+11/5/1996,AK,Wrangell-Petersburg,Perot,reform,413,2844
+11/5/1996,AK,Wrangell-Petersburg,Nader,green,130,2844
+11/5/1996,AK,Wrangell-Petersburg,Others,other,43,2844
 11/5/1996,AK,Yakutat,Clinton,democrat,148,320
 11/5/1996,AK,Yakutat,Dole,republican,120,320
 11/5/1996,AK,Yakutat,Perot,reform,44,320
@@ -118703,9 +118620,9 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/5/1996,SD,Sanborn,Dole,republican,630,1438
 11/5/1996,SD,Sanborn,Clinton,democrat,647,1438
 11/5/1996,SD,Sanborn,Perot,reform,151,1438
-11/5/1996,SD,Oglala_Lakota,Dole,republican,253,2284
-11/5/1996,SD,Oglala_Lakota,Clinton,democrat,1926,2284
-11/5/1996,SD,Oglala_Lakota,Perot,reform,87,2284
+11/5/1996,SD,Shannon,Dole,republican,253,2284
+11/5/1996,SD,Shannon,Clinton,democrat,1926,2284
+11/5/1996,SD,Shannon,Perot,reform,87,2284
 11/5/1996,SD,Spink,Dole,republican,1651,3669
 11/5/1996,SD,Spink,Clinton,democrat,1636,3669
 11/5/1996,SD,Spink,Perot,reform,360,3669
@@ -120154,9 +120071,12 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/5/1996,VA,Bath,Dole,republican,847,2051
 11/5/1996,VA,Bath,Clinton,democrat,922,2051
 11/5/1996,VA,Bath,Perot,reform,247,2051
-11/5/1996,VA,Bedford,Dole,republican,12945,24420
-11/5/1996,VA,Bedford,Clinton,democrat,8776,24420
-11/5/1996,VA,Bedford,Perot,reform,2188,24420
+11/5/1996,VA,Bedford,Dole,republican,11955,22109
+11/5/1996,VA,Bedford,Clinton,democrat,7786,22109
+11/5/1996,VA,Bedford,Perot,reform,1976,22109
+11/5/1996,VA,Bedford_City,Dole,republican,990,2311
+11/5/1996,VA,Bedford_City,Clinton,democrat,1065,2311
+11/5/1996,VA,Bedford_City,Perot,reform,212,2311
 11/5/1996,VA,Bland,Dole,republican,1167,2537
 11/5/1996,VA,Bland,Clinton,democrat,939,2537
 11/5/1996,VA,Bland,Perot,reform,385,2537
@@ -121245,9 +121165,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/7/2000,AK,Haines,Bush,republican,741.4789548,1340.533375
 11/7/2000,AK,Haines,Nader,green,224.7896916,1340.533375
 11/7/2000,AK,Haines,Gore,democrat,339.5513311,1340.533375
-11/7/2000,AK,Hoonah_Angoon,Bush,republican,593.7316851,1344.599705
-11/7/2000,AK,Hoonah_Angoon,Nader,green,173.3274264,1344.599705
-11/7/2000,AK,Hoonah_Angoon,Gore,democrat,538.7583565,1344.599705
 11/7/2000,AK,Juneau,Bush,republican,7262,16048
 11/7/2000,AK,Juneau,Nader,green,1929,16048
 11/7/2000,AK,Juneau,Gore,democrat,6408,16048
@@ -121275,30 +121192,27 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/7/2000,AK,Northwest_Arctic,Bush,republican,1081.710521,2124.356688
 11/7/2000,AK,Northwest_Arctic,Nader,green,111.5213704,2124.356688
 11/7/2000,AK,Northwest_Arctic,Gore,democrat,818.6530999,2124.356688
-11/7/2000,AK,Petersburg,Bush,republican,1125.273229,1758.357181
-11/7/2000,AK,Petersburg,Nader,green,186.3004927,1758.357181
-11/7/2000,AK,Petersburg,Gore,democrat,402.3276432,1758.357181
-11/7/2000,AK,Prince_of_Wales-Hyder,Bush,republican,1786.360972,2903.359444
-11/7/2000,AK,Prince_of_Wales-Hyder,Nader,green,228.3681952,2903.359444
-11/7/2000,AK,Prince_of_Wales-Hyder,Gore,democrat,778.4029943,2903.359444
+11/7/2000,AK,Prince_of_Wales-Outer_Ketchikan,Bush,republican,1786.360972,2903.359444
+11/7/2000,AK,Prince_of_Wales-Outer_Ketchikan,Nader,green,228.3681952,2903.359444
+11/7/2000,AK,Prince_of_Wales-Outer_Ketchikan,Gore,democrat,778.4029943,2903.359444
 11/7/2000,AK,Sitka,Bush,republican,2068.545815,4287.808029
 11/7/2000,AK,Sitka,Nader,green,588.8048753,4287.808029
 11/7/2000,AK,Sitka,Gore,democrat,1484.608861,4287.808029
-11/7/2000,AK,Skagway,Bush,republican,246.2094375,494.7367867
-11/7/2000,AK,Skagway,Nader,green,78.61763173,494.7367867
-11/7/2000,AK,Skagway,Gore,democrat,156.0499557,494.7367867
+11/7/2000,AK,Skagway-Hoonah-Angoon,Bush,republican,839.9411226,1839.3364917
+11/7/2000,AK,Skagway-Hoonah-Angoon,Nader,green,251.94505813,1839.3364917
+11/7/2000,AK,Skagway-Hoonah-Angoon,Gore,democrat,694.8083122,1839.3364917
 11/7/2000,AK,Southeast_Fairbanks,Bush,republican,2126.435402,2887.059791
 11/7/2000,AK,Southeast_Fairbanks,Nader,green,154.1785149,2887.059791
 11/7/2000,AK,Southeast_Fairbanks,Gore,democrat,470.9678672,2887.059791
 11/7/2000,AK,Valdez-Cordova,Bush,republican,3208.785965,5069.607265
 11/7/2000,AK,Valdez-Cordova,Nader,green,534.696103,5069.607265
 11/7/2000,AK,Valdez-Cordova,Gore,democrat,1087.813214,5069.607265
-11/7/2000,AK,Kusilvak,Bush,republican,960.1205142,1964.38222
-11/7/2000,AK,Kusilvak,Nader,green,72.85848235,1964.38222
-11/7/2000,AK,Kusilvak,Gore,democrat,831.8322289,1964.38222
-11/7/2000,AK,Wrangell,Bush,republican,1041.180957,1341.83479
-11/7/2000,AK,Wrangell,Nader,green,70.89463202,1341.83479
-11/7/2000,AK,Wrangell,Gore,democrat,194.0634955,1341.83479
+11/7/2000,AK,Wade_Hampton,Bush,republican,960.1205142,1964.38222
+11/7/2000,AK,Wade_Hampton,Nader,green,72.85848235,1964.38222
+11/7/2000,AK,Wade_Hampton,Gore,democrat,831.8322289,1964.38222
+11/7/2000,AK,Wrangell-Petersburg,Bush,republican,2166.454186,3100.191971
+11/7/2000,AK,Wrangell-Petersburg,Nader,green,257.19512472,3100.191971
+11/7/2000,AK,Wrangell-Petersburg,Gore,democrat,596.3911387,3100.191971
 11/7/2000,AK,Yakutat,Bush,republican,177.2189505,353.7706886
 11/7/2000,AK,Yakutat,Nader,green,45.89705503,353.7706886
 11/7/2000,AK,Yakutat,Gore,democrat,118.2373625,353.7706886
@@ -130853,10 +130767,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/7/2000,SD,Sanborn,Bush,republican,767,1268
 11/7/2000,SD,Sanborn,Nader,green,NA,1268
 11/7/2000,SD,Sanborn,Other,other,33,1268
-11/7/2000,SD,Oglala_Lakota,Gore,democrat,1667,1953
-11/7/2000,SD,Oglala_Lakota,Bush,republican,252,1953
-11/7/2000,SD,Oglala_Lakota,Nader,green,NA,1953
-11/7/2000,SD,Oglala_Lakota,Other,other,34,1953
+11/7/2000,SD,Shannon,Gore,democrat,1667,1953
+11/7/2000,SD,Shannon,Bush,republican,252,1953
+11/7/2000,SD,Shannon,Nader,green,NA,1953
+11/7/2000,SD,Shannon,Other,other,34,1953
 11/7/2000,SD,Spink,Gore,democrat,1274,3284
 11/7/2000,SD,Spink,Bush,republican,1957,3284
 11/7/2000,SD,Spink,Nader,green,NA,3284
@@ -132501,10 +132415,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/7/2000,VA,Bath,Bush,republican,1311,2210
 11/7/2000,VA,Bath,Nader,green,35,2210
 11/7/2000,VA,Bath,Other,other,42,2210
-11/7/2000,VA,Bedford,Gore,democrat,9238,28590
-11/7/2000,VA,Bedford,Bush,republican,18493,28590
-11/7/2000,VA,Bedford,Nader,green,414,28590
-11/7/2000,VA,Bedford,Other,other,445,28590
+11/7/2000,VA,Bedford,Gore,democrat,8160,26149
+11/7/2000,VA,Bedford,Bush,republican,17224,26149
+11/7/2000,VA,Bedford,Nader,green,376,26149
+11/7/2000,VA,Bedford,Other,other,389,26149
 11/7/2000,VA,Bland,Gore,democrat,851,2688
 11/7/2000,VA,Bland,Bush,republican,1759,2688
 11/7/2000,VA,Bland,Nader,green,42,2688
@@ -132849,6 +132763,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/7/2000,VA,Alexandria,Bush,republican,19043,55199
 11/7/2000,VA,Alexandria,Nader,green,2094,55199
 11/7/2000,VA,Alexandria,Other,other,429,55199
+11/7/2000,VA,Bedford_City,Gore,democrat,1078,2441
+11/7/2000,VA,Bedford_City,Bush,republican,1269,2441
+11/7/2000,VA,Bedford_City,Nader,green,38,2441
+11/7/2000,VA,Bedford_City,Other,other,56,2441
 11/7/2000,VA,Bristol,Gore,democrat,2646,6279
 11/7/2000,VA,Bristol,Bush,republican,3495,6279
 11/7/2000,VA,Bristol,Nader,green,89,6279
@@ -132865,6 +132783,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/7/2000,VA,Chesapeake,Bush,republican,39684,74585
 11/7/2000,VA,Chesapeake,Nader,green,732,74585
 11/7/2000,VA,Chesapeake,Other,other,591,74585
+11/7/2000,VA,Clifton_Forge,Gore,democrat,868,1532
+11/7/2000,VA,Clifton_Forge,Bush,republican,613,1532
+11/7/2000,VA,Clifton_Forge,Nader,green,25,1532
+11/7/2000,VA,Clifton_Forge,Other,other,26,1532
 11/7/2000,VA,Colonial_Heights,Gore,democrat,2100,7782
 11/7/2000,VA,Colonial_Heights,Bush,republican,5519,7782
 11/7/2000,VA,Colonial_Heights,Nader,green,123,7782
@@ -133767,24 +133689,20 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/7/2000,NA,Federal_Precinct,Other,other,NA,0
 11/2/2004,AK,Ketchikan_Gateway,Bush,republican,3171,4696
 11/2/2004,AK,Ketchikan_Gateway,Kerry,democrat,1343,4696
-11/2/2004,AK,Prince_of_Wales-Hyder,Bush,republican,1182,1954
-11/2/2004,AK,Prince_of_Wales-Hyder,Kerry,democrat,678,1954
+11/2/2004,AK,Prince_of_Wales-Outer_Ketchikan,Bush,republican,1182,1954
+11/2/2004,AK,Prince_of_Wales-Outer_Ketchikan,Kerry,democrat,678,1954
 11/2/2004,AK,Sitka,Bush,republican,1728,3627
 11/2/2004,AK,Sitka,Kerry,democrat,1739,3627
-11/2/2004,AK,Petersburg,Bush,republican,753,1263
-11/2/2004,AK,Petersburg,Kerry,democrat,452,1263
-11/2/2004,AK,Wrangell,Bush,republican,693,890
-11/2/2004,AK,Wrangell,Kerry,democrat,164,890
-11/2/2004,AK,Hoonah_Angoon,Bush,republican,463,1011
-11/2/2004,AK,Hoonah_Angoon,Kerry,democrat,494,1011
+11/2/2004,AK,Wrangell-Petersburg,Bush,republican,1446,2153
+11/2/2004,AK,Wrangell-Petersburg,Kerry,democrat,616,2153
+11/2/2004,AK,Skagway-Hoonah-Angoon,Bush,republican,628,1412
+11/2/2004,AK,Skagway-Hoonah-Angoon,Kerry,democrat,701,1412
 11/2/2004,AK,Juneau,Bush,republican,5521,11685
 11/2/2004,AK,Juneau,Kerry,democrat,5782,11685
 11/2/2004,AK,Valdez-Cordova,Bush,republican,2338,3644
 11/2/2004,AK,Valdez-Cordova,Kerry,democrat,1152,3644
 11/2/2004,AK,Haines,Bush,republican,561,1026
 11/2/2004,AK,Haines,Kerry,democrat,420,1026
-11/2/2004,AK,Skagway,Bush,republican,165,401
-11/2/2004,AK,Skagway,Kerry,democrat,207,401
 11/2/2004,AK,Yakutat,Bush,republican,132,245
 11/2/2004,AK,Yakutat,Kerry,democrat,105,245
 11/2/2004,AK,Yukon-Koyukuk,Bush,republican,1988,3346
@@ -133793,8 +133711,8 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/2/2004,AK,Bethel,Kerry,democrat,1831,3948
 11/2/2004,AK,Southeast_Fairbanks,Bush,republican,1668,2166
 11/2/2004,AK,Southeast_Fairbanks,Kerry,democrat,414,2166
-11/2/2004,AK,Kusilvak,Bush,republican,841,1697
-11/2/2004,AK,Kusilvak,Kerry,democrat,753,1697
+11/2/2004,AK,Wade_Hampton,Bush,republican,841,1697
+11/2/2004,AK,Wade_Hampton,Kerry,democrat,753,1697
 11/2/2004,AK,Kenai_Peninsula,Bush,republican,10473,15757
 11/2/2004,AK,Kenai_Peninsula,Kerry,democrat,4643,15757
 11/2/2004,AK,Fairbanks_North_Star,Bush,republican,20283,31472
@@ -140987,9 +140905,9 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/2/2004,SD,Sanborn,Kerry,democrat,581,1426
 11/2/2004,SD,Sanborn,Bush,republican,817,1426
 11/2/2004,SD,Sanborn,Other,other,28,1426
-11/2/2004,SD,Oglala_Lakota,Kerry,democrat,3566,4214
-11/2/2004,SD,Oglala_Lakota,Bush,republican,526,4214
-11/2/2004,SD,Oglala_Lakota,Other,other,122,4214
+11/2/2004,SD,Shannon,Kerry,democrat,3566,4214
+11/2/2004,SD,Shannon,Bush,republican,526,4214
+11/2/2004,SD,Shannon,Other,other,122,4214
 11/2/2004,SD,Spink,Kerry,democrat,1478,3774
 11/2/2004,SD,Spink,Bush,republican,2259,3774
 11/2/2004,SD,Spink,Other,other,37,3774
@@ -142223,9 +142141,9 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/2/2004,VA,Bath,Kerry,democrat,828,2282
 11/2/2004,VA,Bath,Bush,republican,1432,2282
 11/2/2004,VA,Bath,Other,other,22,2282
-11/2/2004,VA,Bedford,Kerry,democrat,10144,33946
-11/2/2004,VA,Bedford,Bush,republican,23397,33946
-11/2/2004,VA,Bedford,Other,other,405,33946
+11/2/2004,VA,Bedford,Kerry,democrat,9102,31404
+11/2/2004,VA,Bedford,Bush,republican,21925,31404
+11/2/2004,VA,Bedford,Other,other,377,31404
 11/2/2004,VA,Bland,Kerry,democrat,846,2865
 11/2/2004,VA,Bland,Bush,republican,1962,2865
 11/2/2004,VA,Bland,Other,other,57,2865
@@ -142484,6 +142402,9 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/2/2004,VA,Alexandria,Kerry,democrat,41116,61515
 11/2/2004,VA,Alexandria,Bush,republican,19844,61515
 11/2/2004,VA,Alexandria,Other,other,555,61515
+11/2/2004,VA,Bedford_City,Kerry,democrat,1042,2542
+11/2/2004,VA,Bedford_City,Bush,republican,1472,2542
+11/2/2004,VA,Bedford_City,Other,other,28,2542
 11/2/2004,VA,Bristol,Kerry,democrat,2400,6724
 11/2/2004,VA,Bristol,Bush,republican,4275,6724
 11/2/2004,VA,Bristol,Other,other,49,6724
@@ -143198,9 +143119,9 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/4/2008,AK,Haines,Obama,democrat,696,1543
 11/4/2008,AK,Haines,McCain,republican,787,1543
 11/4/2008,AK,Haines,Other,other,60,1543
-11/4/2008,AK,Hoonah_Angoon,Obama,democrat,672,1309
-11/4/2008,AK,Hoonah_Angoon,McCain,republican,585,1309
-11/4/2008,AK,Hoonah_Angoon,Other,other,52,1309
+11/4/2008,AK,Hoonah-Angoon,Obama,democrat,672,1309
+11/4/2008,AK,Hoonah-Angoon,McCain,republican,585,1309
+11/4/2008,AK,Hoonah-Angoon,Other,other,52,1309
 11/4/2008,AK,Juneau,Obama,democrat,9819,17503
 11/4/2008,AK,Juneau,McCain,republican,7124,17503
 11/4/2008,AK,Juneau,Other,other,560,17503
@@ -143246,9 +143167,9 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/4/2008,AK,Valdez-Cordova,Obama,democrat,1630,5110
 11/4/2008,AK,Valdez-Cordova,McCain,republican,3322,5110
 11/4/2008,AK,Valdez-Cordova,Other,other,158,5110
-11/4/2008,AK,Kusilvak,Obama,democrat,1270,2271
-11/4/2008,AK,Kusilvak,McCain,republican,906,2271
-11/4/2008,AK,Kusilvak,Other,other,95,2271
+11/4/2008,AK,Wade_Hampton,Obama,democrat,1270,2271
+11/4/2008,AK,Wade_Hampton,McCain,republican,906,2271
+11/4/2008,AK,Wade_Hampton,Other,other,95,2271
 11/4/2008,AK,Wrangell,Obama,democrat,356,1245
 11/4/2008,AK,Wrangell,McCain,republican,858,1245
 11/4/2008,AK,Wrangell,Other,other,31,1245
@@ -150421,9 +150342,9 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/4/2008,SD,Sanborn,Obama,democrat,500,1181
 11/4/2008,SD,Sanborn,McCain,republican,669,1181
 11/4/2008,SD,Sanborn,Other,other,12,1181
-11/4/2008,SD,Oglala_Lakota,Obama,democrat,2971,3314
-11/4/2008,SD,Oglala_Lakota,McCain,republican,331,3314
-11/4/2008,SD,Oglala_Lakota,Other,other,12,3314
+11/4/2008,SD,Shannon,Obama,democrat,2971,3314
+11/4/2008,SD,Shannon,McCain,republican,331,3314
+11/4/2008,SD,Shannon,Other,other,12,3314
 11/4/2008,SD,Spink,Obama,democrat,1550,3239
 11/4/2008,SD,Spink,McCain,republican,1660,3239
 11/4/2008,SD,Spink,Other,other,29,3239
@@ -151657,9 +151578,9 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/4/2008,VA,Bath,Obama,democrat,1043,2432
 11/4/2008,VA,Bath,McCain,republican,1349,2432
 11/4/2008,VA,Bath,Other,other,40,2432
-11/4/2008,VA,Bedford,Obama,democrat,12225,38564
-11/4/2008,VA,Bedford,McCain,republican,25917,38564
-11/4/2008,VA,Bedford,Other,other,422,38564
+11/4/2008,VA,Bedford,Obama,democrat,11017,35830
+11/4/2008,VA,Bedford,McCain,republican,24420,35830
+11/4/2008,VA,Bedford,Other,other,393,35830
 11/4/2008,VA,Bland,Obama,democrat,864,2959
 11/4/2008,VA,Bland,McCain,republican,2031,2959
 11/4/2008,VA,Bland,Other,other,64,2959
@@ -151918,6 +151839,9 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/4/2008,VA,Alexandria,Obama,democrat,50473,70364
 11/4/2008,VA,Alexandria,McCain,republican,19181,70364
 11/4/2008,VA,Alexandria,Other,other,710,70364
+11/4/2008,VA,Bedford_City,Obama,democrat,1208,2734
+11/4/2008,VA,Bedford_City,McCain,republican,1497,2734
+11/4/2008,VA,Bedford_City,Other,other,29,2734
 11/4/2008,VA,Bristol,Obama,democrat,2665,7359
 11/4/2008,VA,Bristol,McCain,republican,4579,7359
 11/4/2008,VA,Bristol,Other,other,115,7359
@@ -152620,9 +152544,9 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/6/2012,AK,Wrangell,Romney,republican,738.6862877,1143.064441
 11/6/2012,AK,Wrangell,Obama,democrat,362.6311787,1143.064441
 11/6/2012,AK,Wrangell,Johnson,libertarian,26.86220733,1143.064441
-11/6/2012,AK,Hoonah_Angoon,Romney,republican,453.5761231,1255.174007
-11/6/2012,AK,Hoonah_Angoon,Obama,democrat,743.6459358,1255.174007
-11/6/2012,AK,Hoonah_Angoon,Johnson,libertarian,34.85369831,1255.174007
+11/6/2012,AK,Hoonah-Angoon,Romney,republican,453.5761231,1255.174007
+11/6/2012,AK,Hoonah-Angoon,Obama,democrat,743.6459358,1255.174007
+11/6/2012,AK,Hoonah-Angoon,Johnson,libertarian,34.85369831,1255.174007
 11/6/2012,AK,Juneau,Romney,republican,6110.863835,16116.43526
 11/6/2012,AK,Juneau,Obama,democrat,9253.246898,16116.43526
 11/6/2012,AK,Juneau,Johnson,libertarian,406.3699832,16116.43526
@@ -152647,9 +152571,9 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/6/2012,AK,Southeast_Fairbanks,Romney,republican,2250.312749,3089.24321
 11/6/2012,AK,Southeast_Fairbanks,Obama,democrat,680.4629218,3089.24321
 11/6/2012,AK,Southeast_Fairbanks,Johnson,libertarian,84.56874456,3089.24321
-11/6/2012,AK,Kusilvak,Romney,republican,389.3835707,2228.141959
-11/6/2012,AK,Kusilvak,Obama,democrat,1715.490873,2228.141959
-11/6/2012,AK,Kusilvak,Johnson,libertarian,32.05580679,2228.141959
+11/6/2012,AK,Wade_Hampton,Romney,republican,389.3835707,2228.141959
+11/6/2012,AK,Wade_Hampton,Obama,democrat,1715.490873,2228.141959
+11/6/2012,AK,Wade_Hampton,Johnson,libertarian,32.05580679,2228.141959
 11/6/2012,AK,Kenai_Peninsula,Romney,republican,17148.85739,25995.41754
 11/6/2012,AK,Kenai_Peninsula,Obama,democrat,7726.077223,25995.41754
 11/6/2012,AK,Kenai_Peninsula,Johnson,libertarian,592.2138627,25995.41754
@@ -159855,9 +159779,9 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/6/2012,SD,Sanborn,Obama,democrat,389,1115
 11/6/2012,SD,Sanborn,Romney,republican,688,1115
 11/6/2012,SD,Sanborn,Other,other,38,1115
-11/6/2012,SD,Oglala_Lakota,Obama,democrat,2937,3145
-11/6/2012,SD,Oglala_Lakota,Romney,republican,188,3145
-11/6/2012,SD,Oglala_Lakota,Other,other,20,3145
+11/6/2012,SD,Shannon,Obama,democrat,2937,3145
+11/6/2012,SD,Shannon,Romney,republican,188,3145
+11/6/2012,SD,Shannon,Other,other,20,3145
 11/6/2012,SD,Spink,Obama,democrat,1300,3041
 11/6/2012,SD,Spink,Romney,republican,1670,3041
 11/6/2012,SD,Spink,Other,other,71,3041
@@ -161091,9 +161015,9 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/6/2012,VA,Bath,Obama,democrat,894,2223
 11/6/2012,VA,Bath,Romney,republican,1274,2223
 11/6/2012,VA,Bath,Other,other,55,2223
-11/6/2012,VA,Bedford,Obama,democrat,11434,40230
-11/6/2012,VA,Bedford,Romney,republican,28206,40230
-11/6/2012,VA,Bedford,Other,other,590,40230
+11/6/2012,VA,Bedford,Obama,democrat,10209,37425
+11/6/2012,VA,Bedford,Romney,republican,26679,37425
+11/6/2012,VA,Bedford,Other,other,537,37425
 11/6/2012,VA,Bland,Obama,democrat,735,2948
 11/6/2012,VA,Bland,Romney,republican,2144,2948
 11/6/2012,VA,Bland,Other,other,69,2948
@@ -161352,6 +161276,9 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/6/2012,VA,Alexandria,Obama,democrat,52199,73411
 11/6/2012,VA,Alexandria,Romney,republican,20249,73411
 11/6/2012,VA,Alexandria,Other,other,963,73411
+11/6/2012,VA,Bedford_City,Obama,democrat,1225,2805
+11/6/2012,VA,Bedford_City,Romney,republican,1527,2805
+11/6/2012,VA,Bedford_City,Other,other,53,2805
 11/6/2012,VA,Bristol,Obama,democrat,2492,7387
 11/6/2012,VA,Bristol,Romney,republican,4780,7387
 11/6/2012,VA,Bristol,Other,other,115,7387
@@ -162054,9 +161981,9 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/8/2016,AK,Wrangell,Trump,republican,728.2544172,1095.676353
 11/8/2016,AK,Wrangell,Clinton,democrat,268.4403002,1095.676353
 11/8/2016,AK,Wrangell,Johnson,libertarian,48.37686147,1095.676353
-11/8/2016,AK,Hoonah_Angoon,Trump,republican,416.3224191,1277.133721
-11/8/2016,AK,Hoonah_Angoon,Clinton,democrat,662.7223324,1277.133721
-11/8/2016,AK,Hoonah_Angoon,Johnson,libertarian,74.71500254,1277.133721
+11/8/2016,AK,Hoonah-Angoon,Trump,republican,416.3224191,1277.133721
+11/8/2016,AK,Hoonah-Angoon,Clinton,democrat,662.7223324,1277.133721
+11/8/2016,AK,Hoonah-Angoon,Johnson,libertarian,74.71500254,1277.133721
 11/8/2016,AK,Juneau,Trump,republican,5801.333645,16861.64197
 11/8/2016,AK,Juneau,Clinton,democrat,8974.341731,16861.64197
 11/8/2016,AK,Juneau,Johnson,libertarian,1008.214398,16861.64197
@@ -170526,9 +170453,9 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/8/2016,VA,Bath,Clinton,democrat,603,2253
 11/8/2016,VA,Bath,Trump,republican,1548,2253
 11/8/2016,VA,Bath,Other,other,102,2253
-11/8/2016,VA,Bedford_Co,Clinton,democrat,9768,42525
-11/8/2016,VA,Bedford_Co,Trump,republican,30659,42525
-11/8/2016,VA,Bedford_Co,Other,other,2098,42525
+11/8/2016,VA,Bedford,Clinton,democrat,9768,42525
+11/8/2016,VA,Bedford,Trump,republican,30659,42525
+11/8/2016,VA,Bedford,Other,other,2098,42525
 11/8/2016,VA,Bland,Clinton,democrat,453,3139
 11/8/2016,VA,Bland,Trump,republican,2573,3139
 11/8/2016,VA,Bland,Other,other,113,3139
@@ -170787,9 +170714,6 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/8/2016,VA,Alexandria,Clinton,democrat,57242,75770
 11/8/2016,VA,Alexandria,Trump,republican,13285,75770
 11/8/2016,VA,Alexandria,Other,other,5243,75770
-11/8/2016,VA,Bedford,Clinton,democrat,9768,42525
-11/8/2016,VA,Bedford,Trump,republican,30659,42525
-11/8/2016,VA,Bedford,Other,other,2098,42525
 11/8/2016,VA,Bristol,Clinton,democrat,1835,7032
 11/8/2016,VA,Bristol,Trump,republican,4892,7032
 11/8/2016,VA,Bristol,Other,other,305,7032
@@ -171521,10 +171445,10 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/3/2020,AK,Haines,Jorgensen,libertarian,20,1715
 11/3/2020,AK,Haines,Other,other,27,1715
 11/3/2020,AK,Haines,Trump,republican,700,1715
-11/3/2020,AK,Hoonah_Angoon,Biden,democrat,1646,2301
-11/3/2020,AK,Hoonah_Angoon,Jorgensen,libertarian,31,2301
-11/3/2020,AK,Hoonah_Angoon,Other,other,47,2301
-11/3/2020,AK,Hoonah_Angoon,Trump,republican,577,2301
+11/3/2020,AK,Hoonah-Angoon,Biden,democrat,1646,2301
+11/3/2020,AK,Hoonah-Angoon,Jorgensen,libertarian,31,2301
+11/3/2020,AK,Hoonah-Angoon,Other,other,47,2301
+11/3/2020,AK,Hoonah-Angoon,Trump,republican,577,2301
 11/3/2020,AK,Juneau,Biden,democrat,11410,18665
 11/3/2020,AK,Juneau,Jorgensen,libertarian,381,18665
 11/3/2020,AK,Juneau,Other,other,228,18665
@@ -185045,9 +184969,9 @@ date,state,county,candidate,party,candidatevotes,totalvotes
 11/5/2024,AK,Wrangell,Harris,democrat,359,1136
 11/5/2024,AK,Wrangell,Trump,republican,745,1136
 11/5/2024,AK,Wrangell,Kennedy,independent,17,1136
-11/5/2024,AK,Hoonah_Angoon,Harris,democrat,876,1515
-11/5/2024,AK,Hoonah_Angoon,Trump,republican,548,1515
-11/5/2024,AK,Hoonah_Angoon,Kennedy,independent,44,1515
+11/5/2024,AK,Hoonah-Angoon,Harris,democrat,876,1515
+11/5/2024,AK,Hoonah-Angoon,Trump,republican,548,1515
+11/5/2024,AK,Hoonah-Angoon,Kennedy,independent,44,1515
 11/5/2024,AK,Juneau,Harris,democrat,10305,16977
 11/5/2024,AK,Juneau,Trump,republican,5942,16977
 11/5/2024,AK,Juneau,Kennedy,independent,272,16977

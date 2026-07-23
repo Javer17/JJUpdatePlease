@@ -21,11 +21,69 @@ var pannedDuringClick = false
 
 var selectedParty
 
-const standardMarginValues = {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}
-const alternateMarginValues = {safe: 5, likely: 3, lean: 1, tilt: Number.MIN_VALUE}
-var defaultMarginValues = JSON.parse(getCookie(marginsCookieName)) || standardMarginValues
-var marginValues = cloneObject(defaultMarginValues)
-var marginNames = {safe: "Safe", likely: "Likely", lean: "Lean", tilt: "Tilt"}
+const standardMarginValues = {solid: 20, safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}
+const alternateMarginValues = {solid: 10, safe: 5, likely: 3, lean: 1, tilt: Number.MIN_VALUE}
+const solidMarginValues = { solid: 20, safe: 10, likely: 5, lean: 1, tilt: Number.MIN_VALUE }
+const marginsCookieName = "global-margins"
+var marginNames = {solid: "Solid", safe: "Safe", likely: "Likely", lean: "Lean", tilt: "Tilt"}
+var solidMarginEnabled = false
+
+var defaultMarginValues
+var marginValues
+try
+{
+  const raw = getCookie(marginsCookieName)
+  const parsed = raw ? JSON.parse(raw) : null
+  if (parsed && typeof parsed === 'object')
+  {
+    if (parsed.marginValues)
+    {
+      solidMarginEnabled = !!parsed.solidEnabled
+      defaultMarginValues = fillMissingSolidMarginValues(parsed.marginValues)
+    }
+    else
+    {
+      defaultMarginValues = fillMissingSolidMarginValues(parsed)
+    }
+  }
+  else
+  {
+    defaultMarginValues = fillMissingSolidMarginValues(standardMarginValues)
+  }
+}
+catch (e)
+{
+  defaultMarginValues = fillMissingSolidMarginValues(standardMarginValues)
+}
+
+marginValues = cloneObject(defaultMarginValues)
+
+function fillMissingSolidMarginValues(values)
+{
+  values = values ? cloneObject(values) : {}
+
+  const shouldForceSolidDefaults = solidMarginEnabled && (values.solid == null)
+  const baseDefaults = shouldForceSolidDefaults || solidMarginEnabled ? solidMarginValues : standardMarginValues
+
+  const orderedMarginValues = {}
+  for (const marginID of Object.keys(marginNames))
+  {
+    if (marginID === "tilt")
+    {
+      orderedMarginValues[marginID] = values[marginID] ?? standardMarginValues[marginID]
+      continue
+    }
+
+    orderedMarginValues[marginID] = shouldForceSolidDefaults ? (baseDefaults[marginID] ?? standardMarginValues[marginID]) : (values[marginID] ?? baseDefaults[marginID] ?? standardMarginValues[marginID])
+  }
+
+  return orderedMarginValues
+}
+
+function getActiveMarginKeys()
+{
+  return Object.keys(marginNames).filter(marginID => marginID !== "solid" || solidMarginEnabled)
+}
 
 const defaultRegionFillColor = TossupParty.getMarginColors().safe
 const regionFillAnimationDuration = 0.1
@@ -714,7 +772,16 @@ async function loadDataMap(shouldSetToMax, forceDownload, previousDateOverride, 
   
   if (currentMapSource.getCustomDefaultMargins() != null)
   {
-    marginValues = currentMapSource.getCustomDefaultMargins()
+    const srcDefaults = currentMapSource.getCustomDefaultMargins()
+    // If the source lacked `solid` and the app is in solid mode, prefer the solid defaults
+    if (solidMarginEnabled && (srcDefaults == null || srcDefaults.solid == null))
+    {
+      marginValues = cloneObject(solidMarginValues)
+    }
+    else
+    {
+      marginValues = fillMissingSolidMarginValues(srcDefaults)
+    }
   }
   // else if (currentMapSource.isCustom() && showingCompareMap)
   // {
@@ -1005,7 +1072,13 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
   
   if (currentMapSource.getCustomDefaultMargins() != null && !$("#reset-margins").length)
   {
-    marginValues = currentMapSource.getCustomDefaultMargins()
+    // Load source defaults but ensure missing solid falls back when solid mode is active.
+    const srcDefaults = currentMapSource.getCustomDefaultMargins()
+    marginValues = fillMissingSolidMarginValues(srcDefaults)
+    if (solidMarginEnabled && (marginValues.solid == null || isNaN(Number(marginValues.solid))))
+    {
+      marginValues.solid = defaultMarginValues?.solid ?? solidMarginValues.solid ?? standardMarginValues.solid
+    }
     createMarginEditDropdownItems()
   }
 
@@ -1750,7 +1823,7 @@ async function updateRegionFillColors(regionIDsToUpdate, regionData, shouldUpdat
   else
   {
     var marginIndex = getMarginIndexForValue(regionData.margin, regionData)
-    fillColor = politicalParties[regionData.partyID].getMarginColors()[marginIndex]
+    fillColor = getMarginColorForIndex(politicalParties[regionData.partyID].getMarginColors(), marginIndex)
   }
   
   if (fillColor == null) { return }
@@ -1792,9 +1865,48 @@ async function updateRegionFillColors(regionIDsToUpdate, regionData, shouldUpdat
   }
 }
 
+function getRegionNameCandidates(regionData)
+{
+  if (regionData == null) { return [] }
+
+  const regionNameCandidates = []
+  if (typeof regionData.region === "string") { regionNameCandidates.push(regionData.region) }
+  if (typeof regionData.name === "string") { regionNameCandidates.push(regionData.name) }
+  if (regionData.region != null && mapRegionIDToName?.[regionData.region] != null) { regionNameCandidates.push(mapRegionIDToName[regionData.region]) }
+
+  return regionNameCandidates
+}
+
+function isListSeatRegion(regionData)
+{
+  return getRegionNameCandidates(regionData).some(candidate => String(candidate).toLowerCase().includes("list seat"))
+}
+
+function isSittingRegion(regionData)
+{
+  return getRegionNameCandidates(regionData).some(candidate => String(candidate).toLowerCase().includes("sitting"))
+}
+
+function hasFullVoteShareWin(regionData)
+{
+  if (regionData == null) { return false }
+
+  if (Number.isFinite(regionData.margin) && Math.abs(regionData.margin) >= 100)
+  {
+    return true
+  }
+
+  if (!Array.isArray(regionData.partyVotesharePercentages)) { return false }
+
+  return regionData.partyVotesharePercentages.some(candidateData => {
+    const voteshare = Number(candidateData?.voteshare)
+    return Number.isFinite(voteshare) && voteshare >= 100
+  })
+}
+
 function getMarginIndexForValue(margin, regionData)
 {
-  if (regionData.isHold || (regionData.disabled && regionData.partyID != TossupParty.getID()))
+  if (regionData.isHold || (regionData.disabled && regionData.partyID != TossupParty.getID()) || isSittingRegion(regionData))
   {
     return "current"
   }
@@ -1802,13 +1914,33 @@ function getMarginIndexForValue(margin, regionData)
   // Using real margin for colors now
   // const roundedMargin = getRoundedMarginValue(margin)
   
-  for (var marginName in marginValues)
+  const shouldSkipSolidColors = isListSeatRegion(regionData)
+  if (!shouldSkipSolidColors && hasFullVoteShareWin(regionData))
+  {
+    return "solid"
+  }
+
+  const marginNamesToConsider = shouldSkipSolidColors ? getActiveMarginKeys().filter(marginName => marginName !== "solid") : getActiveMarginKeys()
+  for (var marginName of marginNamesToConsider)
   {
     if (Math.abs(margin) >= marginValues[marginName])
     {
       return marginName
     }
   }
+
+  return "tilt"
+}
+
+function getMarginColorForIndex(marginColors, marginIndex)
+{
+  if (marginColors[marginIndex] != null)
+  {
+    return marginColors[marginIndex]
+  }
+
+  const firstColor = Object.values(marginColors)[0]
+  return firstColor || null
 }
 
 function generateSVGPattern(patternID, fillColor, strokeColor, scale = 1)

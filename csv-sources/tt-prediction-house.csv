@@ -1,0 +1,361 @@
+date,region,candidate,party,offyear,runoff,voteshare
+2/23/2026,Alvana,Poopman69,alliance,FALSE,FALSE,7.5
+2/23/2026,Brunix Islands,Jack Ciattarelli,alliance,FALSE,FALSE,12
+2/23/2026,Dalminica,Flor Belgier,proglab,FALSE,FALSE,16
+2/23/2026,Dentone,HowDoIType,alliance,FALSE,FALSE,29
+2/23/2026,Emix,Javer,proglab,FALSE,FALSE,5.5
+2/23/2026,Garvor,Alex K,alliance,FALSE,FALSE,2.5
+2/23/2026,Kilden,Sam McMahon,proglab,FALSE,FALSE,8.5
+2/23/2026,Newmasi,GMV,alliance,FALSE,FALSE,9
+2/23/2026,Quintin,Rahul Gandhi,proglab,FALSE,FALSE,20
+2/23/2026,Trunoe,NorthPoleTyrant,proglab,FALSE,FALSE,1.5
+2/23/2026,List Seat 1,Nationals,jnp,FALSE,FALSE,100
+2/23/2026,List Seat 2,Nationals,jnp,FALSE,FALSE,100
+2/23/2026,List Seat 3,Alliance,alliance,FALSE,FALSE,100
+2/23/2026,List Seat 4,Alliance,alliance,FALSE,FALSE,100
+2/23/2026,List Seat 5,Alliance,alliance,FALSE,FALSE,100
+2/23/2026,List Seat 6,Alliance,alliance,FALSE,FALSE,100
+2/23/2026,List Seat 7,Alliance,alliance,FALSE,FALSE,100
+2/23/2026,List Seat 8,Alliance,alliance,FALSE,FALSE,100
+2/23/2026,List Seat 9,Alliance,alliance,FALSE,FALSE,100
+2/23/2026,List Seat 10,Alliance,alliance,FALSE,FALSE,100
+2/23/2026,List Seat 11,Solidarity,solidarity,FALSE,FALSE,100
+2/23/2026,List Seat 12,Solidarity,solidarity,FALSE,FALSE,100
+2/23/2026,List Seat 13,Solidarity,solidarity,FALSE,FALSE,100
+2/23/2026,List Seat 14,ProgLab,proglab,FALSE,FALSE,100
+2/23/2026,List Seat 15,ProgLab,proglab,FALSE,FALSE,100
+2/23/2026,List Seat 16,ProgLab,proglab,FALSE,FALSE,100
+2/23/2026,List Seat 17,ProgLab,proglab,FALSE,FALSE,100
+2/23/2026,List Seat 18,ProgLab,proglab,FALSE,FALSE,100
+2/23/2026,List Seat 19,UCP,ucp,FALSE,FALSE,100
+2/23/2026,List Seat 20,UCP,ucp,FALSE,FALSE,100
+2/25/2026,Alvana,Poopman69,alliance,FALSE,FALSE,10
+2/25/2026,Brunix Islands,Jack Ciattarelli,alliance,FALSE,FALSE,12.5
+2/25/2026,Dalminica,Flor Belgier,proglab,FALSE,FALSE,4.5
+2/25/2026,Dentone,HowDoIType,alliance,FALSE,FALSE,30
+2/25/2026,Emix,Javer,proglab,FALSE,FALSE,3
+2/25/2026,Garvor,Alex K,alliance,FALSE,FALSE,7
+2/25/2026,Kilden,Sam McMahon,proglab,FALSE,FALSE,8.5
+2/25/2026,Newmasi,Craig,alliance,FALSE,FALSE,8
+2/25/2026,Quintin,Rahul Gandhi,proglab,FALSE,FALSE,13.5
+2/25/2026,Trunoe,NorthPoleTyrant,proglab,FALSE,FALSE,0.3
+2/25/2026,List Seat 1,Nationals,jnp,FALSE,FALSE,100
+2/25/2026,List Seat 2,Nationals,jnp,FALSE,FALSE,100
+2/25/2026,List Seat 3,Alliance,alliance,FALSE,FALSE,100
+2/25/2026,List Seat 4,Alliance,alliance,FALSE,FALSE,100
+2/25/2026,List Seat 5,Alliance,alliance,FALSE,FALSE,100
+2/25/2026,List Seat 6,Alliance,alliance,FALSE,FALSE,100
+2/25/2026,List Seat 7,Alliance,alliance,FALSE,FALSE,100
+2/25/2026,List Seat 8,Alliance,alliance,FALSE,FALSE,100
+2/25/2026,List Seat 9,Alliance,alliance,FALSE,FALSE,100
+2/25/2026,List Seat 10,Alliance,alliance,FALSE,FALSE,100
+2/25/2026,List Seat 11,Solidarity,solidarity,FALSE,FALSE,100
+2/25/2026,List Seat 12,Solidarity,solidarity,FALSE,FALSE,100
+2/25/2026,List Seat 13,Solidarity,solidarity,FALSE,FALSE,100
+2/25/2026,List Seat 14,ProgLab,proglab,FALSE,FALSE,100
+2/25/2026,List Seat 15,ProgLab,proglab,FALSE,FALSE,100
+2/25/2026,List Seat 16,ProgLab,proglab,FALSE,FALSE,100
+2/25/2026,List Seat 17,ProgLab,proglab,FALSE,FALSE,100
+2/25/2026,List Seat 18,ProgLab,proglab,FALSE,FALSE,100
+2/25/2026,List Seat 19,UCP,ucp,FALSE,FALSE,100
+2/25/2026,List Seat 20,UCP,ucp,FALSE,FALSE,100
+2/27/2026,Alvana,Poopman69,alliance,FALSE,FALSE,11
+2/27/2026,Brunix Islands,Jack Ciattarelli,alliance,FALSE,FALSE,21
+2/27/2026,Dalminica,Flor Belgier,proglab,FALSE,FALSE,4
+2/27/2026,Dentone,HowDoIType,alliance,FALSE,FALSE,30
+2/27/2026,Emix,Javer,proglab,FALSE,FALSE,2.5
+2/27/2026,Garvor,Alex K,alliance,FALSE,FALSE,6
+2/27/2026,Kilden,Sam McMahon,proglab,FALSE,FALSE,8.5
+2/27/2026,Newmasi,Craig,alliance,FALSE,FALSE,8
+2/27/2026,Quintin,Rahul Gandhi,proglab,FALSE,FALSE,0.8
+2/27/2026,Trunoe,NorthPoleTyrant,proglab,FALSE,FALSE,0.3
+2/27/2026,List Seat 1,Nationals,jnp,FALSE,FALSE,100
+2/27/2026,List Seat 2,Nationals,jnp,FALSE,FALSE,100
+2/27/2026,List Seat 3,Alliance,alliance,FALSE,FALSE,100
+2/27/2026,List Seat 4,Alliance,alliance,FALSE,FALSE,100
+2/27/2026,List Seat 5,Alliance,alliance,FALSE,FALSE,100
+2/27/2026,List Seat 6,Alliance,alliance,FALSE,FALSE,100
+2/27/2026,List Seat 7,Alliance,alliance,FALSE,FALSE,100
+2/27/2026,List Seat 8,Alliance,alliance,FALSE,FALSE,100
+2/27/2026,List Seat 9,Alliance,alliance,FALSE,FALSE,100
+2/27/2026,List Seat 10,Alliance,alliance,FALSE,FALSE,100
+2/27/2026,List Seat 11,Alliance,alliance,FALSE,FALSE,100
+2/27/2026,List Seat 12,Solidarity,solidarity,FALSE,FALSE,100
+2/27/2026,List Seat 13,Solidarity,solidarity,FALSE,FALSE,100
+2/27/2026,List Seat 14,Solidarity,solidarity,FALSE,FALSE,100
+2/27/2026,List Seat 15,ProgLab,proglab,FALSE,FALSE,100
+2/27/2026,List Seat 16,ProgLab,proglab,FALSE,FALSE,100
+2/27/2026,List Seat 17,ProgLab,proglab,FALSE,FALSE,100
+2/27/2026,List Seat 18,ProgLab,proglab,FALSE,FALSE,100
+2/27/2026,List Seat 19,UCP,ucp,FALSE,FALSE,100
+2/27/2026,List Seat 20,UCP,ucp,FALSE,FALSE,100
+04/09/2026,Alvana,DannyUnown0,alliance,FALSE,FALSE,4
+04/09/2026,Brunix Islands,Jack Ciattarelli,alliance,FALSE,FALSE,40
+04/09/2026,Dalminica,Flor Belgier,sdp,FALSE,FALSE,1.5
+04/09/2026,Dentone,HowDoIType,alliance,FALSE,FALSE,40
+04/09/2026,Emix,Jerry,alliance,FALSE,FALSE,0.9
+04/09/2026,Garvor,Alex K,alliance,FALSE,FALSE,7
+04/09/2026,Kilden,Cob,ucp,FALSE,FALSE,6
+04/09/2026,Newmasi,Griffith Hyde,alliance,FALSE,FALSE,8
+04/09/2026,Quintin,Beary,green,FALSE,FALSE,4
+04/09/2026,Trunoe,Burger,alliance,FALSE,FALSE,6
+04/09/2026,List Seat 1,Alliance,alliance,FALSE,FALSE,100
+04/09/2026,List Seat 2,Alliance,alliance,FALSE,FALSE,100
+04/09/2026,List Seat 3,Alliance,alliance,FALSE,FALSE,100
+04/09/2026,List Seat 4,Alliance,alliance,FALSE,FALSE,100
+04/09/2026,List Seat 5,Alliance,alliance,FALSE,FALSE,100
+04/09/2026,List Seat 6,Alliance,alliance,FALSE,FALSE,100
+04/09/2026,List Seat 7,Alliance,alliance,FALSE,FALSE,100
+04/09/2026,List Seat 8,Alliance,alliance,FALSE,FALSE,100
+04/09/2026,List Seat 9,Solidarity,solidarity,FALSE,FALSE,100
+04/09/2026,List Seat 10,Solidarity,solidarity,FALSE,FALSE,100
+04/09/2026,List Seat 11,Solidarity,solidarity,FALSE,FALSE,100
+04/09/2026,List Seat 12,SDP,sdp,FALSE,FALSE,100
+04/09/2026,List Seat 13,SDP,sdp,FALSE,FALSE,100
+04/09/2026,List Seat 14,SDP,sdp,FALSE,FALSE,100
+04/09/2026,List Seat 15,SDP,sdp,FALSE,FALSE,100
+04/09/2026,List Seat 16,Green,green,FALSE,FALSE,100
+04/09/2026,List Seat 17,Green,green,FALSE,FALSE,100
+04/09/2026,List Seat 18,Green,green,FALSE,FALSE,100
+04/09/2026,List Seat 19,UCP,ucp,FALSE,FALSE,100
+04/09/2026,List Seat 20,UCP,ucp,FALSE,FALSE,100
+04/10/2026,Alvana,Poopman69,alliance,FALSE,FALSE,13
+04/10/2026,Brunix Islands,Jack Ciattarelli,alliance,FALSE,FALSE,37
+04/10/2026,Dalminica,Flor Belgier,sdp,FALSE,FALSE,0.75
+04/10/2026,Dentone,HowDoIType,alliance,FALSE,FALSE,42
+04/10/2026,Emix,Jerry,alliance,FALSE,FALSE,0.5
+04/10/2026,Garvor,Alex K,alliance,FALSE,FALSE,6
+04/10/2026,Kilden,Cob,ucp,FALSE,FALSE,6.5
+04/10/2026,Newmasi,Griffith Hyde,alliance,FALSE,FALSE,7
+04/10/2026,Quintin,Rahul Gandhi,sdp,FALSE,FALSE,3
+04/10/2026,Trunoe,Burger,alliance,FALSE,FALSE,6.5
+04/10/2026,List Seat 1,Alliance,alliance,FALSE,FALSE,100
+04/10/2026,List Seat 2,Alliance,alliance,FALSE,FALSE,100
+04/10/2026,List Seat 3,Alliance,alliance,FALSE,FALSE,100
+04/10/2026,List Seat 4,Alliance,alliance,FALSE,FALSE,100
+04/10/2026,List Seat 5,Alliance,alliance,FALSE,FALSE,100
+04/10/2026,List Seat 6,Alliance,alliance,FALSE,FALSE,100
+04/10/2026,List Seat 7,Alliance,alliance,FALSE,FALSE,100
+04/10/2026,List Seat 8,Alliance,alliance,FALSE,FALSE,100
+04/10/2026,List Seat 9,Solidarity,solidarity,FALSE,FALSE,100
+04/10/2026,List Seat 10,Solidarity,solidarity,FALSE,FALSE,100
+04/10/2026,List Seat 11,Solidarity,solidarity,FALSE,FALSE,100
+04/10/2026,List Seat 12,SDP,sdp,FALSE,FALSE,100
+04/10/2026,List Seat 13,SDP,sdp,FALSE,FALSE,100
+04/10/2026,List Seat 14,SDP,sdp,FALSE,FALSE,100
+04/10/2026,List Seat 15,Green,green,FALSE,FALSE,100
+04/10/2026,List Seat 16,Green,green,FALSE,FALSE,100
+04/10/2026,List Seat 17,Green,green,FALSE,FALSE,100
+04/10/2026,List Seat 18,Green,green,FALSE,FALSE,100
+04/10/2026,List Seat 19,UCP,ucp,FALSE,FALSE,100
+04/10/2026,List Seat 20,UCP,ucp,FALSE,FALSE,100
+04/11/2026,Alvana,Poopman69,alliance,FALSE,FALSE,32
+04/11/2026,Brunix Islands,Jack Ciattarelli,alliance,FALSE,FALSE,40
+04/11/2026,Dalminica,Flor Belgier,sdp,FALSE,FALSE,5
+04/11/2026,Dentone,HowDoIType,alliance,FALSE,FALSE,40
+04/11/2026,Emix,Javer,sdp,FALSE,FALSE,2.5
+04/11/2026,Garvor,Alex K,alliance,FALSE,FALSE,7
+04/11/2026,Kilden,Cob,ucp,FALSE,FALSE,47
+04/11/2026,Newmasi,Griffith Hyde,alliance,FALSE,FALSE,5.5
+04/11/2026,Quintin,Rahul Gandhi,sdp,FALSE,FALSE,6
+04/11/2026,Trunoe,Burger,alliance,FALSE,FALSE,6
+04/11/2026,List Seat 1,Alliance,alliance,FALSE,FALSE,100
+04/11/2026,List Seat 2,Alliance,alliance,FALSE,FALSE,100
+04/11/2026,List Seat 3,Alliance,alliance,FALSE,FALSE,100
+04/11/2026,List Seat 4,Alliance,alliance,FALSE,FALSE,100
+04/11/2026,List Seat 5,Alliance,alliance,FALSE,FALSE,100
+04/11/2026,List Seat 6,Alliance,alliance,FALSE,FALSE,100
+04/11/2026,List Seat 7,Alliance,alliance,FALSE,FALSE,100
+04/11/2026,List Seat 8,Alliance,alliance,FALSE,FALSE,100
+04/11/2026,List Seat 9,Solidarity,solidarity,FALSE,FALSE,100
+04/11/2026,List Seat 10,Solidarity,solidarity,FALSE,FALSE,100
+04/11/2026,List Seat 11,Solidarity,solidarity,FALSE,FALSE,100
+04/11/2026,List Seat 12,SDP,sdp,FALSE,FALSE,100
+04/11/2026,List Seat 13,SDP,sdp,FALSE,FALSE,100
+04/11/2026,List Seat 14,SDP,sdp,FALSE,FALSE,100
+04/11/2026,List Seat 15,Green,green,FALSE,FALSE,100
+04/11/2026,List Seat 16,Green,green,FALSE,FALSE,100
+04/11/2026,List Seat 17,Green,green,FALSE,FALSE,100
+04/11/2026,List Seat 18,Green,green,FALSE,FALSE,100
+04/11/2026,List Seat 19,UCP,ucp,FALSE,FALSE,100
+04/11/2026,List Seat 20,UCP,ucp,FALSE,FALSE,100
+04/14/2026,Alvana,Poopman69,alliance,FALSE,FALSE,12.5
+04/14/2026,Brunix Islands,Jack Ciattarelli,alliance,FALSE,FALSE,40
+04/14/2026,Dalminica,Vincent Rocher,alliance,FALSE,FALSE,0.8
+04/14/2026,Dentone,HowDoIType,alliance,FALSE,FALSE,40
+04/14/2026,Emix,Jerry,alliance,FALSE,FALSE,0.6
+04/14/2026,Garvor,Alex K,alliance,FALSE,FALSE,4
+04/14/2026,Kilden,Cob,ucp,FALSE,FALSE,55
+04/14/2026,Newmasi,Griffith Hyde,alliance,FALSE,FALSE,0.8
+04/14/2026,Quintin,Rahul Gandhi,sdp,FALSE,FALSE,12
+04/14/2026,Trunoe,Burger,alliance,FALSE,FALSE,7.5
+04/14/2026,List Seat 1,Alliance,alliance,FALSE,FALSE,100
+04/14/2026,List Seat 2,Alliance,alliance,FALSE,FALSE,100
+04/14/2026,List Seat 3,Alliance,alliance,FALSE,FALSE,100
+04/14/2026,List Seat 4,Alliance,alliance,FALSE,FALSE,100
+04/14/2026,List Seat 5,Alliance,alliance,FALSE,FALSE,100
+04/14/2026,List Seat 6,Alliance,alliance,FALSE,FALSE,100
+04/14/2026,List Seat 7,Solidarity,solidarity,FALSE,FALSE,100
+04/14/2026,List Seat 8,Solidarity,solidarity,FALSE,FALSE,100
+04/14/2026,List Seat 9,Solidarity,solidarity,FALSE,FALSE,100
+04/14/2026,List Seat 10,SDP,sdp,FALSE,FALSE,100
+04/14/2026,List Seat 11,SDP,sdp,FALSE,FALSE,100
+04/14/2026,List Seat 12,SDP,sdp,FALSE,FALSE,100
+04/14/2026,List Seat 13,SDP,sdp,FALSE,FALSE,100
+04/14/2026,List Seat 14,SDP,sdp,FALSE,FALSE,100
+04/14/2026,List Seat 15,Green,green,FALSE,FALSE,100
+04/14/2026,List Seat 16,Green,green,FALSE,FALSE,100
+04/14/2026,List Seat 17,Green,green,FALSE,FALSE,100
+04/14/2026,List Seat 18,Green,green,FALSE,FALSE,100
+04/14/2026,List Seat 19,UCP,ucp,FALSE,FALSE,100
+04/14/2026,List Seat 20,UCP,ucp,FALSE,FALSE,100
+04/18/2026,Alvana,Poopman69,alliance,FALSE,FALSE,12
+04/18/2026,Brunix Islands,Jack Ciattarelli,alliance,FALSE,FALSE,40
+04/18/2026,Dalminica,Flor Belgier,sdp,FALSE,FALSE,8.5
+04/18/2026,Dentone,HowDoIType,alliance,FALSE,FALSE,40
+04/18/2026,Emix,Javer,sdp,FALSE,FALSE,2
+04/18/2026,Garvor,Alex K,alliance,FALSE,FALSE,3.5
+04/18/2026,Kilden,Cob,ucp,FALSE,FALSE,40
+04/18/2026,Newmasi,Griffith Hyde,alliance,FALSE,FALSE,0.5
+04/18/2026,Quintin,Rahul Gandhi,sdp,FALSE,FALSE,25
+04/18/2026,Trunoe,Van der Plan,green,FALSE,FALSE,60
+04/18/2026,List Seat 1,Alliance,alliance,FALSE,FALSE,100
+04/18/2026,List Seat 2,Alliance,alliance,FALSE,FALSE,100
+04/18/2026,List Seat 3,Alliance,alliance,FALSE,FALSE,100
+04/18/2026,List Seat 4,Alliance,alliance,FALSE,FALSE,100
+04/18/2026,List Seat 5,Alliance,alliance,FALSE,FALSE,100
+04/18/2026,List Seat 6,Alliance,alliance,FALSE,FALSE,100
+04/18/2026,List Seat 7,Alliance,alliance,FALSE,FALSE,100
+04/18/2026,List Seat 8,Alliance,alliance,FALSE,FALSE,100
+04/18/2026,List Seat 9,Alliance,alliance,FALSE,FALSE,100
+04/18/2026,List Seat 10,Solidarity,solidarity,FALSE,FALSE,100
+04/18/2026,List Seat 11,Solidarity,solidarity,FALSE,FALSE,100
+04/18/2026,List Seat 12,Solidarity,solidarity,FALSE,FALSE,100
+04/18/2026,List Seat 13,SDP,sdp,FALSE,FALSE,100
+04/18/2026,List Seat 14,SDP,sdp,FALSE,FALSE,100
+04/18/2026,List Seat 15,Green,green,FALSE,FALSE,100
+04/18/2026,List Seat 16,Green,green,FALSE,FALSE,100
+04/18/2026,List Seat 17,Green,green,FALSE,FALSE,100
+04/18/2026,List Seat 18,Green,green,FALSE,FALSE,100
+04/18/2026,List Seat 19,UCP,ucp,FALSE,FALSE,100
+04/18/2026,List Seat 20,UCP,ucp,FALSE,FALSE,100
+05/22/2026,Alvana,DannyUnown0,sdp,FALSE,FALSE,2.5
+05/22/2026,Brunix Islands,Usgball,alliance,FALSE,FALSE,30
+05/22/2026,Dalminica,Flor Belgier,sdp,FALSE,FALSE,2.5
+05/22/2026,Dentone,How Do I Type,alliance,FALSE,FALSE,30
+05/22/2026,Emix,Trey,green,FALSE,FALSE,13
+05/22/2026,Garvor,Strxya,green,FALSE,FALSE,0.5
+05/22/2026,Kilden,Cob,ucp,FALSE,FALSE,100
+05/22/2026,Newmasi,JAMden,green,FALSE,FALSE,2.5
+05/22/2026,Quintin,Rahul Gandhi,sdp,FALSE,FALSE,30
+05/22/2026,Trunoe,Van der Plan,green,FALSE,FALSE,70
+05/22/2026,List Seat 1,Alliance,alliance,FALSE,FALSE,100
+05/22/2026,List Seat 2,Alliance,alliance,FALSE,FALSE,100
+05/22/2026,List Seat 3,Alliance,alliance,FALSE,FALSE,100
+05/22/2026,List Seat 4,Alliance,alliance,FALSE,FALSE,100
+05/22/2026,List Seat 5,Alliance,alliance,FALSE,FALSE,100
+05/22/2026,List Seat 6,Alliance,alliance,FALSE,FALSE,100
+05/22/2026,List Seat 7,Alliance,alliance,FALSE,FALSE,100
+05/22/2026,List Seat 8,Alliance,alliance,FALSE,FALSE,100
+05/22/2026,List Seat 9,Alliance,alliance,FALSE,FALSE,100
+05/22/2026,List Seat 10,FDP,fdp,FALSE,FALSE,100
+05/22/2026,List Seat 11,FDP,fdp,FALSE,FALSE,100
+05/22/2026,List Seat 12,FDP,fdp,FALSE,FALSE,100
+05/22/2026,List Seat 13,SDP,sdp,FALSE,FALSE,100
+05/22/2026,List Seat 14,SDP,sdp,FALSE,FALSE,100
+05/22/2026,List Seat 15,SDP,sdp,FALSE,FALSE,100
+05/22/2026,List Seat 16,Green,green,FALSE,FALSE,100
+05/22/2026,List Seat 17,Green,green,FALSE,FALSE,100
+05/22/2026,List Seat 18,UCP,ucp,FALSE,FALSE,100
+05/22/2026,List Seat 19,UCP,ucp,FALSE,FALSE,100
+05/22/2026,List Seat 20,UCP,ucp,FALSE,FALSE,100
+05/25/2026,Alvana,DannyUnown0,sdp,FALSE,FALSE,4
+05/25/2026,Brunix Islands,Usgball,alliance,FALSE,FALSE,30
+05/25/2026,Dalminica,Flor Belgier,sdp,FALSE,FALSE,16
+05/25/2026,Dentone,How Do I Type,alliance,FALSE,FALSE,28
+05/25/2026,Emix,Trey,green,FALSE,FALSE,13
+05/25/2026,Garvor,Strxya,green,FALSE,FALSE,0.5
+05/25/2026,Kilden,Cob,ucp,FALSE,FALSE,8.5
+05/25/2026,Newmasi,JAMden,green,FALSE,FALSE,3.5
+05/25/2026,Quintin,Rahul Gandhi,sdp,FALSE,FALSE,30
+05/25/2026,Trunoe,Van der Plan,green,FALSE,FALSE,70
+05/25/2026,List Seat 1,Alliance,alliance,FALSE,FALSE,100
+05/25/2026,List Seat 2,Alliance,alliance,FALSE,FALSE,100
+05/25/2026,List Seat 3,Alliance,alliance,FALSE,FALSE,100
+05/25/2026,List Seat 4,Alliance,alliance,FALSE,FALSE,100
+05/25/2026,List Seat 5,Alliance,alliance,FALSE,FALSE,100
+05/25/2026,List Seat 6,Alliance,alliance,FALSE,FALSE,100
+05/25/2026,List Seat 7,Alliance,alliance,FALSE,FALSE,100
+05/25/2026,List Seat 8,Alliance,alliance,FALSE,FALSE,100
+05/25/2026,List Seat 9,FDP,fdp,FALSE,FALSE,100
+05/25/2026,List Seat 10,FDP,fdp,FALSE,FALSE,100
+05/25/2026,List Seat 11,FDP,fdp,FALSE,FALSE,100
+05/25/2026,List Seat 12,FDP,fdp,FALSE,FALSE,100
+05/25/2026,List Seat 13,SDP,sdp,FALSE,FALSE,100
+05/25/2026,List Seat 14,SDP,sdp,FALSE,FALSE,100
+05/25/2026,List Seat 15,SDP,sdp,FALSE,FALSE,100
+05/25/2026,List Seat 16,Green,green,FALSE,FALSE,100
+05/25/2026,List Seat 17,Green,green,FALSE,FALSE,100
+05/25/2026,List Seat 18,UCP,ucp,FALSE,FALSE,100
+05/25/2026,List Seat 19,UCP,ucp,FALSE,FALSE,100
+05/25/2026,List Seat 20,UCP,ucp,FALSE,FALSE,100
+05/26/2026,Alvana,DannyUnown0,sdp,FALSE,FALSE,7.5
+05/26/2026,Brunix Islands,Usgball,alliance,FALSE,FALSE,35
+05/26/2026,Dalminica,Flor Belgier,sdp,FALSE,FALSE,20
+05/26/2026,Dentone,How Do I Type,alliance,FALSE,FALSE,25
+05/26/2026,Emix,Trey,green,FALSE,FALSE,13
+05/26/2026,Garvor,Strxya,green,FALSE,FALSE,0.5
+05/26/2026,Kilden,Cob,ucp,FALSE,FALSE,6.5
+05/26/2026,Newmasi,CaughtQuick,alliance,FALSE,FALSE,0.5
+05/26/2026,Quintin,Rahul Gandhi,sdp,FALSE,FALSE,40
+05/26/2026,Trunoe,Van der Plan,green,FALSE,FALSE,70
+05/26/2026,List Seat 1,Alliance,alliance,FALSE,FALSE,100
+05/26/2026,List Seat 2,Alliance,alliance,FALSE,FALSE,100
+05/26/2026,List Seat 3,Alliance,alliance,FALSE,FALSE,100
+05/26/2026,List Seat 4,Alliance,alliance,FALSE,FALSE,100
+05/26/2026,List Seat 5,Alliance,alliance,FALSE,FALSE,100
+05/26/2026,List Seat 6,Alliance,alliance,FALSE,FALSE,100
+05/26/2026,List Seat 7,Alliance,alliance,FALSE,FALSE,100
+05/26/2026,List Seat 8,FDP,fdp,FALSE,FALSE,100
+05/26/2026,List Seat 9,FDP,fdp,FALSE,FALSE,100
+05/26/2026,List Seat 10,FDP,fdp,FALSE,FALSE,100
+05/26/2026,List Seat 11,FDP,fdp,FALSE,FALSE,100
+05/26/2026,List Seat 12,SDP,sdp,FALSE,FALSE,100
+05/26/2026,List Seat 13,SDP,sdp,FALSE,FALSE,100
+05/26/2026,List Seat 14,SDP,sdp,FALSE,FALSE,100
+05/26/2026,List Seat 15,Green,green,FALSE,FALSE,100
+05/26/2026,List Seat 16,Green,green,FALSE,FALSE,100
+05/26/2026,List Seat 17,Green,green,FALSE,FALSE,100
+05/26/2026,List Seat 18,UCP,ucp,FALSE,FALSE,100
+05/26/2026,List Seat 19,UCP,ucp,FALSE,FALSE,100
+05/26/2026,List Seat 20,UCP,ucp,FALSE,FALSE,100
+05/30/2026,Alvana,DannyUnown0,sdp,FALSE,FALSE,8.5
+05/30/2026,Brunix Islands,Usgball,alliance,FALSE,FALSE,35
+05/30/2026,Dalminica,Flor Belgier,sdp,FALSE,FALSE,12.5
+05/30/2026,Dentone,How Do I Type,alliance,FALSE,FALSE,13.5
+05/30/2026,Emix,Trey,green,FALSE,FALSE,13.5
+05/30/2026,Garvor,Katherine Monroe,sdp,FALSE,FALSE,6
+05/30/2026,Kilden,Cob,ucp,FALSE,FALSE,10
+05/30/2026,Newmasi,JAMden,green,FALSE,FALSE,5
+05/30/2026,Quintin,Rahul Gandhi,sdp,FALSE,FALSE,30
+05/30/2026,Trunoe,Van der Plan,green,FALSE,FALSE,70
+05/30/2026,List Seat 1,Alliance,alliance,FALSE,FALSE,100
+05/30/2026,List Seat 2,Alliance,alliance,FALSE,FALSE,100
+05/30/2026,List Seat 3,Alliance,alliance,FALSE,FALSE,100
+05/30/2026,List Seat 4,Alliance,alliance,FALSE,FALSE,100
+05/30/2026,List Seat 5,Alliance,alliance,FALSE,FALSE,100
+05/30/2026,List Seat 6,Alliance,alliance,FALSE,FALSE,100
+05/30/2026,List Seat 7,Alliance,alliance,FALSE,FALSE,100
+05/30/2026,List Seat 8,Alliance,alliance,FALSE,FALSE,100
+05/30/2026,List Seat 9,FDP,fdp,FALSE,FALSE,100
+05/30/2026,List Seat 10,FDP,fdp,FALSE,FALSE,100
+05/30/2026,List Seat 11,FDP,fdp,FALSE,FALSE,100
+05/30/2026,List Seat 12,FDP,fdp,FALSE,FALSE,100
+05/30/2026,List Seat 13,SDP,sdp,FALSE,FALSE,100
+05/30/2026,List Seat 14,SDP,sdp,FALSE,FALSE,100
+05/30/2026,List Seat 15,Green,green,FALSE,FALSE,100
+05/30/2026,List Seat 16,Green,green,FALSE,FALSE,100
+05/30/2026,List Seat 17,Green,green,FALSE,FALSE,100
+05/30/2026,List Seat 18,UCP,ucp,FALSE,FALSE,100
+05/30/2026,List Seat 19,UCP,ucp,FALSE,FALSE,100
+05/30/2026,List Seat 20,UCP,ucp,FALSE,FALSE,100

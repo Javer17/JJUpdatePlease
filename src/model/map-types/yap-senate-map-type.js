@@ -1,21 +1,55 @@
-var JJUListMapType = new MapType(
-  "JJU-List",
-  "List",
-  "L",
-  "assets/jju-list.png",
-  "svg-sources/jju-districts-10.svg",
-  10,
+var YAPSenateMapType = new MapType(
+  "YAP-Senate",
+  "Senate",
+  "S",
+  "assets/usa-senate.png",
+  "svg-sources/yap-senate-17.svg",
+  34,
   function()
   {
     return 1
   },
-  false,
+  false, //ShowEVs
   2,
   true,
   true,
   false,
   true,
-  {"BI": "Brunix Islands", "EX": "Emix", "DM": "Dalminica", "TR": "Trunoe", "AV": "Alvana", "QU": "Quintin", "DT": "Dentone", "GV": "Garvor", "KI": "Kilden", "NM": "Newmasi", "N": "North", "S": "South", "E": "East", "W": "West"},
+  {"CM": "Cambria", 
+    "CA": "Calleoria", 
+    "KO": "Kostos", 
+    "CE": "Cerbska", 
+    "AR": "Armallos",
+    "AC": "Acalliana", 
+    "ST": "Stettigan",
+    "BL": "Blesna", 
+    "LA": "Larimer", 
+    "ES": "Estellia", 
+    "TL": "Taclima", 
+    "MA": "Matatheste", 
+    "OP": "Opplica", 
+    "RO": "Rorcia",
+    "NQ": "New Queria",
+    "PR": "Porcerle",
+    "DF": "Yapburgh D.F.", 
+    "L1": "List Seat 1",
+    "L2": "List Seat 2", 
+    "L3": "List Seat 3", 
+    "L4": "List Seat 4", 
+    "L5": "List Seat 5", 
+    "L6": "List Seat 6", 
+    "L7": "List Seat 7", 
+    "L8": "List Seat 8", 
+    "L9": "List Seat 9", 
+    "L10": "List Seat 10", 
+    "L11": "List Seat 11", 
+    "L12": "List Seat 12", 
+    "L13": "List Seat 13", 
+    "L14": "List Seat 14", 
+    "L15": "List Seat 15", 
+    "L16": "List Seat 16", 
+    "L17": "List Seat 17"}
+    ,
   [/.+-S/],
   [
     {id: "coalitions", title: "🤝 Coalitions", type: MapSettingType.optionCycle, options:
@@ -47,7 +81,43 @@ var JJUListMapType = new MapType(
     defaultValue: "hide", reloadType: MapSettingReloadType.display}
   ],
   () => {
-	  const regionNameToID = {"Brunix Islands": "BI", "Emix": "EX", "Dalminica": "DM", "Trunoe": "TR", "Alvana": "AV", "Quintin": "QU", "Dentone": "DT", "Garvor": "GV", "Kilden": "KI", "Newmasi": "NM", "North": "N", "South": "S", "East": "E", "West": "W", "National Popular Vote": nationalPopularVoteID}
+	  const regionNameToID = {
+  "Cambria": "CM",
+  "Calleoria": "CA",
+  "Kostos": "KO",
+  "Cerbska": "CE",
+  "Armallos": "AR",
+  "Stettigan": "ST",
+  "Acalliana": "AC",
+  "Blesna": "BL",
+  "Larimer": "LA",
+  "Estellia": "ES",
+  "Taclima": "TL",
+  "Matatheste": "MA",
+  "Opplica": "OP",
+  "Rorcia": "RO",
+  "New Queria": "NQ",
+  "Porcerle": "PR",
+  "Yapburgh": "DF",
+  "List Seat 1": "L1",
+  "List Seat 2": "L2",
+  "List Seat 3": "L3",
+  "List Seat 4": "L4",
+  "List Seat 5": "L5",
+  "List Seat 6": "L6",
+  "List Seat 7": "L7",
+  "List Seat 8": "L8",
+  "List Seat 9": "L9",
+  "List Seat 10": "L10",
+  "List Seat 11": "L11",
+  "List Seat 12": "L12",
+  "List Seat 13": "L13",
+  "List Seat 14": "L14",
+  "List Seat 15": "L15",
+  "List Seat 16": "L16",
+  "List Seat 17": "L17",
+  "National Popular Vote": nationalPopularVoteID
+}
   
 	  let doubleLineVoteshareFilterFunction = function(rawMapData, mapDates, columnMap, _, candidateNameToPartyIDMap, regionNameToID, heldRegionMap, ____, isCustomMap, voteshareCutoffMargin)
 	  {
@@ -56,27 +126,32 @@ var JJUListMapType = new MapType(
   
 	    let regionNames = Object.keys(regionNameToID)
       
-      const getNSEWRegions = () => ['N', 'S', 'E', 'W']
-      const getDistricts8 = () => ['BI', 'EX', 'DM', 'TR', 'AV', 'QU', 'DT', 'GV']
-      const getDistricts10 = () => ['BI', 'EX', 'DM', 'TR', 'AV', 'QU', 'DT', 'GV', 'KI', 'NM']
-      
+      const getListRegions = (count) => Array.from({length: count}, (_, i) => `L${i+1}`)
+      const getStates = () => ["CM", "CA", "KO", "CE", "AR", "ST", "AC", "BL", "LA", "ES", "TL", "MA", "OP", "RO", "NQ", "PR", "DF"]
+
+
+      // probably should just load past election results for this
+      const regions = [...getStates(), ...getListRegions(17)] // It somehow doesn't work so i have to do ts...
       const regionDateRanges = [
         {
-          start: new Date(2024, 8-1, 1).getTime(),
+          start: new Date(2000, 1-1, 1-1).getTime(),
           regions: [
-            ...getNSEWRegions(),
+            ...getStates(),
+            ...getListRegions(5)
+          ]
+        },
+  {
+          start: new Date(2002, 1-1, 1-1).getTime(),
+          regions: [
+            ...getStates(),
+            ...getListRegions(10)
           ]
         },
         {
-          start: new Date(2025, 2-1, 9-1).getTime(),
+          start: new Date(2025, 1-1, 26-1).getTime(),
           regions: [
-            ...getDistricts8(),
-          ]
-        },
-        {
-          start: new Date(2025, 10-1, 11-1).getTime(),
-          regions: [
-            ...getDistricts10(),
+            ...getStates(),
+            ...getListRegions(17)
           ]
         }
       ]
@@ -108,7 +183,7 @@ var JJUListMapType = new MapType(
           
           let foundParty = Object.values(politicalParties).find(party => {
             let partyNames = cloneObject(party.getNames()).map(partyName => partyName.toLowerCase())
-            return partyNames.includes(currentPartyName)
+            return partyNames.includes(currentPartyName ? currentPartyName.toLowerCase() : "")
           })
         
           if (!foundParty && Object.keys(politicalParties).includes(currentPartyName))
@@ -153,17 +228,11 @@ var JJUListMapType = new MapType(
           voteshareSortedCandidateData = voteshareSortedCandidateData.filter(candData => candData.voteshare >= voteshareCutoffMargin)
         }
         
-        if (voteshareSortedCandidateData.length == 0)
-        {
-          console.log("No candidate data!", currentMapDate.getFullYear().toString(), regionID)
-          return
-        }
-        
         let greatestMarginPartyID
         let greatestMarginCandidateName
         let topTwoMargin
         
-        if (voteshareSortedCandidateData[0].voteshare != 0)
+        if (voteshareSortedCandidateData.length > 0 && voteshareSortedCandidateData[0].voteshare != 0)
         {
           let topCandidateData = voteshareSortedCandidateData.filter(candidateData => candidateData.order == 0 || candidateData.order == 1).sort((cand1, cand2) => cand2.voteshare - cand1.voteshare)
           if (topCandidateData.length == 0)
@@ -205,8 +274,8 @@ var JJUListMapType = new MapType(
           partyIDToCandidateNames[candidateData[partyCandidateName].partyID] = partyCandidateName
         }
         
-        let mostRecentParty = heldRegionMap ? heldRegionMap[regionID] : mostRecentWinner(filteredMapData, currentMapDate.getTime(), regionID).partyID
-        return {region: regionID, offYear: isOffyear, runoff: isRunoffElection, isSpecial: isSpecialElection, disabled: mapDataRows[0][columnMap.isDisabled] == "TRUE", margin: topTwoMargin, partyID: greatestMarginPartyID, candidateName: greatestMarginCandidateName, candidateMap: partyIDToCandidateNames, partyVotesharePercentages: voteshareSortedCandidateData, flip: mapDataRows[0][columnMap.flip] == "TRUE" || (mostRecentParty != greatestMarginPartyID && mostRecentParty != TossupParty.getID())}
+        const mostRecentPartyID = heldRegionMap ? heldRegionMap[regionID] : mostRecentWinner(filteredMapData, currentMapDate.getTime(), regionID).partyID
+        return {region: regionID, offYear: isOffyear, runoff: isRunoffElection, isSpecial: isSpecialElection, disabled: mapDataRows[0][columnMap.isDisabled] == "TRUE", margin: topTwoMargin, partyID: greatestMarginPartyID, candidateName: greatestMarginCandidateName, candidateMap: partyIDToCandidateNames, partyVotesharePercentages: voteshareSortedCandidateData, flipOverride: mapDataRows[0][columnMap.flip] == "TRUE", previousPartyID: mostRecentPartyID}
       }
   
 	    for (let mapDateTime of mapDates)
@@ -305,6 +374,7 @@ var JJUListMapType = new MapType(
       
       const listSeatRegex = /L\d+/
       const partyListSeatCounts = {}
+      const getPartyListSeatCount = (date, party) => partyListSeatCounts[date][party] ?? 0
       previousMapDate = null
       for (const mapDate in fullFilteredMapData)
       {
@@ -335,9 +405,10 @@ var JJUListMapType = new MapType(
               partyIDOn = regionData.partyID
               partyListSeatOn = 1
             }
-            const seatDifference = (partyListSeatCounts[mapDate][regionData.partyID] ?? 0)-(partyListSeatCounts[previousMapDate][regionData.partyID] ?? 0)
-            
-            regionData.flip = partyListSeatOn > (partyListSeatCounts[mapDate][regionData.partyID] ?? 0)-seatDifference
+            const currentDateSeats = getPartyListSeatCount(mapDate, regionData.partyID)
+            const previousDateSeats = getPartyListSeatCount(previousMapDate, regionData.partyID)
+            const seatDifference = currentDateSeats-(previousDateSeats + politicalParties[regionData.partyID].getAncestors().reduce((sum, p) => sum + getPartyListSeatCount(previousMapDate, p.getID()), 0));
+            regionData.flip = partyListSeatOn > currentDateSeats-seatDifference
             
             partyListSeatOn += 1
           }
@@ -424,20 +495,35 @@ var JJUListMapType = new MapType(
 	    }
 	  }
     
-    function getHouseSVGByDate(dateTime){
+    function getSenateSVGByDate(dateTime)
+    { //Date by end
       let mapDate = new Date(dateTime)
-
-      if (mapDate < new Date(2025, 2-1, 9))
+      
+      if (mapDate < new Date(2001, 12-1, 31-1))
       {
-        return "svg-sources/jju-regions-map.svg"
+        return "svg-sources/yap-senate-5.svg"
       }
-      else if (mapDate < new Date(2025, 10-1, 11))
+      else if (mapDate < new Date(2002, 12-1, 31-1))
       {
-        return "svg-sources/jju-districts-map.svg"
+      return "svg-sources/yap-senate-10.svg"
       }
       else
       {
-        return "svg-sources/jju-districts-10.svg"
+      return "svg-sources/yap-senate-17.svg"
+      }
+    }
+    
+    function getDistrictSVGByDate(dateTime)
+    {
+      let mapDate = new Date(dateTime)
+      
+      if (mapDate < new Date(2025, 1-1, 1-1))
+      {
+        return "svg-sources/yap-senate-5.svg"
+      }
+      else
+      {
+      return "svg-sources/yap-senate-17.svg"
       }
     }
     
@@ -454,290 +540,16 @@ var JJUListMapType = new MapType(
       return regionName
     }
     
-    //To Do Replace this with wiki links because those are better than these nightmarishly bad spreadsheet links that dont even work please god help me - Javer
     var electionDateToSpreadsheetData = {
-      1724223600000: {
-        id: "1fFJ8Y_KS2iy6qOupil1F-qC8wrKDjpJECRHIVjWHUzY",
-        regions: {
-          "N": "1501672328",
-          "S": "370122789",
-          "E": "1011441980",
-          "W": "402739737"
-        }
-      },
-      1726902000000: {
-        id: "1dxk8_7ij62LiDzpZiS0XENsGFybg0MQ67vjt55JdLeo",
-        regions: {
-          "N": "1501672328",
-          "S": "370122789",
-          "E": "1011441980",
-          "W": "402739737"
-        }
-      },
-      1729407600000: {
-        id: "18T8S_JLndBFFlCOoUxoqDFIxlEczNq4YFK2BNXpGRVc",
-        regions: {
-          "N": "1501672328",
-          "S": "370122789",
-          "E": "1011441980",
-          "W": "402739737"
-        }
-      },
-      1734249600000: {
-        id: "1Us3ATy8e5FpsO7tjNTLTasGqiKPcHJg-hh2h0S9a80I",
-        regions: {
-          "L1": "441625624",
-          "L2": "441625624",
-          "L3": "441625624",
-          "L4": "441625624",
-          "L5": "441625624",
-          "L6": "441625624",
-          "L7": "441625624",
-          "L8": "441625624",
-          "N": "419628180",
-          "S": "1586359503",
-          "E": "486563209",
-          "W": "1482060989"
-        }
-      },
-      1736582400000: {
-        id: "16kSr6XBqbKJSA4665rN7OzdP_tYo17o0A6jlUyLUuWE",
-        regions: {
-          "L1": "441625624",
-          "L2": "441625624",
-          "L3": "441625624",
-          "L4": "441625624",
-          "L5": "441625624",
-          "L6": "441625624",
-          "L7": "441625624",
-          "L8": "441625624",
-          "N": "419628180",
-          "S": "1586359503",
-          "E": "486563209",
-          "W": "1482060989"
-        }
-      },
-      1739088000000: {
-        id: "1WNpCjaDoAUzKZ0dESvw8rL3wIMSiXYmEphFwwxV2R8U",
-        regions: {
-          "L1": "441625624",
-          "L2": "441625624",
-          "L3": "441625624",
-          "L4": "441625624",
-          "L5": "441625624",
-          "L6": "441625624",
-          "L7": "441625624",
-          "L8": "441625624",
-          "BI": "419628180",
-          "EX": "419628180",
-          "QU": "1586359503",
-          "AV": "1586359503",
-          "DM": "486563209",
-          "TR": "486563209",
-          "DT": "1482060989",
-          "GV": "1482060989"
-        }
-      },
-      1741507200000: {
-        id: "1NrI9tRg4GtJxBy1hng0fMC3wdtby5LCsqMBXQUvffZ4",
-        regions: {
-          "L1": "441625624",
-          "L2": "441625624",
-          "L3": "441625624",
-          "L4": "441625624",
-          "L5": "441625624",
-          "L6": "441625624",
-          "L7": "441625624",
-          "L8": "441625624",
-          "BI": "419628180",
-          "EX": "419628180",
-          "QU": "1586359503",
-          "AV": "1586359503",
-          "DM": "486563209",
-          "TR": "486563209",
-          "DT": "1482060989",
-          "GV": "1482060989"
-        }
-      },
-      1743922800000: {
-        id: "1YI8gO_ajh3b9Et7wAH5A6kBLdPHM8LAz5XYhUpe9DRc",
-        regions: {
-          "L1": "441625624",
-          "L2": "441625624",
-          "L3": "441625624",
-          "L4": "441625624",
-          "L5": "441625624",
-          "L6": "441625624",
-          "L7": "441625624",
-          "L8": "441625624",
-          "BI": "419628180",
-          "EX": "419628180",
-          "QU": "1586359503",
-          "AV": "1586359503",
-          "DM": "486563209",
-          "TR": "486563209",
-          "DT": "1482060989",
-          "GV": "1482060989"
-        }
-      },
-      1746946800000: {
-        id: "1OR3INfqexRBxjpFRJpMCICZNZDaXbnkvDM23rgYAwOs",
-        regions: {
-          "L1": "441625624",
-          "L2": "441625624",
-          "L3": "441625624",
-          "L4": "441625624",
-          "L5": "441625624",
-          "L6": "441625624",
-          "L7": "441625624",
-          "L8": "441625624",
-          "BI": "419628180",
-          "EX": "419628180",
-          "QU": "1586359503",
-          "AV": "1586359503",
-          "DM": "486563209",
-          "TR": "486563209",
-          "DT": "1482060989",
-          "GV": "1482060989"
-        }
-      },
-      1749970800000: {
-        id: "1nI_EfYD42esRP0z-gS5GwMlDdY6RLelvBSFkKewM7pE",
-        regions: {
-          "L1": "441625624",
-          "L2": "441625624",
-          "L3": "441625624",
-          "L4": "441625624",
-          "L5": "441625624",
-          "L6": "441625624",
-          "L7": "441625624",
-          "L8": "441625624",
-          "L9": "441625624",
-          "L10": "441625624",
-          "L11": "441625624",
-          "L12": "441625624",
-          "L13": "441625624",
-          "BI": "419628180",
-          "EX": "419628180",
-          "QU": "1586359503",
-          "AV": "1586359503",
-          "DM": "486563209",
-          "TR": "486563209",
-          "DT": "1482060989",
-          "GV": "1482060989"
-        }
-      },
-      1752994800000: {
-        id: "1ILe_QCqSePlhiQcd0lTEFEFBhZaIj8j20GB-vE4mSSE",
-        regions: {
-          "L1": "441625624",
-          "L2": "441625624",
-          "L3": "441625624",
-          "L4": "441625624",
-          "L5": "441625624",
-          "L6": "441625624",
-          "L7": "441625624",
-          "L8": "441625624",
-          "L9": "441625624",
-          "L10": "441625624",
-          "L11": "441625624",
-          "L12": "441625624",
-          "BI": "419628180",
-          "EX": "419628180",
-          "QU": "1586359503",
-          "AV": "1586359503",
-          "DM": "486563209",
-          "TR": "486563209",
-          "DT": "1482060989",
-          "GV": "1482060989"
-        }
-      },
-      1754204400000: {
-        id: "1FFWXjj8y9GMNnKD5ZoCvCmFxwzWppQ1qpEOxhZKIZvI",
-        regions: {
-          "L1": "441625624",
-          "L2": "441625624",
-          "L3": "441625624",
-          "L4": "441625624",
-          "L5": "441625624",
-          "L6": "441625624",
-          "L7": "441625624",
-          "L8": "441625624",
-          "L9": "441625624",
-          "L10": "441625624",
-          "L11": "441625624",
-          "L12": "441625624",
-          "BI": "419628180",
-          "EX": "419628180",
-          "QU": "1586359503",
-          "AV": "1586359503",
-          "DM": "486563209",
-          "TR": "486563209",
-          "DT": "1482060989",
-          "GV": "1482060989"
-        }
-      },
-      1757142000000: {
-        id: "14G13c38FwtqjLNZ7WmoCA-0tvEPfZeOmk8MSMx5FPpE",
-        regions: {
-          "L1": "441625624",
-          "L2": "441625624",
-          "L3": "441625624",
-          "L4": "441625624",
-          "L5": "441625624",
-          "L6": "441625624",
-          "L7": "441625624",
-          "L8": "441625624",
-          "L9": "441625624",
-          "L10": "441625624",
-          "L11": "441625624",
-          "L12": "441625624",
-          "BI": "419628180",
-          "EX": "419628180",
-          "QU": "1586359503",
-          "AV": "1586359503",
-          "DM": "486563209",
-          "TR": "486563209",
-          "DT": "1482060989",
-          "GV": "1482060989"
-        }
-      },
-      1760166000000: {
-        id: "1-_zuGIXOIIFszj4vLfryyQVlkKYkJiZuJfZnUw5ibKQ",
-        regions: {
-          "L1": "441625624",
-          "L2": "441625624",
-          "L3": "441625624",
-          "L4": "441625624",
-          "L5": "441625624",
-          "L6": "441625624",
-          "L7": "441625624",
-          "L8": "441625624",
-          "L9": "441625624",
-          "L10": "441625624",
-          "L11": "441625624",
-          "L12": "441625624",
-          "EX": "419628180",
-          "KI": "419628180",
-          "GV": "1482060989",
-          "BI": "1482060989",
-          "DM": "339435920",
-          "NM": "339435920",
-          "TR": "486563209",
-          "AV": "486563209",
-          "DT": "1586359503",
-          "QU": "1586359503",
-        }
-      }
+      // empty :)
     }
-    // Todo: add the shit from the previous elections - Wiki - not the original shit - im not gonna do that not my job - Javer
   
 	  var PastElectionResultMapSource = new MapSource(
-	    "JJU-Past-List-Elections", // id
+	    "YAP-Past-Senate-Elections", // id
 	    "Past Elections", // name
-	    "./csv-sources/jju-past-list.csv", // dataURL
+	    "./csv-sources/yap-past-senate.csv", // dataURL
 	    "https://docs.google.com/spreadsheets/d", // homepageURL
-	    {regular: "./assets/wikipedia-large.png", mini: "./assets/wikipedia-large.png", getOverlayText: () => {
+	    {regular: "./assets/yapmeria-flag.png", mini: "./assets/wikipedia-large.png", getOverlayText: () => {
 		  let currentYear = currentSliderDate.getFullYear()
 		  return currentYear
 	    }}, // iconURL
@@ -751,7 +563,8 @@ var JJUListMapType = new MapType(
 		    partyID: "party",
 		    voteshare: "voteshare",
 		    candidateVotes: "candidatevotes",
-		    totalVotes: "totalvotes"
+		    totalVotes: "totalvotes",
+        isDisabled: "disabled"
 	    }, // columnMap
 	    null, // cycleYear
 	    null, // candidateNameToPartyIDMap
@@ -787,14 +600,78 @@ var JJUListMapType = new MapType(
 	    null, // isCustomMap
 	    null, // shouldClearDisabled
 	    true, // shouldShowVoteshare
-	    1.0, // voteshareCutoffMargin
-      getHouseSVGByDate, // overrideSVGPath
-      null, // shouldSetDisabledWorthToZero
+	    0, // voteshareCutoffMargin
+      getSenateSVGByDate, // overrideSVGPath
+      true, // shouldSetDisabledWorthToZero
       null, // shouldUseOriginalMapDataForTotalsPieChart
       null, // shouldForcePopularVoteDisplay
-      {safe: 20, likely: 10, lean: 5, tilt: Number.MIN_VALUE}, // customDefaultMargins
+      {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE} // customDefaultMargins
+	  )
+    
+    var PastListElectionResultMapSource = new MapSource(
+      "YAP-Past-List-Senate-Elections", // id
+      "Past List Elections", // name
+      "./csv-sources/yap-past-list.csv", // dataURL
+      "https://docs.google.com/spreadsheets/d", // homepageURL
+      {regular: "./assets/yapmeria-flag.png", mini: "./assets/wikipedia-large.png", getOverlayText: () => {
+        let currentYear = currentSliderDate.getFullYear()
+        return currentYear
+      }}, // iconURL
+      {
+        date: "date",
+        region: "region",
+        isSpecial: "special",
+        isRunoff: "runoff",
+        isOffyear: "offyear",
+        candidateName: "candidate",
+        partyID: "party",
+        voteshare: "voteshare",
+        candidateVotes: "candidatevotes",
+        totalVotes: "totalvotes"
+      }, // columnMap
+      null, // cycleYear
+      null, // candidateNameToPartyIDMap
+      null, // shortCandidateNameOverride
+      regionNameToID, // regionNameToIDMap
+      null, // regionIDToLinkMap
+      null, // heldRegionMap
+      false, // shouldFilterOutDuplicateRows
+      true, // addDecimalPadding
+      doubleLineVoteshareFilterFunction, // organizeMapDataFunction
+      null, // viewingDataFunction
+      null, // zoomingDataFunction
+      null, // splitVoteDataFunction
+      null, // splitVoteDisplayOptions
+      getFormattedRegionName, // getFormattedRegionName
+      function(homepageURL, regionID, _, mapDate, __, mapData)
+      {
+        console.log(mapData, mapDate)
+        
+        const regionData = mapData[mapDate.getTime()][regionID]
+        if (regionData && regionData.isHold && regionData.electionDate)
+        {
+          mapDate = new Date(regionData.electionDate)
+        }
+        
+        let spreadsheetLinkData = electionDateToSpreadsheetData[mapDate.getTime()]
+        if (!spreadsheetLinkData) return null
+        
+        let linkToOpen = `${homepageURL}/${spreadsheetLinkData.id}/edit?gid=${spreadsheetLinkData.regions[regionID] ?? 0}`
+      
+        return linkToOpen
+      }, // customOpenRegionLinkFunction
+      null, // updateCustomMapFunction
+      null, // convertMapDataRowToCSVFunction
+      null, // isCustomMap
+      null, // shouldClearDisabled
+      true, // shouldShowVoteshare
+      0.0, // voteshareCutoffMargin
+      getSenateSVGByDate, // overrideSVGPath
+      true, // shouldSetDisabledWorthToZero
+      null, // shouldUseOriginalMapDataForTotalsPieChart
+      null, // shouldForcePopularVoteDisplay
+      {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}// customDefaultMargins
     )
-
   
 	  var idsToPartyNames = {}
 	  var partyNamesToIDs = {}
@@ -807,7 +684,7 @@ var JJUListMapType = new MapType(
 	  }
   
 	  var CustomMapSource = new MapSource(
-	    "JJU-Custom-List", // id
+	    "YAP-Custom-Senate", // id
 	    "Custom", // name
 	    null, // dataURL
 	    null, // homepageURL
@@ -815,7 +692,7 @@ var JJUListMapType = new MapType(
 	    {
 		    date: "date",
 		    region: "region",
-		    isSpecial: "special",
+		    // isSpecial: "special",
 		    isRunoff: "runoff",
 		    isOffyear: "offyear",
 		    isDisabled: "disabled",
@@ -843,32 +720,35 @@ var JJUListMapType = new MapType(
 	    null, // updateCustomMapFunction
 	    customMapConvertMapDataToCSVFunction, // convertMapDataRowToCSVFunction
 	    true, // isCustomMap
-	    false, // shouldClearDisabled
+	    null, // shouldClearDisabled
 	    null, // shouldShowVoteshare
       null, // voteshareCutoffMargin
-      getHouseSVGByDate, // overrideSVGPath
-      null, // shouldSetDisabledWorthToZero
+      getSenateSVGByDate, // overrideSVGPath
+      false, // shouldSetDisabledWorthToZero
       null, // shouldUseOriginalMapDataForTotalsPieChart
       null, // shouldForcePopularVoteDisplay
-      {safe: 20, likely: 10, lean: 5, tilt: Number.MIN_VALUE}, // customDefaultMargins
+      {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}, // customDefaultMargins
 	  )
   
 	  var todayDate = new Date()
 	  CustomMapSource.setTextMapData("date\n" + (todayDate.getMonth()+1) + "/" + todayDate.getDate() + "/" + todayDate.getFullYear())
   
-	  var houseMapSources = {}
-	  houseMapSources[PastElectionResultMapSource.getID()] = PastElectionResultMapSource
-	  houseMapSources[CustomMapSource.getID()] = CustomMapSource
+	  var senateMapSources = {}
+	  senateMapSources[PastElectionResultMapSource.getID()] = PastElectionResultMapSource
+    senateMapSources[PastListElectionResultMapSource.getID()] = PastListElectionResultMapSource
+	  senateMapSources[CustomMapSource.getID()] = CustomMapSource
   
-	  const houseMapSourceIDs = {
-	    [allYearsCycle]: [PastElectionResultMapSource.getID(), CustomMapSource.getID()]
+	  const senateMapSourceIDs = {
+	    [allYearsCycle]: [PastElectionResultMapSource.getID(), PastListElectionResultMapSource.getID(), CustomMapSource.getID()]
 	  }
 	  
 	  const kPastElectionsVsPastElections = 1
+    const kPastListElectionsVsPastListElections = 2
   
-	  var defaultHouseCompareSourceIDs = {}
-	  defaultHouseCompareSourceIDs[kPastElectionsVsPastElections] = [PastElectionResultMapSource.getID(), PastElectionResultMapSource.getID()]
+	  var defaultSenateCompareSourceIDs = {}
+	  defaultSenateCompareSourceIDs[kPastElectionsVsPastElections] = [PastElectionResultMapSource.getID(), PastElectionResultMapSource.getID()]
+    defaultSenateCompareSourceIDs[kPastListElectionsVsPastListElections] = [PastListElectionResultMapSource.getID(), PastListElectionResultMapSource.getID()]
   
-	  return {mapSources: houseMapSources, mapSourceIDs: houseMapSourceIDs, mapCycles: [], defaultCompareSourceIDs: defaultHouseCompareSourceIDs, customSourceID: CustomMapSource.getID()}
+	  return {mapSources: senateMapSources, mapSourceIDs: senateMapSourceIDs, mapCycles: [], defaultCompareSourceIDs: defaultSenateCompareSourceIDs, customSourceID: CustomMapSource.getID()}
   }
 )

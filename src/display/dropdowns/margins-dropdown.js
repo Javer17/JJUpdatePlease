@@ -1,16 +1,17 @@
 var editMarginID = null
 
-const marginsCookieName = "global-margins"
-
 function createMarginEditDropdownItems(shouldSetDefault)
 {
   if (shouldSetDefault)
   {
-    setCookie(marginsCookieName, JSON.stringify(marginValues))
+    setCookie(marginsCookieName, JSON.stringify({ marginValues: marginValues, solidEnabled: solidMarginEnabled }))
   }
 
   $("#marginsDropdownContainer").html("")
-  for (var marginID in marginNames)
+
+  addSolidMarginToggleRow()
+
+  for (var marginID of getActiveMarginKeys())
   {
     if (marginID == "tilt") { continue } // Hardcoding tilt to be excluded
     $("#marginsDropdownContainer").append("<div class='dropdown-separator'></div>")
@@ -18,6 +19,15 @@ function createMarginEditDropdownItems(shouldSetDefault)
   }
   
   addResetMarginsRow()
+}
+
+function addSolidMarginToggleRow()
+{
+  $("#marginsDropdownContainer").append("<a id='toggle-solid-margin' onclick='toggleSolidMargin()' style='display:flex; width:100%; justify-content:space-between; align-items:center; padding: 10px 10px; box-sizing:border-box; overflow:hidden; min-width:0;'>" +
+    "<span style='display:inline-flex; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; flex:1 1 auto; margin-right: 1.5rem;'>➕Solid</span>" +
+    "<span style='font-family: \"Bree5erif-Mono\"; opacity: 0.8; flex:0 0 auto; white-space:nowrap;'>" + (solidMarginEnabled ? "Enabled" : "Disabled") + "</span>" +
+    "</a>")
+  $("#marginsDropdownContainer").append("<div class='dropdown-separator-big'></div>")
 }
 
 function toggleMarginEditing(marginID, div)
@@ -31,7 +41,7 @@ function toggleMarginEditing(marginID, div)
       marginValueToSet = 100
     }
 
-    var marginIDArray = Object.keys(marginNames)
+    var marginIDArray = getActiveMarginKeys()
     if (marginValueToSet < marginValues[marginIDArray[marginIDArray.indexOf(editMarginID)+1]])
     {
       marginValueToSet = marginValues[marginIDArray[marginIDArray.indexOf(editMarginID)+1]]
@@ -50,7 +60,7 @@ function toggleMarginEditing(marginID, div)
     marginValues[editMarginID] = marginValueToSet
     if (shouldRefreshMap && currentMapSource.getCustomDefaultMargins() == null)
     {
-      setCookie(marginsCookieName, JSON.stringify(marginValues))
+      setCookie(marginsCookieName, JSON.stringify({ marginValues: marginValues, solidEnabled: solidMarginEnabled }))
       defaultMarginValues = cloneObject(marginValues)
     }
 
@@ -85,40 +95,60 @@ function toggleMarginEditing(marginID, div)
 
 function addResetMarginsRow()
 {
-  let standardMargins = currentMapSource.getCustomDefaultMargins() ?? standardMarginValues
-  
+  // Determine canonical defaults (respect custom source defaults).
+  const sourceDefaults = currentMapSource.getCustomDefaultMargins()
+  const standardMargins = fillMissingSolidMarginValues(sourceDefaults ?? (solidMarginEnabled ? solidMarginValues : standardMarginValues))
+
+  // Compare against the current margins (ensure missing keys are filled)
+  const currentMargins = fillMissingSolidMarginValues(marginValues)
+
   let isEqualToStandard = true
-  for (const marginID in marginValues)
+  for (const marginID of getActiveMarginKeys())
   {
-    if (standardMargins[marginID] != marginValues[marginID])
+    const a = Number(standardMargins[marginID])
+    const b = Number(currentMargins[marginID])
+    if (isNaN(a) || isNaN(b) || Math.abs(a - b) > 0.001)
     {
       isEqualToStandard = false
       break
     }
   }
+
   if (isEqualToStandard)
   {
+    // Remove reset button if present and values already match defaults
     if ($("#reset-margins").length)
     {
-      createMarginEditDropdownItems(currentMapSource.getCustomDefaultMargins() == null)
+      $("#reset-margins").remove()
     }
     return
   }
-  else if ($("#reset-margins").length)
+
+  if ($("#reset-margins").length)
   {
     return
   }
-  
+
   $("#marginsDropdownContainer").append("<div class='dropdown-separator'></div>")
   $("#marginsDropdownContainer").append("<a id='reset-margins' style='padding-top: 14rem; min-height: 25rem; text-align: center;' onclick='resetMargins()'>Reset</a>")
 }
 
 function resetMargins()
 {
-  marginValues = cloneObject(currentMapSource.getCustomDefaultMargins() ?? standardMarginValues)
+  if (currentMapSource.getCustomDefaultMargins() != null)
+  {
+    marginValues = cloneObject(currentMapSource.getCustomDefaultMargins())
+  }
+  else
+  {
+    marginValues = solidMarginEnabled ? cloneObject(solidMarginValues) : cloneObject(standardMarginValues)
+  }
+
+  marginValues = fillMissingSolidMarginValues(marginValues)
+
   if (currentMapSource.getCustomDefaultMargins() == null)
   {
-    setCookie(marginsCookieName, JSON.stringify(marginValues))
+    setCookie(marginsCookieName, JSON.stringify({ marginValues: marginValues, solidEnabled: solidMarginEnabled }))
     defaultMarginValues = cloneObject(marginValues)
   }
   
@@ -128,4 +158,39 @@ function resetMargins()
   }
   
   createMarginEditDropdownItems(currentMapSource.getCustomDefaultMargins() == null)
+}
+
+function toggleSolidMargin()
+{
+  solidMarginEnabled = !solidMarginEnabled
+
+  if (currentMapSource.getCustomDefaultMargins() == null)
+  {
+    if (solidMarginEnabled)
+    {
+      defaultMarginValues = cloneObject(solidMarginValues)
+    }
+    else
+    {
+      defaultMarginValues = cloneObject(standardMarginValues)
+    }
+
+    marginValues = cloneObject(defaultMarginValues)
+    // Persist the new solid-enabled state along with the margins
+    setCookie(marginsCookieName, JSON.stringify({ marginValues: marginValues, solidEnabled: solidMarginEnabled }))
+  }
+  else
+  {
+    marginValues = fillMissingSolidMarginValues(currentMapSource.getCustomDefaultMargins())
+  }
+
+  if (editMarginID === "solid")
+  {
+    toggleMarginEditing()
+  }
+  createMarginEditDropdownItems(currentMapSource.getCustomDefaultMargins() == null)
+  if (showingDataMap)
+  {
+    displayDataMap()
+  }
 }

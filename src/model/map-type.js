@@ -125,6 +125,15 @@ class MapType
 
   getEV(decade, regionID, regionData, isUpdatingMapText)
   {
+    const shouldSetDisabledWorthToZero = typeof currentMapSource !== "undefined" && currentMapSource != null && typeof currentMapSource.getShouldSetDisabledWorthToZero === "function"
+      ? currentMapSource.getShouldSetDisabledWorthToZero()
+      : false
+
+    if (shouldSetDisabledWorthToZero && regionData && regionData.disabled)
+    {
+      return 0
+    }
+
     return this.evFunction(decade, regionID, regionData, isUpdatingMapText)
   }
 

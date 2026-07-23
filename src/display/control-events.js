@@ -469,7 +469,7 @@ document.addEventListener('keypress', async function(e) {
   }
   else if (e.key == "t" && !isEditingTextbox())
   {
-    cycleMapType($("#cycleMapTypeButton")[0])
+    // cycleMapType($("#cycleMapTypeButton")[0])
   }
   else if (e.key == "Escape" && currentViewingState == ViewingState.zooming)
   {

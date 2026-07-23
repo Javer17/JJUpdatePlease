@@ -1,4 +1,7 @@
 date,region,candidate,party,offyear,runoff,voteshare
+11/16/2025,Coalition,labour,united left,FALSE,FALSE,0
+11/16/2025,Coalition,progressive,united left,FALSE,FALSE,0
+11/16/2025,Coalition,pwp,united left,FALSE,FALSE,0
 11/16/2025,North Sitting,BFDIfan,pwp,FALSE,FALSE,100
 11/16/2025,East Sitting,Flame,pwp,FALSE,FALSE,100
 11/16/2025,South Sitting,Joris,progressive,FALSE,FALSE,100
@@ -34,6 +37,9 @@ date,region,candidate,party,offyear,runoff,voteshare
 11/16/2025,National Popular Vote,PWP,pwp,FALSE,FALSE,5.24
 11/16/2025,National Popular Vote,Renewal,renewal,FALSE,FALSE,0
 11/16/2025,National Popular Vote,Independent,independent,FALSE,FALSE,9.1
+12/13/2025,Coalition,labour,united left,FALSE,FALSE,0
+12/13/2025,Coalition,progressive,united left,FALSE,FALSE,0
+12/13/2025,Coalition,pwp,united left,FALSE,FALSE,0
 12/13/2025,North Sitting,Purrium,labour,FALSE,FALSE,100
 12/13/2025,East Sitting,Potato,labour,FALSE,FALSE,100
 12/13/2025,South Sitting,Timothy Pickering,alliance,FALSE,FALSE,100
@@ -59,7 +65,10 @@ date,region,candidate,party,offyear,runoff,voteshare
 12/13/2025,National Popular Vote,Labour,labour,FALSE,FALSE,20
 12/13/2025,National Popular Vote,Progressive,progressive,FALSE,FALSE,24.2
 12/13/2025,National Popular Vote,PWP,pwp,FALSE,FALSE,29.16
-01/05/2026,North Sitting,Javer,labour,TRUE,FALSE,100
+01/05/2026,Coalition,labour,united left,FALSE,FALSE,0
+01/05/2026,Coalition,progressive,united left,FALSE,FALSE,0
+01/05/2026,Coalition,pwp,united left,FALSE,FALSE,0
+1/26/2026,Coalition,alliance,alliance,FALSE,FALSE,0
 1/26/2026,North Sitting,BFDIfan,pwp,FALSE,FALSE,100
 1/26/2026,East Sitting,Eden,alliance,FALSE,FALSE,100
 1/26/2026,South Sitting,Danylo,labour,FALSE,FALSE,100
@@ -93,8 +102,11 @@ date,region,candidate,party,offyear,runoff,voteshare
 1/26/2026,National Popular Vote,Labour,labour,FALSE,FALSE,20.13
 1/26/2026,National Popular Vote,Progressive,progressive,FALSE,FALSE,11.39
 1/26/2026,National Popular Vote,PWP,pwp,FALSE,FALSE,1.78
+03/01/2026,Coalition,jnp,bob,FALSE,FALSE,0
+03/01/2026,Coalition,alliance,bob,FALSE,FALSE,0
+03/01/2026,Coalition,solidarity,bob,FALSE,FALSE,0
 03/01/2026,North Sitting,Paradise,alliance,FALSE,FALSE,100
-03/01/2026,East Sitting,Meiscool,coalition,FALSE,FALSE,100
+03/01/2026,East Sitting,Meiscool,jnp,FALSE,FALSE,100
 03/01/2026,South Sitting,Timothy Pickering,alliance,FALSE,FALSE,100
 03/01/2026,West Sitting,Viterkol,independent,FALSE,FALSE,100
 03/01/2026,Center Sitting,Marin Kitagawa,proglab,FALSE,FALSE,100
@@ -132,6 +144,8 @@ date,region,candidate,party,offyear,runoff,voteshare
 03/01/2026,National Popular Vote,Independent,independent,FALSE,FALSE,8.85
 03/01/2026,National Popular Vote,ProgLab,proglab,FALSE,FALSE,29.11
 03/01/2026,National Popular Vote,UCP,pwp,FALSE,FALSE,14.88
+4/18/2026,Coalition,alliance,sunset,FALSE,FALSE,0
+4/18/2026,Coalition,solidarity,sunset,FALSE,FALSE,0
 04/18/2026,North Sitting,BFDIfan,green,FALSE,FALSE,100
 04/18/2026,East Sitting,NebularSpace,alliance,FALSE,FALSE,100
 04/18/2026,South Sitting,ThatRandomGuy,jnp,FALSE,FALSE,100
@@ -169,6 +183,8 @@ date,region,candidate,party,offyear,runoff,voteshare
 04/18/2026,National Popular Vote,SDP,sdp,FALSE,FALSE,28.86
 04/18/2026,National Popular Vote,Greens,green,FALSE,FALSE,12.15
 04/18/2026,National Popular Vote,UCP,ucp,FALSE,FALSE,15.63
+05/31/2026,Coalition,alliance,sunset,FALSE,FALSE,0
+05/31/2026,Coalition,fdp,sunset,FALSE,FALSE,0
 05/31/2026,North Sitting,ItzTinonTime,sdp,FALSE,FALSE,100
 05/31/2026,East Sitting,Potato,fdp,FALSE,FALSE,100
 05/31/2026,South Sitting,BlockyBeach,alliance,FALSE,FALSE,100
