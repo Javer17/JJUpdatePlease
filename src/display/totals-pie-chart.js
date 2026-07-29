@@ -91,16 +91,6 @@ var partyOrdering = [
   {partyID: JJUWildroseParty.getID(), direction: PieChartDirection.counterclockwise},
   {partyID: JJUNationalParty.getID(), direction: PieChartDirection.counterclockwise},
   {partyID: JJUDRParty.getID(), direction: PieChartDirection.counterclockwise},
-  // YAPMERIA Left to Right
-  {partyID: YAPSocialRadicalParty.getID(), direction: PieChartDirection.clockwise},
-  {partyID: YAPProgressiveParty.getID(), direction: PieChartDirection.clockwise},
-  {partyID: YAPSolidaireParty.getID(), direction: PieChartDirection.clockwise},
-  {partyID: YAPAuroraParty.getID(), direction: PieChartDirection.clockwise},
-  {partyID: YAPForwardAllianceParty.getID(), direction: PieChartDirection.clockwise},
-  {partyID: YAPCenterAllianceParty.getID(), direction: PieChartDirection.clockwise},
-  {partyID: YAPPikeParty.getID(), direction: PieChartDirection.clockwise},
-  {partyID: YAPDreamerParty.getID(), direction: PieChartDirection.clockwise},
-  {partyID: YAPProgressiveConservativeParty.getID(), direction: PieChartDirection.clockwise}
 ]
 
 const totalsPieChartCutoutPercent = 55

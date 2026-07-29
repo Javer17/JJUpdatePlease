@@ -89,7 +89,7 @@ const PoliticalPartyColors = {
   teal: {current: "#0A3831", solid: "#0A5437", safe: "#0e7f59", likely: "#31af70", lean: "#6cd99f", tilt: "#84b5a3"}, //Extended
   cyan: {current: "#083232", solid: "#0c4c56", safe: "#107281", likely: "#1DB8B3", lean: "#57DECB", tilt: "#76B3B3"}, 
   aqua: {current: "#04293A", solid: "#0F3D4C", safe: "#07587d", likely: "#2ba0d6", lean: "#55cfff", tilt: "#a9caef"}, //Extended
-  blue: {current: "#10234E", solid: "#191F68", safe: "#1c408c", likely: "#587ccc", lean: "#8aafff", tilt: "#949bb3"},
+  blue: {current: "#0d1c3d", solid: "#191F68", safe: "#1c408c", likely: "#587ccc", lean: "#8aafff", tilt: "#949bb3"},
   blurple: {current: "#1D1D3D", solid: "#252559", safe: "#3A387C", likely: "#5B5B8C", lean: "#7B7AAD", tilt: "#757481"},//Extended
   violet: {current: "#1A0B33", solid: "#2D1659", safe: "#5423A3", likely: "#8432FF", lean: "#B27FFF", tilt: "#AF9CBF"},
   purple: {current: "#300E3F", solid: "#4F1966", safe: "#7F23A3", likely: "#c928ff", lean: "#DD7FFF", tilt: "#BB9CBF"},
@@ -943,84 +943,6 @@ var IndependentGenericParty = new PoliticalParty(
   "Ind",
   "Independent",
   PoliticalPartyColors.gray
-)
-
-    ///////////////////////
-    // YAPMERIAN PARTIES //
-    ///////////////////////
-
-var YAPSolidaireParty = new PoliticalParty(
-  "YAPSPD",
-  ["Solidaire", "SPD"],
-  "SPD",
-  "Solidaire",
-  PoliticalPartyColors.pink
-)
-
-var YAPDreamerParty = new PoliticalParty(
-  "YAPDRM",
-  ["Dreamer"],
-  "Drm",
-  "Dreamer",
-  PoliticalPartyColors.lime
-)
-
-var YAPSocialRadicalParty = new PoliticalParty(
-  "YAPSRD",
-  ["Social Radical", "SR", "SocRad"],
-  "SocRad",
-  "Social Radical",
-  PoliticalPartyColors.teal
-)
-
-var YAPAuroraParty = new PoliticalParty(
-  "YAPAUR",
-  ["Aurora"],
-  "Aur",
-  "Aurora",
-  PoliticalPartyColors.pink
-)
-
-var YAPProgressiveParty = new PoliticalParty(
-  "YAPPRG",
-  ["Progressive", "Prog"],
-  "Prog",
-  "Progressive",
-  PoliticalPartyColors.purple,
-  [YAPAuroraParty]
-)
-
-var YAPCenterAllianceParty = new PoliticalParty(
-  "YAPCTR",
-  ["Center All", "CA"],
-  "CA",
-  "Center Alliance",
-  PoliticalPartyColors.lime
-)
-
-var YAPPikeParty = new PoliticalParty(
-  "YAPPIK",
-  ["Pike"],
-  "Pik",
-  "Pike",
-  PoliticalPartyColors.yellow
-)
-
-var YAPProgressiveConservativeParty = new PoliticalParty(
-  "YAPPRC",
-  ["ProgCon", "ProgCons", "PC"],
-  "PC",
-  "Progressive Conservative",
-  PoliticalPartyColors.blue
-)
-
-var YAPForwardAllianceParty = new PoliticalParty(
-  "YAPFOR",
-  ["Forward All.","Forward Alliance", "FA"],
-  "FA",
-  "Forward Alliance",
-  PoliticalPartyColors.green,
-  [YAPCenterAllianceParty]
 )
 
 var politicalParties = {}

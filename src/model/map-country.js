@@ -366,48 +366,6 @@ function setMapCountries()
     ],
     []
   )
-
-    YAPMapCountry.setMapTypes({
-    [YAPPresidentMapType.getID()]: YAPPresidentMapType,
-    [YAPGovernorMapType.getID()]: YAPGovernorMapType,
-    [YAPSenateMapType.getID()]: YAPSenateMapType
-  })
-
-
-  YAPMapCountry.setPoliticalPartyData(
-    { //Parties
-      [TossupParty.getID()]: TossupParty,
-      [IndependentGenericParty.getID()]: IndependentGenericParty,
-      [YAPSolidaireParty.getID()]: YAPSolidaireParty,
-      [YAPDreamerParty.getID()]: YAPDreamerParty,
-      [YAPSocialRadicalParty.getID()]: YAPSocialRadicalParty,
-      [YAPProgressiveParty.getID()]: YAPProgressiveParty,
-      [YAPAuroraParty.getID()]: YAPAuroraParty,
-      [YAPCenterAllianceParty.getID()]: YAPCenterAllianceParty,
-      [YAPPikeParty.getID()]: YAPPikeParty,
-      [YAPProgressiveConservativeParty.getID()]: YAPProgressiveConservativeParty,
-      [YAPForwardAllianceParty.getID()]: YAPForwardAllianceParty
-    },
-    [ //Default
-      IndependentGenericParty.getID(),
-      YAPSolidaireParty.getID(),
-      YAPDreamerParty.getID(),
-    ],
-    [ //Party IDs
-      TossupParty.getID(),
-      YAPSolidaireParty.getID(),
-      YAPDreamerParty.getID(),
-      IndependentGenericParty.getID(),
-      YAPSocialRadicalParty.getID(),
-      YAPProgressiveParty.getID(),
-      YAPAuroraParty.getID(),
-      YAPCenterAllianceParty.getID(),
-      YAPPikeParty.getID(),
-      YAPProgressiveConservativeParty.getID(),
-      YAPForwardAllianceParty.getID()
-    ],
-    []
-  )
   
   JJUMapCountry.setCountdownTimes({
     "January 2026 General Elections": {time: 1769385600000, url: null},
@@ -416,19 +374,12 @@ function setMapCountries()
     "May 2026 Midterm Elections": {time: 1780182000000, url: null}
   })
 
-    YAPMapCountry.setCountdownTimes({
-    "January 2026 General Elections": {time: 1769385600000, url: null},
-    "February 2026 Midterm Elections": {time: 1772326800000, url: null},
-    "April 2026 General Elections": {time: 1776474000000, url: null},
-    "May 2026 Midterm Elections": {time: 1780182000000, url: null}
-  })
   
   mapCountries[USAMapCountry.getID()] = USAMapCountry
   mapCountries[JJUMapCountry.getID()] = JJUMapCountry
-  mapCountries[YAPMapCountry.getID()] = YAPMapCountry
   mapCountries[UKMapCountry.getID()] = UKMapCountry
 
-  mapCountryIDs = [USAMapCountry.getID(), JJUMapCountry.getID(), YAPMapCountry.getID(), UKMapCountry.getID()]
+  mapCountryIDs = [USAMapCountry.getID(), JJUMapCountry.getID(), UKMapCountry.getID()]
 }
 
 let USAMapCountry = new MapCountry(
@@ -450,11 +401,4 @@ let JJUMapCountry = new MapCountry(
   "Jacksonia",
   "JJU",
   "assets/jju-flag-10.png"
-)
-
-let YAPMapCountry = new MapCountry(
-  "YAP",
-  "Yapmeria",
-  "YAP",
-  "assets/yapmeria-flag.png"
 )
