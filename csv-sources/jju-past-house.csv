@@ -928,8 +928,8 @@ date,region,candidate,party,offyear,runoff,voteshare,candidatevotes,totalvotes
 4/18/2026,Emix,Trey,green,FALSE,FALSE,32.17,110009,342001
 4/18/2026,Emix,Javer,sdp,FALSE,FALSE,23.61,80761,342001
 4/18/2026,Emix,Newsom,solidarity,FALSE,FALSE,10.39,35537,342001
-4/18/2026,Emix,Jerry,alliance,FALSE,TRUE,44.29,177963,319440
-4/18/2026,Emix,Trey,green,FALSE,TRUE,55.71,141477,319440
+4/18/2026,Emix,Jerry,alliance,FALSE,TRUE,44.29,141477,319440
+4/18/2026,Emix,Trey,green,FALSE,TRUE,55.71,177963,319440
 4/18/2026,Kilden,Cob,ucp,FALSE,FALSE,62.92,211395,336000
 4/18/2026,Kilden,Newsom,solidarity,FALSE,FALSE,37.08,124605,336000
 4/18/2026,Brunix Islands,Jack Ciattarelli,alliance,FALSE,FALSE,69.04,236105,342000
