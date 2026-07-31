@@ -116,7 +116,7 @@ var RepublicanParty = new PoliticalParty(
   ["Republican"],
   "Rep",
   "Republican",
-  PoliticalPartyColors.tan
+  PoliticalPartyColors.red
 )
 
 var TossupParty = new PoliticalParty(
