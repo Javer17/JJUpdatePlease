@@ -84,6 +84,7 @@ const PoliticalPartyColors = {
   scarlet: {current: "#6D1900", solid: "#A02500", safe: "#DE3B00", likely: "#FF6B36", lean: "#FFAE85", tilt: "#C39A74"}, //Extended
   orange: {current: "#7A3300", solid: "#c64500", safe: "#ff6200", likely: "#FF9758", lean: "#FFB28B", tilt: "#CFAD80"},
   yellow: {current: "#7F4C00", solid: "#B76800", safe: "#FE9800", likely: "#e8a43e", lean: "#eab86e", tilt: "#cbb78a"},
+  tan: {current: "#503B1C", solid: "#715618", safe: "#A27A38", likely: "#BA9760", lean: "#EBCC9F", tilt: "#C1B88E"}, //Extended
   lime: {current: "#3D5111", solid: "#5A750A", safe: "#789c0d", likely: "#98bf21", lean: "#b9d669", tilt: "#afbb83"},
   green: {current: "#0B5307", solid: "#19770A", safe: "#24A30E", likely: "#5CC449", lean: "#91D785", tilt: "#96BA8F"}, //Extended
   teal: {current: "#0A3831", solid: "#0A5437", safe: "#0e7f59", likely: "#31af70", lean: "#6cd99f", tilt: "#84b5a3"}, //Extended
@@ -115,7 +116,7 @@ var RepublicanParty = new PoliticalParty(
   ["Republican"],
   "Rep",
   "Republican",
-  PoliticalPartyColors.red
+  PoliticalPartyColors.tan
 )
 
 var TossupParty = new PoliticalParty(
@@ -690,6 +691,22 @@ var UKTUVParty = new PoliticalParty(
   "TUV",
   "TUV",
   PoliticalPartyColors.blurple
+)
+
+var UKVoltParty = new PoliticalParty(
+  "UKVOLT",
+  ["Volt"],
+  "Volt",
+  "Volt",
+  PoliticalPartyColors.violet
+)
+
+var UKMRLPParty = new PoliticalParty(
+  "UKMRLP",
+  ["MRLP"],
+  "MRLP",
+  "MRLP",
+  PoliticalPartyColors.yellow
 )
 
     ////////////////////////

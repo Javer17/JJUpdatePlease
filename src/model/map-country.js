@@ -231,6 +231,8 @@ function setMapCountries()
       [UKWorkersPartyOfBritainParty.getID()]: UKWorkersPartyOfBritainParty,
       [UKUKIPParty.getID()]: UKUKIPParty,
       [UKTUVParty.getID()]: UKTUVParty,
+      [UKVoltParty.getID()]: UKVoltParty,
+      [UKMRLPParty.getID()]: UKMRLPParty,
     },
     [ //Default
       IndependentGenericParty.getID(),
@@ -268,6 +270,8 @@ function setMapCountries()
       UKWorkersPartyOfBritainParty.getID(),
       UKUKIPParty.getID(),
       UKTUVParty.getID(),
+      UKVoltParty.getID(),
+      UKMRLPParty.getID(),
       // UKpartythingy
     ],
     []
