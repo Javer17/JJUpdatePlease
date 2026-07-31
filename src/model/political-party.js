@@ -84,7 +84,6 @@ const PoliticalPartyColors = {
   scarlet: {current: "#6D1900", solid: "#A02500", safe: "#DE3B00", likely: "#FF6B36", lean: "#FFAE85", tilt: "#C39A74"}, //Extended
   orange: {current: "#7A3300", solid: "#c64500", safe: "#ff6200", likely: "#FF9758", lean: "#FFB28B", tilt: "#CFAD80"},
   yellow: {current: "#7F4C00", solid: "#B76800", safe: "#FE9800", likely: "#e8a43e", lean: "#eab86e", tilt: "#cbb78a"},
-  tan: {current: "#503B1C", solid: "#715618", safe: "#A27A38", likely: "#BA9760", lean: "#EBCC9F", tilt: "#C1B88E"}, //Extended
   lime: {current: "#3D5111", solid: "#5A750A", safe: "#789c0d", likely: "#98bf21", lean: "#b9d669", tilt: "#afbb83"},
   green: {current: "#0B5307", solid: "#19770A", safe: "#24A30E", likely: "#5CC449", lean: "#91D785", tilt: "#96BA8F"}, //Extended
   teal: {current: "#0A3831", solid: "#0A5437", safe: "#0e7f59", likely: "#31af70", lean: "#6cd99f", tilt: "#84b5a3"}, //Extended
@@ -97,6 +96,7 @@ const PoliticalPartyColors = {
   magenta: {current: "#4C0024", solid: "#75043C", safe: "#AB0354", likely: "#E8026E", lean: "#fe62b5", tilt: "#B87F9C"}, //Extended
   pink: {current: "#721C3D", solid: "#A82A58", safe: "#ff3e82", likely: "#ff78b5", lean: "#ff9ce5", tilt: "#dfabd1"}, 
   brown: {current: "#351800", solid: "#4C2812", safe: "#663514", likely: "#A86234", lean: "#D88856", tilt: "#F7C2A6"},
+  tan: {current: "#503B1C", solid: "#715618", safe: "#A27A38", likely: "#BA9760", lean: "#EBCC9F", tilt: "#C1B88E"}, //Extended
   maroon: {current: "#2D0A0A", solid: "#421518", safe: "#661E1F", likely: "#A04241", lean: "#AC6467", tilt: "#BA8C86"}, //Extended
   gray: {current: "#211F1A", solid: "#302D28", safe: "#474339", likely: "#77705F", lean: "#B9B4A7", tilt: "#D8D6CF"}
 }
