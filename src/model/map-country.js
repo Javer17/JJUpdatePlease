@@ -332,7 +332,6 @@ function setMapCountries()
       JJUSDPParty.getID(),
       JJUGreenParty.getID(),
       JJUSPJUParty.getID(),
-      JJUUCPParty.getID(),
       IndependentGenericParty.getID()
     ],
     [
