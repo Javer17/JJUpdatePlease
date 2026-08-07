@@ -3,7 +3,7 @@ var YAPSenateMapType = new MapType(
   "Senate",
   "S",
   "assets/usa-senate.png",
-  "svg-sources/yap-senate-17.svg",
+  "svg-sources/yap-states.svg",
   34,
   function()
   {
@@ -17,6 +17,7 @@ var YAPSenateMapType = new MapType(
   true,
   {"CM": "Cambria", 
     "CA": "Calleoria", 
+    "CA-2": "Calleoria 2nd",
     "KO": "Kostos", 
     "CE": "Cerbska", 
     "AR": "Armallos",
@@ -84,6 +85,7 @@ var YAPSenateMapType = new MapType(
 	  const regionNameToID = {
   "Cambria": "CM",
   "Calleoria": "CA",
+  "Calleoria 2nd": "CA-2",
   "Kostos": "KO",
   "Cerbska": "CE",
   "Armallos": "AR",
@@ -134,24 +136,10 @@ var YAPSenateMapType = new MapType(
       const regions = [...getStates(), ...getListRegions(17)] // It somehow doesn't work so i have to do ts...
       const regionDateRanges = [
         {
-          start: new Date(2000, 1-1, 1-1).getTime(),
+          start: new Date(1000, 1-1, 1-1).getTime(),
           regions: [
             ...getStates(),
-            ...getListRegions(5)
-          ]
-        },
-  {
-          start: new Date(2002, 1-1, 1-1).getTime(),
-          regions: [
-            ...getStates(),
-            ...getListRegions(10)
-          ]
-        },
-        {
-          start: new Date(2025, 1-1, 26-1).getTime(),
-          regions: [
-            ...getStates(),
-            ...getListRegions(17)
+            ...getListRegions(0)
           ]
         }
       ]
@@ -501,7 +489,7 @@ var YAPSenateMapType = new MapType(
       
       if (mapDate < new Date(2001, 12-1, 31-1))
       {
-        return "svg-sources/yap-senate-5.svg"
+        return "svg-sources/yap-states-ca2.svg"
       }
       else if (mapDate < new Date(2002, 12-1, 31-1))
       {
@@ -608,70 +596,70 @@ var YAPSenateMapType = new MapType(
       {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE} // customDefaultMargins
 	  )
     
-    var PastListElectionResultMapSource = new MapSource(
-      "YAP-Past-List-Senate-Elections", // id
-      "Past List Elections", // name
-      "./csv-sources/yap-past-list.csv", // dataURL
-      "https://docs.google.com/spreadsheets/d", // homepageURL
-      {regular: "./assets/yapmeria-flag.png", mini: "./assets/wikipedia-large.png", getOverlayText: () => {
-        let currentYear = currentSliderDate.getFullYear()
-        return currentYear
-      }}, // iconURL
-      {
-        date: "date",
-        region: "region",
-        isSpecial: "special",
-        isRunoff: "runoff",
-        isOffyear: "offyear",
-        candidateName: "candidate",
-        partyID: "party",
-        voteshare: "voteshare",
-        candidateVotes: "candidatevotes",
-        totalVotes: "totalvotes"
-      }, // columnMap
-      null, // cycleYear
-      null, // candidateNameToPartyIDMap
-      null, // shortCandidateNameOverride
-      regionNameToID, // regionNameToIDMap
-      null, // regionIDToLinkMap
-      null, // heldRegionMap
-      false, // shouldFilterOutDuplicateRows
-      true, // addDecimalPadding
-      doubleLineVoteshareFilterFunction, // organizeMapDataFunction
-      null, // viewingDataFunction
-      null, // zoomingDataFunction
-      null, // splitVoteDataFunction
-      null, // splitVoteDisplayOptions
-      getFormattedRegionName, // getFormattedRegionName
-      function(homepageURL, regionID, _, mapDate, __, mapData)
-      {
-        console.log(mapData, mapDate)
+    // var PastListElectionResultMapSource = new MapSource(
+    //   "YAP-Past-List-Senate-Elections", // id
+    //   "Past List Elections", // name
+    //   "./csv-sources/yap-past-list.csv", // dataURL
+    //   "https://docs.google.com/spreadsheets/d", // homepageURL
+    //   {regular: "./assets/yapmeria-flag.png", mini: "./assets/wikipedia-large.png", getOverlayText: () => {
+    //     let currentYear = currentSliderDate.getFullYear()
+    //     return currentYear
+    //   }}, // iconURL
+    //   {
+    //     date: "date",
+    //     region: "region",
+    //     isSpecial: "special",
+    //     isRunoff: "runoff",
+    //     isOffyear: "offyear",
+    //     candidateName: "candidate",
+    //     partyID: "party",
+    //     voteshare: "voteshare",
+    //     candidateVotes: "candidatevotes",
+    //     totalVotes: "totalvotes"
+    //   }, // columnMap
+    //   null, // cycleYear
+    //   null, // candidateNameToPartyIDMap
+    //   null, // shortCandidateNameOverride
+    //   regionNameToID, // regionNameToIDMap
+    //   null, // regionIDToLinkMap
+    //   null, // heldRegionMap
+    //   false, // shouldFilterOutDuplicateRows
+    //   true, // addDecimalPadding
+    //   doubleLineVoteshareFilterFunction, // organizeMapDataFunction
+    //   null, // viewingDataFunction
+    //   null, // zoomingDataFunction
+    //   null, // splitVoteDataFunction
+    //   null, // splitVoteDisplayOptions
+    //   getFormattedRegionName, // getFormattedRegionName
+    //   function(homepageURL, regionID, _, mapDate, __, mapData)
+    //   {
+    //     console.log(mapData, mapDate)
         
-        const regionData = mapData[mapDate.getTime()][regionID]
-        if (regionData && regionData.isHold && regionData.electionDate)
-        {
-          mapDate = new Date(regionData.electionDate)
-        }
+    //     const regionData = mapData[mapDate.getTime()][regionID]
+    //     if (regionData && regionData.isHold && regionData.electionDate)
+    //     {
+    //       mapDate = new Date(regionData.electionDate)
+    //     }
         
-        let spreadsheetLinkData = electionDateToSpreadsheetData[mapDate.getTime()]
-        if (!spreadsheetLinkData) return null
+    //     let spreadsheetLinkData = electionDateToSpreadsheetData[mapDate.getTime()]
+    //     if (!spreadsheetLinkData) return null
         
-        let linkToOpen = `${homepageURL}/${spreadsheetLinkData.id}/edit?gid=${spreadsheetLinkData.regions[regionID] ?? 0}`
+    //     let linkToOpen = `${homepageURL}/${spreadsheetLinkData.id}/edit?gid=${spreadsheetLinkData.regions[regionID] ?? 0}`
       
-        return linkToOpen
-      }, // customOpenRegionLinkFunction
-      null, // updateCustomMapFunction
-      null, // convertMapDataRowToCSVFunction
-      null, // isCustomMap
-      null, // shouldClearDisabled
-      true, // shouldShowVoteshare
-      0.0, // voteshareCutoffMargin
-      getSenateSVGByDate, // overrideSVGPath
-      true, // shouldSetDisabledWorthToZero
-      null, // shouldUseOriginalMapDataForTotalsPieChart
-      null, // shouldForcePopularVoteDisplay
-      {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}// customDefaultMargins
-    )
+    //     return linkToOpen
+    //   }, // customOpenRegionLinkFunction
+    //   null, // updateCustomMapFunction
+    //   null, // convertMapDataRowToCSVFunction
+    //   null, // isCustomMap
+    //   null, // shouldClearDisabled
+    //   true, // shouldShowVoteshare
+    //   0.0, // voteshareCutoffMargin
+    //   getSenateSVGByDate, // overrideSVGPath
+    //   true, // shouldSetDisabledWorthToZero
+    //   null, // shouldUseOriginalMapDataForTotalsPieChart
+    //   null, // shouldForcePopularVoteDisplay
+    //   {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}// customDefaultMargins
+    // )
   
 	  var idsToPartyNames = {}
 	  var partyNamesToIDs = {}
@@ -735,19 +723,21 @@ var YAPSenateMapType = new MapType(
   
 	  var senateMapSources = {}
 	  senateMapSources[PastElectionResultMapSource.getID()] = PastElectionResultMapSource
-    senateMapSources[PastListElectionResultMapSource.getID()] = PastListElectionResultMapSource
+    // senateMapSources[PastListElectionResultMapSource.getID()] = PastListElectionResultMapSource
 	  senateMapSources[CustomMapSource.getID()] = CustomMapSource
   
 	  const senateMapSourceIDs = {
-	    [allYearsCycle]: [PastElectionResultMapSource.getID(), PastListElectionResultMapSource.getID(), CustomMapSource.getID()]
+	    [allYearsCycle]: [PastElectionResultMapSource.getID(),
+        //  PastListElectionResultMapSource.getID(),
+          CustomMapSource.getID()]
 	  }
 	  
 	  const kPastElectionsVsPastElections = 1
-    const kPastListElectionsVsPastListElections = 2
+    // const kPastListElectionsVsPastListElections = 2
   
 	  var defaultSenateCompareSourceIDs = {}
 	  defaultSenateCompareSourceIDs[kPastElectionsVsPastElections] = [PastElectionResultMapSource.getID(), PastElectionResultMapSource.getID()]
-    defaultSenateCompareSourceIDs[kPastListElectionsVsPastListElections] = [PastListElectionResultMapSource.getID(), PastListElectionResultMapSource.getID()]
+    // defaultSenateCompareSourceIDs[kPastListElectionsVsPastListElections] = [PastListElectionResultMapSource.getID(), PastListElectionResultMapSource.getID()]
   
 	  return {mapSources: senateMapSources, mapSourceIDs: senateMapSourceIDs, mapCycles: [], defaultCompareSourceIDs: defaultSenateCompareSourceIDs, customSourceID: CustomMapSource.getID()}
   }

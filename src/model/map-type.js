@@ -395,5 +395,9 @@ const regionEVArray = {
   1820: {"AL":5, "AK":0, "AZ":0, "AR":0, "CA":0, "CO":0, "CT":8, "DE":3, "DC":0, "FL":0, "GA":9, "HI":0, "ID":0, "IL":3, "IN":5, "IA":0, "KS":0, "KY":14, "LA":5, "ME-D1":0, "ME-D2":0, "ME-AL":9, "MD":11, "MA":15, "MI":0, "MN":0, "MS":3, "MO":3, "MT":0, "NE-D1":0, "NE-D2":0, "NE-D3":0, "NE-AL":0, "NV":0, "NH":8, "NJ":8, "NM":0, "NY":36, "NC":15, "ND":0, "OH":16, "OK":0, "OR":0, "PA":28, "RI":4, "SC":11, "SD":0, "TN":11, "TX":0, "UT":0, "VT":7, "VA":24, "WA":0, "WV":0, "WI":0, "WY":0}
 }
 
+const regionEVArrayYAP = {
+  1000: {"AC":1, "AR": 1, "BL":2, "CA":10, "CE":1, "CM":1, "DF":0, "ES":1, "KO":1, "LA":5, "MA": 3, "NQ":7, "OP":2, "PR":0, "RO":5, "ST":4, "TL":0, "ADD1":7, "ADD2":34, "ADD3":0, "ADD4":0},
+}
+
 var mapTypes = {}
 var mapTypeIDs = []

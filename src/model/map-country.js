@@ -377,12 +377,54 @@ function setMapCountries()
     "May 2026 Midterm Elections": {time: 1780182000000, url: null}
   })
 
+    YAPMapCountry.setMapTypes({
+    [YAPSenateMapType.getID()]: YAPSenateMapType,
+    [YAPGovernorMapType.getID()]: YAPGovernorMapType,
+    [YAPPresidentMapType.getID()]: YAPPresidentMapType,
+  })
+
+
+  YAPMapCountry.setPoliticalPartyData(
+    { //Parties
+      [TossupParty.getID()]: TossupParty,
+      [IndependentGenericParty.getID()]: IndependentGenericParty,
+      [YAPSGPParty.getID()]: YAPSGPParty,
+      [YAPLabourParty.getID()]: YAPLabourParty,
+      [YAPSDFParty.getID()]: YAPSDFParty,
+      [YAPReformParty.getID()]: YAPReformParty
+    },
+    [ //Default
+      IndependentGenericParty.getID(),
+      YAPSGPParty.getID(),
+      YAPLabourParty.getID(),
+      YAPSDFParty.getID(),
+      YAPReformParty.getID(),
+    ],
+    [ //Party IDs
+      TossupParty.getID(),
+      IndependentGenericParty.getID(),
+      YAPSGPParty.getID(),
+      YAPLabourParty.getID(),
+      YAPSDFParty.getID(),
+      YAPReformParty.getID(),
+    ],
+    []
+  )
+
+  YAPMapCountry.setCountdownTimes({
+    "January 2026 General Elections": {time: 1769385600000, url: null},
+    "February 2026 Midterm Elections": {time: 1772326800000, url: null},
+    "April 2026 General Elections": {time: 1776474000000, url: null},
+    "May 2026 Midterm Elections": {time: 1780182000000, url: null}
+  })
+
   
   mapCountries[USAMapCountry.getID()] = USAMapCountry
   mapCountries[JJUMapCountry.getID()] = JJUMapCountry
   mapCountries[UKMapCountry.getID()] = UKMapCountry
+  mapCountries[YAPMapCountry.getID()] = YAPMapCountry
 
-  mapCountryIDs = [USAMapCountry.getID(), JJUMapCountry.getID(), UKMapCountry.getID()]
+  mapCountryIDs = [USAMapCountry.getID(), JJUMapCountry.getID(), UKMapCountry.getID(), YAPMapCountry.getID()]
 }
 
 let USAMapCountry = new MapCountry(
@@ -404,4 +446,11 @@ let JJUMapCountry = new MapCountry(
   "Jacksonia",
   "JJU",
   "assets/jju-flag-10.png"
+)
+
+let YAPMapCountry = new MapCountry(
+  "YAP",
+  "Yapmeria",
+  "YAP",
+  "assets/yapmeria-flag.png"
 )

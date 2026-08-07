@@ -1,1073 +1,1087 @@
-date,region,candidate,party,offyear,runoff,voteshare,candidatevotes,totalvotes
-8/21/2024,Coalition,labour,lablib,FALSE,FALSE,0,,
-8/21/2024,Coalition,liberal,lablib,FALSE,FALSE,0,,
-8/21/2024,North,Virt,liberal,FALSE,FALSE,42.86,3,7
-8/21/2024,North,Armstrong,independent,FALSE,FALSE,28.57,2,7
-8/21/2024,North,Cob,labour,FALSE,FALSE,14.29,1,7
-8/21/2024,North,Geodore,independent,FALSE,FALSE,14.29,1,7
-8/21/2024,North,Virt,liberal,FALSE,TRUE,57.14,4,7
-8/21/2024,North,Armstrong,independent,FALSE,TRUE,42.86,3,7
-8/21/2024,East,GMV,liberal,FALSE,FALSE,62.5,5,8
-8/21/2024,East,Copperhead,conservative,FALSE,FALSE,37.5,3,8
-8/21/2024,South,Ok,labour,FALSE,FALSE,60,6,10
-8/21/2024,South,Deet0722,alliance,FALSE,FALSE,40,4,10
-8/21/2024,West,Nath,liberal,FALSE,FALSE,36.36,4,11
-8/21/2024,West,Spakian,conservative,FALSE,FALSE,36.36,4,11
-8/21/2024,West,Plxto,labour,FALSE,FALSE,18.18,2,11
-8/21/2024,West,June_3rd,independent,FALSE,FALSE,9.09,1,11
-8/21/2024,West,Nath,liberal,FALSE,TRUE,60,6,10
-8/21/2024,West,Spakian,conservative,FALSE,TRUE,40,4,10
-8/21/2024,List Seat 1,How do i type,conservative,FALSE,FALSE,100,,
-8/21/2024,List Seat 2,BlockyBeach,conservative,FALSE,FALSE,100,,
-8/21/2024,List Seat 3,Deet0722,conservative,FALSE,FALSE,100,,
-8/21/2024,List Seat 4,Copperhead,conservative,FALSE,FALSE,100,,
-8/21/2024,List Seat 5,Charlemagne,liberal,FALSE,FALSE,100,,
-8/21/2024,List Seat 6,Cob,labour,FALSE,FALSE,100,,
-8/21/2024,List Seat 7,KingsCastle,labour,FALSE,FALSE,100,,
-8/21/2024,List Seat 8,Plxto,labour,FALSE,FALSE,100,,
-8/21/2024,List Seat 9,Ash,labour,FALSE,FALSE,100,,
-8/21/2024,National Popular Vote,Labour,labour,FALSE,FALSE,38.89,,
-8/21/2024,National Popular Vote,Liberal,liberal,FALSE,FALSE,30.56,,
-8/21/2024,National Popular Vote,Conservative,conservative,FALSE,FALSE,30.56,,
-9/21/2024,Coalition,labour,lablib,FALSE,FALSE,0,,
-9/21/2024,Coalition,liberal,lablib,FALSE,FALSE,0,,
-9/21/2024,North,Josh Shapiro Fan,liberal,FALSE,FALSE,62.5,5,8
-9/21/2024,North,Virt,liberal,FALSE,FALSE,12.5,1,8
-9/21/2024,North,Cob,labour,FALSE,FALSE,12.5,1,8
-9/21/2024,North,Geodore,independent,FALSE,FALSE,12.5,1,8
-9/21/2024,West,Nath,liberal,FALSE,FALSE,44.44,4,9
-9/21/2024,West,BlockyBeach,alliance,FALSE,FALSE,33.33,3,9
-9/21/2024,West,Ash,labour,FALSE,FALSE,22.22,2,9
-9/21/2024,West,Nath,liberal,FALSE,TRUE,66.7,6,9
-9/21/2024,West,BlockyBeach,alliance,FALSE,TRUE,33.3,3,9
-9/21/2024,East,Copperhead,alliance,FALSE,FALSE,50,2,4
-9/21/2024,East,GMV,liberal,FALSE,FALSE,25,1,4
-9/21/2024,East,toilet paper,labour,FALSE,FALSE,25,1,4
-9/21/2024,East,Copperhead,alliance,FALSE,TRUE,50.001,2,4
-9/21/2024,East,GMV,liberal,FALSE,TRUE,50,2,4
-9/21/2024,South,Ok,labour,FALSE,FALSE,83.33,5,6
-9/21/2024,South,How do i type,alliance,FALSE,FALSE,16.67,1,6
-9/21/2024,List Seat 1,How do i type,alliance,FALSE,FALSE,100,,
-9/21/2024,List Seat 2,BlockyBeach,alliance,FALSE,FALSE,100,,
-9/21/2024,List Seat 3,Deet0722,alliance,FALSE,FALSE,100,,
-9/21/2024,List Seat 4,Virt,liberal,FALSE,FALSE,100,,
-9/21/2024,List Seat 5,GMV,liberal,FALSE,FALSE,100,,
-9/21/2024,List Seat 6,Charlemagne,liberal,FALSE,FALSE,100,,
-9/21/2024,List Seat 7,Cob,labour,FALSE,FALSE,100,,
-9/21/2024,List Seat 8,Ash,labour,FALSE,FALSE,100,,
-9/21/2024,List Seat 9,Dannyunown0,labour,FALSE,FALSE,100,,
-9/21/2024,National Popular Vote,Labour,labour,FALSE,FALSE,30.77,,
-9/21/2024,National Popular Vote,Liberal,liberal,FALSE,FALSE,38.46,,
-9/21/2024,National Popular Vote,Alliance,alliance,FALSE,FALSE,30.77,,
-10/20/2024,Coalition,labour,unity,FALSE,FALSE,0,,
-10/20/2024,Coalition,liberal,unity,FALSE,FALSE,0,,
-10/20/2024,Coalition,alliance,unity,FALSE,FALSE,0,,
-10/20/2024,East,Copperhead,alliance,FALSE,FALSE,60,3,5
-10/20/2024,East,toilet paper,labour,FALSE,FALSE,40,2,5
-10/20/2024,South,Dannyunown0,labour,FALSE,FALSE,62.5,5,8
-10/20/2024,South,How do i type,alliance,FALSE,FALSE,37.5,3,8
-10/20/2024,West,Nath,liberal,FALSE,FALSE,45.45,5,11
-10/20/2024,West,BlockyBeach,alliance,FALSE,FALSE,36.36,4,11
-10/20/2024,West,Ash,labour,FALSE,FALSE,18.18,2,11
-10/20/2024,West,Nath,liberal,FALSE,TRUE,63.64,7,11
-10/20/2024,West,BlockyBeach,alliance,FALSE,TRUE,36.36,4,11
-10/20/2024,North,Charlemagne,liberal,FALSE,FALSE,30,3,10
-10/20/2024,North,Alex,alliance,FALSE,FALSE,40,4,10
-10/20/2024,North,Virt,liberal,FALSE,FALSE,30,3,10
-10/20/2024,North,Charlemagne,liberal,FALSE,TRUE,55.56,5,9
-10/20/2024,North,Alex,alliance,FALSE,TRUE,44.44,4,9
-10/20/2024,List Seat 1,How do i type,alliance,FALSE,FALSE,100,,
-10/20/2024,List Seat 2,BlockyBeach,alliance,FALSE,FALSE,100,,
-10/20/2024,List Seat 3,Virt,liberal,FALSE,FALSE,100,,
-10/20/2024,List Seat 4,GMV,liberal,FALSE,FALSE,100,,
-10/20/2024,List Seat 5,Strxya,liberal,FALSE,FALSE,100,,
-10/20/2024,List Seat 6,Cob,labour,FALSE,FALSE,100,,
-10/20/2024,List Seat 7,Ash,labour,FALSE,FALSE,100,,
-10/20/2024,List Seat 8,Libtard,labour,FALSE,FALSE,100,,
-10/20/2024,National Popular Vote,Labour,labour,FALSE,FALSE,30.3,,
-10/20/2024,National Popular Vote,Liberal,liberal,FALSE,FALSE,42.42,,
-10/20/2024,National Popular Vote,Alliance,alliance,FALSE,FALSE,27.27,,
-11/24/2024,Coalition,labour,labourcon,FALSE,FALSE,0,,
-11/24/2024,Coalition,alliance,labourcon,FALSE,FALSE,0,,
-11/24/2024,South,Dannyunown0,labour,FALSE,FALSE,57.14,4,7
-11/24/2024,South,Meiscool,alliance,FALSE,FALSE,42.86,3,7
-11/24/2024,East,Copperhead,alliance,FALSE,FALSE,75,6,8
-11/24/2024,East,GMV,liberal,FALSE,FALSE,25,2,8
-11/24/2024,North,Alex,liberal,FALSE,FALSE,50,4,8
-11/24/2024,North,Virt,liberal,FALSE,FALSE,25,2,8
-11/24/2024,North,Charlemagne,liberal,FALSE,FALSE,12.5,1,8
-11/24/2024,North,Geodore,alliance,FALSE,FALSE,12.5,1,8
-11/24/2024,North,Alex,liberal,FALSE,TRUE,62.5,5,8
-11/24/2024,North,Virt,liberal,FALSE,TRUE,25,2,8
-11/24/2024,North,Charlemagne,liberal,FALSE,TRUE,12.5,1,8
-11/24/2024,West,Nath,liberal,FALSE,FALSE,40,4,10
-11/24/2024,West,BlockyBeach,alliance,FALSE,FALSE,40,4,10
-11/24/2024,West,Ash,labour,FALSE,FALSE,20,2,10
-11/24/2024,West,Nath,liberal,FALSE,TRUE,60,6,10
-11/24/2024,West,BlockyBeach,alliance,FALSE,TRUE,40,4,10
-11/24/2024,List Seat 1,How do i type,alliance,FALSE,FALSE,100,,
-11/24/2024,List Seat 2,BlockyBeach,alliance,FALSE,FALSE,100,,
-11/24/2024,List Seat 3,Geodore,alliance,FALSE,FALSE,100,,
-11/24/2024,List Seat 4,Virt,liberal,FALSE,FALSE,100,,
-11/24/2024,List Seat 5,Charlemagne,liberal,FALSE,FALSE,100,,
-11/24/2024,List Seat 6,Sonia Gandhi,labour,FALSE,FALSE,100,,
-11/24/2024,List Seat 7,Ok,labour,FALSE,FALSE,100,,
-11/24/2024,List Seat 8,Ash,labour,FALSE,FALSE,100,,
-11/24/2024,National Popular Vote,Labour,labour,FALSE,FALSE,35.48,,
-11/24/2024,National Popular Vote,Liberal,liberal,FALSE,FALSE,32.26,,
-11/24/2024,National Popular Vote,Alliance,alliance,FALSE,FALSE,32.26,,
-12/15/2024,Coalition,labour,labourcon,FALSE,FALSE,0,,
-12/15/2024,Coalition,alliance,labourcon,FALSE,FALSE,0,,
-12/15/2024,West,Suom,liberal,FALSE,FALSE,53.33,8,15
-12/15/2024,West,BlockyBeach,alliance,FALSE,FALSE,33.33,5,15
-12/15/2024,West,Skillyoshi,independent,FALSE,FALSE,6.67,1,15
-12/15/2024,West,Srawyer,independent,FALSE,FALSE,6.67,1,15
-12/15/2024,North,Alex,liberal,FALSE,FALSE,45.45,5,11
-12/15/2024,North,Medikit,alliance,FALSE,FALSE,36.36,4,11
-12/15/2024,North,Charlemagne,liberal,FALSE,FALSE,18.18,2,11
-12/15/2024,North,Alex,liberal,FALSE,TRUE,60,6,10
-12/15/2024,North,Medikit,alliance,FALSE,TRUE,40,4,10
-12/15/2024,South,Thatpotatoguy,labour,FALSE,FALSE,30,3,10
-12/15/2024,South,Meiscool,alliance,FALSE,FALSE,40,4,10
-12/15/2024,South,Dannyunown0,labour,FALSE,FALSE,30,3,10
-12/15/2024,South,Thatpotatoguy,labour,FALSE,TRUE,60,6,10
-12/15/2024,South,Meiscool,alliance,FALSE,TRUE,40,4,10
-12/15/2024,East,bfdifann,labour,FALSE,FALSE,36.36,4,11
-12/15/2024,East,GMV,liberal,FALSE,FALSE,27.27,3,11
-12/15/2024,East,Copperhead,alliance,FALSE,FALSE,27.27,3,11
-12/15/2024,East,Heatland,independent,FALSE,FALSE,9.09,1,11
-12/15/2024,East,bfdifann,labour,FALSE,TRUE,63.64,7,11
-12/15/2024,East,GMV,liberal,FALSE,TRUE,36.36,4,11
-12/15/2024,List Seat 1,How do i type,alliance,FALSE,FALSE,100,,
-12/15/2024,List Seat 2,BlockyBeach,alliance,FALSE,FALSE,100,,
-12/15/2024,List Seat 3,Geodore,alliance,FALSE,FALSE,100,,
-12/15/2024,List Seat 4,Meiscool,alliance,FALSE,FALSE,100,,
-12/15/2024,List Seat 5,Virt,liberal,FALSE,FALSE,100,,
-12/15/2024,List Seat 6,Nath,liberal,FALSE,FALSE,100,,
-12/15/2024,List Seat 7,Sonia Gandhi,labour,FALSE,FALSE,100,,
-12/15/2024,List Seat 8,Dannyunown0,labour,FALSE,FALSE,100,,
-12/15/2024,National Popular Vote,Labour,labour,FALSE,FALSE,29.79,,
-12/15/2024,National Popular Vote,Liberal,liberal,FALSE,FALSE,36.17,,
-12/15/2024,National Popular Vote,Alliance,alliance,FALSE,FALSE,34.04,,
-12/29/2024,Coalition,labour,labourcon,FALSE,FALSE,0,,
-12/29/2024,Coalition,alliance,labourcon,FALSE,FALSE,0,,
-12/29/2024,East,Skillyoshi,alliance,TRUE,FALSE,33.3,3,9
-12/29/2024,East,bfdifann,progressive,TRUE,FALSE,22.2,2,9
-12/29/2024,East,GMV,liberal,TRUE,FALSE,33.3,3,9
-12/29/2024,East,Perot,independent,TRUE,FALSE,11.1,1,9
-12/29/2024,East,Skillyoshi,alliance,TRUE,TRUE,55.6,5,9
-12/29/2024,East,GMV,liberal,TRUE,TRUE,44.4,4,9
-01/11/2025,Coalition,liberal,libcon,FALSE,FALSE,0,,
-01/11/2025,Coalition,alliance,libcon,FALSE,FALSE,0,,
-01/11/2025,North 1st,Cob,progressive,FALSE,FALSE,26.67,4,15
-01/11/2025,North 1st,Virt,liberal,FALSE,FALSE,33.33,5,15
-01/11/2025,North 1st,Geodore,alliance,FALSE,FALSE,20,3,15
-01/11/2025,North 1st,Medikit,alliance,FALSE,FALSE,13.33,2,15
-01/11/2025,North 1st,Charlemagne,liberal,FALSE,FALSE,6.67,1,15
-01/11/2025,North 2nd,Cob,progressive,FALSE,FALSE,50,5,10
-01/11/2025,North 2nd,Geodore,alliance,FALSE,FALSE,30,3,10
-01/11/2025,North 2nd,Medikit,alliance,FALSE,FALSE,20,2,10
-01/11/2025,East 1st,GMV,liberal,FALSE,FALSE,30,6,20
-01/11/2025,East 1st,Perot,labour,FALSE,FALSE,20,4,20
-01/11/2025,East 1st,Skillyoshi,alliance,FALSE,FALSE,20,4,20
-01/11/2025,East 1st,Copperhead,alliance,FALSE,FALSE,10,2,20
-01/11/2025,East 1st,bfdifann,progressive,FALSE,FALSE,20,4,20
-01/11/2025,East 1st,Skillyoshi,alliance,FALSE,TRUE,27.27,3,11
-01/11/2025,East 1st,Perot,labour,FALSE,TRUE,27.27,3,11
-01/11/2025,East 1st,GMV,liberal,FALSE,TRUE,45.45,5,11
-01/11/2025,East 2nd,Skillyoshi,alliance,FALSE,FALSE,40.93,4.093,10
-01/11/2025,East 2nd,Perot,labour,FALSE,FALSE,59.07,5.907,10
-01/11/2025,West 1st,Ash,progressive,FALSE,FALSE,22.22,4,18
-01/11/2025,West 1st,Suom,liberal,FALSE,FALSE,27.78,5,18
-01/11/2025,West 1st,BlockyBeach,alliance,FALSE,FALSE,27.78,5,18
-01/11/2025,West 1st,June_3rd,progressive,FALSE,FALSE,16.67,3,18
-01/11/2025,West 1st,Srawyer,alliance,FALSE,FALSE,5.56,1,18
-01/11/2025,West 1st,Ash,progressive,FALSE,TRUE,41.18,7,17
-01/11/2025,West 1st,Suom,liberal,FALSE,TRUE,29.41,5,17
-01/11/2025,West 1st,BlockyBeach,alliance,FALSE,TRUE,29.41,5,17
-01/11/2025,West 2nd,Suom,liberal,FALSE,FALSE,53.03,6,11
-01/11/2025,West 2nd,BlockyBeach,alliance,FALSE,FALSE,46.97,5,11
-01/11/2025,South 1st,Dannyunown0,labour,FALSE,FALSE,33.33,5,15
-01/11/2025,South 1st,Qwert,progressive,FALSE,FALSE,26.67,4,15
-01/11/2025,South 1st,Thatpotatoguy,labour,FALSE,FALSE,13.33,2,15
-01/11/2025,South 1st,How do i type,alliance,FALSE,FALSE,13.33,2,15
-01/11/2025,South 1st,Meiscool,alliance,FALSE,FALSE,13.33,2,15
-01/11/2025,South 2nd,Qwert,progressive,FALSE,FALSE,40,4,10
-01/11/2025,South 2nd,Thatpotatoguy,labour,FALSE,FALSE,20,2,10
-01/11/2025,South 2nd,How do i type,alliance,FALSE,FALSE,20,2,10
-01/11/2025,South 2nd,Meiscool,alliance,FALSE,FALSE,20,2,10
-01/11/2025,South 2nd,Qwert,progressive,FALSE,TRUE,50.001,5,10
-01/11/2025,South 2nd,How do i type,alliance,FALSE,TRUE,50,5,10
-01/11/2025,List Seat 1,How do i type,alliance,FALSE,FALSE,100,,
-01/11/2025,List Seat 2,BlockyBeach,alliance,FALSE,FALSE,100,,
-01/11/2025,List Seat 3,Geodore,alliance,FALSE,FALSE,100,,
-01/11/2025,List Seat 4,Medikit,alliance,FALSE,FALSE,100,,
-01/11/2025,List Seat 5,Skillyoshi,alliance,FALSE,FALSE,100,,
-01/11/2025,List Seat 6,Alex,liberal,FALSE,FALSE,100,,
-01/11/2025,List Seat 7,Charlemagne,liberal,FALSE,FALSE,100,,
-01/11/2025,List Seat 8,Sonia Gandhi,labour,FALSE,FALSE,100,,
-01/11/2025,National Popular Vote,Progressive,progressive,FALSE,FALSE,20.34,,
-01/11/2025,National Popular Vote,Labour,labour,FALSE,FALSE,20.34,,
-01/11/2025,National Popular Vote,Liberal,liberal,FALSE,FALSE,27.12,,
-01/11/2025,National Popular Vote,Alliance,alliance,FALSE,FALSE,32.2,,
-1/20/2025,Coalition,liberal,libcon,FALSE,FALSE,0,,
-1/20/2025,Coalition,alliance,libcon,FALSE,FALSE,0,,
-1/20/2025,West 2nd,BlockyBeach,alliance,TRUE,FALSE,50,7,14
-1/20/2025,West 2nd,June_3rd,progressive,TRUE,FALSE,28.6,4,14
-1/20/2025,West 2nd,Suom,wildrose,TRUE,FALSE,21.4,3,14
-1/20/2025,West 2nd,BlockyBeach,alliance,TRUE,TRUE,57.1,8,14
-1/20/2025,West 2nd,June_3rd,progressive,TRUE,TRUE,42.9,6,14
-02/09/2025,Coalition,liberal,citrus,FALSE,FALSE,0,,
-02/09/2025,Coalition,progressive,citrus,FALSE,FALSE,0,,
-02/09/2025,Coalition,labour,labourcon,FALSE,FALSE,0,,
-02/09/2025,Coalition,alliance,labourcon,FALSE,FALSE,0,,
-02/09/2025,Coalition,Alex,citrus,FALSE,FALSE,0,,
-02/09/2025,Coalition,Medikit,citrus,FALSE,FALSE,0,,
-02/09/2025,Dentone,BlockyBeach,alliance,FALSE,FALSE,71.43,5,7
-02/09/2025,Dentone,Ash,liberal,FALSE,FALSE,14.29,1,7
-02/09/2025,Dentone,Joris,progressive,FALSE,FALSE,14.29,1,7
-02/09/2025,Quintin,How do i type,alliance,FALSE,FALSE,42.86,3,7
-02/09/2025,Quintin,Ok,labour,FALSE,FALSE,57.14,4,7
-02/09/2025,Garvor,Nath,liberal,FALSE,FALSE,60,3,5
-02/09/2025,Garvor,Srawyer,alliance,FALSE,FALSE,20,1,5
-02/09/2025,Garvor,Suom,liberal,FALSE,FALSE,20,1,5
-02/09/2025,Garvor,SNAA,labour,FALSE,FALSE,20,1,5
-02/09/2025,Brunix Islands,Alex,alliance,FALSE,FALSE,50,6,12
-02/09/2025,Brunix Islands,Charlemagne,liberal,FALSE,FALSE,16.67,2,12
-02/09/2025,Brunix Islands,Geodore,alliance,FALSE,FALSE,16.67,2,12
-02/09/2025,Brunix Islands,Dave,progressive,FALSE,FALSE,16.67,2,12
-02/09/2025,Brunix Islands,Alex,alliance,FALSE,TRUE,58.33,7,12
-02/09/2025,Brunix Islands,Charlemagne,liberal,FALSE,TRUE,41.67,5,12
-02/09/2025,Emix,Medikit,alliance,FALSE,FALSE,50,6,12
-02/09/2025,Emix,Jager,labour,FALSE,FALSE,25,3,12
-02/09/2025,Emix,Javer,labour,FALSE,FALSE,25,3,12
-02/09/2025,Emix,Medikit,alliance,FALSE,TRUE,58.33,7,12
-02/09/2025,Emix,Jager,labour,FALSE,TRUE,41.67,5,12
-02/09/2025,Alvana,Qwert,progressive,FALSE,FALSE,46.15,6,13
-02/09/2025,Alvana,Dannyunown0,labour,FALSE,FALSE,23.08,3,13
-02/09/2025,Alvana,Meiscool,alliance,FALSE,FALSE,23.08,3,13
-02/09/2025,Alvana,Riley,labour,FALSE,FALSE,7.69,1,13
-02/09/2025,Alvana,Qwert,progressive,FALSE,TRUE,58.33,7,12
-02/09/2025,Alvana,Dannyunown0,labour,FALSE,TRUE,41.67,5,12
-02/09/2025,Dalminica,Copperhead,alliance,FALSE,FALSE,42.86,3,7
-02/09/2025,Dalminica,bfdifann,progressive,FALSE,FALSE,28.57,2,7
-02/09/2025,Dalminica,Josephist,alliance,FALSE,FALSE,14.29,1,7
-02/09/2025,Dalminica,GMV,liberal,FALSE,FALSE,14.29,1,7
-02/09/2025,Dalminica,Copperhead,alliance,FALSE,TRUE,50.001,3,6
-02/09/2025,Dalminica,bfdifann,progressive,FALSE,TRUE,50,3,6
-02/09/2025,Trunoe,Perot,labour,FALSE,FALSE,100,8,8
-02/09/2025,List Seat 1,How do i type,alliance,FALSE,FALSE,100,,
-02/09/2025,List Seat 2,Virt,liberal,FALSE,FALSE,100,,
-02/09/2025,List Seat 3,GMV,liberal,FALSE,FALSE,100,,
-02/09/2025,List Seat 4,Suom,liberal,FALSE,FALSE,100,,
-02/09/2025,List Seat 5,Charlemagne,liberal,FALSE,FALSE,100,,
-02/09/2025,List Seat 6,SNAA,labour,FALSE,FALSE,100,,
-02/09/2025,List Seat 7,Thatpotatoguy,labour,FALSE,FALSE,100,,
-02/09/2025,List Seat 8,Joris,progressive,FALSE,FALSE,100,,
-02/09/2025,National Popular Vote,Progressive,progressive,FALSE,FALSE,12.68,,
-02/09/2025,National Popular Vote,Labour,labour,FALSE,FALSE,26.76,,
-02/09/2025,National Popular Vote,Liberal,liberal,FALSE,FALSE,29.58,,
-02/09/2025,National Popular Vote,Alliance,alliance,FALSE,FALSE,30.99,,
-03/09/2025,Coalition,labour,labourcon,FALSE,FALSE,0,,
-03/09/2025,Coalition,alliance,labourcon,FALSE,FALSE,0,,
-03/09/2025,Coalition,liberal,citrus,FALSE,FALSE,0,,
-03/09/2025,Coalition,progressive,citrus,FALSE,FALSE,0,,
-03/09/2025,Dentone,BlockyBeach,alliance,FALSE,FALSE,100,4,4
-03/09/2025,Garvor,Strxya,progressive,FALSE,FALSE,66.67,4,6
-03/09/2025,Garvor,SNAA,labour,FALSE,FALSE,33.33,2,6
-03/09/2025,Dalminica,GMV,liberal,FALSE,FALSE,28.57,2,7
-03/09/2025,Dalminica,bfdifann,labour,FALSE,FALSE,42.86,3,7
-03/09/2025,Dalminica,Copperhead,alliance,FALSE,FALSE,28.57,2,7
-03/09/2025,Dalminica,GMV,liberal,FALSE,TRUE,57.14,4,7
-03/09/2025,Dalminica,bfdifann,labour,FALSE,TRUE,42.86,3,7
-03/09/2025,Trunoe,Rocket Dino,labour,FALSE,FALSE,75,4,6
-03/09/2025,Trunoe,Perot,independent,FALSE,FALSE,25,2,6
-03/09/2025,Brunix Islands,Charlemagne,liberal,FALSE,FALSE,38.46,5,13
-03/09/2025,Brunix Islands,ᏁᎥፈᏦᏖᏂᏋፈᎧᎧᏝ,alliance,FALSE,FALSE,30.77,4,13
-03/09/2025,Brunix Islands,Goop,alliance,FALSE,FALSE,15.38,2,13
-03/09/2025,Brunix Islands,Microplastics Lover,labour,FALSE,FALSE,15.38,2,13
-03/09/2025,Brunix Islands,Charlemagne,liberal,FALSE,TRUE,53.85,7,13
-03/09/2025,Brunix Islands,ᏁᎥፈᏦᏖᏂᏋፈᎧᎧᏝ,alliance,FALSE,TRUE,46.15,6,13
-03/09/2025,Emix,Javer,labour,FALSE,FALSE,75,6,8
-03/09/2025,Emix,Medikit,alliance,FALSE,FALSE,25,2,8
-03/09/2025,Alvana,Qwert,progressive,FALSE,FALSE,45.45,5,11
-03/09/2025,Alvana,Thatpotatoguy,labour,FALSE,FALSE,36.36,4,11
-03/09/2025,Alvana,Meiscool,alliance,FALSE,FALSE,18.18,2,11
-03/09/2025,Alvana,Qwert,progressive,FALSE,TRUE,50.001,5,10
-03/09/2025,Alvana,Thatpotatoguy,labour,FALSE,TRUE,50,5,10
-03/09/2025,Quintin,Ok,labour,FALSE,FALSE,71.43,5,7
-03/09/2025,Quintin,How do i type,alliance,FALSE,FALSE,28.57,2,7
-03/09/2025,National Popular Vote,Progressive,progressive,FALSE,FALSE,12.31,,
-03/09/2025,National Popular Vote,Labour,labour,FALSE,FALSE,32.31,,
-03/09/2025,National Popular Vote,Liberal,liberal,FALSE,FALSE,23.08,,
-03/09/2025,National Popular Vote,Alliance,alliance,FALSE,FALSE,32.31,,
-03/09/2025,List Seat 1,How do i type,alliance,FALSE,FALSE,100,,
-03/09/2025,List Seat 2,Meiscool,alliance,FALSE,FALSE,100,,
-03/09/2025,List Seat 3,Copperhead,alliance,FALSE,FALSE,100,,
-03/09/2025,List Seat 4,Medikit,alliance,FALSE,FALSE,100,,
-03/09/2025,List Seat 5,Virt,liberal,FALSE,FALSE,100,,
-03/09/2025,List Seat 6,Suom,liberal,FALSE,FALSE,100,,
-03/09/2025,List Seat 7,Dannyunown0,labour,FALSE,FALSE,100,,
-03/09/2025,List Seat 8,Thatpotatoguy,labour,FALSE,FALSE,100,,
-04/06/2025,Coalition,labour,traffic,FALSE,FALSE,0,,
-04/06/2025,Coalition,liberal,traffic,FALSE,FALSE,0,,
-04/06/2025,Coalition,progressive,traffic,FALSE,FALSE,0,,
-04/06/2025,Dentone,BlockyBeach,alliance,FALSE,FALSE,62.5,5,8
-04/06/2025,Dentone,Joris,progressive,FALSE,FALSE,25,2,8
-04/06/2025,Dentone,Hadanna,liberal,FALSE,FALSE,12.5,1,8
-04/06/2025,Garvor,Strxya,progressive,FALSE,FALSE,78.57,11,14
-04/06/2025,Garvor,Srawyer,independent,FALSE,FALSE,21.43,3,14
-04/06/2025,Dalminica,Copperhead,alliance,FALSE,FALSE,30,3,10
-04/06/2025,Dalminica,GMV,liberal,FALSE,FALSE,40,4,10
-04/06/2025,Dalminica,bfdifann,labour,FALSE,FALSE,20,2,10
-04/06/2025,Dalminica,KiwiFox,labour,FALSE,FALSE,10,1,10
-04/06/2025,Dalminica,Copperhead,alliance,FALSE,TRUE,50.001,5,10
-04/06/2025,Dalminica,GMV,liberal,FALSE,TRUE,50,5,10
-04/06/2025,Trunoe,Perot,labour,FALSE,FALSE,54.55,6,11
-04/06/2025,Trunoe,TBS387,alliance,FALSE,FALSE,45.45,5,11
-04/06/2025,Brunix Islands,Charlemagne,liberal,FALSE,FALSE,63.64,7,11
-04/06/2025,Brunix Islands,Geodore,alliance,FALSE,FALSE,36.36,4,11
-04/06/2025,Emix,Javer,labour,FALSE,FALSE,100,9,9
-04/06/2025,Alvana,Qwert,progressive,FALSE,FALSE,55.56,5,9
-04/06/2025,Alvana,Thatpotatoguy,labour,FALSE,FALSE,44.44,4,9
-04/06/2025,Quintin,Gyokeres,progressive,FALSE,FALSE,50,6,12
-04/06/2025,Quintin,Luka Gillman,alliance,FALSE,FALSE,33.33,4,12
-04/06/2025,Quintin,Beary,progressive,FALSE,FALSE,16.67,2,12
-04/06/2025,Quintin,Gyokeres,progressive,FALSE,TRUE,66.67,8,12
-04/06/2025,Quintin,Luka Gillman,alliance,FALSE,TRUE,33.33,4,12
-04/06/2025,National Popular Vote,Progressive,progressive,FALSE,FALSE,22.47,,
-04/06/2025,National Popular Vote,Labour,labour,FALSE,FALSE,23.6,,
-04/06/2025,National Popular Vote,Liberal,liberal,FALSE,FALSE,28.09,,
-04/06/2025,National Popular Vote,Alliance,alliance,FALSE,FALSE,25.84,,
-04/06/2025,List Seat 1,How do i type,alliance,FALSE,FALSE,100,,
-04/06/2025,List Seat 2,Geodore,alliance,FALSE,FALSE,100,,
-04/06/2025,List Seat 3,Suom,liberal,FALSE,FALSE,100,,
-04/06/2025,List Seat 4,GMV,liberal,FALSE,FALSE,100,,
-04/06/2025,List Seat 5,Hada,liberal,FALSE,FALSE,100,,
-04/06/2025,List Seat 6,ColdAdam,liberal,FALSE,FALSE,100,,
-04/06/2025,List Seat 7,Ok,labour,FALSE,FALSE,100,,
-04/06/2025,List Seat 8,Thatpotatoguy,labour,FALSE,FALSE,100,,
-4/13/2025,Coalition,labour,traffic,FALSE,FALSE,0,,
-4/13/2025,Coalition,liberal,traffic,FALSE,FALSE,0,,
-4/13/2025,Coalition,progressive,traffic,FALSE,FALSE,0,,
-4/13/2025,Quintin,Republic Guy,progressive,TRUE,FALSE,36.36,4,11
-4/13/2025,Quintin,Luka Gillman,alliance,TRUE,FALSE,36.36,4,11
-4/13/2025,Quintin,Sonia Gandhi,labour,TRUE,FALSE,18.18,2,11
-4/13/2025,Quintin,Beary,progressive,TRUE,FALSE,9.09,1,11
-4/13/2025,Quintin,Republic Guy,progressive,TRUE,TRUE,63.64,7,11
-4/13/2025,Quintin,Luka Gillman,alliance,TRUE,TRUE,36.36,4,11
-05/11/2025,Coalition,labour,traffic,FALSE,FALSE,0,,
-05/11/2025,Coalition,liberal,traffic,FALSE,FALSE,0,,
-05/11/2025,Coalition,progressive,traffic,FALSE,FALSE,0,,
-05/11/2025,Brunix Islands,Kanbo,alliance,FALSE,FALSE,63.64,7,11
-05/11/2025,Brunix Islands,Charlemagne,liberal,FALSE,FALSE,36.36,4,11
-05/11/2025,Emix,Javer,labour,FALSE,FALSE,75,9,12
-05/11/2025,Emix,LeBron James,progressive,FALSE,FALSE,25,3,12
-05/11/2025,Dalminica,SunwardH,progressive,FALSE,FALSE,36.36,4,11
-05/11/2025,Dalminica,Copperhead,alliance,FALSE,FALSE,36.36,4,11
-05/11/2025,Dalminica,bfdifann,labour,FALSE,FALSE,9.09,1,11
-05/11/2025,Dalminica,GMV,liberal,FALSE,FALSE,9.09,1,11
-05/11/2025,Dalminica,KiwiFox,labour,FALSE,FALSE,9.09,1,11
-05/11/2025,Dalminica,SunwardH,progressive,FALSE,TRUE,54.55,6,11
-05/11/2025,Dalminica,Copperhead,alliance,FALSE,TRUE,45.45,5,11
-05/11/2025,Trunoe,Ash,progressive,FALSE,FALSE,50,6,12
-05/11/2025,Trunoe,BugsBunny,alliance,FALSE,FALSE,33.33,4,12
-05/11/2025,Trunoe,Van der Plan,labour,FALSE,FALSE,8.33,1,12
-05/11/2025,Trunoe,Perot,labour,FALSE,FALSE,8.33,1,12
-05/11/2025,Trunoe,Ash,progressive,FALSE,TRUE,58.33,7,12
-05/11/2025,Trunoe,BugsBunny,alliance,FALSE,TRUE,41.67,5,12
-05/11/2025,Garvor,Strxya,progressive,FALSE,FALSE,100,13,13
-05/11/2025,Dentone,BlockyBeach,alliance,FALSE,FALSE,75,6,8
-05/11/2025,Dentone,Joris,progressive,FALSE,FALSE,25,2,8
-05/11/2025,Alvana,Potato,labour,FALSE,FALSE,58.33,7,12
-05/11/2025,Alvana,Qwert,progressive,FALSE,FALSE,41.67,5,12
-05/11/2025,Quintin,Republic Guy,progressive,FALSE,FALSE,69.23,9,13
-05/11/2025,Quintin,Luka Gillman,alliance,FALSE,FALSE,30.77,4,13
-05/11/2025,National Popular Vote,Progressive,progressive,FALSE,FALSE,21.88,,
-05/11/2025,National Popular Vote,Labour,labour,FALSE,FALSE,22.92,,
-05/11/2025,National Popular Vote,Liberal,liberal,FALSE,FALSE,22.92,,
-05/11/2025,National Popular Vote,Alliance,alliance,FALSE,FALSE,32.29,,
-05/11/2025,List Seat 1,How do i type,alliance,FALSE,FALSE,100,,
-05/11/2025,List Seat 2,Copperhead,alliance,FALSE,FALSE,100,,
-05/11/2025,List Seat 3,Griffth Hyde,alliance,FALSE,FALSE,100,,
-05/11/2025,List Seat 4,Suom,liberal,FALSE,FALSE,100,,
-05/11/2025,List Seat 5,Ari,liberal,FALSE,FALSE,100,,
-05/11/2025,List Seat 6,Charlemagne,liberal,FALSE,FALSE,100,,
-05/11/2025,List Seat 7,ColdAdam,liberal,FALSE,FALSE,100,,
-05/11/2025,List Seat 8,Dannyunown0,labour,FALSE,FALSE,100,,
-05/11/2025,List Seat 9,Ok,labour,FALSE,FALSE,100,,
-6/15/2025,Coalition,labour,labourcon,FALSE,FALSE,0,,
-6/15/2025,Coalition,alliance,labourcon,FALSE,FALSE,0,,
-6/15/2025,Coalition,Cob,labourcon,FALSE,FALSE,0,,
-6/15/2025,Brunix Islands,Geodore,alliance,FALSE,FALSE,42.86,6,14
-6/15/2025,Brunix Islands,Charlemagne,liberal,FALSE,FALSE,21.43,3,14
-6/15/2025,Brunix Islands,Kanbo,alliance,FALSE,FALSE,14.29,2,14
-6/15/2025,Brunix Islands,Bernie Sanders,progressive,FALSE,FALSE,14.29,2,14
-6/15/2025,Brunix Islands,Doc,liberal,FALSE,FALSE,7.14,1,14
-6/15/2025,Brunix Islands,Geodore,alliance,FALSE,TRUE,57.14,8,14
-6/15/2025,Brunix Islands,Charlemagne,liberal,FALSE,TRUE,42.86,6,14
-6/15/2025,Emix,Cob,independent,FALSE,FALSE,66.67,8,12
-6/15/2025,Emix,Javer,labour,FALSE,FALSE,25,3,12
-6/15/2025,Emix,m0l3_m4n,labour,FALSE,FALSE,8.33,1,12
-6/15/2025,Dalminica,SunwardH,progressive,FALSE,FALSE,46.15,6,13
-6/15/2025,Dalminica,Cruzer,alliance,FALSE,FALSE,30.77,4,13
-6/15/2025,Dalminica,GMV,liberal,FALSE,FALSE,23.08,3,13
-6/15/2025,Dalminica,SunwardH,progressive,FALSE,TRUE,61.54,8,13
-6/15/2025,Dalminica,Cruzer,alliance,FALSE,TRUE,38.46,5,13
-6/15/2025,Trunoe,Growmper,progressive,FALSE,FALSE,71.43,5,7
-6/15/2025,Trunoe,Heatland,labour,FALSE,FALSE,28.57,2,7
-6/15/2025,Garvor,Strxya,progressive,FALSE,FALSE,76.92,10,13
-6/15/2025,Garvor,athabasca,labour,FALSE,FALSE,23.08,3,13
-6/15/2025,Dentone,BlockyBeach,alliance,FALSE,FALSE,71.43,10,14
-6/15/2025,Dentone,Joris,progressive,FALSE,FALSE,28.57,4,14
-6/15/2025,Alvana,Qwert,progressive,FALSE,FALSE,58.33,7,12
-6/15/2025,Alvana,Dannyunown0,labour,FALSE,FALSE,41.67,5,12
-6/15/2025,Quintin,Republic Guy,progressive,FALSE,FALSE,57.14,8,14
-6/15/2025,Quintin,How do i type,alliance,FALSE,FALSE,28.57,4,14
-6/15/2025,Quintin,snilfa,labour,FALSE,FALSE,14.29,2,14
-6/15/2025,National Popular Vote,Progressive,progressive,FALSE,FALSE,21.88,,
-6/15/2025,National Popular Vote,Labour,labour,FALSE,FALSE,22.92,,
-6/15/2025,National Popular Vote,Liberal,liberal,FALSE,FALSE,22.92,,
-6/15/2025,National Popular Vote,Alliance,alliance,FALSE,FALSE,32.29,,
-6/15/2025,List Seat 1,Chudda,alliance,FALSE,FALSE,100,,
-6/15/2025,List Seat 2,Kanbo,alliance,FALSE,FALSE,100,,
-6/15/2025,List Seat 3,Luka Gillman,alliance,FALSE,FALSE,100,,
-6/15/2025,List Seat 4,TBS387,alliance,FALSE,FALSE,100,,
-6/15/2025,List Seat 5,Copperhead,alliance,FALSE,FALSE,100,,
-6/15/2025,List Seat 6,GMV,liberal,FALSE,FALSE,100,,
-6/15/2025,List Seat 7,Suom,liberal,FALSE,FALSE,100,,
-6/15/2025,List Seat 8,Charlemagne,liberal,FALSE,FALSE,100,,
-6/15/2025,List Seat 9,Alex,liberal,FALSE,FALSE,100,,
-6/15/2025,List Seat 10,Dannyunown0,labour,FALSE,FALSE,100,,
-6/15/2025,List Seat 11,Javer,labour,FALSE,FALSE,100,,
-6/15/2025,List Seat 12,Potato,labour,FALSE,FALSE,100,,
-6/15/2025,List Seat 13,bfdifann,labour,FALSE,FALSE,100,,
-6/18/2025,Coalition,labour,labourcon,FALSE,FALSE,0,,
-6/18/2025,Coalition,alliance,labourcon,FALSE,FALSE,0,,
-6/18/2025,Coalition,Cob,labourcon,FALSE,FALSE,0,,
-6/18/2025,Garvor,Alex,liberal,TRUE,FALSE,60,6,10
-6/18/2025,Garvor,athabasca,labour,TRUE,FALSE,30,3,10
-6/18/2025,Garvor,ColdAdam,liberal,TRUE,FALSE,10,1,10
-07/09/2025,Coalition,labour,labourcon,FALSE,FALSE,0,,
-07/09/2025,Coalition,alliance,labourcon,FALSE,FALSE,0,,
-07/09/2025,Coalition,Cob,labourcon,FALSE,FALSE,0,,
-07/09/2025,Trunoe,TBS387,alliance,TRUE,FALSE,50,5,10
-07/09/2025,Trunoe,Growmper,progressive,TRUE,FALSE,30,3,10
-07/09/2025,Trunoe,Van der Plan,labour,TRUE,FALSE,20,2,10
-07/09/2025,Trunoe,TBS387,alliance,TRUE,TRUE,60,6,10
-07/09/2025,Trunoe,Growmper,progressive,TRUE,TRUE,40,4,10
-7/20/2025,Coalition,labour,watermelon,FALSE,FALSE,0,,
-7/20/2025,Coalition,progressive,watermelon,FALSE,FALSE,0,,
-7/20/2025,Coalition,Cob,watermelon,FALSE,FALSE,0,,
-7/20/2025,Coalition,Nath,watermelon,FALSE,FALSE,0,,
-7/20/2025,Brunix Islands,Geodore,alliance,FALSE,FALSE,64.29,9,14
-7/20/2025,Brunix Islands,Bernie Sanders,progressive,FALSE,FALSE,28.57,4,14
-7/20/2025,Brunix Islands,Kanbo,alliance,FALSE,FALSE,7.14,1,14
-7/20/2025,Emix,Cob,independent,FALSE,FALSE,64.71,11,17
-7/20/2025,Emix,Javer,labour,FALSE,FALSE,35.29,6,17
-7/20/2025,Dalminica,Copperhead,alliance,FALSE,FALSE,29.41,5,17
-7/20/2025,Dalminica,SunwardH,progressive,FALSE,FALSE,29.41,5,17
-7/20/2025,Dalminica,GMV,labour,FALSE,FALSE,23.53,4,17
-7/20/2025,Dalminica,KiwiFox,alliance,FALSE,FALSE,17.65,3,17
-7/20/2025,Dalminica,Copperhead,alliance,FALSE,TRUE,58.82,10,17
-7/20/2025,Dalminica,SunwardH,progressive,FALSE,TRUE,41.18,7,17
-7/20/2025,Trunoe,Van der Plan,labour,FALSE,FALSE,56.25,9,16
-7/20/2025,Trunoe,TBS387,alliance,FALSE,FALSE,43.75,7,16
-7/20/2025,Garvor,Nath,independent,FALSE,FALSE,53.85,7,13
-7/20/2025,Garvor,athabasca,labour,FALSE,FALSE,46.15,6,13
-7/20/2025,Dentone,BlockyBeach,alliance,FALSE,FALSE,66.67,8,12
-7/20/2025,Dentone,Joris,progressive,FALSE,FALSE,16.67,2,12
-7/20/2025,Dentone,RealCountyCreator,progressive,FALSE,FALSE,16.67,2,12
-7/20/2025,Alvana,Dannyunown0,labour,FALSE,FALSE,27.78,5,18
-7/20/2025,Alvana,Poopman69,alliance,FALSE,FALSE,33.33,6,18
-7/20/2025,Alvana,Potato,labour,FALSE,FALSE,22.22,5,18
-7/20/2025,Alvana,Tim Inkle,independent,FALSE,FALSE,16.67,3,18
-7/20/2025,Alvana,Dannyunown0,labour,FALSE,TRUE,50.001,9,18
-7/20/2025,Alvana,Poopman69,alliance,FALSE,TRUE,50,9,18
-7/20/2025,Quintin,Gatorapolis,labour,FALSE,FALSE,36.36,8,22
-7/20/2025,Quintin,Republic Guy,progressive,FALSE,FALSE,36.36,8,22
-7/20/2025,Quintin,Luka Gillman,alliance,FALSE,FALSE,27.27,6,22
-7/20/2025,Quintin,Gatorapolis,labour,FALSE,TRUE,57.14,12,21
-7/20/2025,Quintin,Republic Guy,progressive,FALSE,TRUE,42.86,9,21
-7/20/2025,National Popular Vote,Progressive,progressive,FALSE,FALSE,21.37,,
-7/20/2025,National Popular Vote,Labour,labour,FALSE,FALSE,34.35,,
-7/20/2025,National Popular Vote,Liberal,liberal,FALSE,FALSE,9.16,,
-7/20/2025,National Popular Vote,Alliance,alliance,FALSE,FALSE,35.11,,
-7/20/2025,List Seat 1,How do i type,alliance,FALSE,FALSE,100,,
-7/20/2025,List Seat 2,Cruzer,alliance,FALSE,FALSE,100,,
-7/20/2025,List Seat 3,Poopman69,alliance,FALSE,FALSE,100,,
-7/20/2025,List Seat 4,TBS387,alliance,FALSE,FALSE,100,,
-7/20/2025,List Seat 5,Alex,liberal,FALSE,FALSE,100,,
-7/20/2025,List Seat 6,Potato,labour,FALSE,FALSE,100,,
-7/20/2025,List Seat 7,Javer,labour,FALSE,FALSE,100,,
-7/20/2025,List Seat 8,GMV,labour,FALSE,FALSE,100,,
-7/20/2025,List Seat 9,Qwert,progressive,FALSE,FALSE,100,,
-7/20/2025,List Seat 10,Republic Guy,progressive,FALSE,FALSE,100,,
-7/20/2025,List Seat 11,AM,progressive,FALSE,FALSE,100,,
-7/20/2025,List Seat 12,Growmper,progressive,FALSE,FALSE,100,,
-08/03/2025,Coalition,labour,labourcon,FALSE,FALSE,0,,
-08/03/2025,Coalition,alliance,labourcon,FALSE,FALSE,0,,
-08/03/2025,Brunix Islands,Geodore,alliance,FALSE,FALSE,38.46,5,13
-08/03/2025,Brunix Islands,Bernie Sanders,progressive,FALSE,FALSE,38.36,5,13
-08/03/2025,Brunix Islands,Kanbo,alliance,FALSE,FALSE,23.08,3,13
-08/03/2025,Brunix Islands,Geodore,alliance,FALSE,TRUE,58.33,7,12
-08/03/2025,Brunix Islands,Bernie Sanders,progressive,FALSE,TRUE,41.67,5,12
-08/03/2025,Emix,Cob,independent,FALSE,FALSE,53.33,8,15
-08/03/2025,Emix,Javer,labour,FALSE,FALSE,46.67,7,15
-08/03/2025,Dalminica,Copperhead,alliance,FALSE,FALSE,21.43,3,14
-08/03/2025,Dalminica,SunwardH,progressive,FALSE,FALSE,35.71,5,14
-08/03/2025,Dalminica,Cruzer,alliance,FALSE,FALSE,28.57,4,14
-08/03/2025,Dalminica,bfdifann,progressive,FALSE,FALSE,7.14,1,14
-08/03/2025,Dalminica,KiwiFox,alliance,FALSE,FALSE,7.14,1,14
-08/03/2025,Dalminica,Copperhead,alliance,FALSE,TRUE,57.14,8,14
-08/03/2025,Dalminica,SunwardH,progressive,FALSE,TRUE,42.86,6,14
-08/03/2025,Trunoe,Heatland,labour,FALSE,FALSE,53.85,7,13
-08/03/2025,Trunoe,Van der Plan,alliance,FALSE,FALSE,46.15,6,13
-08/03/2025,Garvor,athabasca,labour,FALSE,FALSE,61.54,8,13
-08/03/2025,Garvor,Alex,liberal,FALSE,FALSE,38.46,5,13
-08/03/2025,Dentone,BlockyBeach,alliance,FALSE,FALSE,70,7,10
-08/03/2025,Dentone,RealCountyCreator,progressive,FALSE,FALSE,30,3,10
-08/03/2025,Alvana,Poopman69,alliance,FALSE,FALSE,31.25,5,16
-08/03/2025,Alvana,Qwert,progressive,FALSE,FALSE,31.25,5,16
-08/03/2025,Alvana,Potato,liberal,FALSE,FALSE,25,4,16
-08/03/2025,Alvana,Dannyunown0,labour,FALSE,FALSE,12.5,2,16
-08/03/2025,Alvana,Poopman69,alliance,FALSE,TRUE,57.14,8,14
-08/03/2025,Alvana,Qwert,progressive,FALSE,TRUE,42.86,6,14
-08/03/2025,Quintin,Republic Guy,progressive,FALSE,FALSE,23.81,5,20
-08/03/2025,Quintin,Sonia Gandhi,labour,FALSE,FALSE,28.57,6,20
-08/03/2025,Quintin,Seth,progressive,FALSE,FALSE,19.05,4,20
-08/03/2025,Quintin,Luka Gillman,alliance,FALSE,FALSE,19.05,3,20
-08/03/2025,Quintin,Gatorapolis,labour,FALSE,FALSE,4.76,1,20
-08/03/2025,Quintin,spccenterville,alliance,FALSE,FALSE,4.76,1,20
-08/03/2025,Quintin,Republic Guy,progressive,FALSE,TRUE,56.25,9,16
-08/03/2025,Quintin,Sonia Gandhi,labour,FALSE,TRUE,43.75,7,16
-08/03/2025,National Popular Vote,Progressive,progressive,FALSE,FALSE,29.82,,
-08/03/2025,National Popular Vote,Labour,labour,FALSE,FALSE,28.07,,
-08/03/2025,National Popular Vote,Liberal,liberal,FALSE,FALSE,10.53,,
-08/03/2025,National Popular Vote,Alliance,alliance,FALSE,FALSE,31.58,,
-08/03/2025,List Seat 1,How do i type,alliance,FALSE,FALSE,100,,
-08/03/2025,List Seat 2,Cruzer,alliance,FALSE,FALSE,100,,
-08/03/2025,List Seat 3,Nath,liberal,FALSE,FALSE,100,,
-08/03/2025,List Seat 4,Suom,liberal,FALSE,FALSE,100,,
-08/03/2025,List Seat 5,Javer,labour,FALSE,FALSE,100,,
-08/03/2025,List Seat 6,Sonia Gandhi,labour,FALSE,FALSE,100,,
-08/03/2025,List Seat 7,Dannyunown0,labour,FALSE,FALSE,100,,
-08/03/2025,List Seat 8,GMV,progressive,FALSE,FALSE,100,,
-08/03/2025,List Seat 9,Bernie Sanders,progressive,FALSE,FALSE,100,,
-08/03/2025,List Seat 10,Qwert,progressive,FALSE,FALSE,100,,
-08/03/2025,List Seat 11,SunwardH,progressive,FALSE,FALSE,100,,
-08/03/2025,List Seat 12,June_3rd,progressive,FALSE,FALSE,100,,
-8/23/2025,Emix,Cob,liberal,TRUE,FALSE,33.34,,
-8/23/2025,Emix,Javer,labour,TRUE,FALSE,33.32,,
-8/23/2025,Emix,Lee,liberal,TRUE,FALSE,25,,
-8/23/2025,Emix,Danlyo,labour,TRUE,FALSE,8.33,,
-8/23/2025,Emix,Treptichnus,progressive,TRUE,FALSE,0,,
-8/23/2025,Emix,Cob,liberal,TRUE,TRUE,54.55,,
-8/23/2025,Emix,Javer,labour,TRUE,TRUE,45.45,,
-09/06/2025,Coalition,alliance,peacock,FALSE,FALSE,0,,
-09/06/2025,Coalition,progressive,peacock,FALSE,FALSE,0,,
-09/06/2025,Alvana,Poopman69,alliance,FALSE,FALSE,21.05,4,19
-09/06/2025,Alvana,Potato,labour,FALSE,FALSE,52.63,10,19
-09/06/2025,Alvana,Qwert,progressive,FALSE,FALSE,26.32,5,19
-09/06/2025,Brunix Islands,Bernie,progressive,FALSE,FALSE,28.57,4,14
-09/06/2025,Brunix Islands,Geodore,alliance,FALSE,FALSE,57.14,8,14
-09/06/2025,Brunix Islands,Charlemagne,independent,FALSE,FALSE,7.14,1,14
-09/06/2025,Brunix Islands,Bart De Wever,progressive,FALSE,FALSE,7.14,1,14
-09/06/2025,Dalminica,Cruzer,alliance,FALSE,FALSE,37.5,6,16
-09/06/2025,Dalminica,GMV,progressive,FALSE,FALSE,50,8,16
-09/06/2025,Dalminica,SunwardH,progressive,FALSE,FALSE,12.5,2,16
-09/06/2025,Dalminica,Cruzer,alliance,FALSE,TRUE,37.5,6,16
-09/06/2025,Dalminica,GMV,progressive,FALSE,TRUE,62.5,10,16
-09/06/2025,Dentone,Chillicote,labour,FALSE,FALSE,41.67,5,12
-09/06/2025,Dentone,Joris,progressive,FALSE,FALSE,58.33,7,12
-09/06/2025,Emix,Javer,labour,FALSE,FALSE,30,6,20
-09/06/2025,Emix,Treptichnus Pedum,progressive,FALSE,FALSE,70,14,20
-09/06/2025,Garvor,athabasca,labour,FALSE,FALSE,45,9,20
-09/06/2025,Garvor,Border,alliance,FALSE,FALSE,15,3,20
-09/06/2025,Garvor,Strxya,progressive,FALSE,FALSE,40,8,20
-09/06/2025,Garvor,athabasca,labour,FALSE,TRUE,57.89,11,19
-09/06/2025,Garvor,Strxya,progressive,FALSE,TRUE,42.11,8,19
-09/06/2025,Quintin,Sonia Gandhi,labour,FALSE,FALSE,43.48,10,23
-09/06/2025,Quintin,Seth,progressive,FALSE,FALSE,8.7,2,23
-09/06/2025,Quintin,Beary,progressive,FALSE,FALSE,47.83,11,23
-09/06/2025,Quintin,Sonia Gandhi,labour,FALSE,TRUE,43.48,10,23
-09/06/2025,Quintin,Beary,progressive,FALSE,TRUE,56.52,13,23
-09/06/2025,Trunoe,TBS387,alliance,FALSE,FALSE,27.27,6,22
-09/06/2025,Trunoe,Van der Plan,labour,FALSE,FALSE,72.73,16,22
-09/06/2025,National Popular Vote,Alliance,alliance,FALSE,FALSE,29.93,,
-09/06/2025,National Popular Vote,Progressive,progressive,FALSE,FALSE,32.65,,
-09/06/2025,National Popular Vote,Labour,labour,FALSE,FALSE,37.41,,
-09/06/2025,List Seat 1,How do i type,alliance,FALSE,FALSE,100,,
-09/06/2025,List Seat 2,Cruzer,alliance,FALSE,FALSE,100,,
-09/06/2025,List Seat 3,Alex,alliance,FALSE,FALSE,100,,
-09/06/2025,List Seat 4,Griffth Hyde,alliance,FALSE,FALSE,100,,
-09/06/2025,List Seat 5,British_Guy,alliance,FALSE,FALSE,100,,
-09/06/2025,List Seat 6,Sonia Gandhi,labour,FALSE,FALSE,100,,
-09/06/2025,List Seat 7,Javer,labour,FALSE,FALSE,100,,
-09/06/2025,List Seat 8,Dannyunown0,labour,FALSE,FALSE,100,,
-09/06/2025,List Seat 9,KiwiFox,labour,FALSE,FALSE,100,,
-09/06/2025,List Seat 10,Chillicote,labour,FALSE,FALSE,100,,
-09/06/2025,List Seat 11,Strxya,progressive,FALSE,FALSE,100,,
-09/06/2025,List Seat 12,SunwardH,progressive,FALSE,FALSE,100,,
-10/11/2025,Coalition,labour,burger,FALSE,FALSE,0,,
-10/11/2025,Coalition,progressive,burger,FALSE,FALSE,0,,
-10/11/2025,Coalition,renewal,burger,FALSE,FALSE,0,,
-10/11/2025,Coalition,Medikit,burger,FALSE,FALSE,0,,
-10/11/2025,Alvana,Potato,renewal,FALSE,FALSE,50.001,8,16
-10/11/2025,Alvana,Dannyunown0,labour,FALSE,FALSE,50,8,16
-10/11/2025,Brunix Islands,Geodore Roosevelt,alliance,FALSE,FALSE,90.91,10,11
-10/11/2025,Brunix Islands,Goop,alliance,FALSE,FALSE,9.09,1,11
-10/11/2025,Dalminica,British_Guy,alliance,FALSE,FALSE,14.29,2,14
-10/11/2025,Dalminica,SunwardH,progressive,FALSE,FALSE,28.57,4,14
-10/11/2025,Dalminica,Okazaki Fox,labour,FALSE,FALSE,57.14,8,14
-10/11/2025,Dentone,Moka Kofee,progressive,FALSE,FALSE,41.18,7,17
-10/11/2025,Dentone,How Do I Type,alliance,FALSE,FALSE,58.82,10,17
-10/11/2025,Emix,Purrium,renewal,FALSE,FALSE,66.67,12,18
-10/11/2025,Emix,Virtecek,renewal,FALSE,FALSE,33.33,6,18
-10/11/2025,Garvor,Strxya,progressive,FALSE,FALSE,50,10,20
-10/11/2025,Garvor,IAMVERYSWELL,labour,FALSE,FALSE,40,8,20
-10/11/2025,Garvor,athabasca,renewal,FALSE,FALSE,10,2,20
-10/11/2025,Garvor,Strxya,progressive,FALSE,TRUE,55,11,20
-10/11/2025,Garvor,IAMVERYSWELL,labour,FALSE,TRUE,45,9,20
-10/11/2025,Kilden,Cob,independent,FALSE,FALSE,66.67,8,12
-10/11/2025,Kilden,bfdifann,progressive,FALSE,FALSE,33.33,4,12
-10/11/2025,Newmasi,Griffith Hyde,alliance,FALSE,FALSE,58.33,7,12
-10/11/2025,Newmasi,GMV,progressive,FALSE,FALSE,41.67,5,12
-10/11/2025,Quintin,Sonia Gandhi,labour,FALSE,FALSE,42.86,6,14
-10/11/2025,Quintin,Beary,progressive,FALSE,FALSE,35.71,5,14
-10/11/2025,Quintin,Seth,progressive,FALSE,FALSE,21.43,3,14
-10/11/2025,Quintin,Sonia Gandhi,labour,FALSE,TRUE,42.86,6,14
-10/11/2025,Quintin,Beary,progressive,FALSE,TRUE,57.14,8,14
-10/11/2025,Trunoe,Van der Plan,labour,FALSE,FALSE,50,8,16
-10/11/2025,Trunoe,Medikit,independent,FALSE,FALSE,50.001,8,16
-10/11/2025,National Popular Vote,Alliance,alliance,FALSE,FALSE,27.52,,
-10/11/2025,National Popular Vote,Labour,labour,FALSE,FALSE,35.57,,
-10/11/2025,National Popular Vote,Progressive,progressive,FALSE,FALSE,26.85,,
-10/11/2025,National Popular Vote,Renewal,renewal,FALSE,FALSE,10.07,,
-10/11/2025,List Seat 1,Cruzer,alliance,FALSE,FALSE,100,,
-10/11/2025,List Seat 2,Nath,alliance,FALSE,FALSE,100,,
-10/11/2025,List Seat 3,Alex,alliance,FALSE,FALSE,100,,
-10/11/2025,List Seat 4,Sonia Gandhi,labour,FALSE,FALSE,100,,
-10/11/2025,List Seat 5,Javer,labour,FALSE,FALSE,100,,
-10/11/2025,List Seat 6,Van der Plan,labour,FALSE,FALSE,100,,
-10/11/2025,List Seat 7,Dannyunown0,labour,FALSE,FALSE,100,,
-10/11/2025,List Seat 8,Chillicote,labour,FALSE,FALSE,100,,
-10/11/2025,List Seat 9,Flor,labour,FALSE,FALSE,100,,
-10/11/2025,List Seat 10,GMV,progressive,FALSE,FALSE,100,,
-10/11/2025,List Seat 11,SunwardH,progressive,FALSE,FALSE,100,,
-10/11/2025,List Seat 12,Joris,progressive,FALSE,FALSE,100,,
-11/16/2025,Coalition,labour,united left,FALSE,FALSE,0,,
-11/16/2025,Coalition,progressive,united left,FALSE,FALSE,0,,
-11/16/2025,Coalition,pwp,united left,FALSE,FALSE,0,,
-11/16/2025,Alvana,Poopman69,alliance,FALSE,FALSE,29.56,106734,360020
-11/16/2025,Alvana,Dannyunown0,labour,FALSE,FALSE,35.35,127285,360020
-11/16/2025,Alvana,UpliftedFord,progressive,FALSE,FALSE,25.82,92944,360020
-11/16/2025,Alvana,BobLaFollette,pwp,FALSE,FALSE,9.18,33037,360020
-11/16/2025,Alvana,Donald Jehovaha Trump,independent,FALSE,FALSE,0.01,20,360020
-11/16/2025,Alvana,Poopman69,alliance,FALSE,TRUE,51.46,179387,348574
-11/16/2025,Alvana,Dannyunown0,labour,FALSE,TRUE,48.54,169187,348574
-11/16/2025,Brunix Islands,Geodore Roosevelt,alliance,FALSE,FALSE,44.48,160119,360000
-11/16/2025,Brunix Islands,Bernie Sanders,progressive,FALSE,FALSE,41.08,51986,360000
-11/16/2025,Brunix Islands,Charlemagne,independent,FALSE,FALSE,14.44,147895,360000
-11/16/2025,Brunix Islands,Geodore Roosevelt,alliance,FALSE,TRUE,51.57,178672,346483
-11/16/2025,Brunix Islands,Bernie Sanders,progressive,FALSE,TRUE,48.43,167811,346483
-11/16/2025,Dalminica,SunwardH,progressive,FALSE,FALSE,52.16,187769,360000
-11/16/2025,Dalminica,Okazaki Fox,labour,FALSE,FALSE,47.84,172231,360000
-11/16/2025,Dentone,Joris,progressive,FALSE,FALSE,28.52,102658,360000
-11/16/2025,Dentone,How Do I Type,alliance,FALSE,FALSE,71.48,257342,360000
-11/16/2025,Emix,Javer,labour,FALSE,FALSE,100,360000,360000
-11/16/2025,Garvor,Strxya,progressive,FALSE,FALSE,53.14,191320,360000
-11/16/2025,Garvor,IAMVERYSWELL,labour,FALSE,FALSE,35.7,128526,360000
-11/16/2025,Garvor,Truman Gaming,renewal,FALSE,FALSE,11.5,40154,360000
-11/16/2025,Kilden,Cob,independent,FALSE,FALSE,67.45,241629,358249
-11/16/2025,Kilden,Earthseeker,pwp,FALSE,FALSE,17.27,54745,358249
-11/16/2025,Kilden,Lee,renewal,FALSE,FALSE,15.28,61875,358249
-11/16/2025,Newmasi,Mokaeo,labour,FALSE,FALSE,29.49,106172,360001
-11/16/2025,Newmasi,Griffith Hyde,alliance,FALSE,FALSE,27.55,99163,360001
-11/16/2025,Newmasi,Aston,progressive,FALSE,FALSE,24.78,89196,360001
-11/16/2025,Newmasi,JAMden,pwp,FALSE,FALSE,9.54,34341,360001
-11/16/2025,Newmasi,Eric Davidson,independent,FALSE,FALSE,8.65,31129,360001
-11/16/2025,Newmasi,Mokaeo,labour,FALSE,TRUE,59.59,206083,345827
-11/16/2025,Newmasi,Griffith Hyde,alliance,FALSE,TRUE,40.41,139744,345827
-11/16/2025,Quintin,Sonia Gandhi,labour,FALSE,FALSE,47.74,171873,360000
-11/16/2025,Quintin,Beary,progressive,FALSE,FALSE,33.84,121826,360000
-11/16/2025,Quintin,Microplastics Lover,pwp,FALSE,FALSE,18.42,66301,360000
-11/16/2025,Quintin,Sonia Gandhi,labour,FALSE,TRUE,60.4,216834,359006
-11/16/2025,Quintin,Beary,progressive,FALSE,TRUE,39.6,142172,359006
-11/16/2025,Trunoe,Medikit,pwp,FALSE,FALSE,30.44,109588,360015
-11/16/2025,Trunoe,Eden,alliance,FALSE,FALSE,30.78,110796,360015
-11/16/2025,Trunoe,Van der Plan,labour,FALSE,FALSE,17.35,62452,360015
-11/16/2025,Trunoe,Forsh,renewal,FALSE,FALSE,16.93,60935,360015
-11/16/2025,Trunoe,Borger,independent,FALSE,FALSE,4.51,16229,360015
-11/16/2025,Trunoe,Heatland,renewal,FALSE,FALSE,0.01,15,360015
-11/16/2025,Trunoe,Medikit,pwp,FALSE,TRUE,55.85,177278,317426
-11/16/2025,Trunoe,Eden,alliance,FALSE,TRUE,44.15,140148,317426
-11/16/2025,National Popular Vote,Alliance,alliance,FALSE,FALSE,32.56,,
-11/16/2025,National Popular Vote,Labour,labour,FALSE,FALSE,29.68,,
-11/16/2025,National Popular Vote,Progressive,progressive,FALSE,FALSE,24.76,,
-11/16/2025,National Popular Vote,PWP,pwp,FALSE,FALSE,6.91,,
-11/16/2025,National Popular Vote,Renewal,renewal,FALSE,FALSE,6.09,,
-11/16/2025,List Seat 1,Cruzer,alliance,FALSE,FALSE,100,,
-11/16/2025,List Seat 2,Griffith Hyde,alliance,FALSE,FALSE,100,,
-11/16/2025,List Seat 3,Eden,alliance,FALSE,FALSE,100,,
-11/16/2025,List Seat 4,Odin,alliance,FALSE,FALSE,100,,
-11/16/2025,List Seat 5,Okazaki Fox,labour,FALSE,FALSE,100,,
-11/16/2025,List Seat 6,Dannyunown0,labour,FALSE,FALSE,100,,
-11/16/2025,List Seat 7,Van der Plan,labour,FALSE,FALSE,100,,
-11/16/2025,List Seat 8,Danylo Isaacson-Lebid',labour,FALSE,FALSE,100,,
-11/16/2025,List Seat 9,Beary,progressive,FALSE,FALSE,100,,
-11/16/2025,List Seat 10,GMV,progressive,FALSE,FALSE,100,,
-11/16/2025,List Seat 11,Bernie Sanders,progressive,FALSE,FALSE,100,,
-11/16/2025,List Seat 12,Nivenoakes,progressive,FALSE,FALSE,100,,
-11/28/2025,Kilden,Lee,renewal,TRUE,FALSE,51.71,,
-11/28/2025,Kilden,EarthSeeker,pwp,TRUE,FALSE,28.39,,
-11/28/2025,Kilden,WizardBlue,alliance,TRUE,FALSE,19.9,,
-12/13/2025,Coalition,labour,united left,FALSE,FALSE,0,,
-12/13/2025,Coalition,progressive,united left,FALSE,FALSE,0,,
-12/13/2025,Coalition,pwp,united left,FALSE,FALSE,0,,
-12/13/2025,Coalition,Forsh,united left,FALSE,FALSE,0,,
-12/13/2025,Alvana,Poopman69,alliance,FALSE,FALSE,35.59,128118,360000
-12/13/2025,Alvana,Dannyunown0,labour,FALSE,FALSE,37.15,133731,360000
-12/13/2025,Alvana,BobLaFollette,pwp,FALSE,FALSE,17.61,63384,360000
-12/13/2025,Alvana,Donald Jehovaha Trump,jnp,FALSE,FALSE,9.66,34767,360000
-12/13/2025,Alvana,Poopman69,alliance,FALSE,TRUE,47.28,161589,341779
-12/13/2025,Alvana,Dannyunown0,labour,FALSE,TRUE,52.72,180190,341779
-12/13/2025,Brunix Islands,Geodore Roosevelt,alliance,FALSE,FALSE,53.45,192412,360000
-12/13/2025,Brunix Islands,Capy,pwp,FALSE,FALSE,46.55,167588,360000
-12/13/2025,Dalminica,SunwardH,progressive,FALSE,FALSE,45.98,165535,360001
-12/13/2025,Dalminica,Okazaki Fox,jnp,FALSE,FALSE,28.73,103419,360001
-12/13/2025,Dalminica,British Guy,alliance,FALSE,FALSE,25.29,91047,360001
-12/13/2025,Dalminica,SunwardH,progressive,FALSE,TRUE,63.32,188561,297803
-12/13/2025,Dalminica,Okazaki Fox,jnp,FALSE,TRUE,36.68,109242,297803
-12/13/2025,Dentone,How Do I Type,alliance,FALSE,FALSE,100,360000,360000
-12/13/2025,Emix,Javer,labour,FALSE,FALSE,100,360000,360000
-12/13/2025,Garvor,Nivenoakes,progressive,FALSE,FALSE,22.88,86124,360002
-12/13/2025,Garvor,TMK,labour,FALSE,FALSE,33.3,119875,360002
-12/13/2025,Garvor,Swamp Ape,alliance,FALSE,FALSE,23.92,82360,360002
-12/13/2025,Garvor,Eevee,jnp,FALSE,FALSE,19.89,71593,360002
-12/13/2025,Garvor,Sheep,independent,FALSE,FALSE,0.01,50,360002
-12/13/2025,Garvor,TMK,labour,FALSE,TRUE,61.56,220112,357531
-12/13/2025,Garvor,Swamp Ape,alliance,FALSE,TRUE,38.44,137419,357531
-12/13/2025,Kilden,Earthseeker,pwp,FALSE,FALSE,42.5,153009,359999
-12/13/2025,Kilden,Lee,renewal,FALSE,FALSE,57.5,206990,359999
-12/13/2025,Newmasi,JAMden,progressive,FALSE,FALSE,33.51,120636,360000
-12/13/2025,Newmasi,Odin,alliance,FALSE,FALSE,66.49,239364,360000
-12/13/2025,Quintin,Sonia Gandhi,labour,FALSE,FALSE,75.99,273551,360000
-12/13/2025,Quintin,Seth,progressive,FALSE,FALSE,24.01,86449,360000
-12/13/2025,Trunoe,Medikit,pwp,FALSE,FALSE,48.03,172916,360000
-12/13/2025,Trunoe,Forsh,independent,FALSE,FALSE,51.97,187084,360000
-12/13/2025,National Popular Vote,JNP,jnp,FALSE,FALSE,14.79,,
-12/13/2025,National Popular Vote,Alliance,alliance,FALSE,FALSE,29.44,,
-12/13/2025,National Popular Vote,Renewal,renewal,FALSE,FALSE,1.46,,
-12/13/2025,National Popular Vote,Labour,labour,FALSE,FALSE,25.95,,
-12/13/2025,National Popular Vote,Progressive,progressive,FALSE,FALSE,20.74,,
-12/13/2025,National Popular Vote,PWP,pwp,FALSE,FALSE,7.61,,
-12/13/2025,List Seat 1,Okazaki Fox,jnp,FALSE,FALSE,100,,
-12/13/2025,List Seat 2,Meiscool,jnp,FALSE,FALSE,100,,
-12/13/2025,List Seat 3,Cruzer,alliance,FALSE,FALSE,100,,
-12/13/2025,List Seat 4,Poopman69,alliance,FALSE,FALSE,100,,
-12/13/2025,List Seat 5,Griffith Hyde,alliance,FALSE,FALSE,100,,
-12/13/2025,List Seat 6,Uncle Skunk Ape,alliance,FALSE,FALSE,100,,
-12/13/2025,List Seat 7,Mokaeo,labour,FALSE,FALSE,100,,
-12/13/2025,List Seat 8,IAMVERYSWELL,labour,FALSE,FALSE,100,,
-12/13/2025,List Seat 9,Beary,progressive,FALSE,FALSE,100,,
-12/13/2025,List Seat 10,JAMden,progressive,FALSE,FALSE,100,,
-12/13/2025,List Seat 11,Nivenoakes,progressive,FALSE,FALSE,100,,
-12/13/2025,List Seat 12,Medikit,pwp,FALSE,FALSE,100,,
-1/25/2026,Coalition,alliance,alliance,FALSE,FALSE,0,,
-1/25/2026,Alvana,Poopman69,alliance,FALSE,FALSE,51.94,177640,342000
-1/25/2026,Alvana,Dannyunown0,labour,FALSE,FALSE,22.65,77462,342000
-1/25/2026,Alvana,BobLaFollette,pwp,FALSE,FALSE,14.62,49990,342000
-1/25/2026,Alvana,Donald Jehovaha Trump,coalition,FALSE,FALSE,10.79,36908,342000
-1/25/2026,Brunix Islands,Nick12,alliance,FALSE,FALSE,60.3,192412,319108
-1/25/2026,Brunix Islands,Jack Ciattarelli,coalition,FALSE,FALSE,18.31,58415,319108
-1/25/2026,Brunix Islands,Capybara,pwp,FALSE,FALSE,15,43351,319108
-1/25/2026,Brunix Islands,Usgball,independent,FALSE,FALSE,7.81,24930,319108
-1/25/2026,Dalminica,Okazaki Fox,coalition,FALSE,FALSE,42.55,148074,348000
-1/25/2026,Dalminica,British Guy,alliance,FALSE,FALSE,31.92,111073,348000
-1/25/2026,Dalminica,SunwardH,solidarity,FALSE,FALSE,13.45,46809,348000
-1/25/2026,Dalminica,Izemoji,labour,FALSE,FALSE,12.08,42044,348000
-1/25/2026,Dalminica,Okazaki Fox,coalition,FALSE,TRUE,50.96,167124,327974
-1/25/2026,Dalminica,British Guy,alliance,FALSE,TRUE,49.04,160850,327974
-1/25/2026,Dentone,How Do I Type,alliance,FALSE,FALSE,68.53,230264,335999
-1/25/2026,Dentone,Danylo Isaacson-Lebid',labour,FALSE,FALSE,21.72,72993,335999
-1/25/2026,Dentone,Benjamina Netanyahu,coalition,FALSE,FALSE,9.74,32742,335999
-1/25/2026,Emix,Javer,labour,FALSE,FALSE,50.57,166867,330000
-1/25/2026,Emix,Tal,pwp,FALSE,FALSE,49.43,163133,330000
-1/25/2026,Garvor,Alex,alliance,FALSE,FALSE,50.18,171628,342001
-1/25/2026,Garvor,Burley,coalition,FALSE,FALSE,19.86,67912,342001
-1/25/2026,Garvor,TMK,labour,FALSE,FALSE,18.96,64828,342001
-1/25/2026,Garvor,Niven_Oakes,progressive,FALSE,FALSE,11,37633,342001
-1/25/2026,Kilden,Sam McMahon,labour,FALSE,FALSE,44.7,152867,342000
-1/25/2026,Kilden,Paradise,alliance,FALSE,FALSE,39.84,136264,342000
-1/25/2026,Kilden,Earthseeker,independent,FALSE,FALSE,8.28,28306,342000
-1/25/2026,Kilden,Lee,solidarity,FALSE,FALSE,7.18,24563,342000
-1/25/2026,Kilden,Sam McMahon,labour,FALSE,TRUE,54.54,178616,327488
-1/25/2026,Kilden,Paradise,alliance,FALSE,TRUE,45.46,148872,327488
-1/25/2026,Newmasi,Caughtquick,alliance,FALSE,FALSE,48.62,169187,348000
-1/25/2026,Newmasi,Odin,solidarity,FALSE,FALSE,24.81,86322,348000
-1/25/2026,Newmasi,Obi Dervan,coalition,FALSE,FALSE,13.98,48635,348000
-1/25/2026,Newmasi,JAMden,progressive,FALSE,FALSE,12.6,43856,348000
-1/25/2026,Newmasi,Caughtquick,alliance,FALSE,TRUE,62.07,212452,342268
-1/25/2026,Newmasi,Odin,solidarity,FALSE,TRUE,37.93,129816,342268
-1/25/2026,Quintin,Sonia Gandhi,labour,FALSE,FALSE,50.59,166935,330000
-1/25/2026,Quintin,Beary,progressive,FALSE,FALSE,49.41,163065,330000
-1/25/2026,Trunoe,Northpoletyrant,alliance,FALSE,FALSE,53.76,180623,336000
-1/25/2026,Trunoe,Forsh,solidarity,FALSE,FALSE,46.24,155377,336000
-1/25/2026,National Popular Vote,Coalition,coalition,FALSE,FALSE,21.1,,
-1/25/2026,National Popular Vote,Alliance,alliance,FALSE,FALSE,53.27,,
-1/25/2026,National Popular Vote,Labour,labour,FALSE,FALSE,9.76,,
-1/25/2026,National Popular Vote,Solidarity,solidarity,FALSE,FALSE,6.39,,
-1/25/2026,National Popular Vote,Progressive,progressive,FALSE,FALSE,6.08,,
-1/25/2026,National Popular Vote,PWP,pwp,FALSE,FALSE,3.4,,
-1/25/2026,List Seat 1,Athabasca,coalition,FALSE,FALSE,100,,
-1/25/2026,List Seat 2,Burley,coalition,FALSE,FALSE,100,,
-1/25/2026,List Seat 3,Van der Plan,coalition,FALSE,FALSE,100,,
-1/25/2026,List Seat 4,Eevee,coalition,FALSE,FALSE,100,,
-1/25/2026,List Seat 5,Jack Ciatarelli,coalition,FALSE,FALSE,100,,
-1/25/2026,List Seat 6,Nebular Space,alliance,FALSE,FALSE,100,,
-1/25/2026,List Seat 7,Usgball,alliance,FALSE,FALSE,100,,
-1/25/2026,List Seat 8,Geodore Roosevelt,alliance,FALSE,FALSE,100,,
-1/25/2026,List Seat 9,Cruzer,alliance,FALSE,FALSE,100,,
-1/25/2026,List Seat 10,Griffith Hyde,alliance,FALSE,FALSE,100,,
-1/25/2026,List Seat 11,Spakian,alliance,FALSE,FALSE,100,,
-1/25/2026,List Seat 12,Sean,alliance,FALSE,FALSE,100,,
-1/25/2026,List Seat 13,British Guy,alliance,FALSE,FALSE,100,,
-1/25/2026,List Seat 14,Jerry,alliance,FALSE,FALSE,100,,
-1/25/2026,List Seat 15,Dirty Yield,alliance,FALSE,FALSE,100,,
-1/25/2026,List Seat 16,Grant,alliance,FALSE,FALSE,100,,
-1/25/2026,List Seat 17,Odin,solidarity,FALSE,FALSE,100,,
-1/25/2026,List Seat 18,Forsh,solidarity,FALSE,FALSE,100,,
-1/25/2026,List Seat 19,Beary,progressive,FALSE,FALSE,100,,
-1/25/2026,List Seat 20,JAMden,progressive,FALSE,FALSE,100,,
-02/09/2026,Quintin,Rahul Gandhi,proglab,TRUE,FALSE,57.28,182135,318000
-02/09/2026,Quintin,Run,alliance,TRUE,FALSE,42.72,135865,318000
-2/17/2026,Dalminica,Flor Belgier,proglab,TRUE,FALSE,39.13,129129,330000
-2/17/2026,Dalminica,British Guy,alliance,TRUE,FALSE,35.86,118338,330000
-2/17/2026,Dalminica,Izemoji,coalition,TRUE,FALSE,25.01,82533,330000
-2/17/2026,Dalminica,Flor Belgier,proglab,TRUE,TRUE,52.05,168144,323043
-2/17/2026,Dalminica,British Guy,alliance,TRUE,TRUE,47.95,154899,323043
-2/28/2026,Coalition,jnp,bob,FALSE,FALSE,0,,
-2/28/2026,Coalition,alliance,bob,FALSE,FALSE,0,,
-2/28/2026,Coalition,solidarity,bob,FALSE,FALSE,0,,
-2/28/2026,Alvana,Poopman69,alliance,FALSE,FALSE,53.4,176220,330000
-2/28/2026,Alvana,Dannyunown0,proglab,FALSE,FALSE,23.6,77880,330000
-2/28/2026,Alvana,Tommy,pwp,FALSE,FALSE,22.99,75867,330000
-2/28/2026,Brunix Islands,Jack Ciattarelli,alliance,FALSE,FALSE,69.66,229878,330000
-2/28/2026,Brunix Islands,Capy,proglab,FALSE,FALSE,23.05,76065,330000
-2/28/2026,Brunix Islands,Usgball,independent,FALSE,FALSE,7.29,24057,330000
-2/28/2026,Dalminica,Flor Belgier,proglab,FALSE,FALSE,46.2,152460,330000
-2/28/2026,Dalminica,Copperhead,alliance,FALSE,FALSE,38.66,127578,330000
-2/28/2026,Dalminica,British Guy,solidarity,FALSE,FALSE,15.14,49962,330000
-2/28/2026,Dalminica,Flor Belgier,proglab,FALSE,TRUE,51.68,170544,330000
-2/28/2026,Dalminica,Copperhead,alliance,FALSE,TRUE,48.32,159456,330000
-2/28/2026,Dentone,How Do I Type,alliance,FALSE,FALSE,71.35,235455,330000
-2/28/2026,Dentone,Benjamina Netanyahu,proglab,FALSE,FALSE,19.97,65901,330000
-2/28/2026,Dentone,Joris,independent,FALSE,FALSE,8.68,28644,330000
-2/28/2026,Emix,Jerry,alliance,FALSE,FALSE,39.68,130944,330000
-2/28/2026,Emix,Javer,proglab,FALSE,FALSE,40.25,132825,330000
-2/28/2026,Emix,Newsom,solidarity,FALSE,FALSE,20.07,66231,330000
-2/28/2026,Emix,Jerry,alliance,FALSE,TRUE,50.39,166287,330000
-2/28/2026,Emix,Javer,proglab,FALSE,TRUE,49.61,163713,330000
-2/28/2026,Garvor,Alex,alliance,FALSE,FALSE,49.37,162921,330000
-2/28/2026,Garvor,TMK,proglab,FALSE,FALSE,27.11,89463,330000
-2/28/2026,Garvor,Felix,jnp,FALSE,FALSE,13.08,43164,330000
-2/28/2026,Garvor,Burley,pwp,FALSE,FALSE,10.44,34452,330000
-2/28/2026,Garvor,Alex,alliance,FALSE,TRUE,51.39,169587,330000
-2/28/2026,Garvor,TMK,proglab,FALSE,TRUE,30.01,99033,330000
-2/28/2026,Garvor,Felix,jnp,FALSE,TRUE,18.6,61380,330000
-2/28/2026,Kilden,Sam McMahon,proglab,FALSE,FALSE,45.79,151107,330000
-2/28/2026,Kilden,Lee,solidarity,FALSE,FALSE,30.82,101706,330000
-2/28/2026,Kilden,Cob,pwp,FALSE,FALSE,23.38,77154,330000
-2/28/2026,Kilden,Sam McMahon,proglab,FALSE,TRUE,59.14,195162,330000
-2/28/2026,Kilden,Lee,solidarity,FALSE,TRUE,40.86,134838,330000
-2/28/2026,Newmasi,Craig,alliance,FALSE,FALSE,46.45,153285,330000
-2/28/2026,Newmasi,JAMden,proglab,FALSE,FALSE,32.66,107778,330000
-2/28/2026,Newmasi,Out of names,solidarity,FALSE,FALSE,16.83,55539,330000
-2/28/2026,Newmasi,Jabed,independent,FALSE,FALSE,4.06,13398,330000
-2/28/2026,Newmasi,Craig,alliance,FALSE,TRUE,54.22,178926,330000
-2/28/2026,Newmasi,JAMden,proglab,FALSE,TRUE,45.78,151074,330000
-2/28/2026,Quintin,Rahul Gandhi,proglab,FALSE,FALSE,50.53,166749,330000
-2/28/2026,Quintin,Run,alliance,FALSE,FALSE,49.47,163251,330000
-2/28/2026,Trunoe,Growmper,solidarity,FALSE,FALSE,50.13,165429,330000
-2/28/2026,Trunoe,Dutch van der Linde,proglab,FALSE,FALSE,49.87,164571,330000
-2/28/2026,National Popular Vote,Nationals,jnp,FALSE,FALSE,9.11,,
-2/28/2026,National Popular Vote,Alliance,alliance,FALSE,FALSE,43.55,,
-2/28/2026,National Popular Vote,Solidarity,solidarity,FALSE,FALSE,11.25,,
-2/28/2026,National Popular Vote,ProgLab,proglab,FALSE,FALSE,27.07,,
-2/28/2026,National Popular Vote,UCP,pwp,FALSE,FALSE,9.03,,
-2/28/2026,List Seat 1,Felix,jnp,FALSE,FALSE,100,,
-2/28/2026,List Seat 2,Obi Dervan,jnp,FALSE,FALSE,100,,
-2/28/2026,List Seat 3,Athabasca,jnp,FALSE,FALSE,100,,
-2/28/2026,List Seat 4,Run,alliance,FALSE,FALSE,100,,
-2/28/2026,List Seat 5,CaptainNF,alliance,FALSE,FALSE,100,,
-2/28/2026,List Seat 6,Eden,alliance,FALSE,FALSE,100,,
-2/28/2026,List Seat 7,Usgball,alliance,FALSE,FALSE,100,,
-2/28/2026,List Seat 8,Spakian,alliance,FALSE,FALSE,100,,
-2/28/2026,List Seat 9,Sean,alliance,FALSE,FALSE,100,,
-2/28/2026,List Seat 10,Griffith Hyde,alliance,FALSE,FALSE,100,,
-2/28/2026,List Seat 11,Caughtquick,alliance,FALSE,FALSE,100,,
-2/28/2026,List Seat 12,Potato,solidarity,FALSE,FALSE,100,,
-2/28/2026,List Seat 13,Mokaeo,solidarity,FALSE,FALSE,100,,
-2/28/2026,List Seat 14,Javer,proglab,FALSE,FALSE,100,,
-2/28/2026,List Seat 15,JAMden,proglab,FALSE,FALSE,100,,
-2/28/2026,List Seat 16,Niven,proglab,FALSE,FALSE,100,,
-2/28/2026,List Seat 17,Beary,proglab,FALSE,FALSE,100,,
-2/28/2026,List Seat 18,Van der Plan,proglab,FALSE,FALSE,100,,
-2/28/2026,List Seat 19,Cob,pwp,FALSE,FALSE,100,,
-2/28/2026,List Seat 20,Tommy,pwp,FALSE,FALSE,100,,
-3/26/2026,Trunoe,Van der Plan,green,FALSE,FALSE,60.79,196951,324000
-3/26/2026,Trunoe,Northpoletyrant,sdp,TRUE,FALSE,24.19,78380,324000
-3/26/2026,Trunoe,Medikit,pwp,TRUE,FALSE,14.44,46801,324000
-3/26/2026,Trunoe,Heatland,sdp,TRUE,FALSE,0.58,1868,324000
-3/26/2026,Trunoe,Van der Plan,green,TRUE,TRUE,66.77,215182,322276
-3/26/2026,Trunoe,Northpoletyrant,sdp,TRUE,TRUE,33.23,107094,322276
-4/18/2026,Coalition,alliance,sunmoon,FALSE,FALSE,0,,
-4/18/2026,Coalition,solidarity,sunmoon,FALSE,FALSE,0,,
-4/18/2026,Emix,Jerry,alliance,FALSE,FALSE,33.83,115694,342001
-4/18/2026,Emix,Trey,green,FALSE,FALSE,32.17,110009,342001
-4/18/2026,Emix,Javer,sdp,FALSE,FALSE,23.61,80761,342001
-4/18/2026,Emix,Newsom,solidarity,FALSE,FALSE,10.39,35537,342001
-4/18/2026,Emix,Jerry,alliance,FALSE,TRUE,44.29,141477,319440
-4/18/2026,Emix,Trey,green,FALSE,TRUE,55.71,177963,319440
-4/18/2026,Kilden,Cob,ucp,FALSE,FALSE,62.92,211395,336000
-4/18/2026,Kilden,Newsom,solidarity,FALSE,FALSE,37.08,124605,336000
-4/18/2026,Brunix Islands,Jack Ciattarelli,alliance,FALSE,FALSE,69.04,236105,342000
-4/18/2026,Brunix Islands,JP,ucp,FALSE,FALSE,13.51,46212,342000
-4/18/2026,Brunix Islands,Capy,green,FALSE,FALSE,12.91,44142,342000
-4/18/2026,Brunix Islands,Usgball,independent,FALSE,FALSE,4.54,15541,342000
-4/18/2026,Garvor,Alex,alliance,FALSE,FALSE,31.93,110157,349445
-4/18/2026,Garvor,Strxya,green,FALSE,FALSE,23.88,82840,349445
-4/18/2026,Garvor,TMK,sdp,FALSE,FALSE,19.51,69050,349445
-4/18/2026,Garvor,Athabasca,jnp,FALSE,FALSE,11.47,40616,349445
-4/18/2026,Garvor,Viterkol,solidarity,FALSE,FALSE,9.6,33992,349445
-4/18/2026,Garvor,StarStar,independent,FALSE,FALSE,1.3,4616,349445
-4/18/2026,Garvor,Jkuma,independent,FALSE,FALSE,1.17,4135,349445
-4/18/2026,Garvor,Johnny Sins,independent,FALSE,FALSE,1.14,4039,349445
-4/18/2026,Garvor,Alex,alliance,FALSE,TRUE,50.24,169639,337667
-4/18/2026,Garvor,Strxya,green,FALSE,TRUE,49.76,168028,337667
-4/18/2026,Dalminica,Flor Belgier,sdp,FALSE,FALSE,51.9,174391,336000
-4/18/2026,Dalminica,Vincent F. Rocher,alliance,FALSE,FALSE,35.4,118950,336000
-4/18/2026,Dalminica,Izemoji,green,FALSE,FALSE,12.7,42659,336000
-4/18/2026,Newmasi,Griffith Hyde,alliance,FALSE,FALSE,37.11,129133,348001
-4/18/2026,Newmasi,JAMden,sdp,FALSE,FALSE,22.52,78368,348001
-4/18/2026,Newmasi,Meerkat SJV Habitat,green,FALSE,FALSE,17.5,60916,348001
-4/18/2026,Newmasi,Mokaeo,solidarity,FALSE,FALSE,16.59,57741,348001
-4/18/2026,Newmasi,Obi Dervan,jnp,FALSE,FALSE,6.28,21843,348001
-4/18/2026,Newmasi,Griffith Hyde,alliance,FALSE,TRUE,58.15,200729,345212
-4/18/2026,Newmasi,JAMden,sdp,FALSE,TRUE,41.85,144483,345212
-4/18/2026,Trunoe,Dutch van der Linde,green,FALSE,FALSE,70.76,233517,330000
-4/18/2026,Trunoe,Heatland,sdp,FALSE,FALSE,15.76,51999,330000
-4/18/2026,Trunoe,Medikit,ucp,FALSE,FALSE,13.48,44484,330000
-4/18/2026,Alvana,Poopman69,alliance,FALSE,FALSE,44.67,155446,348000
-4/18/2026,Alvana,Dannyunown0,sdp,FALSE,FALSE,23.9,83161,348000
-4/18/2026,Alvana,Tommy,ucp,FALSE,FALSE,17.74,61751,348000
-4/18/2026,Alvana,Aki Corentin,green,FALSE,FALSE,13.69,47642,348000
-4/18/2026,Alvana,Poopman69,alliance,FALSE,TRUE,55.56,189318,340738
-4/18/2026,Alvana,Tommy,ucp,FALSE,TRUE,44.44,151420,340738
-4/18/2026,Dentone,How Do I Type,alliance,FALSE,FALSE,68.01,232578,342000
-4/18/2026,Dentone,Tw1light,green,FALSE,FALSE,16.58,56709,342000
-4/18/2026,Dentone,Danylo Isaacson-Lebid',ucp,FALSE,FALSE,15.41,52713,342000
-4/18/2026,Dentone,Halogram,independent,FALSE,FALSE,0.0000001,0,342000
-4/18/2026,Quintin,Rahul Gandhi,sdp,FALSE,FALSE,56.94,191324,336000
-4/18/2026,Quintin,Run,alliance,FALSE,FALSE,28.73,96532,336000
-4/18/2026,Quintin,Beary,green,FALSE,FALSE,14.33,48144,336000
-4/18/2026,National Popular Vote,Nationals,jnp,FALSE,FALSE,2.6,,
-4/18/2026,National Popular Vote,Alliance,alliance,FALSE,FALSE,45.09,,
-4/18/2026,National Popular Vote,Solidarity,solidarity,FALSE,FALSE,8.19,,
-4/18/2026,National Popular Vote,SDP,sdp,FALSE,FALSE,12.83,,
-4/18/2026,National Popular Vote,Greens,green,FALSE,FALSE,18.44,,
-4/18/2026,National Popular Vote,UCP,ucp,FALSE,FALSE,12.85,,
-4/18/2026,List Seat 1,Sean,alliance,FALSE,FALSE,100,,
-4/18/2026,List Seat 2,Run,alliance,FALSE,FALSE,100,,
-4/18/2026,List Seat 3,JKuma12,alliance,FALSE,FALSE,100,,
-4/18/2026,List Seat 4,Jerry,alliance,FALSE,FALSE,100,,
-4/18/2026,List Seat 5,Spakian,alliance,FALSE,FALSE,100,,
-4/18/2026,List Seat 6,Timothy Pickering,alliance,FALSE,FALSE,100,,
-4/18/2026,List Seat 7,Usgball,alliance,FALSE,FALSE,100,,
-4/18/2026,List Seat 8,Caughtquick,alliance,FALSE,FALSE,100,,
-4/18/2026,List Seat 9,Eden,alliance,FALSE,FALSE,100,,
-4/18/2026,List Seat 10,Mokaeo,solidarity,FALSE,FALSE,100,,
-4/18/2026,List Seat 11,Viterkol,solidarity,FALSE,FALSE,100,,
-4/18/2026,List Seat 12,JAMden,sdp,FALSE,FALSE,100,,
-4/18/2026,List Seat 13,Dannyunown0,sdp,FALSE,FALSE,100,,
-4/18/2026,List Seat 14,Strxya,green,FALSE,FALSE,100,,
-4/18/2026,List Seat 15,Beary,green,FALSE,FALSE,100,,
-4/18/2026,List Seat 16,Forsh,green,FALSE,FALSE,100,,
-4/18/2026,List Seat 17,Gobbi,green,FALSE,FALSE,100,,
-4/18/2026,List Seat 18,Tommy,ucp,FALSE,FALSE,100,,
-4/18/2026,List Seat 19,Danylo Isaacson-Lebid',ucp,FALSE,FALSE,100,,
-4/18/2026,List Seat 20,Robert M. LaFollette Sr.,ucp,FALSE,FALSE,100,,
-5/30/2026,Coalition,alliance,sunset,FALSE,FALSE,0,,
-5/30/2026,Coalition,fdp,sunset,FALSE,FALSE,0,,
-5/30/2026,Coalition,Danylo Isaacson-Lebid',sunset,FALSE,FALSE,0,,
-5/30/2026,Coalition,Tommy,sunset,FALSE,FALSE,0,,
-5/30/2026,Coalition,Van der Plan,sunset,FALSE,FALSE,0,,
-5/30/2026,Coalition,JAMden,sunset,FALSE,FALSE,0,,
-5/30/2026,Alvana,Dannyunown0,sdp,FALSE,FALSE,37.03,126653,342001
-5/30/2026,Alvana,Poopman69,alliance,FALSE,FALSE,32.14,109930,342001
-5/30/2026,Alvana,Tommy,ucp,FALSE,FALSE,20,68408,342001
-5/30/2026,Alvana,Donald Jehovaha Trump,fdp,FALSE,FALSE,10.82,37010,342001
-5/30/2026,Alvana,Dannyunown0,sdp,FALSE,TRUE,58.24,197306,338806
-5/30/2026,Alvana,Poopman69,alliance,FALSE,TRUE,41.76,141500,338806
-5/30/2026,Brunix Islands,Usgball,alliance,FALSE,FALSE,59.8,193745,323970
-5/30/2026,Brunix Islands,Chilicothe,sdp,FALSE,FALSE,40.2,130225,323970
-5/30/2026,Dalminica,Flor Belgier,sdp,FALSE,FALSE,40.91,135017,330000
-5/30/2026,Dalminica,Cruzer,fdp,FALSE,FALSE,41.31,136339,330000
-5/30/2026,Dalminica,Edward Kegan,green,FALSE,FALSE,17.77,58644,330000
-5/30/2026,Dalminica,Flor Belgier,sdp,FALSE,TRUE,53.43,175763,328945
-5/30/2026,Dalminica,Cruzer,fdp,FALSE,TRUE,46.57,153182,328945
-5/30/2026,Dentone,How Do I Type,alliance,FALSE,FALSE,55.68,187084,329411
-5/30/2026,Dentone,Tw1light,green,FALSE,FALSE,31.28,105104,329411
-5/30/2026,Dentone,Danylo Isaacson-Lebid',ucp,FALSE,FALSE,11.08,37223,329411
-5/30/2026,Dentone,Halogram,independent,FALSE,FALSE,1.96,6589,329411
-5/30/2026,Emix,Trey,green,FALSE,FALSE,52.26,175584,336000
-5/30/2026,Emix,Newsom,fdp,FALSE,FALSE,25.64,86160,336000
-5/30/2026,Emix,Javer,sdp,FALSE,FALSE,22.1,74256,336000
-5/30/2026,Garvor,Jkuma,alliance,FALSE,FALSE,32.55,111316,341999
-5/30/2026,Garvor,Katherine Monroe,sdp,FALSE,FALSE,27.19,93000,341999
-5/30/2026,Garvor,Strxya,green,FALSE,FALSE,20.27,69313,341999
-5/30/2026,Garvor,Burley,fdp,FALSE,FALSE,13.24,45272,341999
-5/30/2026,Garvor,Athabasca,independent,FALSE,FALSE,6.75,23098,341999
-5/30/2026,Garvor,Jkuma,alliance,FALSE,TRUE,49.25,168449,342000
-5/30/2026,Garvor,Katherine Monroe,sdp,FALSE,TRUE,50.75,173551,342000
-5/30/2026,Kilden,Cob,ucp,FALSE,FALSE,55.01,174942,318000
-5/30/2026,Kilden,bfdifann,green,FALSE,FALSE,44.99,143058,318000
-5/30/2026,Newmasi,JAMden,green,FALSE,FALSE,38.7,130019,336000
-5/30/2026,Newmasi,Caughtquick,alliance,FALSE,FALSE,25.87,86929,336000
-5/30/2026,Newmasi,Mokaeo,fdp,FALSE,FALSE,23.45,78778,336000
-5/30/2026,Newmasi,Howard Davidson,independent,FALSE,FALSE,11.99,40274,336000
-5/30/2026,Newmasi,Caughtquick,alliance,FALSE,TRUE,51.72,169813,328313
-5/30/2026,Newmasi,JAMden,green,FALSE,TRUE,48.28,158500,328313
-5/30/2026,Quintin,Rahul Gandhi,sdp,FALSE,FALSE,65.7,204997,312000
-5/30/2026,Quintin,ItsJustAlfie,green,FALSE,FALSE,34.3,107003,312000
-5/30/2026,Trunoe,Van der Plan,green,FALSE,FALSE,73.21,228409,312000
-5/30/2026,Trunoe,Heatland,independent,FALSE,FALSE,26.79,83591,312000
-5/30/2026,National Popular Vote,Alliance,alliance,FALSE,FALSE,36.56,,
-5/30/2026,National Popular Vote,FDP,fdp,FALSE,FALSE,11.63,,
-5/30/2026,National Popular Vote,SDP,sdp,FALSE,FALSE,19.46,,
-5/30/2026,National Popular Vote,Greens,green,FALSE,FALSE,20.08,,
-5/30/2026,National Popular Vote,UCP,ucp,FALSE,FALSE,12.27,,
-5/30/2026,List Seat 1,Eden,alliance,FALSE,FALSE,100,,
-5/30/2026,List Seat 2,Jerry,alliance,FALSE,FALSE,100,,
-5/30/2026,List Seat 3,Sandhillcranes,alliance,FALSE,FALSE,100,,
-5/30/2026,List Seat 4,Timothy Pickering,alliance,FALSE,FALSE,100,,
-5/30/2026,List Seat 5,Poopman69,alliance,FALSE,FALSE,100,,
-5/30/2026,List Seat 6,Dirty Yield,alliance,FALSE,FALSE,100,,
-5/30/2026,List Seat 7,John Sanchez,alliance,FALSE,FALSE,100,,
-5/30/2026,List Seat 8,Sean,alliance,FALSE,FALSE,100,,
-5/30/2026,List Seat 9,Burley,fdp,FALSE,FALSE,100,,
-5/30/2026,List Seat 10,Mokaeo,fdp,FALSE,FALSE,100,,
-5/30/2026,List Seat 11,Viterkol,fdp,FALSE,FALSE,100,,
-5/30/2026,List Seat 12,TMK,sdp,FALSE,FALSE,100,,
-5/30/2026,List Seat 13,Jack Bruhton,sdp,FALSE,FALSE,100,,
-5/30/2026,List Seat 14,Strxya,green,FALSE,FALSE,100,,
-5/30/2026,List Seat 15,JAMden,green,FALSE,FALSE,100,,
-5/30/2026,List Seat 16,Friezzer,green,FALSE,FALSE,100,,
-5/30/2026,List Seat 17,bfdifann,green,FALSE,FALSE,100,,
-5/30/2026,List Seat 18,Tommy,ucp,FALSE,FALSE,100,,
-5/30/2026,List Seat 19,Robert M. LaFollette Sr.,ucp,FALSE,FALSE,100,,
-5/30/2026,List Seat 20,Danylo Isaacson-Lebid',ucp,FALSE,FALSE,100,,
-7/29/2026,Kilden,BFDIfan,green,TRUE,FALSE,55.83,184226,330000
-7/29/2026,Kilden,Lee,fdp,TRUE,FALSE,44.17,145774,330000
-7/29/2026,List Seat 17,Maki,green,TRUE,FALSE,100,,
+date,region,candidate,party,offyear,runoff,voteshare,candidatevotes,totalvotes,hidden,disabled
+8/21/2024,Coalition,labour,lablib,FALSE,FALSE,0,,,,
+8/21/2024,Coalition,liberal,lablib,FALSE,FALSE,0,,,,
+8/21/2024,North,Virt,liberal,FALSE,FALSE,42.86,3,7,,
+8/21/2024,North,Armstrong,independent,FALSE,FALSE,28.57,2,7,,
+8/21/2024,North,Cob,labour,FALSE,FALSE,14.29,1,7,,
+8/21/2024,North,Geodore,independent,FALSE,FALSE,14.29,1,7,,
+8/21/2024,North,Virt,liberal,FALSE,TRUE,57.14,4,7,,
+8/21/2024,North,Armstrong,independent,FALSE,TRUE,42.86,3,7,,
+8/21/2024,East,GMV,liberal,FALSE,FALSE,62.5,5,8,,
+8/21/2024,East,Copperhead,conservative,FALSE,FALSE,37.5,3,8,,
+8/21/2024,South,Ok,labour,FALSE,FALSE,60,6,10,,
+8/21/2024,South,Deet0722,alliance,FALSE,FALSE,40,4,10,,
+8/21/2024,West,Nath,liberal,FALSE,FALSE,36.36,4,11,,
+8/21/2024,West,Spakian,conservative,FALSE,FALSE,36.36,4,11,,
+8/21/2024,West,Plxto,labour,FALSE,FALSE,18.18,2,11,,
+8/21/2024,West,June_3rd,independent,FALSE,FALSE,9.09,1,11,,
+8/21/2024,West,Nath,liberal,FALSE,TRUE,60,6,10,,
+8/21/2024,West,Spakian,conservative,FALSE,TRUE,40,4,10,,
+8/21/2024,List Seat 1,How do i type,conservative,FALSE,FALSE,100,,,,
+8/21/2024,List Seat 2,BlockyBeach,conservative,FALSE,FALSE,100,,,,
+8/21/2024,List Seat 3,Deet0722,conservative,FALSE,FALSE,100,,,,
+8/21/2024,List Seat 4,Copperhead,conservative,FALSE,FALSE,100,,,,
+8/21/2024,List Seat 5,Charlemagne,liberal,FALSE,FALSE,100,,,,
+8/21/2024,List Seat 6,Cob,labour,FALSE,FALSE,100,,,,
+8/21/2024,List Seat 7,KingsCastle,labour,FALSE,FALSE,100,,,,
+8/21/2024,List Seat 8,Plxto,labour,FALSE,FALSE,100,,,,
+8/21/2024,List Seat 9,Ash,labour,FALSE,FALSE,100,,,,
+8/21/2024,National Popular Vote,Labour,labour,FALSE,FALSE,38.89,,,,
+8/21/2024,National Popular Vote,Liberal,liberal,FALSE,FALSE,30.56,,,,
+8/21/2024,National Popular Vote,Conservative,conservative,FALSE,FALSE,30.56,,,,
+9/21/2024,Coalition,labour,lablib,FALSE,FALSE,0,,,,
+9/21/2024,Coalition,liberal,lablib,FALSE,FALSE,0,,,,
+9/21/2024,North,Josh Shapiro Fan,liberal,FALSE,FALSE,62.5,5,8,,
+9/21/2024,North,Virt,liberal,FALSE,FALSE,12.5,1,8,,
+9/21/2024,North,Cob,labour,FALSE,FALSE,12.5,1,8,,
+9/21/2024,North,Geodore,independent,FALSE,FALSE,12.5,1,8,,
+9/21/2024,West,Nath,liberal,FALSE,FALSE,44.44,4,9,,
+9/21/2024,West,BlockyBeach,alliance,FALSE,FALSE,33.33,3,9,,
+9/21/2024,West,Ash,labour,FALSE,FALSE,22.22,2,9,,
+9/21/2024,West,Nath,liberal,FALSE,TRUE,66.7,6,9,,
+9/21/2024,West,BlockyBeach,alliance,FALSE,TRUE,33.3,3,9,,
+9/21/2024,East,Copperhead,alliance,FALSE,FALSE,50,2,4,,
+9/21/2024,East,GMV,liberal,FALSE,FALSE,25,1,4,,
+9/21/2024,East,toilet paper,labour,FALSE,FALSE,25,1,4,,
+9/21/2024,East,Copperhead,alliance,FALSE,TRUE,50.001,2,4,,
+9/21/2024,East,GMV,liberal,FALSE,TRUE,50,2,4,,
+9/21/2024,South,Ok,labour,FALSE,FALSE,83.33,5,6,,
+9/21/2024,South,How do i type,alliance,FALSE,FALSE,16.67,1,6,,
+9/21/2024,List Seat 1,How do i type,alliance,FALSE,FALSE,100,,,,
+9/21/2024,List Seat 2,BlockyBeach,alliance,FALSE,FALSE,100,,,,
+9/21/2024,List Seat 3,Deet0722,alliance,FALSE,FALSE,100,,,,
+9/21/2024,List Seat 4,Virt,liberal,FALSE,FALSE,100,,,,
+9/21/2024,List Seat 5,GMV,liberal,FALSE,FALSE,100,,,,
+9/21/2024,List Seat 6,Charlemagne,liberal,FALSE,FALSE,100,,,,
+9/21/2024,List Seat 7,Cob,labour,FALSE,FALSE,100,,,,
+9/21/2024,List Seat 8,Ash,labour,FALSE,FALSE,100,,,,
+9/21/2024,List Seat 9,Dannyunown0,labour,FALSE,FALSE,100,,,,
+9/21/2024,National Popular Vote,Labour,labour,FALSE,FALSE,30.77,,,,
+9/21/2024,National Popular Vote,Liberal,liberal,FALSE,FALSE,38.46,,,,
+9/21/2024,National Popular Vote,Alliance,alliance,FALSE,FALSE,30.77,,,,
+10/20/2024,Coalition,labour,unity,FALSE,FALSE,0,,,,
+10/20/2024,Coalition,liberal,unity,FALSE,FALSE,0,,,,
+10/20/2024,Coalition,alliance,unity,FALSE,FALSE,0,,,,
+10/20/2024,East,Copperhead,alliance,FALSE,FALSE,60,3,5,,
+10/20/2024,East,toilet paper,labour,FALSE,FALSE,40,2,5,,
+10/20/2024,South,Dannyunown0,labour,FALSE,FALSE,62.5,5,8,,
+10/20/2024,South,How do i type,alliance,FALSE,FALSE,37.5,3,8,,
+10/20/2024,West,Nath,liberal,FALSE,FALSE,45.45,5,11,,
+10/20/2024,West,BlockyBeach,alliance,FALSE,FALSE,36.36,4,11,,
+10/20/2024,West,Ash,labour,FALSE,FALSE,18.18,2,11,,
+10/20/2024,West,Nath,liberal,FALSE,TRUE,63.64,7,11,,
+10/20/2024,West,BlockyBeach,alliance,FALSE,TRUE,36.36,4,11,,
+10/20/2024,North,Charlemagne,liberal,FALSE,FALSE,30,3,10,,
+10/20/2024,North,Alex,alliance,FALSE,FALSE,40,4,10,,
+10/20/2024,North,Virt,liberal,FALSE,FALSE,30,3,10,,
+10/20/2024,North,Charlemagne,liberal,FALSE,TRUE,55.56,5,9,,
+10/20/2024,North,Alex,alliance,FALSE,TRUE,44.44,4,9,,
+10/20/2024,List Seat 1,How do i type,alliance,FALSE,FALSE,100,,,,
+10/20/2024,List Seat 2,BlockyBeach,alliance,FALSE,FALSE,100,,,,
+10/20/2024,List Seat 3,Virt,liberal,FALSE,FALSE,100,,,,
+10/20/2024,List Seat 4,GMV,liberal,FALSE,FALSE,100,,,,
+10/20/2024,List Seat 5,Strxya,liberal,FALSE,FALSE,100,,,,
+10/20/2024,List Seat 6,Cob,labour,FALSE,FALSE,100,,,,
+10/20/2024,List Seat 7,Ash,labour,FALSE,FALSE,100,,,,
+10/20/2024,List Seat 8,Libtard,labour,FALSE,FALSE,100,,,,
+10/20/2024,National Popular Vote,Labour,labour,FALSE,FALSE,30.3,,,,
+10/20/2024,National Popular Vote,Liberal,liberal,FALSE,FALSE,42.42,,,,
+10/20/2024,National Popular Vote,Alliance,alliance,FALSE,FALSE,27.27,,,,
+11/24/2024,Coalition,labour,labourcon,FALSE,FALSE,0,,,,
+11/24/2024,Coalition,alliance,labourcon,FALSE,FALSE,0,,,,
+11/24/2024,South,Dannyunown0,labour,FALSE,FALSE,57.14,4,7,,
+11/24/2024,South,Meiscool,alliance,FALSE,FALSE,42.86,3,7,,
+11/24/2024,East,Copperhead,alliance,FALSE,FALSE,75,6,8,,
+11/24/2024,East,GMV,liberal,FALSE,FALSE,25,2,8,,
+11/24/2024,North,Alex,liberal,FALSE,FALSE,50,4,8,,
+11/24/2024,North,Virt,liberal,FALSE,FALSE,25,2,8,,
+11/24/2024,North,Charlemagne,liberal,FALSE,FALSE,12.5,1,8,,
+11/24/2024,North,Geodore,alliance,FALSE,FALSE,12.5,1,8,,
+11/24/2024,North,Alex,liberal,FALSE,TRUE,62.5,5,8,,
+11/24/2024,North,Virt,liberal,FALSE,TRUE,25,2,8,,
+11/24/2024,North,Charlemagne,liberal,FALSE,TRUE,12.5,1,8,,
+11/24/2024,West,Nath,liberal,FALSE,FALSE,40,4,10,,
+11/24/2024,West,BlockyBeach,alliance,FALSE,FALSE,40,4,10,,
+11/24/2024,West,Ash,labour,FALSE,FALSE,20,2,10,,
+11/24/2024,West,Nath,liberal,FALSE,TRUE,60,6,10,,
+11/24/2024,West,BlockyBeach,alliance,FALSE,TRUE,40,4,10,,
+11/24/2024,List Seat 1,How do i type,alliance,FALSE,FALSE,100,,,,
+11/24/2024,List Seat 2,BlockyBeach,alliance,FALSE,FALSE,100,,,,
+11/24/2024,List Seat 3,Geodore,alliance,FALSE,FALSE,100,,,,
+11/24/2024,List Seat 4,Virt,liberal,FALSE,FALSE,100,,,,
+11/24/2024,List Seat 5,Charlemagne,liberal,FALSE,FALSE,100,,,,
+11/24/2024,List Seat 6,Sonia Gandhi,labour,FALSE,FALSE,100,,,,
+11/24/2024,List Seat 7,Ok,labour,FALSE,FALSE,100,,,,
+11/24/2024,List Seat 8,Ash,labour,FALSE,FALSE,100,,,,
+11/24/2024,National Popular Vote,Labour,labour,FALSE,FALSE,35.48,,,,
+11/24/2024,National Popular Vote,Liberal,liberal,FALSE,FALSE,32.26,,,,
+11/24/2024,National Popular Vote,Alliance,alliance,FALSE,FALSE,32.26,,,,
+12/15/2024,Coalition,labour,labourcon,FALSE,FALSE,0,,,,
+12/15/2024,Coalition,alliance,labourcon,FALSE,FALSE,0,,,,
+12/15/2024,West,Suom,liberal,FALSE,FALSE,53.33,8,15,,
+12/15/2024,West,BlockyBeach,alliance,FALSE,FALSE,33.33,5,15,,
+12/15/2024,West,Skillyoshi,independent,FALSE,FALSE,6.67,1,15,,
+12/15/2024,West,Srawyer,independent,FALSE,FALSE,6.67,1,15,,
+12/15/2024,North,Alex,liberal,FALSE,FALSE,45.45,5,11,,
+12/15/2024,North,Medikit,alliance,FALSE,FALSE,36.36,4,11,,
+12/15/2024,North,Charlemagne,liberal,FALSE,FALSE,18.18,2,11,,
+12/15/2024,North,Alex,liberal,FALSE,TRUE,60,6,10,,
+12/15/2024,North,Medikit,alliance,FALSE,TRUE,40,4,10,,
+12/15/2024,South,Thatpotatoguy,labour,FALSE,FALSE,30,3,10,,
+12/15/2024,South,Meiscool,alliance,FALSE,FALSE,40,4,10,,
+12/15/2024,South,Dannyunown0,labour,FALSE,FALSE,30,3,10,,
+12/15/2024,South,Thatpotatoguy,labour,FALSE,TRUE,60,6,10,,
+12/15/2024,South,Meiscool,alliance,FALSE,TRUE,40,4,10,,
+12/15/2024,East,bfdifann,labour,FALSE,FALSE,36.36,4,11,,
+12/15/2024,East,GMV,liberal,FALSE,FALSE,27.27,3,11,,
+12/15/2024,East,Copperhead,alliance,FALSE,FALSE,27.27,3,11,,
+12/15/2024,East,Heatland,independent,FALSE,FALSE,9.09,1,11,,
+12/15/2024,East,bfdifann,labour,FALSE,TRUE,63.64,7,11,,
+12/15/2024,East,GMV,liberal,FALSE,TRUE,36.36,4,11,,
+12/15/2024,List Seat 1,How do i type,alliance,FALSE,FALSE,100,,,,
+12/15/2024,List Seat 2,BlockyBeach,alliance,FALSE,FALSE,100,,,,
+12/15/2024,List Seat 3,Geodore,alliance,FALSE,FALSE,100,,,,
+12/15/2024,List Seat 4,Meiscool,alliance,FALSE,FALSE,100,,,,
+12/15/2024,List Seat 5,Virt,liberal,FALSE,FALSE,100,,,,
+12/15/2024,List Seat 6,Nath,liberal,FALSE,FALSE,100,,,,
+12/15/2024,List Seat 7,Sonia Gandhi,labour,FALSE,FALSE,100,,,,
+12/15/2024,List Seat 8,Dannyunown0,labour,FALSE,FALSE,100,,,,
+12/15/2024,National Popular Vote,Labour,labour,FALSE,FALSE,29.79,,,,
+12/15/2024,National Popular Vote,Liberal,liberal,FALSE,FALSE,36.17,,,,
+12/15/2024,National Popular Vote,Alliance,alliance,FALSE,FALSE,34.04,,,,
+12/29/2024,Coalition,labour,labourcon,FALSE,FALSE,0,,,,
+12/29/2024,Coalition,alliance,labourcon,FALSE,FALSE,0,,,,
+12/29/2024,East,Skillyoshi,alliance,TRUE,FALSE,33.3,3,9,,
+12/29/2024,East,bfdifann,progressive,TRUE,FALSE,22.2,2,9,,
+12/29/2024,East,GMV,liberal,TRUE,FALSE,33.3,3,9,,
+12/29/2024,East,Perot,independent,TRUE,FALSE,11.1,1,9,,
+12/29/2024,East,Skillyoshi,alliance,TRUE,TRUE,55.6,5,9,,
+12/29/2024,East,GMV,liberal,TRUE,TRUE,44.4,4,9,,
+01/11/2025,Coalition,liberal,libcon,FALSE,FALSE,0,,,,
+01/11/2025,Coalition,alliance,libcon,FALSE,FALSE,0,,,,
+01/11/2025,North 1st,Cob,progressive,FALSE,FALSE,26.67,4,15,,
+01/11/2025,North 1st,Virt,liberal,FALSE,FALSE,33.33,5,15,,
+01/11/2025,North 1st,Geodore,alliance,FALSE,FALSE,20,3,15,,
+01/11/2025,North 1st,Medikit,alliance,FALSE,FALSE,13.33,2,15,,
+01/11/2025,North 1st,Charlemagne,liberal,FALSE,FALSE,6.67,1,15,,
+01/11/2025,North 2nd,Cob,progressive,FALSE,FALSE,50,5,10,,
+01/11/2025,North 2nd,Geodore,alliance,FALSE,FALSE,30,3,10,,
+01/11/2025,North 2nd,Medikit,alliance,FALSE,FALSE,20,2,10,,
+01/11/2025,East 1st,GMV,liberal,FALSE,FALSE,30,6,20,,
+01/11/2025,East 1st,Perot,labour,FALSE,FALSE,20,4,20,,
+01/11/2025,East 1st,Skillyoshi,alliance,FALSE,FALSE,20,4,20,,
+01/11/2025,East 1st,Copperhead,alliance,FALSE,FALSE,10,2,20,,
+01/11/2025,East 1st,bfdifann,progressive,FALSE,FALSE,20,4,20,,
+01/11/2025,East 1st,Skillyoshi,alliance,FALSE,TRUE,27.27,3,11,,
+01/11/2025,East 1st,Perot,labour,FALSE,TRUE,27.27,3,11,,
+01/11/2025,East 1st,GMV,liberal,FALSE,TRUE,45.45,5,11,,
+01/11/2025,East 2nd,Skillyoshi,alliance,FALSE,FALSE,40.93,4.093,10,,
+01/11/2025,East 2nd,Perot,labour,FALSE,FALSE,59.07,5.907,10,,
+01/11/2025,West 1st,Ash,progressive,FALSE,FALSE,22.22,4,18,,
+01/11/2025,West 1st,Suom,liberal,FALSE,FALSE,27.78,5,18,,
+01/11/2025,West 1st,BlockyBeach,alliance,FALSE,FALSE,27.78,5,18,,
+01/11/2025,West 1st,June_3rd,progressive,FALSE,FALSE,16.67,3,18,,
+01/11/2025,West 1st,Srawyer,alliance,FALSE,FALSE,5.56,1,18,,
+01/11/2025,West 1st,Ash,progressive,FALSE,TRUE,41.18,7,17,,
+01/11/2025,West 1st,Suom,liberal,FALSE,TRUE,29.41,5,17,,
+01/11/2025,West 1st,BlockyBeach,alliance,FALSE,TRUE,29.41,5,17,,
+01/11/2025,West 2nd,Suom,liberal,FALSE,FALSE,53.03,6,11,,
+01/11/2025,West 2nd,BlockyBeach,alliance,FALSE,FALSE,46.97,5,11,,
+01/11/2025,South 1st,Dannyunown0,labour,FALSE,FALSE,33.33,5,15,,
+01/11/2025,South 1st,Qwert,progressive,FALSE,FALSE,26.67,4,15,,
+01/11/2025,South 1st,Thatpotatoguy,labour,FALSE,FALSE,13.33,2,15,,
+01/11/2025,South 1st,How do i type,alliance,FALSE,FALSE,13.33,2,15,,
+01/11/2025,South 1st,Meiscool,alliance,FALSE,FALSE,13.33,2,15,,
+01/11/2025,South 2nd,Qwert,progressive,FALSE,FALSE,40,4,10,,
+01/11/2025,South 2nd,Thatpotatoguy,labour,FALSE,FALSE,20,2,10,,
+01/11/2025,South 2nd,How do i type,alliance,FALSE,FALSE,20,2,10,,
+01/11/2025,South 2nd,Meiscool,alliance,FALSE,FALSE,20,2,10,,
+01/11/2025,South 2nd,Qwert,progressive,FALSE,TRUE,50.001,5,10,,
+01/11/2025,South 2nd,How do i type,alliance,FALSE,TRUE,50,5,10,,
+01/11/2025,List Seat 1,How do i type,alliance,FALSE,FALSE,100,,,,
+01/11/2025,List Seat 2,BlockyBeach,alliance,FALSE,FALSE,100,,,,
+01/11/2025,List Seat 3,Geodore,alliance,FALSE,FALSE,100,,,,
+01/11/2025,List Seat 4,Medikit,alliance,FALSE,FALSE,100,,,,
+01/11/2025,List Seat 5,Skillyoshi,alliance,FALSE,FALSE,100,,,,
+01/11/2025,List Seat 6,Alex,liberal,FALSE,FALSE,100,,,,
+01/11/2025,List Seat 7,Charlemagne,liberal,FALSE,FALSE,100,,,,
+01/11/2025,List Seat 8,Sonia Gandhi,labour,FALSE,FALSE,100,,,,
+01/11/2025,National Popular Vote,Progressive,progressive,FALSE,FALSE,20.34,,,,
+01/11/2025,National Popular Vote,Labour,labour,FALSE,FALSE,20.34,,,,
+01/11/2025,National Popular Vote,Liberal,liberal,FALSE,FALSE,27.12,,,,
+01/11/2025,National Popular Vote,Alliance,alliance,FALSE,FALSE,32.2,,,,
+1/20/2025,Coalition,liberal,libcon,FALSE,FALSE,0,,,,
+1/20/2025,Coalition,alliance,libcon,FALSE,FALSE,0,,,,
+1/20/2025,West 2nd,BlockyBeach,alliance,TRUE,FALSE,50,7,14,,
+1/20/2025,West 2nd,June_3rd,progressive,TRUE,FALSE,28.6,4,14,,
+1/20/2025,West 2nd,Suom,wildrose,TRUE,FALSE,21.4,3,14,,
+1/20/2025,West 2nd,BlockyBeach,alliance,TRUE,TRUE,57.1,8,14,,
+1/20/2025,West 2nd,June_3rd,progressive,TRUE,TRUE,42.9,6,14,,
+02/09/2025,Coalition,liberal,citrus,FALSE,FALSE,0,,,,
+02/09/2025,Coalition,progressive,citrus,FALSE,FALSE,0,,,,
+02/09/2025,Coalition,labour,labourcon,FALSE,FALSE,0,,,,
+02/09/2025,Coalition,alliance,labourcon,FALSE,FALSE,0,,,,
+02/09/2025,Coalition,Alex,citrus,FALSE,FALSE,0,,,,
+02/09/2025,Coalition,Medikit,citrus,FALSE,FALSE,0,,,,
+02/09/2025,Dentone,BlockyBeach,alliance,FALSE,FALSE,71.43,5,7,,
+02/09/2025,Dentone,Ash,liberal,FALSE,FALSE,14.29,1,7,,
+02/09/2025,Dentone,Joris,progressive,FALSE,FALSE,14.29,1,7,,
+02/09/2025,Quintin,How do i type,alliance,FALSE,FALSE,42.86,3,7,,
+02/09/2025,Quintin,Ok,labour,FALSE,FALSE,57.14,4,7,,
+02/09/2025,Garvor,Nath,liberal,FALSE,FALSE,60,3,5,,
+02/09/2025,Garvor,Srawyer,alliance,FALSE,FALSE,20,1,5,,
+02/09/2025,Garvor,Suom,liberal,FALSE,FALSE,20,1,5,,
+02/09/2025,Garvor,SNAA,labour,FALSE,FALSE,20,1,5,,
+02/09/2025,Brunix Islands,Alex,alliance,FALSE,FALSE,50,6,12,,
+02/09/2025,Brunix Islands,Charlemagne,liberal,FALSE,FALSE,16.67,2,12,,
+02/09/2025,Brunix Islands,Geodore,alliance,FALSE,FALSE,16.67,2,12,,
+02/09/2025,Brunix Islands,Dave,progressive,FALSE,FALSE,16.67,2,12,,
+02/09/2025,Brunix Islands,Alex,alliance,FALSE,TRUE,58.33,7,12,,
+02/09/2025,Brunix Islands,Charlemagne,liberal,FALSE,TRUE,41.67,5,12,,
+02/09/2025,Emix,Medikit,alliance,FALSE,FALSE,50,6,12,,
+02/09/2025,Emix,Jager,labour,FALSE,FALSE,25,3,12,,
+02/09/2025,Emix,Javer,labour,FALSE,FALSE,25,3,12,,
+02/09/2025,Emix,Medikit,alliance,FALSE,TRUE,58.33,7,12,,
+02/09/2025,Emix,Jager,labour,FALSE,TRUE,41.67,5,12,,
+02/09/2025,Alvana,Qwert,progressive,FALSE,FALSE,46.15,6,13,,
+02/09/2025,Alvana,Dannyunown0,labour,FALSE,FALSE,23.08,3,13,,
+02/09/2025,Alvana,Meiscool,alliance,FALSE,FALSE,23.08,3,13,,
+02/09/2025,Alvana,Riley,labour,FALSE,FALSE,7.69,1,13,,
+02/09/2025,Alvana,Qwert,progressive,FALSE,TRUE,58.33,7,12,,
+02/09/2025,Alvana,Dannyunown0,labour,FALSE,TRUE,41.67,5,12,,
+02/09/2025,Dalminica,Copperhead,alliance,FALSE,FALSE,42.86,3,7,,
+02/09/2025,Dalminica,bfdifann,progressive,FALSE,FALSE,28.57,2,7,,
+02/09/2025,Dalminica,Josephist,alliance,FALSE,FALSE,14.29,1,7,,
+02/09/2025,Dalminica,GMV,liberal,FALSE,FALSE,14.29,1,7,,
+02/09/2025,Dalminica,Copperhead,alliance,FALSE,TRUE,50.001,3,6,,
+02/09/2025,Dalminica,bfdifann,progressive,FALSE,TRUE,50,3,6,,
+02/09/2025,Trunoe,Perot,labour,FALSE,FALSE,100,8,8,,
+02/09/2025,List Seat 1,How do i type,alliance,FALSE,FALSE,100,,,,
+02/09/2025,List Seat 2,Virt,liberal,FALSE,FALSE,100,,,,
+02/09/2025,List Seat 3,GMV,liberal,FALSE,FALSE,100,,,,
+02/09/2025,List Seat 4,Suom,liberal,FALSE,FALSE,100,,,,
+02/09/2025,List Seat 5,Charlemagne,liberal,FALSE,FALSE,100,,,,
+02/09/2025,List Seat 6,SNAA,labour,FALSE,FALSE,100,,,,
+02/09/2025,List Seat 7,Thatpotatoguy,labour,FALSE,FALSE,100,,,,
+02/09/2025,List Seat 8,Joris,progressive,FALSE,FALSE,100,,,,
+02/09/2025,National Popular Vote,Progressive,progressive,FALSE,FALSE,12.68,,,,
+02/09/2025,National Popular Vote,Labour,labour,FALSE,FALSE,26.76,,,,
+02/09/2025,National Popular Vote,Liberal,liberal,FALSE,FALSE,29.58,,,,
+02/09/2025,National Popular Vote,Alliance,alliance,FALSE,FALSE,30.99,,,,
+03/09/2025,Coalition,labour,labourcon,FALSE,FALSE,0,,,,
+03/09/2025,Coalition,alliance,labourcon,FALSE,FALSE,0,,,,
+03/09/2025,Coalition,liberal,citrus,FALSE,FALSE,0,,,,
+03/09/2025,Coalition,progressive,citrus,FALSE,FALSE,0,,,,
+03/09/2025,Dentone,BlockyBeach,alliance,FALSE,FALSE,100,4,4,,
+03/09/2025,Garvor,Strxya,progressive,FALSE,FALSE,66.67,4,6,,
+03/09/2025,Garvor,SNAA,labour,FALSE,FALSE,33.33,2,6,,
+03/09/2025,Dalminica,GMV,liberal,FALSE,FALSE,28.57,2,7,,
+03/09/2025,Dalminica,bfdifann,labour,FALSE,FALSE,42.86,3,7,,
+03/09/2025,Dalminica,Copperhead,alliance,FALSE,FALSE,28.57,2,7,,
+03/09/2025,Dalminica,GMV,liberal,FALSE,TRUE,57.14,4,7,,
+03/09/2025,Dalminica,bfdifann,labour,FALSE,TRUE,42.86,3,7,,
+03/09/2025,Trunoe,Rocket Dino,labour,FALSE,FALSE,75,4,6,,
+03/09/2025,Trunoe,Perot,independent,FALSE,FALSE,25,2,6,,
+03/09/2025,Brunix Islands,Charlemagne,liberal,FALSE,FALSE,38.46,5,13,,
+03/09/2025,Brunix Islands,ᏁᎥፈᏦᏖᏂᏋፈᎧᎧᏝ,alliance,FALSE,FALSE,30.77,4,13,,
+03/09/2025,Brunix Islands,Goop,alliance,FALSE,FALSE,15.38,2,13,,
+03/09/2025,Brunix Islands,Microplastics Lover,labour,FALSE,FALSE,15.38,2,13,,
+03/09/2025,Brunix Islands,Charlemagne,liberal,FALSE,TRUE,53.85,7,13,,
+03/09/2025,Brunix Islands,ᏁᎥፈᏦᏖᏂᏋፈᎧᎧᏝ,alliance,FALSE,TRUE,46.15,6,13,,
+03/09/2025,Emix,Javer,labour,FALSE,FALSE,75,6,8,,
+03/09/2025,Emix,Medikit,alliance,FALSE,FALSE,25,2,8,,
+03/09/2025,Alvana,Qwert,progressive,FALSE,FALSE,45.45,5,11,,
+03/09/2025,Alvana,Thatpotatoguy,labour,FALSE,FALSE,36.36,4,11,,
+03/09/2025,Alvana,Meiscool,alliance,FALSE,FALSE,18.18,2,11,,
+03/09/2025,Alvana,Qwert,progressive,FALSE,TRUE,50.001,5,10,,
+03/09/2025,Alvana,Thatpotatoguy,labour,FALSE,TRUE,50,5,10,,
+03/09/2025,Quintin,Ok,labour,FALSE,FALSE,71.43,5,7,,
+03/09/2025,Quintin,How do i type,alliance,FALSE,FALSE,28.57,2,7,,
+03/09/2025,National Popular Vote,Progressive,progressive,FALSE,FALSE,12.31,,,,
+03/09/2025,National Popular Vote,Labour,labour,FALSE,FALSE,32.31,,,,
+03/09/2025,National Popular Vote,Liberal,liberal,FALSE,FALSE,23.08,,,,
+03/09/2025,National Popular Vote,Alliance,alliance,FALSE,FALSE,32.31,,,,
+03/09/2025,List Seat 1,How do i type,alliance,FALSE,FALSE,100,,,,
+03/09/2025,List Seat 2,Meiscool,alliance,FALSE,FALSE,100,,,,
+03/09/2025,List Seat 3,Copperhead,alliance,FALSE,FALSE,100,,,,
+03/09/2025,List Seat 4,Medikit,alliance,FALSE,FALSE,100,,,,
+03/09/2025,List Seat 5,Virt,liberal,FALSE,FALSE,100,,,,
+03/09/2025,List Seat 6,Suom,liberal,FALSE,FALSE,100,,,,
+03/09/2025,List Seat 7,Dannyunown0,labour,FALSE,FALSE,100,,,,
+03/09/2025,List Seat 8,Thatpotatoguy,labour,FALSE,FALSE,100,,,,
+04/06/2025,Coalition,labour,traffic,FALSE,FALSE,0,,,,
+04/06/2025,Coalition,liberal,traffic,FALSE,FALSE,0,,,,
+04/06/2025,Coalition,progressive,traffic,FALSE,FALSE,0,,,,
+04/06/2025,Dentone,BlockyBeach,alliance,FALSE,FALSE,62.5,5,8,,
+04/06/2025,Dentone,Joris,progressive,FALSE,FALSE,25,2,8,,
+04/06/2025,Dentone,Hadanna,liberal,FALSE,FALSE,12.5,1,8,,
+04/06/2025,Garvor,Strxya,progressive,FALSE,FALSE,78.57,11,14,,
+04/06/2025,Garvor,Srawyer,independent,FALSE,FALSE,21.43,3,14,,
+04/06/2025,Dalminica,Copperhead,alliance,FALSE,FALSE,30,3,10,,
+04/06/2025,Dalminica,GMV,liberal,FALSE,FALSE,40,4,10,,
+04/06/2025,Dalminica,bfdifann,labour,FALSE,FALSE,20,2,10,,
+04/06/2025,Dalminica,KiwiFox,labour,FALSE,FALSE,10,1,10,,
+04/06/2025,Dalminica,Copperhead,alliance,FALSE,TRUE,50.001,5,10,,
+04/06/2025,Dalminica,GMV,liberal,FALSE,TRUE,50,5,10,,
+04/06/2025,Trunoe,Perot,labour,FALSE,FALSE,54.55,6,11,,
+04/06/2025,Trunoe,TBS387,alliance,FALSE,FALSE,45.45,5,11,,
+04/06/2025,Brunix Islands,Charlemagne,liberal,FALSE,FALSE,63.64,7,11,,
+04/06/2025,Brunix Islands,Geodore,alliance,FALSE,FALSE,36.36,4,11,,
+04/06/2025,Emix,Javer,labour,FALSE,FALSE,100,9,9,,
+04/06/2025,Alvana,Qwert,progressive,FALSE,FALSE,55.56,5,9,,
+04/06/2025,Alvana,Thatpotatoguy,labour,FALSE,FALSE,44.44,4,9,,
+04/06/2025,Quintin,Gyokeres,progressive,FALSE,FALSE,50,6,12,,
+04/06/2025,Quintin,Luka Gillman,alliance,FALSE,FALSE,33.33,4,12,,
+04/06/2025,Quintin,Beary,progressive,FALSE,FALSE,16.67,2,12,,
+04/06/2025,Quintin,Gyokeres,progressive,FALSE,TRUE,66.67,8,12,,
+04/06/2025,Quintin,Luka Gillman,alliance,FALSE,TRUE,33.33,4,12,,
+04/06/2025,National Popular Vote,Progressive,progressive,FALSE,FALSE,22.47,,,,
+04/06/2025,National Popular Vote,Labour,labour,FALSE,FALSE,23.6,,,,
+04/06/2025,National Popular Vote,Liberal,liberal,FALSE,FALSE,28.09,,,,
+04/06/2025,National Popular Vote,Alliance,alliance,FALSE,FALSE,25.84,,,,
+04/06/2025,List Seat 1,How do i type,alliance,FALSE,FALSE,100,,,,
+04/06/2025,List Seat 2,Geodore,alliance,FALSE,FALSE,100,,,,
+04/06/2025,List Seat 3,Suom,liberal,FALSE,FALSE,100,,,,
+04/06/2025,List Seat 4,GMV,liberal,FALSE,FALSE,100,,,,
+04/06/2025,List Seat 5,Hada,liberal,FALSE,FALSE,100,,,,
+04/06/2025,List Seat 6,ColdAdam,liberal,FALSE,FALSE,100,,,,
+04/06/2025,List Seat 7,Ok,labour,FALSE,FALSE,100,,,,
+04/06/2025,List Seat 8,Thatpotatoguy,labour,FALSE,FALSE,100,,,,
+4/13/2025,Coalition,labour,traffic,FALSE,FALSE,0,,,,
+4/13/2025,Coalition,liberal,traffic,FALSE,FALSE,0,,,,
+4/13/2025,Coalition,progressive,traffic,FALSE,FALSE,0,,,,
+4/13/2025,Quintin,Republic Guy,progressive,TRUE,FALSE,36.36,4,11,,
+4/13/2025,Quintin,Luka Gillman,alliance,TRUE,FALSE,36.36,4,11,,
+4/13/2025,Quintin,Sonia Gandhi,labour,TRUE,FALSE,18.18,2,11,,
+4/13/2025,Quintin,Beary,progressive,TRUE,FALSE,9.09,1,11,,
+4/13/2025,Quintin,Republic Guy,progressive,TRUE,TRUE,63.64,7,11,,
+4/13/2025,Quintin,Luka Gillman,alliance,TRUE,TRUE,36.36,4,11,,
+05/11/2025,Coalition,labour,traffic,FALSE,FALSE,0,,,,
+05/11/2025,Coalition,liberal,traffic,FALSE,FALSE,0,,,,
+05/11/2025,Coalition,progressive,traffic,FALSE,FALSE,0,,,,
+05/11/2025,Brunix Islands,Kanbo,alliance,FALSE,FALSE,63.64,7,11,,
+05/11/2025,Brunix Islands,Charlemagne,liberal,FALSE,FALSE,36.36,4,11,,
+05/11/2025,Emix,Javer,labour,FALSE,FALSE,75,9,12,,
+05/11/2025,Emix,LeBron James,progressive,FALSE,FALSE,25,3,12,,
+05/11/2025,Dalminica,SunwardH,progressive,FALSE,FALSE,36.36,4,11,,
+05/11/2025,Dalminica,Copperhead,alliance,FALSE,FALSE,36.36,4,11,,
+05/11/2025,Dalminica,bfdifann,labour,FALSE,FALSE,9.09,1,11,,
+05/11/2025,Dalminica,GMV,liberal,FALSE,FALSE,9.09,1,11,,
+05/11/2025,Dalminica,KiwiFox,labour,FALSE,FALSE,9.09,1,11,,
+05/11/2025,Dalminica,SunwardH,progressive,FALSE,TRUE,54.55,6,11,,
+05/11/2025,Dalminica,Copperhead,alliance,FALSE,TRUE,45.45,5,11,,
+05/11/2025,Trunoe,Ash,progressive,FALSE,FALSE,50,6,12,,
+05/11/2025,Trunoe,BugsBunny,alliance,FALSE,FALSE,33.33,4,12,,
+05/11/2025,Trunoe,Van der Plan,labour,FALSE,FALSE,8.33,1,12,,
+05/11/2025,Trunoe,Perot,labour,FALSE,FALSE,8.33,1,12,,
+05/11/2025,Trunoe,Ash,progressive,FALSE,TRUE,58.33,7,12,,
+05/11/2025,Trunoe,BugsBunny,alliance,FALSE,TRUE,41.67,5,12,,
+05/11/2025,Garvor,Strxya,progressive,FALSE,FALSE,100,13,13,,
+05/11/2025,Dentone,BlockyBeach,alliance,FALSE,FALSE,75,6,8,,
+05/11/2025,Dentone,Joris,progressive,FALSE,FALSE,25,2,8,,
+05/11/2025,Alvana,Potato,labour,FALSE,FALSE,58.33,7,12,,
+05/11/2025,Alvana,Qwert,progressive,FALSE,FALSE,41.67,5,12,,
+05/11/2025,Quintin,Republic Guy,progressive,FALSE,FALSE,69.23,9,13,,
+05/11/2025,Quintin,Luka Gillman,alliance,FALSE,FALSE,30.77,4,13,,
+05/11/2025,National Popular Vote,Progressive,progressive,FALSE,FALSE,21.88,,,,
+05/11/2025,National Popular Vote,Labour,labour,FALSE,FALSE,22.92,,,,
+05/11/2025,National Popular Vote,Liberal,liberal,FALSE,FALSE,22.92,,,,
+05/11/2025,National Popular Vote,Alliance,alliance,FALSE,FALSE,32.29,,,,
+05/11/2025,List Seat 1,How do i type,alliance,FALSE,FALSE,100,,,,
+05/11/2025,List Seat 2,Copperhead,alliance,FALSE,FALSE,100,,,,
+05/11/2025,List Seat 3,Griffth Hyde,alliance,FALSE,FALSE,100,,,,
+05/11/2025,List Seat 4,Suom,liberal,FALSE,FALSE,100,,,,
+05/11/2025,List Seat 5,Ari,liberal,FALSE,FALSE,100,,,,
+05/11/2025,List Seat 6,Charlemagne,liberal,FALSE,FALSE,100,,,,
+05/11/2025,List Seat 7,ColdAdam,liberal,FALSE,FALSE,100,,,,
+05/11/2025,List Seat 8,Dannyunown0,labour,FALSE,FALSE,100,,,,
+05/11/2025,List Seat 9,Ok,labour,FALSE,FALSE,100,,,,
+6/15/2025,Coalition,labour,labourcon,FALSE,FALSE,0,,,,
+6/15/2025,Coalition,alliance,labourcon,FALSE,FALSE,0,,,,
+6/15/2025,Coalition,Cob,labourcon,FALSE,FALSE,0,,,,
+6/15/2025,Brunix Islands,Geodore,alliance,FALSE,FALSE,42.86,6,14,,
+6/15/2025,Brunix Islands,Charlemagne,liberal,FALSE,FALSE,21.43,3,14,,
+6/15/2025,Brunix Islands,Kanbo,alliance,FALSE,FALSE,14.29,2,14,,
+6/15/2025,Brunix Islands,Bernie Sanders,progressive,FALSE,FALSE,14.29,2,14,,
+6/15/2025,Brunix Islands,Doc,liberal,FALSE,FALSE,7.14,1,14,,
+6/15/2025,Brunix Islands,Geodore,alliance,FALSE,TRUE,57.14,8,14,,
+6/15/2025,Brunix Islands,Charlemagne,liberal,FALSE,TRUE,42.86,6,14,,
+6/15/2025,Emix,Cob,independent,FALSE,FALSE,66.67,8,12,,
+6/15/2025,Emix,Javer,labour,FALSE,FALSE,25,3,12,,
+6/15/2025,Emix,m0l3_m4n,labour,FALSE,FALSE,8.33,1,12,,
+6/15/2025,Dalminica,SunwardH,progressive,FALSE,FALSE,46.15,6,13,,
+6/15/2025,Dalminica,Cruzer,alliance,FALSE,FALSE,30.77,4,13,,
+6/15/2025,Dalminica,GMV,liberal,FALSE,FALSE,23.08,3,13,,
+6/15/2025,Dalminica,SunwardH,progressive,FALSE,TRUE,61.54,8,13,,
+6/15/2025,Dalminica,Cruzer,alliance,FALSE,TRUE,38.46,5,13,,
+6/15/2025,Trunoe,Growmper,progressive,FALSE,FALSE,71.43,5,7,,
+6/15/2025,Trunoe,Heatland,labour,FALSE,FALSE,28.57,2,7,,
+6/15/2025,Garvor,Strxya,progressive,FALSE,FALSE,76.92,10,13,,
+6/15/2025,Garvor,athabasca,labour,FALSE,FALSE,23.08,3,13,,
+6/15/2025,Dentone,BlockyBeach,alliance,FALSE,FALSE,71.43,10,14,,
+6/15/2025,Dentone,Joris,progressive,FALSE,FALSE,28.57,4,14,,
+6/15/2025,Alvana,Qwert,progressive,FALSE,FALSE,58.33,7,12,,
+6/15/2025,Alvana,Dannyunown0,labour,FALSE,FALSE,41.67,5,12,,
+6/15/2025,Quintin,Republic Guy,progressive,FALSE,FALSE,57.14,8,14,,
+6/15/2025,Quintin,How do i type,alliance,FALSE,FALSE,28.57,4,14,,
+6/15/2025,Quintin,snilfa,labour,FALSE,FALSE,14.29,2,14,,
+6/15/2025,National Popular Vote,Progressive,progressive,FALSE,FALSE,21.88,,,,
+6/15/2025,National Popular Vote,Labour,labour,FALSE,FALSE,22.92,,,,
+6/15/2025,National Popular Vote,Liberal,liberal,FALSE,FALSE,22.92,,,,
+6/15/2025,National Popular Vote,Alliance,alliance,FALSE,FALSE,32.29,,,,
+6/15/2025,List Seat 1,Chudda,alliance,FALSE,FALSE,100,,,,
+6/15/2025,List Seat 2,Kanbo,alliance,FALSE,FALSE,100,,,,
+6/15/2025,List Seat 3,Luka Gillman,alliance,FALSE,FALSE,100,,,,
+6/15/2025,List Seat 4,TBS387,alliance,FALSE,FALSE,100,,,,
+6/15/2025,List Seat 5,Copperhead,alliance,FALSE,FALSE,100,,,,
+6/15/2025,List Seat 6,GMV,liberal,FALSE,FALSE,100,,,,
+6/15/2025,List Seat 7,Suom,liberal,FALSE,FALSE,100,,,,
+6/15/2025,List Seat 8,Charlemagne,liberal,FALSE,FALSE,100,,,,
+6/15/2025,List Seat 9,Alex,liberal,FALSE,FALSE,100,,,,
+6/15/2025,List Seat 10,Dannyunown0,labour,FALSE,FALSE,100,,,,
+6/15/2025,List Seat 11,Javer,labour,FALSE,FALSE,100,,,,
+6/15/2025,List Seat 12,Potato,labour,FALSE,FALSE,100,,,,
+6/15/2025,List Seat 13,bfdifann,labour,FALSE,FALSE,100,,,,
+6/18/2025,Coalition,labour,labourcon,FALSE,FALSE,0,,,,
+6/18/2025,Coalition,alliance,labourcon,FALSE,FALSE,0,,,,
+6/18/2025,Coalition,Cob,labourcon,FALSE,FALSE,0,,,,
+6/18/2025,Garvor,Alex,liberal,TRUE,FALSE,60,6,10,,
+6/18/2025,Garvor,athabasca,labour,TRUE,FALSE,30,3,10,,
+6/18/2025,Garvor,ColdAdam,liberal,TRUE,FALSE,10,1,10,,
+07/09/2025,Coalition,labour,labourcon,FALSE,FALSE,0,,,,
+07/09/2025,Coalition,alliance,labourcon,FALSE,FALSE,0,,,,
+07/09/2025,Coalition,Cob,labourcon,FALSE,FALSE,0,,,,
+07/09/2025,Trunoe,TBS387,alliance,TRUE,FALSE,50,5,10,,
+07/09/2025,Trunoe,Growmper,progressive,TRUE,FALSE,30,3,10,,
+07/09/2025,Trunoe,Van der Plan,labour,TRUE,FALSE,20,2,10,,
+07/09/2025,Trunoe,TBS387,alliance,TRUE,TRUE,60,6,10,,
+07/09/2025,Trunoe,Growmper,progressive,TRUE,TRUE,40,4,10,,
+7/20/2025,Coalition,labour,watermelon,FALSE,FALSE,0,,,,
+7/20/2025,Coalition,progressive,watermelon,FALSE,FALSE,0,,,,
+7/20/2025,Coalition,Cob,watermelon,FALSE,FALSE,0,,,,
+7/20/2025,Coalition,Nath,watermelon,FALSE,FALSE,0,,,,
+7/20/2025,Brunix Islands,Geodore,alliance,FALSE,FALSE,64.29,9,14,,
+7/20/2025,Brunix Islands,Bernie Sanders,progressive,FALSE,FALSE,28.57,4,14,,
+7/20/2025,Brunix Islands,Kanbo,alliance,FALSE,FALSE,7.14,1,14,,
+7/20/2025,Emix,Cob,independent,FALSE,FALSE,64.71,11,17,,
+7/20/2025,Emix,Javer,labour,FALSE,FALSE,35.29,6,17,,
+7/20/2025,Dalminica,Copperhead,alliance,FALSE,FALSE,29.41,5,17,,
+7/20/2025,Dalminica,SunwardH,progressive,FALSE,FALSE,29.41,5,17,,
+7/20/2025,Dalminica,GMV,labour,FALSE,FALSE,23.53,4,17,,
+7/20/2025,Dalminica,KiwiFox,alliance,FALSE,FALSE,17.65,3,17,,
+7/20/2025,Dalminica,Copperhead,alliance,FALSE,TRUE,58.82,10,17,,
+7/20/2025,Dalminica,SunwardH,progressive,FALSE,TRUE,41.18,7,17,,
+7/20/2025,Trunoe,Van der Plan,labour,FALSE,FALSE,56.25,9,16,,
+7/20/2025,Trunoe,TBS387,alliance,FALSE,FALSE,43.75,7,16,,
+7/20/2025,Garvor,Nath,independent,FALSE,FALSE,53.85,7,13,,
+7/20/2025,Garvor,athabasca,labour,FALSE,FALSE,46.15,6,13,,
+7/20/2025,Dentone,BlockyBeach,alliance,FALSE,FALSE,66.67,8,12,,
+7/20/2025,Dentone,Joris,progressive,FALSE,FALSE,16.67,2,12,,
+7/20/2025,Dentone,RealCountyCreator,progressive,FALSE,FALSE,16.67,2,12,,
+7/20/2025,Alvana,Dannyunown0,labour,FALSE,FALSE,27.78,5,18,,
+7/20/2025,Alvana,Poopman69,alliance,FALSE,FALSE,33.33,6,18,,
+7/20/2025,Alvana,Potato,labour,FALSE,FALSE,22.22,5,18,,
+7/20/2025,Alvana,Tim Inkle,independent,FALSE,FALSE,16.67,3,18,,
+7/20/2025,Alvana,Dannyunown0,labour,FALSE,TRUE,50.001,9,18,,
+7/20/2025,Alvana,Poopman69,alliance,FALSE,TRUE,50,9,18,,
+7/20/2025,Quintin,Gatorapolis,labour,FALSE,FALSE,36.36,8,22,,
+7/20/2025,Quintin,Republic Guy,progressive,FALSE,FALSE,36.36,8,22,,
+7/20/2025,Quintin,Luka Gillman,alliance,FALSE,FALSE,27.27,6,22,,
+7/20/2025,Quintin,Gatorapolis,labour,FALSE,TRUE,57.14,12,21,,
+7/20/2025,Quintin,Republic Guy,progressive,FALSE,TRUE,42.86,9,21,,
+7/20/2025,National Popular Vote,Progressive,progressive,FALSE,FALSE,21.37,,,,
+7/20/2025,National Popular Vote,Labour,labour,FALSE,FALSE,34.35,,,,
+7/20/2025,National Popular Vote,Liberal,liberal,FALSE,FALSE,9.16,,,,
+7/20/2025,National Popular Vote,Alliance,alliance,FALSE,FALSE,35.11,,,,
+7/20/2025,List Seat 1,How do i type,alliance,FALSE,FALSE,100,,,,
+7/20/2025,List Seat 2,Cruzer,alliance,FALSE,FALSE,100,,,,
+7/20/2025,List Seat 3,Poopman69,alliance,FALSE,FALSE,100,,,,
+7/20/2025,List Seat 4,TBS387,alliance,FALSE,FALSE,100,,,,
+7/20/2025,List Seat 5,Alex,liberal,FALSE,FALSE,100,,,,
+7/20/2025,List Seat 6,Potato,labour,FALSE,FALSE,100,,,,
+7/20/2025,List Seat 7,Javer,labour,FALSE,FALSE,100,,,,
+7/20/2025,List Seat 8,GMV,labour,FALSE,FALSE,100,,,,
+7/20/2025,List Seat 9,Qwert,progressive,FALSE,FALSE,100,,,,
+7/20/2025,List Seat 10,Republic Guy,progressive,FALSE,FALSE,100,,,,
+7/20/2025,List Seat 11,AM,progressive,FALSE,FALSE,100,,,,
+7/20/2025,List Seat 12,Growmper,progressive,FALSE,FALSE,100,,,,
+08/03/2025,Coalition,labour,labourcon,FALSE,FALSE,0,,,,
+08/03/2025,Coalition,alliance,labourcon,FALSE,FALSE,0,,,,
+08/03/2025,Brunix Islands,Geodore,alliance,FALSE,FALSE,38.46,5,13,,
+08/03/2025,Brunix Islands,Bernie Sanders,progressive,FALSE,FALSE,38.36,5,13,,
+08/03/2025,Brunix Islands,Kanbo,alliance,FALSE,FALSE,23.08,3,13,,
+08/03/2025,Brunix Islands,Geodore,alliance,FALSE,TRUE,58.33,7,12,,
+08/03/2025,Brunix Islands,Bernie Sanders,progressive,FALSE,TRUE,41.67,5,12,,
+08/03/2025,Emix,Cob,independent,FALSE,FALSE,53.33,8,15,,
+08/03/2025,Emix,Javer,labour,FALSE,FALSE,46.67,7,15,,
+08/03/2025,Dalminica,Copperhead,alliance,FALSE,FALSE,21.43,3,14,,
+08/03/2025,Dalminica,SunwardH,progressive,FALSE,FALSE,35.71,5,14,,
+08/03/2025,Dalminica,Cruzer,alliance,FALSE,FALSE,28.57,4,14,,
+08/03/2025,Dalminica,bfdifann,progressive,FALSE,FALSE,7.14,1,14,,
+08/03/2025,Dalminica,KiwiFox,alliance,FALSE,FALSE,7.14,1,14,,
+08/03/2025,Dalminica,Copperhead,alliance,FALSE,TRUE,57.14,8,14,,
+08/03/2025,Dalminica,SunwardH,progressive,FALSE,TRUE,42.86,6,14,,
+08/03/2025,Trunoe,Heatland,labour,FALSE,FALSE,53.85,7,13,,
+08/03/2025,Trunoe,Van der Plan,alliance,FALSE,FALSE,46.15,6,13,,
+08/03/2025,Garvor,athabasca,labour,FALSE,FALSE,61.54,8,13,,
+08/03/2025,Garvor,Alex,liberal,FALSE,FALSE,38.46,5,13,,
+08/03/2025,Dentone,BlockyBeach,alliance,FALSE,FALSE,70,7,10,,
+08/03/2025,Dentone,RealCountyCreator,progressive,FALSE,FALSE,30,3,10,,
+08/03/2025,Alvana,Poopman69,alliance,FALSE,FALSE,31.25,5,16,,
+08/03/2025,Alvana,Qwert,progressive,FALSE,FALSE,31.25,5,16,,
+08/03/2025,Alvana,Potato,liberal,FALSE,FALSE,25,4,16,,
+08/03/2025,Alvana,Dannyunown0,labour,FALSE,FALSE,12.5,2,16,,
+08/03/2025,Alvana,Poopman69,alliance,FALSE,TRUE,57.14,8,14,,
+08/03/2025,Alvana,Qwert,progressive,FALSE,TRUE,42.86,6,14,,
+08/03/2025,Quintin,Republic Guy,progressive,FALSE,FALSE,23.81,5,20,,
+08/03/2025,Quintin,Sonia Gandhi,labour,FALSE,FALSE,28.57,6,20,,
+08/03/2025,Quintin,Seth,progressive,FALSE,FALSE,19.05,4,20,,
+08/03/2025,Quintin,Luka Gillman,alliance,FALSE,FALSE,19.05,3,20,,
+08/03/2025,Quintin,Gatorapolis,labour,FALSE,FALSE,4.76,1,20,,
+08/03/2025,Quintin,spccenterville,alliance,FALSE,FALSE,4.76,1,20,,
+08/03/2025,Quintin,Republic Guy,progressive,FALSE,TRUE,56.25,9,16,,
+08/03/2025,Quintin,Sonia Gandhi,labour,FALSE,TRUE,43.75,7,16,,
+08/03/2025,National Popular Vote,Progressive,progressive,FALSE,FALSE,29.82,,,,
+08/03/2025,National Popular Vote,Labour,labour,FALSE,FALSE,28.07,,,,
+08/03/2025,National Popular Vote,Liberal,liberal,FALSE,FALSE,10.53,,,,
+08/03/2025,National Popular Vote,Alliance,alliance,FALSE,FALSE,31.58,,,,
+08/03/2025,List Seat 1,How do i type,alliance,FALSE,FALSE,100,,,,
+08/03/2025,List Seat 2,Cruzer,alliance,FALSE,FALSE,100,,,,
+08/03/2025,List Seat 3,Nath,liberal,FALSE,FALSE,100,,,,
+08/03/2025,List Seat 4,Suom,liberal,FALSE,FALSE,100,,,,
+08/03/2025,List Seat 5,Javer,labour,FALSE,FALSE,100,,,,
+08/03/2025,List Seat 6,Sonia Gandhi,labour,FALSE,FALSE,100,,,,
+08/03/2025,List Seat 7,Dannyunown0,labour,FALSE,FALSE,100,,,,
+08/03/2025,List Seat 8,GMV,progressive,FALSE,FALSE,100,,,,
+08/03/2025,List Seat 9,Bernie Sanders,progressive,FALSE,FALSE,100,,,,
+08/03/2025,List Seat 10,Qwert,progressive,FALSE,FALSE,100,,,,
+08/03/2025,List Seat 11,SunwardH,progressive,FALSE,FALSE,100,,,,
+08/03/2025,List Seat 12,June_3rd,progressive,FALSE,FALSE,100,,,,
+8/23/2025,Emix,Cob,liberal,TRUE,FALSE,33.34,,,,
+8/23/2025,Emix,Javer,labour,TRUE,FALSE,33.32,,,,
+8/23/2025,Emix,Lee,liberal,TRUE,FALSE,25,,,,
+8/23/2025,Emix,Danlyo,labour,TRUE,FALSE,8.33,,,,
+8/23/2025,Emix,Treptichnus,progressive,TRUE,FALSE,0,,,,
+8/23/2025,Emix,Cob,liberal,TRUE,TRUE,54.55,,,,
+8/23/2025,Emix,Javer,labour,TRUE,TRUE,45.45,,,,
+09/06/2025,Coalition,alliance,peacock,FALSE,FALSE,0,,,,
+09/06/2025,Coalition,progressive,peacock,FALSE,FALSE,0,,,,
+09/06/2025,Alvana,Poopman69,alliance,FALSE,FALSE,21.05,4,19,,
+09/06/2025,Alvana,Potato,labour,FALSE,FALSE,52.63,10,19,,
+09/06/2025,Alvana,Qwert,progressive,FALSE,FALSE,26.32,5,19,,
+09/06/2025,Brunix Islands,Bernie,progressive,FALSE,FALSE,28.57,4,14,,
+09/06/2025,Brunix Islands,Geodore,alliance,FALSE,FALSE,57.14,8,14,,
+09/06/2025,Brunix Islands,Charlemagne,independent,FALSE,FALSE,7.14,1,14,,
+09/06/2025,Brunix Islands,Bart De Wever,progressive,FALSE,FALSE,7.14,1,14,,
+09/06/2025,Dalminica,Cruzer,alliance,FALSE,FALSE,37.5,6,16,,
+09/06/2025,Dalminica,GMV,progressive,FALSE,FALSE,50,8,16,,
+09/06/2025,Dalminica,SunwardH,progressive,FALSE,FALSE,12.5,2,16,,
+09/06/2025,Dalminica,Cruzer,alliance,FALSE,TRUE,37.5,6,16,,
+09/06/2025,Dalminica,GMV,progressive,FALSE,TRUE,62.5,10,16,,
+09/06/2025,Dentone,Chillicote,labour,FALSE,FALSE,41.67,5,12,,
+09/06/2025,Dentone,Joris,progressive,FALSE,FALSE,58.33,7,12,,
+09/06/2025,Emix,Javer,labour,FALSE,FALSE,30,6,20,,
+09/06/2025,Emix,Treptichnus Pedum,progressive,FALSE,FALSE,70,14,20,,
+09/06/2025,Garvor,athabasca,labour,FALSE,FALSE,45,9,20,,
+09/06/2025,Garvor,Border,alliance,FALSE,FALSE,15,3,20,,
+09/06/2025,Garvor,Strxya,progressive,FALSE,FALSE,40,8,20,,
+09/06/2025,Garvor,athabasca,labour,FALSE,TRUE,57.89,11,19,,
+09/06/2025,Garvor,Strxya,progressive,FALSE,TRUE,42.11,8,19,,
+09/06/2025,Quintin,Sonia Gandhi,labour,FALSE,FALSE,43.48,10,23,,
+09/06/2025,Quintin,Seth,progressive,FALSE,FALSE,8.7,2,23,,
+09/06/2025,Quintin,Beary,progressive,FALSE,FALSE,47.83,11,23,,
+09/06/2025,Quintin,Sonia Gandhi,labour,FALSE,TRUE,43.48,10,23,,
+09/06/2025,Quintin,Beary,progressive,FALSE,TRUE,56.52,13,23,,
+09/06/2025,Trunoe,TBS387,alliance,FALSE,FALSE,27.27,6,22,,
+09/06/2025,Trunoe,Van der Plan,labour,FALSE,FALSE,72.73,16,22,,
+09/06/2025,National Popular Vote,Alliance,alliance,FALSE,FALSE,29.93,,,,
+09/06/2025,National Popular Vote,Progressive,progressive,FALSE,FALSE,32.65,,,,
+09/06/2025,National Popular Vote,Labour,labour,FALSE,FALSE,37.41,,,,
+09/06/2025,List Seat 1,How do i type,alliance,FALSE,FALSE,100,,,,
+09/06/2025,List Seat 2,Cruzer,alliance,FALSE,FALSE,100,,,,
+09/06/2025,List Seat 3,Alex,alliance,FALSE,FALSE,100,,,,
+09/06/2025,List Seat 4,Griffth Hyde,alliance,FALSE,FALSE,100,,,,
+09/06/2025,List Seat 5,British_Guy,alliance,FALSE,FALSE,100,,,,
+09/06/2025,List Seat 6,Sonia Gandhi,labour,FALSE,FALSE,100,,,,
+09/06/2025,List Seat 7,Javer,labour,FALSE,FALSE,100,,,,
+09/06/2025,List Seat 8,Dannyunown0,labour,FALSE,FALSE,100,,,,
+09/06/2025,List Seat 9,KiwiFox,labour,FALSE,FALSE,100,,,,
+09/06/2025,List Seat 10,Chillicote,labour,FALSE,FALSE,100,,,,
+09/06/2025,List Seat 11,Strxya,progressive,FALSE,FALSE,100,,,,
+09/06/2025,List Seat 12,SunwardH,progressive,FALSE,FALSE,100,,,,
+10/11/2025,Coalition,labour,burger,FALSE,FALSE,0,,,,
+10/11/2025,Coalition,progressive,burger,FALSE,FALSE,0,,,,
+10/11/2025,Coalition,renewal,burger,FALSE,FALSE,0,,,,
+10/11/2025,Coalition,Medikit,burger,FALSE,FALSE,0,,,,
+10/11/2025,Alvana,Potato,renewal,FALSE,FALSE,50.001,8,16,,
+10/11/2025,Alvana,Dannyunown0,labour,FALSE,FALSE,50,8,16,,
+10/11/2025,Brunix Islands,Geodore Roosevelt,alliance,FALSE,FALSE,90.91,10,11,,
+10/11/2025,Brunix Islands,Goop,alliance,FALSE,FALSE,9.09,1,11,,
+10/11/2025,Dalminica,British_Guy,alliance,FALSE,FALSE,14.29,2,14,,
+10/11/2025,Dalminica,SunwardH,progressive,FALSE,FALSE,28.57,4,14,,
+10/11/2025,Dalminica,Okazaki Fox,labour,FALSE,FALSE,57.14,8,14,,
+10/11/2025,Dentone,Moka Kofee,progressive,FALSE,FALSE,41.18,7,17,,
+10/11/2025,Dentone,How Do I Type,alliance,FALSE,FALSE,58.82,10,17,,
+10/11/2025,Emix,Purrium,renewal,FALSE,FALSE,66.67,12,18,,
+10/11/2025,Emix,Virtecek,renewal,FALSE,FALSE,33.33,6,18,,
+10/11/2025,Garvor,Strxya,progressive,FALSE,FALSE,50,10,20,,
+10/11/2025,Garvor,IAMVERYSWELL,labour,FALSE,FALSE,40,8,20,,
+10/11/2025,Garvor,athabasca,renewal,FALSE,FALSE,10,2,20,,
+10/11/2025,Garvor,Strxya,progressive,FALSE,TRUE,55,11,20,,
+10/11/2025,Garvor,IAMVERYSWELL,labour,FALSE,TRUE,45,9,20,,
+10/11/2025,Kilden,Cob,independent,FALSE,FALSE,66.67,8,12,,
+10/11/2025,Kilden,bfdifann,progressive,FALSE,FALSE,33.33,4,12,,
+10/11/2025,Newmasi,Griffith Hyde,alliance,FALSE,FALSE,58.33,7,12,,
+10/11/2025,Newmasi,GMV,progressive,FALSE,FALSE,41.67,5,12,,
+10/11/2025,Quintin,Sonia Gandhi,labour,FALSE,FALSE,42.86,6,14,,
+10/11/2025,Quintin,Beary,progressive,FALSE,FALSE,35.71,5,14,,
+10/11/2025,Quintin,Seth,progressive,FALSE,FALSE,21.43,3,14,,
+10/11/2025,Quintin,Sonia Gandhi,labour,FALSE,TRUE,42.86,6,14,,
+10/11/2025,Quintin,Beary,progressive,FALSE,TRUE,57.14,8,14,,
+10/11/2025,Trunoe,Van der Plan,labour,FALSE,FALSE,50,8,16,,
+10/11/2025,Trunoe,Medikit,independent,FALSE,FALSE,50.001,8,16,,
+10/11/2025,National Popular Vote,Alliance,alliance,FALSE,FALSE,27.52,,,,
+10/11/2025,National Popular Vote,Labour,labour,FALSE,FALSE,35.57,,,,
+10/11/2025,National Popular Vote,Progressive,progressive,FALSE,FALSE,26.85,,,,
+10/11/2025,National Popular Vote,Renewal,renewal,FALSE,FALSE,10.07,,,,
+10/11/2025,List Seat 1,Cruzer,alliance,FALSE,FALSE,100,,,,
+10/11/2025,List Seat 2,Nath,alliance,FALSE,FALSE,100,,,,
+10/11/2025,List Seat 3,Alex,alliance,FALSE,FALSE,100,,,,
+10/11/2025,List Seat 4,Sonia Gandhi,labour,FALSE,FALSE,100,,,,
+10/11/2025,List Seat 5,Javer,labour,FALSE,FALSE,100,,,,
+10/11/2025,List Seat 6,Van der Plan,labour,FALSE,FALSE,100,,,,
+10/11/2025,List Seat 7,Dannyunown0,labour,FALSE,FALSE,100,,,,
+10/11/2025,List Seat 8,Chillicote,labour,FALSE,FALSE,100,,,,
+10/11/2025,List Seat 9,Flor,labour,FALSE,FALSE,100,,,,
+10/11/2025,List Seat 10,GMV,progressive,FALSE,FALSE,100,,,,
+10/11/2025,List Seat 11,SunwardH,progressive,FALSE,FALSE,100,,,,
+10/11/2025,List Seat 12,Joris,progressive,FALSE,FALSE,100,,,,
+11/16/2025,Coalition,labour,united left,FALSE,FALSE,0,,,,
+11/16/2025,Coalition,progressive,united left,FALSE,FALSE,0,,,,
+11/16/2025,Coalition,pwp,united left,FALSE,FALSE,0,,,,
+11/16/2025,Alvana,Poopman69,alliance,FALSE,FALSE,29.56,106734,360020,,
+11/16/2025,Alvana,Dannyunown0,labour,FALSE,FALSE,35.35,127285,360020,,
+11/16/2025,Alvana,UpliftedFord,progressive,FALSE,FALSE,25.82,92944,360020,,
+11/16/2025,Alvana,BobLaFollette,pwp,FALSE,FALSE,9.18,33037,360020,,
+11/16/2025,Alvana,Donald Jehovaha Trump,independent,FALSE,FALSE,0.01,20,360020,,
+11/16/2025,Alvana,Poopman69,alliance,FALSE,TRUE,51.46,179387,348574,,
+11/16/2025,Alvana,Dannyunown0,labour,FALSE,TRUE,48.54,169187,348574,,
+11/16/2025,Brunix Islands,Geodore Roosevelt,alliance,FALSE,FALSE,44.48,160119,360000,,
+11/16/2025,Brunix Islands,Bernie Sanders,progressive,FALSE,FALSE,41.08,51986,360000,,
+11/16/2025,Brunix Islands,Charlemagne,independent,FALSE,FALSE,14.44,147895,360000,,
+11/16/2025,Brunix Islands,Geodore Roosevelt,alliance,FALSE,TRUE,51.57,178672,346483,,
+11/16/2025,Brunix Islands,Bernie Sanders,progressive,FALSE,TRUE,48.43,167811,346483,,
+11/16/2025,Dalminica,SunwardH,progressive,FALSE,FALSE,52.16,187769,360000,,
+11/16/2025,Dalminica,Okazaki Fox,labour,FALSE,FALSE,47.84,172231,360000,,
+11/16/2025,Dentone,Joris,progressive,FALSE,FALSE,28.52,102658,360000,,
+11/16/2025,Dentone,How Do I Type,alliance,FALSE,FALSE,71.48,257342,360000,,
+11/16/2025,Emix,Javer,labour,FALSE,FALSE,100,360000,360000,,
+11/16/2025,Garvor,Strxya,progressive,FALSE,FALSE,53.14,191320,360000,,
+11/16/2025,Garvor,IAMVERYSWELL,labour,FALSE,FALSE,35.7,128526,360000,,
+11/16/2025,Garvor,Truman Gaming,renewal,FALSE,FALSE,11.5,40154,360000,,
+11/16/2025,Kilden,Cob,independent,FALSE,FALSE,67.45,241629,358249,,
+11/16/2025,Kilden,Earthseeker,pwp,FALSE,FALSE,17.27,54745,358249,,
+11/16/2025,Kilden,Lee,renewal,FALSE,FALSE,15.28,61875,358249,,
+11/16/2025,Newmasi,Mokaeo,labour,FALSE,FALSE,29.49,106172,360001,,
+11/16/2025,Newmasi,Griffith Hyde,alliance,FALSE,FALSE,27.55,99163,360001,,
+11/16/2025,Newmasi,Aston,progressive,FALSE,FALSE,24.78,89196,360001,,
+11/16/2025,Newmasi,JAMden,pwp,FALSE,FALSE,9.54,34341,360001,,
+11/16/2025,Newmasi,Eric Davidson,independent,FALSE,FALSE,8.65,31129,360001,,
+11/16/2025,Newmasi,Mokaeo,labour,FALSE,TRUE,59.59,206083,345827,,
+11/16/2025,Newmasi,Griffith Hyde,alliance,FALSE,TRUE,40.41,139744,345827,,
+11/16/2025,Quintin,Sonia Gandhi,labour,FALSE,FALSE,47.74,171873,360000,,
+11/16/2025,Quintin,Beary,progressive,FALSE,FALSE,33.84,121826,360000,,
+11/16/2025,Quintin,Microplastics Lover,pwp,FALSE,FALSE,18.42,66301,360000,,
+11/16/2025,Quintin,Sonia Gandhi,labour,FALSE,TRUE,60.4,216834,359006,,
+11/16/2025,Quintin,Beary,progressive,FALSE,TRUE,39.6,142172,359006,,
+11/16/2025,Trunoe,Medikit,pwp,FALSE,FALSE,30.44,109588,360015,,
+11/16/2025,Trunoe,Eden,alliance,FALSE,FALSE,30.78,110796,360015,,
+11/16/2025,Trunoe,Van der Plan,labour,FALSE,FALSE,17.35,62452,360015,,
+11/16/2025,Trunoe,Forsh,renewal,FALSE,FALSE,16.93,60935,360015,,
+11/16/2025,Trunoe,Borger,independent,FALSE,FALSE,4.51,16229,360015,,
+11/16/2025,Trunoe,Heatland,renewal,FALSE,FALSE,0.01,15,360015,,
+11/16/2025,Trunoe,Medikit,pwp,FALSE,TRUE,55.85,177278,317426,,
+11/16/2025,Trunoe,Eden,alliance,FALSE,TRUE,44.15,140148,317426,,
+11/16/2025,National Popular Vote,Alliance,alliance,FALSE,FALSE,32.56,,,,
+11/16/2025,National Popular Vote,Labour,labour,FALSE,FALSE,29.68,,,,
+11/16/2025,National Popular Vote,Progressive,progressive,FALSE,FALSE,24.76,,,,
+11/16/2025,National Popular Vote,PWP,pwp,FALSE,FALSE,6.91,,,,
+11/16/2025,National Popular Vote,Renewal,renewal,FALSE,FALSE,6.09,,,,
+11/16/2025,List Seat 1,Cruzer,alliance,FALSE,FALSE,100,,,,
+11/16/2025,List Seat 2,Griffith Hyde,alliance,FALSE,FALSE,100,,,,
+11/16/2025,List Seat 3,Eden,alliance,FALSE,FALSE,100,,,,
+11/16/2025,List Seat 4,Odin,alliance,FALSE,FALSE,100,,,,
+11/16/2025,List Seat 5,Okazaki Fox,labour,FALSE,FALSE,100,,,,
+11/16/2025,List Seat 6,Dannyunown0,labour,FALSE,FALSE,100,,,,
+11/16/2025,List Seat 7,Van der Plan,labour,FALSE,FALSE,100,,,,
+11/16/2025,List Seat 8,Danylo Isaacson-Lebid',labour,FALSE,FALSE,100,,,,
+11/16/2025,List Seat 9,Beary,progressive,FALSE,FALSE,100,,,,
+11/16/2025,List Seat 10,GMV,progressive,FALSE,FALSE,100,,,,
+11/16/2025,List Seat 11,Bernie Sanders,progressive,FALSE,FALSE,100,,,,
+11/16/2025,List Seat 12,Nivenoakes,progressive,FALSE,FALSE,100,,,,
+11/28/2025,Kilden,Lee,renewal,TRUE,FALSE,51.71,,,,
+11/28/2025,Kilden,EarthSeeker,pwp,TRUE,FALSE,28.39,,,,
+11/28/2025,Kilden,WizardBlue,alliance,TRUE,FALSE,19.9,,,,
+12/13/2025,Coalition,labour,united left,FALSE,FALSE,0,,,,
+12/13/2025,Coalition,progressive,united left,FALSE,FALSE,0,,,,
+12/13/2025,Coalition,pwp,united left,FALSE,FALSE,0,,,,
+12/13/2025,Coalition,Forsh,united left,FALSE,FALSE,0,,,,
+12/13/2025,Alvana,Poopman69,alliance,FALSE,FALSE,35.59,128118,360000,,
+12/13/2025,Alvana,Dannyunown0,labour,FALSE,FALSE,37.15,133731,360000,,
+12/13/2025,Alvana,BobLaFollette,pwp,FALSE,FALSE,17.61,63384,360000,,
+12/13/2025,Alvana,Donald Jehovaha Trump,jnp,FALSE,FALSE,9.66,34767,360000,,
+12/13/2025,Alvana,Poopman69,alliance,FALSE,TRUE,47.28,161589,341779,,
+12/13/2025,Alvana,Dannyunown0,labour,FALSE,TRUE,52.72,180190,341779,,
+12/13/2025,Brunix Islands,Geodore Roosevelt,alliance,FALSE,FALSE,53.45,192412,360000,,
+12/13/2025,Brunix Islands,Capy,pwp,FALSE,FALSE,46.55,167588,360000,,
+12/13/2025,Dalminica,SunwardH,progressive,FALSE,FALSE,45.98,165535,360001,,
+12/13/2025,Dalminica,Okazaki Fox,jnp,FALSE,FALSE,28.73,103419,360001,,
+12/13/2025,Dalminica,British Guy,alliance,FALSE,FALSE,25.29,91047,360001,,
+12/13/2025,Dalminica,SunwardH,progressive,FALSE,TRUE,63.32,188561,297803,,
+12/13/2025,Dalminica,Okazaki Fox,jnp,FALSE,TRUE,36.68,109242,297803,,
+12/13/2025,Dentone,How Do I Type,alliance,FALSE,FALSE,100,360000,360000,,
+12/13/2025,Emix,Javer,labour,FALSE,FALSE,100,360000,360000,,
+12/13/2025,Garvor,Nivenoakes,progressive,FALSE,FALSE,22.88,86124,360002,,
+12/13/2025,Garvor,TMK,labour,FALSE,FALSE,33.3,119875,360002,,
+12/13/2025,Garvor,Swamp Ape,alliance,FALSE,FALSE,23.92,82360,360002,,
+12/13/2025,Garvor,Eevee,jnp,FALSE,FALSE,19.89,71593,360002,,
+12/13/2025,Garvor,Sheep,independent,FALSE,FALSE,0.01,50,360002,,
+12/13/2025,Garvor,TMK,labour,FALSE,TRUE,61.56,220112,357531,,
+12/13/2025,Garvor,Swamp Ape,alliance,FALSE,TRUE,38.44,137419,357531,,
+12/13/2025,Kilden,Earthseeker,pwp,FALSE,FALSE,42.5,153009,359999,,
+12/13/2025,Kilden,Lee,renewal,FALSE,FALSE,57.5,206990,359999,,
+12/13/2025,Newmasi,JAMden,progressive,FALSE,FALSE,33.51,120636,360000,,
+12/13/2025,Newmasi,Odin,alliance,FALSE,FALSE,66.49,239364,360000,,
+12/13/2025,Quintin,Sonia Gandhi,labour,FALSE,FALSE,75.99,273551,360000,,
+12/13/2025,Quintin,Seth,progressive,FALSE,FALSE,24.01,86449,360000,,
+12/13/2025,Trunoe,Medikit,pwp,FALSE,FALSE,48.03,172916,360000,,
+12/13/2025,Trunoe,Forsh,independent,FALSE,FALSE,51.97,187084,360000,,
+12/13/2025,National Popular Vote,JNP,jnp,FALSE,FALSE,14.79,,,,
+12/13/2025,National Popular Vote,Alliance,alliance,FALSE,FALSE,29.44,,,,
+12/13/2025,National Popular Vote,Renewal,renewal,FALSE,FALSE,1.46,,,,
+12/13/2025,National Popular Vote,Labour,labour,FALSE,FALSE,25.95,,,,
+12/13/2025,National Popular Vote,Progressive,progressive,FALSE,FALSE,20.74,,,,
+12/13/2025,National Popular Vote,PWP,pwp,FALSE,FALSE,7.61,,,,
+12/13/2025,List Seat 1,Okazaki Fox,jnp,FALSE,FALSE,100,,,,
+12/13/2025,List Seat 2,Meiscool,jnp,FALSE,FALSE,100,,,,
+12/13/2025,List Seat 3,Cruzer,alliance,FALSE,FALSE,100,,,,
+12/13/2025,List Seat 4,Poopman69,alliance,FALSE,FALSE,100,,,,
+12/13/2025,List Seat 5,Griffith Hyde,alliance,FALSE,FALSE,100,,,,
+12/13/2025,List Seat 6,Uncle Skunk Ape,alliance,FALSE,FALSE,100,,,,
+12/13/2025,List Seat 7,Mokaeo,labour,FALSE,FALSE,100,,,,
+12/13/2025,List Seat 8,IAMVERYSWELL,labour,FALSE,FALSE,100,,,,
+12/13/2025,List Seat 9,Beary,progressive,FALSE,FALSE,100,,,,
+12/13/2025,List Seat 10,JAMden,progressive,FALSE,FALSE,100,,,,
+12/13/2025,List Seat 11,Nivenoakes,progressive,FALSE,FALSE,100,,,,
+12/13/2025,List Seat 12,Medikit,pwp,FALSE,FALSE,100,,,,
+1/25/2026,Coalition,alliance,alliance,FALSE,FALSE,0,,,,
+1/25/2026,Alvana,Poopman69,alliance,FALSE,FALSE,51.94,177640,342000,,
+1/25/2026,Alvana,Dannyunown0,labour,FALSE,FALSE,22.65,77462,342000,,
+1/25/2026,Alvana,BobLaFollette,pwp,FALSE,FALSE,14.62,49990,342000,,
+1/25/2026,Alvana,Donald Jehovaha Trump,coalition,FALSE,FALSE,10.79,36908,342000,,
+1/25/2026,Brunix Islands,Nick12,alliance,FALSE,FALSE,60.3,192412,319108,,
+1/25/2026,Brunix Islands,Jack Ciattarelli,coalition,FALSE,FALSE,18.31,58415,319108,,
+1/25/2026,Brunix Islands,Capybara,pwp,FALSE,FALSE,15,43351,319108,,
+1/25/2026,Brunix Islands,Usgball,independent,FALSE,FALSE,7.81,24930,319108,,
+1/25/2026,Dalminica,Okazaki Fox,coalition,FALSE,FALSE,42.55,148074,348000,,
+1/25/2026,Dalminica,British Guy,alliance,FALSE,FALSE,31.92,111073,348000,,
+1/25/2026,Dalminica,SunwardH,solidarity,FALSE,FALSE,13.45,46809,348000,,
+1/25/2026,Dalminica,Izemoji,labour,FALSE,FALSE,12.08,42044,348000,,
+1/25/2026,Dalminica,Okazaki Fox,coalition,FALSE,TRUE,50.96,167124,327974,,
+1/25/2026,Dalminica,British Guy,alliance,FALSE,TRUE,49.04,160850,327974,,
+1/25/2026,Dentone,How Do I Type,alliance,FALSE,FALSE,68.53,230264,335999,,
+1/25/2026,Dentone,Danylo Isaacson-Lebid',labour,FALSE,FALSE,21.72,72993,335999,,
+1/25/2026,Dentone,Benjamina Netanyahu,coalition,FALSE,FALSE,9.74,32742,335999,,
+1/25/2026,Emix,Javer,labour,FALSE,FALSE,50.57,166867,330000,,
+1/25/2026,Emix,Tal,pwp,FALSE,FALSE,49.43,163133,330000,,
+1/25/2026,Garvor,Alex,alliance,FALSE,FALSE,50.18,171628,342001,,
+1/25/2026,Garvor,Burley,coalition,FALSE,FALSE,19.86,67912,342001,,
+1/25/2026,Garvor,TMK,labour,FALSE,FALSE,18.96,64828,342001,,
+1/25/2026,Garvor,Niven_Oakes,progressive,FALSE,FALSE,11,37633,342001,,
+1/25/2026,Kilden,Sam McMahon,labour,FALSE,FALSE,44.7,152867,342000,,
+1/25/2026,Kilden,Paradise,alliance,FALSE,FALSE,39.84,136264,342000,,
+1/25/2026,Kilden,Earthseeker,independent,FALSE,FALSE,8.28,28306,342000,,
+1/25/2026,Kilden,Lee,solidarity,FALSE,FALSE,7.18,24563,342000,,
+1/25/2026,Kilden,Sam McMahon,labour,FALSE,TRUE,54.54,178616,327488,,
+1/25/2026,Kilden,Paradise,alliance,FALSE,TRUE,45.46,148872,327488,,
+1/25/2026,Newmasi,Caughtquick,alliance,FALSE,FALSE,48.62,169187,348000,,
+1/25/2026,Newmasi,Odin,solidarity,FALSE,FALSE,24.81,86322,348000,,
+1/25/2026,Newmasi,Obi Dervan,coalition,FALSE,FALSE,13.98,48635,348000,,
+1/25/2026,Newmasi,JAMden,progressive,FALSE,FALSE,12.6,43856,348000,,
+1/25/2026,Newmasi,Caughtquick,alliance,FALSE,TRUE,62.07,212452,342268,,
+1/25/2026,Newmasi,Odin,solidarity,FALSE,TRUE,37.93,129816,342268,,
+1/25/2026,Quintin,Sonia Gandhi,labour,FALSE,FALSE,50.59,166935,330000,,
+1/25/2026,Quintin,Beary,progressive,FALSE,FALSE,49.41,163065,330000,,
+1/25/2026,Trunoe,Northpoletyrant,alliance,FALSE,FALSE,53.76,180623,336000,,
+1/25/2026,Trunoe,Forsh,solidarity,FALSE,FALSE,46.24,155377,336000,,
+1/25/2026,National Popular Vote,Coalition,coalition,FALSE,FALSE,21.1,,,,
+1/25/2026,National Popular Vote,Alliance,alliance,FALSE,FALSE,53.27,,,,
+1/25/2026,National Popular Vote,Labour,labour,FALSE,FALSE,9.76,,,,
+1/25/2026,National Popular Vote,Solidarity,solidarity,FALSE,FALSE,6.39,,,,
+1/25/2026,National Popular Vote,Progressive,progressive,FALSE,FALSE,6.08,,,,
+1/25/2026,National Popular Vote,PWP,pwp,FALSE,FALSE,3.4,,,,
+1/25/2026,List Seat 1,Athabasca,coalition,FALSE,FALSE,100,,,,
+1/25/2026,List Seat 2,Burley,coalition,FALSE,FALSE,100,,,,
+1/25/2026,List Seat 3,Van der Plan,coalition,FALSE,FALSE,100,,,,
+1/25/2026,List Seat 4,Eevee,coalition,FALSE,FALSE,100,,,,
+1/25/2026,List Seat 5,Jack Ciatarelli,coalition,FALSE,FALSE,100,,,,
+1/25/2026,List Seat 6,Nebular Space,alliance,FALSE,FALSE,100,,,,
+1/25/2026,List Seat 7,Usgball,alliance,FALSE,FALSE,100,,,,
+1/25/2026,List Seat 8,Geodore Roosevelt,alliance,FALSE,FALSE,100,,,,
+1/25/2026,List Seat 9,Cruzer,alliance,FALSE,FALSE,100,,,,
+1/25/2026,List Seat 10,Griffith Hyde,alliance,FALSE,FALSE,100,,,,
+1/25/2026,List Seat 11,Spakian,alliance,FALSE,FALSE,100,,,,
+1/25/2026,List Seat 12,Sean,alliance,FALSE,FALSE,100,,,,
+1/25/2026,List Seat 13,British Guy,alliance,FALSE,FALSE,100,,,,
+1/25/2026,List Seat 14,Jerry,alliance,FALSE,FALSE,100,,,,
+1/25/2026,List Seat 15,Dirty Yield,alliance,FALSE,FALSE,100,,,,
+1/25/2026,List Seat 16,Grant,alliance,FALSE,FALSE,100,,,,
+1/25/2026,List Seat 17,Odin,solidarity,FALSE,FALSE,100,,,,
+1/25/2026,List Seat 18,Forsh,solidarity,FALSE,FALSE,100,,,,
+1/25/2026,List Seat 19,Beary,progressive,FALSE,FALSE,100,,,,
+1/25/2026,List Seat 20,JAMden,progressive,FALSE,FALSE,100,,,,
+02/09/2026,Quintin,Rahul Gandhi,proglab,TRUE,FALSE,57.28,182135,318000,,
+02/09/2026,Quintin,Run,alliance,TRUE,FALSE,42.72,135865,318000,,
+2/17/2026,Dalminica,Flor Belgier,proglab,TRUE,FALSE,39.13,129129,330000,,
+2/17/2026,Dalminica,British Guy,alliance,TRUE,FALSE,35.86,118338,330000,,
+2/17/2026,Dalminica,Izemoji,coalition,TRUE,FALSE,25.01,82533,330000,,
+2/17/2026,Dalminica,Flor Belgier,proglab,TRUE,TRUE,52.05,168144,323043,,
+2/17/2026,Dalminica,British Guy,alliance,TRUE,TRUE,47.95,154899,323043,,
+2/28/2026,Coalition,jnp,bob,FALSE,FALSE,0,,,,
+2/28/2026,Coalition,alliance,bob,FALSE,FALSE,0,,,,
+2/28/2026,Coalition,solidarity,bob,FALSE,FALSE,0,,,,
+2/28/2026,Alvana,Poopman69,alliance,FALSE,FALSE,53.4,176220,330000,,
+2/28/2026,Alvana,Dannyunown0,proglab,FALSE,FALSE,23.6,77880,330000,,
+2/28/2026,Alvana,Tommy,pwp,FALSE,FALSE,22.99,75867,330000,,
+2/28/2026,Brunix Islands,Jack Ciattarelli,alliance,FALSE,FALSE,69.66,229878,330000,,
+2/28/2026,Brunix Islands,Capy,proglab,FALSE,FALSE,23.05,76065,330000,,
+2/28/2026,Brunix Islands,Usgball,independent,FALSE,FALSE,7.29,24057,330000,,
+2/28/2026,Dalminica,Flor Belgier,proglab,FALSE,FALSE,46.2,152460,330000,,
+2/28/2026,Dalminica,Copperhead,alliance,FALSE,FALSE,38.66,127578,330000,,
+2/28/2026,Dalminica,British Guy,solidarity,FALSE,FALSE,15.14,49962,330000,,
+2/28/2026,Dalminica,Flor Belgier,proglab,FALSE,TRUE,51.68,170544,330000,,
+2/28/2026,Dalminica,Copperhead,alliance,FALSE,TRUE,48.32,159456,330000,,
+2/28/2026,Dentone,How Do I Type,alliance,FALSE,FALSE,71.35,235455,330000,,
+2/28/2026,Dentone,Benjamina Netanyahu,proglab,FALSE,FALSE,19.97,65901,330000,,
+2/28/2026,Dentone,Joris,independent,FALSE,FALSE,8.68,28644,330000,,
+2/28/2026,Emix,Jerry,alliance,FALSE,FALSE,39.68,130944,330000,,
+2/28/2026,Emix,Javer,proglab,FALSE,FALSE,40.25,132825,330000,,
+2/28/2026,Emix,Newsom,solidarity,FALSE,FALSE,20.07,66231,330000,,
+2/28/2026,Emix,Jerry,alliance,FALSE,TRUE,50.39,166287,330000,,
+2/28/2026,Emix,Javer,proglab,FALSE,TRUE,49.61,163713,330000,,
+2/28/2026,Garvor,Alex,alliance,FALSE,FALSE,49.37,162921,330000,,
+2/28/2026,Garvor,TMK,proglab,FALSE,FALSE,27.11,89463,330000,,
+2/28/2026,Garvor,Felix,jnp,FALSE,FALSE,13.08,43164,330000,,
+2/28/2026,Garvor,Burley,pwp,FALSE,FALSE,10.44,34452,330000,,
+2/28/2026,Garvor,Alex,alliance,FALSE,TRUE,51.39,169587,330000,,
+2/28/2026,Garvor,TMK,proglab,FALSE,TRUE,30.01,99033,330000,,
+2/28/2026,Garvor,Felix,jnp,FALSE,TRUE,18.6,61380,330000,,
+2/28/2026,Kilden,Sam McMahon,proglab,FALSE,FALSE,45.79,151107,330000,,
+2/28/2026,Kilden,Lee,solidarity,FALSE,FALSE,30.82,101706,330000,,
+2/28/2026,Kilden,Cob,pwp,FALSE,FALSE,23.38,77154,330000,,
+2/28/2026,Kilden,Sam McMahon,proglab,FALSE,TRUE,59.14,195162,330000,,
+2/28/2026,Kilden,Lee,solidarity,FALSE,TRUE,40.86,134838,330000,,
+2/28/2026,Newmasi,Craig,alliance,FALSE,FALSE,46.45,153285,330000,,
+2/28/2026,Newmasi,JAMden,proglab,FALSE,FALSE,32.66,107778,330000,,
+2/28/2026,Newmasi,Out of names,solidarity,FALSE,FALSE,16.83,55539,330000,,
+2/28/2026,Newmasi,Jabed,independent,FALSE,FALSE,4.06,13398,330000,,
+2/28/2026,Newmasi,Craig,alliance,FALSE,TRUE,54.22,178926,330000,,
+2/28/2026,Newmasi,JAMden,proglab,FALSE,TRUE,45.78,151074,330000,,
+2/28/2026,Quintin,Rahul Gandhi,proglab,FALSE,FALSE,50.53,166749,330000,,
+2/28/2026,Quintin,Run,alliance,FALSE,FALSE,49.47,163251,330000,,
+2/28/2026,Trunoe,Growmper,solidarity,FALSE,FALSE,50.13,165429,330000,,
+2/28/2026,Trunoe,Dutch van der Linde,proglab,FALSE,FALSE,49.87,164571,330000,,
+2/28/2026,National Popular Vote,Nationals,jnp,FALSE,FALSE,9.11,,,,
+2/28/2026,National Popular Vote,Alliance,alliance,FALSE,FALSE,43.55,,,,
+2/28/2026,National Popular Vote,Solidarity,solidarity,FALSE,FALSE,11.25,,,,
+2/28/2026,National Popular Vote,ProgLab,proglab,FALSE,FALSE,27.07,,,,
+2/28/2026,National Popular Vote,UCP,pwp,FALSE,FALSE,9.03,,,,
+2/28/2026,List Seat 1,Felix,jnp,FALSE,FALSE,100,,,,
+2/28/2026,List Seat 2,Obi Dervan,jnp,FALSE,FALSE,100,,,,
+2/28/2026,List Seat 3,Athabasca,jnp,FALSE,FALSE,100,,,,
+2/28/2026,List Seat 4,Run,alliance,FALSE,FALSE,100,,,,
+2/28/2026,List Seat 5,CaptainNF,alliance,FALSE,FALSE,100,,,,
+2/28/2026,List Seat 6,Eden,alliance,FALSE,FALSE,100,,,,
+2/28/2026,List Seat 7,Usgball,alliance,FALSE,FALSE,100,,,,
+2/28/2026,List Seat 8,Spakian,alliance,FALSE,FALSE,100,,,,
+2/28/2026,List Seat 9,Sean,alliance,FALSE,FALSE,100,,,,
+2/28/2026,List Seat 10,Griffith Hyde,alliance,FALSE,FALSE,100,,,,
+2/28/2026,List Seat 11,Caughtquick,alliance,FALSE,FALSE,100,,,,
+2/28/2026,List Seat 12,Potato,solidarity,FALSE,FALSE,100,,,,
+2/28/2026,List Seat 13,Mokaeo,solidarity,FALSE,FALSE,100,,,,
+2/28/2026,List Seat 14,Javer,proglab,FALSE,FALSE,100,,,,
+2/28/2026,List Seat 15,JAMden,proglab,FALSE,FALSE,100,,,,
+2/28/2026,List Seat 16,Niven,proglab,FALSE,FALSE,100,,,,
+2/28/2026,List Seat 17,Beary,proglab,FALSE,FALSE,100,,,,
+2/28/2026,List Seat 18,Van der Plan,proglab,FALSE,FALSE,100,,,,
+2/28/2026,List Seat 19,Cob,pwp,FALSE,FALSE,100,,,,
+2/28/2026,List Seat 20,Tommy,pwp,FALSE,FALSE,100,,,,
+3/26/2026,Trunoe,Van der Plan,green,FALSE,FALSE,60.79,196951,324000,,
+3/26/2026,Trunoe,Northpoletyrant,sdp,TRUE,FALSE,24.19,78380,324000,,
+3/26/2026,Trunoe,Medikit,pwp,TRUE,FALSE,14.44,46801,324000,,
+3/26/2026,Trunoe,Heatland,sdp,TRUE,FALSE,0.58,1868,324000,,
+3/26/2026,Trunoe,Van der Plan,green,TRUE,TRUE,66.77,215182,322276,,
+3/26/2026,Trunoe,Northpoletyrant,sdp,TRUE,TRUE,33.23,107094,322276,,
+4/18/2026,Coalition,alliance,sunmoon,FALSE,FALSE,0,,,,
+4/18/2026,Coalition,solidarity,sunmoon,FALSE,FALSE,0,,,,
+4/18/2026,Emix,Jerry,alliance,FALSE,FALSE,33.83,115694,342001,,
+4/18/2026,Emix,Trey,green,FALSE,FALSE,32.17,110009,342001,,
+4/18/2026,Emix,Javer,sdp,FALSE,FALSE,23.61,80761,342001,,
+4/18/2026,Emix,Newsom,solidarity,FALSE,FALSE,10.39,35537,342001,,
+4/18/2026,Emix,Jerry,alliance,FALSE,TRUE,44.29,141477,319440,,
+4/18/2026,Emix,Trey,green,FALSE,TRUE,55.71,177963,319440,,
+4/18/2026,Kilden,Cob,ucp,FALSE,FALSE,62.92,211395,336000,,
+4/18/2026,Kilden,Newsom,solidarity,FALSE,FALSE,37.08,124605,336000,,
+4/18/2026,Brunix Islands,Jack Ciattarelli,alliance,FALSE,FALSE,69.04,236105,342000,,
+4/18/2026,Brunix Islands,JP,ucp,FALSE,FALSE,13.51,46212,342000,,
+4/18/2026,Brunix Islands,Capy,green,FALSE,FALSE,12.91,44142,342000,,
+4/18/2026,Brunix Islands,Usgball,independent,FALSE,FALSE,4.54,15541,342000,,
+4/18/2026,Garvor,Alex,alliance,FALSE,FALSE,31.93,110157,349445,,
+4/18/2026,Garvor,Strxya,green,FALSE,FALSE,23.88,82840,349445,,
+4/18/2026,Garvor,TMK,sdp,FALSE,FALSE,19.51,69050,349445,,
+4/18/2026,Garvor,Athabasca,jnp,FALSE,FALSE,11.47,40616,349445,,
+4/18/2026,Garvor,Viterkol,solidarity,FALSE,FALSE,9.6,33992,349445,,
+4/18/2026,Garvor,StarStar,independent,FALSE,FALSE,1.3,4616,349445,,
+4/18/2026,Garvor,Jkuma,independent,FALSE,FALSE,1.17,4135,349445,,
+4/18/2026,Garvor,Johnny Sins,independent,FALSE,FALSE,1.14,4039,349445,,
+4/18/2026,Garvor,Alex,alliance,FALSE,TRUE,50.24,169639,337667,,
+4/18/2026,Garvor,Strxya,green,FALSE,TRUE,49.76,168028,337667,,
+4/18/2026,Dalminica,Flor Belgier,sdp,FALSE,FALSE,51.9,174391,336000,,
+4/18/2026,Dalminica,Vincent F. Rocher,alliance,FALSE,FALSE,35.4,118950,336000,,
+4/18/2026,Dalminica,Izemoji,green,FALSE,FALSE,12.7,42659,336000,,
+4/18/2026,Newmasi,Griffith Hyde,alliance,FALSE,FALSE,37.11,129133,348001,,
+4/18/2026,Newmasi,JAMden,sdp,FALSE,FALSE,22.52,78368,348001,,
+4/18/2026,Newmasi,Meerkat SJV Habitat,green,FALSE,FALSE,17.5,60916,348001,,
+4/18/2026,Newmasi,Mokaeo,solidarity,FALSE,FALSE,16.59,57741,348001,,
+4/18/2026,Newmasi,Obi Dervan,jnp,FALSE,FALSE,6.28,21843,348001,,
+4/18/2026,Newmasi,Griffith Hyde,alliance,FALSE,TRUE,58.15,200729,345212,,
+4/18/2026,Newmasi,JAMden,sdp,FALSE,TRUE,41.85,144483,345212,,
+4/18/2026,Trunoe,Dutch van der Linde,green,FALSE,FALSE,70.76,233517,330000,,
+4/18/2026,Trunoe,Heatland,sdp,FALSE,FALSE,15.76,51999,330000,,
+4/18/2026,Trunoe,Medikit,ucp,FALSE,FALSE,13.48,44484,330000,,
+4/18/2026,Alvana,Poopman69,alliance,FALSE,FALSE,44.67,155446,348000,,
+4/18/2026,Alvana,Dannyunown0,sdp,FALSE,FALSE,23.9,83161,348000,,
+4/18/2026,Alvana,Tommy,ucp,FALSE,FALSE,17.74,61751,348000,,
+4/18/2026,Alvana,Aki Corentin,green,FALSE,FALSE,13.69,47642,348000,,
+4/18/2026,Alvana,Poopman69,alliance,FALSE,TRUE,55.56,189318,340738,,
+4/18/2026,Alvana,Tommy,ucp,FALSE,TRUE,44.44,151420,340738,,
+4/18/2026,Dentone,How Do I Type,alliance,FALSE,FALSE,68.01,232578,342000,,
+4/18/2026,Dentone,Tw1light,green,FALSE,FALSE,16.58,56709,342000,,
+4/18/2026,Dentone,Danylo Isaacson-Lebid',ucp,FALSE,FALSE,15.41,52713,342000,,
+4/18/2026,Dentone,Halogram,independent,FALSE,FALSE,0.0000001,0,342000,,
+4/18/2026,Quintin,Rahul Gandhi,sdp,FALSE,FALSE,56.94,191324,336000,,
+4/18/2026,Quintin,Run,alliance,FALSE,FALSE,28.73,96532,336000,,
+4/18/2026,Quintin,Beary,green,FALSE,FALSE,14.33,48144,336000,,
+4/18/2026,National Popular Vote,Nationals,jnp,FALSE,FALSE,2.6,,,,
+4/18/2026,National Popular Vote,Alliance,alliance,FALSE,FALSE,45.09,,,,
+4/18/2026,National Popular Vote,Solidarity,solidarity,FALSE,FALSE,8.19,,,,
+4/18/2026,National Popular Vote,SDP,sdp,FALSE,FALSE,12.83,,,,
+4/18/2026,National Popular Vote,Greens,green,FALSE,FALSE,18.44,,,,
+4/18/2026,National Popular Vote,UCP,ucp,FALSE,FALSE,12.85,,,,
+4/18/2026,List Seat 1,Sean,alliance,FALSE,FALSE,100,,,,
+4/18/2026,List Seat 2,Run,alliance,FALSE,FALSE,100,,,,
+4/18/2026,List Seat 3,JKuma12,alliance,FALSE,FALSE,100,,,,
+4/18/2026,List Seat 4,Jerry,alliance,FALSE,FALSE,100,,,,
+4/18/2026,List Seat 5,Spakian,alliance,FALSE,FALSE,100,,,,
+4/18/2026,List Seat 6,Timothy Pickering,alliance,FALSE,FALSE,100,,,,
+4/18/2026,List Seat 7,Usgball,alliance,FALSE,FALSE,100,,,,
+4/18/2026,List Seat 8,Caughtquick,alliance,FALSE,FALSE,100,,,,
+4/18/2026,List Seat 9,Eden,alliance,FALSE,FALSE,100,,,,
+4/18/2026,List Seat 10,Mokaeo,solidarity,FALSE,FALSE,100,,,,
+4/18/2026,List Seat 11,Viterkol,solidarity,FALSE,FALSE,100,,,,
+4/18/2026,List Seat 12,JAMden,sdp,FALSE,FALSE,100,,,,
+4/18/2026,List Seat 13,Dannyunown0,sdp,FALSE,FALSE,100,,,,
+4/18/2026,List Seat 14,Strxya,green,FALSE,FALSE,100,,,,
+4/18/2026,List Seat 15,Beary,green,FALSE,FALSE,100,,,,
+4/18/2026,List Seat 16,Forsh,green,FALSE,FALSE,100,,,,
+4/18/2026,List Seat 17,Gobbi,green,FALSE,FALSE,100,,,,
+4/18/2026,List Seat 18,Tommy,ucp,FALSE,FALSE,100,,,,
+4/18/2026,List Seat 19,Danylo Isaacson-Lebid',ucp,FALSE,FALSE,100,,,,
+4/18/2026,List Seat 20,Robert M. LaFollette Sr.,ucp,FALSE,FALSE,100,,,,
+5/30/2026,Coalition,alliance,sunset,FALSE,FALSE,0,,,,
+5/30/2026,Coalition,fdp,sunset,FALSE,FALSE,0,,,,
+5/30/2026,Coalition,Danylo Isaacson-Lebid',sunset,FALSE,FALSE,0,,,,
+5/30/2026,Coalition,Tommy,sunset,FALSE,FALSE,0,,,,
+5/30/2026,Coalition,Van der Plan,sunset,FALSE,FALSE,0,,,,
+5/30/2026,Coalition,JAMden,sunset,FALSE,FALSE,0,,,,
+5/30/2026,Alvana,Dannyunown0,sdp,FALSE,FALSE,37.03,126653,342001,,
+5/30/2026,Alvana,Poopman69,alliance,FALSE,FALSE,32.14,109930,342001,,
+5/30/2026,Alvana,Tommy,ucp,FALSE,FALSE,20,68408,342001,,
+5/30/2026,Alvana,Donald Jehovaha Trump,fdp,FALSE,FALSE,10.82,37010,342001,,
+5/30/2026,Alvana,Dannyunown0,sdp,FALSE,TRUE,58.24,197306,338806,,
+5/30/2026,Alvana,Poopman69,alliance,FALSE,TRUE,41.76,141500,338806,,
+5/30/2026,Brunix Islands,Usgball,alliance,FALSE,FALSE,59.8,193745,323970,,
+5/30/2026,Brunix Islands,Chilicothe,sdp,FALSE,FALSE,40.2,130225,323970,,
+5/30/2026,Dalminica,Flor Belgier,sdp,FALSE,FALSE,40.91,135017,330000,,
+5/30/2026,Dalminica,Cruzer,fdp,FALSE,FALSE,41.31,136339,330000,,
+5/30/2026,Dalminica,Edward Kegan,green,FALSE,FALSE,17.77,58644,330000,,
+5/30/2026,Dalminica,Flor Belgier,sdp,FALSE,TRUE,53.43,175763,328945,,
+5/30/2026,Dalminica,Cruzer,fdp,FALSE,TRUE,46.57,153182,328945,,
+5/30/2026,Dentone,How Do I Type,alliance,FALSE,FALSE,55.68,187084,329411,,
+5/30/2026,Dentone,Tw1light,green,FALSE,FALSE,31.28,105104,329411,,
+5/30/2026,Dentone,Danylo Isaacson-Lebid',ucp,FALSE,FALSE,11.08,37223,329411,,
+5/30/2026,Dentone,Halogram,independent,FALSE,FALSE,1.96,6589,329411,,
+5/30/2026,Emix,Trey,green,FALSE,FALSE,52.26,175584,336000,,
+5/30/2026,Emix,Newsom,fdp,FALSE,FALSE,25.64,86160,336000,,
+5/30/2026,Emix,Javer,sdp,FALSE,FALSE,22.1,74256,336000,,
+5/30/2026,Garvor,Jkuma,alliance,FALSE,FALSE,32.55,111316,341999,,
+5/30/2026,Garvor,Katherine Monroe,sdp,FALSE,FALSE,27.19,93000,341999,,
+5/30/2026,Garvor,Strxya,green,FALSE,FALSE,20.27,69313,341999,,
+5/30/2026,Garvor,Burley,fdp,FALSE,FALSE,13.24,45272,341999,,
+5/30/2026,Garvor,Athabasca,independent,FALSE,FALSE,6.75,23098,341999,,
+5/30/2026,Garvor,Jkuma,alliance,FALSE,TRUE,49.25,168449,342000,,
+5/30/2026,Garvor,Katherine Monroe,sdp,FALSE,TRUE,50.75,173551,342000,,
+5/30/2026,Kilden,Cob,ucp,FALSE,FALSE,55.01,174942,318000,,
+5/30/2026,Kilden,bfdifann,green,FALSE,FALSE,44.99,143058,318000,,
+5/30/2026,Newmasi,JAMden,green,FALSE,FALSE,38.7,130019,336000,,
+5/30/2026,Newmasi,Caughtquick,alliance,FALSE,FALSE,25.87,86929,336000,,
+5/30/2026,Newmasi,Mokaeo,fdp,FALSE,FALSE,23.45,78778,336000,,
+5/30/2026,Newmasi,Howard Davidson,independent,FALSE,FALSE,11.99,40274,336000,,
+5/30/2026,Newmasi,Caughtquick,alliance,FALSE,TRUE,51.72,169813,328313,,
+5/30/2026,Newmasi,JAMden,green,FALSE,TRUE,48.28,158500,328313,,
+5/30/2026,Quintin,Rahul Gandhi,sdp,FALSE,FALSE,65.7,204997,312000,,
+5/30/2026,Quintin,ItsJustAlfie,green,FALSE,FALSE,34.3,107003,312000,,
+5/30/2026,Trunoe,Van der Plan,green,FALSE,FALSE,73.21,228409,312000,,
+5/30/2026,Trunoe,Heatland,independent,FALSE,FALSE,26.79,83591,312000,,
+5/30/2026,National Popular Vote,Alliance,alliance,FALSE,FALSE,36.56,,,,
+5/30/2026,National Popular Vote,FDP,fdp,FALSE,FALSE,11.63,,,,
+5/30/2026,National Popular Vote,SDP,sdp,FALSE,FALSE,19.46,,,,
+5/30/2026,National Popular Vote,Greens,green,FALSE,FALSE,20.08,,,,
+5/30/2026,National Popular Vote,UCP,ucp,FALSE,FALSE,12.27,,,,
+5/30/2026,List Seat 1,Eden,alliance,FALSE,FALSE,100,,,,
+5/30/2026,List Seat 2,Jerry,alliance,FALSE,FALSE,100,,,,
+5/30/2026,List Seat 3,Sandhillcranes,alliance,FALSE,FALSE,100,,,,
+5/30/2026,List Seat 4,Timothy Pickering,alliance,FALSE,FALSE,100,,,,
+5/30/2026,List Seat 5,Poopman69,alliance,FALSE,FALSE,100,,,,
+5/30/2026,List Seat 6,Dirty Yield,alliance,FALSE,FALSE,100,,,,
+5/30/2026,List Seat 7,John Sanchez,alliance,FALSE,FALSE,100,,,,
+5/30/2026,List Seat 8,Sean,alliance,FALSE,FALSE,100,,,,
+5/30/2026,List Seat 9,Burley,fdp,FALSE,FALSE,100,,,,
+5/30/2026,List Seat 10,Mokaeo,fdp,FALSE,FALSE,100,,,,
+5/30/2026,List Seat 11,Viterkol,fdp,FALSE,FALSE,100,,,,
+5/30/2026,List Seat 12,TMK,sdp,FALSE,FALSE,100,,,,
+5/30/2026,List Seat 13,Jack Bruhton,sdp,FALSE,FALSE,100,,,,
+5/30/2026,List Seat 14,Strxya,green,FALSE,FALSE,100,,,,
+5/30/2026,List Seat 15,JAMden,green,FALSE,FALSE,100,,,,
+5/30/2026,List Seat 16,Friezzer,green,FALSE,FALSE,100,,,,
+5/30/2026,List Seat 17,bfdifann,green,FALSE,FALSE,100,,,,
+5/30/2026,List Seat 18,Tommy,ucp,FALSE,FALSE,100,,,,
+5/30/2026,List Seat 19,Robert M. LaFollette Sr.,ucp,FALSE,FALSE,100,,,,
+5/30/2026,List Seat 20,Danylo Isaacson-Lebid',ucp,FALSE,FALSE,100,,,,
+7/28/2026,Newmasi,Caughtquick,fdp,FALSE,FALSE,100,,,TRUE,
+7/28/2026,Dentone,How Do I Type,socialist,FALSE,FALSE,100,,,TRUE,
+7/28/2026,List Seat 3,Count Binface,alliance,FALSE,FALSE,100,,,TRUE,
+7/28/2026,List Seat 4,Kanbo,alliance,FALSE,FALSE,100,,,TRUE,
+7/28/2026,List Seat 6,ᏁᎥፈᏦᏖᏂᏋፈᎧᎧᏝ,alliance,FALSE,FALSE,100,,,TRUE,
+7/28/2026,List Seat 8,,,FALSE,FALSE,,,,TRUE,
+7/28/2026,List Seat 9,Burley,independent,FALSE,FALSE,100,,,TRUE,
+7/28/2026,List Seat 18,Danylo Isaacson-Lebid',socialist,FALSE,FALSE,100,,,TRUE,
+7/28/2026,List Seat 19,Tommy,socialist,FALSE,FALSE,100,,,TRUE,
+7/28/2026,List Seat 20,Robert M. LaFollette Sr.,ucp,FALSE,FALSE,100,,,TRUE,
+7/29/2026,Kilden,BFDIfan,green,TRUE,FALSE,55.83,184226,330000,,
+7/29/2026,Kilden,Lee,fdp,TRUE,FALSE,44.17,145774,330000,,
+7/29/2026,List Seat 17,Maki,green,TRUE,FALSE,100,,,,
+08/01/2026,List Seat 18,Danylo Isaacson-Lebid',green,FALSE,FALSE,100,,,TRUE,
+08/01/2026,List Seat 1,Robert M. LaFollette Sr.,dr,FALSE,FALSE,100,,,TRUE,
+08/01/2026,List Seat 8,Eden,alliance,FALSE,FALSE,,,,TRUE,
+08/01/2026,List Seat 20,,,FALSE,FALSE,100,,,TRUE,

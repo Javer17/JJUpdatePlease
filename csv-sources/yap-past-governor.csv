@@ -1,21 +1,28 @@
 date,region,candidate,party,offyear,runoff,voteshare,disabled
-01/01/2002,Acalliana,null,null,FALSE,FALSE,0,TRUE
-01/01/2002,Armallos,null,null,FALSE,FALSE,0,TRUE
-01/01/2002,Blesna,null,null,FALSE,FALSE,0,TRUE
-01/01/2002,Calleoria,null,null,FALSE,FALSE,0,TRUE
-01/01/2002,Cambria,null,null,FALSE,FALSE,0,TRUE
-01/01/2002,Cerbska,null,null,FALSE,FALSE,0,TRUE
-01/01/2002,Estellia,null,null,FALSE,FALSE,0,TRUE
-01/01/2002,Kostos,null,null,FALSE,FALSE,0,TRUE
-01/01/2002,Larimer,null,null,FALSE,FALSE,0,TRUE
-01/01/2002,Matatheste,null,null,FALSE,FALSE,0,TRUE
-01/01/2002,Opplica,null,null,FALSE,FALSE,0,TRUE
-01/01/2002,Rorcia,null,null,FALSE,FALSE,0,TRUE
-01/01/2002,Stettigan,null,null,FALSE,FALSE,0,TRUE
-01/01/2002,Taclima,null,null,FALSE,FALSE,0,TRUE
-01/01/2002,Yapburgh,null,null,FALSE,FALSE,0,TRUE
-01/01/2002,New Queria,DaZapow,socrad,FALSE,FALSE,75,
-01/01/2002,New Queria,Strong,progcon,FALSE,FALSE,25,
-01/01/2002,Porcerle,Ghost,socrad,FALSE,FALSE,33.331,
-01/01/2002,Porcerle,Capybara,independent,FALSE,FALSE,33.33,
-01/01/2002,Porcerle,Twerking Duck,independent,FALSE,FALSE,33.33,
+03/08/1000,National Popular Vote,Independent,independent,FALSE,FALSE,17.39,
+03/08/1000,National Popular Vote,Social Gospel Party,sgp,FALSE,FALSE,8.7,
+03/08/1000,National Popular Vote,Labour,labour,FALSE,FALSE,21.74,
+03/08/1000,National Popular Vote,Republican Federation,sdf,FALSE,FALSE,17.39,
+03/08/1000,National Popular Vote,Reform Party,reform,FALSE,FALSE,34.78,
+03/08/1000,Matatheste,Mokaeo,sgp,FALSE,FALSE,100,
+03/08/1000,New Queria,JoR,sgp,FALSE,FALSE,60,
+03/08/1000,New Queria,Len Pinecone,reform,FALSE,FALSE,40,
+03/08/1000,Yapburgh,Superboy,reform,FALSE,FALSE,100,
+03/08/1000,Opplica,Kennedy Teagan,reform,FALSE,FALSE,100,
+03/08/1000,Rorcia,Francisco Pierre,independent,FALSE,FALSE,100,
+03/08/1000,Larimer,Edmund Montfort,reform,FALSE,FALSE,75,
+03/08/1000,Larimer,Aye,reform,FALSE,FALSE,15,
+03/08/1000,Larimer,Baudshaw,reform,FALSE,FALSE,10,
+03/08/1000,Taclima,,,,,0,TRUE
+03/08/1000,Porcerle,,,,,0,TRUE
+03/08/1000,Estellia,Jeff Haffley,labour,FALSE,FALSE,100,
+03/08/1000,Stettigan,EeveeGamer,reform,FALSE,FALSE,60,
+03/08/1000,Stettigan,Capy,sdf,FALSE,FALSE,40,
+03/08/1000,Acalliana,Scott Osborn,independent,FALSE,FALSE,100,
+03/08/1000,Cerbska,,,,,0,TRUE
+03/08/1000,Armallos,DairyDuke,reform,FALSE,FALSE,100,
+03/08/1000,Cambria,,,,,0,TRUE
+03/08/1000,Calleoria,LuveelVoom,sdf,FALSE,FALSE,97,
+03/08/1000,Calleoria,Tristiano,labour,FALSE,FALSE,3,
+03/08/1000,Blesna,Rick,labour,FALSE,FALSE,100,
+03/08/1000,Kostos,The_Green_Bean,reform,FALSE,FALSE,100,

@@ -460,6 +460,9 @@ var JJUHouseMapType = new MapType(
 		    case "isOffyear":
 		    return (regionData.offYear ?? false).toString().toUpperCase()
     
+		    case "isHidden":
+		    return (regionData.hidden ?? false).toString().toUpperCase()
+    
 		    case "isDisabled":
 		    return (regionData.disabled ?? false).toString().toUpperCase()
 		    
@@ -867,7 +870,7 @@ var JJUHouseMapType = new MapType(
 	    null, // updateCustomMapFunction
 	    null, // convertMapDataRowToCSVFunction
 	    null, // isCustomMap
-	    null, // shouldClearDisabled
+	    true, // shouldClearDisabled
 	    true, // shouldShowVoteshare
 	    0, // voteshareCutoffMargin
       getHouseSVGByDate, // overrideSVGPath
@@ -892,6 +895,7 @@ var JJUHouseMapType = new MapType(
         isSpecial: "special",
         isRunoff: "runoff",
         isOffyear: "offyear",
+        isHidden: "hidden",
         candidateName: "candidate",
         partyID: "party",
         voteshare: "voteshare",
@@ -1028,6 +1032,7 @@ var JJUHouseMapType = new MapType(
 		    isSpecial: "special",
 		    isRunoff: "runoff",
 		    isOffyear: "offyear",
+		    isHidden: "hidden",
 		    isDisabled: "disabled",
 		    candidateName: "candidate",
 		    partyID: "party",

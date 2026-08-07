@@ -3,13 +3,18 @@ var YAPPresidentMapType = new MapType(
   "President",
   "P",
   "assets/usa-pres.png",
-  "svg-sources/yap-states.svg",
+  "svg-sources/yap-presidential.svg",
   17,
-  function()
+  function(year, regionID, regionData, isUpdatingMapText)
   {
-    return 1
+    if (currentMapSource.isCustom() && regionID in overrideRegionEVs) return overrideRegionEVs[regionID]
+    if (currentMapSource.getShouldSetDisabledWorthToZero() && regionData && regionData.disabled) return 0
+    const availableYears = Object.keys(regionEVArrayYAP).map(Number).sort((a, b) => a - b)
+    const fallbackYear = availableYears[availableYears.length - 1]
+    const yearEVMap = regionEVArrayYAP[year] || regionEVArrayYAP[fallbackYear]
+    return (yearEVMap || {})[regionID] || 1
   },
-  false,
+  true,
   2,
   true,
   true,
@@ -31,7 +36,12 @@ var YAPPresidentMapType = new MapType(
     "RO": "Rorcia",
     "NQ": "New Queria",
     "PR": "Porcerle",
-    "DF": "Yapburgh D.F."}
+    "DF": "Yapburgh D.F.",
+    "ADD1": "Appropriation 1",
+    "ADD2": "Appropriation 2",
+    "ADD3": "Appropriation 3",
+    "ADD4": "Appropriation 4",
+  }
     ,[/.+-S/],
   [],
   () => {
@@ -53,6 +63,10 @@ var YAPPresidentMapType = new MapType(
   "New Queria": "NQ",
   "Porcerle": "PR",
   "Yapburgh": "DF",
+  "Appropriation 1": "ADD1",
+  "Appropriation 2": "ADD2",
+  "Appropriation 3": "ADD3",
+  "Appropriation 4": "ADD4",
   "National Popular Vote": nationalPopularVoteID
 }
 
@@ -68,7 +82,7 @@ var YAPPresidentMapType = new MapType(
       // probably should just load past election results for this
       const regionDateRanges = [
         {
-          start: new Date(2024, 10-1, 11-1).getTime(),
+          start: new Date(1000, 1-1, 1-1).getTime(),
           regions: [
             ...getStates(),
           ]
@@ -351,11 +365,11 @@ var YAPPresidentMapType = new MapType(
 
       if (mapDate < new Date(2025, 10-1, 11-1))
       {
-        return "svg-sources/yap-states.svg"
+        return "svg-sources/yap-presidential.svg"
       }
       else
       {
-        return "svg-sources/yap-states.svg"
+        return "svg-sources/yap-presidential.svg"
       }
     }
 

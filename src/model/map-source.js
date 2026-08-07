@@ -377,7 +377,24 @@ class MapSource
 
   getMapDates()
   {
-    return this.mapDates
+    const hiddenColumnKey = this.columnMap?.isHidden ?? this.columnMap?.hidden ?? "isHidden"
+    const hasHiddenColumn = this.columnMap && (this.columnMap.isHidden != null || this.columnMap.hidden != null || hiddenColumnKey === "isHidden" || hiddenColumnKey === "hidden")
+
+    if (!hasHiddenColumn || !this.rawMapData || !this.mapDates)
+    {
+      return this.mapDates
+    }
+
+    return this.mapDates.filter(mapDate => {
+      const rows = this.rawMapData[mapDate]
+      if (!Array.isArray(rows)) { return true }
+
+      return !rows.some(row => {
+        if (!row || row[this.columnMap.region] == null) { return false }
+        const hiddenValue = row[hiddenColumnKey] ?? row.isHidden ?? row.hidden ?? null
+        return String(hiddenValue ?? "").toUpperCase() === "TRUE"
+      })
+    })
   }
 
   getRegionData(modelDate, regionID)

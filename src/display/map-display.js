@@ -474,7 +474,8 @@ function setOutlineDivProperties()
       if (e.altKey && altClickRegion(e.target)) return
       if (e.shiftKey && shiftClickRegion(e.target)) return
       if (e.which == 3 || e.ctrlKey) return // handled in contextmenu
-      if (currentViewingState != ViewingState.zooming || !(currentEditingState == EditingState.viewing && pannedDuringClick)) leftClickRegion(e.target)
+      var isPannableMapState = currentViewingState == ViewingState.zooming || (currentViewingState == ViewingState.viewing && currentMapType.getID() == UKHouseMapType.getID())
+      if (!isPannableMapState || !(currentEditingState == EditingState.viewing && pannedDuringClick)) leftClickRegion(e.target)
     })
 
     outlineDiv.on('contextmenu', function(e) {
@@ -1243,6 +1244,53 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
     {
       setTimeout(() => $('.svg-pan-zoom_viewport').css('transition', 'transform 0.1s ease'), 1)
     }
+  }
+  else if (currentViewingState == ViewingState.viewing && currentMapType.getID() == UKHouseMapType.getID())
+  {
+    if (!svgPanZoomController || shouldReloadSVG)
+    {
+      if (svgPanZoomController)
+      {
+        svgPanZoomController.destroy()
+      }
+
+      svgPanZoomController = svgPanZoom('#svgdata', {
+        controlIconsEnabled: false,
+        fit: true,
+        contain: true,
+        minZoom: 1,
+        maxZoom: 25,
+        zoomScaleSensitivity: 0.35,
+        panEnabled: true,
+        dblClickZoomEnabled: false,
+        beforePan: () => {
+          if (mouseIsDown)
+          {
+            pannedDuringClick = true
+          }
+        }
+      })
+
+      if (fadeForNewSVG)
+      {
+        $('.svg-pan-zoom_viewport').css('transition', 'transform 0.1s ease')
+      }
+      else
+      {
+        setTimeout(() => $('.svg-pan-zoom_viewport').css('transition', 'transform 0.1s ease'), 1)
+      }
+    }
+
+    $("#mapZoomControls").trigger('show')
+    $("#mapCloseButton").css('display', 'none')
+  }
+  else if (svgPanZoomController)
+  {
+    svgPanZoomController.destroy()
+    svgPanZoomController = null
+
+    $("#mapZoomControls").trigger('hide')
+    $("#mapCloseButton").css('display', 'block')
   }
 
   showingDataMap = true

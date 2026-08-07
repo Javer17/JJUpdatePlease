@@ -82,9 +82,9 @@ const defaultMarginNames = {current: "Current", solid: "Solid", safe: "Safe", li
 const PoliticalPartyColors = {
   red: {current: "#5E0E16", solid: "#890000", safe: "#be1c29", likely: "#ff5864", lean: "#ff8b98", tilt: "#cf8980"},
   scarlet: {current: "#6D1900", solid: "#A02500", safe: "#DE3B00", likely: "#FF6B36", lean: "#FFAE85", tilt: "#C39A74"}, //Extended
-  orange: {current: "#7A3300", solid: "#c64500", safe: "#ff6200", likely: "#FF9758", lean: "#FFB28B", tilt: "#CFAD80"},
+  orange: {current: "#7A3300", solid: "#ba4100", safe: "#ff6200", likely: "#FF9758", lean: "#FFB28B", tilt: "#CFAD80"},
   yellow: {current: "#7F4C00", solid: "#B76800", safe: "#FE9800", likely: "#e8a43e", lean: "#eab86e", tilt: "#cbb78a"},
-  lime: {current: "#3D5111", solid: "#5A750A", safe: "#789c0d", likely: "#98bf21", lean: "#b9d669", tilt: "#afbb83"},
+  lime: {current: "#3D5111", solid: "#566c13", safe: "#789c0d", likely: "#98bf21", lean: "#b9d669", tilt: "#afbb83"},
   green: {current: "#0B5307", solid: "#19770A", safe: "#24A30E", likely: "#5CC449", lean: "#91D785", tilt: "#96BA8F"}, //Extended
   teal: {current: "#0A3831", solid: "#0A5437", safe: "#0e7f59", likely: "#31af70", lean: "#6cd99f", tilt: "#84b5a3"}, //Extended
   cyan: {current: "#083232", solid: "#0c4c56", safe: "#107281", likely: "#1DB8B3", lean: "#57DECB", tilt: "#76B3B3"}, 
@@ -95,7 +95,7 @@ const PoliticalPartyColors = {
   purple: {current: "#300E3F", solid: "#4F1966", safe: "#7F23A3", likely: "#c928ff", lean: "#DD7FFF", tilt: "#BB9CBF"},
   magenta: {current: "#4C0024", solid: "#75043C", safe: "#AB0354", likely: "#E8026E", lean: "#fe62b5", tilt: "#B87F9C"}, //Extended
   pink: {current: "#721C3D", solid: "#A82A58", safe: "#ff3e82", likely: "#ff78b5", lean: "#ff9ce5", tilt: "#dfabd1"}, 
-  brown: {current: "#351800", solid: "#4C2812", safe: "#663514", likely: "#A86234", lean: "#D88856", tilt: "#F7C2A6"},
+  brown: {current: "#351800", solid: "#442410", safe: "#663514", likely: "#A86234", lean: "#D88856", tilt: "#F7C2A6"},
   tan: {current: "#503B1C", solid: "#715618", safe: "#A27A38", likely: "#BA9760", lean: "#EBCC9F", tilt: "#C1B88E"}, //Extended
   maroon: {current: "#2D0A0A", solid: "#421518", safe: "#661E1F", likely: "#A04241", lean: "#AC6467", tilt: "#BA8C86"}, //Extended
   gray: {current: "#211F1A", solid: "#302D28", safe: "#474339", likely: "#77705F", lean: "#B9B4A7", tilt: "#D8D6CF"}
@@ -713,6 +713,14 @@ var UKMRLPParty = new PoliticalParty(
     // JACKSONIAN PARTIES //
     ////////////////////////
 
+var IndependentGenericParty = new PoliticalParty(
+  "INDGEN",
+  ["Independent", "Ind", "Indy"],
+  "Ind",
+  "Independent",
+  PoliticalPartyColors.gray
+)
+
 var JJULabourParty = new PoliticalParty(
   "JJULAB",
   ["Labour"],
@@ -954,12 +962,41 @@ var JJUSunsetBloc = new PoliticalParty(
   PoliticalPartyColors.aqua
 )
 
-var IndependentGenericParty = new PoliticalParty(
-  "INDGEN",
-  ["Independent", "Ind", "Indy"],
-  "Ind",
-  "Independent",
-  PoliticalPartyColors.gray
+
+    ////////////////////////
+    // YAPMERIAN  PARTIES //
+    ////////////////////////
+
+var YAPSGPParty = new PoliticalParty(
+  "YAPSGP",
+  ["SGP", "Social Gospel Party"],
+  "Social Gospel Party",
+  "Social Gospel Party",
+  PoliticalPartyColors.red
+)
+
+var YAPLabourParty = new PoliticalParty(
+  "YAPLAB",
+  ["Labour"],
+  "Lab",
+  "Labour",
+  PoliticalPartyColors.blue
+)
+
+var YAPSDFParty = new PoliticalParty(
+  "YAPSDF",
+  ["SDF", "Social Democratic Front"],
+  "SDF",
+  "Social Democratic Front",
+  PoliticalPartyColors.teal
+)
+
+var YAPReformParty = new PoliticalParty(
+  "YAPREF",
+  ["Reform"],
+  "Ref",
+  "Reform",
+  PoliticalPartyColors.orange
 )
 
 var politicalParties = {}
