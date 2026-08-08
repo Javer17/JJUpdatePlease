@@ -482,8 +482,7 @@ function createNewCustomParty()
     ["Custom"],
     "Custom",
     "Custom" + (customPartyNumber == 1 ? "" : " " + customPartyNumber),
-    cloneObject(PoliticalPartyColors[colorIDToUse]),
-    defaultMarginNames
+    PoliticalPartyColors[colorIDToUse]
   )
 
   politicalParties[customPoliticalParty.getID()] = customPoliticalParty
