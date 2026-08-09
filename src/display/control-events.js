@@ -753,7 +753,7 @@ async function leftClickRegion(div)
     }
     else if (selectedParty != null)
     {
-      var marginValueArray = Object.values(marginValues)
+      var marginValueArray = getActiveMarginKeys().map(marginID => marginValues[marginID])
       var marginValueIndex = marginValueArray.indexOf(regionData.margin)
       if (marginValueIndex == -1)
       {
@@ -855,7 +855,7 @@ function rightClickRegion(div)
     }
     else if (selectedParty != null)
     {
-      var marginValueArray = Object.values(marginValues)
+      var marginValueArray = getActiveMarginKeys().map(marginID => marginValues[marginID])
       var marginValueIndex = marginValueArray.indexOf(regionData.margin)
       if (marginValueIndex == -1)
       {
