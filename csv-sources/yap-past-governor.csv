@@ -11,8 +11,8 @@ date,region,candidate,party,offyear,runoff,voteshare,disabled
 03/08/1000,Opplica,Kennedy Teagan,reform,FALSE,FALSE,100,
 03/08/1000,Rorcia,Francisco Pierre,independent,FALSE,FALSE,100,
 03/08/1000,Larimer,Edmund Montfort,reform,FALSE,FALSE,75,
-03/08/1000,Larimer,Aye,reform,FALSE,FALSE,15,
-03/08/1000,Larimer,Baudshaw,reform,FALSE,FALSE,10,
+03/08/1000,Larimer,Aye,independent,FALSE,FALSE,15,
+03/08/1000,Larimer,Baudshaw,sdf,FALSE,FALSE,10,
 03/08/1000,Taclima,,,,,0,TRUE
 03/08/1000,Porcerle,,,,,0,TRUE
 03/08/1000,Estellia,Jeff Haffley,labour,FALSE,FALSE,100,

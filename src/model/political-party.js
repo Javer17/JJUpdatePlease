@@ -96,11 +96,31 @@ const PoliticalPartyColors = {
   magenta: {current: "#4C0024", solid: "#75043C", safe: "#AB0354", likely: "#E8026E", lean: "#fe62b5", tilt: "#B87F9C"}, //Extended
   pink: {current: "#721C3D", solid: "#A82A58", safe: "#ff3e82", likely: "#ff78b5", lean: "#ff9ce5", tilt: "#dfabd1"}, 
   brown: {current: "#351800", solid: "#442410", safe: "#663514", likely: "#A86234", lean: "#D88856", tilt: "#F7C2A6"},
-  tan: {current: "#503B1C", solid: "#715618", safe: "#A27A38", likely: "#BA9760", lean: "#EBCC9F", tilt: "#C1B88E"}, //Extended
+  tan: {current: "#503B1C", solid: "#715618", safe: "#A27A38", likely: "#BA9760", lean: "#e8c591", tilt: "#C1B88E"}, //Extended
   maroon: {current: "#2D0A0A", solid: "#421518", safe: "#661E1F", likely: "#A04241", lean: "#AC6467", tilt: "#BA8C86"}, //Extended
   gray: {current: "#211F1A", solid: "#302D28", safe: "#474339", likely: "#77705F", lean: "#B9B4A7", tilt: "#D8D6CF"}
 }
 
+// Colors
+var RedColor = new PoliticalParty("Red" , ["Red Color"], "Red", "Red", PoliticalPartyColors.red)
+var ScarletColor = new PoliticalParty("Scarlet" , ["Scarlet Color"], "Scarlet", "Scarlet", PoliticalPartyColors.scarlet)
+var OrangeColor = new PoliticalParty("Orange" , ["Orange Color"], "Orange", "Orange", PoliticalPartyColors.orange)
+var YellowColor = new PoliticalParty("Yellow" , ["Yellow Color"], "Yellow", "Yellow", PoliticalPartyColors.yellow)
+var LimeColor = new PoliticalParty("Lime" , ["Lime Color"], "Lime", "Lime", PoliticalPartyColors.lime)
+var GreenColor = new PoliticalParty("Green" , ["Green Color"], "Green", "Green", PoliticalPartyColors.green)
+var TealColor = new PoliticalParty("Teal" , ["Teal Color"], "Teal", "Teal", PoliticalPartyColors.teal)
+var CyanColor = new PoliticalParty("Cyan" , ["Cyan Color"], "Cyan", "Cyan", PoliticalPartyColors.cyan)
+var AquaColor = new PoliticalParty("Aqua" , ["Aqua Color"], "Aqua", "Aqua", PoliticalPartyColors.aqua)
+var BlueColor = new PoliticalParty("Blue" , ["Blue Color"], "Blue", "Blue", PoliticalPartyColors.blue)
+var BlurpleColor = new PoliticalParty("Blurple" , ["Blurple Color"], "Blurple", "Blurple", PoliticalPartyColors.blurple)
+var VioletColor = new PoliticalParty("Violet" , ["Violet Color"], "Violet", "Violet", PoliticalPartyColors.violet)
+var PurpleColor = new PoliticalParty("Purple" , ["Purple Color"], "Purple", "Purple", PoliticalPartyColors.purple)
+var MagentaColor = new PoliticalParty("Magenta" , ["Magenta Color"], "Magenta", "Magenta", PoliticalPartyColors.magenta)
+var PinkColor = new PoliticalParty("Pink" , ["Pink Color"], "Pink", "Pink", PoliticalPartyColors.pink)
+var BrownColor = new PoliticalParty("Brown" , ["Brown Color"], "Brown", "Brown", PoliticalPartyColors.brown)
+var TanColor = new PoliticalParty("Tan" , ["Tan Color"], "Tan", "Tan", PoliticalPartyColors.tan)
+var MaroonColor = new PoliticalParty("Maroon" , ["Maroon Color"], "Maroon", "Maroon", PoliticalPartyColors.maroon)
+var GrayColor = new PoliticalParty("Gray" , ["Gray Color"], "Gray", "Gray", PoliticalPartyColors.gray)
 // Main Parties
 
 var DemocraticParty = new PoliticalParty(
@@ -642,7 +662,7 @@ var UKAllianceParty = new PoliticalParty(
   ["APNI"],
   "Alliance Party",
   "Alliance Party",
-  PoliticalPartyColors.yellow
+  PoliticalPartyColors.tan
 )
 
 var UKSocDemLabParty = new PoliticalParty(

@@ -63,6 +63,27 @@ var partyOrdering = [
   {partyID: NationalRepublicanParty.getID(), direction: PieChartDirection.counterclockwise},
   {partyID: DemocraticRepublicanParty.getID(), direction: PieChartDirection.counterclockwise},
   // UK Left to Right
+  {partyID: OtherParty.getID(), direction: PieChartDirection.clockwise},
+  {partyID: UKWorkersPartyOfBritainParty.getID(), direction: PieChartDirection.clockwise},
+  {partyID: UKGreenParty.getID(), direction: PieChartDirection.clockwise},
+  {partyID: UKVoltParty.getID(), direction: PieChartDirection.clockwise},
+  {partyID: UKPlaidCymruParty.getID(), direction: PieChartDirection.clockwise},
+  {partyID: UKSinnFeinParty.getID(), direction: PieChartDirection.clockwise},
+  {partyID: UKAllianceParty.getID(), direction: PieChartDirection.clockwise},
+  {partyID: UKSocDemLabParty.getID(), direction: PieChartDirection.clockwise},
+  {partyID: UKLabourParty.getID(), direction: PieChartDirection.clockwise},
+  {partyID: UKScottishNationalParty.getID(), direction: PieChartDirection.clockwise},
+  {partyID: UKAlbaParty.getID(), direction: PieChartDirection.clockwise},
+  {partyID: UKLiberalDemocratsParty.getID(), direction: PieChartDirection.clockwise},
+  {partyID: UKSpeaker.getID(), direction: PieChartDirection.clockwise},
+  {partyID: UKMRLPParty.getID(), direction: PieChartDirection.clockwise},
+  {partyID: UKUlsterUnionistParty.getID(), direction: PieChartDirection.clockwise},
+  {partyID: UKConservativeParty.getID(), direction: PieChartDirection.clockwise},
+  {partyID: UKDemocraticUnionistParty.getID(), direction: PieChartDirection.clockwise},
+  {partyID: UKReformUKParty.getID(), direction: PieChartDirection.clockwise},
+  {partyID: UKTUVParty.getID(), direction: PieChartDirection.clockwise},
+  {partyID: UKRestoreBritainParty.getID(), direction: PieChartDirection.clockwise},
+  {partyID: UKUKIPParty.getID(), direction: PieChartDirection.clockwise},
   // JACKSONIA Left to Right
   {partyID: JJUPWPParty.getID(), direction: PieChartDirection.clockwise},
   {partyID: JJUSPJUParty.getID(), direction: PieChartDirection.clockwise},
@@ -111,21 +132,21 @@ function setupTotalsPieChart()
 
   let data = setupTotalsPieChartDatasets()
 
-  let options = {
+let options = {
     responsive: true,
     aspectRatio: 1,
     cutoutPercentage: totalsPieChartCutoutPercent,
     rotation: 180,
     elements: {
       arc: {
-        borderWidth: 2,
+        borderWidth: 1.5,
         borderColor: "#ddd"
       }
     },
-    legend: {
-      display: false
-    },
     plugins: {
+      legend: {
+        display: false
+      },
       tooltip: {
         displayColors: false,
         enabled: false,

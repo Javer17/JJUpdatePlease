@@ -1247,6 +1247,7 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
   }
   else if (currentViewingState == ViewingState.viewing && currentMapType.getID() == UKHouseMapType.getID())
   {
+
     if (!svgPanZoomController || shouldReloadSVG)
     {
       if (svgPanZoomController)
@@ -1259,8 +1260,8 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
         fit: true,
         contain: true,
         minZoom: 1,
-        maxZoom: 25,
-        zoomScaleSensitivity: 0.35,
+        maxZoom: 15,
+        zoomScaleSensitivity: 0.25,
         panEnabled: true,
         dblClickZoomEnabled: false,
         beforePan: () => {
@@ -1280,6 +1281,7 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
         setTimeout(() => $('.svg-pan-zoom_viewport').css('transition', 'transform 0.1s ease'), 1)
       }
     }
+
 
     $("#mapZoomControls").trigger('show')
     $("#mapCloseButton").css('display', 'none')
@@ -1927,12 +1929,12 @@ function getRegionNameCandidates(regionData)
 
 function isListSeatRegion(regionData)
 {
-  return getRegionNameCandidates(regionData).some(candidate => String(candidate).toLowerCase().includes("list seat"))
+  return getRegionNameCandidates(regionData).some(candidate => /\blist seat\b/i.test(String(candidate)))
 }
 
 function isSittingRegion(regionData)
 {
-  return getRegionNameCandidates(regionData).some(candidate => String(candidate).toLowerCase().includes("sitting"))
+  return getRegionNameCandidates(regionData).some(candidate => /\bsitting\b/i.test(String(candidate)))
 }
 
 function hasFullVoteShareWin(regionData)

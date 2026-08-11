@@ -380,46 +380,46 @@ document.addEventListener('keypress', async function(e) {
       selectParty($("#" + dropdownPoliticalPartyIDs[partyToSelect-1]))
     }
   }
-  else if (e.key == "Enter")
-  {
-    if (editMarginID)
-    {
-      toggleMarginEditing()
-    }
-    else if (isEnteringShiftAmount)
-    {
-      toggleEnteringShiftAmount()
-    }
-    else if (editCandidateNamePartyID)
-    {
-      toggleCandidateNameEditing()
-    }
-    else if (editPartyMarginColor)
-    {
-      toggleMarginHexColorEditing()
-    }
-    else if (editPartyPopularVote)
-    {
-      togglePartyPopularVoteEditing(editPartyPopularVote)
-    }
-    else if (editingRegionEVs)
-    {
-      editingRegionEVs = false
-      updateRegionBox()
-    }
-    else if (editingRegionMarginValue)
-    {
-      toggleRegionMarginEditing()
-    }
-    else if (editingRegionVotesharePercentages)
-    {
-      toggleRegionVoteshareEditing(voteshareEditRegion)
-    }
-    else if (currentMapType.getCustomMapEnabled())
-    {
-      toggleEditing()
-    }
-  }
+  // else if (e.key == "Enter")
+  // {
+  //   if (editMarginID)
+  //   {
+  //     toggleMarginEditing()
+  //   }
+  //   else if (isEnteringShiftAmount)
+  //   {
+  //     toggleEnteringShiftAmount()
+  //   }
+  //   else if (editCandidateNamePartyID)
+  //   {
+  //     toggleCandidateNameEditing()
+  //   }
+  //   else if (editPartyMarginColor)
+  //   {
+  //     toggleMarginHexColorEditing()
+  //   }
+  //   else if (editPartyPopularVote)
+  //   {
+  //     togglePartyPopularVoteEditing(editPartyPopularVote)
+  //   }
+  //   else if (editingRegionEVs)
+  //   {
+  //     editingRegionEVs = false
+  //     updateRegionBox()
+  //   }
+  //   else if (editingRegionMarginValue)
+  //   {
+  //     toggleRegionMarginEditing()
+  //   }
+  //   else if (editingRegionVotesharePercentages)
+  //   {
+  //     toggleRegionVoteshareEditing(voteshareEditRegion)
+  //   }
+  //   else if (currentMapType.getCustomMapEnabled())
+  //   {
+  //     toggleEditing()
+  //   }
+  // }
   else if (shiftNumberKeycodes.includes(e.key) && shiftNumberKeycodes.indexOf(e.key) < mapSourceIDs.length-1 && !isEditingTextbox())
   {
     var mapSourceIDToCompare = mapSourceIDs[shiftNumberKeycodes.indexOf(e.key)]
