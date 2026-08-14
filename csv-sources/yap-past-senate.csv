@@ -1,4 +1,6 @@
 date,region,candidate,party,offyear,runoff,voteshare,disabled
+03/08/1000,Coalition,reform,reflab,FALSE,FALSE,0,
+03/08/1000,Coalition,labour,reflab,FALSE,FALSE,0,
 03/08/1000,National Popular Vote,Independent,independent,FALSE,FALSE,17.39,
 03/08/1000,National Popular Vote,Social Gospel Party,sgp,FALSE,FALSE,8.7,
 03/08/1000,National Popular Vote,Labour,labour,FALSE,FALSE,21.74,

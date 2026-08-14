@@ -391,7 +391,9 @@ function setMapCountries()
       [YAPSGPParty.getID()]: YAPSGPParty,
       [YAPLabourParty.getID()]: YAPLabourParty,
       [YAPSDFParty.getID()]: YAPSDFParty,
-      [YAPReformParty.getID()]: YAPReformParty
+      [YAPReformParty.getID()]: YAPReformParty,
+      //Coalitions
+      [YAPRefLabBloc.getID()]: YAPRefLabBloc,
     },
     [ //Default
       IndependentGenericParty.getID(),
@@ -407,6 +409,8 @@ function setMapCountries()
       YAPLabourParty.getID(),
       YAPSDFParty.getID(),
       YAPReformParty.getID(),
+      //Coalitions
+      YAPRefLabBloc.getID(),
     ],
     []
   )

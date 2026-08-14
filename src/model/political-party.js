@@ -81,10 +81,10 @@ const defaultMarginNames = {current: "Current", solid: "Solid", safe: "Safe", li
 
 const PoliticalPartyColors = {
   red: {current: "#5E0E16", solid: "#890000", safe: "#be1c29", likely: "#ff5864", lean: "#ff8b98", tilt: "#cf8980"},
-  scarlet: {current: "#6D1900", solid: "#A02500", safe: "#DE3B00", likely: "#FF6B36", lean: "#FFAE85", tilt: "#C39A74"}, //Extended
-  orange: {current: "#7A3300", solid: "#ba4100", safe: "#ff6200", likely: "#FF9758", lean: "#FFB28B", tilt: "#CFAD80"},
+  scarlet: {current: "#681905", solid: "#982408", safe: "#D33A0B", likely: "#F56A40", lean: "#F79368", tilt: "#BF9878"}, //Extended
+  orange: {current: "#833800", solid: "#C84700", safe: "#FF6200", likely: "#FF9E4B", lean: "#FFB682", tilt: "#D5B27A"},
   yellow: {current: "#7F4C00", solid: "#B76800", safe: "#FE9800", likely: "#e8a43e", lean: "#eab86e", tilt: "#cbb78a"},
-  lime: {current: "#3D5111", solid: "#566c13", safe: "#789c0d", likely: "#98bf21", lean: "#b9d669", tilt: "#afbb83"},
+  lime: {current: "#3D5101", solid: "#566c03", safe: "#789c00", likely: "#98bf11", lean: "#BBD35B", tilt: "#B2BA6F"},
   green: {current: "#0B5307", solid: "#19770A", safe: "#24A30E", likely: "#5CC449", lean: "#91D785", tilt: "#96BA8F"}, //Extended
   teal: {current: "#0A3831", solid: "#0A5437", safe: "#0e7f59", likely: "#31af70", lean: "#6cd99f", tilt: "#84b5a3"}, //Extended
   cyan: {current: "#083232", solid: "#0c4c56", safe: "#107281", likely: "#1DB8B3", lean: "#57DECB", tilt: "#76B3B3"}, 
@@ -1017,6 +1017,18 @@ var YAPReformParty = new PoliticalParty(
   "Ref",
   "Reform",
   PoliticalPartyColors.orange
+)
+
+    ///////////////////////////
+    // YAPMERIAN  COALITIONS //
+    ///////////////////////////
+
+var YAPRefLabBloc = new PoliticalParty(
+  "YAPREFLAB",
+  ["Reform & Labour", "RefLab"],
+  "RefLab",
+  "Reform Labour",
+  PoliticalPartyColors.lime
 )
 
 var politicalParties = {}
