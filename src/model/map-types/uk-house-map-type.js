@@ -529,7 +529,7 @@ var UKHouseMapType = new MapType(
 	    true, // shouldShowVoteshare
 	    0, // voteshareCutoffMargin
       getSenateSVGByDate, // overrideSVGPath
-      true, // shouldSetDisabledWorthToZero
+      false, // shouldSetDisabledWorthToZero
       null, // shouldUseOriginalMapDataForTotalsPieChart
       null, // shouldForcePopularVoteDisplay
       {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE} // customDefaultMargins

@@ -83,20 +83,21 @@ const PoliticalPartyColors = {
   red: {current: "#5E0E16", solid: "#890000", safe: "#be1c29", likely: "#ff5864", lean: "#ff8b98", tilt: "#cf8980"},
   scarlet: {current: "#681905", solid: "#982408", safe: "#D33A0B", likely: "#F56A40", lean: "#F79368", tilt: "#BF9878"}, //Extended
   orange: {current: "#833800", solid: "#C84700", safe: "#FF6200", likely: "#FF9E4B", lean: "#FFB682", tilt: "#D5B27A"},
-  yellow: {current: "#7F4C00", solid: "#B76800", safe: "#FE9800", likely: "#e8a43e", lean: "#eab86e", tilt: "#cbb78a"},
-  lime: {current: "#3D5101", solid: "#566c03", safe: "#789c00", likely: "#98bf11", lean: "#BBD35B", tilt: "#B2BA6F"},
-  green: {current: "#0B5307", solid: "#19770A", safe: "#24A30E", likely: "#5CC449", lean: "#91D785", tilt: "#96BA8F"}, //Extended
-  teal: {current: "#0A3831", solid: "#0A5437", safe: "#0e7f59", likely: "#31af70", lean: "#6cd99f", tilt: "#84b5a3"}, //Extended
-  cyan: {current: "#083232", solid: "#0c4c56", safe: "#107281", likely: "#1DB8B3", lean: "#57DECB", tilt: "#76B3B3"}, 
-  aqua: {current: "#04293A", solid: "#0F3D4C", safe: "#07587d", likely: "#2ba0d6", lean: "#55cfff", tilt: "#a9caef"}, //Extended
+  yellow: {current: "#7F4C00", solid: "#B76800", safe: "#FE9800", likely: "#F9B04F", lean: "#FFC27C", tilt: "#cbb78a"},
+  olive: {current: "#454300", solid: "#6D661D", safe: "#9F9700", likely: "#C2B704", lean: "#D1C64E", tilt: "#B6A764"}, //Extended
+  lime: {current: "#334401", solid: "#566c03", safe: "#789c00", likely: "#98bf11", lean: "#BBD35B", tilt: "#B2BA6F"},
+  green: {current: "#0B5307", solid: "#19770A", safe: "#24A30E", likely: "#5CC449", lean: "#91D785", tilt: "#96BA8F"},
+  teal: {current: "#0a3827", solid: "#0A5437", safe: "#0e7f59", likely: "#31af70", lean: "#6cd99f", tilt: "#84b5a3"}, //Extended
+  cyan: {current: "#082e32", solid: "#0c4c56", safe: "#107281", likely: "#1DB8B3", lean: "#57DECB", tilt: "#76B3B3"}, 
+  aqua: {current: "#04293A", solid: "#0F3D4C", safe: "#07587d", likely: "#2ba0d6", lean: "#66c2ff", tilt: "#a9caef"}, //Extended
   blue: {current: "#0d1c3d", solid: "#191F68", safe: "#1c408c", likely: "#587ccc", lean: "#8aafff", tilt: "#949bb3"},
   blurple: {current: "#1D1D3D", solid: "#252559", safe: "#3A387C", likely: "#5B5B8C", lean: "#7B7AAD", tilt: "#757481"},//Extended
-  violet: {current: "#1A0B33", solid: "#2D1659", safe: "#5423A3", likely: "#8432FF", lean: "#B27FFF", tilt: "#AF9CBF"},
+  violet: {current: "#1A0B33", solid: "#2D1659", safe: "#5423A3", likely: "#8432FF", lean: "#B27FFF", tilt: "#AF9CBF"}, //Extended
   purple: {current: "#300E3F", solid: "#4F1966", safe: "#7F23A3", likely: "#c928ff", lean: "#DD7FFF", tilt: "#BB9CBF"},
-  magenta: {current: "#4C0024", solid: "#75043C", safe: "#AB0354", likely: "#E8026E", lean: "#fe62b5", tilt: "#B87F9C"}, //Extended
-  pink: {current: "#721C3D", solid: "#A82A58", safe: "#ff3e82", likely: "#ff78b5", lean: "#ff9ce5", tilt: "#dfabd1"}, 
+  magenta: {current: "#4C002C", solid: "#750448", safe: "#AB0364", likely: "#E80284", lean: "#DB4AA8", tilt: "#CC7EC0"}, //Extended
+  pink: {current: "#721C3D", solid: "#A82A58", safe: "#ff3e82", likely: "#FF66AD", lean: "#FF89E1", tilt: "#CC7EBC"}, 
   brown: {current: "#351800", solid: "#442410", safe: "#663514", likely: "#A86234", lean: "#D88856", tilt: "#F7C2A6"},
-  tan: {current: "#503B1C", solid: "#715618", safe: "#A27A38", likely: "#BA9760", lean: "#e8c591", tilt: "#C1B88E"}, //Extended
+  tan: {current: "#503B1C", solid: "#715618", safe: "#A27A38", likely: "#BA9760", lean: "#d3b890", tilt: "#c2bca3"}, //Extended
   maroon: {current: "#2D0A0A", solid: "#421518", safe: "#661E1F", likely: "#A04241", lean: "#AC6467", tilt: "#BA8C86"}, //Extended
   gray: {current: "#211F1A", solid: "#302D28", safe: "#474339", likely: "#77705F", lean: "#B9B4A7", tilt: "#D8D6CF"}
 }
@@ -106,6 +107,7 @@ var RedColor = new PoliticalParty("Red" , ["Red Color"], "Red", "Red", Political
 var ScarletColor = new PoliticalParty("Scarlet" , ["Scarlet Color"], "Scarlet", "Scarlet", PoliticalPartyColors.scarlet)
 var OrangeColor = new PoliticalParty("Orange" , ["Orange Color"], "Orange", "Orange", PoliticalPartyColors.orange)
 var YellowColor = new PoliticalParty("Yellow" , ["Yellow Color"], "Yellow", "Yellow", PoliticalPartyColors.yellow)
+var OliveColor = new PoliticalParty("Vomit" , ["Vomit Color"], "Vomit", "Vomit", PoliticalPartyColors.olive)
 var LimeColor = new PoliticalParty("Lime" , ["Lime Color"], "Lime", "Lime", PoliticalPartyColors.lime)
 var GreenColor = new PoliticalParty("Green" , ["Green Color"], "Green", "Green", PoliticalPartyColors.green)
 var TealColor = new PoliticalParty("Teal" , ["Teal Color"], "Teal", "Teal", PoliticalPartyColors.teal)
@@ -563,7 +565,7 @@ var IndependentGWParty = new PoliticalParty(
 
 var UKLabourParty = new PoliticalParty(
   "UKLAB",
-  ["Labour"],
+  ["Labour", "Lab"],
   "Lab",
   "Labour",
   PoliticalPartyColors.red
@@ -595,7 +597,7 @@ var OtherParty = new PoliticalParty(
 
 var UKReformUKParty = new PoliticalParty(
   "UKREF",
-  ["ReformUK"],
+  ["ReformUK", "RUK"],
   "Ref",
   "Reform UK",
   PoliticalPartyColors.cyan
@@ -675,7 +677,7 @@ var UKSocDemLabParty = new PoliticalParty(
 
 var UKRestoreBritainParty = new PoliticalParty(
   "UKRES",
-  ["Restore", "RES"],
+  ["Restore", "RES", "RB"],
   "Restore",
   "Restore Britain",
   PoliticalPartyColors.blurple
@@ -719,6 +721,30 @@ var UKVoltParty = new PoliticalParty(
   "Volt",
   "Volt",
   PoliticalPartyColors.violet
+)
+
+var UKSDPParty = new PoliticalParty(
+  "UKSDP",
+  ["SDP"],
+  "SDP",
+  "SDP",
+  PoliticalPartyColors.red
+)
+
+var UKLiberalParty = new PoliticalParty(
+  "UKLIBS",
+  ["Liberal"],
+  "Lib",
+  "Liberal",
+  PoliticalPartyColors.yellow
+)
+
+var UKYourParty = new PoliticalParty(
+  "UKYOUR",
+  ["Your Party"],
+  "Your",
+  "Your Party",
+  PoliticalPartyColors.pink
 )
 
 var UKMRLPParty = new PoliticalParty(

@@ -233,6 +233,9 @@ function setMapCountries()
       [UKTUVParty.getID()]: UKTUVParty,
       [UKVoltParty.getID()]: UKVoltParty,
       [UKMRLPParty.getID()]: UKMRLPParty,
+      [UKSDPParty.getID()]: UKSDPParty,
+      [UKLiberalParty.getID()]: UKLiberalParty,
+      [UKYourParty.getID()]: UKYourParty,
     },
     [ //Default
       IndependentGenericParty.getID(),
@@ -272,6 +275,9 @@ function setMapCountries()
       UKTUVParty.getID(),
       UKVoltParty.getID(),
       UKMRLPParty.getID(),
+      UKSDPParty.getID(),
+      UKLiberalParty.getID(),
+      UKYourParty.getID()
       // UKpartythingy
     ],
     []
