@@ -17,6 +17,8 @@ var displayMapQueue = []
 var isRunningDisplayMapQueue = false
 
 var svgPanZoomController
+var svgPanZoomControllerOwnerID = null // which map (by ID) the current controller belongs to, so we know whose pan/zoom to remember
+var savedMapZoomStates = {} // mapID -> {pan, zoom}, so switching maps and coming back restores where you left off
 var pannedDuringClick = false
 
 var selectedParty
@@ -1216,42 +1218,26 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
 
   if (currentViewingState == ViewingState.zooming)
   {
-    svgPanZoomController = svgPanZoom('#svgdata', {
-      controlIconsEnabled: false,
-      fit: true,
-      contain: true,
-      minZoom: 1,
-      zoomScaleSensitivity: 0.4,
-      panEnabled: true,
-      dblClickZoomEnabled: false,
-      beforePan: () => {
-        if (mouseIsDown)
-        {
-          pannedDuringClick = true
-        }
-      },
-      onZoom: (scale) => {
-        document.getElementById("svgdefinitions").innerHTML = ""
-        generateFlipPatternsFromPartyMap(politicalParties, 1/scale)
-      }
-    })
-    
-    if (fadeForNewSVG)
-    {
-      $('.svg-pan-zoom_viewport').css('transition', 'transform 0.1s ease')
-    }
-    else
-    {
-      setTimeout(() => $('.svg-pan-zoom_viewport').css('transition', 'transform 0.1s ease'), 1)
-    }
-  }
-  else if (currentViewingState == ViewingState.viewing && currentMapType.getID() == UKHouseMapType.getID())
-  {
+    // Key by map type + which region is zoomed into, so zooming into a *new* region still starts
+    // fresh (fit to that region), but continuing to view the same zoomed region across a reload
+    // (e.g. the date slider moving) keeps your pan/zoom instead of snapping back to fit.
+    var zoomOwnerID = currentMapType.getID() + ":" + (currentMapZoomRegion ?? "")
 
-    if (!svgPanZoomController || shouldReloadSVG)
+    if (!svgPanZoomController || svgPanZoomControllerOwnerID != zoomOwnerID || shouldReloadSVG)
     {
+      var zoomStateToRestore = savedMapZoomStates[zoomOwnerID] ?? null
       if (svgPanZoomController)
       {
+        // Reloading the same zoomed region (e.g. the date changed) - grab its live pan/zoom
+        // rather than whatever was last saved, since that's more current.
+        if (svgPanZoomControllerOwnerID == zoomOwnerID)
+        {
+          zoomStateToRestore = {pan: svgPanZoomController.getPan(), zoom: svgPanZoomController.getZoom()}
+        }
+        else if (svgPanZoomControllerOwnerID != null)
+        {
+          savedMapZoomStates[svgPanZoomControllerOwnerID] = {pan: svgPanZoomController.getPan(), zoom: svgPanZoomController.getZoom()}
+        }
         svgPanZoomController.destroy()
       }
 
@@ -1260,8 +1246,67 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
         fit: true,
         contain: true,
         minZoom: 1,
-        maxZoom: 15,
-        zoomScaleSensitivity: 0.25,
+        zoomScaleSensitivity: 0.4,
+        panEnabled: true,
+        dblClickZoomEnabled: false,
+        beforePan: () => {
+          if (mouseIsDown)
+          {
+            pannedDuringClick = true
+          }
+        },
+        onZoom: (scale) => {
+          document.getElementById("svgdefinitions").innerHTML = ""
+          generateFlipPatternsFromPartyMap(politicalParties, 1/scale)
+        }
+      })
+      svgPanZoomControllerOwnerID = zoomOwnerID
+
+      if (zoomStateToRestore)
+      {
+        svgPanZoomController.zoom(zoomStateToRestore.zoom)
+        svgPanZoomController.pan(zoomStateToRestore.pan)
+      }
+
+      if (fadeForNewSVG)
+      {
+        $('.svg-pan-zoom_viewport').css('transition', 'transform 0.1s ease')
+      }
+      else
+      {
+        setTimeout(() => $('.svg-pan-zoom_viewport').css('transition', 'transform 0.1s ease'), 1)
+      }
+    }
+  }
+  else if (currentViewingState == ViewingState.viewing && currentMapType.getID() == UKHouseMapType.getID())
+  {
+    var zoomOwnerID = UKHouseMapType.getID()
+
+    if (!svgPanZoomController || svgPanZoomControllerOwnerID != zoomOwnerID || shouldReloadSVG)
+    {
+      var zoomStateToRestore = savedMapZoomStates[zoomOwnerID] ?? null
+      if (svgPanZoomController)
+      {
+        // Reloading the same map (e.g. the date changed) - grab its live pan/zoom rather than
+        // whatever was last saved, since that's more current.
+        if (svgPanZoomControllerOwnerID == zoomOwnerID)
+        {
+          zoomStateToRestore = {pan: svgPanZoomController.getPan(), zoom: svgPanZoomController.getZoom()}
+        }
+        else if (svgPanZoomControllerOwnerID != null)
+        {
+          savedMapZoomStates[svgPanZoomControllerOwnerID] = {pan: svgPanZoomController.getPan(), zoom: svgPanZoomController.getZoom()}
+        }
+        svgPanZoomController.destroy()
+      }
+
+      svgPanZoomController = svgPanZoom('#svgdata', {
+        controlIconsEnabled: false,
+        fit: true,
+        contain: true,
+        minZoom: 1,
+        maxZoom: 25,
+        zoomScaleSensitivity: 0.35,
         panEnabled: true,
         dblClickZoomEnabled: false,
         beforePan: () => {
@@ -1271,6 +1316,13 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
           }
         }
       })
+      svgPanZoomControllerOwnerID = zoomOwnerID
+
+      if (zoomStateToRestore)
+      {
+        svgPanZoomController.zoom(zoomStateToRestore.zoom)
+        svgPanZoomController.pan(zoomStateToRestore.pan)
+      }
 
       if (fadeForNewSVG)
       {
@@ -1282,14 +1334,19 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
       }
     }
 
-
     $("#mapZoomControls").trigger('show')
     $("#mapCloseButton").css('display', 'none')
   }
   else if (svgPanZoomController)
   {
+    if (svgPanZoomControllerOwnerID != null)
+    {
+      savedMapZoomStates[svgPanZoomControllerOwnerID] = {pan: svgPanZoomController.getPan(), zoom: svgPanZoomController.getZoom()}
+    }
+
     svgPanZoomController.destroy()
     svgPanZoomController = null
+    svgPanZoomControllerOwnerID = null
 
     $("#mapZoomControls").trigger('hide')
     $("#mapCloseButton").css('display', 'block')
@@ -1929,12 +1986,12 @@ function getRegionNameCandidates(regionData)
 
 function isListSeatRegion(regionData)
 {
-  return getRegionNameCandidates(regionData).some(candidate => /\blist seat\b/i.test(String(candidate)))
+  return getRegionNameCandidates(regionData).some(candidate => String(candidate).toLowerCase().includes("list seat"))
 }
 
 function isSittingRegion(regionData)
 {
-  return getRegionNameCandidates(regionData).some(candidate => /\bsitting\b/i.test(String(candidate)))
+  return getRegionNameCandidates(regionData).some(candidate => String(candidate).toLowerCase().includes("sitting"))
 }
 
 function hasFullVoteShareWin(regionData)

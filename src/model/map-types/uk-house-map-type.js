@@ -427,11 +427,11 @@ var UKHouseMapType = new MapType(
       
       if (mapDate < new Date(2001, 12-1, 31-1))
       {
-        return "svg-sources/uk-constituencies-2024.svg"
+        return "svg-sources/uk-constituencies-2019.svg"
       }
-      else if (mapDate < new Date(2002, 12-1, 31-1))
+      else if (mapDate < new Date(2019, 12-1, 31-1))
       {
-      return "svg-sources/uk-constituencies-2024.svg"
+      return "svg-sources/uk-constituencies-2019.svg"
       }
       else
       {

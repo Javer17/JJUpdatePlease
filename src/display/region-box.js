@@ -222,10 +222,36 @@ async function updateRegionBox(regionID = currentRegionID)
       if (roundedVoteshare <= 0 && !currentMapSource.isCustom() && regionData.reportingPercent == null) { return }
       
       const candidateName = getRegionCandidateName(voteData.partyID, regionData, voteData)
-      
-      regionBoxHTML += "<span class='regionbox-text-shadow' id='voteshare-" + (voteData.partyID + "-" + candidateName.replaceAll(/[\s\.]/g, "_")) + "' style='display: inline-block; padding: 4px; color: #fff; border-radius: " + (i == 0 ? "3px 3px" : "0px 0px") + " " + (i == sortedPercentages.length-1 ? "3px 3px" : "0px 0px") + "; " + "background: " + getGradientCSS(politicalParties[voteData.partyID].getMarginColors().safe, politicalParties[voteData.partyID].getMarginColors().lean, (showingCompareMap && currentMapSource.isCustom() ? 50 : 0) + voteData.voteshare) + "; " + " width: 100%'><span style='float: left;'>" + candidateName + "</span><span style='float: right;'>"
-      regionBoxHTML += shiftKeyDown && shouldShowVotes && voteData.votes != null ? addCommaFormatting(voteData.votes) : (showingCompareMap && currentMapSource.isCustom() && voteData.voteshare > 0.0 ? "+" : "") + decimalPadding(roundedVoteshare, 2) + currentMapSource.getVoteshareSuffix()
-      regionBoxHTML += "</span></span><br>"
+
+      if (currentMapType.getMapSettingValue("showPartyLogos"))
+      {
+        // Party logo next to each voteshare bar - each PoliticalParty now carries its own logo
+        // filename (e.g. "REP.png"), set on the party itself (see the partyLogo constructor arg
+        // in political-party.js). If the party has no logo set, or the CSV's party text didn't
+        // resolve to any known party at all, no image is shown for that row.
+        const resolvedParty = voteData.partyID != null ? politicalParties[voteData.partyID] : null
+        const partyLogoFilename = resolvedParty ? resolvedParty.getPartyLogo() : null
+        const voteshareImageURL = partyLogoFilename ? ("assets/partylogos/" + partyLogoFilename) : null
+
+        regionBoxHTML += "<div style='display: flex; align-items: center; width: 100%; margin: 2px 0px;'>"
+        if (voteshareImageURL)
+        {
+          regionBoxHTML += "<img src='" + voteshareImageURL + "' style='width: 20px; height: 20px; flex: 0 0 auto; margin-right: 4px; object-fit: cover; border-radius: 2px;'>"
+        }
+        else
+        {
+          regionBoxHTML += "<span style='width: 20px; height: 20px; flex: 0 0 auto; margin-right: 4px;'></span>"
+        }
+        regionBoxHTML += "<span class='regionbox-text-shadow' id='voteshare-" + (voteData.partyID + "-" + candidateName.replaceAll(/[\s\.]/g, "_")) + "' style='display: flex; justify-content: space-between; align-items: center; padding: 4px; color: #fff; border-radius: " + (i == 0 ? "3px 3px" : "0px 0px") + " " + (i == sortedPercentages.length-1 ? "3px 3px" : "0px 0px") + "; " + "background: " + getGradientCSS(politicalParties[voteData.partyID].getMarginColors().safe, politicalParties[voteData.partyID].getMarginColors().lean, (showingCompareMap && currentMapSource.isCustom() ? 50 : 0) + voteData.voteshare) + "; " + " flex: 1 1 0%; min-width: 0;'><span>" + candidateName + "</span><span style='padding-left: 12px;'>"
+        regionBoxHTML += shiftKeyDown && shouldShowVotes && voteData.votes != null ? addCommaFormatting(voteData.votes) : (showingCompareMap && currentMapSource.isCustom() && voteData.voteshare > 0.0 ? "+" : "") + decimalPadding(roundedVoteshare, 2) + currentMapSource.getVoteshareSuffix()
+        regionBoxHTML += "</span></span></div>"
+      }
+      else
+      {
+        regionBoxHTML += "<span class='regionbox-text-shadow' id='voteshare-" + (voteData.partyID + "-" + candidateName.replaceAll(/[\s\.]/g, "_")) + "' style='display: inline-block; padding: 4px; color: #fff; border-radius: " + (i == 0 ? "3px 3px" : "0px 0px") + " " + (i == sortedPercentages.length-1 ? "3px 3px" : "0px 0px") + "; " + "background: " + getGradientCSS(politicalParties[voteData.partyID].getMarginColors().safe, politicalParties[voteData.partyID].getMarginColors().lean, (showingCompareMap && currentMapSource.isCustom() ? 50 : 0) + voteData.voteshare) + "; " + " width: 100%'><span style='float: left;'>" + candidateName + "</span><span style='float: right;'>"
+        regionBoxHTML += shiftKeyDown && shouldShowVotes && voteData.votes != null ? addCommaFormatting(voteData.votes) : (showingCompareMap && currentMapSource.isCustom() && voteData.voteshare > 0.0 ? "+" : "") + decimalPadding(roundedVoteshare, 2) + currentMapSource.getVoteshareSuffix()
+        regionBoxHTML += "</span></span><br>"
+      }
 
       hasVoteCountsForAll = hasVoteCountsForAll && voteData.votes != null
     })

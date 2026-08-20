@@ -329,6 +329,12 @@ var globalMapSettings =
       {id: "hide", title: "Hidden", value: false}
     ],
   defaultValue: "hide", reloadType: MapSettingReloadType.display},
+  {id: "showPartyLogos", title: "🔎 Show Party Logos", type: MapSettingType.optionCycle, options:
+    [
+      {id: "show", title: "Shown", value: true},
+      {id: "hide", title: "Hidden", value: false}
+    ],
+  defaultValue: "hide", reloadType: MapSettingReloadType.display},
   {id: "pieStyle", title: "📊 Pie Style", type: MapSettingType.optionCycle, options:
     [
       {id: "margins", title: "Margins", value: 0},
@@ -396,7 +402,7 @@ const regionEVArray = {
 }
 
 const regionEVArrayYAP = {
-  1000: {"AC":1, "AR": 1, "BL":2, "CA":10, "CE":1, "CM":1, "DF":0, "ES":1, "KO":1, "LA":5, "MA": 3, "NQ":7, "OP":2, "PR":0, "RO":5, "ST":4, "TL":0, "ADD1":7, "ADD2":34, "ADD3":0, "ADD4":0},
+  1000: {"AC":1, "AR": 1, "BL":2, "CA":10, "CE":1, "CM":1, "DF":2, "ES":1, "KO":1, "LA":5, "MA": 3, "NQ":7, "OP":2, "PR":0, "RO":5, "ST":4, "TL":0}
 }
 
 var mapTypes = {}
