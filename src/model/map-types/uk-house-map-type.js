@@ -57,28 +57,20 @@ var UKHouseMapType = new MapType(
 	  {
 	    let filteredMapData = {}
 	    let partyNameData = {}
-  
-	    let regionNames = Object.keys(regionNameToID)
       
       const getConstituencies = () => [...UKConstituencyIDs] //Derived from UKConstituencyNames (see uk-constituencies-data.js)
       const regions = [...getConstituencies()]
       const regionDateRanges = [
         {
-          start: new Date(1970, 1-1, 1-1).getTime(),
+          start: new Date(2017, 1-1, 1-1).getTime(),
           regions: [
-            ...getUKConstituencyLookupsForYear(1970).ids
+            ...getUKConstituencyLookupsForYear(2017).ids
           ]
         },
         {
-          start: new Date(1980, 1-1, 1-1).getTime(),
+          start: new Date(2024, 1-1, 1-1).getTime(),
           regions: [
-            ...getUKConstituencyLookupsForYear(1980).ids
-          ]
-        },
-        {
-          start: new Date(2000, 1-1, 1-1).getTime(),
-          regions: [
-            ...getUKConstituencyLookupsForYear(2000).ids
+            ...getUKConstituencyLookupsForYear(2024).ids
           ]
         }
       ]
@@ -222,10 +214,17 @@ var UKHouseMapType = new MapType(
         }
         
         const regionsForDate = [...regionDateRanges].reverse().find(r => r.start <= mapDateTime).regions
+
+        // Which constituency NAMES to look for in the raw spreadsheet rows has to match whichever
+        // boundary set was in effect on this date (e.g. 2019 rows use pre-2024 names like
+        // "Richmond (Yorks)"), not always the current 650 2024-era names - otherwise every renamed/
+        // changed seat's rows never match anything and that constituency just never gets colored.
+        const dateNameToID = {...getUKConstituencyLookupsForYear(currentMapDate.getFullYear()).nameToID, "National Popular Vote": nationalPopularVoteID}
+        const dateRegionNames = Object.keys(dateNameToID)
     
-		    for (let regionName of regionNames)
+		    for (let regionName of dateRegionNames)
 		    {
-          let regionID = regionNameToID[regionName]
+          let regionID = dateNameToID[regionName]
 		      
 			    let mapDataRows = rawDateData.filter(row => {
 			      return row[columnMap.region] == regionName
@@ -427,7 +426,7 @@ var UKHouseMapType = new MapType(
       
       if (mapDate < new Date(2001, 12-1, 31-1))
       {
-        return "svg-sources/uk-constituencies-2019.svg"
+      return "svg-sources/uk-constituencies-2019.svg"
       }
       else if (mapDate < new Date(2019, 12-1, 31-1))
       {

@@ -658,13 +658,23 @@ var OtherParty = new PoliticalParty(
   {current: "#00000f", solid: "#00000f", safe: "#00000f", likely: "#00000f", lean: "#00000f", tilt: "#00000f"}
 )
 
+var UKBrexitParty = new PoliticalParty(
+  "UKBRX",
+  ["Brexit", "The Brexit Party"],
+  "BRX",
+  "Brexit Party",
+  PoliticalPartyColors.cyan,
+  "UKBRX.png"
+)
+
 var UKReformUKParty = new PoliticalParty(
   "UKREF",
   ["ReformUK", "RUK"],
   "Ref",
   "Reform UK",
   PoliticalPartyColors.cyan,
-  "UKREF.png"
+  "UKREF.png",
+  [UKBrexitParty]
 )
 
 var UKGreenParty = new PoliticalParty(
@@ -838,13 +848,13 @@ var UKMRLPParty = new PoliticalParty(
   "UKMRLP.png"
 )
 
-var UKBrexitParty = new PoliticalParty(
-  "UKBRX",
-  ["Brexit", "The Brexit Party"],
-  "BRX",
-  "Brexit Party",
-  PoliticalPartyColors.cyan,
-  "UKBRX.png"
+var UKReclaimParty = new PoliticalParty(
+  "UKREC",
+  ["Reclaim"],
+  "REC",
+  "REC",
+  PoliticalPartyColors.blurple,
+  "UKREC.png"
 )
 
     ////////////////////////

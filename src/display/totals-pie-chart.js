@@ -65,6 +65,7 @@ var partyOrdering = [
   // UK Left to Right
   {partyID: OtherParty.getID(), direction: PieChartDirection.clockwise},
   {partyID: UKWorkersPartyOfBritainParty.getID(), direction: PieChartDirection.clockwise},
+  {partyID: UKYourParty.getID(), direction: PieChartDirection.clockwise},
   {partyID: UKGreenParty.getID(), direction: PieChartDirection.clockwise},
   {partyID: UKVoltParty.getID(), direction: PieChartDirection.clockwise},
   {partyID: UKPlaidCymruParty.getID(), direction: PieChartDirection.clockwise},
@@ -81,6 +82,7 @@ var partyOrdering = [
   {partyID: UKConservativeParty.getID(), direction: PieChartDirection.clockwise},
   {partyID: UKDemocraticUnionistParty.getID(), direction: PieChartDirection.clockwise},
   {partyID: UKReformUKParty.getID(), direction: PieChartDirection.clockwise},
+  {partyID: UKBrexitParty.getID(), direction: PieChartDirection.clockwise},
   {partyID: UKTUVParty.getID(), direction: PieChartDirection.clockwise},
   {partyID: UKRestoreBritainParty.getID(), direction: PieChartDirection.clockwise},
   {partyID: UKUKIPParty.getID(), direction: PieChartDirection.clockwise},

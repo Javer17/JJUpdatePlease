@@ -510,6 +510,7 @@ var JJUHouseMapType = new MapType(
       else
       {
         return "svg-sources/jju-districts-10-list-20-map.svg"
+        // return "svg-sources/ulterior.svg"
       }
     }
     

@@ -8,7 +8,7 @@
 // e.g. "Aberafan Maesteg" -> "Aberafan-Maesteg"
 function ukConstituencyID(name)
 {
-  return name.replace(/ /g, "-")
+  return name.replace(/,/g, "").replace(/ /g, "-")
 }
 
 // Builds the {names, ids, nameToID, idToName} lookups for one list of constituency names.
@@ -687,7 +687,7 @@ const UKConstituenciesByYear = {
     "York Central",
     "York Outer",
   ],
-2019: [
+2017: [
 "Aberavon",
 "Aberconwy",
 "Aberdeen North",
@@ -867,7 +867,7 @@ const UKConstituenciesByYear = {
 "Dundee East",
 "Dundee West",
 "Dunfermline and West Fife",
-"Dwynfor Meirionnydd",
+"Dwyfor Meirionnydd",
 "Ealing Central and Acton",
 "Ealing North",
 "Ealing, Southall",
@@ -966,7 +966,6 @@ const UKConstituenciesByYear = {
 "Hexham",
 "Heywood and Middleton",
 "High Peak",
-"Hillingdon and Uxbridge",
 "Hitchin and Harpenden",
 "Holborn and St Pancras",
 "Hornchurch and Upminster",
@@ -1100,7 +1099,7 @@ const UKConstituenciesByYear = {
 "North West Hampshire",
 "North West Leicestershire",
 "North West Norfolk",
-"North $1$Wiltshire",
+"North Wiltshire",
 "Northampton North",
 "Northampton South",
 "Norwich North",
@@ -1174,7 +1173,7 @@ const UKConstituenciesByYear = {
 "Sheffield, Brightside and Hillsborough",
 "Sheffield, Hallam",
 "Sheffield, Heeley",
-"Sheffield, South East",
+"Sheffield South East",
 "Sherwood",
 "Shipley",
 "Shrewsbury and Atcham",
@@ -1297,12 +1296,12 @@ const UKConstituenciesByYear = {
 "West Dunbartonshire",
 "West Ham",
 "West Lancashire",
-"West Minnesota",
+"West Suffolk",
 "West Tyrone",
 "West Worcestershire",
 "Westminster North",
 "Westmorland and Lonsdale",
-"Weston-super-Mare",
+"Weston-Super-Mare",
 "Wigan",
 "Wimbledon",
 "Winchester",
@@ -1320,7 +1319,6 @@ const UKConstituenciesByYear = {
 "Workington",
 "Worsley and Eccles South",
 "Worthing West",
-"Wrekin, The",
 "Wrexham",
 "Wycombe",
 "Wyre and Preston North",
@@ -1329,7 +1327,17 @@ const UKConstituenciesByYear = {
 "Ynys Mon",
 "Yeovil",
 "York Central",
-"York Outer"
+"York Outer",
+"Arfon",
+"Batley and Spen",
+"Berwick-upon-Tweed",
+"Blackley and Broughton",
+"Devizes",
+"East Worthing and Shoreham",
+"Lanark and Hamilton East",
+"Meriden",
+"Mole Valley",
+"North Tyneside",
 ]
   // Add earlier boundary sets here
   // 2010: [ ... ],

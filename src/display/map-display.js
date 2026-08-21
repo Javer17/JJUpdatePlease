@@ -1991,7 +1991,7 @@ function isListSeatRegion(regionData)
 
 function isSittingRegion(regionData)
 {
-  return getRegionNameCandidates(regionData).some(candidate => String(candidate).toLowerCase().includes("sitting"))
+  return getRegionNameCandidates(regionData).some(candidate => /\bsitting\b/i.test(String(candidate)))
 }
 
 function hasFullVoteShareWin(regionData)
