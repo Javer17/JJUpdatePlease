@@ -166,7 +166,8 @@ var WhigParty = new PoliticalParty(
   ["Whig"],
   "Whig",
   "Whig",
-  PoliticalPartyColors.orange
+  PoliticalPartyColors.orange,
+  "WIG.png"
 )
 
 var NationalRepublicanParty = new PoliticalParty(
@@ -174,7 +175,8 @@ var NationalRepublicanParty = new PoliticalParty(
   ["National Republican"],
   "NRP",
   "National Republican",
-  PoliticalPartyColors.orange
+  PoliticalPartyColors.orange,
+  "WIG.png"
 )
 
 var DemocraticRepublicanParty = new PoliticalParty(
@@ -182,7 +184,8 @@ var DemocraticRepublicanParty = new PoliticalParty(
   ["Democratic Republican", "Democratic-Republican"],
   "DRP",
   "Democratic Republican",
-  PoliticalPartyColors.green
+  PoliticalPartyColors.green,
+  "DRP.png"
 )
 
 var FederalistParty = new PoliticalParty(
@@ -190,7 +193,8 @@ var FederalistParty = new PoliticalParty(
   ["Federalist"],
   "FED",
   "Federalist",
-  PoliticalPartyColors.scarlet
+  PoliticalPartyColors.scarlet,
+  "FED.png"
 )
 
 // Third Parties
@@ -229,7 +233,8 @@ var FreeSoilParty = new PoliticalParty(
   ["Free Soil"],
   "FS",
   "Free Soil",
-  PoliticalPartyColors.violet
+  PoliticalPartyColors.violet,
+  "FS.png"
 )
 
 // Independent Candidates
@@ -392,7 +397,8 @@ var Independent1948HWParty = new PoliticalParty(
   ["Progressive"],
   "Ind",
   "Wallace",
-  PoliticalPartyColors.green
+  PoliticalPartyColors.green,
+  "PROWallace.png"
 )
 
 var Independent1932NTParty = new PoliticalParty(
@@ -400,7 +406,8 @@ var Independent1932NTParty = new PoliticalParty(
   ["Socialist"],
   "Ind",
   "Thomas",
-  PoliticalPartyColors.scarlet
+  PoliticalPartyColors.scarlet,
+  "SOC.png"
 )
 
 var Independent1924RLParty = new PoliticalParty(
@@ -408,7 +415,8 @@ var Independent1924RLParty = new PoliticalParty(
   ["Progressive"],
   "Ind",
   "La Follette",
-  PoliticalPartyColors.green
+  PoliticalPartyColors.green,
+  "LaFollette.png"
 )
 
 var Independent1920EDParty = new PoliticalParty(
@@ -416,7 +424,8 @@ var Independent1920EDParty = new PoliticalParty(
   ["Socialist"],
   "Ind",
   "Debs",
-  PoliticalPartyColors.scarlet
+  PoliticalPartyColors.scarlet,
+  "SOC.png"
 )
 
 var Independent1916ABParty = new PoliticalParty(
@@ -424,7 +433,8 @@ var Independent1916ABParty = new PoliticalParty(
   ["Socialist"],
   "Ind",
   "Benson",
-  PoliticalPartyColors.scarlet
+  PoliticalPartyColors.scarlet,
+  "SOC.png"
 )
 
 var Independent1912TRParty = new PoliticalParty(
@@ -432,7 +442,8 @@ var Independent1912TRParty = new PoliticalParty(
   ["Progressive"],
   "Ind",
   "Roosevelt",
-  PoliticalPartyColors.green
+  PoliticalPartyColors.green,
+  "PRO.png"
 )
 
 var Independent1912EDParty = new PoliticalParty(
@@ -440,7 +451,8 @@ var Independent1912EDParty = new PoliticalParty(
   ["Socialist"],
   "Ind",
   "Debs",
-  PoliticalPartyColors.scarlet
+  PoliticalPartyColors.scarlet,
+  "SOC.png"
 )
 
 var Independent1892JWParty = new PoliticalParty(
@@ -448,7 +460,8 @@ var Independent1892JWParty = new PoliticalParty(
   ["Populist"],
   "Ind",
   "Weaver",
-  PoliticalPartyColors.green
+  PoliticalPartyColors.green,
+  "POP.png"
 )
 
 var Independent1892JBParty = new PoliticalParty(
@@ -456,7 +469,8 @@ var Independent1892JBParty = new PoliticalParty(
   ["Prohibition"],
   "Ind",
   "Bidwell",
-  PoliticalPartyColors.violet
+  PoliticalPartyColors.violet,
+  "PROH.png"
 )
 
 var Independent1888CFParty = new PoliticalParty(
@@ -464,7 +478,8 @@ var Independent1888CFParty = new PoliticalParty(
   ["Prohibition"],
   "Ind",
   "Fisk",
-  PoliticalPartyColors.violet
+  PoliticalPartyColors.violet,
+  "PROH.png"
 )
 
 var Independent1860JohnBreckenridgeParty = new PoliticalParty(
@@ -472,7 +487,8 @@ var Independent1860JohnBreckenridgeParty = new PoliticalParty(
   ["Southern Democratic"],
   "Ind",
   "Breckenridge",
-  PoliticalPartyColors.green
+  PoliticalPartyColors.green,
+  "DEM2.png"
 )
 
 var Independent1860JohnBellParty = new PoliticalParty(
@@ -480,7 +496,8 @@ var Independent1860JohnBellParty = new PoliticalParty(
   ["Constitutional Union"],
   "Ind",
   "Bell",
-  PoliticalPartyColors.orange
+  PoliticalPartyColors.orange,
+  "CONU.png"
 )
 
 var Independent1856MFParty = new PoliticalParty(
@@ -488,7 +505,8 @@ var Independent1856MFParty = new PoliticalParty(
   ["Know Nothing"],
   "Ind",
   "Fillmore",
-  PoliticalPartyColors.violet
+  PoliticalPartyColors.violet,
+  "KNP.png"
 )
 
 var Independent1844JBParty = new PoliticalParty(
@@ -496,7 +514,8 @@ var Independent1844JBParty = new PoliticalParty(
   ["Liberty"],
   "Ind",
   "Birney",
-  PoliticalPartyColors.violet
+  PoliticalPartyColors.violet,
+  "LIBY.png"
 )
 
 var Independent1836HWParty = new PoliticalParty(
@@ -504,7 +523,8 @@ var Independent1836HWParty = new PoliticalParty(
   ["Whig"],
   "Ind",
   "White",
-  PoliticalPartyColors.violet
+  PoliticalPartyColors.violet,
+  "WIG.png"
 )
 
 var Independent1836DWParty = new PoliticalParty(
@@ -512,7 +532,8 @@ var Independent1836DWParty = new PoliticalParty(
   ["Whig"],
   "Ind",
   "Webster",
-  PoliticalPartyColors.scarlet
+  PoliticalPartyColors.scarlet,
+  "WIG.png"
 )
 
 var Independent1836WMParty = new PoliticalParty(
@@ -520,7 +541,8 @@ var Independent1836WMParty = new PoliticalParty(
   ["Whig"],
   "Ind",
   "Magnum",
-  PoliticalPartyColors.green
+  PoliticalPartyColors.green,
+  "WIG.png"
 )
 
 var Independent1832WWParty = new PoliticalParty(
@@ -528,7 +550,8 @@ var Independent1832WWParty = new PoliticalParty(
   ["Anti Masonic"],
   "Ind",
   "Wirt",
-  PoliticalPartyColors.scarlet
+  PoliticalPartyColors.scarlet,
+  "AMS.png"
 )
 
 var Independent1832JFParty = new PoliticalParty(
@@ -536,7 +559,8 @@ var Independent1832JFParty = new PoliticalParty(
   ["Nullifier"],
   "Ind",
   "Floyd",
-  PoliticalPartyColors.green
+  PoliticalPartyColors.green,
+  "NUL.png"
 )
 
 var Independent1824AJParty = new PoliticalParty(
@@ -544,7 +568,8 @@ var Independent1824AJParty = new PoliticalParty(
   ["Democratic Republican"],
   "Ind",
   "Jackson",
-  PoliticalPartyColors.blue
+  PoliticalPartyColors.blue,
+  "DRP.png"
 )
 
 var Independent1824WCParty = new PoliticalParty(
@@ -552,7 +577,8 @@ var Independent1824WCParty = new PoliticalParty(
   ["Democratic Republican"],
   "Ind",
   "Crawford",
-  PoliticalPartyColors.orange
+  PoliticalPartyColors.orange,
+  "DRP.png"
 )
 
 var Independent1824HCParty = new PoliticalParty(
@@ -560,7 +586,8 @@ var Independent1824HCParty = new PoliticalParty(
   ["Democratic Republican"],
   "Ind",
   "Clay",
-  PoliticalPartyColors.scarlet
+  PoliticalPartyColors.scarlet,
+  "DRP.png"
 )
 
 var Independent1820JAParty = new PoliticalParty(
@@ -568,7 +595,8 @@ var Independent1820JAParty = new PoliticalParty(
   ["Democratic Republican", "Democratic-Republican"],
   "Ind",
   "Adams",
-  PoliticalPartyColors.blue
+  PoliticalPartyColors.blue,
+  "DRP.png"
 )
 
 var Independent1808GCParty = new PoliticalParty(
@@ -576,7 +604,8 @@ var Independent1808GCParty = new PoliticalParty(
   ["Democratic Republican", "Democratic-Republican"],
   "Ind",
   "Clinton",
-  PoliticalPartyColors.blue
+  PoliticalPartyColors.blue,
+  "DRP.png"
 )
 
 var IndependentGWParty = new PoliticalParty(
@@ -599,7 +628,8 @@ var UKLabourParty = new PoliticalParty(
   ["Labour", "Lab"],
   "Lab",
   "Labour",
-  PoliticalPartyColors.red
+  PoliticalPartyColors.red,
+  "UKLAB.png"
 )
 
 var UKConservativeParty = new PoliticalParty(
@@ -607,7 +637,8 @@ var UKConservativeParty = new PoliticalParty(
   ["Con", "Conservative"],
   "Con",
   "Conservative",
-  PoliticalPartyColors.blue
+  PoliticalPartyColors.blue,
+  "UKCON.png"
 )
 
 var UKSpeaker = new PoliticalParty(
@@ -615,7 +646,8 @@ var UKSpeaker = new PoliticalParty(
   ["Speaker", "Spk"],
   "Speaker",
   "Speaker",
-  {current: "#1b1922", solid: "#262231", safe: "#353045", likely: "#5a5273", lean: "#a098bb", tilt: "#bfb7db"}
+  {current: "#1b1922", solid: "#262231", safe: "#353045", likely: "#5a5273", lean: "#a098bb", tilt: "#bfb7db"},
+  "UKSpeaker.png"
 )
 
 var OtherParty = new PoliticalParty(
@@ -631,7 +663,8 @@ var UKReformUKParty = new PoliticalParty(
   ["ReformUK", "RUK"],
   "Ref",
   "Reform UK",
-  PoliticalPartyColors.cyan
+  PoliticalPartyColors.cyan,
+  "UKREF.png"
 )
 
 var UKGreenParty = new PoliticalParty(
@@ -639,7 +672,8 @@ var UKGreenParty = new PoliticalParty(
   ["Green", "Green Party", "Scottish Green Party"],
   "Grn",
   "Green",
-  PoliticalPartyColors.green
+  PoliticalPartyColors.green,
+  "UKGRN.png"
 )
 
 var UKLiberalDemocratsParty = new PoliticalParty(
@@ -647,7 +681,8 @@ var UKLiberalDemocratsParty = new PoliticalParty(
   ["Lib Dem", "LD", "Liberal Democrats", "Liberal Democrat", "Libdems"],
   "LD",
   "Liberal Democrats",
-  PoliticalPartyColors.orange
+  PoliticalPartyColors.orange,
+  "UKLIB.png"
 )
 
 var UKPlaidCymruParty = new PoliticalParty(
@@ -655,7 +690,8 @@ var UKPlaidCymruParty = new PoliticalParty(
   ["Plaid Cymru", "Plaid", "PC", "PlaidCymru"],
   "Plaid Cymru",
   "Plaid Cymru",
-  PoliticalPartyColors.lime
+  PoliticalPartyColors.lime,
+  "UKPLC.png"
 )
 
 var UKScottishNationalParty = new PoliticalParty(
@@ -663,7 +699,8 @@ var UKScottishNationalParty = new PoliticalParty(
   ["SNP","Scottish National Party"],
   "SNP",
   "SNP",
-  PoliticalPartyColors.yellow
+  PoliticalPartyColors.yellow,
+  "UKSNP.png"
 )
 
 var UKAlbaParty = new PoliticalParty(
@@ -671,7 +708,8 @@ var UKAlbaParty = new PoliticalParty(
   ["Alba"],
   "Alba Party",
   "Alba",
-  PoliticalPartyColors.aqua
+  PoliticalPartyColors.aqua,
+  "UKALB.png"
 )
 
 var UKSinnFeinParty = new PoliticalParty(
@@ -679,7 +717,8 @@ var UKSinnFeinParty = new PoliticalParty(
   ["Sinn Féin", "SF", "SinnFein", "Sinn Fein", "Sinn Féin"],
   "SF",
   "Sinn Féin",
-  PoliticalPartyColors.teal
+  PoliticalPartyColors.teal,
+  "UKSFN.png"
 )
 
 var UKDemocraticUnionistParty = new PoliticalParty(
@@ -687,7 +726,8 @@ var UKDemocraticUnionistParty = new PoliticalParty(
   ["DUP","Democratic Unionist Party"],
   "DUP",
   "DUP",
-  PoliticalPartyColors.maroon
+  PoliticalPartyColors.maroon,
+  "UKDUP.png"
 )
 
 var UKAllianceParty = new PoliticalParty(
@@ -695,7 +735,8 @@ var UKAllianceParty = new PoliticalParty(
   ["APNI", "Alliance"],
   "Alliance Party",
   "Alliance Party",
-  PoliticalPartyColors.tan
+  PoliticalPartyColors.tan,
+  "UKALL.png"
 )
 
 var UKSocDemLabParty = new PoliticalParty(
@@ -703,7 +744,8 @@ var UKSocDemLabParty = new PoliticalParty(
   ["SDLP", "Social Democratic & Labour Party"],
   "SDLP",
   "Social Democratic Labour Party",
-  PoliticalPartyColors.magenta
+  PoliticalPartyColors.magenta,
+  "UKSDLP.png"
 )
 
 var UKRestoreBritainParty = new PoliticalParty(
@@ -711,7 +753,8 @@ var UKRestoreBritainParty = new PoliticalParty(
   ["Restore", "RES", "RB"],
   "Restore",
   "Restore Britain",
-  PoliticalPartyColors.blurple
+  PoliticalPartyColors.blurple,
+  "UKRES.png"
 )
 
 var UKUlsterUnionistParty = new PoliticalParty(
@@ -719,7 +762,8 @@ var UKUlsterUnionistParty = new PoliticalParty(
   ["Ulster Unionist", "UU", "Ulster", "UUP", "Ulster Unionist Party"],
   "Ulster Unionist",
   "Ulster Unionist",
-  PoliticalPartyColors.aqua
+  PoliticalPartyColors.aqua,
+  "UKUUP.png"
 )
 
 var UKWorkersPartyOfBritainParty = new PoliticalParty(
@@ -727,7 +771,8 @@ var UKWorkersPartyOfBritainParty = new PoliticalParty(
   ["WPB"],
   "Workers Party of Britain",
   "Workers Party of Britain",
-  PoliticalPartyColors.aqua
+  PoliticalPartyColors.aqua,
+  "UKWPB.png"
 )
 
 var UKUKIPParty = new PoliticalParty(
@@ -735,7 +780,8 @@ var UKUKIPParty = new PoliticalParty(
   ["UKIP", "UK Independence Party"],
   "UKIP",
   "UKIP",
-  PoliticalPartyColors.purple
+  PoliticalPartyColors.purple,
+  "UKUKIP.png"
 )
 
 var UKTUVParty = new PoliticalParty(
@@ -743,7 +789,8 @@ var UKTUVParty = new PoliticalParty(
   ["TUV"],
   "TUV",
   "TUV",
-  PoliticalPartyColors.blurple
+  PoliticalPartyColors.blurple,
+  "UKTUV.png"
 )
 
 var UKVoltParty = new PoliticalParty(
@@ -751,7 +798,8 @@ var UKVoltParty = new PoliticalParty(
   ["Volt"],
   "Volt",
   "Volt",
-  PoliticalPartyColors.violet
+  PoliticalPartyColors.violet,
+  "VOLT.png"
 )
 
 var UKSDPParty = new PoliticalParty(
@@ -759,7 +807,8 @@ var UKSDPParty = new PoliticalParty(
   ["SDP"],
   "SDP",
   "SDP",
-  PoliticalPartyColors.red
+  PoliticalPartyColors.red,
+  "UKSDP.png"
 )
 
 var UKLiberalParty = new PoliticalParty(
@@ -767,7 +816,8 @@ var UKLiberalParty = new PoliticalParty(
   ["Liberal"],
   "Lib",
   "Liberal",
-  PoliticalPartyColors.yellow
+  PoliticalPartyColors.yellow,
+  "UKLIBS.png"
 )
 
 var UKYourParty = new PoliticalParty(
@@ -775,7 +825,8 @@ var UKYourParty = new PoliticalParty(
   ["Your Party"],
   "Your",
   "Your Party",
-  PoliticalPartyColors.pink
+  PoliticalPartyColors.pink,
+  "UKYOUR.png"
 )
 
 var UKMRLPParty = new PoliticalParty(
@@ -783,7 +834,8 @@ var UKMRLPParty = new PoliticalParty(
   ["MRLP", "Official Monster Raving Loony Party"],
   "MRLP",
   "MRLP",
-  PoliticalPartyColors.yellow
+  PoliticalPartyColors.yellow,
+  "UKMRLP.png"
 )
 
 var UKBrexitParty = new PoliticalParty(
@@ -791,7 +843,8 @@ var UKBrexitParty = new PoliticalParty(
   ["Brexit", "The Brexit Party"],
   "BRX",
   "Brexit Party",
-  PoliticalPartyColors.cyan
+  PoliticalPartyColors.cyan,
+  "UKBRX.png"
 )
 
     ////////////////////////
