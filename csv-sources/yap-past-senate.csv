@@ -33,3 +33,12 @@ date,region,candidate,party,offyear,runoff,voteshare,disabled
 03/08/1000,Blesna,Beary,sgp,FALSE,FALSE,100,
 03/08/1000,Kostos,Charlooz,labour,FALSE,FALSE,50,
 03/08/1000,Kostos,The_Green_Bean,reform,FALSE,FALSE,50,
+08/22/1001,Larimer,Thomas Lowestoft,reform,TRUE,FALSE,59.55,
+08/22/1001,Larimer,Casey Quirk,reform,TRUE,FALSE,12.1,
+08/22/1001,Larimer,Shane Daniels,sdf,TRUE,FALSE,28.35,
+08/22/1001,Calleoria,Pika,sdf,TRUE,FALSE,64.48,
+08/22/1001,Calleoria,Andy Burnyap,sgp,TRUE,FALSE,35.52,
+08/22/1001,Calleoria 2nd,Andy Burnyap,sgp,TRUE,FALSE,100,
+08/22/1001,Taclima,Aurelia,sdf,TRUE,FALSE,100,
+08/22/1001,Armallos,,,,,0,TRUE
+08/22/1001,Porcerle,,,,,0,TRUE

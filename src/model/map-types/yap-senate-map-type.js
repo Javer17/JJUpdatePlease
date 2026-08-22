@@ -586,11 +586,11 @@ var YAPSenateMapType = new MapType(
 	    null, // updateCustomMapFunction
 	    null, // convertMapDataRowToCSVFunction
 	    null, // isCustomMap
-	    null, // shouldClearDisabled
+	    true, // shouldClearDisabled
 	    true, // shouldShowVoteshare
 	    0, // voteshareCutoffMargin
       getSenateSVGByDate, // overrideSVGPath
-      true, // shouldSetDisabledWorthToZero
+      false, // shouldSetDisabledWorthToZero
       null, // shouldUseOriginalMapDataForTotalsPieChart
       null, // shouldForcePopularVoteDisplay
       {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE} // customDefaultMargins

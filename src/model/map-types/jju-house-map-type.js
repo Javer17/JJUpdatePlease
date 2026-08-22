@@ -513,7 +513,6 @@ var JJUHouseMapType = new MapType(
         // return "svg-sources/ulterior.svg"
       }
     }
-    
     function getDistrictSVGByDate(dateTime)
     {
       let mapDate = new Date(dateTime)
@@ -937,7 +936,7 @@ var JJUHouseMapType = new MapType(
       null, // updateCustomMapFunction
       null, // convertMapDataRowToCSVFunction
       null, // isCustomMap
-      null, // shouldClearDisabled
+      true, // shouldClearDisabled
       true, // shouldShowVoteshare
       0, // voteshareCutoffMargin
       getDistrictSVGByDate, // overrideSVGPath
