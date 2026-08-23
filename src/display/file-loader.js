@@ -17,13 +17,13 @@ $("html").on('drop', function(e) {
   e.stopPropagation()
   e.preventDefault()
 
-  var file = e.originalEvent.dataTransfer.files[0]
+  let file = e.originalEvent.dataTransfer.files[0]
   loadUploadedFile(file)
 })
 
 function loadUploadedFile(file)
 {
-  var fr = new FileReader()
+  let fr = new FileReader()
 
   if (file == null) { return }
   if (currentMapType.getCustomMapEnabled() == false && (file.type == kJSONFileType || file.type == kCSVFileType)) { return }
@@ -55,20 +55,12 @@ function jsonFileLoaded(e)
 {
   if (!e.target.result) { return }
 
-  var jsonMapData = JSON.parse(e.target.result)
+  let jsonMapData = JSON.parse(e.target.result)
   if (!jsonMapData || !jsonMapData.mapData) { return }
 
-  if (jsonMapData.marginValues && jsonMapData.marginValues.safe != null && jsonMapData.marginValues.likely != null && jsonMapData.marginValues.lean != null && jsonMapData.marginValues.tilt != null)
+  if (jsonMapData.marginValues && Object.keys(jsonMapData.marginValues).toString() == Object.keys(marginValues).toString())
   {
-    // If solid mode is enabled and the uploaded map didn't include `solid`, prefer the solid defaults
-    if (solidMarginEnabled && jsonMapData.marginValues.solid == null)
-    {
-      marginValues = cloneObject(solidMarginValues)
-    }
-    else
-    {
-      marginValues = cloneObject(fillMissingSolidMarginValues(jsonMapData.marginValues))
-    }
+    marginValues = jsonMapData.marginValues
   }
   else
   {
@@ -89,13 +81,14 @@ function jsonFileLoaded(e)
   {
     for (let partyNum in jsonMapData.customParties)
     {
-      var currentParty = jsonMapData.customParties[partyNum]
+      let currentParty = jsonMapData.customParties[partyNum]
       politicalParties[currentParty.id] = new PoliticalParty(
         currentParty.id,
         currentParty.names,
         currentParty.shortName,
         currentParty.candidateName,
-        currentParty.marginColors
+        currentParty.marginColors,
+        currentParty.partyLogo
       )
     }
   }
@@ -107,22 +100,22 @@ function jsonFileLoaded(e)
 
   currentCustomMapSource.setTextMapData(jsonMapData.mapData)
 
-	setMapSource(currentCustomMapSource, false, true)
+	setMapSource(currentCustomMapSource, true, true)
 }
 
 function csvFileLoaded(e)
 {
-  var textMapData = e.target.result
+  let textMapData = e.target.result
   if (!textMapData) { return }
 
   currentCustomMapSource.setTextMapData(textMapData)
 
-	setMapSource(currentCustomMapSource, false, true)
+	setMapSource(currentCustomMapSource, true, true)
 }
 
 function imageFileLoaded(e)
 {
-  var backgroundURL = "url('" + e.target.result + "')"
+  let backgroundURL = "url('" + e.target.result + "')"
 	$("#totalsPieChart").css("background-image", backgroundURL)
 }
 
@@ -130,16 +123,16 @@ function downloadMapFile(mapSourceToDownload, fileType)
 {
   if (!mapSourceToDownload.getTextMapData()) { return }
 
-  var downloadLinkDiv = $(document.createElement("a"))
+  let downloadLinkDiv = $(document.createElement("a"))
   downloadLinkDiv.hide()
 
-  var pieChartIconURL = $("#totalsPieChart").css("background-image")
+  let pieChartIconURL = $("#totalsPieChart").css("background-image")
   if (pieChartIconURL)
   {
     pieChartIconURL = pieChartIconURL.replace("url(\"", "").replace("\")", "")
   }
 
-  var fileToDownload = getMapFileBlob(mapSourceToDownload.getTextMapData(), fileType, pieChartIconURL, mapSourceToDownload.getDropdownPartyIDs())
+  let fileToDownload = getMapFileBlob(mapSourceToDownload.getTextMapData(), fileType, pieChartIconURL, mapSourceToDownload.getDropdownPartyIDs())
   downloadLinkDiv.attr('href', window.URL.createObjectURL(fileToDownload))
   downloadLinkDiv.attr('download', "custom-map-" + getTodayString("-", true))
 
@@ -150,12 +143,12 @@ function downloadMapFile(mapSourceToDownload, fileType)
 
 function getMapFileBlob(textMapData, fileType, pieChartIconURL, partyIDs)
 {
-  var dataString
+  let dataString
   switch (fileType)
   {
     case kJSONFileType:
-    var customParties = []
-    for (var partyNum in partyIDs)
+    let customParties = []
+    for (let partyNum in partyIDs)
     {
       if (partyIDs[partyNum].startsWith(customPartyIDPrefix))
       {
@@ -174,6 +167,6 @@ function getMapFileBlob(textMapData, fileType, pieChartIconURL, partyIDs)
     break
   }
 
-  var fileToDownload = new Blob([dataString], {type: fileType})
+  let fileToDownload = new Blob([dataString], {type: fileType})
   return fileToDownload
 }

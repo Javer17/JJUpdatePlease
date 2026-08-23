@@ -1314,6 +1314,10 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
           {
             pannedDuringClick = true
           }
+        },
+        onZoom: (scale) => {
+          document.getElementById("svgdefinitions").innerHTML = ""
+          generateFlipPatternsFromPartyMap(politicalParties, 1/scale)
         }
       })
       svgPanZoomControllerOwnerID = zoomOwnerID
@@ -1991,7 +1995,7 @@ function isListSeatRegion(regionData)
 
 function isSittingRegion(regionData)
 {
-  return getRegionNameCandidates(regionData).some(candidate => /\bsitting\b/i.test(String(candidate)))
+  return getRegionNameCandidates(regionData).some(candidate => String(candidate).toLowerCase().includes("sitting"))
 }
 
 function hasFullVoteShareWin(regionData)

@@ -534,7 +534,7 @@ function updateTotalsPieChart()
     let regionMargin = regionDataArray[regionID].margin
 
     let regionEV = currentMapType.getEV(getCurrentDecade(), regionID, regionDataArray[regionID]) ?? regionDataArray[regionID].voteWorth
-    let formattedRegionMargin = getRoundedMarginValue(regionMargin)
+    let formattedRegionMargin = getRoundedMarginValue(regionMargin, regionDataArray[regionID])
     let regionString = (currentMapSource.getFormattedRegionName ? currentMapSource.getFormattedRegionName(regionID) : regionID) + " " + currentMapSource.getVotesharePrefix() + formattedRegionMargin + (currentMapSource.getCustomVoteshareSuffix() ?? "")
 
     if (regionParty == null || regionParty == TossupParty.getID() || regionMargin == 0)
@@ -662,7 +662,7 @@ function updateTotalsPieChart()
       let partyStrings = []
       partyFlipData[currentPartyID] && partyFlipData[currentPartyID].forEach(regionData => {
         let formattedRegionMargin = Math.round(regionData.margin*10)/10
-        formattedRegionMargin = currentMapSource.getAddDecimalPadding() ? decimalPadding(formattedRegionMargin) : formattedRegionMargin
+        formattedRegionMargin = currentMapSource.getAddDecimalPadding(regionData) ? decimalPadding(formattedRegionMargin) : formattedRegionMargin
         partyStrings.push((currentMapSource.getFormattedRegionName ? currentMapSource.getFormattedRegionName(regionData.region) : regionData.region) + " " + currentMapSource.getVotesharePrefix() + formattedRegionMargin + (currentMapSource.getCustomVoteshareSuffix() ?? "") + "\n")
       })
 

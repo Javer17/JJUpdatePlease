@@ -1,4 +1,4 @@
-var dropdownPoliticalPartyIDs = cloneObject(defaultDropdownPoliticalPartyIDs)
+let dropdownPoliticalPartyIDs = cloneObject(defaultDropdownPoliticalPartyIDs)
 const addButtonPartyID = "ADDPARTY"
 const customPartyIDPrefix = "CUSTOM"
 
@@ -36,9 +36,9 @@ const smallerPartyButtonVerticalPadding = 1
 const shouldReversePartyDropdownsIfNeeded = true
 const shouldAlignPartyDropdownsToLeadingTrailing = true
 
-var editCandidateNamePartyID = null
-var editPartyMarginColor = null
-var editPartyPopularVote = null
+let editCandidateNamePartyID = null
+let editPartyMarginColor = null
+let editPartyPopularVote = null
 
 function createPartyDropdowns()
 {
@@ -63,7 +63,7 @@ function createPartyDropdowns()
   $("#partyDropdownsContainer").html("")
   for (let partyIDNum in dropdownPoliticalPartyIDs)
   {
-    var dropdownDiv = ""
+    let dropdownDiv = ""
 
     if (dropdownPoliticalPartyIDs[partyIDNum] == addButtonPartyID)
     {
@@ -72,14 +72,14 @@ function createPartyDropdowns()
       continue
     }
 
-    var currentPoliticalParty = politicalParties[dropdownPoliticalPartyIDs[partyIDNum]]
+    const currentPoliticalParty = politicalParties[dropdownPoliticalPartyIDs[partyIDNum]]
     if (currentPoliticalParty == null) { continue }
-    var marginColors = currentPoliticalParty.getMarginColors()
+    const marginColors = currentPoliticalParty.getMarginColors()
 
     dropdownDiv += '<div id="' + currentPoliticalParty.getID() + 'Dropdown" class="dropdown" style="width: ' + partyButtonWidth + '%; height: ' + partyButtonHeight + 'px;" onmouseenter="deselectDropdownButton()">'
     dropdownDiv += '<a id="' + currentPoliticalParty.getID() + '" class="partyDropdownButton active" onclick="selectParty(this)" style="width: 100%; display: flex; align-items: center; justify-content: ' + (shouldStackText ? 'center' : 'center') + '; flex-direction: ' + (shouldStackText ? 'column' : 'row') + '; gap: ' + (shouldStackText ? '0' : '10rem') + '; margin: 0; padding: 0; background-color: ' + marginColors.safe + ';"><span id="' + currentPoliticalParty.getID() + '-name" class="party-name" style="' + (shouldUseSmallButtons ? "max-width: 100%; " : "") + '">' + currentPoliticalParty.getID() + '</span><span id="' + currentPoliticalParty.getID() + '-votes" class="party-votes" style="' + (shouldUseSmallButtons ? "height: 50%;" : "") + '">0</span></a>'
 
-    var shouldReverseOrder = shouldReversePartyDropdownsIfNeeded && (
+    const shouldReverseOrder = shouldReversePartyDropdownsIfNeeded && (
       (!shouldUseSmallButtons && dropdownPoliticalPartyIDs.length > largeMaxPartiesToDisplay/2 && partyIDNum < largeMaxPartiesToDisplay/2)
       || (shouldUseSmallButtons && dropdownPoliticalPartyIDs.length > maxPartiesToDisplay/2 && partyIDNum < maxPartiesToDisplay/2)
     )
@@ -100,7 +100,7 @@ function createPartyDropdowns()
       dropdownDiv += createPartyMarginColorPickers(currentPoliticalParty.getID())
       dropdownDiv += '<div class="dropdown-separator"></div>'
 
-      var colorPreset = getKeyByValue(PoliticalPartyColors, currentPoliticalParty.getMarginColors(), true) || 'custom'
+      const colorPreset = getKeyByValue(PoliticalPartyColors, currentPoliticalParty.getMarginColors(), true) || 'custom'
       dropdownDiv += '<a id="' + currentPoliticalParty.getID() + '-color-preset" onclick="cyclePartyColorPreset(\'' + currentPoliticalParty.getID() + '\', this, 1)" oncontextmenu="cyclePartyColorPreset(\'' + currentPoliticalParty.getID() + '\', this, -1); return false" style="display:flex; justify-content:center; padding: 8px 0;" data-color-preset="' + colorPreset + '">Preset: ' + colorPreset.toTitle() + '</a>'
 
       if (currentMapSource.isCustom() && currentMapType.getCustomMapEnabled())
@@ -158,8 +158,8 @@ function createPartyDropdowns()
       }
       if (politicalParties[this.id] == null) { return }
 
-      var marginColors = politicalParties[this.id].getMarginColors()
-      var partyButton = $(this)
+      const marginColors = politicalParties[this.id].getMarginColors()
+      const partyButton = $(this)
 
       if (!partyButton.hasClass("active"))
       {
@@ -179,8 +179,8 @@ function createPartyDropdowns()
       }
       if (politicalParties[this.id] == null) { return }
 
-      var marginColors = politicalParties[this.id].getMarginColors()
-      var partyButton = $(this)
+      const marginColors = politicalParties[this.id].getMarginColors()
+      const partyButton = $(this)
 
       if (!partyButton.hasClass("active"))
       {
@@ -214,9 +214,9 @@ function createPartyDropdowns()
 
 function createPartyMarginColorPickers(partyID)
 {
-  var marginColors = politicalParties[partyID].getMarginColors()
-  var pickersDiv = '<a id="' + partyID + '-color-pickers" style="display:flex; justify-content:center; align-items:center; padding: 0 0; height: 37px">'
-  for (var marginName in marginColors)
+  const marginColors = politicalParties[partyID].getMarginColors()
+  let pickersDiv = '<a id="' + partyID + '-color-pickers" style="display:flex; justify-content:center; align-items:center; padding: 0 0; height: 37px">'
+  for (const marginName in marginColors)
   {
     pickersDiv += '<button id="' + partyID + '-' + marginName + '-color-picker" class="partyColorPickerButton" data-jscolor="{preset:\'small dark\', position:\'top\', value:\'' + marginColors[marginName] + '\', onChange:\'updatePartyColor(\\\'' + partyID + '\\\', \\\'' + marginName + '\\\')\'}" oncontextmenu="toggleMarginHexColorEditing(\'' + partyID + '\', \'' + marginName + '\'); jscolor.hide(); return false;"></button>'
   }
@@ -226,8 +226,8 @@ function createPartyMarginColorPickers(partyID)
 
 async function updatePartyColor(partyID, margin, newColor)
 {
-  var party = politicalParties[partyID]
-  var marginColors = party.getMarginColors()
+  const party = politicalParties[partyID]
+  const marginColors = party.getMarginColors()
   newColor = newColor || $("#" + partyID + "-" + margin + "-color-picker")[0].getAttribute('data-current-color')
   marginColors[margin] = newColor
   party.setMarginColors(marginColors)
@@ -244,8 +244,8 @@ async function toggleMarginHexColorEditing(partyID, margin)
 {
   if (editPartyMarginColor)
   {
-    var currentMarginColor = politicalParties[editPartyMarginColor.partyID].getMarginColors()[editPartyMarginColor.margin]
-    var marginColorToSet = $("#" + editPartyMarginColor.partyID + "-hex-color-text").val()
+    const currentMarginColor = politicalParties[editPartyMarginColor.partyID].getMarginColors()[editPartyMarginColor.margin]
+    let marginColorToSet = $("#" + editPartyMarginColor.partyID + "-hex-color-text").val()
     if (!marginColorToSet.startsWith("#"))
     {
       marginColorToSet = "#" + marginColorToSet
@@ -279,15 +279,15 @@ async function toggleMarginHexColorEditing(partyID, margin)
 
 function cyclePartyColorPreset(partyID, div, incrementAmount)
 {
-  var currentPresetID = $(div).data("color-preset")
+  const currentPresetID = $(div).data("color-preset")
 
-  var presetIDArray = Object.keys(PoliticalPartyColors)
-  var nextPresetID = presetIDArray[(presetIDArray.indexOf(currentPresetID) || 0)+incrementAmount] || presetIDArray[incrementAmount > 0 ? 0 : presetIDArray.length-1]
+  const presetIDArray = Object.keys(PoliticalPartyColors)
+  const nextPresetID = presetIDArray[(presetIDArray.indexOf(currentPresetID) || 0)+incrementAmount] || presetIDArray[incrementAmount > 0 ? 0 : presetIDArray.length-1]
 
   $(div).data("color-preset", nextPresetID)
   $(div).html("Preset: " + nextPresetID.toTitle())
 
-  for (var marginName in PoliticalPartyColors[nextPresetID])
+  for (const marginName in PoliticalPartyColors[nextPresetID])
   {
     $("#" + partyID + "-" + marginName + "-color-picker")[0].jscolor.fromString(PoliticalPartyColors[nextPresetID][marginName])
   }
@@ -322,7 +322,7 @@ function selectAllParties()
 
     if (politicalParties[this.id] == null) { return }
 
-    var marginColors = politicalParties[this.id].getMarginColors()
+    const marginColors = politicalParties[this.id].getMarginColors()
     $(this).css("background-color", marginColors.safe)
   })
 }
@@ -334,7 +334,7 @@ function deselectAllParties()
 
     if (politicalParties[this.id] == null) { return }
 
-    var marginColors = politicalParties[this.id].getMarginColors()
+    const marginColors = politicalParties[this.id].getMarginColors()
     if (!$(this).hasClass("hover"))
     {
       $(this).css("background-color", multiplySaturation(marginColors.safe, 0.5))
@@ -361,7 +361,7 @@ function selectFirstParty()
 
 function selectParty(div)
 {
-  var partyID = $(div).attr('id')
+  const partyID = $(div).attr('id')
 
   if (currentEditingState == EditingState.editing)
   {
@@ -376,7 +376,7 @@ function selectParty(div)
       selectedParty = politicalParties[partyID]
       $(div).addClass('active')
 
-      var marginColors = politicalParties[partyID].getMarginColors()
+      const marginColors = politicalParties[partyID].getMarginColors()
       $(div).css("background-color", marginColors.safe)
     }
 
@@ -399,12 +399,12 @@ function selectParty(div)
 
 async function toggleCandidateNameEditing(partyID, div, skipReload)
 {
-  var shouldRefreshMap = false
+  let shouldRefreshMap = false
 
   if (editCandidateNamePartyID)
   {
-    var currentCandidateNames = currentMapSource.getCandidateNames(getCurrentDateOrToday())
-    var candidateNameToSet = $("#" + editCandidateNamePartyID + "-candidate-text").val()
+    const currentCandidateNames = currentMapSource.getCandidateNames(getCurrentDateOrToday())
+    let candidateNameToSet = $("#" + editCandidateNamePartyID + "-candidate-text").val()
     if (candidateNameToSet == "" || Object.values(currentCandidateNames).includes(candidateNameToSet))
     {
       candidateNameToSet = currentCandidateNames[editCandidateNamePartyID]
@@ -469,15 +469,15 @@ function createPartyDropdownsBoxHoverHandler()
 function createNewCustomParty()
 {
   // Find first color which is not already in use by another dropdown party; Default to "gray"
-  var colorIDToUse = Object.keys(PoliticalPartyColors).find(colorID => !dropdownPoliticalPartyIDs.some(partyID => politicalParties[partyID] != null && JSON.stringify(politicalParties[partyID].getMarginColors()) == JSON.stringify(PoliticalPartyColors[colorID]))) || "gray"
+  const colorIDToUse = Object.keys(PoliticalPartyColors).find(colorID => !dropdownPoliticalPartyIDs.some(partyID => politicalParties[partyID] != null && JSON.stringify(politicalParties[partyID].getMarginColors()) == JSON.stringify(PoliticalPartyColors[colorID]))) || "gray"
 
-  var customPartyNumber = 1
+  let customPartyNumber = 1
   while (Object.keys(politicalParties).includes(customPartyIDPrefix + customPartyNumber))
   {
     customPartyNumber++
   }
 
-  var customPoliticalParty = new PoliticalParty(
+  const customPoliticalParty = new PoliticalParty(
     customPartyIDPrefix + customPartyNumber,
     ["Custom"],
     "Custom",
@@ -488,7 +488,7 @@ function createNewCustomParty()
   politicalParties[customPoliticalParty.getID()] = customPoliticalParty
   dropdownPoliticalPartyIDs.push(customPoliticalParty.getID())
 
-  var currentCandidateNames = currentMapSource.getCandidateNames(getCurrentDateOrToday())
+  const currentCandidateNames = currentMapSource.getCandidateNames(getCurrentDateOrToday())
   currentCandidateNames[customPoliticalParty.getID()] = customPoliticalParty.getCandidateName()
   currentMapSource.setCandidateNames(currentCandidateNames, currentSliderDate.getTime())
 
@@ -501,14 +501,14 @@ async function deleteParty(partyID)
 {
   dropdownPoliticalPartyIDs.splice(dropdownPoliticalPartyIDs.indexOf(partyID), 1)
 
-  var currentCandidateNames = currentMapSource.getCandidateNames(getCurrentDateOrToday())
+  const currentCandidateNames = currentMapSource.getCandidateNames(getCurrentDateOrToday())
   if (partyID.startsWith(customPartyIDPrefix))
   {
     delete politicalParties[partyID]
     delete currentCandidateNames[partyID]
   }
 
-  for (var regionID in displayRegionDataArray)
+  for (const regionID in displayRegionDataArray)
   {
     if (displayRegionDataArray[regionID].partyID == partyID)
     {
@@ -529,9 +529,9 @@ function displayPartyTotals(overrideCreateDropdowns)
 
   if (currentMapSource.getID() != NullMapSource.getID() && (!currentMapSource.isCustom() || (showingCompareMap && currentEditingState == EditingState.viewing)))
   {
-    var partyIDs = Object.keys(partyTotals).filter((partyID) => partyTotals[partyID] > 0 && partyID != TossupParty.getID())
+    const partyIDs = Object.keys(partyTotals).filter((partyID) => partyTotals[partyID] > 0 && partyID != TossupParty.getID())
 
-    var topPartyIDs = partyIDs.sort((party1, party2) => partyTotals[party2]-partyTotals[party1]).slice(0, morePartiesToDisplay)
+    let topPartyIDs = partyIDs.sort((party1, party2) => partyTotals[party2]-partyTotals[party1]).slice(0, morePartiesToDisplay)
 
     if (topPartyIDs.length == 0)
     {
@@ -556,7 +556,7 @@ function displayPartyTotals(overrideCreateDropdowns)
     }
     dropdownPoliticalPartyIDs = dropdownPoliticalPartyIDs.slice(0, morePartiesToDisplay)
 
-    var sortedDropdownPartyIDs = cloneObject(dropdownPoliticalPartyIDs).sort((party1, party2) => {
+    const sortedDropdownPartyIDs = cloneObject(dropdownPoliticalPartyIDs).sort((party1, party2) => {
       if (party1 == addButtonPartyID) { return 1 }
       if (party2 == addButtonPartyID) { return -1 }
       return partyTotals[party2]-partyTotals[party1]
@@ -573,7 +573,7 @@ function displayPartyTotals(overrideCreateDropdowns)
   const shouldUseSmallerButtons = dropdownPoliticalPartyIDs.length > thirdRowParties
   const shouldUseSmallButtons = dropdownPoliticalPartyIDs.length > largeMaxPartiesToDisplay && shouldUseSmallerButtons == false
   
-  for (var partyID of dropdownPoliticalPartyIDs)
+  for (const partyID of dropdownPoliticalPartyIDs)
   {
     if (politicalParties[partyID] == null) { continue }
     $("#" + partyID + "-name").html(politicalParties[partyID].getCandidateName())
@@ -593,7 +593,7 @@ function displayPartyTotals(overrideCreateDropdowns)
   const buttonHeight = $("#partyDropdownsContainer").height()*0.35
   const buttonHeightFactor = shouldUseSmallerButtons ? 0.3 :shouldUseSmallButtons ? 0.35 : 0.60
   
-  for (var partyID of dropdownPoliticalPartyIDs)
+  for (const partyID of dropdownPoliticalPartyIDs)
   {
     $("#" + partyID + "-name").css('font-size', Math.min(parseInt($("#" + partyID + "-name").css('font-size')), buttonHeight*buttonHeightFactor) + "px")
     $("#" + partyID + "-votes").css('font-size', Math.min(parseInt($("#" + partyID + "-votes").css('font-size')), buttonHeight*buttonHeightFactor) + "px")
@@ -622,7 +622,7 @@ function getNonEVDropdownCandidates(partyIDs)
 
 function updatePoliticalPartyCandidateNames(mapDate)
 {
-  var candidateNames = (compareResultCustomMapSource != null && currentMapSource.isCompare() ? compareResultCustomMapSource : currentMapSource).getCandidateNames(mapDate)
+  const candidateNames = (compareResultCustomMapSource != null && currentMapSource.isCompare() ? compareResultCustomMapSource : currentMapSource).getCandidateNames(mapDate)
 
   if (!candidateNames)
   {
@@ -630,7 +630,7 @@ function updatePoliticalPartyCandidateNames(mapDate)
     return
   }
 
-  for (var partyID in politicalParties)
+  for (const partyID in politicalParties)
   {
     if (partyID in candidateNames)
     {

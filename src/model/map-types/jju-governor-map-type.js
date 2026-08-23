@@ -1,4 +1,4 @@
-var JJUGovernorMapType = new MapType(
+const JJUGovernorMapType = new MapType(
   "JJU-Governor",
   "Governor",
   "G",
@@ -74,7 +74,7 @@ var JJUGovernorMapType = new MapType(
             foundParty = politicalParties[currentPartyName]
           }
         
-          var currentPartyID
+          let currentPartyID
           if (foundParty)
           {
             currentPartyID = foundParty.getID()
@@ -352,7 +352,7 @@ var JJUGovernorMapType = new MapType(
       return regionName
     }
     
-    var electionDateToSpreadsheetData = {
+    let electionDateToSpreadsheetData = {
       1741507200000: {
         id: "1NrI9tRg4GtJxBy1hng0fMC3wdtby5LCsqMBXQUvffZ4",
         regions: {
@@ -401,12 +401,12 @@ var JJUGovernorMapType = new MapType(
       }
     }
   
-	  var PastElectionResultMapSource = new MapSource(
+	  const PastElectionResultMapSource = new MapSource(
 	    "JJU-Past-Governor-Elections", // id
 	    "Past Elections", // name
 	    "./csv-sources/jju-past-governor.csv", // dataURL
 	    "https://docs.google.com/spreadsheets/d", // homepageURL
-	    {regular: "./assets/jju-flag-10.png", mini: "./assets/wikipedia-large.png", getOverlayText: () => {
+	    {regular: "./assets/wikipedia-large.png", mini: "./assets/wikipedia-large.png", getOverlayText: () => {
 		  let currentYear = currentSliderDate.getFullYear()
 		  return currentYear
 	    }}, // iconURL
@@ -461,12 +461,12 @@ var JJUGovernorMapType = new MapType(
       null, // shouldSetDisabledWorthToZero
       null, // shouldUseOriginalMapDataForTotalsPieChart
       null, // shouldForcePopularVoteDisplay
-      {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}// customDefaultMargins, // customDefaultMargins
+      {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}, // customDefaultMargins
 	  )
   
-	  var idsToPartyNames = {}
-	  var partyNamesToIDs = {}
-	  for (var partyNum in mainPoliticalPartyIDs)
+	  let idsToPartyNames = {}
+	  let partyNamesToIDs = {}
+	  for (let partyNum in mainPoliticalPartyIDs)
 	  {
 	    if (mainPoliticalPartyIDs[partyNum] == TossupParty.getID()) { continue }
   
@@ -474,7 +474,7 @@ var JJUGovernorMapType = new MapType(
 	    idsToPartyNames[mainPoliticalPartyIDs[partyNum]] = politicalParties[mainPoliticalPartyIDs[partyNum]].getNames()[0]
 	  }
   
-	  var CustomMapSource = new MapSource(
+	  const CustomMapSource = new MapSource(
 	    "JJU-Custom-Governor", // id
 	    "Custom", // name
 	    null, // dataURL
@@ -521,10 +521,10 @@ var JJUGovernorMapType = new MapType(
       {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}, // customDefaultMargins
 	  )
   
-	  var todayDate = new Date()
+	  let todayDate = new Date()
 	  CustomMapSource.setTextMapData("date\n" + (todayDate.getMonth()+1) + "/" + todayDate.getDate() + "/" + todayDate.getFullYear())
   
-	  var governorMapSources = {}
+	  let governorMapSources = {}
 	  governorMapSources[PastElectionResultMapSource.getID()] = PastElectionResultMapSource
 	  governorMapSources[CustomMapSource.getID()] = CustomMapSource
   
@@ -534,7 +534,7 @@ var JJUGovernorMapType = new MapType(
 	  
 	  const kPastElectionsVsPastElections = 1
   
-	  var defaultGovernorCompareSourceIDs = {}
+	  let defaultGovernorCompareSourceIDs = {}
 	  defaultGovernorCompareSourceIDs[kPastElectionsVsPastElections] = [PastElectionResultMapSource.getID(), PastElectionResultMapSource.getID()]
   
 	  return {mapSources: governorMapSources, mapSourceIDs: governorMapSourceIDs, mapCycles: [], defaultCompareSourceIDs: defaultGovernorCompareSourceIDs, customSourceID: CustomMapSource.getID()}

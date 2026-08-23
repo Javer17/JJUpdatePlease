@@ -501,3 +501,75 @@ date,round,region,candidate,party,voteshare,candidatevotes,totalvotes
 11/15/2025,1,Emix,Forsh,independent,3.7,13302,359412
 11/15/2025,1,Emix,Goop,independent,3.23,11604,359412
 11/15/2025,1,Emix,Donald Jehovaha Trump,independent,0.01,16,359412
+1/26/2026,1,National Popular Vote,Marco,alliance,55.07,,
+1/26/2026,1,National Popular Vote,Forsh,solidarity,22.37,,
+1/26/2026,1,National Popular Vote,Sonia,labour,11.44,,
+1/26/2026,1,National Popular Vote,Burley,independent,11.11,,
+1/26/2026,1,Kilden,Marco,alliance,52.34,181873,347474
+1/26/2026,1,Kilden,Forsh,solidarity,25.86,89850,347474
+1/26/2026,1,Kilden,Sonia,labour,14.56,50577,347474
+1/26/2026,1,Kilden,Burley,independent,7.24,25174,347474
+1/26/2026,1,Newmasi,Marco,alliance,53,185044,349119
+1/26/2026,1,Newmasi,Forsh,solidarity,19.96,69669,349119
+1/26/2026,1,Newmasi,Sonia,labour,12.23,42686,349119
+1/26/2026,1,Newmasi,Burley,independent,14.81,51720,349119
+1/26/2026,1,Dalminica,Marco,alliance,53.77,186922,347605
+1/26/2026,1,Dalminica,Forsh,solidarity,21.18,73618,347605
+1/26/2026,1,Dalminica,Sonia,labour,11.2,38946,347605
+1/26/2026,1,Dalminica,Burley,independent,13.84,48119,347605
+1/26/2026,1,Garvor,Marco,alliance,50.41,175276,347721
+1/26/2026,1,Garvor,Forsh,solidarity,22.84,79434,347721
+1/26/2026,1,Garvor,Sonia,labour,12.78,44454,347721
+1/26/2026,1,Garvor,Burley,independent,13.96,48557,347721
+1/26/2026,1,Brunix Islands,Marco,alliance,68.6,239169,348666
+1/26/2026,1,Brunix Islands,Forsh,solidarity,16.84,58716,348666
+1/26/2026,1,Brunix Islands,Sonia,labour,2.42,8453,348666
+1/26/2026,1,Brunix Islands,Burley,independent,12.14,42328,348666
+1/26/2026,1,Trunoe,Marco,alliance,60.52,211304,349123
+1/26/2026,1,Trunoe,Forsh,solidarity,26.65,93044,349123
+1/26/2026,1,Trunoe,Sonia,labour,7.64,26686,349123
+1/26/2026,1,Trunoe,Burley,independent,5.18,18089,349123
+4/19/2026,1,National Popular Vote,Marco,alliance,56.55,,
+4/19/2026,1,National Popular Vote,JAMden,sdp,19.01,,
+4/19/2026,1,National Popular Vote,Cob,ucp,15.41,,
+4/19/2026,1,National Popular Vote,Beary,greens,9.03,,
+4/19/2026,1,Emix,Marco,alliance,44.62,160615,360001
+4/19/2026,1,Emix,JAMden,sdp,23.95,86230,360001
+4/19/2026,1,Emix,Cob,ucp,16.97,61104,360001
+4/19/2026,1,Emix,Beary,greens,14.46,52052,360001
+4/19/2026,1,Kilden,Marco,alliance,46.76,168348,360000
+4/19/2026,1,Kilden,JAMden,sdp,25.65,92323,360000
+4/19/2026,1,Kilden,Cob,ucp,19.81,71308,360000
+4/19/2026,1,Kilden,Beary,greens,7.78,28021,360000
+4/19/2026,1,Brunix Islands,Marco,alliance,63.2,227536,360000
+4/19/2026,1,Brunix Islands,JAMden,sdp,9.5,34202,360000
+4/19/2026,1,Brunix Islands,Cob,ucp,22.43,80751,360000
+4/19/2026,1,Brunix Islands,Beary,greens,4.86,17511,360000
+4/19/2026,1,Garvor,Marco,alliance,58.44,210394,359999
+4/19/2026,1,Garvor,JAMden,sdp,21.54,77538,359999
+4/19/2026,1,Garvor,Cob,ucp,12.1,43568,359999
+4/19/2026,1,Garvor,Beary,greens,7.92,28499,359999
+4/19/2026,1,Dalminica,Marco,alliance,53.16,191379,359999
+4/19/2026,1,Dalminica,JAMden,sdp,26.57,95638,359999
+4/19/2026,1,Dalminica,Cob,ucp,11.06,39815,359999
+4/19/2026,1,Dalminica,Beary,greens,9.21,33167,359999
+4/19/2026,1,Newmasi,Marco,alliance,67.67,243619,359999
+4/19/2026,1,Newmasi,JAMden,sdp,16.26,58550,359999
+4/19/2026,1,Newmasi,Cob,ucp,9.33,33596,359999
+4/19/2026,1,Newmasi,Beary,greens,6.73,24234,359999
+4/19/2026,1,Trunoe,Marco,alliance,56.61,203780,360000
+4/19/2026,1,Trunoe,JAMden,sdp,16.02,57673,360000
+4/19/2026,1,Trunoe,Cob,ucp,13.01,46822,360000
+4/19/2026,1,Trunoe,Beary,greens,14.37,51725,360000
+4/19/2026,1,Alvana,Marco,alliance,60.22,216789,360000
+4/19/2026,1,Alvana,JAMden,sdp,18.23,65631,360000
+4/19/2026,1,Alvana,Cob,ucp,17.23,62040,360000
+4/19/2026,1,Alvana,Beary,greens,4.32,15540,360000
+4/19/2026,1,Dentone,Marco,alliance,68.46,246465,360001
+4/19/2026,1,Dentone,JAMden,sdp,11.45,41238,360001
+4/19/2026,1,Dentone,Cob,ucp,16.22,58403,360001
+4/19/2026,1,Dentone,Beary,greens,3.86,13895,360001
+4/19/2026,1,Quintin,Marco,alliance,46.38,166953,360001
+4/19/2026,1,Quintin,JAMden,sdp,20.89,75218,360001
+4/19/2026,1,Quintin,Cob,ucp,15.93,60469,360001
+4/19/2026,1,Quintin,Beary,greens,16.8,57361,360001

@@ -918,7 +918,6 @@ var JJUHouseMapType = new MapType(
       getFormattedRegionName, // getFormattedRegionName
       function(homepageURL, regionID, _, mapDate, __, mapData)
       {
-        console.log(mapData, mapDate)
         
         const regionData = mapData[mapDate.getTime()][regionID]
         if (regionData && regionData.isHold && regionData.electionDate)

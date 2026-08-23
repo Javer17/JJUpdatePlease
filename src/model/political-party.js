@@ -110,30 +110,30 @@ const PoliticalPartyColors = {
 }
 
 // Colors
-var RedColor = new PoliticalParty("Red" , ["Red Color"], "Red", "Red", PoliticalPartyColors.red, "ColorRed.png")
-var ScarletColor = new PoliticalParty("Scarlet" , ["Scarlet Color"], "Scarlet", "Scarlet", PoliticalPartyColors.scarlet, "ColorScarlet.png")
-var OrangeColor = new PoliticalParty("Orange" , ["Orange Color"], "Orange", "Orange", PoliticalPartyColors.orange, "ColorOrange.png")
-var YellowColor = new PoliticalParty("Yellow" , ["Yellow Color"], "Yellow", "Yellow", PoliticalPartyColors.yellow, "ColorYellow.png")
-var OliveColor = new PoliticalParty("Olive" , ["Olive Color"], "Olive", "Olive", PoliticalPartyColors.olive, "ColorOlive.png")
-var LimeColor = new PoliticalParty("Lime" , ["Lime Color"], "Lime", "Lime", PoliticalPartyColors.lime, "ColorLime.png")
-var GreenColor = new PoliticalParty("Green" , ["Green Color"], "Green", "Green", PoliticalPartyColors.green, "ColorGreen.png")
-var ForestColor = new PoliticalParty("Forest" , ["Forest Color"], "Forest", "Forest", PoliticalPartyColors.forest, "ColorForest.png")
-var TealColor = new PoliticalParty("Teal" , ["Teal Color"], "Teal", "Teal", PoliticalPartyColors.teal, "ColorTeal.png")
-var CyanColor = new PoliticalParty("Cyan" , ["Cyan Color"], "Cyan", "Cyan", PoliticalPartyColors.cyan, "ColorCyan.png")
-var AquaColor = new PoliticalParty("Aqua" , ["Aqua Color"], "Aqua", "Aqua", PoliticalPartyColors.aqua, "ColorAqua.png")
-var BlueColor = new PoliticalParty("Blue" , ["Blue Color"], "Blue", "Blue", PoliticalPartyColors.blue, "ColorBlue.png")
-var BlurpleColor = new PoliticalParty("Blurple" , ["Blurple Color"], "Blurple", "Blurple", PoliticalPartyColors.blurple, "ColorBlurple.png")
-var VioletColor = new PoliticalParty("Violet" , ["Violet Color"], "Violet", "Violet", PoliticalPartyColors.violet, "ColorViolet.png")
-var PurpleColor = new PoliticalParty("Purple" , ["Purple Color"], "Purple", "Purple", PoliticalPartyColors.purple, "ColorPurple.png")
-var MagentaColor = new PoliticalParty("Magenta" , ["Magenta Color"], "Magenta", "Magenta", PoliticalPartyColors.magenta, "ColorMagenta.png")
-var PinkColor = new PoliticalParty("Pink" , ["Pink Color"], "Pink", "Pink", PoliticalPartyColors.pink, "ColorPink.png")
-var BrownColor = new PoliticalParty("Brown" , ["Brown Color"], "Brown", "Brown", PoliticalPartyColors.brown, "ColorBrown.png")
-var TanColor = new PoliticalParty("Tan" , ["Tan Color"], "Tan", "Tan", PoliticalPartyColors.tan, "ColorTan.png")
-var MaroonColor = new PoliticalParty("Maroon" , ["Maroon Color"], "Maroon", "Maroon", PoliticalPartyColors.maroon, "ColorMaroon.png")
-var GrayColor = new PoliticalParty("Gray" , ["Gray Color"], "Gray", "Gray", PoliticalPartyColors.gray, "ColorGray.png")
+const RedColor = new PoliticalParty("Red" , ["Red Color"], "Red", "Red", PoliticalPartyColors.red, "ColorRed.png")
+const ScarletColor = new PoliticalParty("Scarlet" , ["Scarlet Color"], "Scarlet", "Scarlet", PoliticalPartyColors.scarlet, "ColorScarlet.png")
+const OrangeColor = new PoliticalParty("Orange" , ["Orange Color"], "Orange", "Orange", PoliticalPartyColors.orange, "ColorOrange.png")
+const YellowColor = new PoliticalParty("Yellow" , ["Yellow Color"], "Yellow", "Yellow", PoliticalPartyColors.yellow, "ColorYellow.png")
+const OliveColor = new PoliticalParty("Olive" , ["Olive Color"], "Olive", "Olive", PoliticalPartyColors.olive, "ColorOlive.png")
+const LimeColor = new PoliticalParty("Lime" , ["Lime Color"], "Lime", "Lime", PoliticalPartyColors.lime, "ColorLime.png")
+const GreenColor = new PoliticalParty("Green" , ["Green Color"], "Green", "Green", PoliticalPartyColors.green, "ColorGreen.png")
+const ForestColor = new PoliticalParty("Forest" , ["Forest Color"], "Forest", "Forest", PoliticalPartyColors.forest, "ColorForest.png")
+const TealColor = new PoliticalParty("Teal" , ["Teal Color"], "Teal", "Teal", PoliticalPartyColors.teal, "ColorTeal.png")
+const CyanColor = new PoliticalParty("Cyan" , ["Cyan Color"], "Cyan", "Cyan", PoliticalPartyColors.cyan, "ColorCyan.png")
+const AquaColor = new PoliticalParty("Aqua" , ["Aqua Color"], "Aqua", "Aqua", PoliticalPartyColors.aqua, "ColorAqua.png")
+const BlueColor = new PoliticalParty("Blue" , ["Blue Color"], "Blue", "Blue", PoliticalPartyColors.blue, "ColorBlue.png")
+const BlurpleColor = new PoliticalParty("Blurple" , ["Blurple Color"], "Blurple", "Blurple", PoliticalPartyColors.blurple, "ColorBlurple.png")
+const VioletColor = new PoliticalParty("Violet" , ["Violet Color"], "Violet", "Violet", PoliticalPartyColors.violet, "ColorViolet.png")
+const PurpleColor = new PoliticalParty("Purple" , ["Purple Color"], "Purple", "Purple", PoliticalPartyColors.purple, "ColorPurple.png")
+const MagentaColor = new PoliticalParty("Magenta" , ["Magenta Color"], "Magenta", "Magenta", PoliticalPartyColors.magenta, "ColorMagenta.png")
+const PinkColor = new PoliticalParty("Pink" , ["Pink Color"], "Pink", "Pink", PoliticalPartyColors.pink, "ColorPink.png")
+const BrownColor = new PoliticalParty("Brown" , ["Brown Color"], "Brown", "Brown", PoliticalPartyColors.brown, "ColorBrown.png")
+const TanColor = new PoliticalParty("Tan" , ["Tan Color"], "Tan", "Tan", PoliticalPartyColors.tan, "ColorTan.png")
+const MaroonColor = new PoliticalParty("Maroon" , ["Maroon Color"], "Maroon", "Maroon", PoliticalPartyColors.maroon, "ColorMaroon.png")
+const GrayColor = new PoliticalParty("Gray" , ["Gray Color"], "Gray", "Gray", PoliticalPartyColors.gray, "ColorGray.png")
 // Main Parties
 
-var DemocraticParty = new PoliticalParty(
+const DemocraticParty = new PoliticalParty(
   "DEM",
   ["Democratic", "Democrat"],
   "Dem",
@@ -142,7 +142,7 @@ var DemocraticParty = new PoliticalParty(
   "DEM.png"
 )
 
-var RepublicanParty = new PoliticalParty(
+const RepublicanParty = new PoliticalParty(
   "REP",
   ["Republican"],
   "Rep",
@@ -151,7 +151,7 @@ var RepublicanParty = new PoliticalParty(
   "REP.png"
 )
 
-var TossupParty = new PoliticalParty(
+const TossupParty = new PoliticalParty(
   "Tossup",
   ["Tossup"],
   "Tossup",
@@ -161,7 +161,7 @@ var TossupParty = new PoliticalParty(
 
 // Historic Main Parties
 
-var WhigParty = new PoliticalParty(
+const WhigParty = new PoliticalParty(
   "WIG",
   ["Whig"],
   "Whig",
@@ -170,7 +170,7 @@ var WhigParty = new PoliticalParty(
   "WIG.png"
 )
 
-var NationalRepublicanParty = new PoliticalParty(
+const NationalRepublicanParty = new PoliticalParty(
   "NRP",
   ["National Republican"],
   "NRP",
@@ -179,7 +179,7 @@ var NationalRepublicanParty = new PoliticalParty(
   "WIG.png"
 )
 
-var DemocraticRepublicanParty = new PoliticalParty(
+const DemocraticRepublicanParty = new PoliticalParty(
   "DRP",
   ["Democratic Republican", "Democratic-Republican"],
   "DRP",
@@ -188,7 +188,7 @@ var DemocraticRepublicanParty = new PoliticalParty(
   "DRP.png"
 )
 
-var FederalistParty = new PoliticalParty(
+const FederalistParty = new PoliticalParty(
   "FED",
   ["Federalist"],
   "FED",
@@ -199,7 +199,7 @@ var FederalistParty = new PoliticalParty(
 
 // Third Parties
 
-var LibertarianParty = new PoliticalParty(
+const LibertarianParty = new PoliticalParty(
   "LIB",
   ["Libertarian"],
   "Lib",
@@ -208,7 +208,7 @@ var LibertarianParty = new PoliticalParty(
   "LIB.png"
 )
 
-var GreenParty = new PoliticalParty(
+const GreenParty = new PoliticalParty(
   "GRN",
   ["Green"],
   "Grn",
@@ -217,7 +217,7 @@ var GreenParty = new PoliticalParty(
   "GRN.png"
 )
 
-var ReformParty = new PoliticalParty(
+const ReformParty = new PoliticalParty(
   "REF",
   ["Reform", "Reform Party"],
   "Ref",
@@ -226,9 +226,18 @@ var ReformParty = new PoliticalParty(
   "REF.png"
 )
 
+const ConservativeParty = new PoliticalParty(
+  "CON",
+  ["Conservative"],
+  "Con",
+  "Conservative",
+  PoliticalPartyColors.aqua,
+  "CON.png"
+)
+
 // Historic Third Parties
 
-var FreeSoilParty = new PoliticalParty(
+const FreeSoilParty = new PoliticalParty(
   "FS",
   ["Free Soil"],
   "FS",
@@ -239,7 +248,7 @@ var FreeSoilParty = new PoliticalParty(
 
 // Independent Candidates
 
-var IndependentRNParty = new PoliticalParty(
+const IndependentRNParty = new PoliticalParty(
   "INDRN",
   ["Nader"],
   "Ind",
@@ -248,7 +257,7 @@ var IndependentRNParty = new PoliticalParty(
   "IND.png"
 )
 
-var Independent2024RFKParty = new PoliticalParty(
+const Independent2024RFKParty = new PoliticalParty(
   "IND2024RFK",
   ["Kennedy"],
   "Ind",
@@ -257,7 +266,7 @@ var Independent2024RFKParty = new PoliticalParty(
   "IND.png"
 )
 
-var Independent2016EMParty = new PoliticalParty(
+const Independent2016EMParty = new PoliticalParty(
   "IND2016EM",
   ["McMullin"],
   "Ind",
@@ -266,7 +275,7 @@ var Independent2016EMParty = new PoliticalParty(
   "IND.png"
 )
 
-var Independent2016CPParty = new PoliticalParty(
+const Independent2016CPParty = new PoliticalParty(
   "IND2016CP",
   ["Powell"],
   "Ind",
@@ -275,7 +284,7 @@ var Independent2016CPParty = new PoliticalParty(
   "IND.png"
 )
 
-var Independent2016BSParty = new PoliticalParty(
+const Independent2016BSParty = new PoliticalParty(
   "IND2016BS",
   ["Sanders"],
   "Ind",
@@ -284,7 +293,7 @@ var Independent2016BSParty = new PoliticalParty(
   "IND.png"
 )
 
-var Independent2016RPParty = new PoliticalParty(
+const Independent2016RPParty = new PoliticalParty(
   "IND2016RP",
   ["Paul"],
   "Ind",
@@ -293,7 +302,7 @@ var Independent2016RPParty = new PoliticalParty(
   "IND.png"
 )
 
-var Independent2016JKParty = new PoliticalParty(
+const Independent2016JKParty = new PoliticalParty(
   "IND2016JK",
   ["Kasich"],
   "Ind",
@@ -302,7 +311,7 @@ var Independent2016JKParty = new PoliticalParty(
   "IND.png"
 )
 
-var Independent2016SEParty = new PoliticalParty(
+const Independent2016SEParty = new PoliticalParty(
   "IND2016SE",
   ["Spotted Eagle"],
   "Ind",
@@ -311,7 +320,7 @@ var Independent2016SEParty = new PoliticalParty(
   "IND.png"
 )
 
-var Independent2004JEParty = new PoliticalParty(
+const Independent2004JEParty = new PoliticalParty(
   "IND2004JE",
   ["Edwards"],
   "Ind",
@@ -320,7 +329,7 @@ var Independent2004JEParty = new PoliticalParty(
   "IND.png"
 )
 
-var Independent1988LBParty = new PoliticalParty(
+const Independent1988LBParty = new PoliticalParty(
   "IND1988LB",
   ["Bentsen"],
   "Ind",
@@ -329,7 +338,7 @@ var Independent1988LBParty = new PoliticalParty(
   "IND.png"
 )
 
-var Independent1980JAParty = new PoliticalParty(
+const Independent1980JAParty = new PoliticalParty(
   "IND1980JA",
   ["Anderson"],
   "Ind",
@@ -338,7 +347,7 @@ var Independent1980JAParty = new PoliticalParty(
   "IND.png"
 )
 
-var Independent1976EMParty = new PoliticalParty(
+const Independent1976EMParty = new PoliticalParty(
   "IND1976EM",
   ["McCarthy"],
   "Ind",
@@ -347,7 +356,7 @@ var Independent1976EMParty = new PoliticalParty(
   "IND.png"
 )
 
-var Independent1976RRParty = new PoliticalParty(
+const Independent1976RRParty = new PoliticalParty(
   "IND1976RR",
   ["Reagan"],
   "Ind",
@@ -356,7 +365,7 @@ var Independent1976RRParty = new PoliticalParty(
   "IND.png"
 )
 
-var Independent1968GWParty = new PoliticalParty(
+const Independent1968GWParty = new PoliticalParty(
   "IND1968GW",
   ["Dixiecrat"],
   "Ind",
@@ -365,7 +374,7 @@ var Independent1968GWParty = new PoliticalParty(
   "DIX.png"
 )
 
-var Independent1960HBParty = new PoliticalParty(
+const Independent1960HBParty = new PoliticalParty(
   "IND1960HB",
   ["Dixiecrat"],
   "Ind",
@@ -374,7 +383,7 @@ var Independent1960HBParty = new PoliticalParty(
   "DIX.png"
 )
 
-var Independent1956WJParty = new PoliticalParty(
+const Independent1956WJParty = new PoliticalParty(
   "IND1956WJ",
   ["Dixiecrat"],
   "Ind",
@@ -383,7 +392,7 @@ var Independent1956WJParty = new PoliticalParty(
   "DIX.png"
 )
 
-var Independent1948SMParty = new PoliticalParty(
+const Independent1948SMParty = new PoliticalParty(
   "IND1948SM",
   ["Dixiecrat"],
   "Ind",
@@ -392,7 +401,7 @@ var Independent1948SMParty = new PoliticalParty(
   "DIX.png"
 )
 
-var Independent1948HWParty = new PoliticalParty(
+const Independent1948HWParty = new PoliticalParty(
   "IND1948HW",
   ["Progressive"],
   "Ind",
@@ -401,7 +410,7 @@ var Independent1948HWParty = new PoliticalParty(
   "PROWallace.png"
 )
 
-var Independent1932NTParty = new PoliticalParty(
+const Independent1932NTParty = new PoliticalParty(
   "IND1932NT",
   ["Socialist"],
   "Ind",
@@ -410,7 +419,7 @@ var Independent1932NTParty = new PoliticalParty(
   "SOC.png"
 )
 
-var Independent1924RLParty = new PoliticalParty(
+const Independent1924RLParty = new PoliticalParty(
   "IND1924RL",
   ["Progressive"],
   "Ind",
@@ -419,7 +428,7 @@ var Independent1924RLParty = new PoliticalParty(
   "LaFollette.png"
 )
 
-var Independent1920EDParty = new PoliticalParty(
+const Independent1920EDParty = new PoliticalParty(
   "IND1920ED",
   ["Socialist"],
   "Ind",
@@ -428,7 +437,7 @@ var Independent1920EDParty = new PoliticalParty(
   "SOC.png"
 )
 
-var Independent1916ABParty = new PoliticalParty(
+const Independent1916ABParty = new PoliticalParty(
   "IND1916AB",
   ["Socialist"],
   "Ind",
@@ -437,7 +446,7 @@ var Independent1916ABParty = new PoliticalParty(
   "SOC.png"
 )
 
-var Independent1912TRParty = new PoliticalParty(
+const Independent1912TRParty = new PoliticalParty(
   "IND1912TR",
   ["Progressive"],
   "Ind",
@@ -446,7 +455,7 @@ var Independent1912TRParty = new PoliticalParty(
   "PRO.png"
 )
 
-var Independent1912EDParty = new PoliticalParty(
+const Independent1912EDParty = new PoliticalParty(
   "IND1912ED",
   ["Socialist"],
   "Ind",
@@ -455,7 +464,7 @@ var Independent1912EDParty = new PoliticalParty(
   "SOC.png"
 )
 
-var Independent1892JWParty = new PoliticalParty(
+const Independent1892JWParty = new PoliticalParty(
   "IND1892JW",
   ["Populist"],
   "Ind",
@@ -464,7 +473,7 @@ var Independent1892JWParty = new PoliticalParty(
   "POP.png"
 )
 
-var Independent1892JBParty = new PoliticalParty(
+const Independent1892JBParty = new PoliticalParty(
   "IND1892JB",
   ["Prohibition"],
   "Ind",
@@ -473,7 +482,7 @@ var Independent1892JBParty = new PoliticalParty(
   "PROH.png"
 )
 
-var Independent1888CFParty = new PoliticalParty(
+const Independent1888CFParty = new PoliticalParty(
   "IND1888CF",
   ["Prohibition"],
   "Ind",
@@ -482,7 +491,7 @@ var Independent1888CFParty = new PoliticalParty(
   "PROH.png"
 )
 
-var Independent1860JohnBreckenridgeParty = new PoliticalParty(
+const Independent1860JohnBreckenridgeParty = new PoliticalParty(
   "IND1860JohnBreckenridge",
   ["Southern Democratic"],
   "Ind",
@@ -491,7 +500,7 @@ var Independent1860JohnBreckenridgeParty = new PoliticalParty(
   "DEM2.png"
 )
 
-var Independent1860JohnBellParty = new PoliticalParty(
+const Independent1860JohnBellParty = new PoliticalParty(
   "IND1860JohnBell",
   ["Constitutional Union"],
   "Ind",
@@ -500,7 +509,7 @@ var Independent1860JohnBellParty = new PoliticalParty(
   "CONU.png"
 )
 
-var Independent1856MFParty = new PoliticalParty(
+const Independent1856MFParty = new PoliticalParty(
   "IND1856MF",
   ["Know Nothing"],
   "Ind",
@@ -509,7 +518,7 @@ var Independent1856MFParty = new PoliticalParty(
   "KNP.png"
 )
 
-var Independent1844JBParty = new PoliticalParty(
+const Independent1844JBParty = new PoliticalParty(
   "IND1844JB",
   ["Liberty"],
   "Ind",
@@ -518,7 +527,7 @@ var Independent1844JBParty = new PoliticalParty(
   "LIBY.png"
 )
 
-var Independent1836HWParty = new PoliticalParty(
+const Independent1836HWParty = new PoliticalParty(
   "IND1836HW",
   ["Whig"],
   "Ind",
@@ -527,7 +536,7 @@ var Independent1836HWParty = new PoliticalParty(
   "WIG.png"
 )
 
-var Independent1836DWParty = new PoliticalParty(
+const Independent1836DWParty = new PoliticalParty(
   "IND1836DW",
   ["Whig"],
   "Ind",
@@ -536,7 +545,7 @@ var Independent1836DWParty = new PoliticalParty(
   "WIG.png"
 )
 
-var Independent1836WMParty = new PoliticalParty(
+const Independent1836WMParty = new PoliticalParty(
   "IND1836WM",
   ["Whig"],
   "Ind",
@@ -545,7 +554,7 @@ var Independent1836WMParty = new PoliticalParty(
   "WIG.png"
 )
 
-var Independent1832WWParty = new PoliticalParty(
+const Independent1832WWParty = new PoliticalParty(
   "IND1832WW",
   ["Anti Masonic"],
   "Ind",
@@ -554,7 +563,7 @@ var Independent1832WWParty = new PoliticalParty(
   "AMS.png"
 )
 
-var Independent1832JFParty = new PoliticalParty(
+const Independent1832JFParty = new PoliticalParty(
   "IND1832JF",
   ["Nullifier"],
   "Ind",
@@ -563,7 +572,7 @@ var Independent1832JFParty = new PoliticalParty(
   "NUL.png"
 )
 
-var Independent1824AJParty = new PoliticalParty(
+const Independent1824AJParty = new PoliticalParty(
   "IND1824AJ",
   ["Democratic Republican"],
   "Ind",
@@ -572,7 +581,7 @@ var Independent1824AJParty = new PoliticalParty(
   "DRP.png"
 )
 
-var Independent1824WCParty = new PoliticalParty(
+const Independent1824WCParty = new PoliticalParty(
   "IND1824WC",
   ["Democratic Republican"],
   "Ind",
@@ -581,7 +590,7 @@ var Independent1824WCParty = new PoliticalParty(
   "DRP.png"
 )
 
-var Independent1824HCParty = new PoliticalParty(
+const Independent1824HCParty = new PoliticalParty(
   "IND1824HC",
   ["Democratic Republican"],
   "Ind",
@@ -590,7 +599,7 @@ var Independent1824HCParty = new PoliticalParty(
   "DRP.png"
 )
 
-var Independent1820JAParty = new PoliticalParty(
+const Independent1820JAParty = new PoliticalParty(
   "IND1820JA",
   ["Democratic Republican", "Democratic-Republican"],
   "Ind",
@@ -599,7 +608,7 @@ var Independent1820JAParty = new PoliticalParty(
   "DRP.png"
 )
 
-var Independent1808GCParty = new PoliticalParty(
+const Independent1808GCParty = new PoliticalParty(
   "IND1808GC",
   ["Democratic Republican", "Democratic-Republican"],
   "Ind",
@@ -608,7 +617,7 @@ var Independent1808GCParty = new PoliticalParty(
   "DRP.png"
 )
 
-var IndependentGWParty = new PoliticalParty(
+const IndependentGWParty = new PoliticalParty(
   "INDGW",
   ["Washington"],
   "Ind",
@@ -623,7 +632,7 @@ var IndependentGWParty = new PoliticalParty(
     //  BRITISH PARTIES  //
     ///////////////////////
 
-var UKLabourParty = new PoliticalParty(
+const UKLabourParty = new PoliticalParty(
   "UKLAB",
   ["Labour", "Lab"],
   "Lab",
@@ -632,7 +641,7 @@ var UKLabourParty = new PoliticalParty(
   "UKLAB.png"
 )
 
-var UKConservativeParty = new PoliticalParty(
+const UKConservativeParty = new PoliticalParty(
   "UKCON",
   ["Con", "Conservative"],
   "Con",
@@ -641,7 +650,7 @@ var UKConservativeParty = new PoliticalParty(
   "UKCON.png"
 )
 
-var UKSpeaker = new PoliticalParty(
+const UKSpeaker = new PoliticalParty(
   "UKSPK",
   ["Speaker", "Spk"],
   "Speaker",
@@ -650,7 +659,7 @@ var UKSpeaker = new PoliticalParty(
   "UKSpeaker.png"
 )
 
-var OtherParty = new PoliticalParty(
+const OtherParty = new PoliticalParty(
   "OTHER",
   ["Other"],
   "Other",
@@ -658,7 +667,7 @@ var OtherParty = new PoliticalParty(
   {current: "#00000f", solid: "#00000f", safe: "#00000f", likely: "#00000f", lean: "#00000f", tilt: "#00000f"}
 )
 
-var UKBrexitParty = new PoliticalParty(
+const UKBrexitParty = new PoliticalParty(
   "UKBRX",
   ["Brexit", "The Brexit Party"],
   "BRX",
@@ -667,7 +676,7 @@ var UKBrexitParty = new PoliticalParty(
   "UKBRX.png"
 )
 
-var UKReformUKParty = new PoliticalParty(
+const UKReformUKParty = new PoliticalParty(
   "UKREF",
   ["ReformUK", "RUK"],
   "Ref",
@@ -677,7 +686,7 @@ var UKReformUKParty = new PoliticalParty(
   [UKBrexitParty]
 )
 
-var UKGreenParty = new PoliticalParty(
+const UKGreenParty = new PoliticalParty(
   "UKGRN",
   ["Green", "Green Party", "Scottish Green Party"],
   "Grn",
@@ -686,7 +695,7 @@ var UKGreenParty = new PoliticalParty(
   "UKGRN.png"
 )
 
-var UKLiberalDemocratsParty = new PoliticalParty(
+const UKLiberalDemocratsParty = new PoliticalParty(
   "UKLIB",
   ["Lib Dem", "LD", "Liberal Democrats", "Liberal Democrat", "Libdems"],
   "LD",
@@ -695,7 +704,7 @@ var UKLiberalDemocratsParty = new PoliticalParty(
   "UKLIB.png"
 )
 
-var UKPlaidCymruParty = new PoliticalParty(
+const UKPlaidCymruParty = new PoliticalParty(
   "UKPLC",
   ["Plaid Cymru", "Plaid", "PC", "PlaidCymru"],
   "Plaid Cymru",
@@ -704,7 +713,7 @@ var UKPlaidCymruParty = new PoliticalParty(
   "UKPLC.png"
 )
 
-var UKScottishNationalParty = new PoliticalParty(
+const UKScottishNationalParty = new PoliticalParty(
   "UKSNP",
   ["SNP","Scottish National Party"],
   "SNP",
@@ -713,7 +722,7 @@ var UKScottishNationalParty = new PoliticalParty(
   "UKSNP.png"
 )
 
-var UKAlbaParty = new PoliticalParty(
+const UKAlbaParty = new PoliticalParty(
   "UKALB",
   ["Alba"],
   "Alba Party",
@@ -722,7 +731,7 @@ var UKAlbaParty = new PoliticalParty(
   "UKALB.png"
 )
 
-var UKSinnFeinParty = new PoliticalParty(
+const UKSinnFeinParty = new PoliticalParty(
   "UKSFN",
   ["Sinn Féin", "SF", "SinnFein", "Sinn Fein", "Sinn Féin"],
   "SF",
@@ -731,7 +740,7 @@ var UKSinnFeinParty = new PoliticalParty(
   "UKSFN.png"
 )
 
-var UKDemocraticUnionistParty = new PoliticalParty(
+const UKDemocraticUnionistParty = new PoliticalParty(
   "UKDUP",
   ["DUP","Democratic Unionist Party"],
   "DUP",
@@ -740,7 +749,7 @@ var UKDemocraticUnionistParty = new PoliticalParty(
   "UKDUP.png"
 )
 
-var UKAllianceParty = new PoliticalParty(
+const UKAllianceParty = new PoliticalParty(
   "UKAPNI",
   ["APNI", "Alliance"],
   "Alliance Party",
@@ -749,7 +758,7 @@ var UKAllianceParty = new PoliticalParty(
   "UKALL.png"
 )
 
-var UKSocDemLabParty = new PoliticalParty(
+const UKSocDemLabParty = new PoliticalParty(
   "UKSDLP",
   ["SDLP", "Social Democratic & Labour Party"],
   "SDLP",
@@ -758,7 +767,7 @@ var UKSocDemLabParty = new PoliticalParty(
   "UKSDLP.png"
 )
 
-var UKRestoreBritainParty = new PoliticalParty(
+const UKRestoreBritainParty = new PoliticalParty(
   "UKRES",
   ["Restore", "RES", "RB"],
   "Restore",
@@ -767,7 +776,7 @@ var UKRestoreBritainParty = new PoliticalParty(
   "UKRES.png"
 )
 
-var UKUlsterUnionistParty = new PoliticalParty(
+const UKUlsterUnionistParty = new PoliticalParty(
   "UKUUP",
   ["Ulster Unionist", "UU", "Ulster", "UUP", "Ulster Unionist Party"],
   "Ulster Unionist",
@@ -776,7 +785,7 @@ var UKUlsterUnionistParty = new PoliticalParty(
   "UKUUP.png"
 )
 
-var UKWorkersPartyOfBritainParty = new PoliticalParty(
+const UKWorkersPartyOfBritainParty = new PoliticalParty(
   "UKWPB",
   ["WPB"],
   "Workers Party of Britain",
@@ -785,7 +794,7 @@ var UKWorkersPartyOfBritainParty = new PoliticalParty(
   "UKWPB.png"
 )
 
-var UKUKIPParty = new PoliticalParty(
+const UKUKIPParty = new PoliticalParty(
   "UKUKIP",
   ["UKIP", "UK Independence Party"],
   "UKIP",
@@ -794,7 +803,7 @@ var UKUKIPParty = new PoliticalParty(
   "UKUKIP.png"
 )
 
-var UKTUVParty = new PoliticalParty(
+const UKTUVParty = new PoliticalParty(
   "UKTUV",
   ["TUV"],
   "TUV",
@@ -803,7 +812,7 @@ var UKTUVParty = new PoliticalParty(
   "UKTUV.png"
 )
 
-var UKVoltParty = new PoliticalParty(
+const UKVoltParty = new PoliticalParty(
   "UKVOLT",
   ["Volt"],
   "Volt",
@@ -812,7 +821,7 @@ var UKVoltParty = new PoliticalParty(
   "VOLT.png"
 )
 
-var UKSDPParty = new PoliticalParty(
+const UKSDPParty = new PoliticalParty(
   "UKSDP",
   ["SDP"],
   "SDP",
@@ -821,7 +830,7 @@ var UKSDPParty = new PoliticalParty(
   "UKSDP.png"
 )
 
-var UKLiberalParty = new PoliticalParty(
+const UKLiberalParty = new PoliticalParty(
   "UKLIBS",
   ["Liberal"],
   "Lib",
@@ -830,7 +839,7 @@ var UKLiberalParty = new PoliticalParty(
   "UKLIBS.png"
 )
 
-var UKYourParty = new PoliticalParty(
+const UKYourParty = new PoliticalParty(
   "UKYOUR",
   ["Your Party"],
   "Your",
@@ -839,7 +848,7 @@ var UKYourParty = new PoliticalParty(
   "UKYOUR.png"
 )
 
-var UKMRLPParty = new PoliticalParty(
+const UKMRLPParty = new PoliticalParty(
   "UKMRLP",
   ["MRLP", "Official Monster Raving Loony Party"],
   "MRLP",
@@ -848,7 +857,7 @@ var UKMRLPParty = new PoliticalParty(
   "UKMRLP.png"
 )
 
-var UKReclaimParty = new PoliticalParty(
+const UKReclaimParty = new PoliticalParty(
   "UKREC",
   ["Reclaim"],
   "REC",
@@ -861,7 +870,7 @@ var UKReclaimParty = new PoliticalParty(
     // JACKSONIAN PARTIES //
     ////////////////////////
 
-var IndependentGenericParty = new PoliticalParty(
+const IndependentGenericParty = new PoliticalParty(
   "INDGEN",
   ["Independent", "Ind", "Indy"],
   "Ind",
@@ -870,7 +879,7 @@ var IndependentGenericParty = new PoliticalParty(
   "IND.png"
 )
 
-var JJULabourParty = new PoliticalParty(
+const JJULabourParty = new PoliticalParty(
   "JJULAB",
   ["Labour"],
   "Lab",
@@ -879,7 +888,7 @@ var JJULabourParty = new PoliticalParty(
   "JJULAB.png"
 )
 
-var JJULiberalParty = new PoliticalParty(
+const JJULiberalParty = new PoliticalParty(
   "JJULIB",
   ["Liberal"],
   "Lib",
@@ -888,7 +897,7 @@ var JJULiberalParty = new PoliticalParty(
   "JJULIB.png"
 )
 
-var JJUConservativeParty = new PoliticalParty(
+const JJUConservativeParty = new PoliticalParty(
   "JJUCON",
   ["Conservative"],
   "Con",
@@ -897,7 +906,7 @@ var JJUConservativeParty = new PoliticalParty(
   "JJUCON.png"
 )
 
-var JJUAllianceParty = new PoliticalParty(
+const JJUAllianceParty = new PoliticalParty(
   "JJUALL",
   ["Alliance"],
   "All",
@@ -907,7 +916,7 @@ var JJUAllianceParty = new PoliticalParty(
   [JJUConservativeParty]
 )
 
-var JJUProgressiveParty = new PoliticalParty(
+const JJUProgressiveParty = new PoliticalParty(
   "JJUPRO",
   ["Progressive"],
   "Pro",
@@ -916,7 +925,7 @@ var JJUProgressiveParty = new PoliticalParty(
   "JJUPRO.png"
 )
 
-var JJUWildroseParty = new PoliticalParty(
+const JJUWildroseParty = new PoliticalParty(
   "JJUWIL",
   ["Wildrose"],
   "Wil",
@@ -925,7 +934,7 @@ var JJUWildroseParty = new PoliticalParty(
   "JJUWIL.png"
 )
 
-var JJUReformParty = new PoliticalParty(
+const JJUReformParty = new PoliticalParty(
   "JJUREF",
   ["Renewal"],
   "Ren",
@@ -934,7 +943,7 @@ var JJUReformParty = new PoliticalParty(
   "JJUREF.png"
 )
 
-var JJUPWPParty = new PoliticalParty(
+const JJUPWPParty = new PoliticalParty(
   "JJUPWP",
   ["PWP"],
   "PWP",
@@ -943,7 +952,7 @@ var JJUPWPParty = new PoliticalParty(
   "JJUPWP.png"
 )
 
-var JJUUCPParty = new PoliticalParty(
+const JJUUCPParty = new PoliticalParty(
   "JJUUCP",
   ["UCP"],
   "UCP",
@@ -953,7 +962,7 @@ var JJUUCPParty = new PoliticalParty(
   [JJUPWPParty]
 )
 
-var JJUNationalParty = new PoliticalParty(
+const JJUNationalParty = new PoliticalParty(
   "JJUNAT",
   ["National", "JNP", "Coalition", "National Coalition", "Jacksonian National Party"],
   "Nat",
@@ -963,7 +972,7 @@ var JJUNationalParty = new PoliticalParty(
 )
 
 
-var JJUSolidarityParty = new PoliticalParty(
+const JJUSolidarityParty = new PoliticalParty(
   "JJUSOL",
   ["Solidarity"],
   "Sol",
@@ -972,7 +981,7 @@ var JJUSolidarityParty = new PoliticalParty(
   "JJUSOL.png"
 )
 
-var JJUFDPParty = new PoliticalParty(
+const JJUFDPParty = new PoliticalParty(
   "JJUFDP",
   ["FDP"],
   "FDP",
@@ -982,7 +991,7 @@ var JJUFDPParty = new PoliticalParty(
   [JJUSolidarityParty, JJUNationalParty]
 )
 
-var JJUProgressiveLabourParty = new PoliticalParty(
+const JJUProgressiveLabourParty = new PoliticalParty(
   "JJUPLU",
   ["ProgLab"],
   "PLU",
@@ -992,7 +1001,7 @@ var JJUProgressiveLabourParty = new PoliticalParty(
   [JJULabourParty, JJUProgressiveParty]
 )
 
-var JJUGreenParty = new PoliticalParty(
+const JJUGreenParty = new PoliticalParty(
   "JJUGRN",
   ["Greens", "Green"],
   "Grn",
@@ -1001,7 +1010,7 @@ var JJUGreenParty = new PoliticalParty(
   "JJUGRN.png"
 )
 
-var JJUSDPParty = new PoliticalParty(
+const JJUSDPParty = new PoliticalParty(
   "JJUSDP",
   ["SDP"],
   "SDP",
@@ -1011,7 +1020,7 @@ var JJUSDPParty = new PoliticalParty(
   [JJUProgressiveLabourParty]
 )
 
-var JJUDRParty = new PoliticalParty(
+const JJUDRParty = new PoliticalParty(
   "JJUDR",
   ["Democratic Rally", "Dem Rally", "DR", "DemRal"],
   "DR",
@@ -1020,7 +1029,7 @@ var JJUDRParty = new PoliticalParty(
   "JJUDR.png"
 ) 
 
-var JJUSPJUParty = new PoliticalParty(
+const JJUSPJUParty = new PoliticalParty(
   "JJUSOC",
   ["Socialist", "SPJU", "Socialists"],
   "Socialist",
@@ -1033,7 +1042,7 @@ var JJUSPJUParty = new PoliticalParty(
     // JACKSONIAN COALITIONS //
     ///////////////////////////
 
-var JJULabLibPartyBloc = new PoliticalParty(
+const JJULabLibPartyBloc = new PoliticalParty(
   "JJULAL",
   ["LabLib"],
   "LAL",
@@ -1041,7 +1050,7 @@ var JJULabLibPartyBloc = new PoliticalParty(
   PoliticalPartyColors.scarlet
 )
 
-var JJULibConPartyBloc = new PoliticalParty(
+const JJULibConPartyBloc = new PoliticalParty(
   "JJULIC",
   ["LibCon"],
   "LIC",
@@ -1049,7 +1058,7 @@ var JJULibConPartyBloc = new PoliticalParty(
   PoliticalPartyColors.cyan
 )
 
-var JJULabourConPartyBloc = new PoliticalParty(
+const JJULabourConPartyBloc = new PoliticalParty(
   "JJULAC",
   ["LabourCon"],
   "LAC",
@@ -1057,7 +1066,7 @@ var JJULabourConPartyBloc = new PoliticalParty(
   PoliticalPartyColors.violet
 )
 
-var JJUWatermelonPartyBloc = new PoliticalParty(
+const JJUWatermelonPartyBloc = new PoliticalParty(
   "JJUWAT",
   ["Watermelon"],
   "Wat",
@@ -1065,7 +1074,7 @@ var JJUWatermelonPartyBloc = new PoliticalParty(
   PoliticalPartyColors.magenta
 )
 
-var JJUCitrusPartyBloc = new PoliticalParty(
+const JJUCitrusPartyBloc = new PoliticalParty(
   "JJUCIT",
   ["Citrus"],
   "Cit",
@@ -1073,7 +1082,7 @@ var JJUCitrusPartyBloc = new PoliticalParty(
   PoliticalPartyColors.orange
 )
 
-var JJUTrafficLightPartyBloc = new PoliticalParty(
+const JJUTrafficLightPartyBloc = new PoliticalParty(
   "JJUTRA",
   ["Traffic Light", "Traffic"],
   "Tra",
@@ -1081,7 +1090,7 @@ var JJUTrafficLightPartyBloc = new PoliticalParty(
   PoliticalPartyColors.red
 )
 
-var JJUUnityPartyBloc = new PoliticalParty(
+const JJUUnityPartyBloc = new PoliticalParty(
   "JJUUTY",
   ["Unity"],
   "UTY",
@@ -1089,7 +1098,7 @@ var JJUUnityPartyBloc = new PoliticalParty(
   PoliticalPartyColors.aqua
 )
 
-var JJUPeacockPartyBloc = new PoliticalParty(
+const JJUPeacockPartyBloc = new PoliticalParty(
   "JJUPEA",
   ["Peacock"],
   "PEA",
@@ -1097,7 +1106,7 @@ var JJUPeacockPartyBloc = new PoliticalParty(
   PoliticalPartyColors.cyan
 )
 
-var JJUBurgerPartyBloc = new PoliticalParty(
+const JJUBurgerPartyBloc = new PoliticalParty(
   "JJUBUR",
   ["Burger"],
   "Bur",
@@ -1105,7 +1114,7 @@ var JJUBurgerPartyBloc = new PoliticalParty(
   PoliticalPartyColors.orange
 )
 
-var JJUUnitedLeftBloc = new PoliticalParty(
+const JJUUnitedLeftBloc = new PoliticalParty(
   "JJUUNL",
   ["United Left"],
   "UNL",
@@ -1113,7 +1122,7 @@ var JJUUnitedLeftBloc = new PoliticalParty(
   PoliticalPartyColors.magenta
 )
 
-var JJUBOBBloc = new PoliticalParty(
+const JJUBOBBloc = new PoliticalParty(
   "JJUBOB",
   ["BOB", "bob" ],
   "BOB",
@@ -1121,7 +1130,7 @@ var JJUBOBBloc = new PoliticalParty(
   PoliticalPartyColors.brown
 )
 
-var JJUSunsetBloc = new PoliticalParty(
+const JJUSunsetBloc = new PoliticalParty(
   "JJUSunset",
   ["Sunset", "sunset"],
   "Sunset",
@@ -1134,7 +1143,7 @@ var JJUSunsetBloc = new PoliticalParty(
     // YAPMERIAN  PARTIES //
     ////////////////////////
 
-var YAPSGPParty = new PoliticalParty(
+const YAPSGPParty = new PoliticalParty(
   "YAPSGP",
   ["SGP", "Social Gospel Party"],
   "Social Gospel Party",
@@ -1143,7 +1152,7 @@ var YAPSGPParty = new PoliticalParty(
   "YAPSGP.png"
 )
 
-var YAPLabourParty = new PoliticalParty(
+const YAPLabourParty = new PoliticalParty(
   "YAPLAB",
   ["Labour"],
   "Lab",
@@ -1152,7 +1161,7 @@ var YAPLabourParty = new PoliticalParty(
   "YAPLAB.png"
 )
 
-var YAPSDFParty = new PoliticalParty(
+const YAPSDFParty = new PoliticalParty(
   "YAPSDF",
   ["SDF", "Social Democratic Front"],
   "SDF",
@@ -1161,7 +1170,7 @@ var YAPSDFParty = new PoliticalParty(
   "YAPSDF.png"
 )
 
-var YAPReformParty = new PoliticalParty(
+const YAPReformParty = new PoliticalParty(
   "YAPREF",
   ["Reform"],
   "Ref",
@@ -1174,7 +1183,7 @@ var YAPReformParty = new PoliticalParty(
     // YAPMERIAN  COALITIONS //
     ///////////////////////////
 
-var YAPRefLabBloc = new PoliticalParty(
+const YAPRefLabBloc = new PoliticalParty(
   "YAPREFLAB",
   ["Reform & Labour", "RefLab"],
   "RefLab",
@@ -1182,7 +1191,7 @@ var YAPRefLabBloc = new PoliticalParty(
   PoliticalPartyColors.lime
 )
 
-var politicalParties = {}
-var defaultDropdownPoliticalPartyIDs = []
-var mainPoliticalPartyIDs = []
-var majorThirdPartyCandidates = []
+let politicalParties = {}
+let defaultDropdownPoliticalPartyIDs = []
+let mainPoliticalPartyIDs = []
+let majorThirdPartyCandidates = []
