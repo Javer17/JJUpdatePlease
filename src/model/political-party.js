@@ -87,14 +87,14 @@ const defaultMarginNames = {current: "Current", solid: "Solid", safe: "Safe", li
 
 const PoliticalPartyColors = {
   red: {current: "#5E0E16", solid: "#890000", safe: "#be1c29", likely: "#ff5864", lean: "#ff8b98", tilt: "#cf8980"},
-  scarlet: {current: "#681905", solid: "#982408", safe: "#D33A0B", likely: "#F56A40", lean: "#F79368", tilt: "#BF9878"}, //Extended
-  orange: {current: "#833800", solid: "#C84700", safe: "#FF6200", likely: "#FF9E4B", lean: "#FFB682", tilt: "#D5B27A"},
-  yellow: {current: "#7F4C00", solid: "#B76800", safe: "#FE9800", likely: "#F9B04F", lean: "#FFC27C", tilt: "#cbb78a"},
-  olive: {current: "#454300", solid: "#6D661D", safe: "#9F9700", likely: "#C2B704", lean: "#D1C64E", tilt: "#B6A764"}, //Extended
-  lime: {current: "#334401", solid: "#566c03", safe: "#789c00", likely: "#98bf11", lean: "#BBD35B", tilt: "#B2BA6F"},
-  green: {current: "#0B5307", solid: "#19770A", safe: "#24A30E", likely: "#5CC449", lean: "#91D785", tilt: "#96BA8F"},
-  forest: {current: "#14281C", solid: "#1A3523", safe: "#2B563A", likely: "#537d61", lean: "#72A884", tilt: "#9aaca0"}, //Extended
-  teal: {current: "#0A3829", solid: "#0A543B", safe: "#0E7F5F", likely: "#31AF76", lean: "#6CD9A4", tilt: "#84B5A5"}, //Extended
+  scarlet: {current: "#5a1504", solid: "#982205", safe: "#D33A0B", likely: "#F56A40", lean: "#F79368", tilt: "#BF9878"}, //Extended
+  orange: {current: "#7a3601", solid: "#bd4301", safe: "#FF6200", likely: "#FF9E4B", lean: "#FFB682", tilt: "#D5B27A"},
+  yellow: {current: "#7F4C00", solid: "#bb7000", safe: "#FE9800", likely: "#F9B04F", lean: "#FFC27C", tilt: "#cbb78a"},
+  olive: {current: "#444316", solid: "#726a0e", safe: "#9F9700", likely: "#C2B704", lean: "#D1C64E", tilt: "#B6A764"}, //Extended
+  lime: {current: "#3a441b", solid: "#566c03", safe: "#789c00", likely: "#98bf11", lean: "#BBD35B", tilt: "#B2BA6F"},
+  green: {current: "#134911", solid: "#19770A", safe: "#24A30E", likely: "#5CC449", lean: "#91D785", tilt: "#96BA8F"},
+  forest: {current: "#1D2B23", solid: "#193D29", safe: "#2E5B3F", likely: "#547F65", lean: "#7CAD8E", tilt: "#83938D"}, //Extended
+  teal: {current: "#083023", solid: "#0A543B", safe: "#0E7F5F", likely: "#31AF76", lean: "#6CD9A4", tilt: "#84B5A5"}, //Extended
   cyan: {current: "#082e32", solid: "#0c4c56", safe: "#107281", likely: "#1DB8B3", lean: "#57DECB", tilt: "#76B3B3"}, 
   aqua: {current: "#04293A", solid: "#0F3D4C", safe: "#07587d", likely: "#2ba0d6", lean: "#66c2ff", tilt: "#a9caef"}, //Extended
   blue: {current: "#0d1c3d", solid: "#191F68", safe: "#1c408c", likely: "#587ccc", lean: "#8aafff", tilt: "#949bb3"},
@@ -106,7 +106,8 @@ const PoliticalPartyColors = {
   brown: {current: "#351800", solid: "#442410", safe: "#663514", likely: "#A86234", lean: "#D88856", tilt: "#F7C2A6"},
   tan: {current: "#503B1C", solid: "#715618", safe: "#A27A38", likely: "#BA9760", lean: "#d3b890", tilt: "#c2bca3"}, //Extended
   maroon: {current: "#2D0A0A", solid: "#421518", safe: "#661E1F", likely: "#A04241", lean: "#AC6467", tilt: "#BA8C86"}, //Extended
-  gray: {current: "#211F1A", solid: "#302D28", safe: "#474339", likely: "#77705F", lean: "#B9B4A7", tilt: "#D8D6CF"}
+  // gray: {current: "#211F1A", solid: "#302D28", safe: "#474339", likely: "#77705F", lean: "#B9B4A7", tilt: "#D8D6CF"}
+  gray: {current: "#1A1C1C", solid: "#292A2B", safe: "#3F3F41", likely: "#696A6D", lean: "#999A9B", tilt: "#D3D3D4"} //Alt Gray
 }
 
 // Colors

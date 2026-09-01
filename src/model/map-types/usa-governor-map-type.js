@@ -865,7 +865,7 @@ const USAGovernorMapType = new MapType(
       null, // isCustomMap
       null, // shouldClearDisabled
       true, // shouldShowVoteshare
-      1.0 // voteshareCutoffMargin
+      0.1 // voteshareCutoffMargin
     )
     
     const CNNGovernorResults2024MapSource = new MapSource(
@@ -1039,7 +1039,7 @@ const USAGovernorMapType = new MapType(
       null, // isCustomMap
       null, // shouldClearDisabled
       true, // shouldShowVoteshare
-      1.0 // voteshareCutoffMargin
+      0.1 // voteshareCutoffMargin
     )
 
     const LTE2022GovernorYouTubeIDs = {
@@ -1233,7 +1233,7 @@ const USAGovernorMapType = new MapType(
       null, // isCustomMap
       null, // shouldClearDisabled
       true, // shouldShowVoteshare
-      1.0 // voteshareCutoffMargin
+      0.1 // voteshareCutoffMargin
     )
     
     const VotehubGovernorPolls2026MapSource = new MapSource(
@@ -1293,7 +1293,7 @@ const USAGovernorMapType = new MapType(
       null, // isCustomMap
       null, // shouldClearDisabled
       true, // shouldShowVoteshare
-      1.0 // voteshareCutoffMargin
+      0.1 // voteshareCutoffMargin
     )
 
     const PastElectionResultMapSource = new MapSource(
@@ -1362,7 +1362,7 @@ const USAGovernorMapType = new MapType(
       null, // isCustomMap
       null, // shouldClearDisabled
       true, // shouldShowVoteshare
-      1.0 // voteshareCutoffMargin
+      0.1 // voteshareCutoffMargin
     )
 
     let idsToPartyNames = {}

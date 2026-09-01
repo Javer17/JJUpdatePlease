@@ -1020,7 +1020,7 @@ const USAHouseMapType = new MapType(
       null, // isCustomMap
       null, // shouldClearDisabled
       true, // shouldShowVoteshare
-      1.0, // voteshareCutoffMargin
+      0.1, // voteshareCutoffMargin
       getHouseSVGFromDate, // overrideSVGPath
       null, // shouldSetDisabledWorthToZero
       true // shouldUseOriginalMapDataForTotalsPieChart
@@ -1133,7 +1133,7 @@ const USAHouseMapType = new MapType(
       null, // isCustomMap
       null, // shouldClearDisabled
       true, // shouldShowVoteshare
-      1.0, // voteshareCutoffMargin
+      0.1, // voteshareCutoffMargin
       getHouseSVGFromDate, // overrideSVGPath
       null, // shouldSetDisabledWorthToZero
       true // shouldUseOriginalMapDataForTotalsPieChart
@@ -1184,7 +1184,7 @@ const USAHouseMapType = new MapType(
       null, // isCustomMap
       null, // shouldClearDisabled
       true, // shouldShowVoteshare
-      1.0, // voteshareCutoffMargin
+      0.1, // voteshareCutoffMargin
       getHouseSVGFromDate, // overrideSVGPath
       null, // shouldSetDisabledWorthToZero
       true // shouldUseOriginalMapDataForTotalsPieChart
@@ -1245,7 +1245,7 @@ const USAHouseMapType = new MapType(
       null, // isCustomMap
       null, // shouldClearDisabled
       true, // shouldShowVoteshare
-      1.0, // voteshareCutoffMargin
+      0.1, // voteshareCutoffMargin
       getHouseSVGFromDate, // overrideSVGPath
       null, // shouldSetDisabledWorthToZero
       true // shouldUseOriginalMapDataForTotalsPieChart
@@ -1323,7 +1323,7 @@ const USAHouseMapType = new MapType(
       null, // isCustomMap
       null, // shouldClearDisabled
       true, // shouldShowVoteshare
-      1.0, // voteshareCutoffMargin
+      0.1, // voteshareCutoffMargin
       getHouseSVGFromDate, // overrideSVGPath
       null, // shouldSetDisabledWorthToZero
       true // shouldUseOriginalMapDataForTotalsPieChart

@@ -1317,7 +1317,7 @@ const USAPresidentMapType = new MapType(
       return county + ", " + state
     }
     
-    let countyVoteshareCutoffMargin = 1.0
+    let countyVoteshareCutoffMargin = 0.1
     let countyColumnMap = {
       date: "date",
       region: "state",
@@ -1996,7 +1996,7 @@ const USAPresidentMapType = new MapType(
       null, // isCustomMap
       null, // shouldClearDisabled
       true, // shouldShowVoteshare
-      1.0, // voteshareCutoffMargin
+      0.1, // voteshareCutoffMargin
       getPresidentialSVGFromDate, // overrideSVGPath
       null, // shouldSetDisabledWorthToZero
       null, // shouldUseOriginalMapDataForTotalsPieChart
@@ -2079,7 +2079,7 @@ const USAPresidentMapType = new MapType(
       null, // isCustomMap
       null, // shouldClearDisabled
       true, // shouldShowVoteshare
-      1.0, // voteshareCutoffMargin
+      0.1, // voteshareCutoffMargin
       (mapDate) => getPresidentialSVGFromDate(mapDate, HistoricalElectionResultMapSource), // overrideSVGPath
       true, // shouldSetDisabledWorthToZero
       null, // shouldUseOriginalMapDataForTotalsPieChart
@@ -2125,7 +2125,7 @@ const USAPresidentMapType = new MapType(
       null, // isCustomMap
       null, // shouldClearDisabled
       true, // shouldShowVoteshare
-      1.0, // voteshareCutoffMargin
+      0.1, // voteshareCutoffMargin
       getPresidentialCountySVGFromDate // overrideSVGPath
     )
     
@@ -2168,7 +2168,7 @@ const USAPresidentMapType = new MapType(
       null, // isCustomMap
       null, // shouldClearDisabled
       true, // shouldShowVoteshare
-      1.0, // voteshareCutoffMargin
+      0.1, // voteshareCutoffMargin
       () => {
         if (currentViewingState == ViewingState.viewing)
         {

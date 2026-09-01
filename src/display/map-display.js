@@ -94,7 +94,7 @@ const regionStrokeAnimationDuration = 0.06
 const regionSelectColor = "#ffffff"
 const regionDeselectColor = "#181922" //#555
 
-const regionDisabledColor = "#28292F"
+const regionDisabledColor = "#232326"
 
 const flipPatternBrightnessFactor = 0.8
 const flipPatternHeight = 7
@@ -1990,12 +1990,12 @@ function getRegionNameCandidates(regionData)
 
 function isListSeatRegion(regionData)
 {
-  return getRegionNameCandidates(regionData).some(candidate => String(candidate).toLowerCase().includes("list seat"))
+  return getRegionNameCandidates(regionData).some(candidate => /\blist seat\b/i.test(String(candidate)))
 }
 
 function isSittingRegion(regionData)
 {
-  return getRegionNameCandidates(regionData).some(candidate => String(candidate).toLowerCase().includes("sitting"))
+  return getRegionNameCandidates(regionData).some(candidate => /\bsitting\b/i.test(String(candidate)))
 }
 
 function hasFullVoteShareWin(regionData)
