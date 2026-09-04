@@ -150,6 +150,7 @@ function setMapCountries()
       GreenParty.getID(),
       WhigParty.getID(),
       FreeSoilParty.getID(),
+      SocialistParty.getID(),
       NationalRepublicanParty.getID(),
       DemocraticRepublicanParty.getID(),
       ConservativeParty.getID(),
