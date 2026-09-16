@@ -322,15 +322,15 @@
     <input type='file' id='uploadFileInput' style='display: none'>
     <div id='maincontent'>
       <div id='maptextcontainer'>
-        <div style="display: flex; height: 0; flex-grow: 1; margin-top: 15rem; margin-bottom: 15rem; gap: 10rem;">
+        <div style="position: relative; display: flex; height: 0; flex-grow: 1; margin-top: 15rem; margin-bottom: 15rem; gap: 10rem;">
           <div id="mapRoundControls" style="display: none; width: 55rem; flex-direction: column; margin-top: 15rem; margin-bottom: 15rem;"></div>
           <div id="mapcontainer" style="overflow: hidden; display: flex; flex-grow: 1;" oncontextmenu="return false"></div>
-          <div id="mapZoomControls" style="display: none; width: 55rem; flex-direction: column; justify-content: space-between; margin-top: 15rem; margin-bottom: 15rem;">
-            <a id="mapCloseButton" onclick="zoomOutMap()" style="display: block; cursor: pointer; user-select: none; -webkit-user-select: none;"><img id="mapCloseButtonImage" src="./assets/close-icon.png" style="width: 100%; aspect-ratio: 1/1; text-decoration: none;" /></a>
-            <div style="display: flex; flex-direction: column">
-              <a id="mapZoomInButton" onclick="svgPanZoomController.zoomIn()" style="display: block; cursor: pointer; user-select: none; -webkit-user-select: none; margin-bottom: 5rem;"><img id="mapZoomInButtonImage" src="./assets/zoom-in-icon.png" style="width: 100%; aspect-ratio: 1/1; text-decoration: none;" /></a>
-              <a id="mapResetZoomButton" onclick="svgPanZoomController.reset()" style="display: block; cursor: pointer; user-select: none; -webkit-user-select: none; margin-bottom: 5rem;"><img id="mapResetZoomButtonImage" src="./assets/reset-icon.png" style="width: 100%; aspect-ratio: 1/1; text-decoration: none;" /></a>
-              <a id="mapZoomOutButton" onclick="svgPanZoomController.zoomOut()" style="display: block; cursor: pointer; user-select: none; -webkit-user-select: none; margin-bottom: 5rem;"><img id="mapZoomOutButtonImage" src="./assets/zoom-out-icon.png" style="width: 100%; aspect-ratio: 1/1; text-decoration: none;" /></a>
+          <div id="mapZoomControls" style="display: none; position: absolute; top: 15rem; bottom: 15rem; right: 15rem; width: 50rem; z-index: 5;">
+            <a id="mapCloseButton" onclick="zoomOutMap()" style="display: block; position: absolute; top: 0; right: 0; cursor: pointer; user-select: none; -webkit-user-select: none; width: 100%; "><img id="mapCloseButtonImage" src="./assets/close-icon.png" style="width: 100%; aspect-ratio: 1/1; text-decoration: none; box-sizing: border-box; align-items: center; gap: 8rem; padding: 8rem; border-radius: 8rem; background-color: rgba(51, 51, 51, 0.75);"/></a>
+            <div style="display: flex; position: absolute; right: 0; bottom: 0; flex-direction: column; width: 100%; box-sizing: border-box; align-items: center; gap: 8rem; padding: 8rem; border-radius: 8rem; background-color: rgba(51, 51, 51, 0.75);">
+              <a id="mapZoomInButton" onclick="svgPanZoomController.zoomIn()" style="display: block; cursor: pointer; user-select: none; -webkit-user-select: none;"><img id="mapZoomInButtonImage" src="./assets/zoom-in-icon.png" style="width: 100%; aspect-ratio: 1/1; text-decoration: none;" /></a>
+              <a id="mapResetZoomButton" onclick="svgPanZoomController.reset()" style="display: block; cursor: pointer; user-select: none; -webkit-user-select: none;"><img id="mapResetZoomButtonImage" src="./assets/reset-icon.png" style="width: 100%; aspect-ratio: 1/1; text-decoration: none;" /></a>
+              <a id="mapZoomOutButton" onclick="svgPanZoomController.zoomOut()" style="display: block; cursor: pointer; user-select: none; -webkit-user-select: none;"><img id="mapZoomOutButtonImage" src="./assets/zoom-out-icon.png" style="width: 100%; aspect-ratio: 1/1; text-decoration: none;" /></a>
             </div>
           </div>
         </div>
@@ -410,4 +410,4 @@
     </div>
   </body>
 </html>
-<!-- Last JJ Update - 23/08/26 -->
+<!-- Last JJ Update - 16/09/26 -->

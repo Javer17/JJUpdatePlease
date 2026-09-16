@@ -1167,7 +1167,7 @@ const USASenateMapType = new MapType(
       null, // isCustomMap
       null, // shouldClearDisabled
       true, // shouldShowVoteshare
-      1.0 // voteshareCutoffMargin
+      0.1 // voteshareCutoffMargin
     )
     
     const CNNSenateResults2024MapSource = new MapSource(
@@ -1223,7 +1223,7 @@ const USASenateMapType = new MapType(
       null, // isCustomMap
       null, // shouldClearDisabled
       true, // shouldShowVoteshare
-      0.0 // voteshareCutoffMargin
+      0.1 // voteshareCutoffMargin
     )
     
     const FiveThirtyEightSenateProjection2022MapSource = new MapSource(
@@ -1274,7 +1274,7 @@ const USASenateMapType = new MapType(
       null, // isCustomMap
       null, // shouldClearDisabled
       true, // shouldShowVoteshare
-      1.0 // voteshareCutoffMargin
+      0.1 // voteshareCutoffMargin
     )
 
     const FiveThirtyEightSenateProjection2024MapSource = new MapSource(
@@ -1786,7 +1786,7 @@ const USASenateMapType = new MapType(
       null, // isCustomMap
       null, // shouldClearDisabled
       true, // shouldShowVoteshare
-      1.0 // voteshareCutoffMargin
+      0.1 // voteshareCutoffMargin
     )
     
     const VotehubSenatePolls2026MapSource = new MapSource(
@@ -1850,7 +1850,7 @@ const USASenateMapType = new MapType(
       null, // isCustomMap
       null, // shouldClearDisabled
       true, // shouldShowVoteshare
-      1.0 // voteshareCutoffMargin
+      0.1 // voteshareCutoffMargin
     )
 
     const PastElectionResultMapSource = new MapSource(
@@ -1932,7 +1932,7 @@ const USASenateMapType = new MapType(
       null, // isCustomMap
       null, // shouldClearDisabled
       true, // shouldShowVoteshare
-      1.0 // voteshareCutoffMargin
+      0.1 // voteshareCutoffMargin
     )
 
     let idsToPartyNames = {}

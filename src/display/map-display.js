@@ -17,8 +17,44 @@ var displayMapQueue = []
 var isRunningDisplayMapQueue = false
 
 var svgPanZoomController
+var baseOutlineStrokeWidth = null // the #outlines stroke-width at 1x zoom, set in updateSVGViewbox(); used to keep district borders a sensible width as you zoom in
 var svgPanZoomControllerOwnerID = null // which map (by ID) the current controller belongs to, so we know whose pan/zoom to remember
-var savedMapZoomStates = {} // mapID -> {pan, zoom}, so switching maps and coming back restores where you left off
+var savedMapZoomStates = {} // mapID -> {zoom, fx, fy}, so switching maps and coming back restores where you left off
+
+// Raw pixel pan values are meaningless across two different SVGs (different natural sizes/viewBoxes) -
+// copying them directly is what caused the "wrong zoom for a second" and clipping bugs. Instead we save
+// zoom level (already relative - 1 means "the fit level", regardless of the SVG's actual size) plus the
+// on-screen center point as a FRACTION of the SVG's own viewBox (fx, fy each 0-1). Restoring that same
+// fraction on a different SVG lands on the same approximate position even if that SVG is a totally
+// different size/shape.
+function getRelativeZoomState(controller)
+{
+  var sizes = controller.getSizes()
+  var pan = controller.getPan()
+
+  var svgCenterX = (sizes.width/2 - pan.x) / sizes.realZoom
+  var svgCenterY = (sizes.height/2 - pan.y) / sizes.realZoom
+
+  return {
+    zoom: controller.getZoom(),
+    fx: (svgCenterX - sizes.viewBox.x) / sizes.viewBox.width,
+    fy: (svgCenterY - sizes.viewBox.y) / sizes.viewBox.height
+  }
+}
+
+function applyRelativeZoomState(controller, state)
+{
+  controller.zoom(state.zoom)
+
+  var sizes = controller.getSizes()
+  var targetSVGX = sizes.viewBox.x + state.fx*sizes.viewBox.width
+  var targetSVGY = sizes.viewBox.y + state.fy*sizes.viewBox.height
+
+  controller.pan({
+    x: sizes.width/2 - targetSVGX*sizes.realZoom,
+    y: sizes.height/2 - targetSVGY*sizes.realZoom
+  })
+}
 var pannedDuringClick = false
 
 var selectedParty
@@ -94,7 +130,7 @@ const regionStrokeAnimationDuration = 0.06
 const regionSelectColor = "#ffffff"
 const regionDeselectColor = "#181922" //#555
 
-const regionDisabledColor = "#232326"
+const regionDisabledColor = "#28292F"
 
 const flipPatternBrightnessFactor = 0.8
 const flipPatternHeight = 7
@@ -476,7 +512,7 @@ function setOutlineDivProperties()
       if (e.altKey && altClickRegion(e.target)) return
       if (e.shiftKey && shiftClickRegion(e.target)) return
       if (e.which == 3 || e.ctrlKey) return // handled in contextmenu
-      var isPannableMapState = currentViewingState == ViewingState.zooming || (currentViewingState == ViewingState.viewing && currentMapType.getID() == UKHouseMapType.getID())
+      var isPannableMapState = currentViewingState == ViewingState.zooming || (currentViewingState == ViewingState.viewing && (currentMapType.getID() == UKHouseMapType.getID() || (currentMapType.getID() == USAHouseMapType.getID() && currentMapType.getMapSettingValue("showAllDistricts"))))
       if (!isPannableMapState || !(currentEditingState == EditingState.viewing && pannedDuringClick)) leftClickRegion(e.target)
     })
 
@@ -490,7 +526,11 @@ function updateSVGViewbox(svgDiv = $("#mapcontainer #svgdata"), setOutlines = fa
 {
   if (svgDiv.length == 0) return
   var svgDataBoundingBox = svgDiv[0].getBBox()
-  setOutlines && svgDiv.children("#outlines").css("stroke-width", ((Math.max(svgDataBoundingBox.width/svgDiv.width(), svgDataBoundingBox.height/svgDiv.height()))) + "rem")
+  if (setOutlines)
+  {
+    baseOutlineStrokeWidth = Math.max(svgDataBoundingBox.width/svgDiv.width(), svgDataBoundingBox.height/svgDiv.height())
+    svgDiv.children("#outlines").css("stroke-width", baseOutlineStrokeWidth + "rem")
+  }
   
   let viewBoxString = (svgDataBoundingBox.x) + " " + (svgDataBoundingBox.y) + " " + (svgDataBoundingBox.width) + " " + (svgDataBoundingBox.height)
   svgDiv[0].setAttribute('viewBox', viewBoxString)
@@ -1232,11 +1272,11 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
         // rather than whatever was last saved, since that's more current.
         if (svgPanZoomControllerOwnerID == zoomOwnerID)
         {
-          zoomStateToRestore = {pan: svgPanZoomController.getPan(), zoom: svgPanZoomController.getZoom()}
+          zoomStateToRestore = getRelativeZoomState(svgPanZoomController)
         }
         else if (svgPanZoomControllerOwnerID != null)
         {
-          savedMapZoomStates[svgPanZoomControllerOwnerID] = {pan: svgPanZoomController.getPan(), zoom: svgPanZoomController.getZoom()}
+          savedMapZoomStates[svgPanZoomControllerOwnerID] = getRelativeZoomState(svgPanZoomController)
         }
         svgPanZoomController.destroy()
       }
@@ -1258,14 +1298,18 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
         onZoom: (scale) => {
           document.getElementById("svgdefinitions").innerHTML = ""
           generateFlipPatternsFromPartyMap(politicalParties, 1/scale)
+
+          if (currentMapType.getID() == USAHouseMapType.getID() && baseOutlineStrokeWidth != null)
+          {
+            $("#outlines").css("stroke-width", (baseOutlineStrokeWidth/Math.pow(scale, 0.25)) + "rem")
+          }
         }
       })
       svgPanZoomControllerOwnerID = zoomOwnerID
 
       if (zoomStateToRestore)
       {
-        svgPanZoomController.zoom(zoomStateToRestore.zoom)
-        svgPanZoomController.pan(zoomStateToRestore.pan)
+        applyRelativeZoomState(svgPanZoomController, zoomStateToRestore)
       }
 
       if (fadeForNewSVG)
@@ -1277,10 +1321,12 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
         setTimeout(() => $('.svg-pan-zoom_viewport').css('transition', 'transform 0.1s ease'), 1)
       }
     }
+
+    $("#mapCloseButton").css('display', currentMapZoomRegion != null ? 'block' : 'none')
   }
-  else if (currentViewingState == ViewingState.viewing && currentMapType.getID() == UKHouseMapType.getID())
+  else if (currentViewingState == ViewingState.viewing && (currentMapType.getID() == UKHouseMapType.getID() || (currentMapType.getID() == USAHouseMapType.getID() && currentMapType.getMapSettingValue("showAllDistricts"))))
   {
-    var zoomOwnerID = UKHouseMapType.getID()
+    var zoomOwnerID = currentMapType.getID()
 
     if (!svgPanZoomController || svgPanZoomControllerOwnerID != zoomOwnerID || shouldReloadSVG)
     {
@@ -1291,11 +1337,11 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
         // whatever was last saved, since that's more current.
         if (svgPanZoomControllerOwnerID == zoomOwnerID)
         {
-          zoomStateToRestore = {pan: svgPanZoomController.getPan(), zoom: svgPanZoomController.getZoom()}
+          zoomStateToRestore = getRelativeZoomState(svgPanZoomController)
         }
         else if (svgPanZoomControllerOwnerID != null)
         {
-          savedMapZoomStates[svgPanZoomControllerOwnerID] = {pan: svgPanZoomController.getPan(), zoom: svgPanZoomController.getZoom()}
+          savedMapZoomStates[svgPanZoomControllerOwnerID] = getRelativeZoomState(svgPanZoomController)
         }
         svgPanZoomController.destroy()
       }
@@ -1318,14 +1364,18 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
         onZoom: (scale) => {
           document.getElementById("svgdefinitions").innerHTML = ""
           generateFlipPatternsFromPartyMap(politicalParties, 1/scale)
+
+          if (currentMapType.getID() == USAHouseMapType.getID() && baseOutlineStrokeWidth != null)
+          {
+            $("#outlines").css("stroke-width", (baseOutlineStrokeWidth/Math.pow(scale, 0.375)) + "rem")
+          }
         }
       })
       svgPanZoomControllerOwnerID = zoomOwnerID
 
       if (zoomStateToRestore)
       {
-        svgPanZoomController.zoom(zoomStateToRestore.zoom)
-        svgPanZoomController.pan(zoomStateToRestore.pan)
+        applyRelativeZoomState(svgPanZoomController, zoomStateToRestore)
       }
 
       if (fadeForNewSVG)
@@ -1345,7 +1395,7 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
   {
     if (svgPanZoomControllerOwnerID != null)
     {
-      savedMapZoomStates[svgPanZoomControllerOwnerID] = {pan: svgPanZoomController.getPan(), zoom: svgPanZoomController.getZoom()}
+      savedMapZoomStates[svgPanZoomControllerOwnerID] = getRelativeZoomState(svgPanZoomController)
     }
 
     svgPanZoomController.destroy()
@@ -1353,7 +1403,7 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
     svgPanZoomControllerOwnerID = null
 
     $("#mapZoomControls").trigger('hide')
-    $("#mapCloseButton").css('display', 'block')
+    $("#mapCloseButton").css('display', 'none')
   }
 
   showingDataMap = true

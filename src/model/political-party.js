@@ -117,29 +117,29 @@ const PoliticalPartyColors = {
 
 const PoliticalPartyColors = {                                                                                                          // Dutch Parties (WIP)
   red:      {current: "#541217", solid: "#880006", safe: "#be1c29", likely: "#ff5864", lean: "#ff8b98", tilt: "#cf8980"},   // PRO  PvdA
-  scarlet:  {current: "#5D1E0B", solid: "#992100", safe: "#D33A0B", likely: "#F56A40", lean: "#F79368", tilt: "#BF9878"},   // LN   GPV
-  orange:   {current: "#703008", solid: "#bd4301", safe: "#FF6200", likely: "#FF9E4B", lean: "#FFB682", tilt: "#D5B27A"},   // SGP 
-  yellow:   {current: "#6f4408", solid: "#B96800", safe: "#FE9800", likely: "#F9B04F", lean: "#FFC27C", tilt: "#cbb78a"},   // NSC  BIJ1  LPF   U55
-  olive:    {current: "#3D3504", solid: "#6B5900", safe: "#9E8900", likely: "#C2B704", lean: "#D1C64E", tilt: "#B6A764"},   // BBB
-  lime:     {current: "#364505", solid: "#4E6B00", safe: "#789c00", likely: "#98bf11", lean: "#BBD35B", tilt: "#B2BA6F"},   // GL   BP
-  green:    {current: "#103808", solid: "#066800", safe: "#24A30E", likely: "#5CC449", lean: "#91D785", tilt: "#96BA8F"},   // D66
-  teal:     {current: "#083025", solid: "#005139", safe: "#0E7F5F", likely: "#31AF76", lean: "#6CD9A4", tilt: "#84B5A5"},   // CDA
-  forest:   {current: "#17291E", solid: "#153D24", safe: "#2E5B3F", likely: "#547F65", lean: "#7CAD8E", tilt: "#83938D"},   // PvdD
-  willow:   {current: "#0F2624", solid: "#1C403C", safe: "#2a605a", likely: "#53948C", lean: "#8ac4b8", tilt: "#aec0be"},   // DNA  PPR
-  cyan:     {current: "#092B30", solid: "#00454F", safe: "#107281", likely: "#1DB8B3", lean: "#57DECB", tilt: "#76B3B3"},   // DENK
-  aqua:     {current: "#072837", solid: "#003B5B", safe: "#07587d", likely: "#2ba0d6", lean: "#66c2ff", tilt: "#a9caef"},   // CU   RPF
+  scarlet:  {current: "#5d1e0b", solid: "#992100", safe: "#d33a0b", likely: "#f56a40", lean: "#f79368", tilt: "#bf9878"},   // LN   GPV
+  orange:   {current: "#703008", solid: "#bd4301", safe: "#ff6200", likely: "#ff9e4b", lean: "#ffb682", tilt: "#d5b27a"},   // SGP 
+  yellow:   {current: "#6f4408", solid: "#b96800", safe: "#fe9800", likely: "#f9b04f", lean: "#ffc27c", tilt: "#cbb78a"},   // NSC  BIJ1  LPF   U55
+  olive:    {current: "#3d3504", solid: "#6b5900", safe: "#9e8900", likely: "#c2b704", lean: "#d1c64e", tilt: "#b6a764"},   // BBB
+  lime:     {current: "#364505", solid: "#4e6b00", safe: "#789c00", likely: "#98bf11", lean: "#bbd35b", tilt: "#b2ba6f"},   // GL   BP
+  green:    {current: "#103808", solid: "#066800", safe: "#24a30e", likely: "#5cc449", lean: "#91d785", tilt: "#96ba8f"},   // D66
+  teal:     {current: "#083025", solid: "#005139", safe: "#0e7f5f", likely: "#31af76", lean: "#6cd9a4", tilt: "#84b5a5"},   // CDA
+  forest:   {current: "#17291e", solid: "#153d24", safe: "#2e5b3f", likely: "#547f65", lean: "#7cad8e", tilt: "#83938d"},   // PvdD
+  willow:   {current: "#0f2624", solid: "#1c403c", safe: "#2a605a", likely: "#53948c", lean: "#8ac4b8", tilt: "#aec0be"},   // DNA  PPR
+  cyan:     {current: "#092b30", solid: "#00454f", safe: "#107281", likely: "#1db8b3", lean: "#57decb", tilt: "#76b3b3"},   // DENK
+  aqua:     {current: "#072837", solid: "#003b5b", safe: "#07587d", likely: "#2ba0d6", lean: "#66c2ff", tilt: "#a9caef"},   // CU   RPF
   blue:     {current: "#112042", solid: "#022163", safe: "#1c408c", likely: "#587ccc", lean: "#8aafff", tilt: "#949bb3"},   // VVD
-  blurple:  {current: "#1C1C38", solid: "#252359", safe: "#3A387C", likely: "#655FAF", lean: "#938FC9", tilt: "#B6B5CC"},   // PVV  CP
-  violet:   {current: "#2A184C", solid: "#350589", safe: "#5423A3", likely: "#8432FF", lean: "#B27FFF", tilt: "#AF9CBF"},   // Volt EVP
-  purple:   {current: "#3A1449", solid: "#540473", safe: "#7F23A3", likely: "#c928ff", lean: "#DD7FFF", tilt: "#BB9CBF"},   // 50+  AOV
-  magenta:  {current: "#4B072E", solid: "#7D0040", safe: "#AB0364", likely: "#E52B94", lean: "#DB5CAE", tilt: "#D394CA"},   // SP   DS70
-  pink:     {current: "#661836", solid: "#AD1650", safe: "#FF327D", likely: "#FF66AD", lean: "#FF89E1", tilt: "#CC7EBC"},   // CPN
-  plum:     {current: "#211019", solid: "#381B2B", safe: "#5E2F4A", likely: "#945178", lean: "#BF82A5", tilt: "#E2C3D3"},   // PSP
-  maroon:   {current: "#2D1011", solid: "#440A0B", safe: "#661E1F", likely: "#A04241", lean: "#AC6467", tilt: "#BA8C86"},   // FvD
-  brown:    {current: "#2B1A0B", solid: "#421F09", safe: "#663514", likely: "#A86234", lean: "#D88856", tilt: "#F7C2A6"},   // CD
-  tan:      {current: "#493B24", solid: "#6D5020", safe: "#A27A38", likely: "#BA9760", lean: "#d3b890", tilt: "#c2bca3"},   // 
-  char:     {current: "#1A1720", solid: "#292233", safe: "#463A53", likely: "#716083", lean: "#A293B6", tilt: "#D4CDE0"},   // JA21
-  gray:     {current: "#1A1C1C", solid: "#292A2B", safe: "#3f4140", likely: "#696A6D", lean: "#999A9B", tilt: "#D3D3D4"},   // ---
+  blurple:  {current: "#1c1c38", solid: "#252359", safe: "#3a387c", likely: "#655faf", lean: "#938fc9", tilt: "#b6b5cc"},   // PVV  CP
+  violet:   {current: "#2a184c", solid: "#350589", safe: "#5423a3", likely: "#8432ff", lean: "#b27fff", tilt: "#af9cbf"},   // Volt EVP
+  purple:   {current: "#3a1449", solid: "#540473", safe: "#7f23a3", likely: "#c928ff", lean: "#dd7fff", tilt: "#bb9cbf"},   // 50+  AOV
+  magenta:  {current: "#4b072e", solid: "#7d0040", safe: "#ab0364", likely: "#e52b94", lean: "#db5cae", tilt: "#d394ca"},   // SP   DS70
+  pink:     {current: "#661836", solid: "#ad1650", safe: "#ff327d", likely: "#ff66ad", lean: "#ff89e1", tilt: "#cc7ebc"},   // CPN
+  plum:     {current: "#211019", solid: "#381b2b", safe: "#5e2f4a", likely: "#945178", lean: "#bf82a5", tilt: "#e2c3d3"},   // PSP
+  maroon:   {current: "#2d1011", solid: "#440a0b", safe: "#661e1f", likely: "#a04241", lean: "#ac6467", tilt: "#ba8c86"},   // FvD
+  brown:    {current: "#2b1a0b", solid: "#421f09", safe: "#663514", likely: "#a86234", lean: "#d88856", tilt: "#f7c2a6"},   // CD
+  tan:      {current: "#493b24", solid: "#6d5020", safe: "#a27a38", likely: "#ba9760", lean: "#d3b890", tilt: "#c2bca3"},   // 
+  char:     {current: "#1a1720", solid: "#292233", safe: "#463a53", likely: "#716083", lean: "#a293b6", tilt: "#d4cde0"},   // JA21
+  gray:     {current: "#1a1c1c", solid: "#292a2b", safe: "#3f4140", likely: "#696a6d", lean: "#999a9b", tilt: "#d3d3d4"},   // ---
 }
 
 // Colors
@@ -276,7 +276,7 @@ const ConservativeParty = new PoliticalParty(
   ["Conservative"],
   "Con",
   "Conservative",
-  PoliticalPartyColors.aqua,
+  PoliticalPartyColors.orange,
   "CONP.png"
 )
 

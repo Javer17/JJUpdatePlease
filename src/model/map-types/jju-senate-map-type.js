@@ -86,6 +86,14 @@ var JJUSenateMapType = new MapType(
           let candidateName = row[columnMap.candidateName]
           let candidateVotes = row[columnMap.candidateVotes] ? Math.round(parseFloat(row[columnMap.candidateVotes])) : null
           let currentVoteshare = parseFloat(row[columnMap.voteshare])
+
+          const partyAffiliationSetting = currentMapType.getMapSettings()["partyAffiliations"]
+            if (partyAffiliationSetting == "ballot" && columnMap.ballotPartyID && row[columnMap.ballotPartyID]){
+              currentPartyName = row[columnMap.ballotPartyID]
+            }
+            else{
+              currentPartyName = row[columnMap.partyID]
+            }
         
           let currentPartyName = row[columnMap.partyID]
           let currentCoalition = coalitionPartyMap[candidateName] ?? coalitionPartyMap[currentPartyName]
@@ -745,6 +753,7 @@ var JJUSenateMapType = new MapType(
 		    isOffyear: "offyear",
 		    candidateName: "candidate",
 		    partyID: "party",
+        ballotPartyID: "ballotparty",
 		    voteshare: "voteshare",
 		    candidateVotes: "candidatevotes",
 		    totalVotes: "totalvotes",
