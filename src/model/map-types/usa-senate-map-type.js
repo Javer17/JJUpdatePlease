@@ -1871,7 +1871,7 @@ const USASenateMapType = new MapType(
     JJSenatePrediction.prepareMapDataFunction = async function()
     {
       return await fetchUpdatedSenatePredictions(
-        "./csv-sources/raw-discord-senate.csv",
+        "https://docs.google.com/spreadsheets/d/1GRaIlp8F123C1XiWESjGMgpKIDRd49H9xjAQEijcrMY/export?format=csv&gid=0",
         "./csv-sources/discord-senate.csv"
       )
     }
