@@ -80,6 +80,24 @@ class MapSource
   async loadMap(reloadCache, onlyAttemptLocalFetch, resetCandidateNames)
   {
     var self = this
+    var preparedMapData = null
+
+    if (self.prepareMapDataFunction)
+    {
+      try
+      {
+        preparedMapData = await self.prepareMapDataFunction(self)
+        if (preparedMapData != null)
+        {
+          self.resetMapData()
+          reloadCache = true
+        }
+      }
+      catch (error)
+      {
+        console.error(`Unable to prepare map data for ${self.id}`, error)
+      }
+    }
     
     reloadCache = reloadCache ? true : (self.dataURL ? !(await CSVDatabase.isSourceUpdated(self.id)) : false)
     resetCandidateNames = resetCandidateNames != null ? resetCandidateNames : true
@@ -87,7 +105,11 @@ class MapSource
     if ((self.rawMapData == null || reloadCache) && (self.dataURL || self.textMapData))
     {
       var textData
-      if (self.dataURL)
+      if (preparedMapData != null)
+      {
+        textData = preparedMapData
+      }
+      else if (self.dataURL)
       {
         textData = await self.loadMapCache(self, reloadCache, onlyAttemptLocalFetch)
       }

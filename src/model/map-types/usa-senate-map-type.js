@@ -1788,6 +1788,93 @@ const USASenateMapType = new MapType(
       true, // shouldShowVoteshare
       0.1 // voteshareCutoffMargin
     )
+
+    const JJSenatePrediction = new MapSource(
+      "Discord-Senate-Prediction", // id
+      "Discord Prediction", // name
+      "./csv-sources/discord-senate.csv", // dataURL
+      "https://en.wikipedia.org/wiki/", // homepageURL
+      {regular: "./assets/discord.png", mini: "./assets/discord.png"}, // iconURL
+      {
+        date: "date",
+        region: "region",
+        seatClass: "class",
+        isSpecial: "special",
+        isRunoff: "runoff",
+        isOffyear: "offyear",
+        candidateName: "candidate",
+        partyID: "party",
+        ballotPartyID: "ballotparty",
+        voteshare: "voteshare",
+        candidateVotes: "candidatevotes",
+        totalVotes: "totalvotes",
+        isHidden: "hidden"
+     }, // columnMap
+      2026, // cycleYear
+      null, // candidateNameToPartyIDMap
+      null, // shortCandidateNameOverride
+      regionNameToIDHistorical, // regionNameToIDMap
+      regionIDToLinkHistorical, // regionIDToLinkMap
+      null, // heldRegionMap
+      false, // shouldFilterOutDuplicateRows
+      true, // addDecimalPadding
+      doubleLineClassSeparatedFilterFunction, // organizeMapDataFunction
+      null, // viewingDataFunction
+      null, // zoomingDataFunction
+      null, // splitVoteDataFunction
+      null, // splitVoteDisplayOptions
+      getFormattedRegionName, // getFormattedRegionName
+      function(homepageURL, regionID, regionIDToLinkMap, mapDate, shouldOpenHomepage, mapData)
+      {
+        if (mapDate == null) { return }
+        
+        const regionData = mapData[mapDate.getTime()][regionID]
+        if (regionData && regionData.isHold && regionData.electionDate)
+        {
+          mapDate = new Date(regionData.electionDate)
+        }
+
+        let isSpecial = false
+        if (regionID != null && mapDate != null)
+        {
+          isSpecial = regionData.isSpecial
+        }
+
+        let linkToOpen = homepageURL + mapDate.getFullYear() + "_United_States_Senate_"
+        if (!shouldOpenHomepage)
+        {
+          let baseRegionID = regionID
+          if (isSpecial)
+          {
+            linkToOpen += "special_"
+          }
+          if (regionID.endsWith("-S"))
+          {
+            baseRegionID = regionID.slice(0, regionID.length-2)
+          }
+          linkToOpen += "election"
+          linkToOpen += "_in_" + regionIDToLinkMap[baseRegionID]
+        }
+        else
+        {
+          linkToOpen += "elections"
+        }
+        return linkToOpen
+      }, // customOpenRegionLinkFunction
+      null, // updateCustomMapFunction
+      null, // convertMapDataRowToCSVFunction
+      null, // isCustomMap
+      null, // shouldClearDisabled
+      true, // shouldShowVoteshare
+      0.1 // voteshareCutoffMargin
+    )
+    JJSenatePrediction.prepareMapDataFunction = async function()
+    {
+      return await fetchUpdatedSenatePredictions(
+        "./csv-sources/raw-discord-senate.csv",
+        "./csv-sources/discord-senate.csv"
+      )
+    }
     
     const VotehubSenatePolls2026MapSource = new MapSource(
       "Votehub-2026-Senate-Polls", // id
@@ -2005,12 +2092,13 @@ const USASenateMapType = new MapType(
     senateMapSources[VotehubSenatePolls2026MapSource.getID()] = VotehubSenatePolls2026MapSource
     senateMapSources[PastElectionResultMapSource.getID()] = PastElectionResultMapSource
     senateMapSources[CustomMapSource.getID()] = CustomMapSource
+    senateMapSources[JJSenatePrediction.getID()] = JJSenatePrediction
 
     const senateMapCycles = [2026, 2024, 2022]
     const senateMapSourceIDs = {
       [2022]: [FiveThirtyEightSenateProjection2022MapSource.getID(), LTESenateProjection2022MapSource.getID(), PASenateProjection2022MapSource.getID(), CookSenateProjection2022MapSource.getID(), SCBSenateProjection2022MapSource.getID()],
       [2024]: [FiveThirtyEightSenateProjection2024MapSource.getID(), PolymarketSenate2024MapSource.getID()],
-      [2026]: [VotehubSenateProjection2026MapSource.getID(), VotehubSenatePolls2026MapSource.getID(), LTESenateProjection2026MapSource.getID()],
+      [2026]: [JJSenatePrediction.getID(), VotehubSenateProjection2026MapSource.getID(), VotehubSenatePolls2026MapSource.getID(),  LTESenateProjection2026MapSource.getID()],
       [allYearsCycle]: [PastElectionResultMapSource.getID(), CustomMapSource.getID()]
     }
     

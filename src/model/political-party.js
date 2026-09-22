@@ -917,7 +917,7 @@ const UKReclaimParty = new PoliticalParty(
 
 const IndependentGenericParty = new PoliticalParty(
   "INDGEN",
-  ["Independent", "Ind", "Indy"],
+  ["Independent", "Ind", "Indy", "IndependentD", "IndependenR"],
   "Ind",
   "Independent",
   PoliticalPartyColors.gray,
