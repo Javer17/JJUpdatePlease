@@ -1439,6 +1439,7 @@ function updateMapElectoralVoteText()
 function updateNavBarForNewSource(revertToDefault, resetViewingState)
 {
   revertToDefault = revertToDefault == null ? false : revertToDefault
+  updateSubmissionCountVisibility(currentMapSource ? currentMapSource.getID() : null)
   $("#mapSourcesDropdownContainer .active").removeClass("active")
   if (revertToDefault)
   {
