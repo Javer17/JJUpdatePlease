@@ -26,7 +26,7 @@ var YAPPresidentMapType = new MapType(
     "CE": "Cerbska", 
     "AC": "Acalliana",
     "AR": "Armallos", 
-    "ST": "Stettigan",
+    "ST": "Settigan",
     "BL": "Blesna", 
     "LA": "Larimer", 
     "ES": "Estellia", 
@@ -51,7 +51,7 @@ var YAPPresidentMapType = new MapType(
   "Kostos": "KO",
   "Cerbska": "CE",
   "Armallos": "AR",
-  "Stettigan": "ST",
+  "Settigan": "ST",
   "Acalliana": "AC",
   "Blesna": "BL",
   "Larimer": "LA",
@@ -156,7 +156,7 @@ var YAPPresidentMapType = new MapType(
         voteshareSortedCandidateData.sort((cand1, cand2) => cand2.voteshare - cand1.voteshare)
         if (!isCustomMap && voteshareCutoffMargin != null)
         {
-          voteshareSortedCandidateData = voteshareSortedCandidateData.filter(candData => candData.voteshare >= voteshareCutoffMargin)
+          voteshareSortedCandidateData = filterCandidatesByVoteshareCutoff(voteshareSortedCandidateData, voteshareCutoffMargin)
         }
         
         if (voteshareSortedCandidateData.length == 0)

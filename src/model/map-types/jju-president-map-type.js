@@ -107,7 +107,7 @@ const JJUPresidentMapType = new MapType(
         voteshareSortedCandidateData.sort((cand1, cand2) => cand2.voteshare - cand1.voteshare)
         if (!isCustomMap && voteshareCutoffMargin != null)
         {
-          voteshareSortedCandidateData = voteshareSortedCandidateData.filter(candData => candData.voteshare >= voteshareCutoffMargin)
+          voteshareSortedCandidateData = filterCandidatesByVoteshareCutoff(voteshareSortedCandidateData, voteshareCutoffMargin)
         }
         
         if (voteshareSortedCandidateData.length == 0)

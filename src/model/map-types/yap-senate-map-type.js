@@ -22,7 +22,7 @@ var YAPSenateMapType = new MapType(
     "CE": "Cerbska", 
     "AR": "Armallos",
     "AC": "Acalliana", 
-    "ST": "Stettigan",
+    "ST": "Settigan",
     "BL": "Blesna", 
     "LA": "Larimer", 
     "ES": "Estellia", 
@@ -89,7 +89,7 @@ var YAPSenateMapType = new MapType(
   "Kostos": "KO",
   "Cerbska": "CE",
   "Armallos": "AR",
-  "Stettigan": "ST",
+  "Settigan": "ST",
   "Acalliana": "AC",
   "Blesna": "BL",
   "Larimer": "LA",
@@ -213,7 +213,7 @@ var YAPSenateMapType = new MapType(
         voteshareSortedCandidateData.sort((cand1, cand2) => cand2.voteshare - cand1.voteshare)
         if (!isCustomMap && voteshareCutoffMargin != null)
         {
-          voteshareSortedCandidateData = voteshareSortedCandidateData.filter(candData => candData.voteshare >= voteshareCutoffMargin)
+          voteshareSortedCandidateData = filterCandidatesByVoteshareCutoff(voteshareSortedCandidateData, voteshareCutoffMargin)
         }
         
         let greatestMarginPartyID
@@ -487,13 +487,13 @@ var YAPSenateMapType = new MapType(
     { //Date by end
       let mapDate = new Date(dateTime)
       
-      if (mapDate < new Date(2001, 12-1, 31-1))
+      if (mapDate < new Date(1001, 12-1, 31-1))
       {
         return "svg-sources/yap-states-ca2.svg"
       }
-      else if (mapDate < new Date(2002, 12-1, 31-1))
+ else if (mapDate < new Date(2002, 12-1, 31-1))
       {
-      return "svg-sources/yap-senate-10.svg"
+      return "svg-sources/yap-states.svg"
       }
       else
       {

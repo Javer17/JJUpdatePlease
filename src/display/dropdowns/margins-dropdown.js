@@ -10,6 +10,8 @@ function createMarginEditDropdownItems(shouldSetDefault)
   $("#marginsDropdownContainer").html("")
 
   addSolidMarginToggleRow()
+  addVoteshareCutoffRow()
+  $("#marginsDropdownContainer").append("<div class='dropdown-separator-big'></div>")
 
   for (let marginID of getActiveMarginKeys())
   {
@@ -27,12 +29,38 @@ function addSolidMarginToggleRow()
     "<span style='display:inline-flex; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; flex:1 1 auto; margin-right: 1.5rem;'>➕Solid</span>" +
     "<span style='font-family: \"Bree5erif-Mono\"; opacity: 0.8; flex:0 0 auto; white-space:nowrap;'>" + (solidMarginEnabled ? "Enabled" : "Disabled") + "</span>" +
     "</a>")
-  $("#marginsDropdownContainer").append("<div class='dropdown-separator-big'></div>")
+}
+
+function addVoteshareCutoffRow()
+{
+  const cutoffMargin = currentMapSource.getVoteshareCutoffMargin() ?? 0
+  $("#marginsDropdownContainer").append("<a id='voteshareCutoffMargin-edit' onclick='toggleMarginEditing(\"voteshareCutoffMargin\", this)'>📊Min Voteshare<span style='float: right; font-family: \"Bree5erif-Mono\"'>" + formatVoteshareCutoffMargin(cutoffMargin) + "</span></a>")
+}
+
+function formatVoteshareCutoffMargin(cutoffMargin)
+{
+  return Number(cutoffMargin).toLocaleString("en-US", {useGrouping: false, minimumFractionDigits: 1, maximumFractionDigits: 20})
 }
 
 function toggleMarginEditing(marginID, div)
 {
-  if (editMarginID)
+  if (editMarginID == "voteshareCutoffMargin")
+  {
+    const cutoffInput = $("#voteshareCutoffMargin-text")
+    const inputValue = cutoffInput.val()
+    const previousCutoff = currentMapSource.getVoteshareCutoffMargin() ?? 0
+    const requestedCutoff = typeof inputValue != "string" || inputValue.trim() == "" ? NaN : Number(inputValue)
+    const cutoffMargin = Number.isFinite(requestedCutoff) ? Math.max(0, Math.min(100, requestedCutoff)) : previousCutoff
+
+    currentMapSource.setVoteshareCutoffMarginOverride(cutoffMargin)
+    $("#voteshareCutoffMargin-edit").html("📊️Min Voteshare<span style='float: right; font-family: \"Bree5erif-Mono\"'>" + formatVoteshareCutoffMargin(cutoffMargin) + "</span>")
+
+    if (cutoffMargin != previousCutoff && showingDataMap)
+    {
+      downloadDataForMapSource(currentMapSource.getID(), {}, null, false, true)
+    }
+  }
+  else if (editMarginID)
   {
     let marginValueToSet = parseFloat($("#" + editMarginID + "-text").val()) || defaultMarginValues[editMarginID]
     marginValueToSet = Math.round(marginValueToSet*Math.pow(10, 1))/Math.pow(10, 1)
@@ -80,7 +108,14 @@ function toggleMarginEditing(marginID, div)
 
   if (marginID)
   {
-    $(div).html(marginNames[marginID] + "<input class='textInput' type='text' id='" + marginID + "-text' value='" + marginValues[marginID] + "'>")
+    if (marginID == "voteshareCutoffMargin")
+    {
+      $(div).html("📊️Min Voteshare<input class='textInput' type='text' id='voteshareCutoffMargin-text' value='" + formatVoteshareCutoffMargin(currentMapSource.getVoteshareCutoffMargin() ?? 0) + "'>")
+    }
+    else
+    {
+      $(div).html(marginNames[marginID] + "<input class='textInput' type='text' id='" + marginID + "-text' value='" + marginValues[marginID] + "'>")
+    }
     $("#" + marginID + "-text").focus()
 
     $("#marginEditButton").addClass('active')

@@ -33,6 +33,7 @@ class MapSource
     this.shouldClearDisabled = shouldClearDisabled == null ? true : shouldClearDisabled
     this.shouldShowVoteshare = shouldShowVoteshare == null ? false : shouldShowVoteshare
     this.voteshareCutoffMargin = voteshareCutoffMargin
+    this.voteshareCutoffMarginOverride = null
     this.overrideSVGPath = overrideSVGPath
     this.shouldSetDisabledWorthToZero = shouldSetDisabledWorthToZero == null ? false : shouldSetDisabledWorthToZero
     this.shouldUseOriginalMapDataForTotalsPieChart = shouldUseOriginalMapDataForTotalsPieChart == null ? false : shouldUseOriginalMapDataForTotalsPieChart
@@ -213,7 +214,17 @@ class MapSource
   
   async executeFilter(rawData, mapDates, self = this, ...args)
   {
-    return await self.filterMapDataFunction(rawData, mapDates, self.columnMap, self.cycleYear, self.candidateNameToPartyIDMap, self.regionNameToIDMap, self.heldRegionMap, self.shouldFilterOutDuplicateRows, self.isCustomMap, self.voteshareCutoffMargin, !self.isCustomMap || self.editingMode == EditingMode.voteshare, ...args)
+    return await self.filterMapDataFunction(rawData, mapDates, self.columnMap, self.cycleYear, self.candidateNameToPartyIDMap, self.regionNameToIDMap, self.heldRegionMap, self.shouldFilterOutDuplicateRows, self.isCustomMap, self.getVoteshareCutoffMargin(), !self.isCustomMap || self.editingMode == EditingMode.voteshare, ...args)
+  }
+
+  getVoteshareCutoffMargin()
+  {
+    return this.voteshareCutoffMarginOverride ?? this.voteshareCutoffMargin
+  }
+
+  setVoteshareCutoffMarginOverride(cutoffMargin)
+  {
+    this.voteshareCutoffMarginOverride = cutoffMargin
   }
 
   async loadMapCache(self, reloadCache, onlyAttemptLocalFetch)

@@ -205,16 +205,14 @@
        xml:space="preserve"
        text-anchor="middle"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;white-space:pre;display:inline;visibility:visible;fill:#ffffff;fill-opacity:1;stroke-width:2.77167;stroke-dasharray:none"
-       id="MA-text"
-       inkscape:label="MA-text">MA</text>
+       id="MA-text">MA</text>
     <text
        x="1152.4558"
        y="130.99527"
        xml:space="preserve"
        text-anchor="middle"
        style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;white-space:pre;display:inline;visibility:visible;fill:#ffffff;fill-opacity:1;stroke-width:2.77167;stroke-dasharray:none"
-       id="text48"
-       inkscape:label="NQ-text">NQ</text>
+       id="NQ-text">NQ</text>
     <text
        x="1212.0092"
        y="187.56456"

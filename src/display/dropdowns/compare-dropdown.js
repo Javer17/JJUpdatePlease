@@ -448,8 +448,8 @@ async function applyCompareToCustomMap(shouldResetRound = false)
 {
   if (compareMapDataArray.length < 2 || compareMapDataArray[0] == null || compareMapDataArray[1] == null) { return }
 
-  let voteshareCutoffMargin0 = mapSources[compareMapSourceIDArray[0]].voteshareCutoffMargin
-  let voteshareCutoffMargin1 = mapSources[compareMapSourceIDArray[1]].voteshareCutoffMargin
+  let voteshareCutoffMargin0 = mapSources[compareMapSourceIDArray[0]].getVoteshareCutoffMargin()
+  let voteshareCutoffMargin1 = mapSources[compareMapSourceIDArray[1]].getVoteshareCutoffMargin()
   
   if (shouldResetRound)
   {

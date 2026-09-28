@@ -33,6 +33,25 @@ function roundValue(valueToRound, decimalPlaceToRound)
   return Math.round(valueToRound*Math.pow(10, decimalPlaceToRound))/Math.pow(10, decimalPlaceToRound)
 }
 
+function filterCandidatesByVoteshareCutoff(candidateData, cutoffMargin)
+{
+  if (cutoffMargin == null)
+  {
+    return candidateData
+  }
+
+  const candidatesWithValidVoteshare = candidateData.filter(candidate => Number.isFinite(Number(candidate?.voteshare)))
+  const candidatesAboveCutoff = candidatesWithValidVoteshare.filter(candidate => Number(candidate.voteshare) >= Number(cutoffMargin))
+  if (candidatesAboveCutoff.length > 0)
+  {
+    return candidatesAboveCutoff
+  }
+
+  return candidatesWithValidVoteshare
+    .sort((candidateA, candidateB) => Number(candidateB.voteshare) - Number(candidateA.voteshare))
+    .slice(0, 2)
+}
+
 function roundValueToPlace(valueToRound, figuresToInclude)
 {
   let decimalPlaceToRound = Math.floor(-Math.log(valueToRound)/Math.log(10)+figuresToInclude)

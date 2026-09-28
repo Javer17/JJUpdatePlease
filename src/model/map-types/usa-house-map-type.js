@@ -103,7 +103,7 @@ const USAHouseMapType = new MapType(
         }
 
         let voteshareSortedCandidateData = formattedCandidatesArray.sort((cand1, cand2) => cand2.voteshare - cand1.voteshare)
-        voteshareSortedCandidateData = voteshareSortedCandidateData.filter(candData => candData.voteshare >= voteshareCutoffMargin)
+        voteshareSortedCandidateData = filterCandidatesByVoteshareCutoff(voteshareSortedCandidateData, voteshareCutoffMargin)
 
         if (voteshareSortedCandidateData.length == 0)
         {
@@ -214,7 +214,7 @@ const USAHouseMapType = new MapType(
           }
 
           let voteshareSortedCandidateData = candidateArray.sort((cand1, cand2) => cand2.voteshare - cand1.voteshare)
-          voteshareSortedCandidateData = voteshareSortedCandidateData.filter(candData => candData.voteshare >= voteshareCutoffMargin)
+          voteshareSortedCandidateData = filterCandidatesByVoteshareCutoff(voteshareSortedCandidateData, voteshareCutoffMargin)
 
           if (voteshareSortedCandidateData.length == 0)
           {
@@ -416,7 +416,7 @@ const USAHouseMapType = new MapType(
             voteshareSortedCandidateData.sort((cand1, cand2) => cand2.voteshare - cand1.voteshare)
             if (!isCustomMap && voteshareCutoffMargin != null)
             {
-              voteshareSortedCandidateData = voteshareSortedCandidateData.filter(candData => candData.voteshare >= voteshareCutoffMargin)
+              voteshareSortedCandidateData = filterCandidatesByVoteshareCutoff(voteshareSortedCandidateData, voteshareCutoffMargin)
             }
 
             if (voteshareSortedCandidateData.length == 0)

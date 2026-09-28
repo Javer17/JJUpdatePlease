@@ -1943,13 +1943,16 @@ async function updateRegionFillColors(regionIDsToUpdate, regionData, shouldUpdat
     {
       fillColor = regionDisabledColor
 
-      var regionsToHide = currentMapType.getRegionsToHideOnDisable()
-      for (var regexNum in regionsToHide)
+      if (!currentMapSource.isCustom() || regionData.partyID != null)
       {
-        if (regionsToHide[regexNum].test(regionData.region))
+        var regionsToHide = currentMapType.getRegionsToHideOnDisable()
+        for (var regexNum in regionsToHide)
         {
-          shouldHide = true
-          break
+          if (regionsToHide[regexNum].test(regionData.region))
+          {
+            shouldHide = true
+            break
+          }
         }
       }
     }
@@ -1988,6 +1991,29 @@ async function updateRegionFillColors(regionIDsToUpdate, regionData, shouldUpdat
     fillColor = getMarginColorForIndex(politicalParties[regionData.partyID].getMarginColors(), marginIndex)
   }
   
+  for (let regionID of regionIDsToUpdate)
+  {
+    const textID = regionID + "-text"
+    let textLabel = document.getElementById(textID)
+
+    if (textLabel == null)
+    {
+      for (let candidateLabel of document.getElementsByTagName("text"))
+      {
+        if (candidateLabel.getAttribute("inkscape:label") == textID)
+        {
+          textLabel = candidateLabel
+          break
+        }
+      }
+    }
+
+    if (textLabel != null)
+    {
+      textLabel.style.fill = regionData.disabled ? "gray" : "white"
+    }
+  }
+
   if (fillColor == null) { return }
 
   if (!isDisabledOrTossup && currentMapType.getMapSettingValue("flipStates") && regionData.flip && !(canUseVoteSplitsForColor && currentViewingState == ViewingState.splitVote))
@@ -2014,11 +2040,6 @@ async function updateRegionFillColors(regionIDsToUpdate, regionData, shouldUpdat
     {
       regionDiv.css('pointer-events', 'inherit')
     }
-  }
-
-  for (let regionID of regionIDsToUpdate)
-  {
-    $("#" + regionID + "-text").css('fill', regionData.disabled ? 'gray' : 'white')
   }
 
   if (shouldUpdatePieChart == null || shouldUpdatePieChart == true)
@@ -2163,6 +2184,8 @@ function getPartyTotals(includeFlipData)
   for (var regionID in regionDataArray)
   {
     if (regionID == nationalPopularVoteID || regionID.endsWith(subregionSeparator + statePopularVoteDistrictID)) { continue }
+    var candidateVoteshareData = regionDataArray[regionID].partyVotesharePercentages
+    if (Array.isArray(candidateVoteshareData) && candidateVoteshareData.reduce((total, candidate) => total + candidate.voteshare, 0) == 0) { continue }
 
     var currentRegionEV = currentMapType.getEV(getCurrentDecade(), regionID, regionDataArray[regionID]) ?? regionDataArray[regionID].voteWorth
 

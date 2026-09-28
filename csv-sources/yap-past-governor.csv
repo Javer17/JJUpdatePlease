@@ -1,28 +1,44 @@
 date,region,candidate,party,offyear,runoff,voteshare,disabled
-03/08/1000,National Popular Vote,Independent,independent,FALSE,FALSE,17.39,
-03/08/1000,National Popular Vote,Social Gospel Party,sgp,FALSE,FALSE,8.7,
-03/08/1000,National Popular Vote,Labour,labour,FALSE,FALSE,21.74,
-03/08/1000,National Popular Vote,Republican Federation,sdf,FALSE,FALSE,17.39,
-03/08/1000,National Popular Vote,Reform Party,reform,FALSE,FALSE,34.78,
-03/08/1000,Matatheste,Mokaeo,sgp,FALSE,FALSE,100,
-03/08/1000,New Queria,JoR,sgp,FALSE,FALSE,60.22,
-03/08/1000,New Queria,Len Pinecone,reform,FALSE,FALSE,39.78,
-03/08/1000,Yapburgh,Superboy,reform,FALSE,FALSE,100,
-03/08/1000,Opplica,Kennedy Teagan,reform,FALSE,FALSE,100,
-03/08/1000,Rorcia,Francisco Pierre,independent,FALSE,FALSE,100,
-03/08/1000,Larimer,Edmund Montfort,reform,FALSE,FALSE,70.12,
-03/08/1000,Larimer,Aye,independent,FALSE,FALSE,14.98,
-03/08/1000,Larimer,Baudshaw,sdf,FALSE,FALSE,14.9,
-03/08/1000,Taclima,,,,,0,TRUE
-03/08/1000,Porcerle,,,,,0,TRUE
-03/08/1000,Estellia,Jeff Haffley,labour,FALSE,FALSE,100,
-03/08/1000,Stettigan,EeveeGamer,reform,FALSE,FALSE,59.11,
-03/08/1000,Stettigan,Capy,sdf,FALSE,FALSE,40.89,
-03/08/1000,Acalliana,Scott Osborn,independent,FALSE,FALSE,100,
-03/08/1000,Cerbska,,,,,0,TRUE
-03/08/1000,Armallos,DairyDuke,reform,FALSE,FALSE,100,
-03/08/1000,Cambria,,,,,0,TRUE
-03/08/1000,Calleoria,LuveelVoom,sdf,FALSE,FALSE,97.49,
-03/08/1000,Calleoria,Tristiano,labour,FALSE,FALSE,2.51,
-03/08/1000,Blesna,Rick,labour,FALSE,FALSE,100,
-03/08/1000,Kostos,The_Green_Bean,reform,FALSE,FALSE,100,
+08/03/1000,National Popular Vote,Independent,independent,FALSE,FALSE,17.39,
+08/03/1000,National Popular Vote,Social Gospel Party,sgp,FALSE,FALSE,8.7,
+08/03/1000,National Popular Vote,Labour,labour,FALSE,FALSE,21.74,
+08/03/1000,National Popular Vote,Republican Federation,sdf,FALSE,FALSE,17.39,
+08/03/1000,National Popular Vote,Reform Party,reform,FALSE,FALSE,34.78,
+08/03/1000,Matatheste,Mokaeo,sgp,FALSE,FALSE,100,
+08/03/1000,New Queria,JoR,sgp,FALSE,FALSE,60.22,
+08/03/1000,New Queria,Len Pinecone,reform,FALSE,FALSE,39.78,
+08/03/1000,Yapburgh,Superboy,reform,FALSE,FALSE,100,
+08/03/1000,Opplica,Kennedy Teagan,reform,FALSE,FALSE,100,
+08/03/1000,Rorcia,Francisco Pierre,independent,FALSE,FALSE,100,
+08/03/1000,Larimer,Edmund Montfort,reform,FALSE,FALSE,70.12,
+08/03/1000,Larimer,Aye,independent,FALSE,FALSE,14.98,
+08/03/1000,Larimer,Baudshaw,sdf,FALSE,FALSE,14.9,
+08/03/1000,Taclima,,,,,0,TRUE
+08/03/1000,Porcerle,,,,,0,TRUE
+08/03/1000,Estellia,Jeff Haffley,labour,FALSE,FALSE,100,
+08/03/1000,Settigan,EeveeGamer,reform,FALSE,FALSE,59.11,
+08/03/1000,Settigan,Capy,sdf,FALSE,FALSE,40.89,
+08/03/1000,Acalliana,Scott Osborn,independent,FALSE,FALSE,100,
+08/03/1000,Cerbska,,,,,0,TRUE
+08/03/1000,Armallos,DairyDuke,reform,FALSE,FALSE,100,
+08/03/1000,Cambria,,,,,0,TRUE
+08/03/1000,Calleoria,LuveelVoom,sdf,FALSE,FALSE,97.49,
+08/03/1000,Calleoria,Tristiano,labour,FALSE,FALSE,2.51,
+08/03/1000,Blesna,Rick,labour,FALSE,FALSE,100,
+08/03/1000,Kostos,The_Green_Bean,reform,FALSE,FALSE,100,
+08/30/1002,Larimer,Shane Daniels,sdf,FALSE,FALSE,100,
+08/30/1002,New Queria,JoR,reform,FALSE,FALSE,100,
+08/30/1002,Rorcia,Francisco Pierre,labour,FALSE,FALSE,100,
+08/30/1002,Settigan,Eiki Shiki,reform,FALSE,FALSE,100,
+08/30/1002,Yapburgh,Su Tart,sgp,FALSE,FALSE,100,
+08/30/1002,Cambria,,,,,0,TRUE
+08/30/1002,Kostos,,,,,0,TRUE
+08/30/1002,Blesna,,,,,0,TRUE
+08/30/1002,Cerbska,,,,,0,TRUE
+08/30/1002,Armallos,,,,,0,TRUE
+08/30/1002,Acalliana,,,,,0,TRUE
+08/30/1002,Estellia,,,,,0,TRUE
+08/30/1002,Taclima,,,,,0,TRUE
+08/30/1002,Matatheste,,,,,0,TRUE
+08/30/1002,Opplica,,,,,0,TRUE
+08/30/1002,Porcerle,,,,,0,TRUE
