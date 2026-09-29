@@ -33,21 +33,22 @@ function roundValue(valueToRound, decimalPlaceToRound)
   return Math.round(valueToRound*Math.pow(10, decimalPlaceToRound))/Math.pow(10, decimalPlaceToRound)
 }
 
-function filterCandidatesByVoteshareCutoff(candidateData, cutoffMargin)
+function filterCandidatesByVoteshareCutoff(candidateData, cutoffMargin, regionID)
 {
-  if (cutoffMargin == null)
+  if (cutoffMargin == null || regionID == nationalPopularVoteID || regionID == "National Popular Vote")
   {
     return candidateData
   }
 
   const candidatesWithValidVoteshare = candidateData.filter(candidate => Number.isFinite(Number(candidate?.voteshare)))
   const candidatesAboveCutoff = candidatesWithValidVoteshare.filter(candidate => Number(candidate.voteshare) >= Number(cutoffMargin))
-  if (candidatesAboveCutoff.length > 0)
+  if (candidatesAboveCutoff.length >= 2)
   {
     return candidatesAboveCutoff
   }
 
   return candidatesWithValidVoteshare
+    .slice()
     .sort((candidateA, candidateB) => Number(candidateB.voteshare) - Number(candidateA.voteshare))
     .slice(0, 2)
 }

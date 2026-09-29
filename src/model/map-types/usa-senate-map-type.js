@@ -129,7 +129,7 @@ const USASenateMapType = new MapType(
         }
 
         let voteshareSortedCandidateData = formattedCandidatesArray.sort((cand1, cand2) => cand2.voteshare - cand1.voteshare)
-        voteshareSortedCandidateData = filterCandidatesByVoteshareCutoff(voteshareSortedCandidateData, voteshareCutoffMargin)
+        voteshareSortedCandidateData = filterCandidatesByVoteshareCutoff(voteshareSortedCandidateData, voteshareCutoffMargin, regionID)
 
         if (voteshareSortedCandidateData.length == 0)
         {
@@ -544,7 +544,7 @@ const USASenateMapType = new MapType(
           }
 
           let voteshareSortedCandidateData = candidateArray.sort((cand1, cand2) => cand2.voteshare - cand1.voteshare)
-          voteshareSortedCandidateData = filterCandidatesByVoteshareCutoff(voteshareSortedCandidateData, voteshareCutoffMargin)
+          voteshareSortedCandidateData = filterCandidatesByVoteshareCutoff(voteshareSortedCandidateData, voteshareCutoffMargin, regionID)
 
           if (voteshareSortedCandidateData.length == 0)
           {
@@ -711,7 +711,7 @@ const USASenateMapType = new MapType(
             voteshareSortedCandidateData.sort((cand1, cand2) => cand2.voteshare - cand1.voteshare)
             if (!isCustomMap && voteshareCutoffMargin != null)
             {
-              voteshareSortedCandidateData = filterCandidatesByVoteshareCutoff(voteshareSortedCandidateData, voteshareCutoffMargin)
+              voteshareSortedCandidateData = filterCandidatesByVoteshareCutoff(voteshareSortedCandidateData, voteshareCutoffMargin, fullRegionName)
             }
 
             if (voteshareSortedCandidateData.length == 0)

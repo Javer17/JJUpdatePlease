@@ -434,7 +434,7 @@ const USAPresidentMapType = new MapType(
           voteshareSortedCandidateData.sort((cand1, cand2) => cand2.voteshare - cand1.voteshare)
           if (!isCustomMap && voteshareCutoffMargin != null)
           {
-            voteshareSortedCandidateData = filterCandidatesByVoteshareCutoff(voteshareSortedCandidateData, voteshareCutoffMargin)
+            voteshareSortedCandidateData = filterCandidatesByVoteshareCutoff(voteshareSortedCandidateData, voteshareCutoffMargin, regionToFind)
           }
 
           if (voteshareSortedCandidateData.length == 0)
@@ -623,7 +623,7 @@ const USAPresidentMapType = new MapType(
         }
     
         let voteshareSortedCandidateData = formattedCandidatesArray.sort((cand1, cand2) => cand2.voteshare - cand1.voteshare)
-        voteshareSortedCandidateData = filterCandidatesByVoteshareCutoff(voteshareSortedCandidateData, voteshareCutoffMargin)
+        voteshareSortedCandidateData = filterCandidatesByVoteshareCutoff(voteshareSortedCandidateData, voteshareCutoffMargin, regionID)
     
         if (voteshareSortedCandidateData.length == 0)
         {
@@ -1010,7 +1010,7 @@ const USAPresidentMapType = new MapType(
         voteshareSortedCandidateData.sort((cand1, cand2) => cand2.voteshare - cand1.voteshare)
         if (!isCustomMap && voteshareCutoffMargin != null)
         {
-          voteshareSortedCandidateData = filterCandidatesByVoteshareCutoff(voteshareSortedCandidateData, voteshareCutoffMargin)
+          voteshareSortedCandidateData = filterCandidatesByVoteshareCutoff(voteshareSortedCandidateData, voteshareCutoffMargin, regionToFind)
         }
 
         if (voteshareSortedCandidateData.length == 0)
