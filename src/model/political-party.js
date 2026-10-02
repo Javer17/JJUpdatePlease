@@ -139,7 +139,7 @@ const PoliticalPartyColors = {                                                  
   brown:    {current: "#2b1a0b", solid: "#421f09", safe: "#663514", likely: "#a86234", lean: "#d88856", tilt: "#f7c2a6"},   // CD
   tan:      {current: "#493b24", solid: "#6d5020", safe: "#a27a38", likely: "#ba9760", lean: "#d3b890", tilt: "#c2bca3"},   // 
   char:     {current: "#1a1720", solid: "#292233", safe: "#463a53", likely: "#716083", lean: "#a293b6", tilt: "#d4cde0"},   // JA21
-  gray:     {current: "#1a1c1c", solid: "#282829", safe: "#3f4140", likely: "#696a6d", lean: "#999a9b", tilt: "#d3d3d4"},   // ---
+  gray:     {current: "#1a1c1c", solid: "#282829", safe: "#3f4140", likely: "#63656d", lean: "#999a9b", tilt: "#d3d3d4"},   // ---
 }
 
 // Colors

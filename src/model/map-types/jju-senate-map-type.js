@@ -78,6 +78,7 @@ var JJUSenateMapType = new MapType(
         let isOffyear = mapDataRows[0][columnMap.isOffyear] == "TRUE"
         
         let candidateData = {}
+        const fullRegionName = regionID
         
         for (let rowNum in mapDataRows)
         {
@@ -88,14 +89,14 @@ var JJUSenateMapType = new MapType(
           let currentVoteshare = parseFloat(row[columnMap.voteshare])
 
           const partyAffiliationSetting = currentMapType.getMapSettings()["partyAffiliations"]
-            if (partyAffiliationSetting == "ballot" && columnMap.ballotPartyID && row[columnMap.ballotPartyID]){
-              currentPartyName = row[columnMap.ballotPartyID]
-            }
-            else{
-              currentPartyName = row[columnMap.partyID]
-            }
-        
-          let currentPartyName = row[columnMap.partyID]
+          let currentPartyName
+          if (partyAffiliationSetting == "ballot" && columnMap.ballotPartyID && row[columnMap.ballotPartyID]){
+            currentPartyName = row[columnMap.ballotPartyID]
+          }
+          else{
+            currentPartyName = row[columnMap.partyID]
+          }
+
           let currentCoalition = coalitionPartyMap[candidateName] ?? coalitionPartyMap[currentPartyName]
           if (currentMapType.getMapSettingValue("coalitions") && currentCoalition)
           {
@@ -147,12 +148,12 @@ var JJUSenateMapType = new MapType(
         voteshareSortedCandidateData.sort((cand1, cand2) => cand2.voteshare - cand1.voteshare)
         if (!isCustomMap && voteshareCutoffMargin != null)
         {
-          voteshareSortedCandidateData = filterCandidatesByVoteshareCutoff(voteshareSortedCandidateData, voteshareCutoffMargin, regionID)
+          voteshareSortedCandidateData = filterCandidatesByVoteshareCutoff(voteshareSortedCandidateData, voteshareCutoffMargin, fullRegionName)
         }
         
         if (voteshareSortedCandidateData.length == 0)
         {
-          console.log("No candidate data!", currentMapDate.getFullYear().toString(), regionID)
+          console.log("No candidate data!", currentMapDate.getFullYear().toString(), fullRegionName)
           return
         }
         
