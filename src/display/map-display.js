@@ -2290,6 +2290,10 @@ function getCurrentDecade()
   {
     dateForDecade = currentSliderDate
   }
+  if (currentMapType.getID() == "YAP-President")
+  {
+    return (dateForDecade || new Date()).getFullYear()
+  }
   return getDecadeFromDate(dateForDecade)
 }
 

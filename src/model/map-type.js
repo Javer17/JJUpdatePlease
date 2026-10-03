@@ -408,7 +408,8 @@ const regionEVArray = {
 }
 
 const regionEVArrayYAP = {
-  1000: {"AC":1, "AR": 1, "BL":2, "CA":10, "CE":1, "CM":1, "DF":2, "ES":1, "KO":1, "LA":5, "MA": 3, "NQ":7, "OP":2, "PR":0, "RO":5, "ST":4, "TL":0}
+  1000: {"AC":1, "AR": 1, "BL":2, "CA":10, "CE":1, "CM":1, "DF":2, "ES":1, "KO":1, "LA":5, "MA": 3, "NQ":7, "OP":2, "PR":0, "RO":5, "ST":4, "TL":0},
+  1004: {"AC":6, "AR": 15, "BL":19, "CA":30, "CE":7, "CM":26, "DF":34, "ES":23, "KO":10, "LA":23, "MA": 19, "NQ":34, "OP":7, "PR":12, "RO":7, "ST":26, "TL":12, "ADD1": 346,"ADD2": 282, "ADD3": 34, "ADD4": 13}
 }
 
 var mapTypes = {}
