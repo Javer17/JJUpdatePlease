@@ -436,7 +436,11 @@ const USASenateMapType = new MapType(
           
           for (const candidate of candidateList)
           {
-            const candidateDateData = dateData.candidates.find(c => c.id == candidate.id)
+            let candidateDateData = dateData.candidates.find(c => c.id == candidate.id)
+            if (!candidateDateData)
+            {
+              candidateDateData = dateData.candidates.find(c => c.id.slice(0, -1) == candidate.id.slice(0, -1))
+            }
             
             const voteshare = candidateDateData?.[columnMap.voteshare]
             const margin = columnMap.margin ? candidateDateData?.[columnMap.margin] : undefined
@@ -1866,15 +1870,16 @@ const USASenateMapType = new MapType(
       null, // isCustomMap
       null, // shouldClearDisabled
       true, // shouldShowVoteshare
-      0.1 // voteshareCutoffMargin
+      0.1, // voteshareCutoffMargin
+      null, // overrideSVGPath
+      null, // shouldSetDisabledWorthToZero
+      null, // shouldUseOriginalMapDataForTotalsPieChart
+      null, // shouldForcePopularVoteDisplay
+      function() {return solidMarginEnabled
+      ? {solid: 15, safe: 10, likely: 5, lean: 1, tilt: Number.MIN_VALUE}
+      : {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}}, // customDefaultMargins
     )
-    JJSenatePrediction.prepareMapDataFunction = async function()
-    {
-      return await fetchUpdatedSenatePredictions(
-        "https://docs.google.com/spreadsheets/d/1GRaIlp8F123C1XiWESjGMgpKIDRd49H9xjAQEijcrMY/export?format=csv&gid=0",
-        "./csv-sources/discord-senate.csv"
-      )
-    }
+    configurePredictionMapSource(JJSenatePrediction, PREDICTION_SOURCE_CONFIGS.senate)
     
     const VotehubSenatePolls2026MapSource = new MapSource(
       "Votehub-2026-Senate-Polls", // id

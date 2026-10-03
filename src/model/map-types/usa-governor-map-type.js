@@ -48,7 +48,7 @@ const USAGovernorMapType = new MapType(
   ],
   () => {
     const regionNameToIDHistorical = {"Alabama":"AL", "Alaska":"AK", "Arizona":"AZ", "Arkansas":"AR", "California":"CA", "Colorado":"CO", "Connecticut":"CT", "Delaware":"DE", "Florida":"FL", "Georgia":"GA", "Hawaii":"HI", "Idaho":"ID", "Illinois":"IL", "Indiana":"IN", "Iowa":"IA", "Kansas":"KS", "Kentucky":"KY", "Louisiana":"LA", "Maine":"ME", "Maryland":"MD", "Massachusetts":"MA", "Michigan":"MI", "Minnesota":"MN", "Mississippi":"MS", "Missouri":"MO", "Montana":"MT", "Nebraska":"NE", "Nevada":"NV", "New Hampshire":"NH", "New Jersey":"NJ", "New Mexico":"NM", "New York":"NY", "North Carolina":"NC", "North Dakota":"ND", "Ohio":"OH", "Oklahoma":"OK", "Oregon":"OR", "Pennsylvania":"PA", "Rhode Island":"RI", "South Carolina":"SC", "South Dakota":"SD", "Tennessee":"TN", "Texas":"TX", "Utah":"UT", "Vermont":"VT", "Virginia":"VA", "Washington":"WA", "West Virginia":"WV", "Wisconsin":"WI", "Wyoming":"WY", "National Popular Vote":nationalPopularVoteID}
-    
+
     const regionIDToLinkBase = {"AL":"alabama", "AK":"alaska", "AZ":"arizona", "AR":"arkansas", "CA":"california", "CO":"colorado", "CT":"connecticut", "DE":"delaware", "FL":"florida", "GA":"georgia", "HI":"hawaii", "ID":"idaho", "IL":"illinois", "IN":"indiana", "IA":"iowa", "KS":"kansas", "KY":"kentucky", "LA":"louisiana", "ME":"maine", "MD":"maryland", "MA":"massachusetts", "MI":"michigan", "MN":"minnesota", "MS":"mississippi", "MO":"missouri", "MT":"montana", "NE":"nebraska", "NV":"nevada", "NH":"new-hampshire", "NJ":"new-jersey", "NM":"new-mexico", "NY":"new-york", "NC":"north-carolina", "ND":"north-dakota", "OH":"ohio", "OK":"oklahoma", "OR":"oregon", "PA":"pennsylvania", "RI":"rhode-island", "SC":"south-carolina", "SD":"south-dakota", "TN":"tennessee", "TX":"texas", "UT":"utah", "VT":"vermont", "VA":"virginia", "WA":"washington", "WV":"west-virginia", "WI":"wisconsin", "WY":"wyoming"}
     const regionIDToLinkHistorical = {"AL":"Alabama", "AK":"Alaska", "AZ":"Arizona", "AR":"Arkansas", "CA":"California", "CO":"Colorado", "CT":"Connecticut", "DE":"Delaware", "FL":"Florida", "GA":"Georgia", "HI":"Hawaii", "ID":"Idaho", "IL":"Illinois", "IN":"Indiana", "IA":"Iowa", "KS":"Kansas", "KY":"Kentucky", "LA":"Louisiana", "ME":"Maine", "MD":"Maryland", "MA":"Massachusetts", "MI":"Michigan", "MN":"Minnesota", "MS":"Mississippi", "MO":"Missouri", "MT":"Montana", "NE":"Nebraska", "NV":"Nevada", "NH":"New_Hampshire", "NJ":"New_Jersey", "NM":"New_Mexico", "NY":"New_York", "NC":"North_Carolina", "ND":"North_Dakota", "OH":"Ohio", "OK":"Oklahoma", "OR":"Oregon", "PA":"Pennsylvania", "RI":"Rhode_Island", "SC":"South_Carolina", "SD":"South_Dakota", "TN":"Tennessee", "TX":"Texas", "UT":"Utah", "VT":"Vermont", "VA":"Virginia", "WA":"Washington", "WV":"West_Virginia", "WI":"Wisconsin", "WY":"Wyoming"}
     
@@ -1296,6 +1296,80 @@ const USAGovernorMapType = new MapType(
       0.1 // voteshareCutoffMargin
     )
 
+    const JJGovernorPrediction = new MapSource(
+      "Discord-Governor-Prediction", // id
+      "Discord Prediction", // name
+      "./csv-sources/discord-governor.csv", // dataURL
+      "https://en.wikipedia.org/wiki/", // homepageURL
+      {regular: "./assets/discord.png", mini: "./assets/discord.png"}, // iconURL
+      {
+        date: "date",
+        region: "region",
+        isSpecial: "special",
+        isRunoff: "runoff",
+        isOffyear: "offyear",
+        candidateName: "candidate",
+        partyID: "party",
+        voteshare: "voteshare",
+        candidateVotes: "candidatevotes",
+        isHidden: "hidden"
+      }, // columnMap
+      null, // cycleYear
+      null, // candidateNameToPartyIDMap
+      null, // shortCandidateNameOverride
+      regionNameToIDHistorical, // regionNameToID
+      regionIDToLinkHistorical, // regionIDToLinkMap
+      null, // heldRegionMap
+      false, // shouldFilterOutDuplicateRows
+      true, // addDecimalPadding
+      doubleLineVoteshareFilterFunction, // organizeMapDataFunction
+      null, // viewingDataFunction
+      null, // zoomingDataFunction
+      null, // splitVoteDataFunction
+      null, // splitVoteDisplayOptions
+      getFormattedRegionName, // getFormattedRegionName
+      function(homepageURL, regionID, regionIDToLinkMap, mapDate, shouldOpenHomepage, mapData)
+      {
+        if (mapDate == null) { return }
+
+        // let isSpecial = false
+        // if (regionID != null && mapDate != null)
+        // {
+        //   isSpecial = mapData[mapDate.getTime()][regionID].isSpecial
+        // }
+
+        const regionData = mapData[mapDate.getTime()][regionID]
+        if (regionData && regionData.isHold && regionData.electionDate)
+        {
+          mapDate = new Date(regionData.electionDate)
+        }
+
+        let linkToOpen = homepageURL + mapDate.getFullYear()
+        if (!shouldOpenHomepage)
+        {
+          linkToOpen += "_" + regionIDToLinkMap[regionID] + "_gubernatorial_election"
+        }
+        else
+        {
+          linkToOpen += "_United_States_gubernatorial_elections"
+        }
+        return linkToOpen
+      }, // customOpenRegionLinkFunction
+      null, // updateCustomMapFunction
+      null, // convertMapDataRowToCSVFunction
+      null, // isCustomMap
+      null, // shouldClearDisabled
+      true, // shouldShowVoteshare
+      0.1, // voteshareCutoffMargin
+      null, // overrideSVGPath
+      null, // shouldSetDisabledWorthToZero
+      null, // shouldUseOriginalMapDataForTotalsPieChart
+      null, // shouldForcePopularVoteDisplay
+      function() {return solidMarginEnabled
+      ? {solid: 15, safe: 10, likely: 5, lean: 1, tilt: Number.MIN_VALUE}
+      : {safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}}, // customDefaultMargins
+    )
+
     const PastElectionResultMapSource = new MapSource(
       "Past-Governor-Elections", // id
       "Past Elections", // name
@@ -1364,6 +1438,7 @@ const USAGovernorMapType = new MapType(
       true, // shouldShowVoteshare
       0.1 // voteshareCutoffMargin
     )
+    configurePredictionMapSource(JJGovernorPrediction, PREDICTION_SOURCE_CONFIGS.governor)
 
     let idsToPartyNames = {}
     let partyNamesToIDs = {}
@@ -1426,6 +1501,7 @@ const USAGovernorMapType = new MapType(
     governorMapSources[FiveThirtyEightGovernorProjection2022MapSource.getID()] = FiveThirtyEightGovernorProjection2022MapSource
     governorMapSources[LTEGovernorProjection2022MapSource.getID()] = LTEGovernorProjection2022MapSource
     governorMapSources[CookGovernorProjection2022MapSource.getID()] = CookGovernorProjection2022MapSource
+    governorMapSources[JJGovernorPrediction.getID()] = JJGovernorPrediction
     governorMapSources[VotehubGovernorProjection2026MapSource.getID()] = VotehubGovernorProjection2026MapSource
     governorMapSources[VotehubGovernorPolls2026MapSource.getID()] = VotehubGovernorPolls2026MapSource
     governorMapSources[PastElectionResultMapSource.getID()] = PastElectionResultMapSource
@@ -1433,7 +1509,7 @@ const USAGovernorMapType = new MapType(
     
     const governorMapCycles = [2026, 2024, 2022]
     const governorMapSourceIDs = {
-      2026: [VotehubGovernorProjection2026MapSource.getID(), VotehubGovernorPolls2026MapSource.getID()],
+      2026: [JJGovernorPrediction.getID(), VotehubGovernorProjection2026MapSource.getID(), VotehubGovernorPolls2026MapSource.getID()],
       2024: [PolymarketGovernor2024MapSource.getID()],
       2022: [FiveThirtyEightGovernorProjection2022MapSource.getID(), LTEGovernorProjection2022MapSource.getID(), CookGovernorProjection2022MapSource.getID()],
       [allYearsCycle]: [PastElectionResultMapSource.getID(), CustomMapSource.getID()]
