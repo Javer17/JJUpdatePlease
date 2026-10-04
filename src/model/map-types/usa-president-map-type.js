@@ -1865,13 +1865,14 @@ const USAPresidentMapType = new MapType(
     }
 
     const countyZoomingDataFunction = async (presidentialMapDateData, regionID, isZoomCheck, date, mapSource) => {
-      if (!mapSource.getMapData() || (!isZoomCheck && !(await CSVDatabase.isSourceUpdated(mapSource.getID()))))
-      {
-        if (isZoomCheck) { return false }
+      const mapDate = date ?? currentSliderDate.getTime()
+      let organizedCountyData = mapSource.getMapData()?.[mapDate]
 
-        await mapSource.loadMap()
+      if (!mapSource.getMapData() || organizedCountyData == null || (!isZoomCheck && !(await CSVDatabase.isSourceUpdated(mapSource.getID()))))
+      {
+        if (!(await mapSource.loadMap())) { return isZoomCheck ? false : {} }
+        organizedCountyData = mapSource.getMapData()?.[mapDate]
       }
-      let organizedCountyData = mapSource.getMapData()[date ?? currentSliderDate.getTime()]
 
       if (isZoomCheck) { return (organizedCountyData != null && (!regionID || organizedCountyData[regionID] != null) ) || (showingCompareMap && currentMapSource.isCompare()) }
 
@@ -1956,21 +1957,23 @@ const USAPresidentMapType = new MapType(
       null, // heldRegionMap
       false, // shouldFilterOutDuplicateRows
       true, // addDecimalPadding
-      async (rawMapData, mapDates, columnMap, _, candidateNameToPartyIDMap, regionNameToID, __, ___, isCustomMap, voteshareCutoffMargin, shouldIncludeVoteshare) => {
-        if (currentViewingState == ViewingState.zooming)
+      (rawMapData, mapDates, columnMap, _, candidateNameToPartyIDMap, regionNameToID, __, ___, isCustomMap, voteshareCutoffMargin, shouldIncludeVoteshare) => {
+        return doubleLineVoteshareFilterFunction(rawMapData, mapDates, columnMap, _, candidateNameToPartyIDMap, regionNameToID, __, ___, isCustomMap, voteshareCutoffMargin, shouldIncludeVoteshare)
+      }, // organizeMapDataFunction
+      async (mapDateData) => {
+        if (new Date(getCurrentDateOrToday()).getFullYear() >= 1824)
         {
-          await CountyElectionResultMapSource.loadMap()
+          return mapDateData
         }
         else
         {
-          CountyElectionResultMapSource.loadMap()
+          currentViewingState = ViewingState.splitVote
+          return await pastElectoralVoteCounts(mapDateData)
         }
-        
-        return doubleLineVoteshareFilterFunction(rawMapData, mapDates, columnMap, _, candidateNameToPartyIDMap, regionNameToID, __, ___, isCustomMap, voteshareCutoffMargin, shouldIncludeVoteshare)
-      }, // organizeMapDataFunction
-      null, // viewingDataFunction
+      }, // viewingDataFunction
       async (mapDateData, regionID, isZoomCheck, date) => {
-        return await countyZoomingDataFunction(mapDateData, regionID, isZoomCheck, date, CountyElectionResultMapSource)
+        const countyMapSource = getCountyElectionMapSource(date)
+        return await countyZoomingDataFunction(mapDateData, regionID, isZoomCheck, date, countyMapSource)
       }, // zoomingDataFunction
       pastElectoralVoteCounts, // splitVoteDataFunction
       {showSplitVotesOnCanZoom: false, showSplitVoteBoxes: false}, // splitVoteDisplayOptions
@@ -2029,16 +2032,7 @@ const USAPresidentMapType = new MapType(
       null, // heldRegionMap
       false, // shouldFilterOutDuplicateRows
       true, // addDecimalPadding
-      async (rawMapData, mapDates, columnMap, _, candidateNameToPartyIDMap, regionNameToID, __, ___, isCustomMap, voteshareCutoffMargin, shouldIncludeVoteshare) => {
-        if (currentViewingState == ViewingState.zooming)
-        {
-          await HistoricalCountyElectionResultMapSource.loadMap()
-        }
-        else
-        {
-          HistoricalCountyElectionResultMapSource.loadMap()
-        }
-        
+      (rawMapData, mapDates, columnMap, _, candidateNameToPartyIDMap, regionNameToID, __, ___, isCustomMap, voteshareCutoffMargin, shouldIncludeVoteshare) => {
         return doubleLineVoteshareFilterFunction(rawMapData, mapDates, columnMap, _, candidateNameToPartyIDMap, regionNameToID, __, ___, isCustomMap, voteshareCutoffMargin, shouldIncludeVoteshare)
       }, // organizeMapDataFunction
       async (mapDateData) => {
@@ -2169,15 +2163,13 @@ const USAPresidentMapType = new MapType(
       null, // shouldClearDisabled
       true, // shouldShowVoteshare
       0.1, // voteshareCutoffMargin
-      () => {
-        if (currentViewingState == ViewingState.viewing)
-        {
-          return "svg-sources/usa-governor-map.svg"
-        }
-    
-        return ["svg-sources/usa-counties-map.svg", currentMapZoomRegion]
-      } // overrideSVGPath
+      getPresidentialCountySVGFromDate // overrideSVGPath
     )
+
+    const getCountyElectionMapSource = (date) => {
+      const electionYear = new Date(date ?? currentSliderDate.getTime()).getFullYear()
+      return electionYear < 1960 ? HistoricalCountyElectionResultMapSource : CountyElectionResultMapSource
+    }
 
     let idsToPartyNames = {}
     let partyNamesToIDs = {}
