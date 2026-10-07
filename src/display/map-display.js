@@ -79,11 +79,21 @@ const solidMarginPresetValues = [
   {solid: 30, safe: 15, likely: 5, lean: 1},
 ]
 
+// Custom Presets for Maptypes
+const mapTypeMarginPresets = [
+  {sourceIDs: ["JJU-Past-House-Elections"], margins: {solid: 50, safe: 30, likely: 20, lean: 10}},
+  {sourceIDs: ["JJU-Past-House-Elections"], margins: {safe: 30, likely: 20, lean: 10}}
+]
+
+
+
 const marginsCookieName = "global-margins"
 const marginPresetCookieName = "margin-preset"
+const mapSpecificMarginPresetCookieName = "map-specific-margin-presets"
 var marginNames = {solid: "Solid", safe: "Safe", likely: "Likely", lean: "Lean", tilt: "Tilt"}
 var solidMarginEnabled = false
 var selectedMarginPresetIndices = {standard: null, solid: null}
+var selectedMapSpecificMarginPresetIDs = {}
 
 var defaultMarginValues
 var marginValues
@@ -140,20 +150,78 @@ catch (error)
   console.error("Unable to read saved margin preset", error)
 }
 
+try
+{
+  const savedMapSpecificPresets = getCookie(mapSpecificMarginPresetCookieName)
+  const parsedMapSpecificPresets = savedMapSpecificPresets ? JSON.parse(savedMapSpecificPresets) : null
+  if (parsedMapSpecificPresets && typeof parsedMapSpecificPresets === "object" && !Array.isArray(parsedMapSpecificPresets))
+  {
+    selectedMapSpecificMarginPresetIDs = Object.fromEntries(
+      Object.entries(parsedMapSpecificPresets).filter(([, presetID]) => typeof presetID === "string")
+    )
+  }
+}
+catch (error)
+{
+  console.error("Unable to read saved map-specific margin presets", error)
+}
+
 function getMarginPresetMode(){
   return solidMarginEnabled ? "solid" : "standard"
 }
 
+function getMapSpecificMarginPresetScopeKey(){
+  const mapTypeID = currentMapType?.getID()
+  const mapSourceID = currentMapSource?.getID()
+  return mapTypeID && mapSourceID ? `${mapTypeID}:${mapSourceID}:${getMarginPresetMode()}` : null
+}
+
+function getMapSpecificMarginPresets(){
+  const mapTypeID = currentMapType?.getID()
+  const mapSourceID = currentMapSource?.getID()
+
+  return mapTypeMarginPresets
+    .filter(preset => preset && preset.margins &&
+      preset.sourceIDs?.includes(mapSourceID) &&
+      (preset.margins.solid != null) === solidMarginEnabled)
+    .map(preset => ({
+      ...preset.margins,
+      mapSpecificPresetID: `${mapTypeID}:${mapSourceID}:${Object.entries(preset.margins).map(([key, value]) => `${key}-${value}`).join("/")}`
+    }))
+}
+
 function getSelectedMarginPresetIndex(){
+  const scopeKey = getMapSpecificMarginPresetScopeKey()
+  const selectedPresetID = scopeKey ? selectedMapSpecificMarginPresetIDs[scopeKey] : null
+  if (selectedPresetID)
+  {
+    const selectedIndex = getMarginPresetCycleValues().findIndex(preset => preset.mapSpecificPresetID === selectedPresetID)
+    if (selectedIndex >= 0) { return selectedIndex }
+  }
+
   return selectedMarginPresetIndices[getMarginPresetMode()]
 }
 
 function setSelectedMarginPresetIndex(index){
+  const scopeKey = getMapSpecificMarginPresetScopeKey()
+  const presets = getMarginPresetCycleValues()
+  const selectedPreset = Number.isInteger(index) ? presets[index] : null
+  if (scopeKey && getMapSpecificMarginPresets().length > 0)
+  {
+    if (selectedPreset?.mapSpecificPresetID)
+    {
+      selectedMapSpecificMarginPresetIDs[scopeKey] = selectedPreset.mapSpecificPresetID
+      return
+    }
+    delete selectedMapSpecificMarginPresetIDs[scopeKey]
+  }
+
   selectedMarginPresetIndices[getMarginPresetMode()] = index
 }
 
 function persistSelectedMarginPreset(){
   setCookie(marginPresetCookieName, `${selectedMarginPresetIndices.standard ?? ""},${selectedMarginPresetIndices.solid ?? ""}`)
+  setCookie(mapSpecificMarginPresetCookieName, JSON.stringify(selectedMapSpecificMarginPresetIDs))
 }
 
 function fillMissingSolidMarginValues(values){
@@ -207,7 +275,7 @@ function getMarginPresetCycleValues(){
   {
     presets.push(customMargins)
   }
-  return presets
+  return [...presets, ...getMapSpecificMarginPresets()]
 }
 
 function getMarginPresetIndex(){
@@ -218,12 +286,16 @@ function getMarginPresetIndex(){
     return selectedIndex
   }
 
-  const matchingIndex = presets.findIndex(preset => Object.entries(preset).every(([key, value]) => Number(marginValues[key]) === Number(value)))
+  const matchingIndex = presets.findIndex(preset => Object.entries(preset)
+    .filter(([key]) => key !== "mapSpecificPresetID")
+    .every(([key, value]) => Number(marginValues[key]) === Number(value)))
   return matchingIndex < 0 ? 0 : matchingIndex
 }
 
 function getMarginValuesForPreset(baseValues, preset){
-  return fillMissingSolidMarginValues({...baseValues, ...normalizeMarginPresetValues(preset)})
+  const marginPresetValues = Object.fromEntries(Object.entries(preset).filter(([key]) =>
+    Object.prototype.hasOwnProperty.call(marginNames, key)))
+  return fillMissingSolidMarginValues({...baseValues, ...normalizeMarginPresetValues(marginPresetValues)})
 }
 
 function applyMarginPreset(preset){
@@ -1246,18 +1318,6 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
     setOutlineDivProperties()
   }
   
-  if (currentMapSource.getCustomDefaultMargins() != null && !$("#reset-margins").length)
-  {
-    // Load source defaults but ensure missing solid falls back when solid mode is active.
-    const srcDefaults = currentMapSource.getCustomDefaultMargins()
-    marginValues = fillMissingSolidMarginValues(srcDefaults)
-    if (solidMarginEnabled && (marginValues.solid == null || isNaN(Number(marginValues.solid))))
-    {
-      marginValues.solid = defaultMarginValues?.solid ?? solidMarginValues.solid ?? standardMarginValues.solid
-    }
-    createMarginEditDropdownItems()
-  }
-
   displayRegionDataArray = {}
   populateRegionsArray()
 

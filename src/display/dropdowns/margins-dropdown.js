@@ -108,7 +108,6 @@ function toggleMarginEditing(marginID, div)
     }
 
     marginValues[editMarginID] = marginValueToSet
-    setSelectedMarginPresetIndex(null)
     persistSelectedMarginPreset()
     if (shouldRefreshMap && currentMapSource.getCustomDefaultMargins() == null)
     {
@@ -154,28 +153,23 @@ function toggleMarginEditing(marginID, div)
 
 function addResetMarginsRow()
 {
-  // Determine canonical defaults (respect custom source defaults).
-  const sourceDefaults = currentMapSource.getCustomDefaultMargins()
-  const standardMargins = fillMissingSolidMarginValues(sourceDefaults ?? (solidMarginEnabled ? solidMarginValues : standardMarginValues))
-
-  // Compare against the current margins (ensure missing keys are filled)
+  const presets = getMarginPresetCycleValues()
+  const selectedPreset = presets[getMarginPresetIndex()]
+  const selectedPresetMargins = getMarginValuesForPreset(marginValues, selectedPreset)
   const currentMargins = fillMissingSolidMarginValues(marginValues)
 
-  let isEqualToStandard = true
+  let matchesSelectedPreset = true
   for (const marginID of getActiveMarginKeys())
   {
-    const a = Number(standardMargins[marginID])
-    const b = Number(currentMargins[marginID])
-    if (isNaN(a) || isNaN(b) || Math.abs(a - b) > 0.001)
+    if (Number(currentMargins[marginID]) !== Number(selectedPresetMargins[marginID]))
     {
-      isEqualToStandard = false
+      matchesSelectedPreset = false
       break
     }
   }
 
-  if (isEqualToStandard)
+  if (matchesSelectedPreset)
   {
-    // Remove reset button if present and values already match defaults
     if ($("#reset-margins").length)
     {
       $("#reset-margins").remove()
@@ -194,18 +188,10 @@ function addResetMarginsRow()
 
 function resetMargins()
 {
-  setSelectedMarginPresetIndex(null)
-
-  if (currentMapSource.getCustomDefaultMargins() != null)
-  {
-    marginValues = cloneObject(currentMapSource.getCustomDefaultMargins())
-  }
-  else
-  {
-    marginValues = solidMarginEnabled ? cloneObject(solidMarginValues) : cloneObject(standardMarginValues)
-  }
-
-  marginValues = fillMissingSolidMarginValues(marginValues)
+  const presets = getMarginPresetCycleValues()
+  const selectedPreset = presets[getMarginPresetIndex()]
+  marginValues = getMarginValuesForPreset(marginValues, selectedPreset)
+  defaultMarginValues = cloneObject(marginValues)
   persistSelectedMarginPreset()
 
   if (currentMapSource.getCustomDefaultMargins() == null)
