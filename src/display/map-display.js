@@ -119,15 +119,12 @@ try
 {
   const savedPreset = getCookie(marginPresetCookieName)
   if (savedPreset){
-    const savedIndices = Object.fromEntries(savedPreset.split(';').map(entry => entry.split('=')))
-    const legacyPreset = savedPreset.split(':')
-    if (legacyPreset.length === 2 && ["standard", "solid"].includes(legacyPreset[0]))
-    {
-      savedIndices[legacyPreset[0]] = legacyPreset[1]
-    }
-
-    const standardIndex = savedIndices.standard ? Number(savedIndices.standard) : null
-    const solidIndex = savedIndices.solid ? Number(savedIndices.solid) : null
+    const legacyPreset = savedPreset.match(/^(standard|solid):(\d+)$/)
+    const [standardValue, solidValue] = legacyPreset
+      ? [legacyPreset[1] === "standard" ? legacyPreset[2] : "", legacyPreset[1] === "solid" ? legacyPreset[2] : ""]
+      : savedPreset.split(',')
+    const standardIndex = standardValue ? Number(standardValue) : null
+    const solidIndex = solidValue ? Number(solidValue) : null
     if (Number.isInteger(standardIndex) && standardMarginPresetValues[standardIndex])
     {
       selectedMarginPresetIndices.standard = standardIndex
@@ -156,7 +153,7 @@ function setSelectedMarginPresetIndex(index){
 }
 
 function persistSelectedMarginPreset(){
-  setCookie(marginPresetCookieName, `standard=${selectedMarginPresetIndices.standard ?? ""};solid=${selectedMarginPresetIndices.solid ?? ""}`)
+  setCookie(marginPresetCookieName, `${selectedMarginPresetIndices.standard ?? ""},${selectedMarginPresetIndices.solid ?? ""}`)
 }
 
 function fillMissingSolidMarginValues(values){
@@ -202,7 +199,15 @@ function getMarginPresetLabel(values){
 }
 
 function getMarginPresetCycleValues(){
-  return solidMarginEnabled ? solidMarginPresetValues : standardMarginPresetValues
+  const presets = solidMarginEnabled ? [...solidMarginPresetValues] : [...standardMarginPresetValues]
+  const customMargins = currentMapSource?.getCustomDefaultMargins()
+  if (customMargins && (customMargins.solid != null) === solidMarginEnabled &&
+      !presets.some(preset => ["solid", "safe", "likely", "lean"].every(key =>
+        (preset[key] == null ? null : Number(preset[key])) === (customMargins[key] == null ? null : Number(customMargins[key])))))
+  {
+    presets.push(customMargins)
+  }
+  return presets
 }
 
 function getMarginPresetIndex(){
