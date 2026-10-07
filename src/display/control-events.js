@@ -332,6 +332,12 @@ document.addEventListener('keypress', async function(e) {
         break
       }
 
+      setSelectedMarginPresetIndex(null)
+      persistSelectedMarginPreset()
+      if (currentMapSource.getCustomDefaultMargins() == null)
+      {
+        setCookie(marginsCookieName, JSON.stringify({marginValues: marginValues, solidEnabled: solidMarginEnabled}))
+      }
       createMarginEditDropdownItems(currentMapSource.getCustomDefaultMargins() == null)
       if (showingDataMap)
       {

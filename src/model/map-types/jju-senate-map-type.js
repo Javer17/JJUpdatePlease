@@ -19,7 +19,7 @@ var JJUSenateMapType = new MapType(
   {"N1": "North", "N2": "North Sitting", "E1": "East", "E2": "East Sitting", "S1": "South", "S2": "South Sitting", "W1": "West", "W2": "West Sitting", "C1": "Center", "C2": "Center Sitting"},
   [/.+-S/],
   [
-    {id: "coalitions", title: "🤝 Coalitions", type: MapSettingType.optionCycle, options:
+    {id: "coalitions", emoji: "🤝", title: "Coalitions", type: MapSettingType.optionCycle, options:
       [
         {id: "show", title: "Shown", value: true},
         {id: "hide", title: "Hidden", value: false}
@@ -28,7 +28,7 @@ var JJUSenateMapType = new MapType(
         return value
       },
     defaultValue: "hide", reloadType: MapSettingReloadType.data},
-	  {id: "offYear", title: "🔄 Off Cycle Elections", type: MapSettingType.optionCycle, options:
+	  {id: "offYear", emoji: "🔄", title: "Off Cycle Elections", type: MapSettingType.optionCycle, options:
 	    [
 		    {id: "show", title: "Shown", value: true},
 		    {id: "hide", title: "Hidden", value: false}
@@ -37,7 +37,7 @@ var JJUSenateMapType = new MapType(
 		    return value
 	    },
 	  defaultValue: "hide", reloadType: MapSettingReloadType.data},
-    {id: "mapCurrentSeats", title: "🗺️ Map Held Seats", type: MapSettingType.optionCycle, options:
+    {id: "mapCurrentSeats", emoji: "🗺️", title: "Map Held Seats", type: MapSettingType.optionCycle, options:
       [
         {id: "show", title: "Shown", value: true},
         {id: "hide", title: "Hidden", value: false}

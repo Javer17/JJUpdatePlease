@@ -59,12 +59,31 @@ var pannedDuringClick = false
 
 var selectedParty
 
+// DEFAULT VALUES
 const standardMarginValues = {solid: 20, safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}
-const alternateMarginValues = {solid: 10, safe: 5, likely: 3, lean: 1, tilt: Number.MIN_VALUE}
 const solidMarginValues = { solid: 20, safe: 10, likely: 5, lean: 1, tilt: Number.MIN_VALUE }
+
+// === FOR PRESETS ===
+// For Normal
+const standardMarginPresetValues = [
+  {safe: 15, likely: 5, lean: 1},
+  {safe: 10, likely: 5, lean: 1},
+  {safe: 20, likely: 10, lean: 3},
+]
+
+// For Solid
+const solidMarginPresetValues = [
+  {solid: 20, safe: 10, likely: 5, lean: 1},
+  {solid: 20, safe: 15, likely: 5, lean: 1},
+  {solid: 15, safe: 10, likely: 5, lean: 1},
+  {solid: 30, safe: 15, likely: 5, lean: 1},
+]
+
 const marginsCookieName = "global-margins"
+const marginPresetCookieName = "margin-preset"
 var marginNames = {solid: "Solid", safe: "Safe", likely: "Likely", lean: "Lean", tilt: "Tilt"}
 var solidMarginEnabled = false
+var selectedMarginPresetIndices = {standard: null, solid: null}
 
 var defaultMarginValues
 var marginValues
@@ -96,8 +115,51 @@ catch (e)
 
 marginValues = cloneObject(defaultMarginValues)
 
-function fillMissingSolidMarginValues(values)
+try
 {
+  const savedPreset = getCookie(marginPresetCookieName)
+  if (savedPreset){
+    const savedIndices = Object.fromEntries(savedPreset.split(';').map(entry => entry.split('=')))
+    const legacyPreset = savedPreset.split(':')
+    if (legacyPreset.length === 2 && ["standard", "solid"].includes(legacyPreset[0]))
+    {
+      savedIndices[legacyPreset[0]] = legacyPreset[1]
+    }
+
+    const standardIndex = savedIndices.standard ? Number(savedIndices.standard) : null
+    const solidIndex = savedIndices.solid ? Number(savedIndices.solid) : null
+    if (Number.isInteger(standardIndex) && standardMarginPresetValues[standardIndex])
+    {
+      selectedMarginPresetIndices.standard = standardIndex
+    }
+    if (Number.isInteger(solidIndex) && solidMarginPresetValues[solidIndex])
+    {
+      selectedMarginPresetIndices.solid = solidIndex
+    }
+  }
+}
+catch (error)
+{
+  console.error("Unable to read saved margin preset", error)
+}
+
+function getMarginPresetMode(){
+  return solidMarginEnabled ? "solid" : "standard"
+}
+
+function getSelectedMarginPresetIndex(){
+  return selectedMarginPresetIndices[getMarginPresetMode()]
+}
+
+function setSelectedMarginPresetIndex(index){
+  selectedMarginPresetIndices[getMarginPresetMode()] = index
+}
+
+function persistSelectedMarginPreset(){
+  setCookie(marginPresetCookieName, `standard=${selectedMarginPresetIndices.standard ?? ""};solid=${selectedMarginPresetIndices.solid ?? ""}`)
+}
+
+function fillMissingSolidMarginValues(values){
   values = values ? cloneObject(values) : {}
 
   const shouldForceSolidDefaults = solidMarginEnabled && (values.solid == null)
@@ -118,8 +180,66 @@ function fillMissingSolidMarginValues(values)
   return orderedMarginValues
 }
 
-function getActiveMarginKeys()
-{
+function normalizeMarginPresetValues(values){
+  if (!values || typeof values !== 'object')
+  {
+    return {tilt: Number.MIN_VALUE}
+  }
+
+  const normalized = cloneObject(values)
+  if (normalized.tilt == null)
+  {
+    normalized.tilt = Number.MIN_VALUE
+  }
+  return normalized
+}
+
+function getMarginPresetLabel(values){
+  return ["solid", "safe", "likely", "lean", "tilt"]
+    .map(marginID => values[marginID])
+    .filter(value => value != null && value !== Number.MIN_VALUE)
+    .join('/')
+}
+
+function getMarginPresetCycleValues(){
+  return solidMarginEnabled ? solidMarginPresetValues : standardMarginPresetValues
+}
+
+function getMarginPresetIndex(){
+  const presets = getMarginPresetCycleValues()
+  const selectedIndex = getSelectedMarginPresetIndex()
+  if (Number.isInteger(selectedIndex) && presets[selectedIndex])
+  {
+    return selectedIndex
+  }
+
+  const matchingIndex = presets.findIndex(preset => Object.entries(preset).every(([key, value]) => Number(marginValues[key]) === Number(value)))
+  return matchingIndex < 0 ? 0 : matchingIndex
+}
+
+function getMarginValuesForPreset(baseValues, preset){
+  return fillMissingSolidMarginValues({...baseValues, ...normalizeMarginPresetValues(preset)})
+}
+
+function applyMarginPreset(preset){
+  marginValues = getMarginValuesForPreset(marginValues, preset)
+  defaultMarginValues = cloneObject(marginValues)
+
+  persistSelectedMarginPreset()
+  if (!currentMapSource || currentMapSource.getCustomDefaultMargins() == null)
+  {
+    setCookie(marginsCookieName, JSON.stringify({marginValues: marginValues, solidEnabled: solidMarginEnabled}))
+  }
+
+  if (showingDataMap)
+  {
+    displayDataMap()
+  }
+
+  createMarginEditDropdownItems(currentMapSource.getCustomDefaultMargins() == null)
+}
+
+function getActiveMarginKeys(){
   return Object.keys(marginNames).filter(marginID => marginID !== "solid" || solidMarginEnabled)
 }
 
@@ -638,6 +758,8 @@ function addDivEventListeners()
     if (e.altKey)
     {
       marginValues = cloneObject(standardMarginValues)
+      setSelectedMarginPresetIndex(null)
+      persistSelectedMarginPreset()
       createMarginEditDropdownItems(currentMapSource.getCustomDefaultMargins() == null)
 
       if (showingDataMap)
@@ -824,6 +946,12 @@ async function loadDataMap(shouldSetToMax, forceDownload, previousDateOverride, 
     else
     {
       marginValues = fillMissingSolidMarginValues(srcDefaults)
+    }
+    const presets = getMarginPresetCycleValues()
+    const selectedIndex = getSelectedMarginPresetIndex()
+    if (Number.isInteger(selectedIndex) && presets[selectedIndex])
+    {
+      marginValues = getMarginValuesForPreset(marginValues, presets[selectedIndex])
     }
   }
   // else if (currentMapSource.isCustom() && showingCompareMap)

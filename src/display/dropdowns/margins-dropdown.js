@@ -4,11 +4,12 @@ function createMarginEditDropdownItems(shouldSetDefault)
 {
   if (shouldSetDefault)
   {
-    setCookie(marginsCookieName, JSON.stringify({ marginValues: marginValues, solidEnabled: solidMarginEnabled }))
+    setCookie(marginsCookieName, JSON.stringify({marginValues: marginValues, solidEnabled: solidMarginEnabled}))
   }
 
   $("#marginsDropdownContainer").html("")
 
+  addMarginPresetRow()
   addSolidMarginToggleRow()
   addVoteshareCutoffRow()
   $("#marginsDropdownContainer").append("<div class='dropdown-separator-big'></div>")
@@ -21,6 +22,27 @@ function createMarginEditDropdownItems(shouldSetDefault)
   }
   
   addResetMarginsRow()
+}
+
+function addMarginPresetRow()
+{
+  const presets = getMarginPresetCycleValues()
+  const presetLabel = getMarginPresetLabel(presets[getMarginPresetIndex()])
+
+  $("#marginsDropdownContainer").append("<a id='margin-preset' onclick='cycleMarginPreset(1)' oncontextmenu='cycleMarginPreset(-1); return false' style='display:flex; width:100%; justify-content:space-between; align-items:center; padding: 10px 10px; box-sizing:border-box; overflow:hidden; min-width:0;'>" +
+    "<span style='display:inline-flex; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; flex:1 1 auto; margin-right: 1.5rem;'>🎯 Preset</span>" +
+    "<span style='font-family: \"Bree5erif-Mono\"; opacity: 0.8; flex:0 0 auto; white-space:nowrap;'>" + presetLabel + "</span>" +
+    "</a>")
+}
+
+function cycleMarginPreset(direction = 1)
+{
+  const presets = getMarginPresetCycleValues()
+  const currentIndex = getMarginPresetIndex()
+  const nextIndex = (currentIndex + direction + presets.length) % presets.length
+  setSelectedMarginPresetIndex(nextIndex)
+  const nextPreset = presets[nextIndex]
+  applyMarginPreset(nextPreset)
 }
 
 function addSolidMarginToggleRow()
@@ -86,9 +108,11 @@ function toggleMarginEditing(marginID, div)
     }
 
     marginValues[editMarginID] = marginValueToSet
+    setSelectedMarginPresetIndex(null)
+    persistSelectedMarginPreset()
     if (shouldRefreshMap && currentMapSource.getCustomDefaultMargins() == null)
     {
-      setCookie(marginsCookieName, JSON.stringify({ marginValues: marginValues, solidEnabled: solidMarginEnabled }))
+      setCookie(marginsCookieName, JSON.stringify({marginValues: marginValues, solidEnabled: solidMarginEnabled}))
       defaultMarginValues = cloneObject(marginValues)
     }
 
@@ -170,6 +194,8 @@ function addResetMarginsRow()
 
 function resetMargins()
 {
+  setSelectedMarginPresetIndex(null)
+
   if (currentMapSource.getCustomDefaultMargins() != null)
   {
     marginValues = cloneObject(currentMapSource.getCustomDefaultMargins())
@@ -180,10 +206,11 @@ function resetMargins()
   }
 
   marginValues = fillMissingSolidMarginValues(marginValues)
+  persistSelectedMarginPreset()
 
   if (currentMapSource.getCustomDefaultMargins() == null)
   {
-    setCookie(marginsCookieName, JSON.stringify({ marginValues: marginValues, solidEnabled: solidMarginEnabled }))
+    setCookie(marginsCookieName, JSON.stringify({marginValues: marginValues, solidEnabled: solidMarginEnabled}))
     defaultMarginValues = cloneObject(marginValues)
   }
   
@@ -198,6 +225,7 @@ function resetMargins()
 function toggleSolidMargin()
 {
   solidMarginEnabled = !solidMarginEnabled
+  const selectedIndex = getSelectedMarginPresetIndex()
 
   if (currentMapSource.getCustomDefaultMargins() == null)
   {
@@ -211,12 +239,21 @@ function toggleSolidMargin()
     }
 
     marginValues = cloneObject(defaultMarginValues)
-    // Persist the new solid-enabled state along with the margins
-    setCookie(marginsCookieName, JSON.stringify({ marginValues: marginValues, solidEnabled: solidMarginEnabled }))
   }
   else
   {
     marginValues = fillMissingSolidMarginValues(currentMapSource.getCustomDefaultMargins())
+  }
+  const presets = getMarginPresetCycleValues()
+  if (Number.isInteger(selectedIndex) && presets[selectedIndex])
+  {
+    marginValues = getMarginValuesForPreset(marginValues, presets[selectedIndex])
+    defaultMarginValues = cloneObject(marginValues)
+  }
+  persistSelectedMarginPreset()
+  if (currentMapSource.getCustomDefaultMargins() == null)
+  {
+    setCookie(marginsCookieName, JSON.stringify({marginValues: marginValues, solidEnabled: solidMarginEnabled}))
   }
 
   if (editMarginID === "solid")

@@ -53,7 +53,17 @@ function cycleMapSetting(settingID, settingDiv, incrementAmount)
 
   let newValueID = settingOptions[optionIndex].id
   let newValueTitle = settingOptions[optionIndex].title
-  $(settingDiv).html("<span>" + settingsLayout.title + "</span><span>" + newValueTitle + "</span>")
+  let settingTitle = settingsLayout.title || ""
+  let settingEmoji = settingsLayout.emoji || ""
+  if (settingEmoji)
+  {
+    let strippedTitle = settingTitle.startsWith(settingEmoji) ? settingTitle.slice(settingEmoji.length).trim() : settingTitle
+    $(settingDiv).html("<span>" + settingEmoji + " " + strippedTitle + "</span><span>" + newValueTitle + "</span>")
+  }
+  else
+  {
+    $(settingDiv).html("<span>" + settingTitle + "</span><span>" + newValueTitle + "</span>")
+  }
 
   if (settingsLayout.shouldShowActive != null)
   {
