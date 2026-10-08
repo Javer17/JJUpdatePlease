@@ -260,7 +260,7 @@ function normalizeMarginPresetValues(values){
 }
 
 function getMarginPresetLabel(values){
-  return ["solid", "safe", "likely", "lean", "tilt"]
+  return ["lean", "likely", "safe", "solid", "tilt"]
     .map(marginID => values[marginID])
     .filter(value => value != null && value !== Number.MIN_VALUE)
     .join('/')
@@ -400,7 +400,7 @@ const helpBoxPages = [
   <br>
   
   Change margin thresholds with the <span style='text-decoration: underline'>margins dropdown</span><br>
-  [M+1️⃣] Std ⇒ Safe 15%, Likely 5%, Lean 1%<br>
+  [M+1️⃣] Std ⇒ Lean 1%, Likely 5%, Safe 15%<br>
   [M+2️⃣] Alt ⇒ Safe 5%, Likely 3%, Lean 1%<br>
   <img style='width: 80%; margin-top: 5rem;' src='./assets/help/margins.png' /><br>
   
