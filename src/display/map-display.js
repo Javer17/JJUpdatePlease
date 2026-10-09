@@ -1,5 +1,7 @@
 const currentAppVersion = "5"
 
+const urlParams = new URLSearchParams(window.location.search)
+
 var currentMapCountry
 var currentMapType
 
@@ -469,7 +471,7 @@ $(async function() {
   $.ajaxSetup({cache: false})
 })
 
-async function reloadForNewMapCountry(initialLoad)
+async function reloadForNewMapCountry(initialLoad, loadMapType = true)
 {
   mapTypes = currentMapCountry.getMapTypes()
   mapTypeIDs = currentMapCountry.getMapTypeIDs()
@@ -488,10 +490,10 @@ async function reloadForNewMapCountry(initialLoad)
   currentMapType = mapTypes[getCookie(`${currentMapCountry.getID()}-currentMapType`) ?? getCookie("currentMapType") ?? mapTypeIDs[0]] ?? mapTypes[mapTypeIDs[0]]
   $("#cycleMapTypeButton").find("img").attr('src', currentMapType.getIconURL())
   
-  reloadForNewMapType(initialLoad)
+  loadMapType && await reloadForNewMapType(initialLoad)
 }
 
-async function reloadForNewMapType(initialLoad)
+async function reloadForNewMapType(initialLoad, loadMapSource = true)
 {
   var previousDateOverride
   if (!initialLoad)
@@ -509,14 +511,14 @@ async function reloadForNewMapType(initialLoad)
   if (currentMapType.getCustomMapEnabled())
   {
     $("#editDoneButton").removeClass('topnavdisable')
-    $("#copyDropdownContent").removeClass('topnavdisable')
-    $("#copyDropdownContent").css("opacity", "100%")
+    $("#editDoneDropdownContent").removeClass('topnavdisable')
+    $("#editDoneDropdownContent").css("opacity", "100%")
   }
   else
   {
     $("#editDoneButton").addClass('topnavdisable')
-    $("#copyDropdownContent").addClass('topnavdisable')
-    $("#copyDropdownContent").css("opacity", "0%")
+    $("#editDoneDropdownContent").addClass('topnavdisable')
+    $("#editDoneDropdownContent").css("opacity", "0%")
   }
 
   if (currentMapType.getCompareMapEnabled())
@@ -551,6 +553,21 @@ async function reloadForNewMapType(initialLoad)
   createSettingsDropdownItems()
 
   currentMapSource = (currentMapType.getCurrentMapSourceID() && currentMapType.getCurrentMapSourceID() in mapSources && !(!currentMapType.getCustomMapEnabled() && currentMapType.getCurrentMapSourceID() == currentMapType.getCustomMapSource().getID())) ? mapSources[currentMapType.getCurrentMapSourceID()] : mapSources[currentMapType.getMapSourceIDs()[0]]
+  
+  if (initialLoad)
+  {
+    const mapID = urlParams.get('id')
+    if (mapID)
+    {
+      currentMapSource = NullMapSource
+      openUserMap(mapID)
+    }
+  }
+  if (!loadMapSource)
+  {
+    currentMapSource = NullMapSource
+  }
+  
   if (currentMapSource.getID() == NullMapSource.getID())
   {
     $("#sourceToggleButton").addClass('active')
@@ -872,7 +889,13 @@ function addDivEventListeners()
     }, 200)
   })
 
-  let buttonImagePairs = [["mapCloseButton", "close-icon"], ["mapResetZoomButton", "reset-icon"], ["mapZoomInButton", "zoom-in-icon"], ["mapZoomOutButton", "zoom-out-icon"]]
+  let buttonImagePairs = [
+  ["mapCloseButton", "close-icon"],
+  ["mapResetZoomButton", "reset-icon"],
+  ["mapZoomInButton", "zoom-in-icon"],
+  ["mapZoomOutButton", "zoom-out-icon"],
+  ["userMapsCloseButton", "close-icon"],
+]
   buttonImagePairs.forEach(buttonData => {
     let [buttonID, image] = buttonData
     $("#" + buttonID).hover(function() {
@@ -897,6 +920,26 @@ function addDivEventListeners()
     overlayShadowClass = 'chart-overlay-shadow-small'
   }
   $('#totalsPieChartOverlayText').addClass(overlayShadowClass)
+
+  $("#modalsContainer").on('show', function() {
+    $(this).show()
+    $(this).css('opacity', "1")
+  })
+  
+  $("#modalsContainer").on('hide', function() {
+    $(this).css('opacity', "0")
+    
+    setTimeout(function() {
+      if ($("#modalsContainer").css('opacity') == "0") { $("#modalsContainer").hide() }
+    }, 200)
+  })
+  
+  $("#profileDropdown").hover(null, function() {
+    if ($(this).find(".jscolor-active").length > 0)
+    {
+      $(this).find(".dropdown-content").css("display", "block")
+    }
+  })
 }
 
 function updateDropdownFlip(dropdown)
@@ -1646,7 +1689,7 @@ function updateNavBarForNewSource(revertToDefault, resetViewingState)
 
   if (currentEditingState == EditingState.editing && currentMapSource.isCustom() && !currentMapSource.isCompare())
   {
-    $("#editDoneButton .topnav-text").html("Done")
+    $("#editDoneButton .topnav-text").html("Save")
   }
   else if (currentEditingState == EditingState.editing && !currentMapSource.isCustom() && !currentMapSource.isCompare())
   {
@@ -1655,12 +1698,14 @@ function updateNavBarForNewSource(revertToDefault, resetViewingState)
   else if (currentEditingState != EditingState.editing && currentMapSource.isCustom() && !currentMapSource.isCompare())
   {
     $("#editDoneButton .topnav-text").html("Edit")
-    $("#copyDropdownContainer").hide()
+    $("#selectEditModeContainer").hide()
+    $("#customMapActionsContainer").show()
   }
   else
   {
     $("#editDoneButton .topnav-text").html("Copy")
-    $("#copyDropdownContainer").show()
+    $("#selectEditModeContainer").show()
+    $("#customMapActionsContainer").hide()
   }
   
   if (currentMapType.getCustomMapEnabled())
@@ -1793,8 +1838,7 @@ function toggleHelpBox()
     $("#helpboxcontainer").show()
     $("#toggleHelpBoxButton").addClass('active')
     $("#totalsPieChartContainer").hide()
-    $("#partyDropdownsBoxContainer").hide()
-    $("#discordInviteContainer").hide()
+    $("#secondarySidebarContainer").hide()
 
     updateHelpBoxPage(0)
   }
@@ -1803,8 +1847,7 @@ function toggleHelpBox()
     $("#helpboxcontainer").hide()
     $("#toggleHelpBoxButton").removeClass('active')
     $("#totalsPieChartContainer").show()
-    $("#partyDropdownsBoxContainer").show()
-    $("#discordInviteContainer").show()
+    $("#secondarySidebarContainer").show()
   }
 }
 
@@ -1941,10 +1984,11 @@ async function toggleEditing(stateToSet)
   switch (currentEditingState)
   {
     case EditingState.editing:
-    $("#editDoneButton .topnav-text").html("Done")
+    $("#editDoneButton .topnav-text").html("Save")
     $("#editDoneButton").addClass('active')
 
-    $("#copyDropdownContainer").hide()
+    $("#selectEditModeContainer").hide()
+    $("#customMapActionsContainer").hide()
 
     $("#marginEditButton").hide()
     $("#marginEditButton").addClass('topnavdisable')
@@ -1975,6 +2019,7 @@ async function toggleEditing(stateToSet)
 
     if (!currentMapIsCustom)
     {
+      currentCustomMapSource.resetMapUUID()
       currentCustomMapSource.setCandidateNames(currentMapSource.getCandidateNames(getCurrentDateOrToday()), getCurrentDateOrToday())
 
       let dropdownPoliticalPartyIDsForEditing = currentMapType == USAPresidentMapType ? getNonEVDropdownCandidates(cloneObject(dropdownPoliticalPartyIDs)) : dropdownPoliticalPartyIDs
@@ -1996,12 +2041,14 @@ async function toggleEditing(stateToSet)
     if (currentMapSource.isCustom())
     {
       $("#editDoneButton .topnav-text").html("Edit")
-      $("#copyDropdownContainer").hide()
+      $("#selectEditModeContainer").hide()
+      $("#customMapActionsContainer").show()
     }
     else
     {
       $("#editDoneButton .topnav-text").html("Copy")
-      $("#copyDropdownContainer").show()
+      $("#selectEditModeContainer").show()
+      $("#customMapActionsContainer").hide()
     }
     $("#editDoneButton").removeClass('active')
 
@@ -2022,6 +2069,13 @@ async function toggleEditing(stateToSet)
       currentCustomMapSource.updateMapData(displayRegionDataArray, getCurrentDateOrToday(), false, currentMapSource.getCandidateNames(getCurrentDateOrToday()))
       await loadDataMap()
       displayPartyTotals(true)
+          
+      if (!currentCustomMapSource.getMapUUID())
+      {
+        currentCustomMapSource.resetMapUUID()
+      }
+      
+      await autoSaveCurrentUserMap()
     }
 
     if (showingDataMap && currentRegionID)
@@ -2072,8 +2126,8 @@ async function zoomOutMap(displayMap = true)
   if (currentMapType.getID() == USAPresidentMapType.getID())
   {
     $("#editDoneButton").removeClass('topnavdisable')
-    $("#copyDropdownContent").removeClass('topnavdisable')
-    $("#copyDropdownContent").css("opacity", "")
+    $("#editDoneDropdownContent").removeClass('topnavdisable')
+    $("#editDoneDropdownContent").css("opacity", "")
   }
 
   displayMap && displayDataMap(null, null, true)

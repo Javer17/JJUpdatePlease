@@ -406,6 +406,7 @@ class MapSource
 
       overrideRegionEVs = {}
     }
+    this.resetMapUUID()
   }
 
   getMapDates()
@@ -632,6 +633,12 @@ class MapSource
     return isFunction ? this.customDefaultMargins() : this.customDefaultMargins
   }
   
+   setCustomDefaultMargins(margins)
+  {
+    this.customDefaultMargins = margins
+  }
+  
+
   getVotesharePrefix()
   {
     return this.customVotesharePrefix ?? '+'
@@ -781,10 +788,33 @@ class MapSource
 
     return csvText
   }
+   
+  resetMapUUID()
+  {
+    if (!this.isCustom()) { return }
+    this.uuid = crypto.randomUUID()
+  }
+  
+  getMapUUID()
+  {
+    if (!this.isCustom()) { return }
+    return this.uuid
+  }
+  
+  setMapUUID(uuid)
+  {
+    if (!this.isCustom()) { return }
+    this.uuid = uuid
+  }
 
   getEditingMode()
   {
     return this.editingMode
+  }
+  
+  setEditingMode(editingMode)
+  {
+    this.editingMode = editingMode
   }
 }
 
