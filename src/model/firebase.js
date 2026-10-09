@@ -8,7 +8,7 @@ const firebaseConfig = {
   measurementId: "G-280E12W7XD"
 }
 
-const recaptchaEnterpriseSiteKey = "6LcELN8tAAAAAA7xfxslj2XJrLfi2_agD5rTLoxK"
+const recaptchaEnterpriseSiteKey = "6LeN5OYtAAAAAJxufDUF1kXfgeTmo6Y1ZPfvyI8g"
 
 firebase.initializeApp(firebaseConfig)
 
