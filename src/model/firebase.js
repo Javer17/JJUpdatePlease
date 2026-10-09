@@ -1,10 +1,11 @@
 const firebaseConfig = {
-	apiKey: "AIzaSyCiuWfULmz-h3G9nPuEAMUZhzwB2GkLYls",
-	authDomain: "jj-election-map.firebaseapp.com",
-	projectId: "jj-election-map",
-	storageBucket: "jj-election-map.firebasestorage.app",
-	messagingSenderId: "457495858439",
-	appId: "1:457495858439:web:4f29bad70f1ab4ca1c89a2"
+  apiKey: "AIzaSyA6Bsbr1giY1j3Efqpw8LuylKpmdrdZmOI",
+  authDomain: "javer-election-map.firebaseapp.com",
+  projectId: "javer-election-map",
+  storageBucket: "javer-election-map.firebasestorage.app",
+  messagingSenderId: "987506494905",
+  appId: "1:987506494905:web:58256d9b9546bc6a9e3a68",
+  measurementId: "G-280E12W7XD"
 }
 
 const recaptchaEnterpriseSiteKey = "6LcELN8tAAAAAA7xfxslj2XJrLfi2_agD5rTLoxK"
