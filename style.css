@@ -80,8 +80,8 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 12px;
   row-gap: 4px;
-  gap: 4px;
 }
 
 .topnav a {

@@ -1690,6 +1690,9 @@ function updateNavBarForNewSource(revertToDefault, resetViewingState)
   if (currentEditingState == EditingState.editing && currentMapSource.isCustom() && !currentMapSource.isCompare())
   {
     $("#editDoneButton .topnav-text").html("Save")
+    $("#editDoneDropdown").css("order", 2)
+    $("#saveCustomMapButton").hide()
+    $("#doneEditingButton").css("display", "flex")
   }
   else if (currentEditingState == EditingState.editing && !currentMapSource.isCustom() && !currentMapSource.isCompare())
   {
@@ -1698,12 +1701,18 @@ function updateNavBarForNewSource(revertToDefault, resetViewingState)
   else if (currentEditingState != EditingState.editing && currentMapSource.isCustom() && !currentMapSource.isCompare())
   {
     $("#editDoneButton .topnav-text").html("Edit")
+    $("#editDoneDropdown").css("order", 1)
+    $("#saveCustomMapButton").css({display: "flex", visibility: "visible"})
+    $("#doneEditingButton").hide()
     $("#selectEditModeContainer").hide()
     $("#customMapActionsContainer").show()
   }
   else
   {
     $("#editDoneButton .topnav-text").html("Copy")
+    $("#editDoneDropdown").css("order", 1)
+    $("#saveCustomMapButton").css({display: "flex", visibility: "hidden"})
+    $("#doneEditingButton").hide()
     $("#selectEditModeContainer").show()
     $("#customMapActionsContainer").hide()
   }
@@ -1985,9 +1994,10 @@ async function toggleEditing(stateToSet, shouldSave = true)
   {
     case EditingState.editing:
     $("#editDoneButton .topnav-text").html("Save")
-    $("#editDoneButton").addClass('active')
     $("#editDoneDropdown").css("order", 2)
-    $("#doneEditingButton").css({order: 1, visibility: "visible"})
+    $("#saveCustomMapButton").hide()
+    $("#editDoneButton").addClass('active')
+    $("#doneEditingButton").css({order: 1, display: "flex"})
 
     $("#selectEditModeContainer").hide()
     $("#customMapActionsContainer").hide()
@@ -2043,18 +2053,21 @@ async function toggleEditing(stateToSet, shouldSave = true)
     if (currentMapSource.isCustom())
     {
       $("#editDoneButton .topnav-text").html("Edit")
+      $("#editDoneDropdown").css("order", 1)
+      $("#saveCustomMapButton").css({display: "flex", visibility: "visible"})
       $("#selectEditModeContainer").hide()
       $("#customMapActionsContainer").show()
     }
     else
     {
       $("#editDoneButton .topnav-text").html("Copy")
+      $("#editDoneDropdown").css("order", 1)
+      $("#saveCustomMapButton").css({display: "flex", visibility: "hidden"})
       $("#selectEditModeContainer").show()
       $("#customMapActionsContainer").hide()
     }
     $("#editDoneButton").removeClass('active')
-    $("#editDoneDropdown").css("order", 1)
-    $("#doneEditingButton").css({order: 2, visibility: "hidden"})
+    $("#doneEditingButton").css({order: 2, display: "none"})
 
     $("#marginEditButton").show()
     $("#marginEditButton").removeClass('topnavdisable')
