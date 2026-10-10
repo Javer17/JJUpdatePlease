@@ -1986,7 +1986,8 @@ async function toggleEditing(stateToSet, shouldSave = true)
     case EditingState.editing:
     $("#editDoneButton .topnav-text").html("Save")
     $("#editDoneButton").addClass('active')
-    $("#doneEditingButton").show()
+    $("#editDoneDropdown").css("order", 2)
+    $("#doneEditingButton").css({order: 1, visibility: "visible"})
 
     $("#selectEditModeContainer").hide()
     $("#customMapActionsContainer").hide()
@@ -2052,7 +2053,8 @@ async function toggleEditing(stateToSet, shouldSave = true)
       $("#customMapActionsContainer").hide()
     }
     $("#editDoneButton").removeClass('active')
-    $("#doneEditingButton").hide()
+    $("#editDoneDropdown").css("order", 1)
+    $("#doneEditingButton").css({order: 2, visibility: "hidden"})
 
     $("#marginEditButton").show()
     $("#marginEditButton").removeClass('topnavdisable')

@@ -303,6 +303,7 @@
         </div>
       </div>
       <div style="display: flex; justify-content: space-between; gap: 4px;">
+        <div style="display: flex; gap: 4px;">
         <div class="dropdown" onmouseenter="hoveredCompareDropdownButton()">
           <a id="compareButton" class="topnavbutton topnav-iconbutton" onclick="applyCompareToCustomMap(true)"><span class='topnav-text'>Compare</span><span class='topnav-icon'>↔️</span></a>
           <div id="compareDropdownContent" class="dropdown-content" style="width: max-content">
@@ -364,7 +365,7 @@
             </div>
           </div>
         </div>
-        <div class="dropdown" onmouseenter="deselectDropdownButton()">
+        <div id="editDoneDropdown" class="dropdown" style="order: 1;" onmouseenter="deselectDropdownButton()">
           <a id="editDoneButton" class="topnavbutton topnav-iconbutton" onclick="toggleEditing()" style="min-width: 37px"><span class='topnav-text'>Copy</span><span class='topnav-icon'>📝</span></a>
           <div id="editDoneDropdownContent" class="dropdown-content" style="width: max-content;">
             <div id="selectEditModeContainer" class="dropdown-container" style="overflow: hidden;">
@@ -389,7 +390,8 @@
             </div>
           </div>
         </div>
-        <a id="doneEditingButton" class="topnavbutton topnav-iconbutton" onclick="toggleEditing(EditingState.viewing, false)" style="display: none; min-width: 37px"><span class='topnav-text'>Done</span><span class='topnav-icon'>✅</span></a>
+          <a id="doneEditingButton" class="topnavbutton topnav-iconbutton" onclick="toggleEditing(EditingState.viewing, false)" style="order: 2; visibility: hidden; min-width: 37px"><span class='topnav-text'>Done</span><span class='topnav-icon'>✅</span></a>
+        </div>
       </div>
       <div style="display: flex; min-width: 48px; min-height: 48px;">
         <div class="loader" id="loader"></div>

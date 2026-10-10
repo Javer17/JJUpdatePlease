@@ -133,7 +133,7 @@ const PoliticalPartyColors = {                                                  
   violet:   {current: "#2a184c", solid: "#350589", safe: "#5423a3", likely: "#8432ff", lean: "#b27fff", tilt: "#af9cbf"},   // Volt EVP
   purple:   {current: "#3a1449", solid: "#540473", safe: "#7f23a3", likely: "#c928ff", lean: "#dd7fff", tilt: "#bb9cbf"},   // 50+  AOV
   magenta:  {current: "#4b072e", solid: "#7d0040", safe: "#ab0364", likely: "#e52b94", lean: "#db5cae", tilt: "#d394ca"},   // SP   DS70
-  pink:     {current: "#661836", solid: "#ad1650", safe: "#ff327d", likely: "#ff66ad", lean: "#ff89e1", tilt: "#cc7ebc"},   // CPN
+  pink:     {current: "#661836", solid: "#ad1650", safe: "#ff327d", likely: "#ff6fa6", lean: "#ff9dc4", tilt: "#e9b0c8"},   // CPN
   plum:     {current: "#211019", solid: "#381b2b", safe: "#5e2f4a", likely: "#945178", lean: "#bf82a5", tilt: "#e2c3d3"},   // PSP
   maroon:   {current: "#2d1011", solid: "#440a0b", safe: "#661e1f", likely: "#a04241", lean: "#ac6467", tilt: "#ba8c86"},   // FvD
   brown:    {current: "#2b1a0b", solid: "#421f09", safe: "#663514", likely: "#a86234", lean: "#d88856", tilt: "#f7c2a6"},   // CD
