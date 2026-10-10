@@ -1933,7 +1933,7 @@ function selectRound(round)
   }
 }
 
-async function toggleEditing(stateToSet)
+async function toggleEditing(stateToSet, shouldSave = true)
 {
   if (editMarginID)
   {
@@ -1986,6 +1986,7 @@ async function toggleEditing(stateToSet)
     case EditingState.editing:
     $("#editDoneButton .topnav-text").html("Save")
     $("#editDoneButton").addClass('active')
+    $("#doneEditingButton").show()
 
     $("#selectEditModeContainer").hide()
     $("#customMapActionsContainer").hide()
@@ -2051,6 +2052,7 @@ async function toggleEditing(stateToSet)
       $("#customMapActionsContainer").hide()
     }
     $("#editDoneButton").removeClass('active')
+    $("#doneEditingButton").hide()
 
     $("#marginEditButton").show()
     $("#marginEditButton").removeClass('topnavdisable')
@@ -2075,7 +2077,10 @@ async function toggleEditing(stateToSet)
         currentCustomMapSource.resetMapUUID()
       }
       
-      await autoSaveCurrentUserMap()
+      if (shouldSave)
+      {
+        await autoSaveCurrentUserMap()
+      }
     }
 
     if (showingDataMap && currentRegionID)

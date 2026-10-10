@@ -291,6 +291,7 @@ async function saveCurrentUserMap()
 async function autoSaveCurrentUserMap()
 {
 	if (!currentUser || currentUser.isAnonymous) { return null }
+	if (currentEditingState == EditingState.editing) { return null }
 	
 	return await saveCurrentUserMap()
 }
