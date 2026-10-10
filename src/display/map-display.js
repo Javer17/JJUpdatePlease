@@ -329,7 +329,7 @@ const regionStrokeAnimationDuration = 0.06
 const regionSelectColor = "#ffffff"
 const regionDeselectColor = "#181922" //#555
 
-const regionDisabledColor = "#28292F"
+const regionDisabledColor = "#202126"
 
 const flipPatternBrightnessFactor = 0.8
 const flipPatternHeight = 7
