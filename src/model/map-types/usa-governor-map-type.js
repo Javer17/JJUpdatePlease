@@ -600,6 +600,11 @@ const USAGovernorMapType = new MapType(
         partyNameData[mapDates[dateNum]] = currentDatePartyNameArray
       }
 
+      if (heldSeatMapData)
+      {
+        fillHeldSeats(filteredMapData, regionNameToID, heldSeatMapData)
+      }
+
       let fullFilteredMapData = cloneObject(filteredMapData)
       for (let mapDate in fullFilteredMapData)
       {
