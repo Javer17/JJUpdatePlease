@@ -94,6 +94,7 @@ function setMapCountries()
       [ReformParty.getID()]: ReformParty,
       [FreeSoilParty.getID()]: FreeSoilParty,
       [ConservativeParty.getID()]: ConservativeParty,
+      [ConstitutionParty.getID()]: ConstitutionParty,
       [IndependentRNParty.getID()]: IndependentRNParty,
       [Independent2024RFKParty.getID()]: Independent2024RFKParty,
       [Independent2016EMParty.getID()]: Independent2016EMParty,
@@ -154,6 +155,7 @@ function setMapCountries()
       NationalRepublicanParty.getID(),
       DemocraticRepublicanParty.getID(),
       ConservativeParty.getID(),
+      ConstitutionParty.getID(),
       FederalistParty.getID(),
       IndependentGenericParty.getID()
     ],

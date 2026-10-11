@@ -268,7 +268,7 @@ const SocialistParty = new PoliticalParty(
   ["Socialist", "Socialist Party"],
   "Soc",
   "Socialist",
-  PoliticalPartyColors.magenta,
+  PoliticalPartyColors.scarlet,
   "SOC.png"
 )
 
@@ -279,6 +279,15 @@ const ConservativeParty = new PoliticalParty(
   "Conservative",
   PoliticalPartyColors.orange,
   "CONP.png"
+)
+
+const ConstitutionParty = new PoliticalParty(
+  "CONST",
+  ["Constitution"],
+  "Const",
+  "Constitution",
+  PoliticalPartyColors.violet,
+  "CONST.png"
 )
 
 // Historic Third Parties
