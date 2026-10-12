@@ -52,7 +52,7 @@ async function openUserMapsModal()
 		const countryIconURL = country?.getIconURL()
 		trDiv += `<td class='country-cell'><span class='country-container'><img src='${countryIconURL}' style='width: 36px; height: 36px;'/><span class='country-name'>${countryName ?? 'Unknown'}</span></span></td>`
 		
-		const mapType = mapTypes[userMap.mapType]
+		const mapType = country?.getMapTypes()?.[userMap.mapType]
 		const mapTypeName = mapType?.getName()
 		const mapTypeIcon = mapType?.getIconURL()
 		trDiv += `<td class='type-cell'><span class='type-container'><img src='${mapTypeIcon}' class='type-image' style='width: 36px; height: 36px;'/><span class='type-name'>${mapTypeName ?? 'Unknown'}</span></span></td>`
