@@ -663,7 +663,7 @@ const USAGovernorMapType = new MapType(
       return {mapData: fullFilteredMapData, candidateNameData: partyNameData, mapDates: mapDates}
     }
     
-    const getPastElectionHeldSeats = async function(cycleYear, regionNameToID)
+    const getPastElectionHeldSeats = async function(cycleYear, regionNameToID, onlyBeforeCycleYear = false)
     {
       let heldSeatMapData = null
       const previousElectionCycleYear = cycleYear-4
@@ -672,7 +672,9 @@ const USAGovernorMapType = new MapType(
       {
         const pastMapData = PastElectionResultMapSource.getMapData()
         
-        let cycleDate = PastElectionResultMapSource.getMapDates().find(mapDate => new Date(mapDate).getFullYear() == cycleYear)
+        let cycleDate = onlyBeforeCycleYear
+          ? new Date(cycleYear, 0, 1).getTime()
+          : PastElectionResultMapSource.getMapDates().find(mapDate => new Date(mapDate).getFullYear() == cycleYear)
         // use 11/1 as fallback future date if current election cycle has not occurred yet
         cycleDate ??= new Date(cycleYear, 11-1, 1).getTime()
         
@@ -805,16 +807,20 @@ const USAGovernorMapType = new MapType(
     function getPastElectionRegionLink(mapData, mapDate, regionID)
     {
       const regionData = mapData?.[mapDate?.getTime()]?.[regionID]
-      if (regionData && regionData.isHold && regionData.electionDate)
+      if (!regionData || !regionData.isHold || !regionData.electionDate)
       {
-        const link = PastElectionResultMapSource.getRegionLink(regionID, new Date(regionData.electionDate))
-        if (link)
-        {
-          return { link, icon: PastElectionResultMapSource.getIconURL(true) }
-        }
+        return null
       }
-      
-      return null
+
+      const pastElectionDate = new Date(regionData.electionDate)
+      return PastElectionResultMapSource.customOpenRegionLinkFunction?.(
+        PastElectionResultMapSource.homepageURL,
+        regionID,
+        PastElectionResultMapSource.regionIDToLinkMap,
+        pastElectionDate,
+        false,
+        PastElectionResultMapSource.getMapData()
+      ) ?? null
     }
 
     const CNNGovernorResults2022MapSource = new MapSource(
@@ -1319,7 +1325,7 @@ const USAGovernorMapType = new MapType(
         candidateVotes: "candidatevotes",
         isHidden: "hidden"
       }, // columnMap
-      null, // cycleYear
+      2026, // cycleYear
       null, // candidateNameToPartyIDMap
       null, // shortCandidateNameOverride
       regionNameToIDHistorical, // regionNameToID
@@ -1327,7 +1333,10 @@ const USAGovernorMapType = new MapType(
       null, // heldRegionMap
       false, // shouldFilterOutDuplicateRows
       true, // addDecimalPadding
-      doubleLineVoteshareFilterFunction, // organizeMapDataFunction
+      async (rawMapData, mapDates, columnMap, cycleYear, candidateNameToPartyIDMap, regionNameToID, _, __, isCustomMap, voteshareCutoffMargin, shouldIncludeVoteshare) => {
+        const heldSeatMapData = await getPastElectionHeldSeats(cycleYear, regionNameToID, true)
+        return doubleLineVoteshareFilterFunction(rawMapData, mapDates, columnMap, cycleYear, candidateNameToPartyIDMap, regionNameToID, heldSeatMapData, __, isCustomMap, voteshareCutoffMargin, shouldIncludeVoteshare)
+      }, // organizeMapDataFunction
       null, // viewingDataFunction
       null, // zoomingDataFunction
       null, // splitVoteDataFunction

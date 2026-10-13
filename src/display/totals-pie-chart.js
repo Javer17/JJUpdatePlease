@@ -154,6 +154,9 @@ let options = {
       tooltip: {
         displayColors: false,
         enabled: false,
+        filter: function(tooltipItem) {
+          return tooltipItem.raw !== 0
+        },
         external: function(context) {
           const tooltipModel = context.tooltip
           
@@ -536,7 +539,9 @@ function updateTotalsPieChart()
 
     let regionMargin = regionDataArray[regionID].margin
 
-    let regionEV = currentMapType.getEV(getCurrentDecade(), regionID, regionDataArray[regionID]) ?? regionDataArray[regionID].voteWorth
+    let regionData = regionDataArray[regionID]
+    let regionDataForTotals = regionData.isHold && regionData.disabled ? {...regionData, disabled: false} : regionData
+    let regionEV = currentMapType.getEV(getCurrentDecade(), regionID, regionDataForTotals) ?? regionData.voteWorth
     let formattedRegionMargin = getRoundedMarginValue(regionMargin, regionDataArray[regionID])
     let regionString = (currentMapSource.getFormattedRegionName ? currentMapSource.getFormattedRegionName(regionID) : regionID) + " " + currentMapSource.getVotesharePrefix() + formattedRegionMargin + (currentMapSource.getCustomVoteshareSuffix() ?? "")
 

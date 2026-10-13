@@ -889,7 +889,7 @@ const USASenateMapType = new MapType(
       return {mapData: fullFilteredMapData, candidateNameData: partyNameData, mapDates: mapDates}
     }
     
-    const getPastElectionHeldSeats = async function(cycleYear)
+    const getPastElectionHeldSeats = async function(cycleYear, onlyBeforeCycleYear = false)
     {
       let heldSeatMapData = null
       const previousElectionCycleYear = cycleYear-6
@@ -906,7 +906,9 @@ const USASenateMapType = new MapType(
           return mapData
         }, {})
         
-        let cycleDate = PastElectionResultMapSource.getMapDates().find(mapDate => new Date(mapDate).getFullYear() == cycleYear)
+        let cycleDate = onlyBeforeCycleYear
+          ? new Date(cycleYear, 0, 1).getTime()
+          : PastElectionResultMapSource.getMapDates().find(mapDate => new Date(mapDate).getFullYear() == cycleYear)
         // use 11/1 as fallback future date if current election cycle has not occurred yet
         cycleDate ??= new Date(cycleYear, 11-1, 1).getTime()
         
@@ -1102,19 +1104,35 @@ const USASenateMapType = new MapType(
     function getPastElectionRegionLink(mapData, mapDate, regionID)
     {
       const regionData = mapData?.[mapDate?.getTime()]?.[regionID]
-      if (regionData && regionData.isHold && regionData.electionDate)
+      if (!regionData || !regionData.isHold || !regionData.electionDate)
       {
-        const pastElectionRegionID = Object.entries(PastElectionResultMapSource.getMapData()[regionData.electionDate]).find(([pastRegionID, pastRegionData]) => {
-          return pastRegionData.region.replace('-S', '') == regionID.replace('-S', '') && pastRegionData.seatClass == regionData.seatClass
-        })[0]
-        
-        const link = PastElectionResultMapSource.getRegionLink(pastElectionRegionID, new Date(regionData.electionDate))
-        if (link)
-        {
-          return { link, icon: PastElectionResultMapSource.getIconURL(true) }
-        }
+        return null
       }
-      
+
+      const pastElectionMapData = PastElectionResultMapSource.getMapData?.()
+      const pastElectionRegionEntry = Object.entries(pastElectionMapData?.[regionData.electionDate] ?? {}).find(([, pastRegionData]) => {
+        return pastRegionData?.region?.replace('-S', '') == regionID.replace('-S', '') && pastRegionData?.seatClass == regionData.seatClass
+      })
+      const pastElectionRegionID = pastElectionRegionEntry?.[0]
+      if (!pastElectionRegionID)
+      {
+        return null
+      }
+
+      const pastElectionDate = new Date(regionData.electionDate)
+      const link = PastElectionResultMapSource.customOpenRegionLinkFunction?.(
+        PastElectionResultMapSource.homepageURL,
+        pastElectionRegionID,
+        PastElectionResultMapSource.regionIDToLinkMap,
+        pastElectionDate,
+        false,
+        pastElectionMapData
+      )
+      if (link)
+      {
+        return link
+      }
+
       return null
     }
 
@@ -1822,7 +1840,10 @@ const USASenateMapType = new MapType(
       null, // heldRegionMap
       false, // shouldFilterOutDuplicateRows
       true, // addDecimalPadding
-      doubleLineClassSeparatedFilterFunction, // organizeMapDataFunction
+      async (rawMapData, mapDates, columnMap, cycleYear, candidateNameToPartyIDMap, regionNameToID, _, __, isCustomMap, voteshareCutoffMargin, shouldIncludeVoteshare) => {
+        const heldSeatMapData = await getPastElectionHeldSeats(cycleYear, true)
+        return doubleLineClassSeparatedFilterFunction(rawMapData, mapDates, columnMap, cycleYear, candidateNameToPartyIDMap, regionNameToID, heldSeatMapData, __, isCustomMap, voteshareCutoffMargin, shouldIncludeVoteshare)
+      }, // organizeMapDataFunction
       null, // viewingDataFunction
       null, // zoomingDataFunction
       null, // splitVoteDataFunction

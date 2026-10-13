@@ -1287,6 +1287,7 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
   var dateToDisplay = new Date(mapDates[dateIndex-1])
 
   currentDisplayDate = dateToDisplay
+  updateSubmissionCountDisplay(currentMapSource.getID(), dateToDisplay)
 
   updateSliderDateDisplay(dateToDisplay)
 
@@ -2454,7 +2455,9 @@ function getPartyTotals(includeFlipData)
     var candidateVoteshareData = regionDataArray[regionID].partyVotesharePercentages
     if (Array.isArray(candidateVoteshareData) && candidateVoteshareData.reduce((total, candidate) => total + candidate.voteshare, 0) == 0) { continue }
 
-    var currentRegionEV = currentMapType.getEV(getCurrentDecade(), regionID, regionDataArray[regionID]) ?? regionDataArray[regionID].voteWorth
+    var regionData = regionDataArray[regionID]
+    var regionDataForTotals = regionData.isHold && regionData.disabled ? {...regionData, disabled: false} : regionData
+    var currentRegionEV = currentMapType.getEV(getCurrentDecade(), regionID, regionDataForTotals) ?? regionData.voteWorth
 
     if (currentViewingState != ViewingState.splitVote)
     {

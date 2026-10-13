@@ -1,8 +1,9 @@
 const submissionCountValues = {}
 const submissionCountRequests = {}
+const submissionCountsByDate = {}
 let currentSubmissionMapSourceID = null
 
-function updateSubmissionCountVisibility(mapSourceID)
+function updateSubmissionCountVisibility(mapSourceID, mapDate = currentSliderDate)
 {
   const submissionCount = document.getElementById("submissionCount")
   const submissionCountValue = document.getElementById("submissionCountValue")
@@ -13,14 +14,38 @@ function updateSubmissionCountVisibility(mapSourceID)
 
   if (shouldShow)
   {
-    submissionCountValue.textContent = submissionCountValues[mapSourceID] ?? "Loading..."
+    updateSubmissionCountDisplay(mapSourceID, mapDate)
     updateSubmissionCount(mapSourceID, predictionConfig)
   }
 }
 
+function updateSubmissionCountDisplay(mapSourceID, mapDate = currentSliderDate)
+{
+  if (currentSubmissionMapSourceID !== mapSourceID) { return }
+  if (submissionCountValues[mapSourceID] == null)
+  {
+    document.getElementById("submissionCountValue").textContent = "Loading..."
+    return
+  }
+  if (submissionCountValues[mapSourceID] === "unavailable")
+  {
+    document.getElementById("submissionCountValue").textContent = "unavailable"
+    return
+  }
+
+  const dateKey = mapDate instanceof Date ? new Date(mapDate).setHours(0, 0, 0, 0) : null
+  document.getElementById("submissionCountValue").textContent =
+    dateKey == null ? "Loading..." : (submissionCountsByDate[mapSourceID][dateKey] ?? 0).toLocaleString()
+}
+
 async function updateSubmissionCount(mapSourceID, predictionConfig)
 {
-  if (submissionCountValues[mapSourceID] != null || submissionCountRequests[mapSourceID]) { return }
+  if (submissionCountValues[mapSourceID] != null)
+  {
+    updateSubmissionCountDisplay(mapSourceID)
+    return
+  }
+  if (submissionCountRequests[mapSourceID]) { return }
 
   submissionCountRequests[mapSourceID] = fetch(predictionConfig.rawPredictionsURL, {cache: "no-store"})
     .then(response => {
@@ -31,13 +56,12 @@ async function updateSubmissionCount(mapSourceID, predictionConfig)
       return response.text()
     })
     .then(csvText => {
-      const parsedCSV = Papa.parse(csvText, {skipEmptyLines: true})
-      if (parsedCSV.errors?.length)
-      {
-        throw new Error(parsedCSV.errors.map(error => error.message).join("; "))
-      }
-      const dataRowCount = Math.max(0, parsedCSV.data.length - 1)
-      submissionCountValues[mapSourceID] = dataRowCount.toLocaleString()
+      const datedForecasts = computeDatedStateForecasts(csvText)
+      submissionCountsByDate[mapSourceID] = Object.fromEntries(datedForecasts.map(({date, submissionCount}) => [
+        new Date(date).setHours(0, 0, 0, 0),
+        submissionCount
+      ]))
+      submissionCountValues[mapSourceID] = true
     })
     .catch(error => {
       console.error(`Unable to load ${predictionConfig.name ?? mapSourceID} submission count.`, error)
@@ -47,7 +71,7 @@ async function updateSubmissionCount(mapSourceID, predictionConfig)
       delete submissionCountRequests[mapSourceID]
       if (currentSubmissionMapSourceID === mapSourceID)
       {
-        document.getElementById("submissionCountValue").textContent = submissionCountValues[mapSourceID]
+        updateSubmissionCountDisplay(mapSourceID)
       }
     })
 }

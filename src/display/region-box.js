@@ -219,7 +219,7 @@ async function updateRegionBox(regionID = currentRegionID)
 
     sortedPercentages.forEach((voteData, i) => {
       const roundedVoteshare = Math.round(voteData.voteshare*100)/100
-      if (roundedVoteshare <= 0 && !currentMapSource.isCustom() && regionData.reportingPercent == null) { return }
+      if (voteData.voteshare === 0 && !currentMapSource.isCustom() && regionData.reportingPercent == null) { return }
       
       const candidateName = getRegionCandidateName(voteData.partyID, regionData, voteData)
 
