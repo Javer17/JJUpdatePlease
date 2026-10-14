@@ -217,6 +217,7 @@ function setMapCountries()
     { //Parties
       [TossupParty.getID()]: TossupParty,
       [IndependentGenericParty.getID()]: IndependentGenericParty,
+      [NullParty.getID()]: NullParty,
       [OtherParty.getID()]: OtherParty,
       [UKSpeaker.getID()]:UKSpeaker,
       [UKLabourParty.getID()]: UKLabourParty,
@@ -261,6 +262,7 @@ function setMapCountries()
     [ //Party IDs
       TossupParty.getID(),
       IndependentGenericParty.getID(),
+      NullParty.getID(),
       OtherParty.getID(),
       UKSpeaker.getID(),
       UKLabourParty.getID(),

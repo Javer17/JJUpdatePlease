@@ -41,6 +41,8 @@ var YAPPresidentMapType = new MapType(
     "ADD2": "Appropriation 2",
     "ADD3": "Appropriation 3",
     "ADD4": "Appropriation 4",
+    "ADD5": "Appropriation 5",
+    "ADD6": "Appropriation 6",
   }
     ,[/.+-S/],
   [],
@@ -67,6 +69,8 @@ var YAPPresidentMapType = new MapType(
   "Appropriation 2": "ADD2",
   "Appropriation 3": "ADD3",
   "Appropriation 4": "ADD4",
+  "Appropriation 5": "ADD5",
+  "Appropriation 6": "ADD6",
   "National Popular Vote": nationalPopularVoteID
 }
 

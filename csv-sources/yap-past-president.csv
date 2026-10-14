@@ -56,10 +56,12 @@ date,round,region,candidate,party,voteshare,disabled
 08/03/1000,1,Kostos,Beary,sgp,0,
 08/03/1000,1,Kostos,Baudshaw,sdf,0,
 08/03/1000,1,Kostos,Mew,reform,100,
-08/03/1000,2,Appropriation 1,Beary,sgp,100,
-08/03/1000,2,Appropriation 2,Mew,reform,100,
+08/03/1000,2,Appropriation 1,Mew,reform,100,
+08/03/1000,2,Appropriation 2,Beary,sgp,100,
 08/03/1000,2,Appropriation 3,,,0,TRUE
 08/03/1000,2,Appropriation 4,,,0,TRUE
+08/03/1000,2,Appropriation 5,,,0,TRUE
+08/03/1000,2,Appropriation 6,,,0,TRUE
 08/03/1000,2,National Popular Vote,Beary,sgp,35.63,
 08/03/1000,2,National Popular Vote,Mew,reform,64.37,
 08/03/1000,2,Matatheste,Beary,sgp,100,
@@ -98,6 +100,8 @@ date,round,region,candidate,party,voteshare,disabled
 09/27/1004,1,Appropriation 2,Luz,sr,100,
 09/27/1004,1,Appropriation 3,Newsome,labour,100,
 09/27/1004,1,Appropriation 4,Solga,independent,100,
+09/27/1004,1,Appropriation 5,,,0,TRUE
+09/27/1004,1,Appropriation 6,,,0,TRUE
 09/27/1004,1,National Popular Vote,Mew,reform,50.9,
 09/27/1004,1,National Popular Vote,Luz,sr,41.44,
 09/27/1004,1,National Popular Vote,Newsome,labour,3.75,

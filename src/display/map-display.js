@@ -1653,18 +1653,21 @@ function updateMapElectoralVoteText()
   var regionIDs = Object.keys(mapRegionIDToName)
   for (var regionNum in regionIDs)
   {
-    var regionChildren = $("#" + regionIDs[regionNum] + "-text").children()
+    var regionID = regionIDs[regionNum]
+    var regionChildren = $("#" + regionID + "-text").children()
 
-    var regionEV = currentMapType.getEV(getCurrentDecade(), regionIDs[regionNum], (displayRegionDataArray[regionIDs[regionNum]] || {}), true)
-    if (regionEV == undefined) { continue }
-    if (currentViewingState == ViewingState.splitVote && displayRegionDataArray[regionIDs[regionNum]] && displayRegionDataArray[regionIDs[regionNum]].voteSplits && displayRegionDataArray[regionIDs[regionNum]].voteSplits.length > 0)
+    var regionEV = currentMapType.getEV(getCurrentDecade(), regionID, (displayRegionDataArray[regionID] || {}), true)
+    if (regionEV === undefined || regionEV === null) { continue }
+    if (currentViewingState == ViewingState.splitVote && displayRegionDataArray[regionID] && displayRegionDataArray[regionID].voteSplits && displayRegionDataArray[regionID].voteSplits.length > 0)
     {
-      regionEV = displayRegionDataArray[regionIDs[regionNum]].voteSplits.reduce((agg, curr) => agg + curr.votes, 0)
+      regionEV = displayRegionDataArray[regionID].voteSplits.reduce((agg, curr) => agg + curr.votes, 0)
     }
+
+    var regionText = /^ADD[1-6]$/.test(regionID) ? "" : regionID + " "
 
     if (regionChildren.length == 1)
     {
-      regionChildren[0].innerHTML = regionIDs[regionNum] + " " + regionEV
+      regionChildren[0].innerHTML = regionText + regionEV
     }
     else if (regionChildren.length == 2)
     {

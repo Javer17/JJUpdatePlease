@@ -196,6 +196,25 @@ const TossupParty = new PoliticalParty(
   {current: "#6c6e74", safe: "#6c6e74", likely: "#6c6e74", lean: "#6c6e74", tilt: "#6c6e74"}
 )
 
+const IndependentGenericParty = new PoliticalParty(
+  "INDGEN",
+  ["Independent", "Ind", "Indy", "IndependentD", "IndependenR"],
+  "Ind",
+  "Independent",
+  PoliticalPartyColors.gray,
+  "IND.png"
+)
+
+// This is used for bullshit or just for testing if theres a party missing from the political party lists
+const NullParty = new PoliticalParty(
+  "NULL",
+  [],
+  "Other",
+  "Other",
+  PoliticalPartyColors.gray,
+  "ColorGray.png"
+)
+
 // Historic Main Parties
 
 const WhigParty = new PoliticalParty(
@@ -924,15 +943,6 @@ const UKReclaimParty = new PoliticalParty(
     ////////////////////////
     // JACKSONIAN PARTIES //
     ////////////////////////
-
-const IndependentGenericParty = new PoliticalParty(
-  "INDGEN",
-  ["Independent", "Ind", "Indy", "IndependentD", "IndependenR"],
-  "Ind",
-  "Independent",
-  PoliticalPartyColors.gray,
-  "IND.png"
-)
 
 const JJULabourParty = new PoliticalParty(
   "JJULAB",
