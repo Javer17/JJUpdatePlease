@@ -83,6 +83,7 @@ function setMapCountries()
   USAMapCountry.setPoliticalPartyData(
     {
       [TossupParty.getID()]: TossupParty,
+      [NullParty.getID()]: NullParty,
       [DemocraticParty.getID()]: DemocraticParty,
       [RepublicanParty.getID()]: RepublicanParty,
       [WhigParty.getID()]: WhigParty,
@@ -145,6 +146,7 @@ function setMapCountries()
     ],
     [
       TossupParty.getID(),
+      NullParty.getID(),
       DemocraticParty.getID(),
       RepublicanParty.getID(),
       LibertarianParty.getID(),
@@ -311,6 +313,7 @@ function setMapCountries()
   JJUMapCountry.setPoliticalPartyData(
     {
       [TossupParty.getID()]: TossupParty,
+      [NullParty.getID()]: NullParty,
       [JJULabourParty.getID()]: JJULabourParty,
       [JJULiberalParty.getID()]: JJULiberalParty,
       [JJUAllianceParty.getID()]: JJUAllianceParty,
@@ -376,6 +379,7 @@ function setMapCountries()
     ],
     [
       TossupParty.getID(),
+      NullParty.getID(),
       JJULabourParty.getID(),
       JJULiberalParty.getID(),
       JJUAllianceParty.getID(),
@@ -448,6 +452,7 @@ function setMapCountries()
   YAPMapCountry.setPoliticalPartyData(
     { //Parties
       [TossupParty.getID()]: TossupParty,
+      [NullParty.getID()]: NullParty,
       [IndependentGenericParty.getID()]: IndependentGenericParty,
       [YAPSGPParty.getID()]: YAPSGPParty,
       [YAPLabourParty.getID()]: YAPLabourParty,
@@ -467,6 +472,7 @@ function setMapCountries()
     ],
     [ //Party IDs
       TossupParty.getID(),
+      NullParty.getID(),
       IndependentGenericParty.getID(),
       YAPSGPParty.getID(),
       YAPLabourParty.getID(),

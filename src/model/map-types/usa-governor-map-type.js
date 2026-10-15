@@ -88,7 +88,7 @@ const USAGovernorMapType = new MapType(
           }
           if (!politicalParties[partyID])
           {
-            partyID = IndependentGenericParty.getID()
+            partyID = NullParty.getID()
           }
 
           formattedCandidatesArray.push({candidate: candidateName, partyID: partyID, voteshare: totalVotes > 0 ? candidateVotes/totalVotes*100 : 0, votes: candidateVotes})

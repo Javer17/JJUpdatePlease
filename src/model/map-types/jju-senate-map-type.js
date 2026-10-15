@@ -121,7 +121,7 @@ var JJUSenateMapType = new MapType(
           }
           else
           {
-            currentPartyID = IndependentGenericParty.getID()
+            currentPartyID = NullParty.getID()
           }
         
           if (Object.keys(candidateData).includes(candidateName))

@@ -4,7 +4,7 @@ var YAPSenateMapType = new MapType(
   "S",
   "assets/usa-senate.png",
   "svg-sources/yap-states.svg",
-  34,
+  17,
   function()
   {
     return 1
@@ -188,7 +188,7 @@ var YAPSenateMapType = new MapType(
           }
           else
           {
-            currentPartyID = IndependentGenericParty.getID()
+            currentPartyID = NullParty.getID()
           }
         
           if (Object.keys(candidateData).includes(candidateName))
