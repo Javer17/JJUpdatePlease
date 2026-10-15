@@ -1254,6 +1254,15 @@ const YAPSocialRadicalParty = new PoliticalParty(
   [YAPSDFParty, YAPSGPParty]
 )
 
+const YAPLiberalFederationParty = new PoliticalParty(
+  "YAPLF",
+  ["LibFed", "Liberal Federation", "LF"],
+  "LF",
+  "LF",
+  PoliticalPartyColors.maroon,
+  "ColorMaroon.png"
+)
+
     ///////////////////////////
     // YAPMERIAN  COALITIONS //
     ///////////////////////////

@@ -120,6 +120,7 @@ var partyOrdering = [
   {partyID: YAPSDFParty.getID(), direction: PieChartDirection.clockwise},
   {partyID: YAPLabourParty.getID(), direction: PieChartDirection.clockwise},
       {partyID: YAPRefLabBloc.getID(), direction: PieChartDirection.clockwise},
+  {partyID: YAPLiberalFederationParty.getID(), direction: PieChartDirection.clockwise},
   {partyID: YAPReformParty.getID(), direction: PieChartDirection.counterclockwise},
 ]
 

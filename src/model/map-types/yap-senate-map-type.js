@@ -31,6 +31,7 @@ var YAPSenateMapType = new MapType(
     "OP": "Opplica", 
     "RO": "Rorcia",
     "NQ": "New Queria",
+    "NQ-2": "New Queria 2nd",
     "PR": "Porcerle",
     "DF": "Yapburgh D.F.", 
     "L1": "List Seat 1",
@@ -99,6 +100,7 @@ var YAPSenateMapType = new MapType(
   "Opplica": "OP",
   "Rorcia": "RO",
   "New Queria": "NQ",
+  "New Queria 2nd": "NQ-2",
   "Porcerle": "PR",
   "Yapburgh": "DF",
   "List Seat 1": "L1",
@@ -491,13 +493,17 @@ var YAPSenateMapType = new MapType(
       {
         return "svg-sources/yap-states-ca2.svg"
       }
- else if (mapDate < new Date(2002, 12-1, 31-1))
+ else if (mapDate < new Date(1005, 12-1, 31-1))
       {
       return "svg-sources/yap-states.svg"
       }
+ else if (mapDate < new Date(2005, 12-1, 31-1))
+      {
+      return "svg-sources/yap-states-ca2-nq2.svg"
+      }
       else
       {
-      return "svg-sources/yap-senate-17.svg"
+      return "svg-sources/yap-states-ca2-nq2.svg"
       }
     }
     
