@@ -2455,22 +2455,23 @@ function getPartyTotals(includeFlipData)
   for (var regionID in regionDataArray)
   {
     if (regionID == nationalPopularVoteID || regionID.endsWith(subregionSeparator + statePopularVoteDistrictID)) { continue }
-    var candidateVoteshareData = regionDataArray[regionID].partyVotesharePercentages
+    var regionData = regionDataArray[regionID]
+    if (regionData.disabled && (!regionData.isHold || (regionData.partyID == TossupParty.getID() && !regionData.electionDate && !regionData.candidateName))) { continue }
+    var candidateVoteshareData = regionData.partyVotesharePercentages
     if (Array.isArray(candidateVoteshareData) && candidateVoteshareData.reduce((total, candidate) => total + candidate.voteshare, 0) == 0) { continue }
 
-    var regionData = regionDataArray[regionID]
     var regionDataForTotals = regionData.isHold && regionData.disabled ? {...regionData, disabled: false} : regionData
     var currentRegionEV = currentMapType.getEV(getCurrentDecade(), regionID, regionDataForTotals) ?? regionData.voteWorth
 
     if (currentViewingState != ViewingState.splitVote)
     {
-      var partyIDToSet = regionDataArray[regionID].partyID
-      if (regionDataArray[regionID].partyID == null)
+      var partyIDToSet = regionData.partyID
+      if (regionData.partyID == null)
       {
         partyIDToSet = TossupParty.getID()
       }
 
-      if (includeFlipData && regionDataArray[regionID].flip)
+      if (includeFlipData && regionData.flip)
       {
         if (!(partyIDToSet in partyFlipTotals))
         {
@@ -2478,7 +2479,7 @@ function getPartyTotals(includeFlipData)
           partyFlipData[partyIDToSet] = []
         }
         partyFlipTotals[partyIDToSet] += currentRegionEV
-        partyFlipData[partyIDToSet].push({region: regionID, margin: regionDataArray[regionID].margin})
+        partyFlipData[partyIDToSet].push({region: regionID, margin: regionData.margin})
       }
       else
       {
@@ -2491,9 +2492,9 @@ function getPartyTotals(includeFlipData)
     }
     else if (currentViewingState == ViewingState.splitVote)
     {
-      if (!regionDataArray[regionID].voteSplits) { continue }
+      if (!regionData.voteSplits) { continue }
 
-      for (let partyVote of regionDataArray[regionID].voteSplits)
+      for (let partyVote of regionData.voteSplits)
       {
         let partyIDToSet = partyVote.partyID
         let votesWon = partyVote.votes
@@ -2505,13 +2506,13 @@ function getPartyTotals(includeFlipData)
         partyTotals[partyIDToSet] += votesWon
       }
 
-      if (regionDataArray[regionID].voteSplits.length == 0)
+      if (regionData.voteSplits.length == 0)
       {
-        if (!(regionDataArray[regionID].partyID in partyTotals))
+        if (!(regionData.partyID in partyTotals))
         {
-          partyTotals[regionDataArray[regionID].partyID] = 0
+          partyTotals[regionData.partyID] = 0
         }
-        partyTotals[regionDataArray[regionID].partyID] += currentRegionEV
+        partyTotals[regionData.partyID] += currentRegionEV
       }
     }
   }

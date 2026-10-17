@@ -1078,6 +1078,27 @@ const USASenateMapType = new MapType(
         return (regionData.flip ?? false).toString().toUpperCase()
       }
     }
+
+    function getSenateSVGByDate(dateTime)
+    {
+      let mapDate = new Date(dateTime)
+      
+      if (mapDate < new Date(1820, 3-1, 15-1))
+      {
+        return "svg-sources/usa-senate-pre-1820-map.svg"
+      }
+      else if (mapDate < new Date(1863, 7-1, 4-1))
+      {
+        return "svg-sources/usa-senate-pre-1864-map.svg"
+      }
+      else if (mapDate < new Date(1960, 7-1, 4-1))
+      {
+        return "svg-sources/usa-senate-pre-1960-map.svg"
+      }
+      else{
+        return "svg-sources/usa-senate-map.svg"
+      }
+    }
     
     function getFormattedRegionName(regionName, regionData)
     {
@@ -2048,6 +2069,91 @@ const USASenateMapType = new MapType(
       0.1 // voteshareCutoffMargin
     )
 
+    const HistoricalElectionResultMapSource = new MapSource(
+      "Historical-Senate-Elections", // id
+      "Older Elections", // name
+      "./csv-sources/historical-senate.csv", // dataURL
+      "https://en.wikipedia.org/wiki/", // homepageURL
+      {regular: "./assets/wikipedia-large.png", mini: "./assets/wikipedia-large.png", getOverlayText: () => {
+        let currentYear = currentSliderDate.getFullYear()
+        return currentYear
+      }}, // iconURL
+      {
+        date: "date",
+        region: "region",
+        seatClass: "class",
+        isSpecial: "special",
+        isRunoff: "runoff",
+        isOffyear: "offyear",
+        candidateName: "candidate",
+        partyID: "party",
+        // ballotPartyID: "ballotparty",
+        voteshare: "voteshare",
+        // candidateVotes: "candidatevotes",
+        // totalVotes: "totalvotes,"
+        isDisabled: "disabled",
+        isHidden: "hidden",
+      }, // columnMap
+      null, // cycleYear
+      null, // candidateNameToPartyIDMap
+      null, // shortCandidateNameOverride
+      regionNameToIDHistorical, // regionNameToIDMap
+      regionIDToLinkHistorical, // regionIDToLinkMap
+      null, // heldRegionMap
+      false, // shouldFilterOutDuplicateRows
+      true, // addDecimalPadding
+      doubleLineClassSeparatedFilterFunction, // organizeMapDataFunction
+      null, // viewingDataFunction
+      null, // zoomingDataFunction
+      null, // splitVoteDataFunction
+      null, // splitVoteDisplayOptions
+      getFormattedRegionName, // getFormattedRegionName
+      function(homepageURL, regionID, regionIDToLinkMap, mapDate, shouldOpenHomepage, mapData)
+      {
+        if (mapDate == null) { return }
+        
+        const regionData = mapData[mapDate.getTime()][regionID]
+        if (regionData && regionData.isHold && regionData.electionDate)
+        {
+          mapDate = new Date(regionData.electionDate)
+        }
+
+        let isSpecial = false
+        if (regionID != null && mapDate != null)
+        {
+          isSpecial = regionData.isSpecial
+        }
+
+        let linkToOpen = homepageURL + mapDate.getFullYear() + "_United_States_Senate_"
+        if (!shouldOpenHomepage)
+        {
+          let baseRegionID = regionID
+          if (isSpecial)
+          {
+            linkToOpen += "special_"
+          }
+          if (regionID.endsWith("-S"))
+          {
+            baseRegionID = regionID.slice(0, regionID.length-2)
+          }
+          linkToOpen += "election"
+          linkToOpen += "_in_" + regionIDToLinkMap[baseRegionID]
+        }
+        else
+        {
+          linkToOpen += "elections"
+        }
+        return linkToOpen
+      }, // customOpenRegionLinkFunction
+      null, // updateCustomMapFunction
+      null, // convertMapDataRowToCSVFunction
+      null, // isCustomMap
+      null, // shouldClearDisabled
+      true, // shouldShowVoteshare
+      0.1, // voteshareCutoffMargin
+      getSenateSVGByDate // overrideSVGPath
+    )
+
     let idsToPartyNames = {}
     let partyNamesToIDs = {}
     for (let partyNum in mainPoliticalPartyIDs)
@@ -2117,6 +2223,7 @@ const USASenateMapType = new MapType(
     senateMapSources[VotehubSenateProjection2026MapSource.getID()] = VotehubSenateProjection2026MapSource
     senateMapSources[VotehubSenatePolls2026MapSource.getID()] = VotehubSenatePolls2026MapSource
     senateMapSources[PastElectionResultMapSource.getID()] = PastElectionResultMapSource
+    senateMapSources[HistoricalElectionResultMapSource.getID()] = HistoricalElectionResultMapSource
     senateMapSources[CustomMapSource.getID()] = CustomMapSource
     senateMapSources[JJSenatePrediction.getID()] = JJSenatePrediction
 
@@ -2125,7 +2232,7 @@ const USASenateMapType = new MapType(
       [2022]: [FiveThirtyEightSenateProjection2022MapSource.getID(), LTESenateProjection2022MapSource.getID(), PASenateProjection2022MapSource.getID(), CookSenateProjection2022MapSource.getID(), SCBSenateProjection2022MapSource.getID()],
       [2024]: [FiveThirtyEightSenateProjection2024MapSource.getID(), PolymarketSenate2024MapSource.getID()],
       [2026]: [JJSenatePrediction.getID(), VotehubSenateProjection2026MapSource.getID(), VotehubSenatePolls2026MapSource.getID(),  LTESenateProjection2026MapSource.getID()],
-      [allYearsCycle]: [PastElectionResultMapSource.getID(), CustomMapSource.getID()]
+      [allYearsCycle]: [PastElectionResultMapSource.getID(), HistoricalElectionResultMapSource.getID(), CustomMapSource.getID()]
     }
     
     const kPastElectionsVsPastElections = 1

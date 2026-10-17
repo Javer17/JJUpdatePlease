@@ -172,7 +172,9 @@ const GrayColor = new PoliticalParty("Gray" , ["Gray Color"], "Gray", "Gray", Po
 
 const DemocraticParty = new PoliticalParty(
   "DEM",
-  ["Democratic", "Democrat"],
+  ["Democratic", "Democrat",
+   "Jacksonian Democrat", "Anti-Nebraska Democrat", "Pre-War Democrat", "Unionist Democrat"
+  ],
   "Dem",
   "Democratic",
   PoliticalPartyColors.blue,
@@ -181,7 +183,9 @@ const DemocraticParty = new PoliticalParty(
 
 const RepublicanParty = new PoliticalParty(
   "REP",
-  ["Republican"],
+  ["Republican",
+   "National Union", "Union Republican"
+  ],
   "Rep",
   "Republican",
   PoliticalPartyColors.red,
@@ -198,7 +202,7 @@ const TossupParty = new PoliticalParty(
 
 const IndependentGenericParty = new PoliticalParty(
   "INDGEN",
-  ["Independent", "Ind", "Indy", "IndependentD", "IndependenR"],
+  ["Independent", "Ind", "Indy", "IndependentD", "IndependenR", "No Party Affiliation", "Nonpartisan"],
   "Ind",
   "Independent",
   PoliticalPartyColors.gray,
@@ -215,16 +219,16 @@ const NullParty = new PoliticalParty(
   "ColorGray.png"
 )
 
-// Historic Main Parties
-
-const WhigParty = new PoliticalParty(
-  "WIG",
-  ["Whig"],
-  "Whig",
-  "Whig",
-  PoliticalPartyColors.orange,
-  "WIG.png"
+const UnknownParty = new PoliticalParty(
+  "UNKNOWN",
+  ["Unknown"],
+  "Unknown",
+  "Unknown",
+  PoliticalPartyColors.gray,
+  "unknown.png"
 )
+
+// Historic Main Parties
 
 const NationalRepublicanParty = new PoliticalParty(
   "NRP",
@@ -235,9 +239,21 @@ const NationalRepublicanParty = new PoliticalParty(
   "WIG.png"
 )
 
+const WhigParty = new PoliticalParty(
+  "WIG",
+  ["Whig", "Pre-War Whig"],
+  "Whig",
+  "Whig",
+  PoliticalPartyColors.orange,
+  "WIG.png",
+  [NationalRepublicanParty]
+)
+
 const DemocraticRepublicanParty = new PoliticalParty(
   "DRP",
-  ["Democratic Republican", "Democratic-Republican"],
+  ["Democratic Republican", "Democratic-Republican", "Anti-Federal",
+   "Clintonian Republican", "Bucktail Republican", "Crawford Republican", "Adams Republican", "Adams", "Jackson Republican", "Jacksonian"
+  ],
   "DRP",
   "Democratic Republican",
   PoliticalPartyColors.green,
@@ -246,7 +262,7 @@ const DemocraticRepublicanParty = new PoliticalParty(
 
 const FederalistParty = new PoliticalParty(
   "FED",
-  ["Federalist"],
+  ["Federalist", "Federal", "Jackson Federalist"],
   "FED",
   "Federalist",
   PoliticalPartyColors.scarlet,
@@ -291,6 +307,17 @@ const SocialistParty = new PoliticalParty(
   "SOC.png"
 )
 
+// Historic Third Parties
+
+const FreeSoilParty = new PoliticalParty(
+  "FS",
+  ["Free Soil"],
+  "FS",
+  "Free Soil",
+  PoliticalPartyColors.violet,
+  "FS.png"
+)
+
 const ConservativeParty = new PoliticalParty(
   "CON",
   ["Conservative"],
@@ -309,15 +336,113 @@ const ConstitutionParty = new PoliticalParty(
   "CONST.png"
 )
 
-// Historic Third Parties
+const LibertyParty = new PoliticalParty(
+  "LBT",
+  ["Liberty"],
+  "Lib",
+  "Liberty",
+  PoliticalPartyColors.teal,
+  "LIBY.png"
+)
 
-const FreeSoilParty = new PoliticalParty(
-  "FS",
-  ["Free Soil"],
-  "FS",
-  "Free Soil",
-  PoliticalPartyColors.violet,
-  "FS.png"
+const KnowNothingParty = new PoliticalParty(
+  "KNP",
+  ["Know Nothing Party", "Know Nothing", "American"],
+  "KN",
+  "Know Nothing",
+  PoliticalPartyColors.magenta,
+  "KNP.png"
+)
+
+const UnionParty = new PoliticalParty(
+  "UNI",
+  ["Union"],
+  "UNI",
+  "Union",
+  PoliticalPartyColors.plum,
+  "ColorPlum.png"
+)
+
+const LiberalRepublicanParty = new PoliticalParty(
+  "LR",
+  ["Liberal Republican"],
+  "LR",
+  "Lib Republican",
+  PoliticalPartyColors.pink,
+  "ColorPink.png"
+)
+
+const AntiMonopolyParty = new PoliticalParty(
+  "AMP",
+  ["Anti-Monopolist", "Anti-Monopoly Party"],
+  "AMP",
+  "Anti Monopoly",
+  PoliticalPartyColors.green,
+  "ColorGreen.png"
+)
+
+const ReadjusterParty = new PoliticalParty(
+  "REA",
+  ["Readjuster"],
+  "Rea",
+  "Readjuster",
+  PoliticalPartyColors.aqua,
+  "ColorAqua.png"
+)
+
+const PopulistParty = new PoliticalParty(
+  "POP",
+  ["Populist", "People's Party", "Fusion"],
+  "Pop",
+  "Populist",
+  PoliticalPartyColors.green,
+  "POP.png",
+  [AntiMonopolyParty]
+)
+
+const FarmersAllianceParty = new PoliticalParty(
+  "FALL",
+  ["Farmers' Alliance"],
+  "FA",
+  "Farmers' Alliance",
+  PoliticalPartyColors.willow,
+  "FARMALL.png",
+)
+
+const SilverParty = new PoliticalParty(
+  "SIL",
+  ["Silver", "Silver Republican", "Silver Democrat"],
+  "Sil",
+  "Silver",
+  PoliticalPartyColors.char,
+  "ColorChar.png",
+)
+
+const FarmerLaborParty = new PoliticalParty(
+  "FL",
+  ["Farmer-Labor"],
+  "FL",
+  "Farmer-Labor",
+  PoliticalPartyColors.teal,
+  "FL.png",
+)
+
+const NonPartisanLeagueParty = new PoliticalParty(
+  "NPL",
+  ["Non-Partisan League"],
+  "NPL",
+  "Non-Partisan League",
+  PoliticalPartyColors.tan,
+  "ColorTan.png",
+)
+
+const ProgressiveParty = new PoliticalParty(
+  "Pro",
+  ["Progressive"],
+  "Pro",
+  "Progressive",
+  PoliticalPartyColors.green,
+  "ColorGreen.png",
 )
 
 // Independent Candidates
@@ -588,7 +713,7 @@ const Independent1856MFParty = new PoliticalParty(
   ["Know Nothing"],
   "Ind",
   "Fillmore",
-  PoliticalPartyColors.violet,
+  PoliticalPartyColors.purple,
   "KNP.png"
 )
 
@@ -597,7 +722,7 @@ const Independent1844JBParty = new PoliticalParty(
   ["Liberty"],
   "Ind",
   "Birney",
-  PoliticalPartyColors.violet,
+  PoliticalPartyColors.teal,
   "LIBY.png"
 )
 
@@ -1260,7 +1385,7 @@ const YAPLiberalFederationParty = new PoliticalParty(
   "LF",
   "LF",
   PoliticalPartyColors.maroon,
-  "ColorMaroon.png"
+  "YAPLF.png"
 )
 
     ///////////////////////////

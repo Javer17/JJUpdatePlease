@@ -520,10 +520,12 @@ function updateTotalsPieChart()
   for (let regionID in regionDataArray)
   {
     if (regionID == nationalPopularVoteID || regionID.endsWith(subregionSeparator + statePopularVoteDistrictID)) { continue }
-    let candidateVoteshareData = regionDataArray[regionID].partyVotesharePercentages
+    let regionData = regionDataArray[regionID]
+    if (regionData.disabled && (!regionData.isHold || (regionData.partyID == TossupParty.getID() && !regionData.electionDate && !regionData.candidateName))) { continue }
+    let candidateVoteshareData = regionData.partyVotesharePercentages
     if (Array.isArray(candidateVoteshareData) && candidateVoteshareData.reduce((total, candidate) => total + candidate.voteshare, 0) == 0) { continue }
 
-    let regionParty = regionDataArray[regionID].partyID
+    let regionParty = regionData.partyID
     if (regionParty != null && !fullPartyOrdering.some((orderingData) => orderingData.partyID == regionParty))
     {
       insertPartyIntoTotalsPieChartOrdering(regionParty, fullPartyOrdering)
@@ -538,12 +540,11 @@ function updateTotalsPieChart()
       }
     }
 
-    let regionMargin = regionDataArray[regionID].margin
+    let regionMargin = regionData.margin
 
-    let regionData = regionDataArray[regionID]
     let regionDataForTotals = regionData.isHold && regionData.disabled ? {...regionData, disabled: false} : regionData
     let regionEV = currentMapType.getEV(getCurrentDecade(), regionID, regionDataForTotals) ?? regionData.voteWorth
-    let formattedRegionMargin = getRoundedMarginValue(regionMargin, regionDataArray[regionID])
+    let formattedRegionMargin = getRoundedMarginValue(regionMargin, regionData)
     let regionString = (currentMapSource.getFormattedRegionName ? currentMapSource.getFormattedRegionName(regionID) : regionID) + " " + currentMapSource.getVotesharePrefix() + formattedRegionMargin + (currentMapSource.getCustomVoteshareSuffix() ?? "")
 
     if (regionParty == null || regionParty == TossupParty.getID() || regionMargin == 0)
@@ -553,7 +554,7 @@ function updateTotalsPieChart()
     }
     else
     {
-      let marginKey = getMarginIndexForValue(regionMargin, regionDataArray[regionID])
+      let marginKey = getMarginIndexForValue(regionMargin, regionData)
 
       marginTotalsData[regionParty][marginKey] += regionEV
       regionMarginStringsData[regionParty][marginKey].push(regionString)
