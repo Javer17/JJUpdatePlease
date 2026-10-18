@@ -400,7 +400,7 @@ const USAPresidentMapType = new MapType(
             }
             else
             {
-              currentPartyID = NullParty.getID()
+              currentPartyID = IndependentGenericParty.getID()
             }
 
             if (Object.keys(candidateData).includes(candidateName))

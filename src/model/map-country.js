@@ -141,6 +141,7 @@ function setMapCountries()
       [Independent1860JohnBreckenridgeParty.getID()]: Independent1860JohnBreckenridgeParty,
       [Independent1860JohnBellParty.getID()]: Independent1860JohnBellParty,
       [Independent1856MFParty.getID()]: Independent1856MFParty,
+      [Independent1844JBParty.getID()]: Independent1844JBParty,
       [Independent1836HWParty.getID()]: Independent1836HWParty,
       [Independent1836DWParty.getID()]: Independent1836DWParty,
       [Independent1836WMParty.getID()]: Independent1836WMParty,
