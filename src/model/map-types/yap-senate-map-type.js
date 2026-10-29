@@ -11,6 +11,7 @@ var YAPSenateMapType = new MapType(
   },
   false, //ShowEVs
   2,
+  null,
   true,
   true,
   false,

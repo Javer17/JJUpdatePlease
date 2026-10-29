@@ -147,7 +147,7 @@ async function hideCustomCompareSelection(shouldReset)
     toggleMapSettingDisable("seatArrangement", true)
     updateCompareMapSlidersVisibility()
     
-    setCompareSliderDates()
+    await setCompareSliderDates()
   }
   else
   {
@@ -192,19 +192,54 @@ async function loadComparePreset(comparePresetNum)
   await addCompareMapSource(defaultCompareSourceIDs[comparePresetNum][0])
   if (defaultCompareSourceIDs[comparePresetNum][0] != defaultCompareSourceIDs[comparePresetNum][1])
   {
-    await addCompareMapSource(defaultCompareSourceIDs[comparePresetNum][1])
+    await addCompareMapSource(defaultCompareSourceIDs[comparePresetNum][1], null, true)
   }
 
-  setCompareSliderDates()
+  await setCompareSliderDates()
 }
 
-function setCompareSliderDates()
+async function setCompareSliderDates()
 {
-  if (compareMapSourceIDArray[0] == compareMapSourceIDArray[1])
+  const termLengthYears = currentMapType.getTermLengthYears()
+  const compareSources = compareMapSourceIDArray.map(sourceID => mapSources[sourceID])
+  const isSameSource = compareMapSourceIDArray[0] == compareMapSourceIDArray[1]
+  
+  let sliderIndexToSet
+  let latestCycleYear
+  if (isSameSource)
   {
-    $("#secondCompareDataMapDateSlider").val(mapSources[compareMapSourceIDArray[1]].getMapDates().length-1)
-    setCompareSourceDate(1, mapSources[compareMapSourceIDArray[1]].getMapDates().length-1)
+    sliderIndexToSet = 1
+    if (compareSources[1].getCycleYear() == allYearsCycle)
+    {
+      latestCycleYear = new Date(compareSources[1].getMapDates().at(-1)).getFullYear()
+    }
   }
+  else
+  {
+    const projectionIndex = compareSources.findIndex(mapSource => mapSource.getCycleYear() != allYearsCycle)
+    sliderIndexToSet = compareSources.findIndex(mapSource => mapSource.getCycleYear() == allYearsCycle)
+    if (projectionIndex == -1 || sliderIndexToSet == -1) { return }
+    
+    latestCycleYear = compareSources[projectionIndex].getCycleYear()
+    // once the past source has results for the projection's cycle, keep comparing against those
+    if (new Date(compareSources[sliderIndexToSet].getMapDates().at(-1)).getFullYear() == latestCycleYear) { return }
+  }
+    
+  const mapDates = compareSources[sliderIndexToSet].getMapDates()
+  let dateIndexToSet = -1
+  if (latestCycleYear != null && termLengthYears != null)
+  {
+    dateIndexToSet = mapDates.findLastIndex(mapDate => new Date(mapDate).getFullYear() == latestCycleYear-termLengthYears)
+  }
+  if (dateIndexToSet == -1)
+  {
+    if (!isSameSource) { return }
+    dateIndexToSet = mapDates.length-1-1
+  }
+  
+  const sliderDivID = sliderIndexToSet == 0 ? "firstCompareDataMapDateSlider" : "secondCompareDataMapDateSlider"
+  $("#" + sliderDivID).val(dateIndexToSet+1)
+  await setCompareSourceDate(sliderIndexToSet, dateIndexToSet+1)
 }
 
 let compareSortMode = CompareSortMode.voteshare
@@ -227,7 +262,7 @@ function toggleCompareSortMode(div)
   }
 }
 
-async function addCompareMapSource(mapSourceID, clickDivIDToIgnore)
+async function addCompareMapSource(mapSourceID, clickDivIDToIgnore, shouldSwapSources = false)
 {
   if (clickDivIDToIgnore != null)
   {
@@ -261,13 +296,13 @@ async function addCompareMapSource(mapSourceID, clickDivIDToIgnore)
 
   showingCompareMap = true
   
-  await updateCompareMapSources(compareSourcesUpdated, false)
+  await updateCompareMapSources(compareSourcesUpdated, shouldSwapSources)
   
   toggleMapSettingDisable("seatArrangement", true)
   updateCompareMapSlidersVisibility()
 }
 
-async function updateCompareMapSources(compareSourcesToUpdate, _overrideSwapSources, swapSliderValues, overrideDateValues = [null, null])
+async function updateCompareMapSources(compareSourcesToUpdate, shouldSwapSources, swapSliderValues, overrideDateValues = [null, null])
 {
   $('.comparesourcecheckbox').prop('disabled', true)
   if (compareSourcesToUpdate[0])
@@ -280,11 +315,11 @@ async function updateCompareMapSources(compareSourcesToUpdate, _overrideSwapSour
   }
   $('.comparesourcecheckbox').prop('disabled', false)
 
-  // if (shouldSwapCompareMapSources(compareMapSourceIDArray[0], compareMapSourceIDArray[1]) && !overrideSwapSources)
-  // {
-  //   swapCompareMapSources()
-  //   compareSourcesToUpdate = [true, true]
-  // }
+  if (shouldSwapSources && shouldSwapCompareMapSources(compareMapSourceIDArray[0], compareMapSourceIDArray[1]))
+  {
+    swapCompareMapSources()
+    compareSourcesToUpdate = [true, true]
+  }
 
   if (swapSliderValues)
   {
@@ -317,7 +352,9 @@ async function loadCompareMapSource(sourceID)
 
 function shouldSwapCompareMapSources(firstMapSourceID, secondMapSourceID)
 {
-  return mapSources[firstMapSourceID].getMapDates().slice(-1)[0] < mapSources[secondMapSourceID].getMapDates().slice(-1)[0]
+  // compare calendar days, since projections can be timestamped later on election day than the results
+  const getLatestDay = mapSourceID => new Date(mapSources[mapSourceID].getMapDates().slice(-1)[0]).setHours(0, 0, 0, 0)
+  return getLatestDay(firstMapSourceID) < getLatestDay(secondMapSourceID)
 }
 
 function updateCompareMapSlidersVisibility(overrideShowHide)

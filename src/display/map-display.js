@@ -62,8 +62,8 @@ var pannedDuringClick = false
 var selectedParty
 
 // DEFAULT VALUES
-const standardMarginValues = {solid: 20, safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}
-const solidMarginValues = { solid: 20, safe: 10, likely: 5, lean: 1, tilt: Number.MIN_VALUE }
+const standardMarginValues = {afe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}
+const solidMarginValues = {solid: 30, safe: 15, likely: 5, lean: 1, tilt: Number.MIN_VALUE}
 
 // === FOR PRESETS ===
 // For Normal
@@ -75,10 +75,10 @@ const standardMarginPresetValues = [
 
 // For Solid
 const solidMarginPresetValues = [
+  {solid: 30, safe: 15, likely: 5, lean: 1},
   {solid: 20, safe: 10, likely: 5, lean: 1},
   {solid: 20, safe: 15, likely: 5, lean: 1},
   {solid: 15, safe: 10, likely: 5, lean: 1},
-  {solid: 30, safe: 15, likely: 5, lean: 1},
 ]
 
 // Custom Presets for Maptypes
@@ -331,7 +331,7 @@ const regionDeselectColor = "#181922" //#555
 
 const regionDisabledColor = "#202126"
 
-const flipPatternBrightnessFactor = 0.8
+const flipPatternBrightnessFactor = 0.825
 const flipPatternHeight = 7
 const flipPatternWidth = 7
 
@@ -487,7 +487,7 @@ async function reloadForNewMapCountry(initialLoad, loadMapType = true)
   countdownTimes = currentMapCountry.getCountdownTimes()
   createCountdownDropdownItems()
   
-  currentMapType = mapTypes[getCookie(`${currentMapCountry.getID()}-currentMapType`) ?? getCookie("currentMapType") ?? mapTypeIDs[0]] ?? mapTypes[mapTypeIDs[0]]
+  currentMapType = mapTypes[getCookie(`${currentMapCountry.getID()}-currentMapType`) ?? getCookie("currentMapType") ?? currentMapCountry.getDefaultMapTypeID()] ?? mapTypes[currentMapCountry.getDefaultMapTypeID()]
   $("#cycleMapTypeButton").find("img").attr('src', currentMapType.getIconURL())
   
   loadMapType && await reloadForNewMapType(initialLoad)
@@ -863,7 +863,12 @@ function addDivEventListeners()
     }
   })
 
+ let regionBoxHideTimeout = null
+
   $("#regionboxcontainer").on('show', function() {
+    clearTimeout(regionBoxHideTimeout)
+    regionBoxHideTimeout = null
+    
     $(this).show()
     $(this).css('opacity', "1")
   })
@@ -871,8 +876,10 @@ function addDivEventListeners()
   $("#regionboxcontainer").on('hide', function() {
     $(this).css('opacity', "0")
 
-    setTimeout(function() {
-      if ($("#regionboxcontainer").css('opacity') == "0") { $("#regionboxcontainer").hide() }
+    clearTimeout(regionBoxHideTimeout)
+    regionBoxHideTimeout = setTimeout(function() {
+      regionBoxHideTimeout = null
+      $("#regionboxcontainer").hide()
     }, 200)
   })
 
@@ -2139,7 +2146,7 @@ async function zoomOutMap(displayMap = true)
     getCompareMajorParties = null
     shouldSetCompareMapSource = currentMapSource.isCompare()
     
-    await updateCompareMapSources([true, true], true, false, [$("#firstCompareDataMapDateSlider").val(), $("#secondCompareDataMapDateSlider").val()])
+    await updateCompareMapSources([true, true], false, false, [$("#firstCompareDataMapDateSlider").val(), $("#secondCompareDataMapDateSlider").val()])
     shouldSetCompareMapSource = true
   }
   else if (currentMapSource.isCustom())

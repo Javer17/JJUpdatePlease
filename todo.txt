@@ -1,0 +1,16 @@
+/=============================================================================================================================/
+Misc Maps
+    Maps would need to have a title, and an easy way to have the SVG
+    One CSV per country, would need to be able to distinguish what election
+        Maybe ID?
+    Something similar to NPV tags i could include a SVG tag which chooses the svg
+    Have all IDs tabled in a file called "otherMapIDs.js" or something like that
+/=============================================================================================================================/
+Party Presets
+    Add a button next to party creation
+    When hovering over party, under party color presets will be party presets
+    It will open a (scrollable) menu where you can select a party
+    It will just rip everything from ID to partyLogo from the parties in map-country.js
+/=============================================================================================================================/
+Netherlands
+    2 Map Viewables - With or without seat counts (side of the main municipality map)

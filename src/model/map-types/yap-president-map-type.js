@@ -16,6 +16,7 @@ var YAPPresidentMapType = new MapType(
   },
   true,
   2,
+  null,
   true,
   true,
   false,

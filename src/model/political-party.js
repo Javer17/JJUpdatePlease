@@ -118,9 +118,9 @@ const PoliticalPartyColors = {
 const PoliticalPartyColors = {                                                                                                          // Dutch Parties (WIP)
   red:      {current: "#541217", solid: "#880006", safe: "#be1c29", likely: "#ff5864", lean: "#ff8b98", tilt: "#cf8980"},   // PRO  PvdA
   scarlet:  {current: "#5d1e0b", solid: "#992100", safe: "#d33a0b", likely: "#f56a40", lean: "#f79368", tilt: "#bf9878"},   // LN   GPV
-  orange:   {current: "#703008", solid: "#bd4301", safe: "#ff6200", likely: "#ff9e4b", lean: "#ffb682", tilt: "#d5b27a"},   // SGP 
+  orange:   {current: "#703008", solid: "#bd4301", safe: "#ff6200", likely: "#ff9e4b", lean: "#ffb682", tilt: "#d5b27a"},   // SGP
   yellow:   {current: "#6f4408", solid: "#b96800", safe: "#fe9800", likely: "#f9b04f", lean: "#ffc27c", tilt: "#cbb78a"},   // NSC  BIJ1  LPF   U55
-  olive:    {current: "#3d3504", solid: "#6b5900", safe: "#9e8900", likely: "#c2b704", lean: "#d1c64e", tilt: "#b6a764"},   // BBB
+  olive:    {current: "#423b04", solid: "#877900", safe: "#b09e00", likely: "#e1ce28", lean: "#e8d860", tilt: "#cbc088"},   // BBB
   lime:     {current: "#364505", solid: "#4e6b00", safe: "#789c00", likely: "#98bf11", lean: "#bbd35b", tilt: "#b2ba6f"},   // GL   BP
   green:    {current: "#103808", solid: "#066800", safe: "#24a30e", likely: "#5cc449", lean: "#91d785", tilt: "#96ba8f"},   // D66
   teal:     {current: "#083025", solid: "#005139", safe: "#0e7f5f", likely: "#31af76", lean: "#6cd9a4", tilt: "#84b5a5"},   // CDA
@@ -614,7 +614,7 @@ const Independent1932NTParty = new PoliticalParty(
   ["Socialist"],
   "Ind",
   "Thomas",
-  PoliticalPartyColors.magenta,
+  PoliticalPartyColors.scarlet,
   "SOC.png"
 )
 
@@ -632,7 +632,7 @@ const Independent1920EDParty = new PoliticalParty(
   ["Socialist"],
   "Ind",
   "Debs",
-  PoliticalPartyColors.magenta,
+  PoliticalPartyColors.scarlet,
   "SOC.png"
 )
 
@@ -641,7 +641,7 @@ const Independent1916ABParty = new PoliticalParty(
   ["Socialist"],
   "Ind",
   "Benson",
-  PoliticalPartyColors.magenta,
+  PoliticalPartyColors.scarlet,
   "SOC.png"
 )
 
@@ -659,7 +659,7 @@ const Independent1912EDParty = new PoliticalParty(
   ["Socialist"],
   "Ind",
   "Debs",
-  PoliticalPartyColors.magenta,
+  PoliticalPartyColors.scarlet,
   "SOC.png"
 )
 
@@ -677,7 +677,7 @@ const Independent1892JBParty = new PoliticalParty(
   ["Prohibition"],
   "Ind",
   "Bidwell",
-  PoliticalPartyColors.violet,
+  PoliticalPartyColors.pink,
   "PROH.png"
 )
 
@@ -686,7 +686,7 @@ const Independent1888CFParty = new PoliticalParty(
   ["Prohibition"],
   "Ind",
   "Fisk",
-  PoliticalPartyColors.violet,
+  PoliticalPartyColors.pink,
   "PROH.png"
 )
 
