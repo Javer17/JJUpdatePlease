@@ -275,6 +275,8 @@ class MapType{
         currentGlobalMapSettings[settingID] = this.currentMapSettings[settingID]
       }
     }
+
+    applyMobileModeClass()
   }
 
   getMapSettingLayout(settingID, selfArg)
@@ -407,6 +409,13 @@ for (var settingNum in globalMapSettings)
 {
   currentGlobalMapSettings[globalMapSettings[settingNum].id] = getCookie(globalMapSettings[settingNum].id) || globalMapSettings[settingNum].defaultValue
 }
+
+// Toggles the "mobile-mode" class on <html> so CSS can style things only when Mobile Mode is on
+function applyMobileModeClass()
+{
+  document.documentElement.classList.toggle("mobile-mode", currentGlobalMapSettings["mobileMode"] == "on")
+}
+applyMobileModeClass()
 
 const regionEVArray = {
   2020: {"AL":9, "AK":3, "AZ":11, "AR":6, "CA":54, "CO":10, "CT":7, "DE":3, "DC":3, "FL":30, "GA":16, "HI":4, "ID":4, "IL":19, "IN":11, "IA":6, "KS":6, "KY":8, "LA":8, "ME": 4, "ME-D1":1, "ME-D2":1, "ME-AL":2, "MD":10, "MA":11, "MI":15, "MN":10, "MS":6, "MO":10, "MT":4, "NE":5, "NE-D1":1, "NE-D2":1, "NE-D3":1, "NE-AL":2, "NV":6, "NH":4, "NJ":14, "NM":5, "NY":28, "NC":16, "ND":3, "OH":17, "OK":7, "OR":8, "PA":19, "RI":4, "SC":9, "SD":3, "TN":11, "TX":40, "UT":6, "VT":3, "VA":13, "WA":12, "WV":4, "WI":10, "WY":3},

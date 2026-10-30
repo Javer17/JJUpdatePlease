@@ -85,6 +85,11 @@
     <meta property="og:description" content="VERY Interactive map for US election results and projections. President, senate, house, and governor races included.">
     <meta property="og:image" content="https://javer17.github.io/JJUpdatePlease/assets/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      html.mobile-mode #mapZoomControls { width: 150rem !important; }
+      html.mobile-mode #mapZoomControls > div { gap: 24rem !important; padding: 24rem !important; border-radius: 24rem !important; }
+      html.mobile-mode #mapCloseButtonImage { padding: 24rem !important; border-radius: 24rem !important; }
+    </style>
   </head>
   <body style="background-color: black; margin: 0; display: flex; flex-direction: column; height: 100vh;" onresize="updateSVGViewbox()">
     <div id="modalsContainer" class="modals-container" style="display: none;">
