@@ -453,9 +453,6 @@ let currentRegionID
 let ignoreNextClick = false
 let clickUsedToZoom = false
 let mobileTouchState = null
-let suppressNextTouchMapClick = false
-let suppressedTouchRegionID = null
-let suppressNextTouchMapClickTimeout
 
 let isDraggingInsideRoundControls = false
 
@@ -512,7 +509,7 @@ function mouseEnteredRegion(div)
 
   if (currentEditingState == EditingState.editing && shouldDragSelect && mouseIsDown && !regionIDsChanged.includes(regionID) && !editingRegionVotesharePercentages)
   {
-    leftClickRegion(div)
+    leftClickRegion(div, true)
     regionIDsChanged.push(regionID)
   }
 
@@ -608,7 +605,16 @@ document.addEventListener('touchstart', function(e) {
 
   const touch = e.changedTouches[0]
   const regionElement = getRegionElementAtTouchPoint(touch, e.target)
-  if (!regionElement) { return }
+
+  if (!regionElement)
+  {
+    if (currentRegionID)
+    {
+      currentRegionID = null
+      updateRegionBox()
+    }
+    return
+  }
 
   if (mobileTouchState)
   {
@@ -631,7 +637,7 @@ document.addEventListener('touchstart', function(e) {
     if (!mobileTouchState || mobileTouchState.identifier != touch.identifier) { return }
 
     mobileTouchState.longPressTimeout = null
-    leftClickRegion(mobileTouchState.regionElement)
+    leftClickRegion(mobileTouchState.regionElement, true)
   }, 1500)
 }, {capture: true, passive: true})
 
@@ -670,15 +676,18 @@ document.addEventListener('touchend', function(e) {
   cancelMobileTouchLongPress()
   mouseIsDown = e.touches.length > 0
   pannedDuringClick = false
-  suppressNextTouchMapClick = true
-  suppressedTouchRegionID = mobileTouchState.regionElement.id
-  clearTimeout(suppressNextTouchMapClickTimeout)
-  suppressNextTouchMapClickTimeout = setTimeout(() => {
-    suppressNextTouchMapClick = false
-    suppressedTouchRegionID = null
-  }, 750)
+  
+  const targetRegionElement = mobileTouchState.regionElement
+  let regionID = getBaseRegionID($(targetRegionElement).attr('id')).baseID
+  currentRegionID = regionID
+
+  if (showingDataMap && !editingRegionVotesharePercentages)
+  {
+    updateRegionBox(regionID)
+  }
+
+  leftClickRegion(targetRegionElement, true)
   mobileTouchState = null
-  updateRegionBox()
 }, {capture: true, passive: true})
 
 document.addEventListener('touchcancel', function() {
@@ -694,19 +703,6 @@ document.addEventListener('touchcancel', function() {
   mouseIsDown = false
   pannedDuringClick = false
 }, {capture: true, passive: true})
-
-document.addEventListener('click', function(e) {
-  if (!suppressNextTouchMapClick || !(e.target instanceof Element)) { return }
-
-  const regionElement = e.target.closest("#outlines > *")
-  if (!regionElement || regionElement.id != suppressedTouchRegionID) { return }
-
-  e.preventDefault()
-  e.stopImmediatePropagation()
-  suppressNextTouchMapClick = false
-  suppressedTouchRegionID = null
-  clearTimeout(suppressNextTouchMapClickTimeout)
-}, true)
 
 function mouseLeftRegion(div)
 {
@@ -812,7 +808,7 @@ function viewingDiscreteRegions()
   return currentMapType.getID() != USAHouseMapType.getID() || currentMapType.getMapSettingValue("showAllDistricts") === true || currentViewingState == ViewingState.zooming
 }
 
-async function leftClickRegion(div)
+async function leftClickRegion(div, isMobileTouch = false)
 {
   let regionID = $(div).attr('id')
   currentRegionID = regionID
@@ -895,7 +891,7 @@ async function leftClickRegion(div)
     updateRegionFillColors(regionIDsToFill, regionData)
     displayPartyTotals()
   }
-  else if (canZoomCurrently && currentViewingState == ViewingState.viewing && showingDataMap)
+  else if (canZoomCurrently && currentViewingState == ViewingState.viewing && showingDataMap && !isMobileTouch)
   {
     let baseRegionID = getBaseRegionID($(div).attr('id')).baseID
     currentViewingState = ViewingState.zooming
@@ -922,7 +918,7 @@ async function leftClickRegion(div)
     currentRegionID = null
     updateRegionBox()
   }
-  else if (openLinksWithLeftClick && showingDataMap)
+  else if (openLinksWithLeftClick && showingDataMap && !isMobileTouch)
   {
     currentMapSource.openRegionLink(regionID ?? currentMapZoomRegion, currentSliderDate)
     
