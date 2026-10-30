@@ -391,7 +391,7 @@ var globalMapSettings =
     return value
   },
   defaultValue: "off", reloadType: MapSettingReloadType.display},
-  {id: "disableRedirects", emoji: "📱", title: "Disable Redirects", type: MapSettingType.optionCycle, options:
+  {id: "mobileMode", emoji: "📱", title: "Mobile Mode", type: MapSettingType.optionCycle, options:
   [
     {id: "on", title: "On", value: true},
     {id: "off", title: "Off", value: false}

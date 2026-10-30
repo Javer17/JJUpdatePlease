@@ -474,11 +474,6 @@ class MapSource
 
   openRegionLink(regionID, modelDate, isCheck = false)
   {
-    if (this.customOpenRegionLinkFunction && currentMapType.getMapSettingValue("disableRedirects"))
-    {
-      return false
-    }
-
     let linkToOpen = null
     if (this.customOpenRegionLinkFunction == undefined)
     {

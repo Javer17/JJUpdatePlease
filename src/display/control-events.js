@@ -452,6 +452,10 @@ let mouseMovedDuringClick = false
 let currentRegionID
 let ignoreNextClick = false
 let clickUsedToZoom = false
+let mobileTouchState = null
+let suppressNextTouchMapClick = false
+let suppressedTouchRegionID = null
+let suppressNextTouchMapClickTimeout
 
 let isDraggingInsideRoundControls = false
 
@@ -555,6 +559,154 @@ function mouseEnteredRegion(div)
     parent.insertBefore(regionPath, parent.lastElementChild.nextSibling)
   }
 }
+
+function getRegionElementAtTouchPoint(touch, fallbackTarget)
+{
+  const element = document.elementFromPoint(touch.clientX, touch.clientY)
+  const regionElement = element instanceof Element ? element.closest("#outlines > *") : null
+  if (regionElement) { return regionElement }
+  return fallbackTarget instanceof Element ? fallbackTarget.closest("#outlines > *") : null
+}
+
+function updateMobileTouchRegion(regionElement, touch)
+{
+  if (!regionElement) { return }
+
+  currentMouseX = touch.pageX
+  currentMouseY = touch.pageY
+
+  if (mobileTouchState.regionElement != regionElement)
+  {
+    if (mobileTouchState.regionElement)
+    {
+      mouseLeftRegion(mobileTouchState.regionElement)
+    }
+
+    mobileTouchState.regionElement = regionElement
+    mouseEnteredRegion(regionElement)
+  }
+
+  updateRegionBoxPosition(touch.pageX, touch.pageY)
+}
+
+function cancelMobileTouchLongPress()
+{
+  if (!mobileTouchState) { return }
+
+  clearTimeout(mobileTouchState.longPressTimeout)
+  mobileTouchState.longPressTimeout = null
+}
+
+document.addEventListener('touchstart', function(e) {
+  if (!currentMapType || !currentMapType.getMapSettingValue("mobileMode")) { return }
+
+  if (e.touches.length != 1)
+  {
+    cancelMobileTouchLongPress()
+    return
+  }
+
+  const touch = e.changedTouches[0]
+  const regionElement = getRegionElementAtTouchPoint(touch, e.target)
+  if (!regionElement) { return }
+
+  if (mobileTouchState)
+  {
+    cancelMobileTouchLongPress()
+  }
+
+  mobileTouchState = {
+    identifier: touch.identifier,
+    startX: touch.clientX,
+    startY: touch.clientY,
+    regionElement,
+    longPressTimeout: null
+  }
+
+  mouseIsDown = false
+  updateMobileTouchRegion(regionElement, touch)
+  mouseIsDown = true
+
+  mobileTouchState.longPressTimeout = setTimeout(() => {
+    if (!mobileTouchState || mobileTouchState.identifier != touch.identifier) { return }
+
+    mobileTouchState.longPressTimeout = null
+    leftClickRegion(mobileTouchState.regionElement)
+  }, 1500)
+}, {capture: true, passive: true})
+
+document.addEventListener('touchmove', function(e) {
+  if (!mobileTouchState || !currentMapType?.getMapSettingValue("mobileMode")) { return }
+
+  const touch = Array.from(e.touches).find(item => item.identifier == mobileTouchState.identifier)
+  if (!touch) { return }
+
+  if (Math.hypot(touch.clientX - mobileTouchState.startX, touch.clientY - mobileTouchState.startY) > 10)
+  {
+    cancelMobileTouchLongPress()
+  }
+
+  const regionElement = getRegionElementAtTouchPoint(touch, e.target)
+  if (regionElement)
+  {
+    updateMobileTouchRegion(regionElement, touch)
+  }
+}, {capture: true, passive: true})
+
+document.addEventListener('touchend', function(e) {
+  if (!mobileTouchState)
+  {
+    if (e.touches.length == 0)
+    {
+      mouseIsDown = false
+      pannedDuringClick = false
+    }
+    return
+  }
+
+  const endedTouch = Array.from(e.changedTouches).find(item => item.identifier == mobileTouchState.identifier)
+  if (!endedTouch) { return }
+
+  cancelMobileTouchLongPress()
+  mouseIsDown = e.touches.length > 0
+  pannedDuringClick = false
+  suppressNextTouchMapClick = true
+  suppressedTouchRegionID = mobileTouchState.regionElement.id
+  clearTimeout(suppressNextTouchMapClickTimeout)
+  suppressNextTouchMapClickTimeout = setTimeout(() => {
+    suppressNextTouchMapClick = false
+    suppressedTouchRegionID = null
+  }, 750)
+  mobileTouchState = null
+  updateRegionBox()
+}, {capture: true, passive: true})
+
+document.addEventListener('touchcancel', function() {
+  if (!mobileTouchState)
+  {
+    mouseIsDown = false
+    pannedDuringClick = false
+    return
+  }
+
+  cancelMobileTouchLongPress()
+  mobileTouchState = null
+  mouseIsDown = false
+  pannedDuringClick = false
+}, {capture: true, passive: true})
+
+document.addEventListener('click', function(e) {
+  if (!suppressNextTouchMapClick || !(e.target instanceof Element)) { return }
+
+  const regionElement = e.target.closest("#outlines > *")
+  if (!regionElement || regionElement.id != suppressedTouchRegionID) { return }
+
+  e.preventDefault()
+  e.stopImmediatePropagation()
+  suppressNextTouchMapClick = false
+  suppressedTouchRegionID = null
+  clearTimeout(suppressNextTouchMapClickTimeout)
+}, true)
 
 function mouseLeftRegion(div)
 {
@@ -663,15 +815,7 @@ function viewingDiscreteRegions()
 async function leftClickRegion(div)
 {
   let regionID = $(div).attr('id')
-  let clickedBaseRegionID = getBaseRegionID(regionID).baseID
-
-  // Touchscreens do not produce mouseenter events. Set the selected region from
-  // the actual tap so the region information box works without hover support.
-  if (currentEditingState == EditingState.viewing && showingDataMap)
-  {
-    currentRegionID = clickedBaseRegionID
-    updateRegionBox(currentRegionID)
-  }
+  currentRegionID = regionID
   
   let currentMapDataForDate = currentSliderDate.getTime() ? currentMapSource.getMapData()[currentSliderDate.getTime()] : null
   let canZoomCurrently = await currentMapSource.canZoom(currentMapDataForDate, regionID)
@@ -780,7 +924,7 @@ async function leftClickRegion(div)
   }
   else if (openLinksWithLeftClick && showingDataMap)
   {
-    currentMapSource.openRegionLink(clickedBaseRegionID ?? currentMapZoomRegion, currentSliderDate)
+    currentMapSource.openRegionLink(regionID ?? currentMapZoomRegion, currentSliderDate)
     
     shiftKeyDown = false
     altKeyDown = false
