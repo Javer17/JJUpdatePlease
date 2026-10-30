@@ -947,3 +947,18 @@ body {
     }
   }
 }
+
+@media (max-width: 768px)
+{
+  #regionboxcontainer
+  {
+    zoom: 0.8;
+    max-width: 85vw;
+  }
+
+  #regionbox
+  {
+    box-sizing: border-box;
+    max-width: 85vw;
+  }
+}

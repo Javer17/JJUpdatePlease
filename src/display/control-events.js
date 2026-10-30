@@ -663,7 +663,15 @@ function viewingDiscreteRegions()
 async function leftClickRegion(div)
 {
   let regionID = $(div).attr('id')
-  currentRegionID = regionID
+  let clickedBaseRegionID = getBaseRegionID(regionID).baseID
+
+  // Touchscreens do not produce mouseenter events. Set the selected region from
+  // the actual tap so the region information box works without hover support.
+  if (currentEditingState == EditingState.viewing && showingDataMap)
+  {
+    currentRegionID = clickedBaseRegionID
+    updateRegionBox(currentRegionID)
+  }
   
   let currentMapDataForDate = currentSliderDate.getTime() ? currentMapSource.getMapData()[currentSliderDate.getTime()] : null
   let canZoomCurrently = await currentMapSource.canZoom(currentMapDataForDate, regionID)
@@ -772,7 +780,7 @@ async function leftClickRegion(div)
   }
   else if (openLinksWithLeftClick && showingDataMap)
   {
-    currentMapSource.openRegionLink(regionID ?? currentMapZoomRegion, currentSliderDate)
+    currentMapSource.openRegionLink(clickedBaseRegionID ?? currentMapZoomRegion, currentSliderDate)
     
     shiftKeyDown = false
     altKeyDown = false
