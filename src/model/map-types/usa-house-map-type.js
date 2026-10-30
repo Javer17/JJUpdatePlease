@@ -91,7 +91,7 @@ const USAHouseMapType = new MapType(
 
         let totalVotes = raceData[columnMap.totalVotes]
         let reportingPercent = raceData[columnMap.reportingPercent]
-        // let calledRace = raceData[columnMap.calledRace] == "called"
+        let raceCalledPartyID = null // set below if a candidate is flagged as the (projected) winner
 
         let formattedCandidatesArray = []
 
@@ -101,6 +101,7 @@ const USAHouseMapType = new MapType(
           let candidateName = candidateData[columnMap.candidateName]
           let partyID = candidateData[columnMap.partyID]
           let candidateVotes = candidateData[columnMap.candidateVotes]
+          let candidateIsWinner = columnMap.winner != null && (candidateData[columnMap.winner] === true || candidateData[columnMap.winner] === "true")
 
           if (candidateExceptions[candidateName])
           {
@@ -110,7 +111,7 @@ const USAHouseMapType = new MapType(
           {
             partyID = IndependentGenericParty.getID()
           }
-
+          if (candidateIsWinner) { raceCalledPartyID = partyID }
           formattedCandidatesArray.push({candidate: candidateName, partyID: partyID, voteshare: totalVotes > 0 ? candidateVotes/totalVotes*100 : 0, votes: candidateVotes})
         }
 
@@ -154,7 +155,7 @@ const USAHouseMapType = new MapType(
         
         const isHold = reportingPercent <= 0 && unopposedRaceDefaults[regionID] != null
 
-        mapData[mapDate][regionID] = {region: regionID, state: state, district: district, margin: topTwoMargin, isHold: isHold, partyID: greatestMarginPartyID, candidateName: greatestMarginCandidateName, candidateMap: partyIDToCandidateNames, partyVotesharePercentages: voteshareSortedCandidateData, flip: heldSeatMapData[regionID]?.partyID != greatestMarginPartyID, reportingPercent: reportingPercent, totalVotes: totalVotes}
+        mapData[mapDate][regionID] = {region: regionID, state: state, district: district, margin: topTwoMargin, isHold: isHold, partyID: greatestMarginPartyID, candidateName: greatestMarginCandidateName, candidateMap: partyIDToCandidateNames, partyVotesharePercentages: voteshareSortedCandidateData, flip: heldSeatMapData[regionID]?.partyID != greatestMarginPartyID, reportingPercent: reportingPercent, totalVotes: totalVotes, calledPartyID: raceCalledPartyID}
       }
 
       for (let state of Object.keys(stateDistrictCounts).filter(state => stateDistrictCounts[state] == 1))
@@ -1124,6 +1125,7 @@ const USAHouseMapType = new MapType(
         reportingPercent: "percentReporting",
         calledRace: "editorialStatus",
         candidates: "candidates",
+        winner: "winner",
         candidateName: "lastName",
         partyID: "majorParty",
         candidateVotes: "voteNum"
@@ -1170,6 +1172,7 @@ const USAHouseMapType = new MapType(
         reportingPercent: "percentReporting",
         calledRace: "editorialStatus",
         candidates: "candidates",
+        winner: "winner",
         candidateName: "lastName",
         partyID: "majorParty",
         candidateVotes: "voteNum"
@@ -1216,6 +1219,7 @@ const USAHouseMapType = new MapType(
         reportingPercent: "percentReporting",
         calledRace: "editorialStatus",
         candidates: "candidates",
+        winner: "winner",
         candidateName: "lastName",
         partyID: "majorParty",
         candidateVotes: "voteNum"
@@ -1634,10 +1638,10 @@ const USAHouseMapType = new MapType(
     const houseMapCycles = [2026, 2024, 2022]
     const houseMapSourceIDs = {
       2026: [
-      // CNNHouseResults2026MapSource.getID(),
+      CNNHouseResults2026MapSource.getID(),
       VotehubHouseProjectionLegacy2026MapSource.getID(), VotehubHouseProjection2026MapSource.getID(), SplitTicketProjection2026MapSource.getID()],
-      2024: [FiveThirtyEightHouseProjection2024MapSource.getID()],
-      2022: [FiveThirtyEightHouseProjection2022MapSource.getID()],
+      2024: [FiveThirtyEightHouseProjection2024MapSource.getID(), CNNHouseResults2024MapSource.getID()],
+      2022: [FiveThirtyEightHouseProjection2022MapSource.getID(), CNNHouseResults2022MapSource.getID()],
       [allYearsCycle]: [PastElectionResultMapSource.getID(), CustomMapSource.getID()]
     }
     

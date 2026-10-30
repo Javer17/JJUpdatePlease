@@ -73,6 +73,7 @@ const USAGovernorMapType = new MapType(
 
         let totalVotes = raceData[columnMap.totalVotes]
         let reportingPercent = raceData[columnMap.reportingPercent]
+        let raceCalledPartyID = null // set below if a candidate is flagged as the (projected) winner
 
         let formattedCandidatesArray = []
 
@@ -82,6 +83,7 @@ const USAGovernorMapType = new MapType(
           let candidateName = candidateData[columnMap.candidateName]
           let partyID = candidateData[columnMap.partyID]
           let candidateVotes = candidateData[columnMap.candidateVotes]
+          let candidateIsWinner = columnMap.winner != null && (candidateData[columnMap.winner] === true || candidateData[columnMap.winner] === "true")
 
           if (candidateExceptions[candidateName])
           {
@@ -91,7 +93,7 @@ const USAGovernorMapType = new MapType(
           {
             partyID = NullParty.getID()
           }
-
+          if (candidateIsWinner) { raceCalledPartyID = partyID }
           formattedCandidatesArray.push({candidate: candidateName, partyID: partyID, voteshare: totalVotes > 0 ? candidateVotes/totalVotes*100 : 0, votes: candidateVotes})
         }
 
@@ -133,7 +135,7 @@ const USAGovernorMapType = new MapType(
           partyNameArray[mapDate][mainPartyID] = (politicalParties[mainPartyID] ?? IndependentGenericParty).getNames()[0]
         }
 
-        mapData[mapDate][regionID] = {region: regionID, offYear: false, runoff: false, isSpecial: special, margin: topTwoMargin, partyID: greatestMarginPartyID, candidateName: greatestMarginCandidateName, candidateMap: partyIDToCandidateNames, partyVotesharePercentages: voteshareSortedCandidateData, flip: heldSeatMapData[regionID]?.partyID != greatestMarginPartyID, reportingPercent: reportingPercent, totalVotes: totalVotes}
+        mapData[mapDate][regionID] = {region: regionID, offYear: false, runoff: false, isSpecial: special, margin: topTwoMargin, partyID: greatestMarginPartyID, candidateName: greatestMarginCandidateName, candidateMap: partyIDToCandidateNames, partyVotesharePercentages: voteshareSortedCandidateData, flip: heldSeatMapData[regionID]?.partyID != greatestMarginPartyID, reportingPercent: reportingPercent, calledPartyID: raceCalledPartyID}
       }
 
       fillHeldSeats(mapData, regionNameToID, heldSeatMapData, cycleYear)
@@ -906,6 +908,7 @@ const USAGovernorMapType = new MapType(
         totalVotes: "totalVote",
         reportingPercent: "percentReporting",
         candidates: "candidates",
+        winner: "winner",
         candidateName: "lastName",
         partyID: "majorParty",
         candidateVotes: "voteNum"
@@ -947,6 +950,7 @@ const USAGovernorMapType = new MapType(
         totalVotes: "totalVote",
         reportingPercent: "percentReporting",
         candidates: "candidates",
+        winner: "winner",
         candidateName: "lastName",
         partyID: "majorParty",
         candidateVotes: "voteNum"
@@ -988,6 +992,7 @@ const USAGovernorMapType = new MapType(
         totalVotes: "totalVote",
         reportingPercent: "percentReporting",
         candidates: "candidates",
+        winner: "winner",
         candidateName: "lastName",
         partyID: "majorParty",
         candidateVotes: "voteNum"
@@ -1611,10 +1616,10 @@ const USAGovernorMapType = new MapType(
     const governorMapCycles = [2026, 2024, 2022]
     const governorMapSourceIDs = {
       2026: [
-        // CNNGovernorResults2026MapSource.getID(),
+        CNNGovernorResults2026MapSource.getID(),
         JJGovernorPrediction.getID(), VotehubGovernorProjection2026MapSource.getID(), VotehubGovernorProjectionLegacy2026MapSource.getID(), VotehubGovernorPolls2026MapSource.getID(),],
-      2024: [PolymarketGovernor2024MapSource.getID()],
-      2022: [FiveThirtyEightGovernorProjection2022MapSource.getID(), LTEGovernorProjection2022MapSource.getID(), CookGovernorProjection2022MapSource.getID()],
+      2024: [PolymarketGovernor2024MapSource.getID(), CNNGovernorResults2024MapSource.getID()],
+      2022: [FiveThirtyEightGovernorProjection2022MapSource.getID(), LTEGovernorProjection2022MapSource.getID(), CookGovernorProjection2022MapSource.getID(), CNNGovernorResults2022MapSource.getID()],
       [allYearsCycle]: [PastElectionResultMapSource.getID(), CustomMapSource.getID()]
     }
     

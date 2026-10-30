@@ -107,6 +107,7 @@ const USASenateMapType = new MapType(
 
         let totalVotes = raceData[columnMap.totalVotes]
         let reportingPercent = raceData[columnMap.reportingPercent]
+        let raceCalledPartyID = null // set below if a candidate is flagged as the (projected) winner
 
         let regionClass = !special ? onCycleClass : stateClasses[regionID].filter(classNum => classNum != onCycleClass)[0]
 
@@ -120,6 +121,7 @@ const USASenateMapType = new MapType(
           let candidateName = candidateData[columnMap.candidateName]
           let partyID = candidateData[columnMap.partyID]
           let candidateVotes = candidateData[columnMap.candidateVotes]
+          let candidateIsWinner = columnMap.winner != null && (candidateData[columnMap.winner] === true || candidateData[columnMap.winner] === "true")
 
           if (candidateExceptions[candidateName])
           {
@@ -134,6 +136,7 @@ const USASenateMapType = new MapType(
             partyID = IndependentGenericParty.getID()
           }
 
+          if (candidateIsWinner) { raceCalledPartyID = partyID }
           formattedCandidatesArray.push({candidate: candidateName, partyID: partyID, voteshare: totalVotes > 0 ? candidateVotes/totalVotes*100 : 0, votes: candidateVotes})
         }
 
@@ -174,7 +177,7 @@ const USASenateMapType = new MapType(
           let mainPartyID = candidateData.partyID
           partyNameArray[mapDate][mainPartyID] = (politicalParties[mainPartyID] ?? IndependentGenericParty).getNames()[0]
         }
-        mapData[mapDate][fullRegionID] = {region: fullRegionID, seatClass: regionClass, offYear: false, runoff: false, isSpecial: special, margin: topTwoMargin, partyID: greatestMarginPartyID, candidateName: greatestMarginCandidateName, candidateMap: partyIDToCandidateNames, partyVotesharePercentages: voteshareSortedCandidateData, flip: heldSeatMapData[regionID + "-" + regionClass]?.partyID != greatestMarginPartyID, reportingPercent: reportingPercent, totalVotes: totalVotes}
+        mapData[mapDate][fullRegionID] = {region: fullRegionID, seatClass: regionClass, offYear: false, runoff: false, isSpecial: special, margin: topTwoMargin, partyID: greatestMarginPartyID, candidateName: greatestMarginCandidateName, candidateMap: partyIDToCandidateNames, partyVotesharePercentages: voteshareSortedCandidateData, flip: heldSeatMapData[regionID + "-" + regionClass]?.partyID != greatestMarginPartyID, reportingPercent: reportingPercent, totalVotes: totalVotes, calledPartyID: raceCalledPartyID}
       }
 
       fillHeldSeats(mapData, regionNameToID, heldSeatMapData, onCycleClass)
@@ -1322,6 +1325,7 @@ const USASenateMapType = new MapType(
         special: "raceType",
         totalVotes: "totalVote",
         reportingPercent: "percentReporting",
+        winner: "winner",
         candidates: "candidates",
         candidateName: "lastName",
         partyID: "majorParty",
@@ -1365,6 +1369,7 @@ const USASenateMapType = new MapType(
         special: "raceType",
         totalVotes: "totalVote",
         reportingPercent: "percentReporting",
+        winner: "winner",
         candidates: "candidates",
         candidateName: "lastName",
         partyID: "majorParty",
@@ -1408,6 +1413,7 @@ const USASenateMapType = new MapType(
         special: "raceType",
         totalVotes: "totalVote",
         reportingPercent: "percentReporting",
+        winner: "winner",
         candidates: "candidates",
         candidateName: "lastName",
         partyID: "majorParty",
@@ -2454,9 +2460,9 @@ const USASenateMapType = new MapType(
     const senateMapCycles = [2026, 2024, 2022]
     const senateMapSourceIDs = {
       [2022]: [FiveThirtyEightSenateProjection2022MapSource.getID(), LTESenateProjection2022MapSource.getID(), PASenateProjection2022MapSource.getID(), CookSenateProjection2022MapSource.getID(), SCBSenateProjection2022MapSource.getID()],
-      [2024]: [FiveThirtyEightSenateProjection2024MapSource.getID(), PolymarketSenate2024MapSource.getID()],
+      [2024]: [FiveThirtyEightSenateProjection2024MapSource.getID(), PolymarketSenate2024MapSource.getID(), CNNSenateResults2024MapSource.getID()],
       [2026]: [
-      // CNNSenateResults2026MapSource.getID(),  
+      CNNSenateResults2026MapSource.getID(),  
       JJSenatePrediction.getID(), VotehubSenateProjection2026MapSource.getID(),  SplitTicketProjection2026MapSource.getID(), VotehubSenateProjectionLegacy2026MapSource.getID(), VotehubSenatePolls2026MapSource.getID(),  LTESenateProjection2026MapSource.getID()],
       [allYearsCycle]: [PastElectionResultMapSource.getID(), HistoricalElectionResultMapSource.getID(), CustomMapSource.getID()]
     }

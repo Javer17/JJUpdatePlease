@@ -45,7 +45,32 @@ async function updateRegionBox(regionID = currentRegionID)
     return
   }
   $("#regionboxcontainer").trigger('show')
-  
+
+  // "Fancy Regionboxes" ON: always color by the winning/leading party. OFF: only color once the race is called (winner).
+  const fancyRegionBoxes = currentMapType.getMapSettingValue("fancyRegionBoxes") == true
+  const regionBoxPartyID = regionData?.calledPartyID ?? (fancyRegionBoxes ? regionData?.partyID : null)
+  const calledParty = regionBoxPartyID != null ? politicalParties[regionBoxPartyID] : null
+  const calledPartyColors = calledParty ? calledParty.getMarginColors() : null
+  const regionBoxCalledStyle = calledPartyColors ? {background: calledPartyColors.current ?? calledPartyColors.safe, border: calledPartyColors.safe} : null
+  for (const regionBoxElement of [document.getElementById("regionboxcontainer"), document.getElementById("regionbox")])
+  {
+    if (!regionBoxElement) { continue }
+    if (regionBoxCalledStyle)
+    {
+      regionBoxElement.style.setProperty("background", regionBoxCalledStyle.background, "important")
+      regionBoxElement.style.setProperty("border-color", regionBoxCalledStyle.border, "important")
+    }
+    else
+    {
+      regionBoxElement.style.removeProperty("background")
+      regionBoxElement.style.removeProperty("border-color")
+    }
+  }
+  // Guarantees a visible colored border even if the box's CSS has no border of its own
+  const regionBoxInner = document.getElementById("regionbox")
+  if (regionBoxCalledStyle) { regionBoxInner?.style.setProperty("box-shadow", "inset 0 0 0 2px " + regionBoxCalledStyle.border, "important") }
+  else { regionBoxInner?.style.removeProperty("box-shadow") }
+
   let showingAltData = false
   if (altKeyDown && regionData.altData)
   {
@@ -193,6 +218,7 @@ async function updateRegionBox(regionID = currentRegionID)
     regionBoxHTML += "</div>"
   }
 
+  let showedVoteshareBars = false
   if (regionData.partyVotesharePercentages && currentMapSource.getShouldShowVoteshare() == true)
   {
     let sortedPercentages
@@ -217,6 +243,7 @@ async function updateRegionBox(regionID = currentRegionID)
     regionBoxHTML += "<div style='font-size: 17px; padding-top: 2px; padding-bottom: 5px; padding-right: 8px; display: block; line-height: 100%; border-radius: 50px;'>"
 
     let hasVoteCountsForAll = shouldShowVotes
+    showedVoteshareBars = sortedPercentages.some(voteData => !(voteData.voteshare === 0 && !currentMapSource.isCustom() && regionData.reportingPercent == null))
 
     sortedPercentages.forEach((voteData, i) => {
       const roundedVoteshare = Math.round(voteData.voteshare*100)/100
@@ -268,6 +295,7 @@ async function updateRegionBox(regionID = currentRegionID)
   {
     let voteSplitDataToDisplay = regionData.voteSplits
     regionBoxHTML = "</span>"
+    showedVoteshareBars = false // voteshare bars were replaced by the split vote display
     
     regionBoxHTML += "<div style='margin-top: 6px; margin-bottom: 6px; font-size: 17px; padding-top: 2px; padding-bottom: 5px; padding-right: 8px; display: block; line-height: 100%; border-radius: 50px;'>"
     
@@ -315,7 +343,23 @@ async function updateRegionBox(regionID = currentRegionID)
   
   if (regionData.reportingPercent != null)
   {
-    regionBoxHTML += "<div style='color: gray; font-size: 16px; margin-top: -5px; margin-bottom: 5px'>" + regionData.reportingPercent + "% reporting" + "</div>"
+    const reportingPercentValue = Math.min(100, Math.max(0, parseFloat(regionData.reportingPercent) || 0))
+
+    // Long separation line between the voteshare bars and the % reporting section
+    if (showedVoteshareBars)
+    {
+      regionBoxHTML += "<div style='width: 100%; height: 0px; border-top: 1px solid gray; margin: 6px 0px 8px 0px;'></div>"
+    }
+
+    // Half-height bar graph (voteshare bars are ~25px tall: 17px text + 4px padding top/bottom), full width
+    // Logos off: voteshare spans are width:100% + padding (overflowing the container's 8px right padding), so no right padding here.
+    // Logos on: voteshare rows are flex rows that stop at the container's 8px right padding, so match it (bar spans logo + voteshare bar).
+    regionBoxHTML += "<div style='padding-right: " + (currentMapType.getMapSettingValue("showPartyLogos") ? "-8px" : "-2px") + "; display: block;'>"
+    regionBoxHTML += "<div id='reporting-bar' style='height: 12px; border-radius: 3px; background: " + getGradientCSS("#00ff00", "#B5FFB5", reportingPercentValue) + ";'></div>"
+    regionBoxHTML += "</div>"
+
+    // Label goes below the bar
+    regionBoxHTML += "<div style='color: gray; font-size: 16px; margin-top: 4px; margin-bottom: 5px'>" + regionData.reportingPercent + "% reporting" + "</div>"
   }
   
   const canOpenLink = currentEditingState == EditingState.viewing && currentMapSource.openRegionLink(regionID, currentSliderDate, true)

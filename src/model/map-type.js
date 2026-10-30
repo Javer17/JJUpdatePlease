@@ -361,6 +361,7 @@ var globalMapSettings =
       {id: "ymd", title: "YYYY/MM/DD", value: 2}
     ],
   defaultValue: "mdy", reloadType: MapSettingReloadType.display},
+  
   {id: "mapFont", emoji: "💬", title: "Map Font", type: MapSettingType.optionCycle, options:
     [
       {id: "sans-serif", title: "Bree Sans", value: "Bree-Regular"},
@@ -381,6 +382,15 @@ var globalMapSettings =
         .css('line-height', '')
     }
   }},
+  {id: "fancyRegionBoxes", emoji: "📙", title: "Fancy Region Boxes", type: MapSettingType.optionCycle, options:
+  [
+    {id: "on", title: "On", value: true},
+    {id: "off", title: "Off", value: false}
+  ],
+  shouldShowActive: (value) => {
+    return value
+  },
+  defaultValue: "off", reloadType: MapSettingReloadType.display},
 ]
 
 var currentGlobalMapSettings = {}

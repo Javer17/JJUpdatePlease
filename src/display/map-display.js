@@ -1469,6 +1469,7 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
     regionData.voteSplits = currentRegionData.voteSplits
     regionData.voteWorth = currentRegionData.voteWorth
     regionData.reportingPercent = currentRegionData.reportingPercent
+    regionData.calledPartyID = currentRegionData.calledPartyID
     regionData.totalVotes = currentRegionData.totalVotes
     regionData.altData = currentRegionData.altData
 
