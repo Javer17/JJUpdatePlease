@@ -459,10 +459,107 @@ let isDraggingInsideRoundControls = false
 let currentMouseX
 let currentMouseY
 
+// Helper to check/update center crosshair region in mobile mode
+function checkCenterScreenRegion()
+{
+  if (!currentMapType || !currentMapType.getMapSettingValue("mobileMode")) { return }
+
+  const mapContainer = document.getElementById("mapcontainer")
+  if (!mapContainer) { return }
+
+  const rect = mapContainer.getBoundingClientRect()
+  const centerX = rect.left + rect.width / 2
+  const centerY = rect.top + rect.height / 2
+
+  const element = document.elementFromPoint(centerX, centerY)
+  const regionElement = element instanceof Element ? element.closest("#outlines > *") : null
+
+  if (regionElement)
+  {
+    let regionID = getBaseRegionID($(regionElement).attr('id')).baseID
+    if (currentRegionID != regionID)
+    {
+      currentRegionID = regionID
+      if (showingDataMap && !editingRegionVotesharePercentages)
+      {
+        updateRegionBox(regionID)
+      }
+    }
+    updateRegionBoxPosition(centerX, centerY)
+  }
+  else
+  {
+    if (currentRegionID)
+    {
+      currentRegionID = null
+      if (!editingRegionVotesharePercentages)
+      {
+        updateRegionBox()
+      }
+    }
+  }
+}
+
+// Inject center screen crosshair image when mobile mode is active or initialized
+function ensureMobileCenterCrosshair()
+{
+  if ($("#mobileCenterCrosshair").length == 0)
+  {
+    const crosshair = $('<img id="mobileCenterCrosshair" src="./assets/crosshair.png" />')
+    crosshair.css({
+      position: 'absolute',
+      transform: 'translate(-50%, -50%)',
+      pointerEvents: 'none',
+      zIndex: 9999,
+      display: 'none',
+      width: '32px',
+      height: '32px'
+    })
+
+    // Ensure the map container is a positioning context for the crosshair
+    $("#mapcontainer").css('position', 'relative')
+
+    // Append inside the map container so it moves with the map box
+    // and is positioned relative to it rather than the viewport
+    $('#mapcontainer').append(crosshair)
+  }
+
+  updateMobileCenterCrosshair()
+}
+
+// Position the crosshair at the center of the map box and show/hide based on mobile mode
+function updateMobileCenterCrosshair()
+{
+  const crosshair = $("#mobileCenterCrosshair")
+  if (crosshair.length == 0) { return }
+
+  if (currentMapType && currentMapType.getMapSettingValue("mobileMode"))
+  {
+    const mapContainer = $("#mapcontainer")[0]
+    if (!mapContainer) { return }
+
+    crosshair.css({
+      top: (mapContainer.clientHeight / 2) + 'px',
+      left: (mapContainer.clientWidth / 2) + 'px'
+    })
+    crosshair.show()
+    checkCenterScreenRegion()
+  }
+  else
+  {
+    crosshair.hide()
+  }
+}
+
+// Keep the crosshair centered if the map box changes size
+window.addEventListener('resize', function() {
+  updateMobileCenterCrosshair()
+})
+
 document.addEventListener('mousedown', async function(e) {
   mouseIsDown = true
   
-  if (!editingRegionVotesharePercentages)
+  if (!editingRegionVotesharePercentages && (!currentMapType || !currentMapType.getMapSettingValue("mobileMode")))
   {
     updateRegionBox()
   }
@@ -495,7 +592,10 @@ document.oncontextmenu = function() {
   }
 
   mouseIsDown = false
-  updateRegionBox()
+  if (!currentMapType || !currentMapType.getMapSettingValue("mobileMode"))
+  {
+    updateRegionBox()
+  }
   mouseMovedDuringClick = false
 }
 
@@ -504,12 +604,14 @@ const isChromeWithSVGBug = uaSplit?.length == 2 && parseInt(uaSplit[1].split("."
 
 function mouseEnteredRegion(div)
 {
+  if (currentMapType && currentMapType.getMapSettingValue("mobileMode")) { return }
+
   let regionID = getBaseRegionID($(div).attr('id')).baseID
   currentRegionID = regionID
 
   if (currentEditingState == EditingState.editing && shouldDragSelect && mouseIsDown && !regionIDsChanged.includes(regionID) && !editingRegionVotesharePercentages)
   {
-    leftClickRegion(div, true)
+    leftClickRegion(div)
     regionIDsChanged.push(regionID)
   }
 
@@ -557,155 +659,28 @@ function mouseEnteredRegion(div)
   }
 }
 
-function getRegionElementAtTouchPoint(touch, fallbackTarget)
-{
-  const element = document.elementFromPoint(touch.clientX, touch.clientY)
-  const regionElement = element instanceof Element ? element.closest("#outlines > *") : null
-  if (regionElement) { return regionElement }
-  return fallbackTarget instanceof Element ? fallbackTarget.closest("#outlines > *") : null
-}
-
-function updateMobileTouchRegion(regionElement, touch)
-{
-  if (!regionElement) { return }
-
-  currentMouseX = touch.pageX
-  currentMouseY = touch.pageY
-
-  if (mobileTouchState.regionElement != regionElement)
-  {
-    if (mobileTouchState.regionElement)
-    {
-      mouseLeftRegion(mobileTouchState.regionElement)
-    }
-
-    mobileTouchState.regionElement = regionElement
-    mouseEnteredRegion(regionElement)
-  }
-
-  updateRegionBoxPosition(touch.pageX, touch.pageY)
-}
-
-function cancelMobileTouchLongPress()
-{
-  if (!mobileTouchState) { return }
-
-  clearTimeout(mobileTouchState.longPressTimeout)
-  mobileTouchState.longPressTimeout = null
-}
-
 document.addEventListener('touchstart', function(e) {
+  ensureMobileCenterCrosshair()
   if (!currentMapType || !currentMapType.getMapSettingValue("mobileMode")) { return }
-
-  if (e.touches.length != 1)
-  {
-    cancelMobileTouchLongPress()
-    return
-  }
-
-  const touch = e.changedTouches[0]
-  const regionElement = getRegionElementAtTouchPoint(touch, e.target)
-
-  if (!regionElement)
-  {
-    if (currentRegionID)
-    {
-      currentRegionID = null
-      updateRegionBox()
-    }
-    return
-  }
-
-  if (mobileTouchState)
-  {
-    cancelMobileTouchLongPress()
-  }
-
-  mobileTouchState = {
-    identifier: touch.identifier,
-    startX: touch.clientX,
-    startY: touch.clientY,
-    regionElement,
-    longPressTimeout: null
-  }
-
-  mouseIsDown = false
-  updateMobileTouchRegion(regionElement, touch)
-  mouseIsDown = true
-
-  mobileTouchState.longPressTimeout = setTimeout(() => {
-    if (!mobileTouchState || mobileTouchState.identifier != touch.identifier) { return }
-
-    mobileTouchState.longPressTimeout = null
-    leftClickRegion(mobileTouchState.regionElement, true)
-  }, 1500)
+  checkCenterScreenRegion()
 }, {capture: true, passive: true})
 
 document.addEventListener('touchmove', function(e) {
-  if (!mobileTouchState || !currentMapType?.getMapSettingValue("mobileMode")) { return }
-
-  const touch = Array.from(e.touches).find(item => item.identifier == mobileTouchState.identifier)
-  if (!touch) { return }
-
-  if (Math.hypot(touch.clientX - mobileTouchState.startX, touch.clientY - mobileTouchState.startY) > 10)
-  {
-    cancelMobileTouchLongPress()
-  }
-
-  const regionElement = getRegionElementAtTouchPoint(touch, e.target)
-  if (regionElement)
-  {
-    updateMobileTouchRegion(regionElement, touch)
-  }
+  ensureMobileCenterCrosshair()
+  if (!currentMapType || !currentMapType.getMapSettingValue("mobileMode")) { return }
+  checkCenterScreenRegion()
 }, {capture: true, passive: true})
 
 document.addEventListener('touchend', function(e) {
-  if (!mobileTouchState)
-  {
-    if (e.touches.length == 0)
-    {
-      mouseIsDown = false
-      pannedDuringClick = false
-    }
-    return
-  }
-
-  const endedTouch = Array.from(e.changedTouches).find(item => item.identifier == mobileTouchState.identifier)
-  if (!endedTouch) { return }
-
-  cancelMobileTouchLongPress()
-  mouseIsDown = e.touches.length > 0
-  pannedDuringClick = false
-  
-  const targetRegionElement = mobileTouchState.regionElement
-  let regionID = getBaseRegionID($(targetRegionElement).attr('id')).baseID
-  currentRegionID = regionID
-
-  if (showingDataMap && !editingRegionVotesharePercentages)
-  {
-    updateRegionBox(regionID)
-  }
-
-  leftClickRegion(targetRegionElement, true)
-  mobileTouchState = null
-}, {capture: true, passive: true})
-
-document.addEventListener('touchcancel', function() {
-  if (!mobileTouchState)
-  {
-    mouseIsDown = false
-    pannedDuringClick = false
-    return
-  }
-
-  cancelMobileTouchLongPress()
-  mobileTouchState = null
-  mouseIsDown = false
-  pannedDuringClick = false
+  ensureMobileCenterCrosshair()
+  if (!currentMapType || !currentMapType.getMapSettingValue("mobileMode")) { return }
+  checkCenterScreenRegion()
 }, {capture: true, passive: true})
 
 function mouseLeftRegion(div)
 {
+  if (currentMapType && currentMapType.getMapSettingValue("mobileMode")) { return }
+
   let regionID = getBaseRegionID($(div).attr('id')).baseID
   if (currentRegionID == regionID)
   {
@@ -744,6 +719,13 @@ function resetStrokeColor(div)
 }
 
 document.addEventListener('mousemove', function(e) {
+  ensureMobileCenterCrosshair()
+  if (currentMapType && currentMapType.getMapSettingValue("mobileMode"))
+  {
+    checkCenterScreenRegion()
+    return
+  }
+
   if (mouseIsDown)
   {
     mouseMovedDuringClick = true
@@ -779,6 +761,8 @@ document.addEventListener('mousemove', function(e) {
 })
 
 document.addEventListener('mouseup', function() {
+  if (currentMapType && currentMapType.getMapSettingValue("mobileMode")) { return }
+
   if (currentEditingState == EditingState.editing && !editingRegionVotesharePercentages)
   {
     regionIDsChanged = []
@@ -808,8 +792,10 @@ function viewingDiscreteRegions()
   return currentMapType.getID() != USAHouseMapType.getID() || currentMapType.getMapSettingValue("showAllDistricts") === true || currentViewingState == ViewingState.zooming
 }
 
-async function leftClickRegion(div, isMobileTouch = false)
+async function leftClickRegion(div)
 {
+  if (currentMapType && currentMapType.getMapSettingValue("mobileMode")) { return }
+
   let regionID = $(div).attr('id')
   currentRegionID = regionID
   
@@ -891,7 +877,7 @@ async function leftClickRegion(div, isMobileTouch = false)
     updateRegionFillColors(regionIDsToFill, regionData)
     displayPartyTotals()
   }
-  else if (canZoomCurrently && currentViewingState == ViewingState.viewing && showingDataMap && !isMobileTouch)
+  else if (canZoomCurrently && currentViewingState == ViewingState.viewing && showingDataMap)
   {
     let baseRegionID = getBaseRegionID($(div).attr('id')).baseID
     currentViewingState = ViewingState.zooming
@@ -918,7 +904,7 @@ async function leftClickRegion(div, isMobileTouch = false)
     currentRegionID = null
     updateRegionBox()
   }
-  else if (openLinksWithLeftClick && showingDataMap && !isMobileTouch)
+  else if (openLinksWithLeftClick && showingDataMap)
   {
     currentMapSource.openRegionLink(regionID ?? currentMapZoomRegion, currentSliderDate)
     
@@ -930,6 +916,8 @@ async function leftClickRegion(div, isMobileTouch = false)
 
 function rightClickRegion(div)
 {
+  if (currentMapType && currentMapType.getMapSettingValue("mobileMode")) { return }
+
   let isDiscreteRegion = viewingDiscreteRegions()
 
   let regionID = $(div).attr('id')
@@ -1005,6 +993,8 @@ function rightClickRegion(div)
 
 function shiftClickRegion(_div)
 {
+  if (currentMapType && currentMapType.getMapSettingValue("mobileMode")) { return false }
+
   let isDiscreteRegion = viewingDiscreteRegions()
 
   if (isDiscreteRegion && currentEditingState == EditingState.editing && currentMapSource.getEditingMode() == EditingMode.margin)
@@ -1024,6 +1014,8 @@ function shiftClickRegion(_div)
 
 function altClickRegion(div)
 {
+  if (currentMapType && currentMapType.getMapSettingValue("mobileMode")) { return false }
+
   let isDiscreteRegion = viewingDiscreteRegions()
   
   if (isDiscreteRegion && currentEditingState == EditingState.editing)
@@ -1046,6 +1038,8 @@ function altClickRegion(div)
 
 function altShiftClickRegion(div)
 {
+  if (currentMapType && currentMapType.getMapSettingValue("mobileMode")) { return false }
+
   let isDiscreteRegion = viewingDiscreteRegions()
 
   if (isDiscreteRegion && currentEditingState == EditingState.editing)

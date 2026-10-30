@@ -1,3 +1,5 @@
+const mobileRegionBoxScale = 0.6 // Had to place it somwehre
+
 async function updateRegionBox(regionID = currentRegionID)
 {
   let currentMapDataForDate = currentSliderDate && currentMapSource.getMapData() ? currentMapSource.getMapData()[currentSliderDate.getTime()] : null
@@ -45,6 +47,16 @@ async function updateRegionBox(regionID = currentRegionID)
     return
   }
   $("#regionboxcontainer").trigger('show')
+
+  // Mobile mode: shrink the box so it doesn't dominate the small viewport.
+  // transform-origin is top-left so the box stays anchored where updateRegionBoxPosition put it.
+  const shouldScaleRegionBox = currentMapType.getMapSettingValue("mobileMode")
+  const regionBoxContainerElement = document.getElementById("regionboxcontainer")
+  if (regionBoxContainerElement)
+  {
+    regionBoxContainerElement.style.transform = shouldScaleRegionBox ? ("scale(" + mobileRegionBoxScale + ")") : ""
+    regionBoxContainerElement.style.transformOrigin = shouldScaleRegionBox ? "top left" : ""
+  }
 
   // "Fancy Regionboxes" ON: always color by the winning/leading party. OFF: only color once the race is called (winner).
   const fancyRegionBoxes = currentMapType.getMapSettingValue("fancyRegionBoxes") == true
@@ -410,10 +422,16 @@ async function updateRegionBox(regionID = currentRegionID)
   }
 }
 
+function getRegionBoxVisualScale()
+{
+  return (currentMapType && currentMapType.getMapSettingValue("mobileMode")) ? mobileRegionBoxScale : 1
+}
+
 function updateRegionBoxPosition(mouseX, mouseY)
 {
+  const scale = getRegionBoxVisualScale()
   let newRegionBoxXPos = mouseX+5
-  newRegionBoxXPos = correctOverflow(newRegionBoxXPos, $("#regionboxcontainer").width(), $(document).width())
+  newRegionBoxXPos = correctOverflow(newRegionBoxXPos, $("#regionboxcontainer").width()*scale, $(document).width())
   
   $("#regionboxcontainer").css("left", newRegionBoxXPos)
   updateRegionBoxYPosition(mouseY)
@@ -421,10 +439,11 @@ function updateRegionBoxPosition(mouseX, mouseY)
 
 function updateRegionBoxYPosition(mouseY)
 {
+  const scale = getRegionBoxVisualScale()
   var newRegionBoxYPos = (mouseY+5) || (currentMouseY+5)
   if (!newRegionBoxYPos) { return }
 
-  newRegionBoxYPos = correctOverflow(newRegionBoxYPos, $("#regionboxcontainer").height(), $(document).height())
+  newRegionBoxYPos = correctOverflow(newRegionBoxYPos, $("#regionboxcontainer").height()*scale, $(document).height())
   $("#regionboxcontainer").css("top", newRegionBoxYPos)
 }
 
