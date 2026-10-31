@@ -61,7 +61,7 @@ async function updateRegionBox(regionID = currentRegionID)
   // "Fancy Regionboxes" ON: always color by the winning/leading party. OFF: only color once the race is called (winner).
   const fancyRegionBoxes = currentMapType.getMapSettingValue("fancyRegionBoxes") == true
   const regionBoxPartyID = regionData?.calledPartyID ?? (fancyRegionBoxes ? regionData?.partyID : null)
-  const calledParty = (regionBoxPartyID != null && regionBoxPartyID != TossupParty.getID()) ? politicalParties[regionBoxPartyID] : null // Tossup keeps the default box colors
+  const calledParty = regionBoxPartyID != null ? politicalParties[regionBoxPartyID] : null
   const calledPartyColors = calledParty ? calledParty.getMarginColors() : null
   const regionBoxCalledStyle = calledPartyColors ? {background: "color-mix(in srgb, " + (calledPartyColors.current ?? calledPartyColors.safe) + " 95%, transparent)", border: calledPartyColors.safe} : null
   const regionBoxOuterElement = document.getElementById("regionboxcontainer")
