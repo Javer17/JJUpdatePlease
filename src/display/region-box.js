@@ -151,7 +151,7 @@ async function updateRegionBox(regionID = currentRegionID)
 
   let regionBoxHTML = (currentEditingState == EditingState.viewing || (isDiscreteRegion && currentMapSource.getEditingMode() == EditingMode.margin)) ? regionMarginString : ""
   const mobileMode = currentMapType.getMapSettingValue("mobileMode")
-  const clickInstruction = mobileMode ? "Click (hold 1.5s)" : "Click"
+  const clickInstruction = mobileMode ? "Click (hold 1.5s on touch)" : "Click"
 
   let tooltipsToShow = {
     shiftForVotes: [false, "<span class='shifttext'>Shift</span> to show votes"],
