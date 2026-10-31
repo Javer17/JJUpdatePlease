@@ -727,7 +727,7 @@ function setOutlineDivProperties()
       if (e.shiftKey && shiftClickRegion(e.target)) return
       if (e.which == 3 || e.ctrlKey) return // handled in contextmenu
       var isPannableMapState = currentViewingState == ViewingState.zooming || (currentViewingState == ViewingState.viewing && (currentMapType.getID() == UKHouseMapType.getID() || (currentMapType.getID() == USAHouseMapType.getID() && currentMapType.getMapSettingValue("showAllDistricts"))))
-      if (!isPannableMapState || !(currentEditingState == EditingState.viewing && pannedDuringClick)) leftClickRegion(this)
+      if (!isPannableMapState || !(currentEditingState == EditingState.viewing && pannedDuringClick)) leftClickRegion(e.target)
     })
 
     outlineDiv.on('contextmenu', function(e) {

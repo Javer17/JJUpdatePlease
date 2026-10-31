@@ -663,7 +663,6 @@ function viewingDiscreteRegions()
 async function leftClickRegion(div)
 {
   let regionID = $(div).attr('id')
-  currentRegionID = regionID
   
   let currentMapDataForDate = currentSliderDate.getTime() ? currentMapSource.getMapData()[currentSliderDate.getTime()] : null
   let canZoomCurrently = await currentMapSource.canZoom(currentMapDataForDate, regionID)
@@ -772,7 +771,7 @@ async function leftClickRegion(div)
   }
   else if (openLinksWithLeftClick && showingDataMap)
   {
-    currentMapSource.openRegionLink(regionID ?? currentMapZoomRegion, currentSliderDate)
+    currentMapSource.openRegionLink(currentRegionID ?? currentMapZoomRegion, currentSliderDate)
     
     shiftKeyDown = false
     altKeyDown = false
