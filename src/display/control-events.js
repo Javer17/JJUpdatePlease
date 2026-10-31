@@ -7,22 +7,6 @@ let altKeyDown = false
 
 const openLinksWithLeftClick = true
 
-// The center-screen crosshair is only meant for maps where tapping a region would
-// otherwise be ambiguous (pannable maps where you mostly drag around districts).
-// It's enabled ONLY in mobile mode on:
-//   - the UK House map, and
-//   - the US House map while "Show All Districts" is on (i.e. viewing districts).
-// On every other map (in mobile mode) tapping a region just shows the region box.
-function isMobileCenterCrosshairActive()
-{
-  if (!currentMapType || !currentMapType.getMapSettingValue("mobileMode")) { return false }
-
-  if (currentMapType.getID() == UKHouseMapType.getID()) { return true }
-  if (currentMapType.getID() == USAHouseMapType.getID() && currentMapType.getMapSettingValue("showAllDistricts") === true) { return true }
-
-  return false
-}
-
 document.addEventListener('keydown', function(e) {
   if (!isEditingTextbox() && showingDataMap)
   {
@@ -476,10 +460,9 @@ let currentMouseX
 let currentMouseY
 
 // Helper to check/update center crosshair region in mobile mode
-// (only used while isMobileCenterCrosshairActive() is true)
 function checkCenterScreenRegion()
 {
-  if (!isMobileCenterCrosshairActive()) { return }
+  if (!currentMapType || !currentMapType.getMapSettingValue("mobileMode")) { return }
 
   const mapContainer = document.getElementById("mapcontainer")
   if (!mapContainer) { return }
@@ -544,28 +527,28 @@ function ensureMobileCenterCrosshair()
   updateMobileCenterCrosshair()
 }
 
-// Position the crosshair at the center of the map box and show/hide based on
-// whether the crosshair is actually enabled for this map (mobile mode + house maps)
+// Position the crosshair at the center of the map box and show/hide based on mobile mode
 function updateMobileCenterCrosshair()
 {
   const crosshair = $("#mobileCenterCrosshair")
   if (crosshair.length == 0) { return }
 
-  if (!isMobileCenterCrosshairActive())
+  if (currentMapType && currentMapType.getMapSettingValue("mobileMode"))
+  {
+    const mapContainer = $("#mapcontainer")[0]
+    if (!mapContainer) { return }
+
+    crosshair.css({
+      top: (mapContainer.clientHeight / 2) + 'px',
+      left: (mapContainer.clientWidth / 2) + 'px'
+    })
+    crosshair.show()
+    checkCenterScreenRegion()
+  }
+  else
   {
     crosshair.hide()
-    return
   }
-
-  const mapContainer = $("#mapcontainer")[0]
-  if (!mapContainer) { return }
-
-  crosshair.css({
-    top: (mapContainer.clientHeight / 2) + 'px',
-    left: (mapContainer.clientWidth / 2) + 'px'
-  })
-  crosshair.show()
-  checkCenterScreenRegion()
 }
 
 // Keep the crosshair centered if the map box changes size
@@ -575,11 +558,6 @@ window.addEventListener('resize', function() {
 
 document.addEventListener('mousedown', async function(e) {
   mouseIsDown = true
-
-  // Track tap/click position so that "tap a region to show its box" (mobile mode
-  // without the crosshair) can position the region box at the tap location.
-  if (e.pageX != null) { currentMouseX = e.pageX }
-  if (e.pageY != null) { currentMouseY = e.pageY }
   
   if (!editingRegionVotesharePercentages && (!currentMapType || !currentMapType.getMapSettingValue("mobileMode")))
   {
@@ -614,7 +592,7 @@ document.oncontextmenu = function() {
   }
 
   mouseIsDown = false
-  if (!isMobileCenterCrosshairActive())
+  if (!currentMapType || !currentMapType.getMapSettingValue("mobileMode"))
   {
     updateRegionBox()
   }
@@ -683,16 +661,19 @@ function mouseEnteredRegion(div)
 
 document.addEventListener('touchstart', function(e) {
   ensureMobileCenterCrosshair()
+  if (!currentMapType || !currentMapType.getMapSettingValue("mobileMode")) { return }
   checkCenterScreenRegion()
 }, {capture: true, passive: true})
 
 document.addEventListener('touchmove', function(e) {
   ensureMobileCenterCrosshair()
+  if (!currentMapType || !currentMapType.getMapSettingValue("mobileMode")) { return }
   checkCenterScreenRegion()
 }, {capture: true, passive: true})
 
 document.addEventListener('touchend', function(e) {
   ensureMobileCenterCrosshair()
+  if (!currentMapType || !currentMapType.getMapSettingValue("mobileMode")) { return }
   checkCenterScreenRegion()
 }, {capture: true, passive: true})
 
@@ -739,7 +720,7 @@ function resetStrokeColor(div)
 
 document.addEventListener('mousemove', function(e) {
   ensureMobileCenterCrosshair()
-  if (isMobileCenterCrosshairActive())
+  if (currentMapType && currentMapType.getMapSettingValue("mobileMode"))
   {
     checkCenterScreenRegion()
     return
@@ -780,7 +761,7 @@ document.addEventListener('mousemove', function(e) {
 })
 
 document.addEventListener('mouseup', function() {
-  if (isMobileCenterCrosshairActive()) { return }
+  if (currentMapType && currentMapType.getMapSettingValue("mobileMode")) { return }
 
   if (currentEditingState == EditingState.editing && !editingRegionVotesharePercentages)
   {
@@ -806,22 +787,6 @@ document.addEventListener('mouseup', function() {
   }
 })
 
-// Mobile mode without the crosshair (i.e. every map except the UK House and the
-// US House while viewing districts): tapping empty map background hides the region box.
-document.addEventListener('click', function(e) {
-  if (!currentMapType || !currentMapType.getMapSettingValue("mobileMode")) { return }
-  if (isMobileCenterCrosshairActive()) { return }
-
-  const target = e.target instanceof Element ? e.target : null
-  if (!target) { return }
-  if (target.closest("#outlines > *")) { return } // handled by the region's own click handler
-  if (!target.closest("#mapcontainer")) { return } // only when tapping the map area itself
-
-  if (currentRegionID == null) { return }
-  currentRegionID = null
-  updateRegionBox()
-})
-
 function viewingDiscreteRegions()
 {
   return currentMapType.getID() != USAHouseMapType.getID() || currentMapType.getMapSettingValue("showAllDistricts") === true || currentViewingState == ViewingState.zooming
@@ -829,18 +794,7 @@ function viewingDiscreteRegions()
 
 async function leftClickRegion(div)
 {
-  if (isMobileCenterCrosshairActive()) { return }
-
-  // Mobile mode without the crosshair: tapping a region just shows its region box
-  // (positioned at the tap location) instead of opening links / zooming.
-  if (currentMapType && currentMapType.getMapSettingValue("mobileMode") && currentEditingState == EditingState.viewing)
-  {
-    let regionID = getBaseRegionID($(div).attr('id')).baseID
-    currentRegionID = regionID
-    updateRegionBoxPosition(currentMouseX ?? 0, currentMouseY ?? 0)
-    updateRegionBox(regionID)
-    return
-  }
+  if (currentMapType && currentMapType.getMapSettingValue("mobileMode")) { return }
 
   let regionID = $(div).attr('id')
   currentRegionID = regionID
