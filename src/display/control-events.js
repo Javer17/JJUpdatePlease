@@ -453,6 +453,42 @@ let currentRegionID
 let ignoreNextClick = false
 let clickUsedToZoom = false
 
+let touchSelectedRegionID = null
+let tapShouldClickRegion = true
+let lastPointerType = null
+
+document.addEventListener('pointerdown', function(e) {
+  lastPointerType = e.pointerType
+  if (e.pointerType != "touch")
+  {
+    touchSelectedRegionID = null
+    tapShouldClickRegion = true
+    return
+  }
+  if (document.getElementById("regionboxcontainer").contains(e.target)) return
+  
+  let tappedRegionID = e.target.matches("#outlines > *") ? getBaseRegionID(e.target.id).baseID : null
+  let isMarginEditing = currentEditingState == EditingState.editing && currentMapSource.getEditingMode() == EditingMode.margin && !editingRegionMarginValue
+  tapShouldClickRegion = tappedRegionID != null && currentEditingState == EditingState.editing && (tappedRegionID == touchSelectedRegionID || isMarginEditing)
+  if (tappedRegionID == null)
+  {
+    clearTouchSelectedRegion()
+  }
+})
+
+function clearTouchSelectedRegion()
+{
+  if (touchSelectedRegionID == null) return
+  
+  resetStrokeColor($("#" + touchSelectedRegionID))
+  touchSelectedRegionID = null
+  currentRegionID = null
+  shiftKeyDown = false
+  altKeyDown = false
+  updateRegionBox()
+}
+
+
 let isDraggingInsideRoundControls = false
 
 let currentMouseX
@@ -461,7 +497,7 @@ let currentMouseY
 document.addEventListener('mousedown', async function(e) {
   mouseIsDown = true
   
-  if (!editingRegionVotesharePercentages)
+  if (!editingRegionVotesharePercentages && touchSelectedRegionID == null)
   {
     updateRegionBox()
   }
@@ -504,6 +540,14 @@ const isChromeWithSVGBug = uaSplit?.length == 2 && parseInt(uaSplit[1].split("."
 function mouseEnteredRegion(div)
 {
   let regionID = getBaseRegionID($(div).attr('id')).baseID
+  if (lastPointerType == "touch" && currentEditingState == EditingState.viewing)
+  {
+    if (touchSelectedRegionID != null && touchSelectedRegionID != regionID)
+    {
+      resetStrokeColor($("#" + touchSelectedRegionID))
+    }
+    touchSelectedRegionID = regionID
+  }
   currentRegionID = regionID
 
   if (currentEditingState == EditingState.editing && shouldDragSelect && mouseIsDown && !regionIDsChanged.includes(regionID) && !editingRegionVotesharePercentages)
@@ -556,15 +600,19 @@ function mouseEnteredRegion(div)
   }
 }
 
-function mouseLeftRegion(div)
+function mouseLeftRegion(div, e)
 {
   let regionID = getBaseRegionID($(div).attr('id')).baseID
-  if (currentRegionID == regionID)
+  // A touch-pinned region stays selected until dismissed (X button or tapping elsewhere), so leaving it must not clear/re-render the box
+  if (regionID == touchSelectedRegionID) return
+  
+  if (!editingRegionVotesharePercentages)
   {
     currentRegionID = null
   }
 
-  if (!editingRegionVotesharePercentages)
+  const isInsideRegionBox = document.getElementById("regionboxcontainer").contains(e.relatedTarget)
+  if (!editingRegionVotesharePercentages && !isInsideRegionBox)
   {
     updateRegionBox()
   }
@@ -610,7 +658,7 @@ document.addEventListener('mousemove', function(e) {
     }
   }
 
-  if (!editingRegionVotesharePercentages)
+  if (!editingRegionVotesharePercentages && touchSelectedRegionID == null && !document.getElementById("regionboxcontainer").contains(e.target))
   {
     updateRegionBoxPosition(e.pageX, e.pageY)
   }
@@ -626,8 +674,12 @@ document.addEventListener('mousemove', function(e) {
     })
   }
 
-  currentMouseX = e.pageX
-  currentMouseY = e.pageY
+  const isInsideRegionBox = document.getElementById("regionboxcontainer").contains(e.target)
+  if (!isInsideRegionBox)
+  {
+    currentMouseX = e.pageX
+    currentMouseY = e.pageY
+  }
 })
 
 document.addEventListener('mouseup', function() {
@@ -644,7 +696,7 @@ document.addEventListener('mouseup', function() {
   mouseIsDown = false
   isDraggingInsideRoundControls = false
   
-  if (!editingRegionVotesharePercentages)
+  if (!editingRegionVotesharePercentages && touchSelectedRegionID == null)
   {
     updateRegionBox()
   }

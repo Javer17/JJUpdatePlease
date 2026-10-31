@@ -719,9 +719,14 @@ function setOutlineDivProperties()
     outlineDiv.css('fill', defaultRegionFillColor)
 
     outlineDiv.attr('onmouseenter', "mouseEnteredRegion(this)")
-    outlineDiv.attr('onmouseleave', "mouseLeftRegion(this)")
+    outlineDiv.attr('onmouseleave', "mouseLeftRegion(this, event)")
 
     outlineDiv.on('click', function(e) {
+      if (!tapShouldClickRegion)
+      {
+        touchSelectedRegionID = getBaseRegionID(e.target.id).baseID
+        return
+      }
       if (e.altKey && e.shiftKey && altShiftClickRegion(e.target)) return
       if (e.altKey && altClickRegion(e.target)) return
       if (e.shiftKey && shiftClickRegion(e.target)) return
@@ -1534,6 +1539,7 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
         zoomScaleSensitivity: 0.4,
         panEnabled: true,
         dblClickZoomEnabled: false,
+        preventMouseEventsDefault: false,
         beforePan: () => {
           if (mouseIsDown)
           {
@@ -1556,6 +1562,8 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
       {
         applyRelativeZoomState(svgPanZoomController, zoomStateToRestore)
       }
+
+      $('#svgdata').css('touch-action', 'none')
 
       if (fadeForNewSVG)
       {
@@ -1600,6 +1608,7 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
         zoomScaleSensitivity: 0.35,
         panEnabled: true,
         dblClickZoomEnabled: false,
+        preventMouseEventsDefault: false,
         beforePan: () => {
           if (mouseIsDown)
           {
@@ -1622,6 +1631,8 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
       {
         applyRelativeZoomState(svgPanZoomController, zoomStateToRestore)
       }
+
+      $('#svgdata').css('touch-action', 'none')
 
       if (fadeForNewSVG)
       {

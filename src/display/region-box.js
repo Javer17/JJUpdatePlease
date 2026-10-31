@@ -3,6 +3,12 @@ async function updateRegionBox(regionID = currentRegionID)
   let currentMapDataForDate = currentSliderDate && currentMapSource.getMapData() ? currentMapSource.getMapData()[currentSliderDate.getTime()] : null
   let canZoomCurrently = await currentMapSource.canZoom(currentMapDataForDate, regionID)
   if (regionID != currentRegionID) { return }
+  
+  if (currentEditingState == EditingState.viewing)
+  {
+    $("#regionboxcontainer").css('pointer-events', touchSelectedRegionID != null ? "" : "none")
+  }
+
 
   let isDiscreteRegion = viewingDiscreteRegions()
 
@@ -149,19 +155,26 @@ async function updateRegionBox(regionID = currentRegionID)
 
   regionMarginString += roundedMarginValue + (currentMapSource.getCustomVoteshareSuffix() ?? "")
 
-  let regionBoxHTML = (currentEditingState == EditingState.viewing || (isDiscreteRegion && currentMapSource.getEditingMode() == EditingMode.margin)) ? regionMarginString : ""
+  let regionBoxHTML = (currentEditingState == EditingState.viewing || (isDiscreteRegion && currentMapSource.getEditingMode() == EditingMode.margin)) ? "<span style='white-space: nowrap;'>" + regionMarginString + "</span>" : ""
+
+  const isTouchPinned = touchSelectedRegionID == regionID
+  const altDataText = (regionData.altData ?? regionData).altText ?? " alt race"
+  const linkIconURL = currentMapSource.getIconURL(true)
+  const linkIconHTML = "<img style='position: relative; left: 5px; top: 3px; height: 16px; width: 16px;' src='" + linkIconURL + "'>"
+  const linkButtonIconHTML = "<img style='height: 1em; width: 1em;' src='" + linkIconURL + "'>"
+  const openRegionLinkAction = () => currentMapSource.openRegionLink(regionID, currentSliderDate)
 
   let tooltipsToShow = {
-    shiftForVotes: [false, "<span class='shifttext'>Shift</span> to show votes"],
-    altForAlternateData: [false, "<span class='alttext'>Alt</span> to show " + ((regionData.altData ?? regionData).altText ?? " alt race")],
-    shiftClickToEditEVs: [false, "<span class='shifttext'>Shift</span> click to edit EVs"],
-    clickToZoom: [false, "<span class='clicktext'>Click</span> to expand"],
-    clickToOpenLink: [false, "<span class='clicktext'>Click</span> to open<img style='position: relative; left: 5px; top: 3px; height: 16px; width: 16px;' src='" + currentMapSource.getIconURL(true) + "'>"],
-    rightClickToOpenLink: [false, "<span class=''>Right-click</span> to open<img style='position: relative; left: 5px; top: 3px; height: 16px; width: 16px;' src='" + currentMapSource.getIconURL(true) + "'>"],
-    clickToEditVoteshare: [false, "<span class='clicktext'>Click</span> to edit voteshare"],
-    shiftClickToEditMargin: [false, "<span class='shifttext'>Shift</span> <span class='clicktext'>click</span> to edit margin"],
-    altClickToFlip: [false, "<span class='alttext'>Alt</span> <span class='clicktext'>click</span> to flip"],
-    altShiftClickToDisable: [false, "<span class='alttext'>Alt</span>+<span class='shifttext'>shift</span> <span class='clicktext'>click</span> to disable"]
+    shiftForVotes: {show: false, hintHTML: "<span class='shifttext'>Shift</span> to show votes", buttonHTML: shiftKeyDown ? "Show percents" : "Show votes", buttonAction: () => { shiftKeyDown = !shiftKeyDown; updateRegionBox() }},
+    altForAlternateData: {show: false, hintHTML: "<span class='alttext'>Alt</span> to show " + altDataText, buttonHTML: (altKeyDown ? "Hide " : "Show ") + altDataText.trim(), buttonAction: () => { altKeyDown = !altKeyDown; updateRegionBox() }},
+    shiftClickToEditEVs: {show: false, hintHTML: "<span class='shifttext'>Shift</span> click to edit EVs"},
+    clickToZoom: {show: false, hintHTML: "<span class='clicktext'>Click</span> to expand", buttonHTML: "Expand", buttonAction: async () => { await leftClickRegion($("#" + regionID)); clearTouchSelectedRegion() }},
+    clickToOpenLink: {show: false, hintHTML: "<span class='clicktext'>Click</span> to open" + linkIconHTML, buttonHTML: "Open" + linkButtonIconHTML, buttonAction: openRegionLinkAction},
+    rightClickToOpenLink: {show: false, hintHTML: "<span class=''>Right-click</span> to open" + linkIconHTML, buttonHTML: "Open" + linkButtonIconHTML, buttonAction: openRegionLinkAction},
+    clickToEditVoteshare: {show: false, hintHTML: "<span class='clicktext'>Click</span> to edit voteshare"},
+    shiftClickToEditMargin: {show: false, hintHTML: "<span class='shifttext'>Shift</span> <span class='clicktext'>click</span> to edit margin"},
+    altClickToFlip: {show: false, hintHTML: "<span class='alttext'>Alt</span> <span class='clicktext'>click</span> to flip"},
+    altShiftClickToDisable: {show: false, hintHTML: "<span class='alttext'>Alt</span>+<span class='shifttext'>shift</span> <span class='clicktext'>click</span> to disable"}
   }
 
   if (currentEditingState == EditingState.viewing)
@@ -284,7 +297,7 @@ async function updateRegionBox(regionID = currentRegionID)
       hasVoteCountsForAll = hasVoteCountsForAll && voteData.votes != null
     })
 
-    tooltipsToShow.shiftForVotes[0] = hasVoteCountsForAll
+    tooltipsToShow.shiftForVotes.show = hasVoteCountsForAll
 
     regionBoxHTML += "</div>"
   }
@@ -364,35 +377,53 @@ async function updateRegionBox(regionID = currentRegionID)
   
   const canOpenLink = currentEditingState == EditingState.viewing && currentMapSource.openRegionLink(regionID, currentSliderDate, true)
   
-  tooltipsToShow.altForAlternateData[0] = regionData.altData || showingAltData
-  tooltipsToShow.shiftClickToEditEVs[0] = isDiscreteRegion && currentMapType.getID() == USAPresidentMapType.getID() && currentMapSource.isCustom() && currentEditingState == EditingState.viewing && currentViewingState == ViewingState.viewing
-  tooltipsToShow.clickToZoom[0] = canZoomCurrently && currentViewingState == ViewingState.viewing
-  tooltipsToShow.clickToOpenLink[0] = openLinksWithLeftClick && canOpenLink && !tooltipsToShow.clickToZoom[0]
-  tooltipsToShow.rightClickToOpenLink[0] = canOpenLink && (tooltipsToShow.clickToZoom[0] || !openLinksWithLeftClick)
-  tooltipsToShow.clickToEditVoteshare[0] = isDiscreteRegion && currentEditingState == EditingState.editing && currentMapSource.getEditingMode() == EditingMode.voteshare
-  tooltipsToShow.shiftClickToEditMargin[0] = isDiscreteRegion && currentEditingState == EditingState.editing && currentMapSource.getEditingMode() == EditingMode.margin && !regionData.disabled
-  tooltipsToShow.altClickToFlip[0] = isDiscreteRegion && currentEditingState == EditingState.editing
-  tooltipsToShow.altShiftClickToDisable[0] = isDiscreteRegion && currentEditingState == EditingState.editing
+  tooltipsToShow.altForAlternateData.show = regionData.altData || showingAltData
+  tooltipsToShow.shiftClickToEditEVs.show = isDiscreteRegion && currentMapType.getID() == USAPresidentMapType.getID() && currentMapSource.isCustom() && currentEditingState == EditingState.viewing && currentViewingState == ViewingState.viewing
+  tooltipsToShow.clickToZoom.show = canZoomCurrently && currentViewingState == ViewingState.viewing
+  tooltipsToShow.clickToOpenLink.show = openLinksWithLeftClick && canOpenLink && !tooltipsToShow.clickToZoom.show
+  tooltipsToShow.rightClickToOpenLink.show = canOpenLink && (tooltipsToShow.clickToZoom.show || !openLinksWithLeftClick)
+  tooltipsToShow.clickToEditVoteshare.show = isDiscreteRegion && currentEditingState == EditingState.editing && currentMapSource.getEditingMode() == EditingMode.voteshare
+  tooltipsToShow.shiftClickToEditMargin.show = isDiscreteRegion && currentEditingState == EditingState.editing && currentMapSource.getEditingMode() == EditingMode.margin && !regionData.disabled
+  tooltipsToShow.altClickToFlip.show = isDiscreteRegion && currentEditingState == EditingState.editing
+  tooltipsToShow.altShiftClickToDisable.show = isDiscreteRegion && currentEditingState == EditingState.editing
+  
 
   let isShowingSomeTooltip = false
+  let regionBoxButtonsHTML = ""
   Object.keys(tooltipsToShow).forEach((tooltipID) => {
-    if (tooltipsToShow[tooltipID][0])
+    const tooltip = tooltipsToShow[tooltipID]
+    if (!tooltip.show) { return }
+    
+    if (isTouchPinned && tooltip.buttonHTML)
+    {
+      regionBoxButtonsHTML += "<button class='regionbox-button' data-tooltip-id='" + tooltipID + "'>" + tooltip.buttonHTML + "</button>"
+    }
+    else
     {
       regionBoxHTML += "<div style='color: gray; font-size: 15px; font-style: italic'>"
-      regionBoxHTML += tooltipsToShow[tooltipID][1]
+      regionBoxHTML += tooltip.hintHTML
       regionBoxHTML += "</div>"
   
-      isShowingSomeTooltip = true
     }
+    isShowingSomeTooltip = true
   })
-  if (isShowingSomeTooltip)
+  if (regionBoxButtonsHTML)
+  {
+    regionBoxHTML += "<div class='regionbox-buttons'>" + regionBoxButtonsHTML + "</div>"
+  }
+  if (isShowingSomeTooltip && !regionBoxButtonsHTML)
   {
     regionBoxHTML += "<div style='padding-bottom: 3px;'></div>"
   }
 
-  $("#regionbox").html(formattedRegionID + "<br>" + "<span style='color: " + politicalParties[regionData.partyID].getMarginColors().lean + ";'>" + regionBoxHTML + "</span>")
+  const dismissButtonHTML = "<button class='regionbox-button regionbox-dismiss-button' onclick='clearTouchSelectedRegion()'>✕</button>"
+  const regionNameHTML = isTouchPinned ? "<div class='regionbox-header'><div style='grid-column: 2; white-space: nowrap;'>" + formattedRegionID + "</div>" + dismissButtonHTML + "</div>" : formattedRegionID + "<br>"
+  $("#regionbox").html(regionNameHTML + "<span style='color: " + politicalParties[regionData.partyID].getMarginColors().lean + ";'>" + regionBoxHTML + "</span>")
+  $("#regionbox [data-tooltip-id]").on('click', function() {
+    tooltipsToShow[$(this).data('tooltip-id')].buttonAction()
+  })
 
-  updateRegionBoxYPosition()
+  updateRegionBoxPosition(currentMouseX, currentMouseY)
   
   if (shiftKeyDown)
   {
@@ -408,10 +439,24 @@ async function updateRegionBox(regionID = currentRegionID)
   }
 }
 
+// Region box is shrunk only while pinned by a tap; hover/click keeps full size
+const regionBoxTapScale = 0.66
+
+function getRegionBoxScale()
+{
+  return touchSelectedRegionID != null ? regionBoxTapScale : 1
+}
+
+function applyRegionBoxScale()
+{
+  $("#regionboxcontainer").css({'transform': 'scale(' + getRegionBoxScale() + ')', 'transform-origin': 'top left'})
+}
+
 function updateRegionBoxPosition(mouseX, mouseY)
 {
+  applyRegionBoxScale()
   let newRegionBoxXPos = mouseX+5
-  newRegionBoxXPos = correctOverflow(newRegionBoxXPos, $("#regionboxcontainer").width(), $(document).width())
+  newRegionBoxXPos = correctOverflow(newRegionBoxXPos, $("#regionboxcontainer").width() * getRegionBoxScale(), $(document).width())
   
   $("#regionboxcontainer").css("left", newRegionBoxXPos)
   updateRegionBoxYPosition(mouseY)
@@ -422,7 +467,7 @@ function updateRegionBoxYPosition(mouseY)
   var newRegionBoxYPos = (mouseY+5) || (currentMouseY+5)
   if (!newRegionBoxYPos) { return }
 
-  newRegionBoxYPos = correctOverflow(newRegionBoxYPos, $("#regionboxcontainer").height(), $(document).height())
+  newRegionBoxYPos = correctOverflow(newRegionBoxYPos, $("#regionboxcontainer").height() * getRegionBoxScale(), $(document).height())
   $("#regionboxcontainer").css("top", newRegionBoxYPos)
 }
 

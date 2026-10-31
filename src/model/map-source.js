@@ -792,7 +792,7 @@ class MapSource
   resetMapUUID()
   {
     if (!this.isCustom()) { return }
-    this.uuid = crypto.randomUUID()
+    this.uuid = crypto.randomUUID?.()
   }
   
   getMapUUID()
