@@ -58,6 +58,132 @@ function applyRelativeZoomState(controller, state)
   })
 }
 var pannedDuringClick = false
+var touchGestureMoved = false
+
+// svg-pan-zoom handles mouse panning itself. Its built-in touch handlers do not
+// provide pinch zoom, so use native touch events for one-finger pan and two-finger
+// pinch while leaving normal click events available for selecting regions.
+function createMapTouchEventsHandler()
+{
+  let removeTouchListeners = null
+
+  return {
+    haltEventListeners: ['touchstart', 'touchend', 'touchmove', 'touchleave', 'touchcancel'],
+
+    init: function(options)
+    {
+      const svgElement = options.svgElement
+      const controller = options.instance
+      let previousTouches = []
+
+      svgElement.style.touchAction = 'none'
+
+      const getTouchPoint = (touch) => {
+        const rect = svgElement.getBoundingClientRect()
+        return {x: touch.clientX - rect.left, y: touch.clientY - rect.top}
+      }
+
+      const getDistance = (a, b) => Math.hypot(b.x - a.x, b.y - a.y)
+      const getMidpoint = (a, b) => ({x: (a.x + b.x) / 2, y: (a.y + b.y) / 2})
+
+      const onTouchStart = (event) => {
+        const wasFirstTouch = previousTouches.length === 0
+        previousTouches = Array.from(event.touches, getTouchPoint)
+
+        if (wasFirstTouch)
+        {
+          // A new contact may be a tap. Only mark it as a gesture after it moves.
+          touchGestureMoved = false
+          pannedDuringClick = false
+        }
+
+        mouseIsDown = true
+      }
+
+      const onTouchMove = (event) => {
+        const currentTouches = Array.from(event.touches, getTouchPoint)
+
+        if (currentTouches.length === 1 && previousTouches.length === 1)
+        {
+          const dx = currentTouches[0].x - previousTouches[0].x
+          const dy = currentTouches[0].y - previousTouches[0].y
+
+          if (Math.hypot(dx, dy) > 2)
+          {
+            event.preventDefault()
+            pannedDuringClick = true
+            touchGestureMoved = true
+            controller.panBy({x: dx, y: dy})
+          }
+        }
+        else if (currentTouches.length >= 2 && previousTouches.length >= 2)
+        {
+          const previousDistance = getDistance(previousTouches[0], previousTouches[1])
+          const currentDistance = getDistance(currentTouches[0], currentTouches[1])
+
+          if (previousDistance > 0 && Math.abs(currentDistance - previousDistance) > 0.5)
+          {
+            event.preventDefault()
+            pannedDuringClick = true
+            touchGestureMoved = true
+            controller.zoomAtPointBy(currentDistance / previousDistance, getMidpoint(currentTouches[0], currentTouches[1]))
+          }
+
+          const previousMidpoint = getMidpoint(previousTouches[0], previousTouches[1])
+          const currentMidpoint = getMidpoint(currentTouches[0], currentTouches[1])
+          const dx = currentMidpoint.x - previousMidpoint.x
+          const dy = currentMidpoint.y - previousMidpoint.y
+          if (Math.hypot(dx, dy) > 2)
+          {
+            event.preventDefault()
+            pannedDuringClick = true
+            touchGestureMoved = true
+            controller.panBy({x: dx, y: dy})
+          }
+        }
+
+        previousTouches = currentTouches
+      }
+
+      const onTouchEnd = (event) => {
+        previousTouches = Array.from(event.touches, getTouchPoint)
+        if (event.touches.length === 0)
+        {
+          mouseIsDown = false
+          // Keep the movement flag long enough to suppress a synthetic click
+          // after a drag, but do not let it affect a later physical mouse click.
+          setTimeout(() => {
+            if (previousTouches.length === 0)
+            {
+              touchGestureMoved = false
+            }
+          }, 500)
+        }
+      }
+
+      svgElement.addEventListener('touchstart', onTouchStart, {passive: true})
+      svgElement.addEventListener('touchmove', onTouchMove, {passive: false})
+      svgElement.addEventListener('touchend', onTouchEnd, {passive: true})
+      svgElement.addEventListener('touchcancel', onTouchEnd, {passive: true})
+
+      removeTouchListeners = () => {
+        svgElement.removeEventListener('touchstart', onTouchStart)
+        svgElement.removeEventListener('touchmove', onTouchMove)
+        svgElement.removeEventListener('touchend', onTouchEnd)
+        svgElement.removeEventListener('touchcancel', onTouchEnd)
+      }
+    },
+
+    destroy: function()
+    {
+      if (removeTouchListeners)
+      {
+        removeTouchListeners()
+        removeTouchListeners = null
+      }
+    }
+  }
+}
 
 var selectedParty
 
@@ -726,8 +852,10 @@ function setOutlineDivProperties()
       if (e.altKey && altClickRegion(e.target)) return
       if (e.shiftKey && shiftClickRegion(e.target)) return
       if (e.which == 3 || e.ctrlKey) return // handled in contextmenu
-      var isPannableMapState = currentViewingState == ViewingState.zooming || (currentViewingState == ViewingState.viewing && (currentMapType.getID() == UKHouseMapType.getID() || (currentMapType.getID() == USAHouseMapType.getID() && currentMapType.getMapSettingValue("showAllDistricts"))))
-      if (!isPannableMapState || !(currentEditingState == EditingState.viewing && pannedDuringClick)) leftClickRegion(this)
+      var isPannableMapState = currentViewingState == ViewingState.zooming || (currentViewingState == ViewingState.viewing && (currentMapType.getID() == UKHouseMapType.getID() || currentMapType.getID() == USAHouseMapType.getID()))
+      var wasTouchPan = touchGestureMoved
+      touchGestureMoved = false
+      if (!isPannableMapState || !(currentEditingState == EditingState.viewing && (pannedDuringClick || wasTouchPan))) leftClickRegion(this)
     })
 
     outlineDiv.on('contextmenu', function(e) {
@@ -1534,6 +1662,7 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
         zoomScaleSensitivity: 0.4,
         panEnabled: true,
         dblClickZoomEnabled: false,
+        customEventsHandler: createMapTouchEventsHandler(),
         beforePan: () => {
           if (mouseIsDown)
           {
@@ -1569,7 +1698,7 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
 
     $("#mapCloseButton").css('display', currentMapZoomRegion != null ? 'block' : 'none')
   }
-  else if (currentViewingState == ViewingState.viewing && (currentMapType.getID() == UKHouseMapType.getID() || (currentMapType.getID() == USAHouseMapType.getID() && currentMapType.getMapSettingValue("showAllDistricts"))))
+  else if (currentViewingState == ViewingState.viewing && (currentMapType.getID() == UKHouseMapType.getID() || currentMapType.getID() == USAHouseMapType.getID()))
   {
     var zoomOwnerID = currentMapType.getID()
 
@@ -1600,6 +1729,7 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
         zoomScaleSensitivity: 0.35,
         panEnabled: true,
         dblClickZoomEnabled: false,
+        customEventsHandler: createMapTouchEventsHandler(),
         beforePan: () => {
           if (mouseIsDown)
           {
