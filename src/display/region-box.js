@@ -63,10 +63,8 @@ async function updateRegionBox(regionID = currentRegionID)
   const regionBoxPartyID = regionData?.calledPartyID ?? (fancyRegionBoxes ? regionData?.partyID : null)
   const calledParty = regionBoxPartyID != null ? politicalParties[regionBoxPartyID] : null
   const calledPartyColors = calledParty ? calledParty.getMarginColors() : null
-  const regionBoxCalledStyle = calledPartyColors ? {background: "color-mix(in srgb, " + (calledPartyColors.current ?? calledPartyColors.safe) + " 95%, transparent)", border: calledPartyColors.safe} : null
-  const regionBoxOuterElement = document.getElementById("regionboxcontainer")
-  const regionBoxInnerElement = document.getElementById("regionbox")
-  for (const regionBoxElement of [regionBoxOuterElement, regionBoxInnerElement])
+  const regionBoxCalledStyle = calledPartyColors ? {background: calledPartyColors.current ?? calledPartyColors.safe, border: calledPartyColors.safe} : null
+  for (const regionBoxElement of [document.getElementById("regionboxcontainer"), document.getElementById("regionbox")])
   {
     if (!regionBoxElement) { continue }
     if (regionBoxCalledStyle)
@@ -78,23 +76,6 @@ async function updateRegionBox(regionID = currentRegionID)
     {
       regionBoxElement.style.removeProperty("background")
       regionBoxElement.style.removeProperty("border-color")
-    }
-  }
-  // The container sits behind the rounded box with square corners, so its background
-  // peeks out past the colored border. Make it transparent and give it the same rounding.
-  if (regionBoxOuterElement && regionBoxInnerElement)
-  {
-    const regionBoxRadius = getComputedStyle(regionBoxInnerElement).borderRadius
-    if (regionBoxCalledStyle)
-    {
-      regionBoxOuterElement.style.setProperty("background", "transparent", "important")
-      regionBoxOuterElement.style.setProperty("border-radius", regionBoxRadius, "important")
-      regionBoxOuterElement.style.setProperty("overflow", "hidden", "important")
-    }
-    else
-    {
-      regionBoxOuterElement.style.removeProperty("border-radius")
-      regionBoxOuterElement.style.removeProperty("overflow")
     }
   }
   // Guarantees a visible colored border even if the box's CSS has no border of its own
