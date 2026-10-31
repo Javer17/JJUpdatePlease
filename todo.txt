@@ -14,6 +14,3 @@ Party Presets
 /=============================================================================================================================/
 Netherlands
     2 Map Viewables - With or without seat counts (side of the main municipality map)
-/=============================================================================================================================/
-Better Settings menu
-    When clicking on the settings button it brings a sidebar on the right that has every setting. (With Explanation)
