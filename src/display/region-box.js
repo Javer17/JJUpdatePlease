@@ -388,7 +388,7 @@ async function updateRegionBox(regionID = currentRegionID)
     // Logos off: voteshare spans are width:100% + padding (overflowing the container's 8px right padding), so no right padding here.
     // Logos on: voteshare rows are flex rows that stop at the container's 8px right padding, so match it (bar spans logo + voteshare bar).
     regionBoxHTML += "<div style='padding-right: " + (currentMapType.getMapSettingValue("showPartyLogos") ? "-8px" : "-2px") + "; display: block;'>"
-    regionBoxHTML += "<div id='reporting-bar' style='height: 12px; border-radius: 3px; background: " + getGradientCSS("#00c200", "#273a27", reportingPercentValue) + ";'></div>"
+    regionBoxHTML += "<div id='reporting-bar' style='height: 12px; border-radius: 3px; background: " + getGradientCSS("#00ff00", "#B5FFB5", reportingPercentValue) + ";'></div>"
     regionBoxHTML += "</div>"
 
     // Label goes below the bar
