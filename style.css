@@ -450,6 +450,10 @@ body {
   vertical-align: top;
 }
 
+#regionboxcontainer {
+  border-radius: 5px;
+}
+
 .box {
   border: 1rem solid gray;
   /* max-width: 200rem; */
