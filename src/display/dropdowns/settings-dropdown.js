@@ -7,6 +7,8 @@ function createSettingsDropdownItems()
   for (let settingNum in currentMapType.getMapSettingsLayout())
   {
     let settingLayout = currentMapType.getMapSettingsLayout()[settingNum]
+    if (settingLayout.id == "callView" && !currentMapSource.getID().includes("CNN")) { continue }
+
     if (!didBeginGlobalSettings && globalMapSettings.some(setting => setting.id == settingLayout.id))
     {
       $("#settingsDropdownContainer").append("<div class='dropdown-separator-big'></div>")

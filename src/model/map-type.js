@@ -391,6 +391,16 @@ var globalMapSettings =
     return value
   },
   defaultValue: "off", reloadType: MapSettingReloadType.display},
+{id: "callView", emoji: "🚨", title: "Called View", type: MapSettingType.optionCycle, options:
+[
+  {id: "off", title: "Off", value: "off"},
+  {id: "solid", title: "Solid", value: "solid"},
+  {id: "lock", title: "Lock", value: "lock"}
+],
+shouldShowActive: (value) => {
+  return value != "off"
+},
+defaultValue: "off", reloadType: MapSettingReloadType.display},
 ]
 
 var currentGlobalMapSettings = {}

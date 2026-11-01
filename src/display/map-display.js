@@ -550,7 +550,6 @@ async function reloadForNewMapType(initialLoad, loadMapSource = true)
   createMapCycleDropdownItems()
   createComparePresetDropdownItems()
   createMapSourceDropdownItems()
-  createSettingsDropdownItems()
 
   currentMapSource = (currentMapType.getCurrentMapSourceID() && currentMapType.getCurrentMapSourceID() in mapSources && !(!currentMapType.getCustomMapEnabled() && currentMapType.getCurrentMapSourceID() == currentMapType.getCustomMapSource().getID())) ? mapSources[currentMapType.getCurrentMapSourceID()] : mapSources[currentMapType.getMapSourceIDs()[0]]
   
@@ -567,6 +566,8 @@ async function reloadForNewMapType(initialLoad, loadMapSource = true)
   {
     currentMapSource = NullMapSource
   }
+
+  createSettingsDropdownItems()
   
   if (currentMapSource.getID() == NullMapSource.getID())
   {
@@ -1009,6 +1010,7 @@ async function setMapSource(mapSource, ...loadDataMapArgs)
   currentMapSource.cancelDownload()
 
   currentMapSource = mapSource
+  createSettingsDropdownItems()
   
   if (!mapSource.isCompare())
   {
@@ -2301,6 +2303,19 @@ async function updateRegionFillColors(regionIDsToUpdate, regionData, shouldUpdat
     if (textLabel != null)
     {
       textLabel.style.fill = regionData.disabled ? "gray" : "white"
+    }
+  }
+
+  // Call View: called races can use the party's Solid or Lock color.
+  const callViewMode = currentMapType.getMapSettingValue("callView")
+  if (callViewMode != "off" && regionData.calledPartyID != null && regionData.disabled != true && currentViewingState != ViewingState.splitVote)
+  {
+    const calledPartyColors = politicalParties[regionData.calledPartyID]?.getMarginColors()
+    if (calledPartyColors != null)
+    {
+      fillColor = callViewMode == "solid"
+        ? calledPartyColors.solid ?? calledPartyColors.safe
+        : calledPartyColors.current ?? calledPartyColors.safe
     }
   }
 
