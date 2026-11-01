@@ -2306,16 +2306,34 @@ async function updateRegionFillColors(regionIDsToUpdate, regionData, shouldUpdat
     }
   }
 
-  // Call View: called races can use the party's Solid or Lock color.
+  // Call View: simple modes distinguish called races from uncalled leaders.
   const callViewMode = currentMapType.getMapSettingValue("callView")
+  const isSimpleCallView = callViewMode == "simpleSafe" || callViewMode == "simpleSolid" || callViewMode == "simpleLock"
   if (callViewMode != "off" && regionData.calledPartyID != null && regionData.disabled != true && currentViewingState != ViewingState.splitVote)
   {
     const calledPartyColors = politicalParties[regionData.calledPartyID]?.getMarginColors()
     if (calledPartyColors != null)
     {
-      fillColor = callViewMode == "solid"
-        ? calledPartyColors.solid ?? calledPartyColors.safe
-        : calledPartyColors.current ?? calledPartyColors.safe
+      if (isSimpleCallView)
+      {
+        const calledColor = callViewMode == "simpleSafe" ? "safe" : callViewMode == "simpleSolid" ? "solid" : "current"
+        fillColor = calledPartyColors[calledColor] ?? calledPartyColors.safe
+      }
+      else
+      {
+        fillColor = callViewMode == "solid"
+          ? calledPartyColors.solid ?? calledPartyColors.safe
+          : calledPartyColors.current ?? calledPartyColors.safe
+      }
+    }
+  }
+
+  if (isSimpleCallView && regionData.calledPartyID == null && regionData.disabled != true && currentViewingState != ViewingState.splitVote && regionData.partyID != TossupParty.getID())
+  {
+    const leadingPartyColors = politicalParties[regionData.partyID]?.getMarginColors()
+    if (leadingPartyColors != null)
+    {
+      fillColor = Math.abs(regionData.margin) < marginValues.lean ? leadingPartyColors.tilt : leadingPartyColors.likely
     }
   }
 

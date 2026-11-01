@@ -395,7 +395,10 @@ var globalMapSettings =
 [
   {id: "off", title: "Off", value: "off"},
   {id: "solid", title: "Solid", value: "solid"},
-  {id: "lock", title: "Lock", value: "lock"}
+  {id: "lock", title: "Lock", value: "lock"},
+  {id: "simpleSafe", title: "Simple Safe", value: "simpleSafe"},
+  {id: "simpleSolid", title: "Simple Solid", value: "simpleSolid"},
+  {id: "simpleLock", title: "Simple Lock", value: "simpleLock"},
 ],
 shouldShowActive: (value) => {
   return value != "off"
