@@ -418,7 +418,12 @@
       <div id='maptextcontainer'>
         <div style="position: relative; display: flex; height: 0; flex-grow: 1; margin-top: 15rem; margin-bottom: 15rem; gap: 10rem;">
           <div id="mapRoundControls" style="display: none; width: 55rem; flex-direction: column; margin-top: 15rem; margin-bottom: 15rem;"></div>
-          <div id="mapcontainer" style="overflow: hidden; display: flex; flex-grow: 1;" oncontextmenu="return false"></div>
+          <div id="mapCanvasContainer" style="position: relative; display: flex; flex-grow: 1; min-width: 0;">
+            <div id="mapcontainer" style="overflow: hidden; display: flex; flex-grow: 1;" oncontextmenu="return false"></div>
+            <a id="cnnMapRefreshButton" onclick="refreshCNNMapData(event)" title="Refresh CNN map data" aria-label="Refresh CNN map data" style="display: none; position: absolute; top: 15rem; left: 15rem; z-index: 1; width: calc(var(--zoom-icon) * 1.4); cursor: pointer; user-select: none; -webkit-user-select: none; padding: calc(var(--zoom-icon) * 0.2); box-sizing: border-box; border-radius: calc(var(--zoom-icon) * 0.2); background-color: rgba(51, 51, 51, 0.75);">
+              <img id="cnnMapRefreshButtonImage" src="./assets/reset-icon.png" style="width: 100%; aspect-ratio: 1/1; text-decoration: none;" />
+            </a>
+          </div>
           <div id="submissionCount" class="submission-count" aria-live="polite">
             Submissions: <span id="submissionCountValue">Loading...</span>
           </div>

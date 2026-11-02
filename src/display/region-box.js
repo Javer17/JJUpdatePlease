@@ -364,15 +364,37 @@ async function updateRegionBox(regionID = currentRegionID)
       regionBoxHTML += "<div style='width: 100%; height: 0px; border-top: 1px solid gray; margin: 6px 0px 8px 0px;'></div>"
     }
 
-    // Half-height bar graph (voteshare bars are ~25px tall: 17px text + 4px padding top/bottom), full width
+    const timestampValue = regionData.voteTimestamp
+    const numericTimestamp = typeof timestampValue == "number" || (typeof timestampValue == "string" && /^\d+$/.test(timestampValue))
+      ? Number(timestampValue)
+      : null
+    const voteTimestamp = timestampValue == null
+      ? null
+      : new Date(numericTimestamp == null ? timestampValue : numericTimestamp < 1e12 ? numericTimestamp * 1000 : numericTimestamp)
+    const lastUpdateDateTime = voteTimestamp && Number.isFinite(voteTimestamp.getTime())
+      ? voteTimestamp
+      : (currentSliderDate ? new Date(currentSliderDate) : null)
+    const dateFormat = currentMapType.getMapSettings()["dateFormat"]
+    const lastUpdateTime = lastUpdateDateTime
+      ? dateFormat == "mdy"
+        ? zeroPadding(lastUpdateDateTime.getHours() % 12 || 12) + ":" + zeroPadding(lastUpdateDateTime.getMinutes()) + (lastUpdateDateTime.getHours() < 12 ? " AM" : " PM")
+        : zeroPadding(lastUpdateDateTime.getHours()) + ":" + zeroPadding(lastUpdateDateTime.getMinutes())
+      : null
+    const lastUpdateDate = lastUpdateDateTime ? getDateString(lastUpdateDateTime, "/", false, true) : null
+
+    regionBoxHTML += "<div style='display: flex; align-items: center; gap: 8px;'>"
+    regionBoxHTML += "<span style='color: #cccccc; font-size: 16px; line-height: 12px; white-space: nowrap;'>" + regionData.reportingPercent + "%</span>"
     // Logos off: voteshare spans are width:100% + padding (overflowing the container's 8px right padding), so no right padding here.
     // Logos on: voteshare rows are flex rows that stop at the container's 8px right padding, so match it (bar spans logo + voteshare bar).
-    regionBoxHTML += "<div style='padding-right: " + (currentMapType.getMapSettingValue("showPartyLogos") ? "-8px" : "-2px") + "; display: block;'>"
+    regionBoxHTML += "<div style='padding-right: " + (currentMapType.getMapSettingValue("showPartyLogos") ? "-8px" : "-2px") + "; display: block; flex: 1 1 0%; min-width: 0;'>"
     regionBoxHTML += "<div id='reporting-bar' style='height: 12px; border-radius: 3px; background: " + getGradientCSS("#00d300", "#003300", reportingPercentValue) + ";'></div>"
     regionBoxHTML += "</div>"
+    regionBoxHTML += "</div>"
 
-    // Label goes below the bar
-    regionBoxHTML += "<div style='color: gray; font-size: 16px; margin-top: 4px; margin-bottom: 5px'>" + regionData.reportingPercent + "% reporting" + "</div>"
+    if (lastUpdateTime && lastUpdateDate)
+    {
+      regionBoxHTML += "<div style='color: #cccccc; font-size: 14px; margin-top: 4px; margin-bottom: 5px'>Last Update: " + lastUpdateTime + " " + lastUpdateDate + "</div>"
+    }
   }
   
   const canOpenLink = currentEditingState == EditingState.viewing && currentMapSource.openRegionLink(regionID, currentSliderDate, true)
@@ -390,6 +412,10 @@ async function updateRegionBox(regionID = currentRegionID)
 
   let isShowingSomeTooltip = false
   let regionBoxButtonsHTML = ""
+  if (regionData.reportingPercent != null && Object.values(tooltipsToShow).some(tooltip => tooltip.show))
+  {
+    regionBoxHTML += "<div style='width: 100%; height: 0px; border-top: 1px solid gray; margin: 6px 0px 8px 0px;'></div>"
+  }
   Object.keys(tooltipsToShow).forEach((tooltipID) => {
     const tooltip = tooltipsToShow[tooltipID]
     if (!tooltip.show) { return }

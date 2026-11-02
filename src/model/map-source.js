@@ -268,6 +268,7 @@ class MapSource
         type: 'GET',
         url: isString(self.dataURL) ? self.dataURL : self.dataURL.url,
         data: {},
+        cache: !reloadCache,
         success: (data) => {
           removeLoader(LoaderType.progress)
 

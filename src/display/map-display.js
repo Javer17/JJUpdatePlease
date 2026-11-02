@@ -566,6 +566,7 @@ async function reloadForNewMapType(initialLoad, loadMapSource = true)
   {
     currentMapSource = NullMapSource
   }
+  updateCNNMapRefreshButtonVisibility()
 
   createSettingsDropdownItems()
   
@@ -905,6 +906,7 @@ function addDivEventListeners()
   let buttonImagePairs = [
   ["mapCloseButton", "close-icon"],
   ["mapResetZoomButton", "reset-icon"],
+  ["cnnMapRefreshButton", "reset-icon"],
   ["mapZoomInButton", "zoom-in-icon"],
   ["mapZoomOutButton", "zoom-out-icon"],
   ["userMapsCloseButton", "close-icon"],
@@ -1010,6 +1012,7 @@ async function setMapSource(mapSource, ...loadDataMapArgs)
   currentMapSource.cancelDownload()
 
   currentMapSource = mapSource
+  updateCNNMapRefreshButtonVisibility()
   createSettingsDropdownItems()
   
   if (!mapSource.isCompare())
@@ -1019,6 +1022,61 @@ async function setMapSource(mapSource, ...loadDataMapArgs)
   
   updateNavBarForNewSource(false, false)
   await loadDataMap(...loadDataMapArgs)
+}
+
+function updateCNNMapRefreshButtonVisibility()
+{
+  const isCNNMap = currentMapSource && currentMapSource.getID().startsWith("CNN-")
+  $("#cnnMapRefreshButton").toggle(!!isCNNMap)
+}
+
+async function refreshCNNMapData(event)
+{
+  event?.preventDefault()
+  event?.stopPropagation()
+
+  const source = currentMapSource
+  const button = $("#cnnMapRefreshButton")
+  if (!source || !source.getID().startsWith("CNN-") || button.attr("aria-busy") == "true") { return }
+
+  const previousMapState = {
+    rawMapData: source.rawMapData,
+    mapData: source.mapData,
+    mapDates: source.mapDates,
+    candidateNameData: source.candidateNameData
+  }
+  const iconDivDictionary = getIconDivsToUpdateArrayForSourceID(source.getID())
+  const statusDivID = Object.keys(iconDivDictionary)[0]
+  const statusIcons = iconDivDictionary[statusDivID]
+  button.attr("aria-busy", "true").css({opacity: "0.6", pointerEvents: "none", cursor: "wait"})
+  setStatusImage(statusDivID, statusIcons.loading)
+
+  try
+  {
+    const loadedSuccessfully = await source.loadMap(true)
+    if (!loadedSuccessfully)
+    {
+      Object.assign(source, previousMapState)
+      setStatusImage(statusDivID, statusIcons.error)
+      return
+    }
+
+    setStatusImage(statusDivID, statusIcons.success)
+    if (currentMapSource != source) { return }
+
+    setDataMapDateSliderRange(false)
+    await displayDataMap(null, null, false, true)
+  }
+  catch (error)
+  {
+    Object.assign(source, previousMapState)
+    setStatusImage(statusDivID, statusIcons.error)
+    console.error(`Unable to refresh CNN map data for ${source.getID()}`, error)
+  }
+  finally
+  {
+    button.removeAttr("aria-busy").css({opacity: "", pointerEvents: "", cursor: ""})
+  }
 }
 
 async function loadDataMap(shouldSetToMax, forceDownload, previousDateOverride, resetCandidateNames, reloadPartyDropdowns)
@@ -1284,7 +1342,7 @@ async function executeDisplayMapQueue()
   isRunningDisplayMapQueue = false
 }
 
-async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
+async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG, preserveCurrentSVG = false)
 {
   if (!currentMapSource) return
 
@@ -1307,7 +1365,9 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
 
   var shouldReloadSVG = false
   var currentSVGPath = currentMapType.getSVGPath()
-  var newOverrideSVGPath = await currentMapSource.getOverrideSVGPath(showingCompareMap && currentMapSource.isCompare() ? currentCompareSliderDate : dateToDisplay)
+  var newOverrideSVGPath = preserveCurrentSVG
+    ? currentSVGPath
+    : await currentMapSource.getOverrideSVGPath(showingCompareMap && currentMapSource.isCompare() ? currentCompareSliderDate : dateToDisplay)
 
   if (newOverrideSVGPath != null && JSON.stringify(currentSVGPath) != JSON.stringify(newOverrideSVGPath))
   {
@@ -1476,6 +1536,7 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG)
     regionData.voteSplits = currentRegionData.voteSplits
     regionData.voteWorth = currentRegionData.voteWorth
     regionData.reportingPercent = currentRegionData.reportingPercent
+    regionData.voteTimestamp = currentRegionData.voteTimestamp
     regionData.calledPartyID = currentRegionData.calledPartyID
     regionData.totalVotes = currentRegionData.totalVotes
     regionData.altData = currentRegionData.altData
