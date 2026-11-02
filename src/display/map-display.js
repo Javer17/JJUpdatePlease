@@ -2551,7 +2551,7 @@ function generateFlipPatternsFromPartyMap(partyMap, scale)
   }
 }
 
-function getPartyTotals(includeFlipData)
+function getPartyTotals(includeFlipData, includeZeroVoteTossups = false)
 {
   var partyTotals = {}
   var partyFlipTotals = {}
@@ -2571,7 +2571,8 @@ function getPartyTotals(includeFlipData)
     var regionData = regionDataArray[regionID]
     if (regionData.disabled && (!regionData.isHold || (regionData.partyID == TossupParty.getID() && !regionData.electionDate && !regionData.candidateName))) { continue }
     var candidateVoteshareData = regionData.partyVotesharePercentages
-    if (Array.isArray(candidateVoteshareData) && candidateVoteshareData.reduce((total, candidate) => total + candidate.voteshare, 0) == 0) { continue }
+    var isTossup = regionData.partyID == null || regionData.partyID == TossupParty.getID() || regionData.margin == 0
+    if (Array.isArray(candidateVoteshareData) && candidateVoteshareData.reduce((total, candidate) => total + candidate.voteshare, 0) == 0 && !(includeZeroVoteTossups && isTossup)) { continue }
 
     var regionDataForTotals = regionData.isHold && regionData.disabled ? {...regionData, disabled: false} : regionData
     var currentRegionEV = currentMapType.getEV(getCurrentDecade(), regionID, regionDataForTotals) ?? regionData.voteWorth

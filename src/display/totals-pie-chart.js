@@ -485,6 +485,12 @@ function updateTotalsPieChart()
   let shouldGetOriginalMapData = currentMapSource.getShouldUseOriginalMapDataForTotalsPieChart()
   let regionDataArray = shouldGetOriginalMapData && currentSliderDate ? currentMapSource.getMapData()[currentSliderDate.getTime()] : displayRegionDataArray
 
+  const showZeroVoteTossups = [
+    "CNN-2024-Presidential-Results",
+    "CNN-2022-Senate-Results", "CNN-2024-Senate-Results", "CNN-2026-Senate-Results",
+    "CNN-2022-House-Results", "CNN-2024-House-Results", "CNN-2026-House-Results",
+    "CNN-2022-Governor-Results", "CNN-2024-Governor-Results", "CNN-2026-Governor-Results"
+  ].includes(currentMapSource.getID())
   let marginTotalsData = {}
   let regionMarginStringsData = {}
 
@@ -523,7 +529,8 @@ function updateTotalsPieChart()
     let regionData = regionDataArray[regionID]
     if (regionData.disabled && (!regionData.isHold || (regionData.partyID == TossupParty.getID() && !regionData.electionDate && !regionData.candidateName))) { continue }
     let candidateVoteshareData = regionData.partyVotesharePercentages
-    if (Array.isArray(candidateVoteshareData) && candidateVoteshareData.reduce((total, candidate) => total + candidate.voteshare, 0) == 0) { continue }
+    let isTossup = regionData.partyID == null || regionData.partyID == TossupParty.getID() || regionData.margin == 0
+    if (Array.isArray(candidateVoteshareData) && candidateVoteshareData.reduce((total, candidate) => total + candidate.voteshare, 0) == 0 && !(showZeroVoteTossups && isTossup)) { continue }
 
     let regionParty = regionData.partyID
     if (regionParty != null && !fullPartyOrdering.some((orderingData) => orderingData.partyID == regionParty))
@@ -620,7 +627,7 @@ function updateTotalsPieChart()
   }
 
   let shouldShowFlips = currentMapType.getMapSettingValue("flipStates")
-  let partyTotalsCallback = getPartyTotals(shouldShowFlips)
+  let partyTotalsCallback = getPartyTotals(shouldShowFlips, showZeroVoteTossups)
 
   let partyTotals
 
