@@ -373,7 +373,10 @@ function renderCNNCallHistory()
     calledTime.dateTime = callDate.toISOString()
     const timeLabel = document.createElement("span")
     timeLabel.className = "cnn-call-history-time-label"
-    timeLabel.textContent = callDate.toLocaleTimeString([], {hour: "numeric", minute: "2-digit"})
+    const dateFormat = currentMapType.getMapSettings()["dateFormat"]
+    timeLabel.textContent = dateFormat == "mdy"
+      ? callDate.toLocaleTimeString([], {hour: "numeric", minute: "2-digit"})
+      : zeroPadding(callDate.getHours()) + ":" + zeroPadding(callDate.getMinutes())
     calledTime.appendChild(timeLabel)
     if (callDate.toDateString() != new Date().toDateString())
     {
