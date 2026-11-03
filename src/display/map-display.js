@@ -906,7 +906,7 @@ function addDivEventListeners()
   let buttonImagePairs = [
   ["mapCloseButton", "close-icon"],
   ["mapResetZoomButton", "reset-icon"],
-  ["cnnMapRefreshButton", "reset-icon"],
+  ["cnnMapRefreshButton", "menu-icon"],
   ["mapZoomInButton", "zoom-in-icon"],
   ["mapZoomOutButton", "zoom-out-icon"],
   ["userMapsCloseButton", "close-icon"],
@@ -1009,6 +1009,8 @@ async function setMapCycle(mapCycle)
 
 async function setMapSource(mapSource, ...loadDataMapArgs)
 {
+  stopCNNMapRefresh()
+
   currentMapSource.cancelDownload()
 
   currentMapSource = mapSource
@@ -1022,60 +1024,10 @@ async function setMapSource(mapSource, ...loadDataMapArgs)
   
   updateNavBarForNewSource(false, false)
   await loadDataMap(...loadDataMapArgs)
-}
 
-function updateCNNMapRefreshButtonVisibility()
-{
-  const isCNNMap = currentMapSource && currentMapSource.getID().startsWith("CNN-")
-  $("#cnnMapRefreshButton").toggle(!!isCNNMap)
-}
-
-async function refreshCNNMapData(event)
-{
-  event?.preventDefault()
-  event?.stopPropagation()
-
-  const source = currentMapSource
-  const button = $("#cnnMapRefreshButton")
-  if (!source || !source.getID().startsWith("CNN-") || button.attr("aria-busy") == "true") { return }
-
-  const previousMapState = {
-    rawMapData: source.rawMapData,
-    mapData: source.mapData,
-    mapDates: source.mapDates,
-    candidateNameData: source.candidateNameData
-  }
-  const iconDivDictionary = getIconDivsToUpdateArrayForSourceID(source.getID())
-  const statusDivID = Object.keys(iconDivDictionary)[0]
-  const statusIcons = iconDivDictionary[statusDivID]
-  button.attr("aria-busy", "true").css({opacity: "0.6", pointerEvents: "none", cursor: "wait"})
-  setStatusImage(statusDivID, statusIcons.loading)
-
-  try
+  if (currentMapSource == mapSource && mapSource.getID().startsWith("CNN-"))
   {
-    const loadedSuccessfully = await source.loadMap(true)
-    if (!loadedSuccessfully)
-    {
-      Object.assign(source, previousMapState)
-      setStatusImage(statusDivID, statusIcons.error)
-      return
-    }
-
-    setStatusImage(statusDivID, statusIcons.success)
-    if (currentMapSource != source) { return }
-
-    setDataMapDateSliderRange(false)
-    await displayDataMap(null, null, false, true)
-  }
-  catch (error)
-  {
-    Object.assign(source, previousMapState)
-    setStatusImage(statusDivID, statusIcons.error)
-    console.error(`Unable to refresh CNN map data for ${source.getID()}`, error)
-  }
-  finally
-  {
-    button.removeAttr("aria-busy").css({opacity: "", pointerEvents: "", cursor: ""})
+    startCNNMapRefresh(mapSource)
   }
 }
 
@@ -1258,6 +1210,16 @@ function setDataMapDateSliderRange(shouldSetToMax, sliderDivID, sliderTickDivID,
   mapDates = mapDates || currentMapSource.getMapDates()
   previousDate = previousDate || (currentSliderDate ? currentSliderDate.getTime() : null)
 
+  if (!Array.isArray(mapDates))
+  {
+    if (currentMapSource.getMapData() != null)
+    {
+      console.error(`Cannot set date slider for ${currentMapSource.getID()}: map dates are unavailable`)
+    }
+    return
+  }
+  if (mapDates.length == 0) { return }
+
   var endDate = new Date(mapDates[mapDates.length-1])
 
   var latestSliderTickEnabled = currentMapType.getMapSettingValue("latestTick")
@@ -1349,6 +1311,7 @@ async function displayDataMap(dateIndex, reloadPartyDropdowns, fadeForNewSVG, pr
   dateIndex = dateIndex || $("#dataMapDateSlider").val()
 
   var mapDates = currentMapSource.getMapDates()
+  if (!Array.isArray(mapDates)) { return }
   
   if (mapDates.length == 0)
   {

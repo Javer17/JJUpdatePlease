@@ -91,14 +91,14 @@ function cycleMapSetting(settingID, settingDiv, incrementAmount)
   switch (settingsLayout.reloadType)
   {
     case MapSettingReloadType.display:
-    if (showingDataMap)
+    if (incrementAmount != 0 && showingDataMap)
     {
       displayDataMap()
     }
     break
 
     case MapSettingReloadType.data:
-    if (showingDataMap)
+    if (incrementAmount != 0 && showingDataMap)
     {
       loadDataMap(false)
     }

@@ -149,6 +149,15 @@ const USASenateMapType = new MapType(
           continue
         }
 
+        const editorialStatus = String(raceData[columnMap.calledRace] ?? raceData.editorialStatus ?? "").toLowerCase()
+        const callsReleased = raceData.raceEmbargo?.callsReleased === true || String(raceData.raceEmbargo?.callsReleased).toLowerCase() == "true"
+        if (raceCalledPartyID == null && (callsReleased || editorialStatus == "called" || editorialStatus == "projected" || (raceData.status == "W" && raceData.winnerBopPartyId)))
+        {
+          const winnerPartyID = raceData.winnerBopPartyId
+          raceCalledPartyID = formattedCandidatesArray.find(candidateData => candidateData.partyID == winnerPartyID)?.partyID
+            ?? voteshareSortedCandidateData[0].partyID
+        }
+
         let greatestMarginPartyID
         let greatestMarginCandidateName
         let topTwoMargin
@@ -177,7 +186,7 @@ const USASenateMapType = new MapType(
           let mainPartyID = candidateData.partyID
           partyNameArray[mapDate][mainPartyID] = (politicalParties[mainPartyID] ?? IndependentGenericParty).getNames()[0]
         }
-        mapData[mapDate][fullRegionID] = {region: fullRegionID, seatClass: regionClass, offYear: false, runoff: false, isSpecial: special, margin: topTwoMargin, partyID: greatestMarginPartyID, candidateName: greatestMarginCandidateName, candidateMap: partyIDToCandidateNames, partyVotesharePercentages: voteshareSortedCandidateData, flip: heldSeatMapData[regionID + "-" + regionClass]?.partyID != greatestMarginPartyID, reportingPercent: reportingPercent, voteTimestamp: raceData.voteTimestamp, totalVotes: totalVotes, calledPartyID: raceCalledPartyID}
+        mapData[mapDate][fullRegionID] = {region: fullRegionID, seatClass: regionClass, offYear: false, runoff: false, isSpecial: special, margin: topTwoMargin, partyID: greatestMarginPartyID, candidateName: greatestMarginCandidateName, candidateMap: partyIDToCandidateNames, partyVotesharePercentages: voteshareSortedCandidateData, flip: heldSeatMapData[regionID + "-" + regionClass]?.partyID != greatestMarginPartyID, reportingPercent: reportingPercent, voteTimestamp: raceData.voteTimestamp, totalVotes: totalVotes, calledPartyID: raceCalledPartyID, raceToWatch: raceData.raceToWatch}
       }
 
       fillHeldSeats(mapData, regionNameToID, heldSeatMapData, onCycleClass)
@@ -1325,6 +1334,7 @@ const USASenateMapType = new MapType(
         special: "raceType",
         totalVotes: "totalVote",
         reportingPercent: "percentReporting",
+        calledRace: "editorialStatus",
         winner: "winner",
         candidates: "candidates",
         candidateName: "lastName",
@@ -1369,6 +1379,7 @@ const USASenateMapType = new MapType(
         special: "raceType",
         totalVotes: "totalVote",
         reportingPercent: "percentReporting",
+        calledRace: "editorialStatus",
         winner: "winner",
         candidates: "candidates",
         candidateName: "lastName",
@@ -1413,6 +1424,7 @@ const USASenateMapType = new MapType(
         special: "raceType",
         totalVotes: "totalVote",
         reportingPercent: "percentReporting",
+        calledRace: "editorialStatus",
         winner: "winner",
         candidates: "candidates",
         candidateName: "lastName",

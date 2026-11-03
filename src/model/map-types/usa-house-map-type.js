@@ -124,6 +124,15 @@ const USAHouseMapType = new MapType(
           continue
         }
 
+        const editorialStatus = String(raceData[columnMap.calledRace] ?? raceData.editorialStatus ?? "").toLowerCase()
+        const callsReleased = raceData.raceEmbargo?.callsReleased === true || String(raceData.raceEmbargo?.callsReleased).toLowerCase() == "true"
+        if (raceCalledPartyID == null && (callsReleased || editorialStatus == "called" || editorialStatus == "projected" || (raceData.status == "W" && raceData.winnerBopPartyId)))
+        {
+          const winnerPartyID = raceData.winnerBopPartyId
+          raceCalledPartyID = formattedCandidatesArray.find(candidateData => candidateData.partyID == winnerPartyID)?.partyID
+            ?? voteshareSortedCandidateData[0].partyID
+        }
+
         let greatestMarginPartyID
         let greatestMarginCandidateName
         let topTwoMargin
@@ -155,7 +164,7 @@ const USAHouseMapType = new MapType(
         
         const isHold = reportingPercent <= 0 && unopposedRaceDefaults[regionID] != null
 
-        mapData[mapDate][regionID] = {region: regionID, state: state, district: district, margin: topTwoMargin, isHold: isHold, partyID: greatestMarginPartyID, candidateName: greatestMarginCandidateName, candidateMap: partyIDToCandidateNames, partyVotesharePercentages: voteshareSortedCandidateData, flip: heldSeatMapData[regionID]?.partyID != greatestMarginPartyID, reportingPercent: reportingPercent, voteTimestamp: raceData.voteTimestamp, totalVotes: totalVotes, calledPartyID: raceCalledPartyID}
+        mapData[mapDate][regionID] = {region: regionID, state: state, district: district, margin: topTwoMargin, isHold: isHold, isSpecial: raceData[columnMap.special] == "H2", partyID: greatestMarginPartyID, candidateName: greatestMarginCandidateName, candidateMap: partyIDToCandidateNames, partyVotesharePercentages: voteshareSortedCandidateData, flip: heldSeatMapData[regionID]?.partyID != greatestMarginPartyID, reportingPercent: reportingPercent, voteTimestamp: raceData.voteTimestamp, totalVotes: totalVotes, calledPartyID: raceCalledPartyID, raceToWatch: raceData.raceToWatch}
       }
 
       for (let state of Object.keys(stateDistrictCounts).filter(state => stateDistrictCounts[state] == 1))

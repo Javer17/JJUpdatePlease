@@ -527,9 +527,10 @@ function updateTotalsPieChart()
   {
     if (regionID == nationalPopularVoteID || regionID.endsWith(subregionSeparator + statePopularVoteDistrictID)) { continue }
     let regionData = regionDataArray[regionID]
+    let isTossup = regionData.partyID == null || regionData.partyID == TossupParty.getID() || regionData.margin == 0
+    if (currentMapSource.getID().startsWith("CNN-") && regionData.calledPartyID == null && !regionData.isHold && !isTossup) { continue }
     if (regionData.disabled && (!regionData.isHold || (regionData.partyID == TossupParty.getID() && !regionData.electionDate && !regionData.candidateName))) { continue }
     let candidateVoteshareData = regionData.partyVotesharePercentages
-    let isTossup = regionData.partyID == null || regionData.partyID == TossupParty.getID() || regionData.margin == 0
     if (Array.isArray(candidateVoteshareData) && candidateVoteshareData.reduce((total, candidate) => total + candidate.voteshare, 0) == 0 && !(showZeroVoteTossups && isTossup)) { continue }
 
     let regionParty = regionData.partyID

@@ -601,6 +601,7 @@ const USAPresidentMapType = new MapType(
     
         let totalVotes = raceData[columnMap.totalVotes]
         let reportingPercent = raceData[columnMap.reportingPercent]
+        let raceCalledPartyID = null
     
         let formattedCandidatesArray = []
     
@@ -619,6 +620,10 @@ const USAPresidentMapType = new MapType(
           {
             partyID = IndependentGenericParty.getID()
           }
+          if (candidateData[columnMap.winner] === true || candidateData[columnMap.winner] === "true")
+          {
+            raceCalledPartyID = partyID
+          }
     
           formattedCandidatesArray.push({candidate: candidateName, partyID: partyID, voteshare: totalVotes > 0 ? candidateVotes/totalVotes*100 : 0, votes: candidateVotes})
         }
@@ -630,6 +635,14 @@ const USAPresidentMapType = new MapType(
         {
           console.log("No candidate data!", new Date(mapDate).getFullYear().toString(), regionID)
           continue
+        }
+
+        const editorialStatus = String(raceData[columnMap.calledRace] ?? raceData.editorialStatus ?? "").toLowerCase()
+        const callsReleased = raceData.raceEmbargo?.callsReleased === true || String(raceData.raceEmbargo?.callsReleased).toLowerCase() == "true"
+        if (raceCalledPartyID == null && (callsReleased || editorialStatus == "called" || editorialStatus == "projected" || (raceData.status == "W" && raceData.winnerBopPartyId)))
+        {
+          raceCalledPartyID = formattedCandidatesArray.find(candidateData => candidateData.partyID == raceData.winnerBopPartyId)?.partyID
+            ?? voteshareSortedCandidateData[0].partyID
         }
     
         let greatestMarginPartyID
@@ -654,7 +667,7 @@ const USAPresidentMapType = new MapType(
         //   }
         // }
     
-        mapData[mapDate][regionID] = {region: regionID, state: useCountyIDs ? stateID : null, county: useCountyIDs ? countyName : null, margin: topTwoMargin, partyID: greatestMarginPartyID, partyVotesharePercentages: voteshareSortedCandidateData, flip: !useCountyIDs && heldRegionMap[regionID] != greatestMarginPartyID, reportingPercent: reportingPercent, voteTimestamp: raceData.voteTimestamp, totalVotes: totalVotes}
+        mapData[mapDate][regionID] = {region: regionID, state: useCountyIDs ? stateID : null, county: useCountyIDs ? countyName : null, margin: topTwoMargin, partyID: greatestMarginPartyID, partyVotesharePercentages: voteshareSortedCandidateData, flip: !useCountyIDs && heldRegionMap[regionID] != greatestMarginPartyID, reportingPercent: reportingPercent, voteTimestamp: raceData.voteTimestamp, totalVotes: totalVotes, calledPartyID: raceCalledPartyID, raceToWatch: raceData.raceToWatch}
       }
       
       if (!useCountyIDs)
@@ -1437,7 +1450,9 @@ const USAPresidentMapType = new MapType(
         special: "raceType",
         totalVotes: "totalVote",
         reportingPercent: "percentReporting",
+        calledRace: "editorialStatus",
         candidates: "candidates",
+        winner: "winner",
         candidateName: "lastName",
         partyID: "majorParty",
         candidateVotes: "voteNum"
