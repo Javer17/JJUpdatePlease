@@ -124,6 +124,17 @@ body {
   border-bottom: 0;
 }
 
+.cnn-call-history-row-clickable {
+  cursor: pointer;
+}
+
+.cnn-call-history-row-clickable:hover,
+.cnn-call-history-row-clickable:focus-visible {
+  background-color: rgba(255, 255, 255, 0.12);
+  outline: 1px solid rgba(255, 255, 255, 0.5);
+  outline-offset: -1px;
+}
+
 .cnn-call-history-icon {
   flex: 0 0 22px;
   width: 22px;
@@ -353,7 +364,7 @@ body {
 }
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
+.dropdown:not(.profile-dropdown-click):hover .dropdown-content {
   display: block;
 }
 

@@ -5,6 +5,44 @@ const hexColorRegex = /^#[0-9a-fA-F]{6}$/
 let currentUserColor = defaultUserColor
 let userColorUpdateTimeout
 
+function toggleProfileDropdown(event)
+{
+	event?.preventDefault()
+	event?.stopPropagation()
+
+	const dropdownContent = $("#profileDropdownContent")
+	if (dropdownContent.css("display") == "block")
+	{
+		closeProfileDropdown()
+		return
+	}
+
+	deselectDropdownButton()
+	dropdownContent.css("display", "block")
+	$("#profileButton").attr("aria-expanded", "true")
+}
+
+function closeProfileDropdown()
+{
+	$("#profileDropdownContent").css("display", "")
+	$("#profileButton").attr("aria-expanded", "false")
+}
+
+function handleProfileDropdownKeydown(event)
+{
+	if (event.key == "Enter" || event.key == " ")
+	{
+		toggleProfileDropdown(event)
+	}
+}
+
+document.addEventListener("click", event => {
+	if (!document.getElementById("profileDropdown")?.contains(event.target))
+	{
+		closeProfileDropdown()
+	}
+})
+
 function handleSignIn(user)
 {
 	$('#profileDisplayNameContainer').show()

@@ -63,6 +63,11 @@ function getCNNCallType(mapTypeID)
   return null
 }
 
+function isCNNRaceUncalled(regionData)
+{
+  return currentMapSource?.getID().startsWith("CNN-") && regionData.calledPartyID == null && !regionData.isHold
+}
+
 function getCNNCallYear(sourceID = currentMapSource?.getID())
 {
   return String(sourceID ?? "").match(/^CNN-(\d{4})-/)?.[1] ?? null
@@ -310,7 +315,22 @@ function renderCNNCallHistory()
   for (const call of filteredCalls)
   {
     const row = document.createElement("div")
-    row.className = "cnn-call-history-row"
+    row.className = "cnn-call-history-row cnn-call-history-row-clickable"
+    row.setAttribute("role", "button")
+    row.tabIndex = 0
+    row.setAttribute("aria-label", `Show ${call.regionName} on the CNN ${getCNNCallType(call.mapTypeID)} map`)
+
+    const openCall = () => {
+      openCNNCall(call).catch(error => console.error(`Unable to open called race ${call.regionName}`, error))
+    }
+    row.addEventListener("click", openCall)
+    row.addEventListener("keydown", event => {
+      if (event.key == "Enter" || event.key == " ")
+      {
+        event.preventDefault()
+        openCall()
+      }
+    })
 
     const mapIcon = document.createElement("img")
     mapIcon.className = "cnn-call-history-icon"
@@ -367,6 +387,40 @@ function renderCNNCallHistory()
 
     callList.appendChild(row)
   }
+}
+
+async function openCNNCall(call)
+{
+  const target = mapCountryIDs
+    .map(countryID => mapCountries[countryID])
+    .map(country => ({country: country, mapType: country.getMapTypes()[call.mapTypeID]}))
+    .find(({mapType}) => mapType?.getMapSources()?.[call.sourceID])
+
+  if (!target)
+  {
+    console.error(`Unable to find map source ${call.sourceID} for called race ${call.regionName}`)
+    return
+  }
+
+  $("#cnnCallHistory").hide()
+  $("#cnnMapRefreshButton").attr("aria-expanded", "false")
+
+  if (currentMapCountry.getID() != target.country.getID())
+  {
+    await setMapCountry(target.country.getID(), undefined, false)
+  }
+  if (currentMapType.getID() != target.mapType.getID())
+  {
+    await setMapType(target.mapType.getID(), undefined, false)
+  }
+
+  const source = target.mapType.getMapSources()[call.sourceID]
+  const sourceCycle = source.getCycleYear()
+  if (sourceCycle != null && currentMapType.getCurrentMapCycle() != sourceCycle)
+  {
+    await setMapCycle(sourceCycle)
+  }
+  await setMapSource(source)
 }
 
 async function refreshCNNMapData(event)

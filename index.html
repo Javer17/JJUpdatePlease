@@ -121,8 +121,8 @@
         <a href="https://jacksonjude.com" target="_blank" class="topnavbutton" style="display: flex; align-items: center; padding: 0;">
           <img src="./assets/favicon.ico" style="position: relative; width: 43px; height: 43px; padding: 3px;" />
         </a>
-        <div id="profileDropdown" class="dropdown" onmouseenter="deselectDropdownButton()">
-          <a id="profileButton" class="topnavbutton" onclick="" style="padding: 0;">
+        <div id="profileDropdown" class="dropdown profile-dropdown-click">
+          <a id="profileButton" class="topnavbutton" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-controls="profileDropdownContent" onclick="toggleProfileDropdown(event)" onkeydown="handleProfileDropdownKeydown(event)" style="padding: 0;">
             <div id="profileIconContainer" class="profile-icon-container" style="width: 37px; height: 37px; margin: 6px; position: relative;">
               <img id="profileIconOutline" style="display: none;" src="./assets/profile.png" />
               <span id="profileInitials" class="profile-initials"></span>

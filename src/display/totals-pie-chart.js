@@ -527,13 +527,13 @@ function updateTotalsPieChart()
   {
     if (regionID == nationalPopularVoteID || regionID.endsWith(subregionSeparator + statePopularVoteDistrictID)) { continue }
     let regionData = regionDataArray[regionID]
-    let isTossup = regionData.partyID == null || regionData.partyID == TossupParty.getID() || regionData.margin == 0
-    if (currentMapSource.getID().startsWith("CNN-") && regionData.calledPartyID == null && !regionData.isHold && !isTossup) { continue }
+    let isUncalledCNNRace = isCNNRaceUncalled(regionData)
+    let isTossup = isUncalledCNNRace || regionData.partyID == null || regionData.partyID == TossupParty.getID() || regionData.margin == 0
     if (regionData.disabled && (!regionData.isHold || (regionData.partyID == TossupParty.getID() && !regionData.electionDate && !regionData.candidateName))) { continue }
     let candidateVoteshareData = regionData.partyVotesharePercentages
     if (Array.isArray(candidateVoteshareData) && candidateVoteshareData.reduce((total, candidate) => total + candidate.voteshare, 0) == 0 && !(showZeroVoteTossups && isTossup)) { continue }
 
-    let regionParty = regionData.partyID
+    let regionParty = isUncalledCNNRace ? TossupParty.getID() : regionData.partyID
     if (regionParty != null && !fullPartyOrdering.some((orderingData) => orderingData.partyID == regionParty))
     {
       insertPartyIntoTotalsPieChartOrdering(regionParty, fullPartyOrdering)

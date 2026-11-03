@@ -257,6 +257,7 @@ document.addEventListener('keyup', function(e) {
 function deselectDropdownButton()
 {
   $('.dropdown-content').css('display', '')
+  $("#profileButton").attr("aria-expanded", "false")
   removeActiveClassFromDropdownButton()
   selectedDropdownDivID = null
 

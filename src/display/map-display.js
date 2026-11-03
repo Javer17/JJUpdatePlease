@@ -2534,11 +2534,18 @@ function getPartyTotals(includeFlipData, includeZeroVoteTossups = false)
     var regionData = regionDataArray[regionID]
     if (regionData.disabled && (!regionData.isHold || (regionData.partyID == TossupParty.getID() && !regionData.electionDate && !regionData.candidateName))) { continue }
     var candidateVoteshareData = regionData.partyVotesharePercentages
-    var isTossup = regionData.partyID == null || regionData.partyID == TossupParty.getID() || regionData.margin == 0
+    var isUncalledCNNRace = isCNNRaceUncalled(regionData)
+    var isTossup = isUncalledCNNRace || regionData.partyID == null || regionData.partyID == TossupParty.getID() || regionData.margin == 0
     if (Array.isArray(candidateVoteshareData) && candidateVoteshareData.reduce((total, candidate) => total + candidate.voteshare, 0) == 0 && !(includeZeroVoteTossups && isTossup)) { continue }
 
     var regionDataForTotals = regionData.isHold && regionData.disabled ? {...regionData, disabled: false} : regionData
     var currentRegionEV = currentMapType.getEV(getCurrentDecade(), regionID, regionDataForTotals) ?? regionData.voteWorth
+
+    if (isUncalledCNNRace)
+    {
+      partyTotals[TossupParty.getID()] = (partyTotals[TossupParty.getID()] ?? 0) + currentRegionEV
+      continue
+    }
 
     if (currentViewingState != ViewingState.splitVote)
     {
