@@ -636,10 +636,8 @@ const USAPresidentMapType = new MapType(
           console.log("No candidate data!", new Date(mapDate).getFullYear().toString(), regionID)
           continue
         }
-
         const editorialStatus = String(raceData[columnMap.calledRace] ?? raceData.editorialStatus ?? "").toLowerCase()
-        const callsReleased = raceData.raceEmbargo?.callsReleased === true || String(raceData.raceEmbargo?.callsReleased).toLowerCase() == "true"
-        if (raceCalledPartyID == null && (callsReleased || editorialStatus == "called" || editorialStatus == "projected" || (raceData.status == "W" && raceData.winnerBopPartyId)))
+        if (raceCalledPartyID == null && (editorialStatus == "called" || editorialStatus == "projected" || (raceData.status == "W" && raceData.winnerBopPartyId)))
         {
           raceCalledPartyID = formattedCandidatesArray.find(candidateData => candidateData.partyID == raceData.winnerBopPartyId)?.partyID
             ?? voteshareSortedCandidateData[0].partyID

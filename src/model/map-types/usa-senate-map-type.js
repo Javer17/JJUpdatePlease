@@ -150,8 +150,7 @@ const USASenateMapType = new MapType(
         }
 
         const editorialStatus = String(raceData[columnMap.calledRace] ?? raceData.editorialStatus ?? "").toLowerCase()
-        const callsReleased = raceData.raceEmbargo?.callsReleased === true || String(raceData.raceEmbargo?.callsReleased).toLowerCase() == "true"
-        if (raceCalledPartyID == null && (callsReleased || editorialStatus == "called" || editorialStatus == "projected" || (raceData.status == "W" && raceData.winnerBopPartyId)))
+        if (raceCalledPartyID == null && (editorialStatus == "called" || editorialStatus == "projected" || (raceData.status == "W" && raceData.winnerBopPartyId)))
         {
           const winnerPartyID = raceData.winnerBopPartyId
           raceCalledPartyID = formattedCandidatesArray.find(candidateData => candidateData.partyID == winnerPartyID)?.partyID
