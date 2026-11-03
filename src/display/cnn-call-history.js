@@ -87,7 +87,7 @@ function getCNNCallSourcesForYear(year)
   {
     for (const [sourceID, source] of Object.entries(mapType.getMapSources()))
     {
-      if (sourceID.startsWith(`CNN-${year}-`) && getCNNCallType(sourceID))
+      if (sourceID.startsWith(`CNN-${year}-`) && getCNNCallType(sourceID) && getCNNCallType(sourceID) != "president")
       {
         sources.push({source: source, mapType: mapType})
       }
@@ -173,6 +173,8 @@ function getCNNCallTimestamp(regionData)
 
 function recordCNNCalls(source, previousMapData, mapType = getCNNMapTypeForSource(source))
 {
+  if (getCNNCallType(source.getID()) == "president") { return }
+
   const callHistory = cnnCallHistoryByYear[getCNNCallYear(source.getID())] ??= []
   const currentRegions = getCNNRegionDataForCurrentDate(source)
   if (!currentRegions) { return }
