@@ -1,35 +1,75 @@
 var cnnCallHistoryByYear = {}
 var cnnCallHistoryFilter = "all"
 var cnnMapRefreshTimer = null
+var cnnMapRefreshFlashTimer = null
 var cnnCallSourcesRefreshPromise = null
 
 function stopCNNMapRefresh()
 {
   if (cnnMapRefreshTimer != null)
   {
-    clearInterval(cnnMapRefreshTimer)
+    clearTimeout(cnnMapRefreshTimer)
     cnnMapRefreshTimer = null
   }
+  clearTimeout(cnnMapRefreshFlashTimer)
+  cnnMapRefreshFlashTimer = null
+  $("#cnnMapRefreshButton").removeClass("cnn-map-refresh-success")
 }
 
 function startCNNMapRefresh(source)
 {
+  stopCNNMapRefresh()
   recordCNNCalls(source, null, getCNNMapTypeForSource(source))
-  cnnMapRefreshTimer = setInterval(async function() {
-    if (currentMapSource == source && source.getMapData() != null)
+  scheduleCNNMapRefresh(source)
+}
+
+function scheduleCNNMapRefresh(source)
+{
+  const delay = 10000 - (Date.now() % 10000)
+  cnnMapRefreshTimer = setTimeout(async function() {
+    cnnMapRefreshTimer = null
+    if (currentMapSource != source) { return }
+
+    try
     {
-      await Promise.all([
-        refreshCNNMapData(),
-        loadCNNCallSourcesForYear(getCNNCallYear(source.getID()), true, source)
-      ])
+      if (source.getMapData() != null)
+      {
+        await Promise.all([
+          refreshCNNMapData(),
+          loadCNNCallSourcesForYear(getCNNCallYear(source.getID()), true, source)
+        ])
+      }
     }
-  }, 10000)
+    catch (error)
+    {
+      console.error(`Unable to refresh CNN map data for ${source.getID()}`, error)
+    }
+    finally
+    {
+      if (currentMapSource == source)
+      {
+        scheduleCNNMapRefresh(source)
+      }
+    }
+  }, delay)
+}
+
+function flashCNNMapRefreshButton()
+{
+  const button = $("#cnnMapRefreshButton")
+  button.addClass("cnn-map-refresh-success")
+  clearTimeout(cnnMapRefreshFlashTimer)
+  cnnMapRefreshFlashTimer = setTimeout(() => {
+    button.removeClass("cnn-map-refresh-success")
+    cnnMapRefreshFlashTimer = null
+  }, 500)
 }
 
 function updateCNNMapRefreshButtonVisibility()
 {
   const isCNNMap = currentMapSource && currentMapSource.getID().startsWith("CNN-")
   $("#cnnMapRefreshButton").toggle(!!isCNNMap)
+  $("#cnnMapUpdateButton").toggle(!!isCNNMap)
   $("#cnnCallHistory").hide()
   $("#cnnMapRefreshButton").attr("aria-expanded", "false")
 }
@@ -432,8 +472,8 @@ async function refreshCNNMapData(event)
   event?.stopPropagation()
 
   const source = currentMapSource
-  const button = $("#cnnMapRefreshButton")
-  if (!source || !source.getID().startsWith("CNN-") || button.attr("aria-busy") == "true") { return }
+  const button = $("#cnnMapUpdateButton")
+  if (!source || !source.getID().startsWith("CNN-") || button.prop("disabled")) { return }
 
   const previousMapState = {
     rawMapData: source.rawMapData,
@@ -444,7 +484,8 @@ async function refreshCNNMapData(event)
   const iconDivDictionary = getIconDivsToUpdateArrayForSourceID(source.getID())
   const statusDivID = Object.keys(iconDivDictionary)[0]
   const statusIcons = iconDivDictionary[statusDivID]
-  button.attr("aria-busy", "true").css({opacity: "0.6"})
+  button.prop("disabled", true).attr("title", "Updating map data")
+  $("#cnnMapRefreshButton").attr("aria-busy", "true").css({opacity: "0.6"})
   setStatusImage(statusDivID, statusIcons.loading)
 
   try
@@ -463,6 +504,7 @@ async function refreshCNNMapData(event)
     recordCNNCalls(source, previousMapState.mapData)
     setDataMapDateSliderRange(false)
     await displayDataMap(null, null, false, true)
+    if (currentMapSource == source) { flashCNNMapRefreshButton() }
   }
   catch (error)
   {
@@ -472,6 +514,7 @@ async function refreshCNNMapData(event)
   }
   finally
   {
-    button.removeAttr("aria-busy").css({opacity: ""})
+    button.prop("disabled", false).attr("title", "Update map data")
+    $("#cnnMapRefreshButton").removeAttr("aria-busy").css({opacity: ""})
   }
 }

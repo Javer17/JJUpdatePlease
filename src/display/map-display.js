@@ -907,6 +907,7 @@ function addDivEventListeners()
   ["mapCloseButton", "close-icon"],
   ["mapResetZoomButton", "reset-icon"],
   ["cnnMapRefreshButton", "menu-icon"],
+  ["cnnMapUpdateButton", "reset-icon"],
   ["mapZoomInButton", "zoom-in-icon"],
   ["mapZoomOutButton", "zoom-out-icon"],
   ["userMapsCloseButton", "close-icon"],

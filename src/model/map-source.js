@@ -275,7 +275,7 @@ class MapSource
           CSVDatabase.insertFile(self.id, data)
           resolve(data)
         },
-        fail: () => {
+        error: () => {
           removeLoader(LoaderType.progress)
 
           resolve(null)

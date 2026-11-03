@@ -424,6 +424,7 @@
             <a id="cnnMapRefreshButton" onclick="toggleCNNCallHistory(event)" title="Show recent calls" aria-label="Show recent calls" aria-haspopup="true" aria-expanded="false" aria-controls="cnnCallHistory" style="display: none; position: absolute; top: 15rem; left: 15rem; z-index: 2; width: calc(var(--zoom-icon) * 1.4); cursor: pointer; user-select: none; -webkit-user-select: none; padding: calc(var(--zoom-icon) * 0.2); box-sizing: border-box; border-radius: calc(var(--zoom-icon) * 0.2); background-color: rgba(51, 51, 51, 0.75);">
                 <img id="cnnMapRefreshButtonImage" src="./assets/menu-icon.png" alt="" style="width: 100%; aspect-ratio: 1/1; text-decoration: none;" />
             </a>
+            <button id="cnnMapUpdateButton" type="button" onclick="refreshCNNMapData(event)" title="Update map data" aria-label="Update map data" style="display: none; position: absolute; left: 15rem; bottom: 15rem; z-index: 2;"><img id="cnnMapUpdateButtonImage" src="./assets/reset-icon.png" alt="" /></button>
             <div id="cnnCallHistory" class="cnn-call-history" style="display: none;" aria-label="Recent race calls">
               <div id="cnnCallHistoryFilters" class="cnn-call-history-filters"></div>
               <div id="cnnCallHistoryList" class="cnn-call-history-list"></div>

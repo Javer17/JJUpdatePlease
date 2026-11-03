@@ -49,6 +49,30 @@ body {
   --slider-height: calc(30rem * var(--map-control-scale));
 }
 
+#cnnMapRefreshButton.cnn-map-refresh-success {
+  background-color: #16803c !important;
+}
+
+#cnnMapUpdateButton {
+  width: calc(var(--zoom-icon) * 1.4);
+  padding: calc(var(--zoom-icon) * 0.2);
+  border: 0;
+  border-radius: calc(var(--zoom-icon) * 0.2);
+  background-color: rgba(51, 51, 51, 0.75);
+  cursor: pointer;
+}
+
+#cnnMapUpdateButton img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+#cnnMapUpdateButton:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
 .cnn-call-history {
   position: absolute;
   top: calc(15rem + var(--zoom-icon) * 1.8);
