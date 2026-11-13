@@ -119,7 +119,7 @@ const PoliticalPartyColors = {                                                  
   red:      {current: "#541217", solid: "#880006", safe: "#be1c29", likely: "#ff5864", lean: "#ff8b98", tilt: "#cf8980"},   // PRO  PvdA
   scarlet:  {current: "#5d1e0b", solid: "#992100", safe: "#d33a0b", likely: "#f56a40", lean: "#f79368", tilt: "#bf9878"},   // LN   GPV
   orange:   {current: "#703008", solid: "#bd4301", safe: "#ff6200", likely: "#ff9e4b", lean: "#ffb682", tilt: "#d5b27a"},   // SGP
-  yellow:   {current: "#6f4408", solid: "#b96800", safe: "#fe9800", likely: "#f9b04f", lean: "#ffc27c", tilt: "#cbb78a"},   // NSC  BIJ1  LPF   U55
+  yellow:   {current: "#6f4408", solid: "#b96800", safe: "#ffa500", likely: "#f9b04f", lean: "#ffc27c", tilt: "#cbb78a"},   // NSC  BIJ1  LPF   U55
   olive:    {current: "#423b04", solid: "#877900", safe: "#b09e00", likely: "#e1ce28", lean: "#e8d860", tilt: "#cbc088"},   // BBB
   lime:     {current: "#364505", solid: "#4e6b00", safe: "#789c00", likely: "#98bf11", lean: "#bbd35b", tilt: "#b2ba6f"},   // GL   BP
   green:    {current: "#103808", solid: "#066800", safe: "#24a30e", likely: "#5cc449", lean: "#91d785", tilt: "#96ba8f"},   // D66
@@ -131,7 +131,7 @@ const PoliticalPartyColors = {                                                  
   blue:     {current: "#112042", solid: "#022163", safe: "#1c408c", likely: "#587ccc", lean: "#8aafff", tilt: "#949bb3"},   // VVD
   blurple:  {current: "#1c1c38", solid: "#252359", safe: "#3a387c", likely: "#655faf", lean: "#938fc9", tilt: "#b6b5cc"},   // PVV  CP
   violet:   {current: "#2a184c", solid: "#350589", safe: "#5423a3", likely: "#8432ff", lean: "#b27fff", tilt: "#af9cbf"},   // Volt EVP
-  purple:   {current: "#3a1449", solid: "#540473", safe: "#7f23a3", likely: "#c928ff", lean: "#dd7fff", tilt: "#bb9cbf"},   // 50+  AOV
+  purple:   {current: "#2d0f38", solid: "#540473", safe: "#7f23a3", likely: "#c928ff", lean: "#dd7fff", tilt: "#bb9cbf"},   // 50+  AOV
   magenta:  {current: "#4b072e", solid: "#7d0040", safe: "#ab0364", likely: "#e52b94", lean: "#db5cae", tilt: "#d394ca"},   // SP   DS70
   pink:     {current: "#661836", solid: "#ad1650", safe: "#ff327d", likely: "#ff6fa6", lean: "#ff9dc4", tilt: "#e9b0c8"},   // CPN
   plum:     {current: "#211019", solid: "#381b2b", safe: "#5e2f4a", likely: "#945178", lean: "#bf82a5", tilt: "#e2c3d3"},   // PSP

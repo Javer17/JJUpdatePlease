@@ -498,7 +498,7 @@ var YAPSenateMapType = new MapType(
       {
       return "svg-sources/yap-states.svg"
       }
- else if (mapDate < new Date(2005, 12-1, 31-1))
+ else if (mapDate < new Date(1006, 12-1, 31-1))
       {
       return "svg-sources/yap-states-ca2-nq2.svg"
       }
