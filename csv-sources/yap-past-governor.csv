@@ -94,3 +94,5 @@ date,region,candidate,party,offyear,runoff,voteshare,disabled
 10/31/1006,Opplica,Pete Anderson,sr,FALSE,FALSE,100,
 10/31/1006,Porcerle,HighKingFloof,sr,FALSE,FALSE,100,
 10/31/1006,Taclima,Luz,sr,FALSE,FALSE,100,
+11/1/1007,Armallos,Leo Hugyn,sr,TRUE,FALSE,77.77,
+11/1/1007,Armallos,DairyDuke,reform,TRUE,FALSE,22.23,
