@@ -1388,6 +1388,15 @@ const YAPLiberalFederationParty = new PoliticalParty(
   "YAPLF.png"
 )
 
+const YAPNewSGPParty = new PoliticalParty(
+  "YAPNSGP",
+  ["New SGP", "nsgp"],
+  "SGP",
+  "SGP",
+  PoliticalPartyColors.pink,
+  "YAPNSGP.png"
+)
+
     ///////////////////////////
     // YAPMERIAN  COALITIONS //
     ///////////////////////////
@@ -1398,6 +1407,14 @@ const YAPRefLabBloc = new PoliticalParty(
   "RefLab",
   "Reform Labour",
   PoliticalPartyColors.lime
+)
+
+const YAPRefLibLabBloc = new PoliticalParty(
+  "YAPREFLAB",
+  ["Ref LibFed Lab, LibFed, Lab", "RLL"],
+  "RefLibFedLab",
+  "Ref LibFed Lab",
+  PoliticalPartyColors.olive
 )
 
 let politicalParties = {}

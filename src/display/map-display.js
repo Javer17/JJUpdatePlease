@@ -2641,7 +2641,7 @@ function getCurrentDecade()
       dateForDecade = new Date(compareDate)
     }
   }
-  else if (currentMapType.getID() == USAPresidentMapType.getID() && currentMapType.getMapSettingValue("evDecadeOverrideToggle"))
+  else if ((currentMapType.getID() == USAPresidentMapType.getID() || currentMapType.getID() == YAPPresidentMapType.getID()) && currentMapType.getMapSettingValue("evDecadeOverrideToggle"))
   {
     return currentMapType.getMapSettingValue("evDecadeOverrideSelection")
   }

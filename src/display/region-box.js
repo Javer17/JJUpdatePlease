@@ -400,7 +400,7 @@ async function updateRegionBox(regionID = currentRegionID)
   const canOpenLink = currentEditingState == EditingState.viewing && currentMapSource.openRegionLink(regionID, currentSliderDate, true)
   
   tooltipsToShow.altForAlternateData.show = regionData.altData || showingAltData
-  tooltipsToShow.shiftClickToEditEVs.show = isDiscreteRegion && currentMapType.getID() == USAPresidentMapType.getID() && currentMapSource.isCustom() && currentEditingState == EditingState.viewing && currentViewingState == ViewingState.viewing
+  tooltipsToShow.shiftClickToEditEVs.show = isDiscreteRegion && (currentMapType.getID() == USAPresidentMapType.getID() || currentMapType.getID() == YAPPresidentMapType.getID()) && currentMapSource.isCustom() && currentEditingState == EditingState.viewing && currentViewingState == ViewingState.viewing
   tooltipsToShow.clickToZoom.show = canZoomCurrently && currentViewingState == ViewingState.viewing
   tooltipsToShow.clickToOpenLink.show = openLinksWithLeftClick && canOpenLink && !tooltipsToShow.clickToZoom.show
   tooltipsToShow.rightClickToOpenLink.show = canOpenLink && (tooltipsToShow.clickToZoom.show || !openLinksWithLeftClick)

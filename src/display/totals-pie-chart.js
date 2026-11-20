@@ -115,9 +115,10 @@ var partyOrdering = [
   {partyID: JJUNationalParty.getID(), direction: PieChartDirection.counterclockwise},
   {partyID: JJUDRParty.getID(), direction: PieChartDirection.counterclockwise},
   // YAPMERIA Left to Right
-  {partyID: YAPSGPParty.getID(), direction: PieChartDirection.clockwise},
   {partyID: YAPSocialRadicalParty.getID(), direction: PieChartDirection.clockwise},
+  {partyID: YAPSGPParty.getID(), direction: PieChartDirection.clockwise},
   {partyID: YAPSDFParty.getID(), direction: PieChartDirection.clockwise},
+  {partyID: YAPNewSGPParty.getID(), direction: PieChartDirection.clockwise},
   {partyID: YAPLabourParty.getID(), direction: PieChartDirection.clockwise},
       {partyID: YAPRefLabBloc.getID(), direction: PieChartDirection.clockwise},
   {partyID: YAPLiberalFederationParty.getID(), direction: PieChartDirection.clockwise},

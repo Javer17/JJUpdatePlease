@@ -12,7 +12,7 @@ var YAPPresidentMapType = new MapType(
     const availableYears = Object.keys(regionEVArrayYAP).map(Number).sort((a, b) => a - b)
     const fallbackYear = availableYears[availableYears.length - 1]
     const yearEVMap = regionEVArrayYAP[year] || regionEVArrayYAP[fallbackYear]
-    return (yearEVMap || {})[regionID] || 1
+    return (yearEVMap || {})[regionID] ?? 1
   },
   true,
   2,
@@ -46,7 +46,22 @@ var YAPPresidentMapType = new MapType(
     "ADD6": "Appropriation 6",
   }
     ,[/.+-S/],
-  [],
+  [
+    {id: "evDecadeOverrideSelection", emoji: "🕰️", title: "EV Year", type: MapSettingType.optionCycle, options:
+      Object.keys(regionEVArrayYAP).map((year) => {
+        return {id: year, title: year, value: parseInt(year)}
+      }),
+    defaultValue: Object.keys(regionEVArrayYAP).reverse()[0], reloadType: MapSettingReloadType.display},
+    {id: "evDecadeOverrideToggle", emoji: "☑️", title: "Override Year", type: MapSettingType.optionCycle, options:
+      [
+        {id: "enabled", title: "Enabled", value: true},
+        {id: "disabled", title: "Disabled", value: false}
+      ],
+      shouldShowActive: (value) => {
+        return value
+      },
+    defaultValue: "disabled", reloadType: MapSettingReloadType.display}
+  ],
   () => {
       const regionNameToID = {
   "Cambria": "CM",

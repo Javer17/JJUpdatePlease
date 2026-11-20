@@ -916,7 +916,7 @@ function shiftClickRegion(_div)
     toggleRegionMarginEditing()
     return true
   }
-  else if (isDiscreteRegion && currentMapType.getID() == USAPresidentMapType.getID() && currentViewingState == ViewingState.viewing && currentMapSource.isCustom())
+  else if (isDiscreteRegion && (currentMapType.getID() == USAPresidentMapType.getID() || currentMapType.getID() == YAPPresidentMapType.getID()) && currentViewingState == ViewingState.viewing && currentMapSource.isCustom())
   {
     editingRegionEVs = !editingRegionEVs
     updateRegionBox()
