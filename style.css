@@ -26,6 +26,27 @@ body {
   font-family: 'Bree5erif-Regular';
 }
 
+* {
+  scrollbar-color: #fff #636363;
+  scrollbar-width: auto;
+}
+
+*::-webkit-scrollbar {
+  width: 18px;
+  height: 18px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #636363;
+}
+
+*::-webkit-scrollbar-thumb {
+  min-width: 6px;
+  min-height: 6px;
+  background: #fff;
+  border-radius: 0;
+}
+
 .submission-count {
   display: none;
   position: absolute;
@@ -559,6 +580,11 @@ body {
 
 #mapZoomControls {
   width: calc(55rem * var(--map-control-scale));
+  pointer-events: none;
+}
+
+#mapZoomControls > * {
+  pointer-events: auto;
 }
 
 
@@ -800,6 +826,14 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+
+#partyDropdownsContainer.party-dropdowns-scrollable {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+  align-content: flex-start;
+  row-gap: 10px;
 }
 
 .party-votes {

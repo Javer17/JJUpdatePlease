@@ -711,11 +711,15 @@ class MapSource
   convertArrayToCSV(mapData, columnMap, regionNameToID, candidateNameToPartyIDs, convertMapDataRowToCSVFunction)
   {
     let csvText = ""
+    const escapeCSVValue = value => {
+      const stringValue = String(value)
+      return /[",\r\n]/.test(stringValue) ? `"${stringValue.replace(/"/g, '""')}"` : stringValue
+    }
 
     let columnTitles = Object.values(columnMap)
     for (let titleNum in columnTitles)
     {
-      csvText += columnTitles[titleNum]
+      csvText += escapeCSVValue(columnTitles[titleNum])
       if (titleNum < columnTitles.length-1)
       {
         csvText += ","
@@ -756,7 +760,7 @@ class MapSource
           for (let columnTitleNum in columnTitles)
           {
             let columnKey = getKeyByValue(columnMap, columnTitles[columnTitleNum])
-            csvText += convertMapDataRowToCSVFunction(columnKey, mapDateString, regionID, regionNameToID, candidateName, candidatesToAdd[candidateName], regionData, this.editingMode == EditingMode.voteshare)
+            csvText += escapeCSVValue(convertMapDataRowToCSVFunction(columnKey, mapDateString, regionID, regionNameToID, candidateName, candidatesToAdd[candidateName], regionData, this.editingMode == EditingMode.voteshare))
 
             if (columnTitleNum < columnTitles.length-1)
             {

@@ -687,7 +687,7 @@ const UKConstituenciesByYear = {
     "York Central",
     "York Outer",
   ],
-2017: [
+2010: [
 "Aberavon",
 "Aberconwy",
 "Aberdeen North",

@@ -2,12 +2,11 @@ let dropdownPoliticalPartyIDs = cloneObject(defaultDropdownPoliticalPartyIDs)
 const addButtonPartyID = "ADDPARTY"
 const customPartyIDPrefix = "CUSTOM"
 
-const morePartiesToDisplay = 12
+const partyScrollbarThreshold = 12
 const thirdRowParties = 8
 const maxPartiesToDisplay = 6
 const largeMaxPartiesToDisplay = 4
 // More parties were required to be added due to the 7 in the November election (6 Parties and 1 Independent). But i felt why not add a few more cuz i like chaos.
-// Now you can have 12 parties max
 const minDropdownWidth = 140
 
 const largePartyButtonWidth = 40
@@ -29,6 +28,19 @@ function getPartyButtonHeights()
   }
 }
 
+function positionPartyDropdownContent(dropdown)
+{
+  const button = dropdown.parent()[0].getBoundingClientRect()
+  const width = Math.max(button.width, parseFloat(dropdown.css("min-width")) || 0)
+  const height = dropdown.outerHeight()
+  const left = Math.max(0, button.right + width > innerWidth ? button.right - width : button.left)
+  const top = Math.max(0, button.bottom + height > innerHeight ? button.top - height : button.bottom)
+
+  dropdown.removeClass("dropdown-content-flipped").css({
+    position: "fixed", top, left, right: "auto", width: button.width, marginTop: 0
+  })
+}
+
 const largePartyButtonVerticalPadding = 7
 const smallPartyButtonVerticalPadding = 1
 const smallerPartyButtonVerticalPadding = 1
@@ -42,6 +54,16 @@ let editPartyPopularVote = null
 
 function createPartyDropdowns()
 {
+  const shouldEnablePartyScrolling = dropdownPoliticalPartyIDs.length >= partyScrollbarThreshold
+  $("#partyDropdownsContainer")
+    .toggleClass("party-dropdowns-scrollable", shouldEnablePartyScrolling)
+    .css("padding", shouldEnablePartyScrolling ? "5px 0" : "0")
+    .off("scroll.partyDropdowns")
+    .on("scroll.partyDropdowns", function() {
+      const dropdown = $(this).find(".dropdown:hover > .dropdown-content")
+      if (dropdown.length) positionPartyDropdownContent(dropdown)
+    })
+
   if (editCandidateNamePartyID)
   {
     toggleCandidateNameEditing(editCandidateNamePartyID, null, true)
@@ -131,7 +153,7 @@ function createPartyDropdowns()
 
     $("#partyDropdownsContainer").append(dropdownDiv)
 
-    if (shouldReverseOrder)
+    if (shouldReverseOrder && !shouldEnablePartyScrolling)
     {
       const currentPoliticalPartyID = currentPoliticalParty.getID()
       setTimeout(() => $("#" + currentPoliticalPartyID + 'DropdownContent').css('margin-top', -$("#" + currentPoliticalPartyID + 'DropdownContent').height()-$("#" + currentPoliticalPartyID + 'Dropdown').height()), 2)
@@ -208,7 +230,10 @@ function createPartyDropdowns()
   }
   
   $('#partyDropdownsContainer .dropdown').each(function () {
-    this.addEventListener('mouseenter', (e) => updateDropdownFlip($(e.target).children('.dropdown-content')))
+    this.addEventListener('mouseenter', (e) => {
+      const dropdown = $(e.currentTarget).children('.dropdown-content')
+      shouldEnablePartyScrolling ? positionPartyDropdownContent(dropdown) : updateDropdownFlip(dropdown)
+    })
   })
 }
 
@@ -454,7 +479,7 @@ async function toggleCandidateNameEditing(partyID, div, skipReload)
 function createPartyDropdownsBoxHoverHandler()
 {
   $("#partyDropdownsContainer").hover(function() {
-    if (!(currentMapSource.isCustom() && currentMapType.getCustomMapEnabled()) || currentEditingState == EditingState.editing || dropdownPoliticalPartyIDs.includes(addButtonPartyID) || dropdownPoliticalPartyIDs.length >= morePartiesToDisplay) { return }
+    if (!(currentMapSource.isCustom() && currentMapType.getCustomMapEnabled()) || currentEditingState == EditingState.editing || dropdownPoliticalPartyIDs.includes(addButtonPartyID)) { return }
 
     dropdownPoliticalPartyIDs.push(addButtonPartyID)
     $("#partyDropdownsContainer").addClass("showingAddPartyButton")
@@ -535,7 +560,7 @@ function displayPartyTotals(overrideCreateDropdowns)
   {
     const partyIDs = Object.keys(partyTotals).filter((partyID) => partyTotals[partyID] > 0 && partyID != TossupParty.getID())
 
-    let topPartyIDs = partyIDs.sort((party1, party2) => partyTotals[party2]-partyTotals[party1]).slice(0, morePartiesToDisplay)
+    let topPartyIDs = partyIDs.sort((party1, party2) => partyTotals[party2]-partyTotals[party1])
 
     if (topPartyIDs.length == 0)
     {
@@ -558,13 +583,11 @@ function displayPartyTotals(overrideCreateDropdowns)
     {
       dropdownPoliticalPartyIDs.push(addButtonPartyID)
     }
-    dropdownPoliticalPartyIDs = dropdownPoliticalPartyIDs.slice(0, morePartiesToDisplay)
-
     const sortedDropdownPartyIDs = cloneObject(dropdownPoliticalPartyIDs).sort((party1, party2) => {
       if (party1 == addButtonPartyID) { return 1 }
       if (party2 == addButtonPartyID) { return -1 }
       return partyTotals[party2]-partyTotals[party1]
-    }).slice(0, morePartiesToDisplay)
+    })
     if (JSON.stringify(sortedDropdownPartyIDs) != JSON.stringify(dropdownPoliticalPartyIDs) || overrideCreateDropdowns)
     {
       dropdownPoliticalPartyIDs = cloneObject(sortedDropdownPartyIDs)
@@ -576,17 +599,39 @@ function displayPartyTotals(overrideCreateDropdowns)
   const possibleFontSizes = ["18px", "17px", "16px", "15px", "14px", "13px", "12px", "11px", "10px", "9px", "8px"]
   const shouldUseSmallerButtons = dropdownPoliticalPartyIDs.length > thirdRowParties
   const shouldUseSmallButtons = dropdownPoliticalPartyIDs.length > largeMaxPartiesToDisplay && shouldUseSmallerButtons == false
+  const minimumReadableFontSize = 12
+  const buttonHeight = $("#partyDropdownsContainer").height()*0.35
+  const buttonHeightFactor = shouldUseSmallerButtons ? 0.3 :shouldUseSmallButtons ? 0.35 : 0.60
+  const maxNameFontSize = Math.max(minimumReadableFontSize, buttonHeight*buttonHeightFactor)
+
+  const shouldDisplayCandidateNames = currentMapType.getName() == "President"
   
   for (const partyID of dropdownPoliticalPartyIDs)
   {
     if (politicalParties[partyID] == null) { continue }
-    $("#" + partyID + "-name").html(politicalParties[partyID].getCandidateName())
+    const party = politicalParties[partyID]
+    const partyName = (shouldDisplayCandidateNames ? party.getCandidateName() : party.getNames()[0])
+      ?? party.getNames()[0]
+      ?? party.getShortName()
+      ?? ""
+    const nameElement = $("#" + partyID + "-name")
+    const partyButton = $("#" + partyID + "Dropdown .partyDropdownButton")
+    const partyButtonWidth = partyButton.width()
+    const maxNameWidth = partyButtonWidth*(shouldUseSmallButtons ? 0.90 : 0.60)
+    let displayName = partyName
+    let nameFontSize = getMaxFontSize(partyName, possibleFontSizes, maxNameWidth)
+
+    if (parseInt(nameFontSize) < minimumReadableFontSize && party.getShortName())
+    {
+      displayName = party.getShortName()
+      nameFontSize = getMaxFontSize(displayName, possibleFontSizes, maxNameWidth)
+    }
+
+    nameElement.html(displayName)
+    nameElement.css("font-size", Math.min(parseInt(nameFontSize), maxNameFontSize) + "px")
     $("#" + partyID + "-votes").html(partyTotals[partyID] ?? 0)
     
-    let nameFontSize = getMaxFontSize(politicalParties[partyID].getCandidateName(), possibleFontSizes, $("#" + partyID).width()*(shouldUseSmallButtons ? 0.90 : 0.60))
-    $("#" + partyID + "-name").css('font-size', nameFontSize)
-    
-    let votesFontSize = getMaxFontSize((100).toString(), possibleFontSizes, $("#" + partyID).width()*(shouldUseSmallButtons ? 0.9 : 0.25))
+    let votesFontSize = getMaxFontSize((100).toString(), possibleFontSizes, partyButtonWidth*(shouldUseSmallButtons ? 0.9 : 0.25))
     $("#" + partyID + "-votes").css('font-size', votesFontSize)
   }
   
@@ -594,12 +639,8 @@ function displayPartyTotals(overrideCreateDropdowns)
   const partyButtonHeight = dropdownPoliticalPartyIDs.length > thirdRowParties ? thirdRowPartyButtonHeight : normalPartyButtonHeight
   $("#partyDropdownsContainer .dropdown").css('height', partyButtonHeight + "px")
 
-  const buttonHeight = $("#partyDropdownsContainer").height()*0.35
-  const buttonHeightFactor = shouldUseSmallerButtons ? 0.3 :shouldUseSmallButtons ? 0.35 : 0.60
-  
   for (const partyID of dropdownPoliticalPartyIDs)
   {
-    $("#" + partyID + "-name").css('font-size', Math.min(parseInt($("#" + partyID + "-name").css('font-size')), buttonHeight*buttonHeightFactor) + "px")
     $("#" + partyID + "-votes").css('font-size', Math.min(parseInt($("#" + partyID + "-votes").css('font-size')), buttonHeight*buttonHeightFactor) + "px")
   }
 }

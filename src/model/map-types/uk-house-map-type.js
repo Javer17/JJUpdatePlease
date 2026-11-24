@@ -63,9 +63,9 @@ var UKHouseMapType = new MapType(
       const regions = [...getConstituencies()]
       const regionDateRanges = [
         {
-          start: new Date(2017, 1-1, 1-1).getTime(),
+          start: new Date(2010, 1-1, 1-1).getTime(),
           regions: [
-            ...getUKConstituencyLookupsForYear(2017).ids
+            ...getUKConstituencyLookupsForYear(2010).ids
           ]
         },
         {
@@ -402,7 +402,7 @@ var UKHouseMapType = new MapType(
 		    return 0
     
 		    case "region":
-		    return getKeyByValue(regionNameToID, regionID)
+		    return getUKConstituencyLookupsForYear(Number(mapDateString.split("/").pop())).idToName[regionID] ?? getKeyByValue(regionNameToID, regionID)
     
 		    case "partyID":
 		    return partyID
@@ -427,11 +427,11 @@ var UKHouseMapType = new MapType(
       
       if (mapDate < new Date(2001, 12-1, 31-1))
       {
-      return "svg-sources/uk-constituencies-2019.svg"
+      return "svg-sources/uk-constituencies-2010.svg"
       }
       else if (mapDate < new Date(2019, 12-1, 31-1))
       {
-      return "svg-sources/uk-constituencies-2019.svg"
+      return "svg-sources/uk-constituencies-2010.svg"
       }
       else
       {
@@ -456,6 +456,11 @@ var UKHouseMapType = new MapType(
     
     function getFormattedRegionName(regionName, regionData)
     {
+      const mapDate = currentMapSource?.isCompare() && currentCompareSliderDate ? currentCompareSliderDate : currentSliderDate
+      const regionID = regionData?.region ?? regionName
+      const dateRegionName = mapDate && getUKConstituencyLookupsForYear(mapDate.getFullYear()).idToName[regionID]
+      if (dateRegionName) regionName = dateRegionName
+
       if (!regionData) return regionName
       
       if (regionData.isHold && regionData.electionDate)

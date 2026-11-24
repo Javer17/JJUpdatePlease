@@ -272,7 +272,7 @@ function getMaxFontSize(text, sizes, maxWidth)
     }
   }
 
-  return sizes.reverse()[0]
+  return sizes[sizes.length - 1]
 }
 
 String.prototype.width = function(font) {

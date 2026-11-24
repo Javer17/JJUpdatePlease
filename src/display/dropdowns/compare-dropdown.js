@@ -750,7 +750,9 @@ async function applyCompareToCustomMap(shouldResetRound = false)
     }
   }
 
-  (compareResultCustomMapSource ?? currentCompareMapSource ?? currentCustomMapSource).updateMapData(resultMapArray, (new Date(getTodayString("/", false, "mdy"))).getTime(), true, mapSources[compareMapSourceIDArray[0]].getCandidateNames(currentCompareSliderDate.getTime()), EditingMode.voteshare)
+  const compareResultDate = currentCompareSliderDate.getTime()
+  const resultMapSource = compareResultCustomMapSource ?? currentCompareMapSource ?? currentCustomMapSource
+  resultMapSource.updateMapData(resultMapArray, compareResultDate, true, mapSources[compareMapSourceIDArray[0]].getCandidateNames(compareResultDate), EditingMode.voteshare)
 
   if (shouldSetCompareMapSource)
   {

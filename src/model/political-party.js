@@ -833,7 +833,7 @@ const IndependentGWParty = new PoliticalParty(
 
 const UKLabourParty = new PoliticalParty(
   "UKLAB",
-  ["Labour", "Lab"],
+  ["Labour", "Lab", "Labour and Co-operative"],
   "Lab",
   "Labour",
   PoliticalPartyColors.red,
@@ -1040,7 +1040,7 @@ const UKLiberalParty = new PoliticalParty(
 
 const UKYourParty = new PoliticalParty(
   "UKYOUR",
-  ["Your Party"],
+  ["Your Party", "YP"],
   "Your",
   "Your Party",
   PoliticalPartyColors.pink,
@@ -1063,6 +1063,15 @@ const UKReclaimParty = new PoliticalParty(
   "REC",
   PoliticalPartyColors.blurple,
   "UKREC.png"
+)
+
+const UKBritishNationalParty = new PoliticalParty(
+  "UKBNP",
+  ["BNP", "British National Party"],
+  "BNP",
+  "BNP",
+  PoliticalPartyColors.cyan,
+  "UKBNP.png"
 )
 
     ////////////////////////
