@@ -560,6 +560,11 @@ body {
   height: 100%;
 }
 
+#secondarySidebarContainer,
+#partyDropdownsBoxContainer {
+  min-height: 0;
+}
+
 #discordInviteContainer {
   display: inline-block;
   padding-top: 10px;
@@ -828,12 +833,21 @@ body {
   overflow: hidden;
 }
 
-#partyDropdownsContainer.party-dropdowns-scrollable {
+#partyDropdownsContainer.party-dropdowns-scrollable,
+#partyDropdownsContainer.party-dropdowns-multi-row {
   box-sizing: border-box;
+}
+
+#partyDropdownsContainer.party-dropdowns-scrollable {
   overflow-x: hidden;
   overflow-y: auto;
   align-content: flex-start;
   row-gap: 10px;
+}
+
+#partyDropdownsContainer.party-dropdowns-multi-row:not(.party-dropdowns-scrollable) {
+  align-content: space-evenly;
+  row-gap: 0;
 }
 
 .party-votes {

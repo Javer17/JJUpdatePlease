@@ -55,9 +55,11 @@ let editPartyPopularVote = null
 function createPartyDropdowns()
 {
   const shouldEnablePartyScrolling = dropdownPoliticalPartyIDs.length >= partyScrollbarThreshold
+  const shouldUseMultiRowSpacing = dropdownPoliticalPartyIDs.length > thirdRowParties
   $("#partyDropdownsContainer")
     .toggleClass("party-dropdowns-scrollable", shouldEnablePartyScrolling)
-    .css("padding", shouldEnablePartyScrolling ? "5px 0" : "0")
+    .toggleClass("party-dropdowns-multi-row", shouldUseMultiRowSpacing)
+    .css("padding", shouldEnablePartyScrolling ? "10px 0" : "0")
     .off("scroll.partyDropdowns")
     .on("scroll.partyDropdowns", function() {
       const dropdown = $(this).find(".dropdown:hover > .dropdown-content")
@@ -89,7 +91,8 @@ function createPartyDropdowns()
 
     if (dropdownPoliticalPartyIDs[partyIDNum] == addButtonPartyID)
     {
-      dropdownDiv += '<a id="' + addButtonPartyID + '" class="partyDropdownButton active" onclick="createNewCustomParty()" style="width: calc(' + partyButtonWidth + '% - 4px); height: calc(35% - 4px); padding: 0; margin: 0; background-color: transparent; border: 2px dashed gray; color: gray; transition: all .1s linear">' + "+" + '</a>'
+      const addButtonHeight = shouldUseMultiRowSpacing ? partyButtonHeight + "px" : "calc(35% - 4px)"
+      dropdownDiv += '<a id="' + addButtonPartyID + '" class="partyDropdownButton active" onclick="createNewCustomParty()" style="width: calc(' + partyButtonWidth + '% - 4px); height: ' + addButtonHeight + '; padding: 0; margin: 0; background-color: transparent; border: 2px dashed gray; color: gray; transition: all .1s linear">' + "+" + '</a>'
       $("#partyDropdownsContainer").append(dropdownDiv)
       continue
     }
